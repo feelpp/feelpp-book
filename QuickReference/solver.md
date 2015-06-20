@@ -38,9 +38,7 @@ There exists
 Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$$ be $$\mathbb{R}^n$$ vectors, we wish to solve
 $$A x = b.$$
 
-**Definition**: A preconditioner $$\mathcal{P}$$ is a method for constructing a matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$ using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum of $$P^{-1}A$$ (left preconditioning) or $$A P^{-1}$$ (right preconditioning) is well-behaved.
-
-The action of preconditioning improves the conditioning of the previous linear system. 
+**Definition**: A preconditioner $$\mathcal{P}$$ is a method for constructing a matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$ using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum of $$P^{-1}A$$ (left preconditioning) or $$A P^{-1}$$ (right preconditioning) is well-behaved. The action of preconditioning improves the conditioning of the previous linear system. 
 
 **Left preconditioning**:  We solve for
 $$  (P^{-1} A) x = P^{-1} b $$
@@ -48,11 +46,11 @@ and we build the Krylov space
 $$\{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}$$
 
 **Right preconditioning**: We solve for
-$$
-  (A P^{-1}) P x = b \\
-  \{ b, (P^{-1}A)b, (P^{-1}A)^2b, \dotsc \}
-$$
-Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is \b never formed.
+$$  (A P^{-1}) P x = b $$
+and we build the Krylov space 
+$$\{ b, (P^{-1}A)b, (P^{-1}A)^2b, \dotsc \}$$
+
+Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is never assembled.
 
 ### Properties
 
@@ -78,11 +76,18 @@ More details and strategies are available in the [Preconditioner section](Precon
   - `PC`  Preconditioner library implements various  preconditioning strategies
   - `SNES`  Nonlinear solver library implements various  nonlinear solve strategies
 
-  All linear algebra are encapsulated within backend which interfaces PETSc (`petsc)` ,
-  Eigen sparse (`eigen)`  or dense (`eigen_dense)` 
+All linear algebra are encapsulated within backends using the command line option `--backend=<backend>` or config file option `backend=<backend>` which provide interface to several libraries
+
+-------------------------------
+| Library | Format  | Backend |
+|---------|---------|---------|
+| PETSc   | sparse  | `petsc` |
+| Eigen   | sparse  | `eigen` |
+| Eigen   | dense   | `eigen_dense` |
 
 
-  The \b Default \b backend is `petsc.` 
+
+The default backend is `petsc.` 
 
 # Examples
 
