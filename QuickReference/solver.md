@@ -161,8 +161,6 @@ $$M =\begin{align}
           A & B\\
           B^T & 0
         \end{align}
-        $$
-        
         =
         \begin{pmatrix}
           I & 0\\
