@@ -9,7 +9,7 @@ Algebraic solutions
 **Matrix Definition** A  matrix is a linear transformation between finite dimensional vector spaces.
 
 **Assembling a matrix**
-Assembling a matrix means defining it's action as entries stored in a **sparse** or **dense** format. For example, in the finite element context, the format is sparse.
+Assembling a matrix means defining its action as entries stored in a **sparse** or **dense** format. For example, in the finite element context, the storage format is sparse to take advantage of the many zero entries.
 
 **Symmetric matrix**
 $$A = A^T$$
