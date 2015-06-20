@@ -65,7 +65,7 @@ Let us now describe some  properties of preconditioners
   - **Parallel**: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
   - **Indefinite**: Schur-complement, Domain Decomposition, Multigrid
 
-More details and strategies are available in the [Preconditioner section](Preconditioner.md)
+More details and strategies are available in the [Preconditioner section](Preconditioner).
 
 # Principles 
 
