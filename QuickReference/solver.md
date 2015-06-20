@@ -137,16 +137,13 @@ PC Object: 2 MPI processes
   domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
 
   $$
-  \begin{eqnarray*}
-  -\Delta \mathbf{u} + \nabla p &= \mathbf{ f},\\
-  \nabla \cdot \mathbf{u} &=    0 \mbox{ in } \Omega\\
-  \mathbf{u} &= \mathbf{g} \mbox{ on } \partial \Omega
-  \end{eqnarray*}     
+  -\Delta \mathbf{u} + \nabla p = \mathbf{ f},\  \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\ 
+  \mathbf{u} = \mathbf{g} \mbox{ on } \partial \Omega
   $$
 
-  This problem is indefinite, \ref SolverDefinitionsMatrices.
+  This problem is indefinite, SolverDefinitionsMatrices.
 
-  - \b Strategies : Uzawa, penalty(techniques from optimisation), augmented
+  - **Strategies** : Uzawa, penalty(techniques from optimisation), augmented
   lagrangian approach (Glowinski,Le Tallec)
 
   Note that The Inf-sup condition must be satisfied. In particular for a multigrid strategy, the smoother needs to preserve it
