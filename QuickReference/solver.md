@@ -150,9 +150,9 @@ PC Object: 2 MPI processes
 
 ### General approach for saddle point problems
 
-  - **Solvers**: MINRES, GMRES
-  - \b Preconditioners : look first at the saddle point matrix $$M$$ and its
-    block factorization $$M = LDL^T$$:
+ The Krylov subspace solvers for indefinite problems are MINRES, GMRES.
+ 
+  - **Preconditioners* : look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$:
       $$
         \label{eq:2}
         M =
