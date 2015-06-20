@@ -33,46 +33,39 @@ There exists
 
 ## Preconditioners
 
-### Preconditioning
+### Definition
 
 Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$$ be $$\mathbb{R}^n$$ vectors, we wish to solve
-$$A x = b.$$ 
+$$A x = b.$$
 
-Preconditioning improves the conditioning of the previous linear system. 
+**Definition**: A preconditioner $$\mathcal{P}$$ is a method for constructing a matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$ using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum of $$P^{-1}A$$ (left precondi (or $$A P^{-1}$$) is well-behaved.
 
-#### Left preconditioning
-We solve for
+The action of preconditioning improves the conditioning of the previous linear system. 
+
+**Left preconditioning**:  We solve for
 $$  (P^{-1} A) x = P^{-1} b $$
 and we build the Krylov space 
 $$\{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}$$
 
-#### Right preconditioning
-
-We solve for
+**Right preconditioning**: We solve for
 $$
   (A P^{-1}) P x = b \\
   \{ b, (P^{-1}A)b, (P^{-1}A)^2b, \dotsc \}
 $$
 Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is \b never formed.
 
-### Preconditioner
+### Properties
 
-Definition
-A \b preconditioner $$\mathcal{P}$$ is a method for constructing a
-matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$
-using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum
-of $$P^{-1}A$$ (or $$A P^{-1}$$) is well-behaved.
-
+Let us now describe some  properties of preconditioners
 
   - $$P^{-1}$$ is dense, $$P$$ is often not available and is not needed
   - $$A$$ is rarely used by $$\mathcal{P}$$, but $$A_p = A$$ is common
   - $$A_p$$ is often a sparse matrix, the \e preconditioning  \e matrix
-  - Matrix-based: Jacobi, Gauss-Seidel, SOR, ILU(k), LU
-  - Parallel: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
-  - Indefinite: Schur-complement, Domain Decomposition, Multigrid
+  - **Matrix-based**: Jacobi, Gauss-Seidel, SOR, ILU(k), LU
+  - **Parallel**: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
+  - **Indefinite**: Schur-complement, Domain Decomposition, Multigrid
 
-  Various preconditioning strategies are presented in
-  - \subpage PreconditionerPage
+Various preconditioning strategies are presented in
 
 # Principles 
 
