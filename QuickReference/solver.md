@@ -78,7 +78,7 @@ More details and strategies are available in the [Preconditioner section](Precon
 
 All linear algebra are encapsulated within backends using the command line option `--backend=<backend>` or config file option `backend=<backend>` which provide interface to several libraries
 
--------------------------------
+
 | Library | Format  | Backend |
 |---------|---------|---------|
 | PETSc   | sparse  | `petsc` |
