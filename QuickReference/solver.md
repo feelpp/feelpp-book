@@ -36,7 +36,9 @@ There exists
 ### Preconditioning
 
 Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$ be $$\mathbb{R}ˆn$$ vectors, we wish to solve
-$$A x = b$$
+
+$$A x = b$$.
+
 
 Preconditioning improves the conditioning of the Krylov operator.
 
