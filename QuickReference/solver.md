@@ -102,7 +102,7 @@ More details and strategies are available in the [Preconditioner section](Precon
   Viewing KSP solvers
 
 
-  ```cpp{.sh}
+  ```.sh
 shell> mpirun -np 2 feelpp_qs_laplacian --ksp-monitor=1  --ksp-view=1
   0 KSP Residual norm 8.953261456448e-01
   1 KSP Residual norm 7.204431786960e-16
