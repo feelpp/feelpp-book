@@ -64,7 +64,7 @@ Here are some numerical methods to solve the system $$A x = b$$
   - **Parallel**: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
   - **Indefinite**: Schur-complement, Domain Decomposition, Multigrid
 
-More details and strategies are available in the [Preconditioner section](QuickReference/Preconditioner.md).
+More details and strategies are available in the [Preconditioner section](Preconditioner.md).
 
 # Principles 
 
