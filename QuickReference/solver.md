@@ -35,16 +35,20 @@ There exists
 
 ### Preconditioning
 
+Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$ be $$\mathbb{R}ˆn$$ vectors, we wish to solve
+$$A x = b$$
+
 Preconditioning improves the conditioning of the Krylov operator.
 
 #### Left preconditioning
+We solve for
+$$  (P^{-1} A) x = P^{-1} b $$
+and we build the Krylov space 
+$$\{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}$$
 
-$$
-  (P^{-1} A) x = P^{-1} b \\
-   \{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}
-$$
+#### Right preconditioning
 
-Right preconditioning
+We solve for
 $$
   \begin{gather*}
   (A P^{-1}) P x = b \\
