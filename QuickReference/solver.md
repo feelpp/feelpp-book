@@ -6,27 +6,31 @@ Algebraic solutions
 
 ##  Matrices
 
-A \b matrix is a linear transformation between finite dimensional vector spaces.
+**Matrix Definition** A  matrix is a linear transformation between finite dimensional vector spaces.
 
-Assembling a matrix
+**Assembling a matrix**
 \b Assembling a matrix means defining it's action in terms of entries
 (usually stored in a sparse format).
 
-Symmetric matrix
+**Symmetric matrix**
 $$A = A^T$$
 
 
-Definite (resp. semi-definite) positive matrix
-All eigenvalue are $$>0$$ (resp $$\geq 0$$) or $$x^TAx >0\, \forall x$$ (resp. $$x^TAx
-\geq 0\, \forall x$$)
+**Definite (resp. semi-definite) positive matrix**
+All eigenvalue are 
+ 1. $$>0$$ (resp $$\geq 0$$) or 
+ 2. $$x^T\ A\ x >\ 0\, \forall\ x$$ (resp. $$x^T\ A\ x
+\geq 0\, \forall\ x$$)
 
-Definite (resp. semi-negative matrix)
-All eigenvalue are $$<0$$ (resp. $$\leq 0$$) or $$x^TAx <0 \forall x$$ (resp $$x^TAx
-\leq 0\, \forall x)$$
+**Definite (resp. semi-negative) matrix**
+All eigenvalue are 
+ 1. $$<0$$ (resp. $$\leq 0$$) or
+ 2. $$x^T\ A\ x < 0\ \forall\ x$$ (resp. $$x^T\ A\ x \leq 0\, \forall\ x$$)
 
-Indefinite matrix
-There exists positive and negative eigenvalue (Stokes, Helmholtz) or there
-exists $$x,y$$ such that $$x^TAx > 0 > y^T A y$$
+**Indefinite matrix**
+There exists 
+ 1. positive and negative eigenvalue (Stokes, Helmholtz) or
+ 2. there exists $$x,y$$ such that $$x^TAx > 0 > y^T A y$$
 
 ## Preconditioners
 
