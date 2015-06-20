@@ -37,12 +37,11 @@ There exists
 
 Preconditioning improves the conditioning of the Krylov operator.
 
-Left preconditioning
+#### Left preconditioning
+
 $$
-  \begin{gather*}
   (P^{-1} A) x = P^{-1} b \\
-   P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dotsc 
-  \end{gather*}
+   \{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}
 $$
 
 Right preconditioning
