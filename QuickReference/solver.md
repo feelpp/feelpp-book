@@ -38,7 +38,7 @@ There exists
 Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$$ be $$\mathbb{R}^n$$ vectors, we wish to solve
 $$A x = b.$$
 
-**Definition**: A preconditioner $$\mathcal{P}$$ is a method for constructing a matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$ using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum of $$P^{-1}A$$ (left precondi (or $$A P^{-1}$$) is well-behaved.
+**Definition**: A preconditioner $$\mathcal{P}$$ is a method for constructing a matrix (just a linear function, not assembled!)  $$P^{-1} = \mathcal{P}(A,A_p)$$ using a matrix $$A$$ and extra information $$A_p$$, such that the spectrum of $$P^{-1}A$$ (left preconditioning) or $$A P^{-1}$$ (right preconditioning) is well-behaved.
 
 The action of preconditioning improves the conditioning of the previous linear system. 
 
