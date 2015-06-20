@@ -35,7 +35,7 @@ There exists
 
 ### Preconditioning
 
-Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$ be $$\mathbb{R}ˆn$$ vectors, we wish to solve
+Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$ be $$\mathbb{R}^n$$ vectors, we wish to solve
 
 $$A x = b$$.
 
