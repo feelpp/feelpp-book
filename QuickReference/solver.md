@@ -41,7 +41,7 @@ Left preconditioning
 $$
   \begin{gather*}
   (P^{-1} A) x = P^{-1} b \\
-  \{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dotsc \}
+   P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dotsc 
   \end{gather*}
 $$
 
