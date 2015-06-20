@@ -150,7 +150,7 @@ PC Object: 2 MPI processes
 
 ### General approach for saddle point problems
 
-  - \b Solvers: MINRES, GMRES
+  - **Solvers**: MINRES, GMRES
   - \b Preconditioners : look first at the saddle point matrix $$M$$ and its
     block factorization $$M = LDL^T$$:
       $$
