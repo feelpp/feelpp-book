@@ -1,7 +1,6 @@
 Algebraic solutions
 ====================
 
-
 #  Definitions
 
 ##  Matrices
@@ -59,6 +58,8 @@ Let us now describe some  properties of preconditioners
   - $$P^{-1}$$ is dense, $$P$$ is often not available and is not needed
   - $$A$$ is rarely used by $$\mathcal{P}$$, but $$A_p = A$$ is common
   - $$A_p$$ is often a sparse matrix, the \e preconditioning  \e matrix
+  
+Here are some numerical methods to solve the system $$A x = b$$
   - **Matrix-based**: Jacobi, Gauss-Seidel, SOR, ILU(k), LU
   - **Parallel**: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
   - **Indefinite**: Schur-complement, Domain Decomposition, Multigrid
