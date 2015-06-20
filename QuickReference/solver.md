@@ -87,7 +87,7 @@ All linear algebra are encapsulated within backends using the command line optio
 
 
 
-The default backend is `petsc.` 
+The default `backend` is `petsc.` 
 
 # Examples
 
