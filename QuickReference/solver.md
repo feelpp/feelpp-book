@@ -146,7 +146,7 @@ PC Object: 2 MPI processes
  - penalty(techniques from optimisation), 
  - augmented lagrangian approach (Glowinski,Le Tallec)
 
-Note that The Inf-sup condition must be satisfied. In particular for a multigrid strategy, the smoother needs to preserve it.
+**Note** that The Inf-sup condition must be satisfied. In particular for a multigrid strategy, the smoother needs to preserve it.
 
 ### General approach for saddle point problems
 
