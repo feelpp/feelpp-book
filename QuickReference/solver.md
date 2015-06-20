@@ -141,7 +141,7 @@ PC Object: 2 MPI processes
   \mathbf{u} = \mathbf{g} \mbox{ on } \partial \Omega
   $$
 
-  This problem is indefinite, SolverDefinitionsMatrices.
+  This problem is indefinite.
 
   - **Strategies** : Uzawa, penalty(techniques from optimisation), augmented
   lagrangian approach (Glowinski,Le Tallec)
