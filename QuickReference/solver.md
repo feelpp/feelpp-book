@@ -50,10 +50,9 @@ $$\{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b, \dots\}$$
 
 We solve for
 $$
-  \begin{gather*}
+
   (A P^{-1}) P x = b \\
   \{ b, (P^{-1}A)b, (P^{-1}A)^2b, \dotsc \}
-  \end{gather*}
 $$
 Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is \b never formed.
 
