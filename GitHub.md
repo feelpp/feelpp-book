@@ -26,16 +26,13 @@ I want to talk about collaborating with GitHub. GitHub has some amazingly powerf
 - ADDING files
 
 Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now untracked files or a file that have been added since the last commit. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type:
-  ``` git add file_Name 
-```
 
-and the file is added to the respective repo.
-
-- MAKING a commit
+   ``` git add file_Name  ```   
+   
+   - MAKING A COMMIT
 
 After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, of course, the next step that once you have all the files staged that you want for your next commit, the next step is to go ahead, and do the commit itself. And that's taking that sort of snapshot of the project. At that moment in time.To add a commit message, in the command line, write:
-``` git commit -m "write the commit message" 
-```
+``` git commit -m "write the commit message" ```
 
 NOTE: A commit must be made each time a file is modified or updated.
 
@@ -43,11 +40,10 @@ NOTE: A commit must be made each time a file is modified or updated.
 
 Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit. For example maybe you're working with a team member and you're not exactly sure what has changed. Or maybe you've been working for a couple of days and you're not sure whether you made a change to a file or not. Well to do that,in terminal write:
 
-```
- git diff 
-```
+``` git diff ```
 
-Inside the index file it'll show you the changes in two ways.
+
+Inside the index file, it'll show you the changes in two ways.
 
 - Fetching and Pulling from Your Remotes
 
@@ -93,16 +89,14 @@ The upstream project is expected to have the commit named by ```<start>``` and t
 
 OPTIONS
 
-```-p```
-Include patch text in the output.
+```-p``` nclude patch text in the output.
 
-```<start>```
+``` <start> ```
 Commit to start at. This names a commit that is already in the upstream history.
 
-```<url>```
-The repository URL to be pulled from.
+``` <url> ``` The repository URL to be pulled from.
 
-```<end>```
+ ```<end> ```
 
 - ISSUES
 
