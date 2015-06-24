@@ -94,21 +94,23 @@ The default `backend` is `petsc.`
 
 ## Laplacian
 
-  We start with the quickstart Laplacian example, recall that we wish to, given
-  a domain $$\Omega$$, find $$u$$ such that
+We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
-  $$ -\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2}, u = g \mbox{ on } \partial \Omega $$
+$$ 
+-\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
+u = g \mbox{ on } \partial \Omega 
+$$
 
-  Monitoring KSP solvers
+Monitoring KSP solvers
 
-  ```cpp
-  feelpp_qs_laplacian --ksp-monitor=true
-  ```
+```cpp
+feelpp_qs_laplacian --ksp-monitor=true
+```
 
-  Viewing KSP solvers
+Viewing KSP solvers
 
 
-  ```sh
+```sh
 shell> mpirun -np 2 feelpp_qs_laplacian --ksp-monitor=1  --ksp-view=1
   0 KSP Residual norm 8.953261456448e-01
   1 KSP Residual norm 7.204431786960e-16
@@ -132,7 +134,6 @@ PC Object: 2 MPI processes
     total: nonzeros=5727, allocated nonzeros=5727
     total number of mallocs used during MatSetValues calls =0
       not using I-node (on process 0) routines
-
   ```
 
 ### Solvers and preconditioners
