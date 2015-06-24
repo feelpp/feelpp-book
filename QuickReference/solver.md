@@ -157,7 +157,7 @@ PC Object: 2 MPI processes
 
 ### General approach for saddle point problems
 
- The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have
+ The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have :
 $$M =   \begin{pmatrix}
           A & B \\
           B^T & 0
@@ -175,27 +175,28 @@ $$M =   \begin{pmatrix}
           I & A^{-1} B\\
           0 & I
         \end{pmatrix}
-        $$
+$$
         
-        - Elman, Silvester and Wathen propose 3 preconditioners:
-    $$
-      P_1 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & B\\
-        B^T & 0
-      \end{pmatrix}, \quad
-      P_2 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & 0\\
-        0 & \tilde{S}
-      \end{pmatrix},\quad
-      P_3 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & B\\
-        0 & \tilde{S}
-      \end{pmatrix}
-      $$
-    where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1}
+- Elman, Silvester and Wathen propose 3 preconditioners:
+
+$$
+P_1 =
+\begin{pmatrix}
+\tilde{A}^{-1} & B\\
+B^T & 0
+\end{pmatrix}, \quad
+P_2 =
+\begin{pmatrix}
+\tilde{A}^{-1} & 0\\
+0 & \tilde{S}
+\end{pmatrix},\quad
+P_3 =
+\begin{pmatrix}
+\tilde{A}^{-1} & B\\
+0 & \tilde{S}
+\end{pmatrix}
+$$
+where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1}
     \approx A^{-1}$$
 
 # Options
