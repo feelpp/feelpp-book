@@ -143,7 +143,8 @@ PC Object: 2 MPI processes
   domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
 
   $$
-  -\Delta \mathbf{u} + \nabla p = \mathbf{ f},\  \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\ 
+  -\Delta \mathbf{u} + \nabla p = \mathbf{ f} \mbox{ in } \Omega,\\
+  \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\\
   \mathbf{u} = \mathbf{g} \mbox{ on } \partial \Omega
   $$
 
@@ -157,10 +158,10 @@ PC Object: 2 MPI processes
 ### General approach for saddle point problems
 
  The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have
-$$M =\begin{align}
-          A & B\\
+$$M =   \begin{pmatrix}
+          A & B \\
           B^T & 0
-        \end{align}
+        \end{pmatrix}
         =
         \begin{pmatrix}
           I & 0\\
@@ -175,6 +176,7 @@ $$M =\begin{align}
           0 & I
         \end{pmatrix}
         $$
+        
         - Elman, Silvester and Wathen propose 3 preconditioners:
     $$
       P_1 =
