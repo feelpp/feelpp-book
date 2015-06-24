@@ -177,7 +177,6 @@ $$M =\begin{align}
         $$
         - Elman, Silvester and Wathen propose 3 preconditioners:
     $$
-      \label{eq:3}
       P_1 =
       \begin{pmatrix}
         \tilde{A}^{-1} & B\\
