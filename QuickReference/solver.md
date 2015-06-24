@@ -96,10 +96,8 @@ The default `backend` is `petsc.`
 
 We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
-$$ 
--\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
-u = g \mbox{ on } \partial \Omega 
-$$
+$$-\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
+u = g \mbox{ on } \partial \Omega $$
 
 Monitoring KSP solvers
 
