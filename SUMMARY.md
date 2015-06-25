@@ -7,7 +7,7 @@
    * [Sponsors](sponsors.md)
 * [Getting Started](GettingStarted/README.md)
    * [Tools](Tools/README.md)
-       * [GitHub](github.md)
+       * [GitHub](Tools/github.md)
        * [Makefile](makefile.md)
        * [CMake](cmake.md)
        * [Doxygen](Tools/doxygen.md)
