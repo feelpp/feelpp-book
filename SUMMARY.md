@@ -8,6 +8,7 @@
 * [Getting Started](GettingStarted/README.md)
    * [Tools](Tools/tools.md)
        * [GitHub](Tools/github.md)
+           * tools.md
        * [Makefile](Tools/makefile.md)
        * [CMake](Tools/cmake.md)
        * [Doxygen](Tools/doxygen.md)
