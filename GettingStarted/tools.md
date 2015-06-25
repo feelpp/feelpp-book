@@ -232,3 +232,28 @@ There are several other switches to the make utility. For more info, ``` man mak
 Visit [GNU make](http://www.gnu.org/software/make/manual/make.html)  for more informations about makefile
 
 
+##CMAKE
+CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as Makefiles and Visual Studio project files.
+CMake is a 3rd party tool with its own [documentation](http://www.cmake.org/documentation/).
+
+CMake is controlled by writing instructions in CMakeLists.txt files. Each directory in your project should have a CMakeLists.txt file. What is nice about CMake is that CMakeLists.txt files in a sub-directory inherit properties set in the parent directory, reducing the amount of code duplication.
+
+####creating a cmake file
+Native CMake projects that are intended to be used by other projects (e.g. libraries, but also tools that could be useful as a build-utility, such as documentation generators, wrapper generators, etc.) should provide at a minimum a ``` <name>Config.cmake``` or a ```<lower-name>-config.cmake``` file. This file can then be used by the ```find_package()`` command in *config-mode* to provide information about *include-directories*, *libraries* and their *dependencies*, required *compile-flags* or locations of *executables*.
+
+####Building with CMake
+Setting up a bunch of CMakeLists.txt files will not immediately allow you to build your project. CMake is just a cross platform wrapper around more traditional build systems. In the case of linux, this means make. A quick preprocessing step will convert your CMakeLists.txt description into a traditional make build system automatically. One nice and highly recommended feature of CMake is the ability to do out of source builds. In this way you can make all your .o files, various temporary depend files, and even the binary executables without cluttering up your source tree. To use out of source builds, create a build directory in your top-level folder (technically, this can be anywhere, but the top-level project folder seems to be a logical choice). Next, change into your build directory and run cmake pointing it to the directory of the top-level CMakeLists.txt. For example:
+```sh
+MBP-de-winsy-2:stageM1 user$ cd src
+MacBook-Pro-de-winsy-2:src user$ ls
+CMakeLists.txt  operation-cpp
+MacBook-Pro-de-winsy-2:src user$ mkdir build
+MacBook-Pro-de-winsy-2:src user$ ls
+CMakeLists.txt  build  operation-cpp
+MacBook-Pro-de-winsy-2:src user$ cd build
+MacBook-Pro-de-winsy-2:build user$ cmake ..
+```
+
+Remember to be in your build directory and point cmake only to the directory containing the top-level CMakeLists.txt file, not the file itself. If all goes well, cmake will process your CMakeLists.txt files, find the location of all libraries and include paths and spew a bunch of configuration information including a traditional Makefile in your build directory. (If you have any familiarity with autotools/autohell, this cmake process is similar to ./configure). You are now ready to build using the traditional make system. Run make in your build directory to compile and link everything. CMake even tosses in some nice colors, progress bars, and suppresses a bunch of gcc output. If you want verbose output, you can type VERBOSE=1 make (helpful if something goes wrong)
+
+Below is an example of a CMakeLists.txt file for a simple dummy pro
