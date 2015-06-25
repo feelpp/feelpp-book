@@ -7,6 +7,7 @@
    * [Sponsors](sponsors.md)
 * [Getting Started](GettingStarted/README.md)
    * [Tools](GettingStarted/tools.md)
+       * GitHub
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
