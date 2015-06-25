@@ -5,7 +5,7 @@
    * [Credits](credits.md)
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
-* [Getting Started](GettingStarted/README.md)
+* [Getting Started/Tools.md](GettingStarted/README.md)
    * [Tools](GettingStarted/Tools)
        * [GitHub](github.md)
        * [Doxygen](doxygenmd.md)
