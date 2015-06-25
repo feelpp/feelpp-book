@@ -94,21 +94,21 @@ The default `backend` is `petsc.`
 
 ## Laplacian
 
-  We start with the quickstart Laplacian example, recall that we wish to, given
-  a domain $$\Omega$$, find $$u$$ such that
+We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
-  $$ -\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2}, u = g \mbox{ on } \partial \Omega $$
+$$-\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
+u = g \mbox{ on } \partial \Omega $$
 
-  Monitoring KSP solvers
+Monitoring KSP solvers
 
-  ```cpp
-  feelpp_qs_laplacian --ksp-monitor=true
-  ```
+```cpp
+feelpp_qs_laplacian --ksp-monitor=true
+```
 
-  Viewing KSP solvers
+Viewing KSP solvers
 
 
-  ```sh
+```sh
 shell> mpirun -np 2 feelpp_qs_laplacian --ksp-monitor=1  --ksp-view=1
   0 KSP Residual norm 8.953261456448e-01
   1 KSP Residual norm 7.204431786960e-16
@@ -132,7 +132,6 @@ PC Object: 2 MPI processes
     total: nonzeros=5727, allocated nonzeros=5727
     total number of mallocs used during MatSetValues calls =0
       not using I-node (on process 0) routines
-
   ```
 
 ### Solvers and preconditioners
@@ -143,7 +142,8 @@ PC Object: 2 MPI processes
   domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
 
   $$
-  -\Delta \mathbf{u} + \nabla p = \mathbf{ f},\  \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\ 
+  -\Delta \mathbf{u} + \nabla p = \mathbf{ f} \mbox{ in } \Omega,\\
+  \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\\
   \mathbf{u} = \mathbf{g} \mbox{ on } \partial \Omega
   $$
 
@@ -156,11 +156,11 @@ PC Object: 2 MPI processes
 
 ### General approach for saddle point problems
 
- The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have
-$$M =\begin{align}
-          A & B\\
+ The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have :
+$$M =   \begin{pmatrix}
+          A & B \\
           B^T & 0
-        \end{align}
+        \end{pmatrix}
         =
         \begin{pmatrix}
           I & 0\\
@@ -174,27 +174,28 @@ $$M =\begin{align}
           I & A^{-1} B\\
           0 & I
         \end{pmatrix}
-        $$
-        - Elman, Silvester and Wathen propose 3 preconditioners:
-    $$
-      \label{eq:3}
-      P_1 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & B\\
-        B^T & 0
-      \end{pmatrix}, \quad
-      P_2 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & 0\\
-        0 & \tilde{S}
-      \end{pmatrix},\quad
-      P_3 =
-      \begin{pmatrix}
-        \tilde{A}^{-1} & B\\
-        0 & \tilde{S}
-      \end{pmatrix}
-      $$
-    where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1}
+$$
+        
+- Elman, Silvester and Wathen propose 3 preconditioners:
+
+$$
+P_1 =
+\begin{pmatrix}
+\tilde{A}^{-1} & B\\
+B^T & 0
+\end{pmatrix}, \quad
+P_2 =
+\begin{pmatrix}
+\tilde{A}^{-1} & 0\\
+0 & \tilde{S}
+\end{pmatrix},\quad
+P_3 =
+\begin{pmatrix}
+\tilde{A}^{-1} & B\\
+0 & \tilde{S}
+\end{pmatrix}
+$$
+where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1}
     \approx A^{-1}$$
 
 # Options
