@@ -14,7 +14,6 @@
        * [tools.md](tools.md)
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
-   * [README.md](README.md)
    * [Linux](GettingStarted/linux.md)
    * [Mac OS X](GettingStarted/mac.md)
 * [Tutorial](Tutorial/README.md)
