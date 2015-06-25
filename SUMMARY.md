@@ -6,7 +6,7 @@
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
 * [Getting Started](GettingStarted/README.md)
-   * [Tools](GettingStarted/tools.md)
+   * [](GettingStarted/Tools)
        * GitHub
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
