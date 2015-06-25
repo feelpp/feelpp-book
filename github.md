@@ -27,44 +27,32 @@ Now that we have a Git repo up and running, we need to add some files for it to 
    ``` git add file_Name  ```   
    
 - MAKING A COMMIT   
-After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, of course, the next step that once you have all the files staged that you want for your next commit, the next step is to go ahead, and do the commit itself. And that's taking that sort of snapshot of the project. At that moment in time.To add a commit message, in the command line, write:
-
+After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, of course, the next step that once you have all the files staged that you want for your next commit, the next step is to go ahead, and do the commit itself. And that's taking that sort of snapshot of the project. At that moment in time.To add a commit message, in the command line, write:   
 ```sh  
 git commit -m "write the commit message"
-```
-
+```   
 NOTE: A commit must be made each time a file is modified or updated.
 
 - Checking differences   
-Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit. For example maybe you're working with a team member and you're not exactly sure what has changed. Or maybe you've been working for a couple of days and you're not sure whether you made a change to a file or not. Well to do that,in terminal write:
-
-``` git diff ```
-
-
+Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit. For example maybe you're working with a team member and you're not exactly sure what has changed. Or maybe you've been working for a couple of days and you're not sure whether you made a change to a file or not. Well to do that,in terminal write:   
+``` git diff ```   
 Inside the index file, it'll show you the changes in two ways.
 
 - Fetching and Pulling from Your Remotes   
-To get data from your remote projects, you can run:
-
+To get data from your remote projects, you can run:   
 ```
 git fetch [remote-name]
 ```
-The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the [branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches) from that remote, which you can merge in or inspect at any time.
-
-If you [clone](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init) a repository, the command automatically adds that remote repository under the name “origin”. So, git fetch origin fetches any new work that has been pushed to that server since you cloned (or last fetched from) it. It’s important to note that the git fetch command pulls the data to your local repository – it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.
-
+The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the [branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches) from that remote, which you can merge in or inspect at any time.   
+If you [clone](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init) a repository, the command automatically adds that remote repository under the name “origin”. So, git fetch origin fetches any new work that has been pushed to that server since you cloned (or last fetched from) it. It’s important to note that the git fetch command pulls the data to your local repository – it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.   
 If you have a branch set up to track a remote branch, you can use the ```git pull``` command to automatically fetch and then merge a remote branch into your current branch. This may be an easier or more comfortable workflow for you; and by default, the git clone command automatically sets up your local master branch to track the remote master branch (or whatever the default branch is called) on the server you cloned from. Running git pull generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.
 
 - Pushing to Your Remotes   
-When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: 
-```git push [remote-name] [branch-name ```. 
-      
-If you want to push your master branch to your origin server (again, cloning generally sets up both of those names for you automatically), then you can run this to push any commits you’ve done back up to the server:
-
-``` git push origin master```
-
-This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to pull down their work first and incorporate it into yours before you’ll be allowed to push.
-
+When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple:   
+ ```git push [remote-name] [branch-name ```.    
+If you want to push your master branch to your origin server (again, cloning generally sets up both of those names for you automatically), then you can run this to push any commits you’ve done back up to the server:   
+``` git push origin master```   
+This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to pull down their work first and incorporate it into yours before you’ll be allowed to push.   
 NOTE: ```git remote rename file_name``` and ```git remote rm file_name``` will rename and remove the given file respectively from a repo.
 
 - GIT PULL REQUEST   
@@ -78,21 +66,19 @@ The fork & pull model lets anyone fork an existing repository and push changes t
 Generate a request asking your upstream project to pull changes into their tree. The request, printed to the standard output, summarizes the changes and indicates from where they can be pulled.
 The upstream project is expected to have the commit named by ```<start>``` and the output asks it to integrate the changes you made since that commit, up to the commit named by ```<end>```, by visiting the repository named by ```<url>```.   
 
+
 - OPTIONS   
-
-```-p``` nclude patch text in the output.
-
+```-p``` nclude patch text in the output.   
 ``` <start> ```
-Commit to start at. This names a commit that is already in the upstream history.
-
-``` <url> ``` The repository URL to be pulled from.
-
- ```<end> ```
+Commit to start at. This names a commit that is already in the upstream history.   
+``` <url> ``` The repository URL to be pulled from   
+```<end> ```
 
 - ISSUES   
 Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. They’re kind of like email—except they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues, and has its own section in every repository.See how to create an issue [here](https://help.github.com/articles/creating-an-issue/).
 A title and description describe what the issue is all about.   
- - Notifications   
+
+- Notifications   
  Notifications are GitHub’s way to keep up to date with your Issues. You can use them to find out about new issues on repositories, or just to know when someone needs your input to move forward on an issue.
 There are two ways to receive notifications: via email, and via the web. You can [configure](https://help.github.com/articles/configuring-notification-emails/) how you receive notifications in your settings. If you plan on receiving a lot of notifications, we like to recommend that you receive web + email notifications for Participating and web notifications for Watching.
 
