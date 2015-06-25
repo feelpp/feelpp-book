@@ -6,7 +6,7 @@
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
 * [Getting Started](GettingStarted/README.md)
-   * [GettingStarted](GettingStarted/Tools.md)
+   * [GettingStarted/Tools](GettingStarted/Tools)
        * [GitHub](github.md)
        * [Doxygen](doxygenmd.md)
        * [Makefile](makefile.md)
