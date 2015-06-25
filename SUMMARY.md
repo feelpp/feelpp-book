@@ -9,7 +9,7 @@
    * [Tools](GettingStarted/Tools)
        * [GitHub](github.md)
        * [Doxygen](doxygenmd.md)
-       * Makefile
+       * [Makefile](makefile.md)
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
