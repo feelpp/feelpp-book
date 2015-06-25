@@ -62,8 +62,7 @@ If you have a branch set up to track a remote branch, you can use the ```git pul
 - Pushing to Your Remotes
 
 When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: 
-```git push [remote-name] [branch-name]
-      ```. 
+```git push [remote-name] [branch-name ```. 
       
 If you want to push your master branch to your origin server (again, cloning generally sets up both of those names for you automatically), then you can run this to push any commits you’ve done back up to the server:
 
@@ -122,7 +121,7 @@ Doxygen is a tool for auto-generating API documentation, though you can also use
 
 *NOTE*: 
 
-Doxygen is developed under Mac OS X and Linux, but is set-up to be highly portable. As a result, it runs on most other Unix flavors as well. Furthermore, executables for Windows are available.For more informations on downloading and installing Doxygen, click [here](http://www.stack.nl/~dimitri/doxygen/manual/install.html)
+Doxygen is developed under Mac OS X and Linux, but is set-up to be highly portable. As a result, it runs on most other Unix flavors as well. Furthermore, executables for Windows are available.For more informations about downloading and installing Doxygen, click [here](http://www.stack.nl/~dimitri/doxygen/manual/install.html)
 
 So, what's the value to Doxygen?
 
@@ -152,9 +151,66 @@ Special comments can contain Doxygen tags that let you specify particulars about
 For detailed informations about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html)
 
 
+##MAKEFILES
+Compiling your source code files can be tedious, especially when you want to include several source files and have to type the compiling command everytime you want to do it.Makefiles are special format files that together with the make utility will help you to auto-magically build and manage your projects.
 
+It is recommended to create a new directory and place all the files in there before applying the make commands.
 
+Creating a Makefile
 
+A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o & executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
+The following is the generic target entry form :
+```sh   
+# comment
+# (note: the <tab> in the command line is necessary for make to work) 
+target:  dependency1 dependency2 ...
+      <tab> command
 
+for example:
+#
+# target entry to build program executable from program and mylib 
+# object files 
+#
+program: program.o mylib.o
+	gcc -o program program.o mylib.o
+	```
+
+Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h :
+```sh
+all: operation code
+operation: main.o operation.o
+	g++ main.o operation.o -o operation 
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+operation.o: operation.cpp
+	g++ -c operation.cpp
+
+code: code.cpp
+	g++ code.cpp -o code
+
+clean:
+	rm *o operation code
+```
+
+####The make utility
+
+######If you run
+```sh
+   make
+```
+
+this program will look for a file named makefile in your directory, and then execute it.
+
+If you have several makefiles, then you can execute them with the command:
+
+```sh
+make -f MyMakefile
+```
+
+There are several other switches to the make utility. For more info, ``` man make ```.
+Visit [GNU make](http://www.gnu.org/software/make/manual/make.html)  
+for more informations about makefile
 
 
