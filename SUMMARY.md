@@ -11,7 +11,6 @@
        * [Makefile](Tools/makefile.md)
        * [CMake](Tools/cmake.md)
        * [Doxygen](Tools/doxygen.md)
-       * [tools.md](tools.md)
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
