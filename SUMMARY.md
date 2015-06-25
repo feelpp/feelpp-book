@@ -10,7 +10,7 @@
        * [GitHub](github.md)
        * [Doxygen](doxygenmd.md)
        * [Makefile](makefile.md)
-       * CMake
+       * [CMake](cmake.md)
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
