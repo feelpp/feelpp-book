@@ -33,6 +33,7 @@ Now that we have a Git repo up and running, we need to add some files for it to 
    - MAKING A COMMIT
 
 After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, of course, the next step that once you have all the files staged that you want for your next commit, the next step is to go ahead, and do the commit itself. And that's taking that sort of snapshot of the project. At that moment in time.To add a commit message, in the command line, write:
+
 ``` git commit -m "write the commit message" ```
 
 NOTE: A commit must be made each time a file is modified or updated.
