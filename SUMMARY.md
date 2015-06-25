@@ -10,7 +10,7 @@
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
    * [Mac OS X](GettingStarted/mac.md)
-   * Tools
+   * [Tools](GettingStarted/tools.md)
 * [Tutorial](Tutorial/README.md)
    * [Environment](Tutorial/01-SettingUpEnvironment.md)
    * [Loading a Mesh](Tutorial/02-LoadingMesh.md)
