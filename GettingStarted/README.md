@@ -1,7 +1,7 @@
 Getting Started {#GettingStarted}
 ===============
 
- * [Basic Tools](tools.md)
+ * [Basic Tools](Tools/tools.md)
  * [Downloading](download.md)
  * [Compiling from source](compiling.md)
  * [Linux](linux.md)
