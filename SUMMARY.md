@@ -9,7 +9,7 @@
    * [Tools](Tools/README.md)
        * [GitHub](Tools/github.md)
        * [Makefile](Tools/makefile.md)
-       * [CMake](cmake.md)
+       * [CMake](Tools/cmake.md)
        * [Doxygen](Tools/doxygen.md)
    * [Download](GettingStarted/download.md)
    * [Compiling from sources](GettingStarted/compiling.md)
