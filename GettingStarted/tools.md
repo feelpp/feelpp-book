@@ -162,6 +162,14 @@ It is recommended to create a new directory and place all the files in there bef
 Creating a Makefile
 
 A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o & executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
+
+####The basic Makefile
+
+The basic *makefile* is composed of:
+```sh
+target: dependencies
+[tab] system command
+```
 The following is the generic target entry form :
 ```sh   
 # comment
@@ -213,6 +221,13 @@ make -f MyMakefile
 ```
 
 There are several other switches to the make utility. For more info, ``` man make ```.
+
+####Build Process
+
+  1. Compiler takes the source files and outputs object files
+  2. Linker takes the object files and creates an executable
+  
+
 
 Visit [GNU make](http://www.gnu.org/software/make/manual/make.html)  for more informations about makefile
 
