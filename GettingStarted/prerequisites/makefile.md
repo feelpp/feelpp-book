@@ -30,7 +30,7 @@ program: program.o mylib.o
 	gcc -o program program.o mylib.o
 ```
 
-Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h for a dummy project (operation) :
+Below is an example of a simple Makefile in c++ for files named operation.cpp,main.cpp and operation.h of a dummy mini project (operation) :(click [here](https://github.com/wkyoshe/stageM1/tree/master/src)  to see the dummy mini project source codes)
 ```sh
 all: operation 
 operation: main.o operation.o
