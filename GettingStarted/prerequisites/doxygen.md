@@ -58,20 +58,30 @@ find_package(Doxygen)
 endif()
 
 ```   
-To generate the documentation, we have to set the   
+To generate the documentation, we have to set   
 ```option(BUID_DOCUMENTATION = ON)``` and ```OFF```  if we don't desire a documentation.
 
-*NOTE* : To reset the option initial value,use the cmake command:    
-For our ummy mini project
-```sh
+*NOTE* : To reset the option initial value,we use the cmake command:    
+ - For our ummy mini project   
+  ```sh
 cmake -DBUID_DOCUMENTATION=ON/OFF
-```
-
-GENERALLY:
+```   
+ - GENERALLY:   
 ```sh
-
 cmake -DOPTION_NAME=NEW_VALUE
 ```
+The base situation is like this : doc/CMakeLists.txt file checks for Doxygen and if found, adds a doc target to the build system.
+It also generates a doc/Doxyfile in the build folder, which allows cmake to substitute some variables such as version number, project name, source and destination folder etc. 
+In your source tree is somewhere a Doxyfile, which you previously used to generate documentation by running doxygen in this directory. Rename this file to ```Doxyfile.in```  
+After another CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.   
+ - To view the online html online documentation, we use the following command line in the source directory:   
+```open html/index.html```   
+ - To generate the pdf format of the documentation from the Latek files created, go to the Latex  directory and then use the command line:
+  ```sh
+    pdflatex   
+    pdflatex fileName
+    ```
+
 
 For detailed information about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html)
 
