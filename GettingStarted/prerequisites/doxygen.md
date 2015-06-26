@@ -61,7 +61,7 @@ endif()
 To generate the documentation, we have to set   
 ```option(BUID_DOCUMENTATION = ON)``` and ```OFF```  if we don't desire a documentation.
 
-*NOTE* : To reset the option initial value,we use the cmake command:    
+*NOTE* : To reset the option initial value,we use the cmake command:   
  - For our ummy mini project   
   ```sh
 cmake -DBUID_DOCUMENTATION=ON/OFF
@@ -70,6 +70,7 @@ cmake -DBUID_DOCUMENTATION=ON/OFF
 ```sh
 cmake -DOPTION_NAME=NEW_VALUE
 ```
+
 The base situation is like this : doc/CMakeLists.txt file checks for Doxygen and if found, adds a doc target to the build system.
 It also generates a doc/Doxyfile in the build folder, which allows cmake to substitute some variables such as version number, project name, source and destination folder etc. 
 In your source tree is somewhere a Doxyfile, which you previously used to generate documentation by running doxygen in this directory. Rename this file to ```Doxyfile.in```  
