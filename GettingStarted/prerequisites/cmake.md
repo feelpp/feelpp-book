@@ -100,11 +100,12 @@ An initial source of confusion with out of source builds is that you basically h
 One nice thing about out of source builds is that cleaning up object files, makedepend files, binaries, and other miscellaneous build cruft can be done by simply deleting the entire build directory because there is no source. You can also use make clean to clean up the actual object and binary files, but when you are planning to tar up your source or distribute your code to the masses, you can simply do
 ```sh
 MBP-de-winsy-2:stageM1 user$ cd src
-MacBook-Pro-de-winsy-2:src$ ls
-CMakeLists.txt  build operation-cpp
 MacBook-Pro-de-winsy-2:src$ rm -rf build
 MacBook-Pro-de-winsy-2:src$ ls
-CMakeLists.txt  operation-cpp
+operation.cpp	operation.h
+Doxyfile.in		image.png	
+Makefile		irma.png		
+CMakeLists.txt	main.cpp
 ```
 to clean up and package your code.
 
