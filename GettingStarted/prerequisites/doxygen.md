@@ -33,6 +33,48 @@ Special comments can contain Doxygen tags that let you specify particulars about
      *@todo
      */
 ```
-For detailed informations about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html)
+
+We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run ```make```.    
+To generate a documentation for our simple [dummy mini project](https://github.com/wkyoshe/stageM1/tree/master/src),we have to add to our CMakeLists.txt the following:
+
+```sh
+# add a target to generate API documentation with Doxygen
+#set OFF if you don't want Doxygen to generate the documentation
+option(BUILD_DOCUMENTATION "Use Doxygen to create the HTML based API documentation" ON)
+if(BUILD_DOCUMENTATION)
+find_package(Doxygen)
+  if(NOT DOXYGEN_FOUND)
+    message(FATAL_ERROR
+      "Doxygen is needed to build the documentation. Please install it correctly")
+  endif()
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in 
+                       ${PROJECT_BINARY_DIR}/Doxyfile @ONLY)
+  add_custom_target(doc ALL
+             COMMAND ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/Doxyfile
+                  COMMENT "Generating API documentation with Doxygen" VERBATIM)
+  #Doxygen will be triggered every time we run make
+  # IF you do NOT want the documentation to be generated EVERY time you build the project
+  # then leave out the 'ALL' keyword from the above command.                
+endif()
+
+```   
+To generate the documentation, we have to set the   
+```option(BUID_DOCUMENTATION = ON)``` and ```OFF```  if we don't desire a documentation.
+
+*NOTE* : To reset the option initial value,use the cmake command:    
+For our ummy mini project
+```sh
+cmake -DBUID_DOCUMENTATION=ON/OFF
+```
+
+GENERALLY:
+```sh
+
+cmake -DOPTION_NAME=NEW_VALUE
+```
+
+For detailed information about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html)
+
+
 
 
