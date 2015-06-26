@@ -30,9 +30,9 @@ program: program.o mylib.o
 	gcc -o program program.o mylib.o
 	```
 
-Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h :
+Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h for a dummy project(operation) :
 ```sh
-all: operation code
+all: operation 
 operation: main.o operation.o
 	g++ main.o operation.o -o operation 
 
@@ -42,11 +42,9 @@ main.o: main.cpp
 operation.o: operation.cpp
 	g++ -c operation.cpp
 
-code: code.cpp
-	g++ code.cpp -o code
 
 clean:
-	rm *o operation code
+	rm -rf *.o 
 ```
 
 ####The make utility
