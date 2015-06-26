@@ -22,9 +22,9 @@ Once Git is installed, using it is just a matter of navigating to the directory 
 I want to talk about collaborating with GitHub. GitHub has some amazingly powerful collaboration tools and you can use them in a variety of interesting ways and workflows. To learn more about how collaborating works on GitHub, click [here](https://help.github.com/categories/collaborating/)   
 
 - ADDING files   
-Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now untracked files or a file that have been added since the last commit. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type:
-
+Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now untracked files or a file that have been added since the last commit. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type:  
    ``` git add file_Name  ```   
+   
    
 - MAKING A COMMIT   
 After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, of course, the next step that once you have all the files staged that you want for your next commit, the next step is to go ahead, and do the commit itself. And that's taking that sort of snapshot of the project. At that moment in time.To add a commit message, in the command line, write:   
@@ -45,11 +45,13 @@ git fetch [remote-name]
 ```
 The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the [branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches) from that remote, which you can merge in or inspect at any time.   
 If you [clone](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init) a repository, the command automatically adds that remote repository under the name “origin”. So, git fetch origin fetches any new work that has been pushed to that server since you cloned (or last fetched from) it. It’s important to note that the git fetch command pulls the data to your local repository – it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.   
-If you have a branch set up to track a remote branch, you can use the ```git pull``` command to automatically fetch and then merge a remote branch into your current branch. This may be an easier or more comfortable workflow for you; and by default, the git clone command automatically sets up your local master branch to track the remote master branch (or whatever the default branch is called) on the server you cloned from. Running git pull generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.
+If you have a branch set up to track a remote branch, you can use the   
+```git pull```   
+command to automatically fetch and then merge a remote branch into your current branch. This may be an easier or more comfortable workflow for you; and by default, the git clone command automatically sets up your local master branch to track the remote master branch (or whatever the default branch is called) on the server you cloned from. Running git pull generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.
 
 - Pushing to Your Remotes   
 When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple:   
- ```git push [remote-name] [branch-name ```.    
+ ```git push [remote-name] [branch-name] ```.    
 If you want to push your master branch to your origin server (again, cloning generally sets up both of those names for you automatically), then you can run this to push any commits you’ve done back up to the server:   
 ``` git push origin master```   
 This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to pull down their work first and incorporate it into yours before you’ll be allowed to push.   
@@ -61,8 +63,8 @@ NOTE: ```git remote rename file_name``` and ```git remote rm file_name``` will r
  - FORK AND PULL   
 The fork & pull model lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository. The changes must then be pulled into the source repository by the project maintainer. This model reduces the amount of friction for new contributors and is popular with open source projects because it allows people to work independently without upfront coordination.
 
- Pull requests are especially useful in the fork & pull model because they provide a way to notify project maintainers about changes in your fork. However, they're also useful in the shared repository model where they're used to initiate code review and general discussion about a set of changes before being merged into a mainline branch.
-```git request-pull' [-p] <start> <url> [<end>]```
+ Pull requests are especially useful in the fork & pull model because they provide a way to notify project maintainers about changes in your fork. However, they're also useful in the shared repository model where they're used to initiate code review and general discussion about a set of changes before being merged into a mainline branch.   
+ ```git request-pull' [-p] <start> <url> [<end>]```   
 Generate a request asking your upstream project to pull changes into their tree. The request, printed to the standard output, summarizes the changes and indicates from where they can be pulled.
 The upstream project is expected to have the commit named by ```<start>``` and the output asks it to integrate the changes you made since that commit, up to the commit named by ```<end>```, by visiting the repository named by ```<url>```.   
 
