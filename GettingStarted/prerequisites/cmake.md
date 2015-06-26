@@ -12,7 +12,7 @@ Setting up a bunch of CMakeLists.txt files will not immediately allow you to bui
 For documentation(using doxygen) purposes, we can configure our CMake file so that when we run the ```cmake``` and ```make``` commands, doxygen automatically geneates the documentation if desired.
 Lets take a look at a simple CMakeLists.txt file for our simple dummy project.
 ```sh
-
+set(CMAKE_CXX_COMPILER /usr/bin/clag++ 3.6.0)
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
 project(operation)
 
