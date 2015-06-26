@@ -77,15 +77,14 @@ To use out of source builds, create a build directory in your top-level folder (
 ```sh
 MBP-de-winsy-2:stageM1 user$ cd src
 MacBook-Pro-de-winsy-2:src user$ ls	
-operation.cpp
-CMakeCache.txt		Doxyfile.in		image.png		operation.h
+operation.cpp   irma.png
+Doxyfile.in		image.png		operation.h
 CMakeLists.txt				main.cpp	
 MacBook-Pro-de-winsy-2:src user$ mkdir build
 MacBook-Pro-de-winsy-2:src user$ ls
-MacBook-Pro-de-winsy-2:src user$ ls
 operation.cpp	
 Doxyfile.in		image.png		operation.h
-CMakeFiles		Makefile		irma.png		
+Makefile		irma.png		
 CMakeLists.txt		build			main.cpp			
 MacBook-Pro-de-winsy-2:src user$ cd build
 MacBook-Pro-de-winsy-2:build user$ cmake ..
