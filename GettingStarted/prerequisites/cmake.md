@@ -24,7 +24,6 @@ Remember to be in your build directory and point cmake only to the directory con
 
 Below is an example of a CMakeLists.txt file for a simple dummy project:
 ```sh
-
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
 project(operation)
 

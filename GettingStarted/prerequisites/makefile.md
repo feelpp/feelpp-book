@@ -3,7 +3,7 @@ Compiling your source code files can be tedious, especially when you want to inc
 
 It is recommended to create a new directory and place all the files in there before applying the make commands.
 
-Creating a Makefile
+###Creating a Makefile
 
 A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o & executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
 
@@ -28,9 +28,9 @@ for example:
 #
 program: program.o mylib.o
 	gcc -o program program.o mylib.o
-	```
+```
 
-Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h for a dummy project(operation) :
+Below is an example of a simple Makefile in c++ from the files named code.cpp,operation.cpp,main.cpp and operation.h for a dummy project (operation) :
 ```sh
 all: operation 
 operation: main.o operation.o
@@ -42,14 +42,13 @@ main.o: main.cpp
 operation.o: operation.cpp
 	g++ -c operation.cpp
 
-
 clean:
 	rm -rf *.o 
 ```
 
 ####The make utility
 
-######If you run
+If you run
 ```sh
    make
 ```
@@ -70,6 +69,5 @@ There are several other switches to the make utility. For more info, ``` man mak
   2. Linker takes the object files and creates an executable
   
 
-
-Visit [GNU make](http://www.gnu.org/software/make/manual/make.html)  for more informations about makefile
+Visit [GNU make](http://www.gnu.org/software/make/manual/make.html) for more informations about makefile
 
