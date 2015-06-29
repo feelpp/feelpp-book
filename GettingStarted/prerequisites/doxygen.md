@@ -12,21 +12,25 @@ The source comments can use any of three formats:
  1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
  
  ```sh
-     /** 
-      * A special comment 
-      */
+     /**
+      *@brief     operation.
+      *@date      june 19, 2015
+      *@author:   kyoshe winstone
+      *@version   1.1
+       */
      ```
  - You can also use an exclamation point instead of the second asterisk 
   
  ```sh
       /*!
-       * Another special comment 
+       *x is variable
+       *y is variable too
        */
        ```
  - Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.
  ```sh
 ///
-/// ... text ...
+/// @return the x value
 ///
 ```
  
