@@ -1,12 +1,8 @@
 ##DOXYGEN
-Doxygen is a tool for auto-generating API documentation, though you can also use it to generate documentation separate from an API. It can generate documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
-  - It can generate an on-line documentation browser (in HTML) and/or an off-line reference manual in LaTeX  from a set of documented source files. There is also support for generating output in RTF (MS-Word), PostScript, hyperlinked PDF, compressed HTML, and Unix man pages. The documentation is extracted directly from the sources, which makes it much easier to keep the documentation consistent with the source code.   
+Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
+  - It can generate an on-line documentation browser (in HTML) and/or an off-line reference manual in LaTeX  from a set of documented source files. 
   - You can configure doxygen to extract the code structure from undocumented source files. This is very useful to quickly find your way in large source distributions.Doxygen can also visualize the relations between the various elements by means of include dependency graphs, inheritance diagrams, and collaboration diagrams, which are all generated automatically.   
   - You can also use doxygen for creating normal documentation.
-
-***NOTE*** : 
-
-Doxygen is developed under Mac OS X and Linux, but is set-up to be highly portable. As a result, it runs on most other Unix flavors as well. Furthermore, executables for Windows are available.For more informations about downloading and installing Doxygen, click [here](http://www.stack.nl/~dimitri/doxygen/manual/install.html)
 
 **So, what's the value to Doxygen?**
 
@@ -15,11 +11,24 @@ Some of Doxygen's output is extracted from the semantics of the source programs.
 The source comments can use any of three formats:   
  1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
  
- ```(/** A special comment */)```.
+ ```sh
+     /** 
+      * A special comment 
+      */
+     ```
  - You can also use an exclamation point instead of the second asterisk 
   
- ``` (/*! Another special comment */)```.
+ ```sh
+      /*!
+       * Another special comment 
+       */
+       ```
  - Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.
+ ```sh
+///
+/// ... text ...
+///
+```
  
 **Tags**:
 
@@ -34,8 +43,8 @@ Special comments can contain Doxygen tags that let you specify particulars about
      */
 ```
 
-We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run ```make```.    
-To generate a documentation for our simple [dummy mini project](https://github.com/wkyoshe/stageM1/tree/master/src),we have to add to our CMakeLists.txt the following:
+We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run ```make```   commands.    
+To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
 
 ```sh
 # add a target to generate API documentation with Doxygen
@@ -61,17 +70,19 @@ endif()
 To generate the documentation, we have to set   
 ```option(BUID_DOCUMENTATION = ON)``` and ```OFF```  if we don't desire a documentation.
 
-*NOTE* : To reset the option initial value,we use the cmake command:   
- - For our ummy mini project   
+*NOTE* : To reset the option's initial value,we use the cmake command:   
+ - For our project   
   ```sh
-cmake -DBUID_DOCUMENTATION=ON/OFF
+cmake -D BUID_DOCUMENTATION=ON/OFF
 ```   
  - GENERALLY:   
 ```sh
 cmake -DOPTION_NAME=NEW_VALUE
 ```
 
-The base situation is like this : doc/CMakeLists.txt file checks for Doxygen and if found, adds a doc target to the build system.
+The base situation is like this :   
+
+doc/CMakeLists.txt file checks for Doxygen and if found, adds a doc target to the build system.
 It also generates a doc/Doxyfile in the build folder, which allows cmake to substitute some variables such as version number, project name, source and destination folder etc. 
 In your source tree is somewhere a Doxyfile, which you previously used to generate documentation by running doxygen in this directory. Rename this file to ```Doxyfile.in```  
 After another CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.   
