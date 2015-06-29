@@ -1,16 +1,10 @@
 ##CMAKE
-CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as Makefiles and Visual Studio project files.
-CMake is a 3rd party tool with its own [documentation](http://www.cmake.org/documentation/).
+CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as ***Makefiles*** and Visual Studio project files. CMake is controlled by writing instructions in CMakeLists.txt files. Each directory in your project should have a CMakeLists.txt file. What is nice about CMake is that CMakeLists.txt files in a sub-directory inherit properties set in the parent directory, reducing the amount of code duplication.
 
-CMake is controlled by writing instructions in CMakeLists.txt files. Each directory in your project should have a CMakeLists.txt file. What is nice about CMake is that CMakeLists.txt files in a sub-directory inherit properties set in the parent directory, reducing the amount of code duplication.
-
-####creating a cmake file
-Native CMake projects that are intended to be used by other projects (e.g. libraries, but also tools that could be useful as a build-utility, such as documentation generators, wrapper generators, etc.) should provide at a minimum a ``` <name>Config.cmake``` or a ```<lower-name>-config.cmake``` file. This file can then be used by the ```find_package()`` command in *config-mode* to provide information about *include-directories*, *libraries* and their *dependencies*, required *compile-flags* or locations of *executables*.
-
-####Building with CMake
+**Building with CMake**   
 Setting up a bunch of CMakeLists.txt files will not immediately allow you to build your project. CMake is just a cross platform wrapper around more traditional build systems. In the case of linux, this means make. A quick preprocessing step will convert your CMakeLists.txt description into a traditional make build system automatically. One nice and highly recommended feature of CMake is the ability to do out of source builds. In this way you can make all your .o files, various temporary depend files, and even the binary executables without cluttering up your source tree.   
-For documentation(using doxygen) purposes, we can configure our CMake file so that when we run the ```cmake``` and ```make``` commands, doxygen automatically geneates the documentation if desired.
-Lets take a look at a simple CMakeLists.txt file for our simple dummy project.
+
+Here below is a cmake for our simple project.
 ```sh
 set(CMAKE_CXX_COMPILER /usr/bin/clag++ 3.6.0)
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
@@ -68,8 +62,8 @@ find_package(Doxygen)
 endif()
 ```
 
-To use out of source builds, create a build directory in your top-level folder (technically, this can be anywhere, but the top-level project folder seems to be a logical choice). Next, change into your build directory and run cmake pointing it to the directory of the top-level CMakeLists.txt. For example for our dummy project, i have my source codes in the src directory:   
-```cd src``` : takes us to the src directory   
+To use out of source builds, create a build directory in your top-level folder (technically, this can be anywhere, but the top-level project folder seems to be a logical choice). Next, change into your build directory and run cmake pointing it to the directory of the top-level CMakeLists.txt. For example, for our simple project:  
+```cd src``` : takes us to the src directory( contains my code)   
 ``` ls``` : displays all that is in the src directory   
 ```mkdir build ``` : Builds the build directory   
 ```cmake ..``` : Runs cmake pointing it to the src directory   
@@ -77,36 +71,24 @@ To use out of source builds, create a build directory in your top-level folder (
 ```sh
 MBP-de-winsy-2:stageM1 user$ cd src
 MacBook-Pro-de-winsy-2:src user$ ls	
-operation.cpp   irma.png
-Doxyfile.in		image.png		operation.h
+operation.cpp   Doxyfile.in				operation.h
 CMakeLists.txt				main.cpp	
 MacBook-Pro-de-winsy-2:src user$ mkdir build
 MacBook-Pro-de-winsy-2:src user$ ls
 operation.cpp	
-Doxyfile.in		image.png		operation.h
-Makefile		irma.png		
-CMakeLists.txt		build			main.cpp			
+Doxyfile.in				operation.h
+Makefile	CMakeLists.txt	build			main.cpp			
 MacBook-Pro-de-winsy-2:src user$ cd build
 MacBook-Pro-de-winsy-2:build user$ cmake ..
 ```
 
-Then run the ```make``` command.
-
-Remember to be in your build directory and point cmake only to the directory containing the top-level CMakeLists.txt file, not the file itself. If all goes well, cmake will process your CMakeLists.txt files, find the location of all libraries and include paths and spew a bunch of configuration information including a traditional Makefile in your build directory. You are now ready to build using the traditional make system. Run make in your build directory to compile and link everything. CMake even tosses in some nice colors, progress bars, and suppresses a bunch of gcc output. If you want verbose output, you can type VERBOSE=1 make (helpful if something goes wrong)
-
-
-If you modify code in your source directory, including even a CMakeLists.txt file and re-run make in the build directory, make and cmake will recompile and rebuild necessary changes. If you are only making changes in a subdirectory, you can simply run make in the corresponding subdirectory in the build tree to process updates.
-An initial source of confusion with out of source builds is that you basically have two copies of your source tree, one with actual source code, and one with Makefiles and binary executables (in the build tree). It is probably best to keep two windows open with one in the build tree for making and running your programs, and one window in the source tree for modifying source files.
-One nice thing about out of source builds is that cleaning up object files, makedepend files, binaries, and other miscellaneous build cruft can be done by simply deleting the entire build directory because there is no source. You can also use make clean to clean up the actual object and binary files, but when you are planning to tar up your source or distribute your code to the masses, you can simply do
+Then run the command. 
 ```sh
-MBP-de-winsy-2:stageM1 user$ cd src
-MacBook-Pro-de-winsy-2:src$ rm -rf build
-MacBook-Pro-de-winsy-2:src$ ls
-operation.cpp	operation.h
-Doxyfile.in		image.png	
-Makefile		irma.png		
-CMakeLists.txt	main.cpp
-```
-to clean up and package your code.
+make
+``` 
+
+Remember to be in your build directory and point cmake only to the directory containing the top-level CMakeLists.txt file, not the file itself. If all goes well, cmake will process your CMakeLists.txt files, find the location of all libraries and include paths and spew a bunch of configuration information including a traditional ***Makefile*** in your build directory.
+
+
 
 This only touches the surface of what CMake can do. Check out the [CMake Wiki](http://www.cmake.org/Wiki/CMake) for more info.
