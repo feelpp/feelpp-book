@@ -22,7 +22,7 @@ $ git init
 # Initialized empty Git repository in /Users/you/stage/.git/
 
 
-$ git remote add origin https://github.com/username/Hello-World.git
+$ git remote add origin https://github.com/username/stage.git
 #Creates a remote named "origin" pointing at your GitHub repository
 
 $ git push origin master
