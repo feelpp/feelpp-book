@@ -1,6 +1,19 @@
 ##MAKEFILES
-**PRESENT HERE HOW TO COMILE YOUR PROJECT WITHOUT A MAKEFILE**
-Compiling your source code files can be tedious, especially when you want to include several source files and have to type the compiling command everytime you want to do it.
+
+**Compiling by hand :**   
+The trivial way to compile our files and obtain an executable, is by running the command:
+```sh
+g++ main.cpp
+g++ operation.cpp
+g++ operation.h
+```   
+Or simply
+
+```sh
+g++ main.cpp operation.cpp opertation.h  -o operation
+```
+
+Compiling our source code files can be tedious, especially when you want to include several source files and have to type the compiling command everytime you want to do it.
 Makefiles are special format files that together with the make utility will help you to auto-magically build and manage your projects.
 
 It is recommended (actually mandatory for Feel++) to separate source code and build directory.
