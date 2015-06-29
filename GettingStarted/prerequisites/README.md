@@ -7,9 +7,9 @@ Here we focus on the basic tools needed to implement feel++. To  clearly underst
 In order to use Feel++, a set of tools are required.
 In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.   
 ****The project files are :****
-  1. [main.cpp](https://github.com/wkyoshe/stageM1/blob/master/src/main.cpp)
-  2. [operation.cpp](https://github.com/wkyoshe/stageM1/blob/master/src/operation.cpp)
-  3. [operation.h](https://github.com/wkyoshe/stageM1/blob/master/src/operation.h)
+  1. main.cpp
+  2. operation.cpp
+  3. operation.h   
 
 We will present 
 - how to compile the program using a [MakeFile](makefile.md)
