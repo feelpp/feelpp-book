@@ -6,7 +6,7 @@ Here we focus on the basic tools needed to implement feel++. To  clearly underst
 --->
 In order to use Feel++, a set of tools are required.
 In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.   
-****The project files are :****
+**The project files are :**
   1. main.cpp
   2. operation.cpp
   3. operation.h   
