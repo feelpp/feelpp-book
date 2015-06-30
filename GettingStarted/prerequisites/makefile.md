@@ -17,7 +17,7 @@ Makefiles are special format files that together with the make utility will help
 
 It is recommended (actually mandatory for Feel++) to separate source code and build directory.
 ###Creating a Makefile
-A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o & executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
+A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o for executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
 
 ####The basic Makefile
 
@@ -44,9 +44,13 @@ clean:
 ```
 
 ####The make utility
-The `make` command will look for a file named `Makefile` in the current directory, and execute the `main` target.
+The ```make ```
+command will look for a file named `Makefile` in the current directory, and execute the `main` target.
 
-If you have several makefiles, then you can execute them with the command: `make -f MyMakefile`
+If you have several makefiles, then you can execute them with the command:   
+```sh 
+make -f MyMakefile
+```
 
 There are several other switches to the make utility. For more info, ``` man make ```.
 
