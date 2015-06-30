@@ -10,7 +10,7 @@ Here below is a cmake for our simple project.
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
 project(operation)
 
-# Create a library called "operationlibo" which includes the source file "operation.cxx".
+# Create a library called "operationlib" which includes the source file "operation.cxx".
 # The extension is already found. Any number of sources could be listed here.
 
 option(USE_SHARED 
@@ -29,8 +29,8 @@ add_library(operationlib STATIC operation.cpp operation.h)
 target_include_directories (operationlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
 # 
-# Add executable called "operatiom" that is built from the source files
-# "operation.cxx"". The extensions are automatically found.
+# Add executable called "operation" that is built from the source files
+#"operation.cxx"". The extensions are automatically found.
 #
 
 add_executable(operation main.cpp)
