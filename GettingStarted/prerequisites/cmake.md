@@ -1,5 +1,5 @@
 ##CMAKE
-CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as ***Makefiles*** and Visual Studio project files. CMake is controlled by writing instructions in CMakeLists.txt files. Each directory in your project should have a CMakeLists.txt file. What is nice about CMake is that CMakeLists.txt files in a sub-directory inherit properties set in the parent directory, reducing the amount of code duplication.
+CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as ***Makefiles*** and Visual Studio project files. CMake is controlled by writing instructions in CMakeLists.txt files. Each directory in your project should have a CMakeLists.txt file.
 
 **Building with CMake**   
 Setting up a bunch of CMakeLists.txt files will not immediately allow you to build your project. CMake is just a cross platform wrapper around more traditional build systems. In the case of linux, this means make. A quick preprocessing step will convert your CMakeLists.txt description into a traditional make build system automatically. One nice and highly recommended feature of CMake is the ability to do out of source builds. In this way you can make all your .o files, various temporary depend files, and even the binary executables without cluttering up your source tree.   
@@ -63,7 +63,7 @@ endif()
 ```
 
 To use out of source builds, create a build directory in your top-level folder (technically, this can be anywhere, but the top-level project folder seems to be a logical choice). Next, change into your build directory and run cmake pointing it to the directory of the top-level CMakeLists.txt. For example, for our simple project:  
-```cd src``` : takes us to the src directory( contains my code)   
+```cd src``` : takes us to the src directory( contains the source code)   
 ``` ls``` : displays all that is in the src directory   
 ```mkdir build ``` : Builds the build directory   
 ```cmake ..``` : Runs cmake pointing it to the src directory   
