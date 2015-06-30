@@ -6,7 +6,7 @@ Setting up a bunch of CMakeLists.txt files will not immediately allow you to bui
 
 Here below is a cmake for our simple project.
 ```sh
-set(CMAKE_CXX_COMPILER /usr/bin/clag++ 3.6.0)
+#set(CMAKE_CXX_COMPILER /usr/bin/clag++ 3.6.0)
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
 project(operation)
 
