@@ -41,16 +41,16 @@ Required parameters:
 Optional parameters:
 * `_quad`  = quadrature to use instead of the default one, wich means `_Q<integer>()` where the integer is the polynomial order to integrate exactely
 * `_geomap`  = type of geometric mapping to use, that is to say:
-<table class="manual">
-<tr><th>Feel Parameter</th><th>Description</th></tr>
-<tr><td>``` GEOMAP_HO```</td><td>High order approximation (same of the mesh)</td></tr>
-<tr><td>``` GEOMAP_OPT```</td><td>Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior</td></tr>
-<tr><td>``` GEOMAP_01```</td><td>Order 1 approximation (same of the mesh)</td></tr>
-</table>
+
+|Feel Parameter|Description|
+|---|---|
+|``` GEOMAP_HO```|High order approximation (same of the mesh)|
+|``` GEOMAP_OPT```|Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior|
+|``` GEOMAP_01```|Order 1 approximation (same of the mesh)|
 
 *Example*
 From `doc/manual/tutorial/dar.cpp`
-```
+```cpp
   form1( ... ) = integrate( _range = elements( mesh ),
                             _expr = f*id( v ) );
 ```
