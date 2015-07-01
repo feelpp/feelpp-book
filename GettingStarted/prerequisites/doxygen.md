@@ -26,8 +26,8 @@ The source comments can use any of three formats:
        *x is variable
        *y is variable too
        */
-       ```
- - Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+       ```   
+       Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
   
  ```
 ///
