@@ -11,7 +11,7 @@ Some of Doxygen's output is extracted from the semantics of the source programs.
 The source comments can use any of three formats:   
  1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
  
- ```sh
+ ```
      /**
       *@brief     operation.
       *@date      june 19, 2015
@@ -21,7 +21,7 @@ The source comments can use any of three formats:
      ```
  2. You can also use an exclamation point instead of the second asterisk 
   
- ```sh
+ ```
       /*!
        *x is variable
        *y is variable too
