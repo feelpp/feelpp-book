@@ -19,7 +19,7 @@ The source comments can use any of three formats:
       *@version   1.1
       */
      ```
- - You can also use an exclamation point instead of the second asterisk 
+ 2. You can also use an exclamation point instead of the second asterisk 
   
  ```sh
       /*!
@@ -27,8 +27,7 @@ The source comments can use any of three formats:
        *y is variable too
        */
        ```   
-       
-Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+ 3. Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
 ```
 ///
 /// @return the x value
