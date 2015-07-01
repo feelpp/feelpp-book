@@ -45,7 +45,6 @@ Optional parameters:
 |Feel Parameter|Description|
 |---|---|
 | ```GEOMAP_HO``` | High order approximation (same of the mesh) |
-|---|---|
 | ```GEOMAP_OPT``` | Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior |
 | ``` GEOMAP_01``` | Order 1 approximation (same of the mesh) |
 
@@ -57,14 +56,14 @@ From `doc/manual/tutorial/dar.cpp`
 ```
 
 From `doc/manual/tutorial/myintegrals.cpp`
-```
+```cpp
   // compute integral f on boundary
   double intf_3 = integrate( _range = boundaryfaces( mesh ),
                              _expr = f );
 ```
 
 From `doc/manual/advection/advection.cpp`
-```
+```cpp
   form2( _test = Xh, _trial = Xh, _matrix = D ) +=
     integrate( _range = internalfaces( mesh ),
                _quad = _Q<2*Order>(),
@@ -74,7 +73,7 @@ From `doc/manual/advection/advection.cpp`
 ```
 
 From `doc/manual/laplacian/laplacian.cpp`
-```
+```cpp
  auto l = form1( _test=Xh, _vector=F );
  l = integrate( _range = elements( mesh ),
                 _expr=f*id( v ) ) +
@@ -96,7 +95,7 @@ $$</center><br>
 on the whole domain $$\Omega$$ and on part of the boundary $$\Omega$$.
 
 There is the appropriate code:
-```
+```cpp
 int
 main( int argc, char** argv )
 {
@@ -138,7 +137,7 @@ main( int argc, char** argv )
 It is also possible to make projections with the library.
 
 **Interface***
-```
+```cpp
   project( _range, _space, _expr, _geomap );
 ```
 
@@ -152,7 +151,7 @@ Optional parameters:
 
 *Example*
 From `doc/manual/laplacian/laplacian.cpp`
-```
+```cpp
   element_type e( Xh, "e" );
   e = project( _space = Xh,
                _range = elements( mesh ),
@@ -160,7 +159,7 @@ From `doc/manual/laplacian/laplacian.cpp`
 ```
 
 From `doc/manual/heatns/convection_run.cpp`
-```
+```cpp
 tn = project( _space = Xh->functionSpace<2>(),
               _range = elements( mesh ),
               _expr = constant( 300 ) );
@@ -178,7 +177,7 @@ Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean val
 $$</center><br>
 
 **Interface***
-```
+```cpp
   mean( _range, _expr, _quad, _geomap );
 ```
 
@@ -206,11 +205,11 @@ Let $$f \in L^2(\Omega)$$ you can evaluate the L2 norm:
 $$</center><br>
 
 **Interface***
-```
+```cpp
   normL2( _range, _expr, _quad, _geomap );
 ```
 or squared norm:
-```
+```cpp
   normL2Squared( _range, _expr, _quad, _geomap );
 ```
 
@@ -224,7 +223,7 @@ Optional parameters:
 
 *Example*
 From `doc/manual/laplacian/laplacian.cpp`
-```
+```cpp
   double L2error =normL2( _range=elements( mesh ),
                           _expr=( idv( u )-g ) );
 ```
@@ -248,11 +247,11 @@ field and the frobenius scalar product $$:$$ when $$f$$ is a vector
 field
 
 **Interface***
-```
+```cpp
   normH1( _range, _expr, _grad_expr, _quad, _geomap );
 ```
 or semi norm:
-```
+```cpp
   normSemiH1( _range, _grad_expr, _quad, _geomap );
 ```
 
