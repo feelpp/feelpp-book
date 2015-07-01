@@ -45,6 +45,7 @@ Optional parameters:
 |Feel Parameter|Description|
 |---|---|
 | ```GEOMAP_HO``` | High order approximation (same of the mesh) |
+|---|---|
 | ```GEOMAP_OPT``` | Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior |
 | ``` GEOMAP_01``` | Order 1 approximation (same of the mesh) |
 
