@@ -17,7 +17,7 @@ The source comments can use any of three formats:
       *@date      june 19, 2015
       *@author:   kyoshe winstone
       *@version   1.1
-       */
+      */
      ```
  - You can also use an exclamation point instead of the second asterisk 
   
@@ -27,8 +27,9 @@ The source comments can use any of three formats:
        *y is variable too
        */
        ```
- - Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.
- ```sh
+ - Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+  
+ ```
 ///
 /// @return the x value
 ///
@@ -36,8 +37,8 @@ The source comments can use any of three formats:
  
 **Tags**:
 
-Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:
-```sh
+Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:   
+```
    /***
      *@brief, which provides a brief description of the function.
      *@param, which identifies a single parameter to the function (you may have more than one param tag).
