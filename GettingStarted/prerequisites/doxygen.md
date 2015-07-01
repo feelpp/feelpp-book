@@ -27,9 +27,9 @@ The source comments can use any of three formats:
        *y is variable too
        */
        ```   
-       Two or more single line comments ```(//)``` that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
-  
- ```
+       
+Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+```
 ///
 /// @return the x value
 ///
@@ -39,12 +39,12 @@ The source comments can use any of three formats:
 
 Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:   
 ```
-   /***
-     *@brief, which provides a brief description of the function.
-     *@param, which identifies a single parameter to the function (you may have more than one param tag).
-     *@return, which describes the function's return value.
-     *@date, which describes the date of documentation
-     *@todo
+    /**
+     * @brief, which provides a brief description of the function.
+     * @param, which identifies a single parameter to the function (you may have more than one param tag).
+     * @return, which describes the function's return value.
+     * @date, which describes the date of documentation
+     * @todo
      */
 ```
 
