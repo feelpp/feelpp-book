@@ -59,12 +59,15 @@ This command works only if you cloned from a server to which you have write acce
 
 
  - Pull	requests	let	you	tell	others	about	changes	you've	pushed	to	a	repository	on	GitHub.The	request,	printed	to	the
-standard	output,	summarizes	the	changes	and	indicates	from	where	they	can	be	pulled.
-  
-     ``` git	request-pull'	[-p]	<start>	<url>	[<end>]```
+standard	output,	summarizes	the	changes	and	indicates	from	where	they	can	be	pulled.   
+``` git	request-pull'	[-p]	<start>	<url>	[<end>]```   
+The	upstream project is	expected to	have the commit	named	by ```<start>```	 	and	the	output	asks	it	to	integrate	the
+changes	you	made	since	that	commit,	up	to	the	commit	named	by	 	```<end>```	 ,	by	visiting	the	repository	named	by	 ```	<url>``` .   
 
-The	upstream	project	is	expected	to	have	the	commit	named	by	 	<start>	 	and	the	output	asks	it	to	integrate	the
-changes	you	made	since	that	commit,	up	to	the	commit	named	by	 	<end>	 ,	by	visiting	the	repository	named	by	 	<url>	 .
-
+   - OPTION   
+-p	 	include	patch	text	in	the	output.   
+```<start>```	 	Commit	to	start	at.	This	names	a	commit	that	is	already	in	the	upstream	history   
+```<url>```	 	The	repository	URL	to	be	pulled	from   
+```<end>```	
 
 For quick refferences visit [GitHub guides](https://guides.github.com/). This will give you the basic knowledge to get started into GitHub.
