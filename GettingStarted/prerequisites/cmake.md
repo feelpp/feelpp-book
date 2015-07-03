@@ -64,7 +64,6 @@ endif()
 
 To use out of source builds, create a build directory in your top-level folder (technically, this can be anywhere, but the top-level project folder seems to be a logical choice). Next, change into your build directory and run cmake pointing it to the directory of the top-level CMakeLists.txt. For example, for our simple project:  
 ```cd src``` : takes us to the src directory( contains the source code)   
-``` ls``` : displays all that is in the src directory   
 ```mkdir build ``` : Builds the build directory   
 ```cmake ..``` : Runs cmake pointing it to the src directory   
 
