@@ -84,9 +84,6 @@ cmake -DOPTION_NAME=NEW_VALUE
 
 The base situation is like this :   
 
-doc/CMakeLists.txt file checks for Doxygen and if found, adds a doc target to the build system.
-It also generates a doc/Doxyfile in the build folder, which allows cmake to substitute some variables such as version number, project name, source and destination folder etc. 
-In your source tree is somewhere a Doxyfile, which you previously used to generate documentation by running doxygen in this directory. Rename this file to ```Doxyfile.in```  
 After another CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.   
  - To view the online html online documentation, we use the following command line in the source directory:   
 ```open html/index.html```   
