@@ -68,6 +68,27 @@ changes	you	made	since	that	commit,	up	to	the	commit	named	by	 	```<end>```	 ,	b
 -p	 	include	patch	text	in	the	output.   
 ```<start>```	 	Commit	to	start	at.	This	names	a	commit	that	is	already	in	the	upstream	history   
 ```<url>```	 	The	repository	URL	to	be	pulled	from   
-```<end>```	
+```<end>```   
+
+-  ISSUES
+Issues	are	a	great	way	to	keep	track	of	tasks,	enhancements,	and	bugs	for	your	projects.	They’re	kind	of	like	email—
+except	they	can	be	shared	and	discussed	with	the	rest	of	your	team.	Most	software	projects	have	a	bug	tracker	of
+some	kind.	GitHub’s	tracker	is	called	Issues,	and	has	its	own	section	in	every	repository.See	how	to	create	an	issue
+[here](https://help.github.com/articles/creating-an-issue/).	A	title	and	description	describe	what	the	issue	is	all	about.   
+
+- Notifications
+Notifications	are	GitHub’s	way	to	keep	up	to	date	with	your	Issues.	You	can	use	them	to	find	out	about	new	issues	on
+repositories,	or	just	to	know	when	someone	needs	your	input	to	move	forward	on	an	issue.	There	are	two	ways	to
+receive	notifications:	via	email,	and	via	the	web.	You	can	[configure](https://help.github.com/articles/configuring-notification-emails/)	how	you	receive	notifications	in	your	settings.	If	you
+plan	on	receiving	a	lot	of	notifications,	we	like	to	recommend	that	you	receive	web	+	email	notifications	for	Participating
+and	web	notifications	for	Watching.   
+
+- MILESTONES
+Milestones	are	used	to	track	the	progress	of	similar	issues	and	pull	requests	as	they're	opened	and	closed	over	time.
+At	a	glance,	you	can	easily	see	the	progress	of	work	in	a	milestone's	lifetime.	Once	you’ve	collected	a	lot	of	issues,	you
+may	find	it	hard	to	find	the	ones	you	care	about.	[Milestones,	labels,	and	assignees](https://guides.github.com/features/issues/)	are	great	features	to	filter	and
+categorize	issues.
+
+
 
 For quick refferences visit [GitHub guides](https://guides.github.com/). This will give you the basic knowledge to get started into GitHub.
