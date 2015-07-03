@@ -4,7 +4,7 @@ Doxygen is a tool for auto-generating API documentation. It generates documentat
   
 **So, what's the value to Doxygen?**
 
-Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen.So Doxygen automatically generates an example Doxyfile for you on request.
+Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen.It automatically generates an example Doxyfile for you on request.
 
 The source comments can use any of three formats:   
  1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
