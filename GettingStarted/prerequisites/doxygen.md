@@ -1,6 +1,6 @@
 ##DOXYGEN
 Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
-  - It will allow us to generate an on-line documentation browser (in HTML) and/or an off-line reference manual in LaTeX  from a set of documented source files. 
+  - Doxygen will allow us to generate an on-line documentation browser (in HTML) and/or an off-line reference manual in LaTeX  from a set of documented source files. 
   
 **So, what's the value to Doxygen?**
 
