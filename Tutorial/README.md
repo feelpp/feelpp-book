@@ -7,7 +7,7 @@ The step by step tutorial is decomposed as it
 ##[TutorialEnv](01-SettingUpEnvironment.md)
 ## [TutorialMesh](02-LoadingMesh.md)
 ## [TutorialSpaces](03-SpaceElements.md)
-## [TutorialFunctions()]
+## [TutorialFunctions](03-UsingExpressions.md)
 ## [TutorialVisualize]()
 ## [TutorialIntegrals]()
 ## [TutorialBackend]()
