@@ -1,3 +1,8 @@
+##GIT
+Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
+desktop. The basic commands to get started with git are:
+
+
 ##GITHUB
 GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
 GitHub has become the industry-standard version control and publishing platform for web developers, but it's great for designers to
