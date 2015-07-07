@@ -2,26 +2,15 @@
 
 **Compiling by hand :**   
 The trivial way to compile our files and obtain an executable, is by running the command:
-```sh
-g++ main.cpp
-g++ operation.cpp 
-```   
-Or simply
 
 ```sh
 g++ main.cpp operation.cpp  -o operation
 ```
-
-Compiling our source code files can be tedious, especially when you want to include several source files and have to type the compiling command everytime you want to do it.
-Makefiles are special format files that together with the make utility will help you to auto-magically build and manage your projects.
+To simplify compiling of several source files, Makefiles are special format files that together with the make utility will help you to auto-magically build and manage your projects.
 
 It is recommended (actually mandatory for Feel++) to separate source code and build directory.
 ###Creating a Makefile
-A Makefile typically starts with some variable definitions which are then followed by a set of target entries for building specific targets (typically .o for executable files in C and C++, and .class files in Java) or executing a set of command associated with a target label.
-
-####The basic Makefile
-
-The basic *makefile* is composed of:
+A  *Makefile* is composed of :
 ```makefile
 target: dependencies
 [tab] system command
