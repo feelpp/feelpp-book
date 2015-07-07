@@ -1,6 +1,23 @@
 ##GIT
 Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
-desktop. The basic commands to get started with git are:
+desktop. The basic commands to get started with git are:   
+Clone an existing repository    
+```$ git clone ssh://user@domain.com/repository_name.git```  
+
+Create a new local repository  
+```$ git init```   
+
+Add a new file
+```$ git add <file>```   
+
+Download changes and directly merge/integrate into HEAD    
+```$ git pull ```   
+
+Publish local changes on a remote   
+```$ git push ```   
+
+Click [here](http://www.git-tower.com/blog/git-cheat-sheet/) for more info about git commands .
+
 
 
 ##GITHUB
