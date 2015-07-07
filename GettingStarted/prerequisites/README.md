@@ -2,10 +2,11 @@ Prerequisites  {#prerequisites}
 =====
 
 In order to use Feel++, a set of tools are required.
-In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.
-### dummy project
+In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.   
+####Dummy project
 
-The aim of that project is to sum, subtract, divide and multiply two numbers given *via* the command line using a c++ class.  
+The aim of this project is to sum, subtract, divide and multiply two numbers given *via* the command line using a C++ class.   
+
 **The project files are :**
 #### main.cpp   
 ```c++
@@ -17,11 +18,8 @@ The aim of that project is to sum, subtract, divide and multiply two numbers giv
  */
 #include <iostream>
 #include <stdlib.h>
- 
 using namespace std;
- 
 #include "operation.h"
-
   /**
    * Main class
    * @param argc An integer argument count of the command line arguments
@@ -30,10 +28,9 @@ using namespace std;
    */
 int main(int argc, char **argv) 
 { 
-  
-  /**
-    *x is variable
-    *y is variable too
+   /**
+    * x is variable
+    * y is variable too
     */
   double x =0, y=0;
   
@@ -42,13 +39,12 @@ int main(int argc, char **argv)
     y = atof(argv[2]);
   }
   /**
-   *Creates an object of type "operation"
+   * Creates an object of type "operation"
    */
   operation B(x,y);
-  
-    /** 
-     *Standard output
-     */ 
+  /** 
+   * Standard output
+   */ 
   cout << B.getX() << "+" << B.getY() << "=" << B.addition() << endl;
   cout << B.getX() << "-" << B.getY() << "=" << B.substruction() << endl;
   cout << B.getX() << "*" << B.getY() << "=" << B.multiplication() << endl;
@@ -73,7 +69,6 @@ operation::operation() : x(0), y(0)
    */
 operation::operation(double x, double y) : x(x), y(y)
 {}
-
   /**
    * sets the x value
    */
@@ -81,7 +76,6 @@ void operation::setX(double x)
 {
   this->x = x;
 }
- 
   /**
    * sets the y value 
    */
@@ -89,7 +83,6 @@ void operation::setY(double y)
 {
   this->y = y;
 }
-
   /**
    * @return the x value
    */
@@ -97,7 +90,6 @@ double operation::getX() const
 {
   return this->x;
 } 
-
   /**
    * @return the  y value
    */
@@ -105,8 +97,6 @@ double operation::getY() const
 {
   return this->y;
 } 
- 
-
   /**
    * @returns the sum of two numbers
    */
@@ -114,7 +104,6 @@ double operation::addition( )
 {
   return (x + y);
 }
-
   /**
    * @returns the diff of two numbers
    */
@@ -122,7 +111,6 @@ double operation::substruction( )
 {
   return (x - y);
 }
-
   /**
    * @returns the product of two numbers
    */
@@ -130,7 +118,6 @@ double operation::multiplication( )
 {
   return (x * y);
 }
-
   /**
    * @returns the quotient of two numbers
    */
@@ -158,7 +145,6 @@ double operation::division( )
 
 #ifndef OPERATION_H
 #define OPERATION_H
- 
 #include <iostream>
 using namespace std;
  
@@ -170,7 +156,6 @@ class operation
    */
   operation();
   operation(double x, double y);
- 
  /**
   *Accessors and mutators
   */
@@ -178,8 +163,6 @@ class operation
   void setY(double y);
   double getX() const;
   double getY() const;
- 
-  
   /**
    *functions
    */
@@ -187,7 +170,6 @@ class operation
   double substruction();
   double multiplication();
   double division();
- 
    /**
     * @param x is a variable
     * @param y is a variable too
@@ -197,9 +179,9 @@ class operation
 };
 #endif
 ```
-
-We have to compile that project via makefile or cmake.   Thus, we will present here : 
+Using this project, we will present here : 
 - how to compile the program using a [MakeFile](makefile.md)
 - how to make it simpler with [CMake](cmake.md)
 - what is git and [GitHub](github.md)
-- How the code can be [documented](doxygen.md)
+- How the code has to be [documented](doxygen.md)  .
+
