@@ -22,12 +22,11 @@ Click [here](http://www.git-tower.com/blog/git-cheat-sheet/) for more info about
 
 ##GITHUB
 GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
-GitHub has become the industry-standard version control and publishing platform for web developers, but it's great for designers to
 
 If you are new to github, these are the basic things you need to know to get started with GitHub:
    
- -  CREATING A PERSONAL ACCOUNT   
- The first step to using GitHub is to set up a personal [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/).If you already have an account, visit [github.com](thub.com) and sign in.
+ -  Creating a personal account  
+ The first step to using GitHub is to set up a personal [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/).If you already have an account, visit [github.com](https://github.com/) and sign in.
  
  - CREATING A REPO   
 Once Git is installed, using it is just a matter of navigating to the directory that you want to manage, and then initializing it. And this process is called [creating a Repository](https://help.github.com/articles/create-a-repo/) or repo for short. A single installation of Git, can track as many repos as you'd like. This can be done in the terminal as follows.   
