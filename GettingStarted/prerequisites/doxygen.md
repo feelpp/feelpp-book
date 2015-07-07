@@ -1,8 +1,7 @@
 ##DOXYGEN
-Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
-  - Doxygen will allow us to generate an on-line documentation browser (in HTML) and/or an off-line reference manual in LaTeX  from a set of documented source files. 
-  
-**So, what's the value to Doxygen?**
+Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated sources. The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
+
+**So, what's the value to Doxygen?** 
 
 Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *Makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen.So Doxygen automatically generates an example Doxyfile for you on request.
 
@@ -63,9 +62,6 @@ find_package(Doxygen)
   add_custom_target(doc ALL
              COMMAND ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/Doxyfile
                   COMMENT "Generating API documentation with Doxygen" VERBATIM)
-  #Doxygen will be triggered every time we run make
-  # IF you do NOT want the documentation to be generated EVERY time you build the project
-  # then leave out the 'ALL' keyword from the above command.                
 endif()
 
 ```   
@@ -84,7 +80,7 @@ cmake -DOPTION_NAME=NEW_VALUE
 
 The base situation is like this :   
 
-After another CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.   
+After a  CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.   
  - To view the online html online documentation, we use the following command line in the source directory:   
 ```open html/index.html```   
  - To generate the pdf format of the documentation from the Latek files created, go to the Latex  directory and then use the command line:
@@ -94,7 +90,7 @@ After another CMake run, you can type “make doc” to have CMake run Doxygen. 
     ```
 
 
-For detailed information about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html)
+For detailed information about doxygen, please consult [the online doxygen documentation](http://www.stack.nl/~dimitri/doxygen/manual/index.html) and [Doxygen quick reference](http://www.digilife.be/quickreferences/QRC/Doxygen%20Quick%20Reference.pdf)
 
 
 
