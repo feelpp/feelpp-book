@@ -3,7 +3,8 @@ Before reading the following, it is recommended to have a look to :
 - Install Feel++, see @ref BuildingP
 - Using Feel++, see @ref UsingInstalledFeelpp
 
-The step by step tutorial is decomposed as it
+The step by step tutorial is decomposed as it   
+[TutorialEnv](01-SettingUpEnvironment.md)
 ## TutorialEnv
 ## TutorialMesh
 ## TutorialSpaces
