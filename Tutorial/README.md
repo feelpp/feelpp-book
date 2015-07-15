@@ -1,7 +1,7 @@
 Before reading the following, it is recommended to have a look to :
 
 - Install Feel++, see : [download & install ](download.md)
-- Using Feel++, see :[feelpp](UsingInstalledFeelpp.md)
+- Using Feel++, see :[compiling your application](compiling.md)
 
 The step by step tutorial is decomposed as it   
 #[TutorialEnv](01-SettingUpEnvironment.md)
