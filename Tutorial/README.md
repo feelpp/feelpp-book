@@ -1,6 +1,6 @@
 Before reading the following, it is recommended to have a look to :
 
-- Install Feel++, see :
+- Install Feel++, see : [download & install ](download.md)
 - Using Feel++, see :[feelpp](UsingInstalledFeelpp.md)
 
 The step by step tutorial is decomposed as it   
