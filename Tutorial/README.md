@@ -1,7 +1,7 @@
 Before reading the following, it is recommended to have a look to :
 
-- Install Feel++, see @ref BuildingP
-- Using Feel++, see @ref UsingInstalledFeelpp
+- Install Feel++, see :
+- Using Feel++, see :[feelpp](UsingInstalledFeelpp.md)
 
 The step by step tutorial is decomposed as it   
 #[TutorialEnv](01-SettingUpEnvironment.md)
