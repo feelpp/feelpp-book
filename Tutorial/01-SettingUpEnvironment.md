@@ -31,22 +31,22 @@ value will be assigned if not specified by the user.
 
 To compile a tutorial, just use the GNU make command.
 ```bash
-  make Feel++pp_doc_<appname>
+  make feelpp_doc_<appname>
 ```
 
 where `<appname>` is the name of the application you wish to compile (here, `myapp`). Go to the execution directory as specified in the program, and execute it. You can change your option value.
 ```bash
-  ./Feel++pp_doc_myapp [--value 6.6]
+  ./feelpp_doc_myapp [--value 6.6]
 ```
 
 You can list the log files created.
 ```
-  ls /tmp/<your login>/Feel++pp_doc_myapp/
+  ls /tmp/<your login>/feelpp_doc_myapp/
 ```
 
 If you open one of these log, you should be able to see your value and the processor number used to compute. You can run your application on several processors using MPI.
 ```bash
-  mpirun -np 2 Feel++pp_doc_myapp
+  mpirun -np 2 feelpp_doc_myapp
 ```
 
 Note that there will be one log for each processor in that case.
