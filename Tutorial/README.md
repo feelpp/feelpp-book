@@ -1,6 +1,6 @@
 Before reading the following, it is recommended to have a look to :
 
-- Install Feel++, see : [download & install ](GettingStarted/download.md)
+- Install Feel++, see : [download & install ](https://www.gitbook.com/book/wkyoshe/feelpp-kyoshe/edit#/edit/master/GettingStarted/download.md)
 - Using Feel++, see :[compiling your application](compiling.md)
 
 The step by step tutorial is decomposed as it   
