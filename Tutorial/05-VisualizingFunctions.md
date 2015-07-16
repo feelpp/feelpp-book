@@ -36,8 +36,8 @@ exporter
 # Adding function to save {#add}
 
 Here we save the function many times.
-That is here not relevant but you may want to simulate process over time.
-!CODEFILE "code/myexporter.cpp" adding
+That is here not relevant but you may want to simulate process over time.   adding   
+!CODEFILE "code/myexporter.cpp"
 
 # Actually saving {#save}   
 
