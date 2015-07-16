@@ -13,4 +13,5 @@ The step by step tutorial is decomposed as it
 -  ****[TutorialVisualize](05-VisualizingFunctions.md)****
 - ****[TutorialIntegrals](06-ComputingIntegrals.md)****
 -  ****[TutorialBackend](07-UsingBackend.md)****
--  ****[TutorialModel](08-Model.md)****
+-  ****[TutorialModel](08-Model.md)****   
+-  ****[OutputDirectories](Output_Directories.md)****
