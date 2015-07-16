@@ -18,8 +18,8 @@ Here, we generate a second order mesh (mesh) and one of first order (meshp1).
 here, we generate a second order function space,
 !CODEFILE "code/myexporter.cpp" space
 
-# Defining a (scalar) function over the function space {#scal}
-
+# Defining a (scalar) function over the function space {#scal}   
+function 
 !CODEFILE "code/myexporter.cpp"   
 
 
@@ -28,9 +28,10 @@ here, we generate a second order function space,
 We create now three exporter:
 - once generated on the P1 mesh
 - once generated on the P2 mesh
-- once generated on a P1 mesh extracted from P2 mesh
+- once generated on a P1 mesh extracted from P2 mesh   
 
-!CODEFILE "code/myexporter.cpp" exporter
+exporter   
+!CODEFILE "code/myexporter.cpp" 
 
 # Adding function to save {#add}
 
@@ -38,24 +39,26 @@ Here we save the function many times.
 That is here not relevant but you may want to simulate process over time.
 !CODEFILE "code/myexporter.cpp" adding
 
-# Actually saving {#save}
+# Actually saving {#save}   
 
-!CODEFILE "code/myexporter.cpp" save
+save   
+!CODEFILE "code/myexporter.cpp" 
 
 
 #  Complete code {#TutorialExprCode}
 
-The complete code reads as follows
+The complete code reads as follows   
 
-!CODEFILE "code/myexporter.cpp" all
+all   
+!CODEFILE "code/myexporter.cpp" 
 
 to compile just type
 ```cpp
-make feelpp_doc_myexporter
+make feelpp_tut_myexporter
 ```
 to execute just type
 ```cpp
-./feelpp_doc_myexporter
+./feelpp_tut_myexporter
 ```
 
 
