@@ -25,7 +25,6 @@
    * [Computing integrals](Tutorial/06-ComputingIntegrals.md)
    * [Using linear algebra backends](Tutorial/07-UsingBackend.md)
    * [Creating a model](Tutorial/08-Model.md)
-   * Repersitories
 * [Quick Reference](QuickReference/README.md)
    * [Environment](QuickReference/environment.md)
    * [Mesh](QuickReference/mesh.md)
