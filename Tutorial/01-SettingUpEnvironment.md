@@ -41,7 +41,7 @@ where `<appname>` is the name of the application you wish to compile (here, `mya
 
 You can list the log files created.
 ```
-  ls /tmp/<your login>/feelpp_doc_myapp/
+  ls /tmp/<your login>/feelpp_tut_myapp/
 ```
 
 If you open one of these log, you should be able to see your value and the processor number used to compute. You can run your application on several processors using MPI.
