@@ -9,10 +9,11 @@ available in `myexporter.cpp.`
 # Loading a Mesh in 2D {#load}
 
 Here, we generate a second order mesh,   
-!CODEFILE "code/environment.cpp"
-!CODEFILE "code/myexporter.cpp" mesh
+!CODEFILE "code/myexporter.cpp"   
+mesh   
 and one of first order.
-!CODEFILE "code/myexporter.cpp" P1_mesh
+!CODEFILE "code/myexporter.cpp"   
+P1_mesh
 
 
 # Constructing a function space {#fs}
