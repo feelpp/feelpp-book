@@ -20,7 +20,8 @@ here, we generate a second order function space,
 
 # Defining a (scalar) function over the function space {#scal}
 
-!CODEFILE "code/myexporter.cpp" function
+!CODEFILE "code/myexporter.cpp"   
+
 
 # Exporter {#exp}
 
