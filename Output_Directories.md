@@ -1,3 +1,4 @@
+#Output Directories    
 We can find generated files after Feel++ compilation in following directories :   
 - Log files : `/tmp/<your login>/feelpp/feelpp_tut_<your_app_name>` 
 
