@@ -12,8 +12,10 @@ We start by loading a Mesh in 2D
 !CODEFILE "code/myintegrals.cpp"   
 mesh
 
-then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field
-!CODEFILE "code/myexpression.cpp" expr
+then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field   
+expr   
+!CODEFILE "code/myexpression.cpp"   
+
 
 here is an example how to enter them, more are available below
 ```c++
@@ -23,24 +25,29 @@ feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi
 You can print back the expression to the screen to check that everything is ok.
 You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).
 
-then we compute the gradient of `g`  and `f`
-!CODEFILE "code/myexpression.cpp" grad
+then we compute the gradient of `g`  and `f`   
+grad   
+!CODEFILE "code/myexpression.cpp" 
 
 Notice that template argument are given to `grad`  to specify the shape of the
 gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
 $$2\times 2$$ since we are in 2D.
 
-then we compute the laplacian of `g`  and `f`
-!CODEFILE "code/myexpression.cpp" laplacian
+then we compute the laplacian of `g`  and `f`   
+laplacian   
+!CODEFILE "code/myexpression.cpp" 
 
-then we compute the divergence of `f`
-!CODEFILE "code/myexpression.cpp" div
+then we compute the divergence of `f`   
+div    
+!CODEFILE "code/myexpression.cpp" 
 
-and the curl of `f`
-!CODEFILE "code/myexpression.cpp" curl
+and the curl of `f`   
+curl   
+!CODEFILE "code/myexpression.cpp" 
 
-Finally we evaluate these expression at one point given by the option `x`  and `y`
-!CODEFILE "code/myexpression.cpp" eval
+Finally we evaluate these expression at one point given by the option `x`  and `y`    
+ eval   
+ !CODEFILE "code/myexpression.cpp"
 
 # Some results {#res}
 
@@ -79,9 +86,10 @@ The symbolic calculus system worked as expected.
 
 # Complete code {#code}
 
-The complete code reads as follows
+The complete code reads as follows  
 
-!CODEFILE "code/myexpression.cpp" all
+all   
+!CODEFILE "code/myexpression.cpp" 
 
 to compile just use the `make` command in your compilation directory
 ```bash
