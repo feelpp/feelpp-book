@@ -1,7 +1,7 @@
 Before reading the following, it is recommended to have a look to :
 
-- Install Feel++, see : [download & install ](compiling.md)
-- Using Feel++, see :[compiling your application](master/GettingStarted/compiling.md)
+- Install Feel++, see : [download & install ](download.md)
+- Using Feel++, see :[compiling your application](compiling.md)
 
 After installing and compiling correctly Feel++, you can find all the examples that we used here to : ``` your_build_folder/doc/manual/tutorial``
 
