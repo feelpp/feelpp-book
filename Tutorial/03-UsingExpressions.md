@@ -9,7 +9,8 @@ available in `myexpression.cpp.`
 # Step by step explanations {#ex}
 
 We start by loading a Mesh in 2D
-!CODEFILE "code/myintegrals.cpp"   mesh
+!CODEFILE "code/myintegrals.cpp"   
+mesh
 
 then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field
 !CODEFILE "code/myexpression.cpp" expr
