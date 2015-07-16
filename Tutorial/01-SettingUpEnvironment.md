@@ -34,17 +34,12 @@ To compile a tutorial, just use the GNU make command.
   make feelpp_tut_<appname>
 ```
 
-where `<appname>` is the name of the application you wish to compile (here, `myapp`). Go to the execution directory as specified in the program, and execute it. You can change your option value.
-```bash
-  ./feelpp_tut_myapp [--value 6.6]
-```
-
-You can list the log files created.
+where `<appname>` is the name of the application you wish to compile (here, `myapp`). Go to the execution directory as specified in the program, and execute it.You can list the log files created :
 ```
   ls /tmp/<your login>/feelpp_tut_myapp/
 ```
 
-If you open one of these log, you should be able to see your value and the processor number used to compute. You can run your application on several processors using MPI.
+If you open one of these log, you should be able to see your value and the processor number used to compute. You can run your application on several processors using MPI :
 ```bash
   mpirun -np 2 feelpp_tut_myapp
 ```
