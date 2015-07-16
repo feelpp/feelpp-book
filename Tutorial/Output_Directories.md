@@ -3,4 +3,4 @@ We can find generated files after Feel++ compilation in following directories :
 
 -  Mesh : `/home/<your login>/feel/<your_app_name>/np_1`   
 
-- Config files :`/data/<your login>/build/doc/manual/tutorial`
+- Config files :`/<your login>/<your_build_folder>/doc/manual/tutorial`
