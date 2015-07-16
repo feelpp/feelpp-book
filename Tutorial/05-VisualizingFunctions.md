@@ -8,11 +8,9 @@ available in `myexporter.cpp.`
 
 # Loading a Mesh in 2D {#load}
 
-Here, we generate a second order mesh,   
+Here, we generate a second order mesh (mesh) and one of first order (meshp1).,   
 !CODEFILE "code/myexporter.cpp"   
-P2_mesh   
-and one of first order.
-!CODEFILE "code/myexporter.cpp"   
+
 P1_mesh
 
 
