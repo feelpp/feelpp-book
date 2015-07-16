@@ -4,7 +4,7 @@ Visualizing functions over a mesh {#TutorialVisualize}
 
 
 The next step is to visualize function over the mesh. The source code is
-available in `myexporter.cpp.`
+available in `myexporter.cpp`
 
 # Loading a Mesh in 2D {#load}
 
@@ -20,7 +20,7 @@ space
 !CODEFILE "code/myexporter.cpp" 
 
 # Defining a (scalar) function over the function space {#scal}   
-function 
+function   
 !CODEFILE "code/myexporter.cpp"   
 
 
