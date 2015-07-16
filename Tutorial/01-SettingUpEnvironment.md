@@ -52,8 +52,8 @@ Note that there will be one log for each processor in that case.
 
 A config file can be parsed to the program to profile your options. The default config paths are,
     * current dir
-    * `$HOME/Feel++/config/`
-    * `$INSTALL_PREFIX/share/Feel++/config/`
+    * $HOME/Feel++/config/
+    * $INSTALL_PREFIX/share/Feel++/config/
 
 then you have to write inside one of these folders a file called
 `<app_name>.cfg` or `feelpp_<app_name>.cfg`. For example, our
