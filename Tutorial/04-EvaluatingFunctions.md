@@ -39,20 +39,23 @@ Note that you can print back the expression to the screen to check that everythi
 
 If you want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).
 
-then we compute the gradient of `g`  and `f`
-!CODEFILE "code/myexpression.cpp" grad
+then we compute the gradient of `g`  and `f`   
+grad   
+!CODEFILE "code/myexpression.cpp" 
 
 Notice that template argument are given to `grad`  to specify the shape of the
 gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$ $$2\times 2$$ since we are in 2D.
 
-then we compute the laplacian of `g`  and `f`
+then we compute the laplacian of `g`  and `f`   
 !CODEFILE "code/myexpression.cpp" laplacian
 
-then we compute the divergence of `f`
-!CODEFILE "code/myexpression.cpp" div
+then we compute the divergence of `f`   
+div   
+!CODEFILE "code/myexpression.cpp" 
 
-and the curl of `f`
-!CODEFILE "code/myexpression.cpp" curl
+and the curl of `f`   
+curl   
+!CODEFILE "code/myexpression.cpp" 
 
 Finally we evaluate these expression at one point given by the option `x`  and `y`
 !CODEFILE "code/myexpression.cpp" eval
