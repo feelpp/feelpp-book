@@ -10,7 +10,7 @@ available in `myexporter.cpp.`
 
 Here, we generate a second order mesh,   
 !CODEFILE "code/myexporter.cpp"   
-mesh   
+P2_mesh   
 and one of first order.
 !CODEFILE "code/myexporter.cpp"   
 P1_mesh
