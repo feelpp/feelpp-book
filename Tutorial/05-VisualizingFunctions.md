@@ -15,8 +15,9 @@ Here, we generate a second order mesh (mesh) and one of first order (meshp1).
 
 # Constructing a function space {#fs}
 
-here, we generate a second order function space,
-!CODEFILE "code/myexporter.cpp" space
+here, we generate a second order function space,   
+space   
+!CODEFILE "code/myexporter.cpp" 
 
 # Defining a (scalar) function over the function space {#scal}   
 function 
