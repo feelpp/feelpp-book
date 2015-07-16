@@ -57,7 +57,7 @@ A config file can be parsed to the program to profile your options. The default 
 
 then you have to write inside one of these folders a file called
 `<app_name>.cfg` or `feelpp_<app_name>.cfg`. For example, our
-`myapp.cfg` would look like,
+`myapp.cfg` would look like :
 
 ```
 value=0.53
