@@ -3,7 +3,7 @@ Before reading the following, it is recommended to have a look to :
 - Install Feel++, see : [download & install ](download.md)
 - Using Feel++, see :[compiling your application](compiling.md)
 
-After installing and compiling correctly Feel++, you can find all the examples that we used here to : ``` your_build_folder/doc/manual/tutorial``
+After installing and compiling correctly Feel++, you can find all the examples that we used here to : ``` your_build_folder/doc/manual/tutorial```
 
 The step by step tutorial is decomposed as it   
 - ****[TutorialEnv](01-SettingUpEnvironment.md)****
