@@ -11,7 +11,6 @@ available in `myexporter.cpp.`
 Here, we generate a second order mesh (mesh) and one of first order (meshp1).,   
 !CODEFILE "code/myexporter.cpp"   
 
-P1_mesh
 
 
 # Constructing a function space {#fs}
