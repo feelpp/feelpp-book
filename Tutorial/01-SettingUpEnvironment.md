@@ -67,7 +67,7 @@ Note that you can specify the config file through the option `--config-file=<pat
 
 It's also possible to give several configuration files with the option `--config-files <path1> <path2> <path3>`
 ```bash
- ./Feel++pp_doc_myapp --config-files ex1.cfg ex2.cfg ex3.cfg
+ ./feelpp_tut_myapp --config-files ex1.cfg ex2.cfg ex3.cfg
 ```
 
 In the case where some options are duplicated in the files, the priority is given at the end :
