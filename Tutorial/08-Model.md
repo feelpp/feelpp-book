@@ -36,6 +36,7 @@ And to apply them :
 ## BoundaryConditions {#BoundaryConditions}
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression.
 You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
+
 ```map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };```  
 
 
