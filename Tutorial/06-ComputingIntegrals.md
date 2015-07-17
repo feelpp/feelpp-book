@@ -7,13 +7,17 @@ The next step is to compute integrals over the mesh. The source code is availabl
 
 # Step by step explanations {#TutorialIntegralsSteps}
 
-We start by loading a Mesh in 2D
-!CODEFILE "code/myintegrals.cpp" mesh
+We start by loading a Mesh in 2D   
+
+mesh   
+!CODEFILE "code/myintegrals.cpp" 
 
 then we define the Feel++ expression that we are going to integrate using the \c
-soption function that retrieves the command line option string `functions.g.`  We then transform this string into a Feel++ expression using `expr().`
+soption function that retrieves the command line option string `functions.g.`  We then transform this string into a Feel++ expression using `expr().`   
 
-!CODEFILE "code/myintegrals.cpp" expression
+expression
+
+!CODEFILE "code/myintegrals.cpp" 
 
 then We compute two integrals over the domain and its boundary respectively
 
@@ -21,11 +25,13 @@ then We compute two integrals over the domain and its boundary respectively
 
  * $$\int_{\partial \Omega} g$$
 
-and we print the results to the screen.
+and we print the results to the screen.   
 
-!CODEFILE "code/myintegrals.cpp" integrals
+integrals
 
-Only the rank 0 process (thanks to `Environment` isMasterRank() prints
+!CODEFILE "code/myintegrals.cpp"
+
+Only the rank 0 process (thanks to `Environment`) isMasterRank() prints
 to the screen as the result is the same over all mpi processes if the
 application was run in parallel. Note also that the code actually prints the
 expression passed by the user through the command line option `functions.g.`
@@ -93,9 +99,11 @@ integration is different from the exact domain $$\Omega = \{ (x,y)\in
 
 #  Complete code {#TutorialIntegralsCode}
 
-The complete code reads as follows
+The complete code reads as follows :   
 
-!CODEFILE "code/myintegrals.cpp" all
+all
+
+!CODEFILE "code/myintegrals.cpp" 
 
 to compile just type
 ```
