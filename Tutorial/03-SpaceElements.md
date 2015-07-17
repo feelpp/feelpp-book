@@ -11,14 +11,16 @@ The source code is available in `myfunctionspace.cpp`
 
 # Loading a Mesh in 2D {#load}
 
-We recall how to load a mesh :
-!CODEFILE "code/myfunctionspace.cpp" mesh
+We recall how to load a mesh :   
+mesh   
+!CODEFILE "code/myfunctionspace.cpp" 
 
 
 # Constructing a function space {#fs}
 
-For basic function spaces, we have predetermined constructors:
-!CODEFILE "code/myfunctionspace.cpp" space
+For basic function spaces, we have predetermined constructors:   
+space   
+!CODEFILE "code/myfunctionspace.cpp" 
 
 One can also use :
 - `Pdh<ORDER>(mesh)` : Polynomial Discontinuous
@@ -29,8 +31,9 @@ One can also use :
 
 # Defining an element {#elem}
 
-Elements are basically defined and created like that :
-!CODEFILE "code/myfunctionspace.cpp" element
+Elements are basically defined and created like that :   
+element   
+!CODEFILE "code/myfunctionspace.cpp" 
 
 # Code with other features {#code}
 
