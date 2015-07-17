@@ -38,6 +38,7 @@ Elements are basically defined and created like that :
 element   
 !CODEFILE "code/myfunctionspace.cpp" 
 
-# Code with other features {#code}
+# Code with other features {#code}   
 
-!CODEFILE "code/myfunctionspace.cpp" all
+all   
+!CODEFILE "code/myfunctionspace.cpp" 
