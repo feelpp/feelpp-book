@@ -41,8 +41,10 @@ You have to indicate in the json file the quantity to handle (velocity, pressure
 !CODEFILE "code/aniso"   
 
 _laplacian.cpp get_bc
-We can apply theses boundary condition this way   
+We can apply theses boundary condition this way
+<!--
 !CODEFILE "code/aniso"   
+-->
 
 _laplacian.cpp boundary
 
@@ -50,6 +52,7 @@ _laplacian.cpp boundary
 
 # Example {#Example}
 We have set up an example : an anisotropic laplacian.   
-
+<!--
 !CODEFILE "code/aniso"   
+-->
 _laplacian.cpp global
