@@ -13,7 +13,7 @@ available in `myexpression.cpp.`
 
 - then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  ,here is an example how to enter them :
 ```c++
-feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"   
+feelpp_tut_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"   
 ```   
 You can print back the expression to the screen to check that everything is ok.
 You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).   
