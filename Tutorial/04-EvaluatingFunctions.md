@@ -31,7 +31,7 @@ Step by step explanations
 
 
    here is an example how to enter them:   
-   ```feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a"               --functions.f="{sin(pi*x),cos(pi*y)}:x:y" ```   
+   ```./feelpp_tut_myexpression --a=3 --functions.g="a*x*y:x:y:a"               --functions.f="{sin(pi*x),cos(pi*y)}:x:y" ```   
    Note that you can print back the expression to the screen to check that    everything is ok.   
    If you want to use as expression `a*x+b*y`, you have to define `a` and     `b` as option (either in your code, either in the library).
 
