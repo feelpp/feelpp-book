@@ -45,7 +45,9 @@ to compile just use the `make` command in your compilation directory
 ```bash
 >make feelpp_tut_myexpression   
 >./feelpp_tut_myexpression  
-```
+```   
+or    
+``` >./feelpp_tut_myexpression --a=3 --functions.g="<your_function>" --functions.f="<your_function>"```
 
 !CODEFILE "code/myexpression.cpp"     
 
@@ -56,7 +58,8 @@ to compile just use the `make` command in your compilation directory
 We start with the following function $$g=1$$ and $$f=(1,1)$$.
 
 ```bash
-shell> ./feelpp_tut_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y"
+> ./feelpp_tut_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y"  
+
 g=1
 f={1,1}
 i=(x-aVal)*y
