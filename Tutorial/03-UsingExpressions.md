@@ -22,9 +22,9 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
 ```auto grad_g=grad<2>(g);   
    auto grad_f=grad(f);```    
    
-   Notice that template argument are given to `grad`  to specify the shape of the
-gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
-$$2\times 2$$ since we are in 2D.   
+  Notice that template argument are given to `grad`  to specify the shape    of the
+  gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
+  $$2\times 2$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
 
 ```auto laplacian_g=laplacian(g);   
@@ -37,7 +37,7 @@ $$2\times 2$$ since we are in 2D.
 - and the curl of `f`   
 ```auto curl_f=curl(f);```   
 
--Finally we evaluate these expressions at one point given by the option `x`  and `y`   
+- Finally we evaluate these expressions at one point given by the option `x`  and `y`   
 
 # Complete code {#code}
 
