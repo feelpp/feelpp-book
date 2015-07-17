@@ -31,7 +31,7 @@ To retrieve the materials properties, we use :
 _laplacian.cpp get_mat
 And to apply them :   
 <!--
-!CODEFILE "code/aniso"   
+!CODEFILE "code/model1.cpp"   
 -->
 _laplacian.cpp materials
 
