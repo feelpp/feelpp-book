@@ -24,11 +24,15 @@ gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
 $$2\times 2$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
 laplacian   
-```auto laplacian_g=laplacian(g);```
+```auto laplacian_g=laplacian(g);   
+   auto laplacian_f=laplacian(f);```   
+
 - then we compute the divergence of `f`   
+  ```auto div_f=div(f);```
+
 - and the curl of `f`   
-- 
-Finally we evaluate these expression at one point given by the option `x`  and `y`
+```auto curl_f=curl(f);```
+-Finally we evaluate these expressions at one point given by the option `x`  and `y`
 
 !CODEFILE "code/myexpression.cpp"     
 
