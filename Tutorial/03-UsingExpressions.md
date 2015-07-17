@@ -9,7 +9,7 @@ available in `myexpression.cpp.`
 # Step by step explanations {#ex}
 
 - We start by loading a Mesh in 2D   
-
+```auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );```
 - then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  ,here is an example how to enter them :
 ```c++
 feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"   
