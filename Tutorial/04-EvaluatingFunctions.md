@@ -3,7 +3,7 @@ Using function {#TutorialFunctions}
 
 
 
-Once you  have created an element, you may want to give it a value, that can depends on a lot of parameters (mainly spaces, but other may apply).
+Once you  have created an element, you may want to give it a value, that can depends on a lot of parameters (mainly spaces, but others may apply).
 
 To do so, Feel++ relies on expression.
 We may use tree kind of expression :
