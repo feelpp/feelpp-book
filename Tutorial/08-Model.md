@@ -26,7 +26,7 @@ A parameter is a non physical property for a model.
 
 ## Materials {#Materials}
 To retrieve the materials properties, we use :   
-!CODEFILE "code/aniso"   
+```  ModelMaterials materials = model.materials(); ```  
 
 _laplacian.cpp get_mat
 And to apply them :   
@@ -38,21 +38,22 @@ _laplacian.cpp materials
 ## BoundaryConditions {#BoundaryConditions}
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression.
 You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
-!CODEFILE "code/aniso"   
+```map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };```  
 
 _laplacian.cpp get_bc
 We can apply theses boundary condition this way
-<!--
-!CODEFILE "code/aniso"   
--->
+```
+  for(auto it : bc_u){
+    if(boption("myVerbose") && Environment::isMasterRank() )
+      std::cout << "[BC] - Applying " << it.second << " on " << it.first << std::endl;
+    a+=on(_range=markedfaces(mesh,it.first), _rhs=l, _element=u, _expr=it.second );
+  }```
 
-_laplacian.cpp boundary
+
 
 ## PostProcessing {#PostPro}
 
 # Example {#Example}
 We have set up an example : an anisotropic laplacian.   
 <!--
-!CODEFILE "code/aniso"   
--->
-_laplacian.cpp global
+
