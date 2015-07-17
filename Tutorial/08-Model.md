@@ -30,7 +30,9 @@ To retrieve the materials properties, we use :
 
 _laplacian.cpp get_mat
 And to apply them :   
+<!--
 !CODEFILE "code/aniso"   
+-->
 _laplacian.cpp materials
 
 ## BoundaryConditions {#BoundaryConditions}
