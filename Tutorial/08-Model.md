@@ -16,10 +16,10 @@ A model is defined by :
 - a Name
 - a Description
 - a Model
-- [Parameters](@ref Parameters)
-- [Materials](@ref Materials)
-- [Boundary Conditions](@ref BoundaryConditions)
-- [Post Processing](@ref PostPro)
+- [Parameters](#Parameters)
+- [Materials](#Materials)
+- [Boundary Conditions](#BoundaryConditions)
+- [Post Processing](#PostPro)
 
 ## Parameters {#Parameters}
 A parameter is a non physical property for a model.
