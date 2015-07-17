@@ -48,7 +48,7 @@ $$2\times 2$$ since we are in 2D.
 We start with the following function $$g=1$$ and $$f=(1,1)$$.
 
 ```bash
-shell> ./feelpp_doc_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y
+shell> ./feelpp_tut_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y
 g=1
 f={x,-y}
 grad(g)=[[0]]
