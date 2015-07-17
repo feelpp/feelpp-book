@@ -37,9 +37,11 @@ _laplacian.cpp materials
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression.
 You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
 !CODEFILE "code/aniso"   
+
 _laplacian.cpp get_bc
 We can apply theses boundary condition this way   
 !CODEFILE "code/aniso"   
+
 _laplacian.cpp boundary
 
 ## PostProcessing {#PostPro}
