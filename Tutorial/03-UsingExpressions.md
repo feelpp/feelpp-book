@@ -37,7 +37,16 @@ $$2\times 2$$ since we are in 2D.
 - and the curl of `f`   
 ```auto curl_f=curl(f);```   
 
--Finally we evaluate these expressions at one point given by the option `x`  and `y`
+-Finally we evaluate these expressions at one point given by the option `x`  and `y`   
+
+# Complete code {#code}
+
+The complete code reads as follows  
+
+to compile just use the `make` command in your compilation directory
+```bash
+make feelpp_doc_myexpression
+```
 
 !CODEFILE "code/myexpression.cpp"     
 
@@ -80,14 +89,4 @@ laplacian(f)(x,y)=0
 The symbolic calculus system worked as expected.
 
 
-# Complete code {#code}
 
-The complete code reads as follows  
-
-all   
-!CODEFILE "code/myexpression.cpp" 
-
-to compile just use the `make` command in your compilation directory
-```bash
-make feelpp_doc_myexpression
-```
