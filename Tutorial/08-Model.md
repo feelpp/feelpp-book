@@ -28,19 +28,17 @@ A parameter is a non physical property for a model.
 To retrieve the materials properties, we use :   
 ```  ModelMaterials materials = model.materials(); ```  
 
-_laplacian.cpp get_mat
 And to apply them :   
 
 !CODEFILE "code/model1.cpp"   
 
-_laplacian.cpp materials
 
 ## BoundaryConditions {#BoundaryConditions}
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression.
 You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
 ```map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };```  
 
-_laplacian.cpp get_bc
+
 We can apply theses boundary condition this way
 ```
   for(auto it : bc_u){
