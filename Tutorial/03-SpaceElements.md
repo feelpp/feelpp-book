@@ -12,6 +12,7 @@ The source code is available in `myfunctionspace.cpp`
 # Loading a Mesh in 2D {#load}
 
 We recall how to load a mesh :   
+
 mesh   
 !CODEFILE "code/myfunctionspace.cpp" 
 
