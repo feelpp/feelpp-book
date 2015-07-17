@@ -18,7 +18,6 @@ feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi
 You can print back the expression to the screen to check that everything is ok.
 You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).   
 - then we compute the gradient of `g`  and `f`   
-
   ```auto grad_g=grad<2>(g);```   
   ```auto grad_f=grad(f);```    
    
@@ -26,9 +25,8 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
   gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
   $$2\times 2$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
-
-   ```auto laplacian_g=laplacian(g);```   
-   ```auto laplacian_f=laplacian(f);```   
+  ```auto laplacian_g=laplacian(g);```   
+  ```auto laplacian_f=laplacian(f);```   
 
 - then we compute the divergence of `f`   
   ```auto div_f=div(f);```   
