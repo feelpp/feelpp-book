@@ -24,6 +24,7 @@ gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
 $$2\times 2$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
 laplacian   
+```auto laplacian_g=laplacian(g);```
 - then we compute the divergence of `f`   
 - and the curl of `f`   
 - 
