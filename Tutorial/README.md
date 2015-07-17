@@ -1,6 +1,6 @@
 Before reading the following, it is recommended to have a look to :
 
-- Install Feel++, see : [download & install ](http://wkyoshe.gitbooks.io/feelpp-kyoshe/content/GettingStarted/download.html)
+- Install Feel++, see : [download & install ](download.md)
 - Using Feel++, see :[compiling your application](http://wkyoshe.gitbooks.io/feelpp-kyoshe/content/GettingStarted/compiling.html)
 
 After installing and compiling correctly Feel++, you can find all the examples that we used here to : ``` your_build_folder/doc/manual/tutorial```
