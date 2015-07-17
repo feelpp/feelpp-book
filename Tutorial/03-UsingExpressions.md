@@ -27,8 +27,8 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
   $$2\times 2$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
 
-```auto laplacian_g=laplacian(g);   
-   auto laplacian_f=laplacian(f);```   
+   ```auto laplacian_g=laplacian(g);```   
+   ```auto laplacian_f=laplacian(f);```   
 
 - then we compute the divergence of `f`   
   ```auto div_f=div(f);```   
