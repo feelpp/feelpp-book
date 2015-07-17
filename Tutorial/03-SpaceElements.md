@@ -9,19 +9,21 @@ You now have to learn how to define and use function spaces and elements of func
 The source code is available in `myfunctionspace.cpp`
 (The listing is given at the end).
 
-# Loading a Mesh in 2D {#load}
-
-We recall how to load a mesh :   
-
-mesh   
-!CODEFILE "code/myfunctionspace.cpp" 
+  
 
 
-# Constructing a function space {#fs}
+# Constructing a function space {#fs}   
+- Loading a Mesh in 2D   
+  ``` auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);```
 
-For basic function spaces, we have predetermined constructors:   
+- For basic function spaces, we have predetermined constructors:   
+  ```auto Xh = Pch<2>( mesh );```    
 
-space   
+- Defining an element   
+  ```auto u = Xh->element( "u" );```   
+  ```auto w = Xh->element( "w" );```
+
+ 
 !CODEFILE "code/myfunctionspace.cpp" 
 
 One can also use :
@@ -29,15 +31,8 @@ One can also use :
 - `Pvh<ORDER>(mesh)` : Polynomial Continuous Vectorial
 - `Pdhv<ORDER>(mesh)` : Polynomial Discontinuous Vectorial
 - `Pchm<ORDER>(mesh)` : Polynomial Continuous Matrix
-- `Ned1h<ORDER>(mesh)` : Nedelec function spaces
-
-# Defining an element {#elem}
-
-Elements are basically defined and created like that :    
-
-element   
-!CODEFILE "code/myfunctionspace.cpp" 
-
+- `Ned1h<ORDER>(mesh)` : Nedelec function spaces   
+ 
 # Code with other features {#code}   
 all   
 !CODEFILE "code/myfunctionspace.cpp" 
