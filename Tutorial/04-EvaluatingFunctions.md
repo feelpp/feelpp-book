@@ -27,8 +27,9 @@ We start by loading a Mesh in 2D
 
 !CODEFILE "code/myintegrals.cpp"
 
-then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field
-!CODEFILE "code/myexpression.cpp" expr
+then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field   
+!CODEFILE "code/myexpression.cpp"   
+expr
 
 here is an example how to enter them, more are available below
 ```bash
@@ -44,10 +45,12 @@ grad
 !CODEFILE "code/myexpression.cpp" 
 
 Notice that template argument are given to `grad`  to specify the shape of the
-gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$ $$2\times 2$$ since we are in 2D.
+gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and  $$2\times 2$$ for $$\nabla f$$ since we are in 2D.
 
 then we compute the laplacian of `g`  and `f`   
-!CODEFILE "code/myexpression.cpp" laplacian
+
+!CODEFILE "code/myexpression.cpp"   
+laplacian
 
 then we compute the divergence of `f`   
 div   
@@ -57,8 +60,9 @@ and the curl of `f`
 curl   
 !CODEFILE "code/myexpression.cpp" 
 
-Finally we evaluate these expression at one point given by the option `x`  and `y`
-!CODEFILE "code/myexpression.cpp" eval
+Finally we evaluate these expression at one point given by the option `x`  and `y`   
+!CODEFILE "code/myexpression.cpp"   
+eval
 
 # Built-in
 
