@@ -27,9 +27,9 @@ We start by loading a Mesh in 2D
 
 !CODEFILE "code/myintegrals.cpp"
 
-then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field   
+then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field expr   
 !CODEFILE "code/myexpression.cpp"   
-expr
+
 
 here is an example how to enter them, more are available below
 ```bash
@@ -61,8 +61,9 @@ curl
 !CODEFILE "code/myexpression.cpp" 
 
 Finally we evaluate these expression at one point given by the option `x`  and `y`   
+eval   
 !CODEFILE "code/myexpression.cpp"   
-eval
+
 
 # Built-in
 
