@@ -8,46 +8,27 @@ available in `myexpression.cpp.`
 
 # Step by step explanations {#ex}
 
-We start by loading a Mesh in 2D
-!CODEFILE "code/myexpression.cpp"     
-mesh
-
-then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field   
-expr   
-!CODEFILE "code/myexpression.cpp"   
-
-
-here is an example how to enter them, more are available below
+- We start by loading a Mesh in 2D   
+- then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  ,here is an example how to enter them :
 ```c++
-feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"
-```
-
+feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"   
+```   
 You can print back the expression to the screen to check that everything is ok.
-You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).
-
-then we compute the gradient of `g`  and `f`   
-grad   
-!CODEFILE "code/myexpression.cpp" 
-
+You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).   
+- then we compute the gradient of `g`  and `f`   
 Notice that template argument are given to `grad`  to specify the shape of the
 gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
-$$2\times 2$$ since we are in 2D.
-
-then we compute the laplacian of `g`  and `f`   
+$$2\times 2$$ since we are in 2D.   
+- then we compute the laplacian of `g`  and `f`   
 laplacian   
-!CODEFILE "code/myexpression.cpp" 
+- then we compute the divergence of `f`   
+- and the curl of `f`   
+- 
+Finally we evaluate these expression at one point given by the option `x`  and `y`
 
-then we compute the divergence of `f`   
-div    
-!CODEFILE "code/myexpression.cpp" 
+!CODEFILE "code/myexpression.cpp"     
 
-and the curl of `f`   
-curl   
-!CODEFILE "code/myexpression.cpp" 
 
-Finally we evaluate these expression at one point given by the option `x`  and `y`    
- eval   
- !CODEFILE "code/myexpression.cpp"
 
 # Some results {#res}
 
