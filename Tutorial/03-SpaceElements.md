@@ -19,6 +19,7 @@ mesh
 # Constructing a function space {#fs}
 
 For basic function spaces, we have predetermined constructors:   
+
 space   
 !CODEFILE "code/myfunctionspace.cpp" 
 
@@ -31,7 +32,8 @@ One can also use :
 
 # Defining an element {#elem}
 
-Elements are basically defined and created like that :   
+Elements are basically defined and created like that :    
+
 element   
 !CODEFILE "code/myfunctionspace.cpp" 
 
