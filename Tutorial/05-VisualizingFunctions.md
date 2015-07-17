@@ -4,46 +4,40 @@ Visualizing functions over a mesh {#TutorialVisualize}
 
 
 The next step is to visualize function over the mesh. The source code is
-available in `myexporter.cpp`
+available in `myexporter.cpp`   
 
-# Loading a Mesh in 2D {#load}
+#Step by Step explanations
 
-Here, we generate a second order mesh (mesh) and one of first order (meshp1).   
-!CODEFILE "code/myexporter.cpp"   
+ - Loading a Mesh in 2D 
+
+ Here, we generate a second order mesh (mesh) and one of first order (meshp1).   
+ ```auto mesh = unitCircle<2>();```   
+ ```auto meshp1 = unitCircle<1>();```
+ 
+
+-  Constructing a function space and Defining a (scalar) function over the    function space   
+   here, we generate a second order function space :
+   ```auto Xh = Pch<2>( mesh );```   
+   ```auto myExpr = sin(pi*Px());```   
+   ```auto v = project( _space=Xh, _range=elements(mesh),_expr=myExpr)```
+ 
 
 
-
-# Constructing a function space {#fs}
-
-here, we generate a second order function space,   
-space   
-!CODEFILE "code/myexporter.cpp" 
-
-# Defining a (scalar) function over the function space {#scal}   
-function   
-!CODEFILE "code/myexporter.cpp"   
-
-
-# Exporter {#exp}
+- Exporter 
 
 We create now three exporter:
 - once generated on the P1 mesh
 - once generated on the P2 mesh
 - once generated on a P1 mesh extracted from P2 mesh   
 
-exporter   
-!CODEFILE "code/myexporter.cpp" 
-
-# Adding function to save {#add}
+- Adding function to save 
 
 Here we save the function many times.
 That is here not relevant but you may want to simulate process over time.   adding   
 !CODEFILE "code/myexporter.cpp"
 
-# Actually saving {#save}   
+- Actually saving    
 
-save   
-!CODEFILE "code/myexporter.cpp" 
 
 
 #  Complete code {#TutorialExprCode}
