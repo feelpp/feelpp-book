@@ -42,38 +42,34 @@ You may need to manage more than one backend in an application: you
 have different systems to solve and you want to keep some already
 computed objects such as preconditioners.
 
-The default backend is in fact an unnamed backend: in order to
+- The default backend is in fact an unnamed backend: in order to
 distinguish between backend you have to name them. for example   
+   
+  ***marker_opt***
 
-marker_opt
 
-!CODEFILE "code/mybackend.cpp" 
+- After that, you create the backend object:   
 
-After that, you create the backend object:   
+ ***marker_obj***
 
-marker_obj
+  Be careful, the backend's name has to match the name you gave at the options step.
 
-!CODEFILE "code/mybackend.cpp" 
+- Then, you load meshes, creates spaces etc. At solve time, or you solve with the default backend:   
 
-Be careful, the backend' name has to match the name you gave at the options step.
-
-Then, you load meshes, creates spaces etc. At solve time, or you solve with the default backend:   
-
-marker_default
-!CODEFILE "code/mybackend.cpp" 
-
-One of the important backend option is to be able to monitor the residuals and iteration count
+ ***marker_default***
+ 
+ One of the important backend option is to be able to monitor the residuals and iteration count
 ```sh
-./feelpp_doc_mybackend --pc-type=id --ksp-monitor=true --myBackend.ksp-monitor=true
+./feelpp_tut_mybackend --pc-type=id --ksp-monitor=true --myBackend.ksp-monitor=true
 ```
 
-Finally you can create a named backend:   
+- Finally you can create a named backend:   
 
-marker_hm
-!CODEFILE "code/mybackend.cpp" 
+*** marker_hm***
+
 
 
 The whole code example :   
 
-marker_main
+***marker_main***   
 !CODEFILE "code/mybackend.cpp" 
