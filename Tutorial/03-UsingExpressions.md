@@ -48,27 +48,29 @@ $$2\times 2$$ since we are in 2D.
 We start with the following function $$g=1$$ and $$f=(1,1)$$.
 
 ```bash
-shell> ./feelpp_tut_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y
+shell> ./feelpp_tut_myexpression --functions.g=1:x:y --functions.f="{1,1}:x:y"
 g=1
-f={x,-y}
-grad(g)=[[0]]
-grad(f)=[[1,0],[0,-1]]
+f={1,1}
+i=(x-aVal)*y
+grad(g)=[[0,0]]
+grad(f)=[[0,0],[0,0]]
 laplacian(g)=[[0]]
 laplacian(f)=[[0],[0]]
 div(f)=[[0]]
 curl(f)=[[0]]
 Evaluation  at  (0,0):
            g(x,y)=1
-           f(x,y)= 0
--0
+           f(x,y)=1
+1
+           i(x,y)=-0
 Gradient:
-     grad(g)(x,y)= 0 -0
-     grad(f)(x,y)= 1  0
- 0 -1
+     grad(g)(x,y)=0 0
+     grad(f)(x,y)=0 0
+0 0
 Divergence:
       div(f)(x,y)=0
 Curl:
-     curl(f)(x,y)=-3.14159
+     curl(f)(x,y)=0
 Laplacian:
 laplacian(g)(x,y)=0
 laplacian(f)(x,y)=0
