@@ -31,24 +31,15 @@ Step by step explanations
 
 
    here is an example how to enter them:   
-   ```feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a"               --functions.f="{sin(pi*x),cos(pi*y)}:x:y"
-   ```
-
-  Note that you can print back the expression to the screen to check that    everything is ok.
-
-  If you want to use as expression `a*x+b*y`, you have to define `a` and     `b` as option (either in your code, either in the library).
+   ```feelpp_doc_myexpression --a=3 --functions.g="a*x*y:x:y:a"               --functions.f="{sin(pi*x),cos(pi*y)}:x:y" ```   
+   Note that you can print back the expression to the screen to check that    everything is ok.   
+   If you want to use as expression `a*x+b*y`, you have to define `a` and     `b` as option (either in your code, either in the library).
 
 - then we compute the gradient of `g`  and `f`.   
   Notice that template argument are given to `grad`  to specify the shape    of  the
   gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and  $$2\times    2$$ for $$\nabla f$$ since we are in 2D.
-
 - then we compute the laplacian of `g`  and `f`   
-
-
-
 - then we compute the divergence of `f`   
-
-
 - and the curl of `f`   
 
 
