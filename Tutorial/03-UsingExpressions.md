@@ -43,7 +43,8 @@ The complete code reads as follows
 
 to compile just use the `make` command in your compilation directory
 ```bash
-make feelpp_doc_myexpression
+>make feelpp_tut_myexpression   
+>./feelpp_tut_myexpression  
 ```
 
 !CODEFILE "code/myexpression.cpp"     
