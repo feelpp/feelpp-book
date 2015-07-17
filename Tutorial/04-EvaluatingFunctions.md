@@ -27,7 +27,8 @@ We start by loading a Mesh in 2D
 
 !CODEFILE "code/myintegrals.cpp"
 
-then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field expr   
+then we define some expression through the command line or config file: `g`  is a scalar field and `f`  is a vector field   
+expr   
 !CODEFILE "code/myexpression.cpp"   
 
 
@@ -49,8 +50,9 @@ gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and  $$2\times 2$$ for 
 
 then we compute the laplacian of `g`  and `f`   
 
+laplacian   
 !CODEFILE "code/myexpression.cpp"   
-laplacian
+
 
 then we compute the divergence of `f`   
 div   
