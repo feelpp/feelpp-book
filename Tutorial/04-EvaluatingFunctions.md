@@ -9,8 +9,8 @@ To do so, Feel++ relies on expression.
 We may use tree kind of expression :
 
 - [Parsed](#parsed)
-- [Build-in](#build-in)
-- [Hard coded](#hc)
+- [Build-in](#Built-in)
+- [Hard coded](#Hard Coded)
 
 
 # Parsed {#parsed}
@@ -65,7 +65,7 @@ eval
 !CODEFILE "code/myexpression.cpp"   
 
 
-# Built-in
+# Built-in {#Built-in}
 
 Instead of defining an expression from a string, you can use
 
@@ -73,7 +73,7 @@ Instead of defining an expression from a string, you can use
 
 The list of the Feel++ Keyword is [here](Keywords.html).
 
-# Hard Coded
+# Hard Coded {#Hard Coded}
 
 One other method to define function is described here.
 
