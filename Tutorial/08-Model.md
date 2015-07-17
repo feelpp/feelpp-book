@@ -30,9 +30,9 @@ To retrieve the materials properties, we use :
 
 _laplacian.cpp get_mat
 And to apply them :   
-<!--
+
 !CODEFILE "code/model1.cpp"   
--->
+
 _laplacian.cpp materials
 
 ## BoundaryConditions {#BoundaryConditions}
@@ -55,5 +55,7 @@ We can apply theses boundary condition this way
 
 # Example {#Example}
 We have set up an example : an anisotropic laplacian.   
-<!--
+!CODEFILE "code/model2.cpp"
+
+
 
