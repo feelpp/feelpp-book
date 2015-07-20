@@ -19,10 +19,7 @@ We initialize the environment variables through the Feel++ `Environment` class.
  We pass command line options using the
  [Boost Program Options](http://www.boost.org/doc/libs/1_53_0/doc/html/program_options.html),
  library using the prefix `po::` which is a Feel++ alias for the
- Boost::program_options namespace. To add a new Feel++ option, we must
- create a new
-
-Feel++ `options_description`. You must add the default Feel++ options
+ Boost::program_options namespace. To add a new Feel++ option, we must create a new  Feel++ `options_description`. You must add the default Feel++ options
 and the new one that we choose here as a double value. Note that the default
 value will be assigned if not specified by the user.
 
