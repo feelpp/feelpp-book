@@ -22,8 +22,8 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
   ```auto grad_f=grad(f);```    
    
   Notice that template argument are given to `grad`  to specify the shape    of the
-  gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and $$\nabla f$$
-  $$2\times 2$$ since we are in 2D.   
+  gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and 
+  $$2\times 2$$ for $$\nabla f$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
   ```auto laplacian_g=laplacian(g);```   
   ```auto laplacian_f=laplacian(f);```   
