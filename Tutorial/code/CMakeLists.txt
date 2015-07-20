@@ -36,7 +36,7 @@ add_library(feelpplib SHARED environment.cpp mesh.cpp mybackend.cpp myexporter.c
 mymesh.cpp mymeshfromstring.cpp mystokes.cpp
 )  
 # Make sure the compiler can find include files for our operation library
-# when other libraries or executables link to operation
+# when other libraries or executables link to feelpp
 
 target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -47,15 +47,14 @@ target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
 # 
 # Add executable called "operatiom" that is built from the source files
-# "operation.cxx"". The extensions are automatically found.
+# ".cxx"". The extensions are automatically found.
 #
 
 add_executable(feelpp environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
 mymesh.cpp mymeshfromstring.cpp mystokes.cpp)
 
-# Link the executable to the operation library. Since the operation library has
-# public include directories we will use those link directories when building
-# operation
-#
+# Link the executable to the operation library. Since the feelpp library has
+# public include directories we will use those link directories when building feelpp
+
 
 target_link_libraries(feelpp LINK_PUBLIC feelpplib)
