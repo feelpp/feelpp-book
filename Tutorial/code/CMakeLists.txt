@@ -32,7 +32,7 @@ option(USE_SHARED
             
 if(USE_SHARED)
 
-add_library(feelpplib SHARED environment.cpp mesh.cpp model1.cpp model2.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
+add_library(feelpplib SHARED environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
 mymesh.cpp mymeshfromstring.cpp mystokes.cpp
 )  
 # Make sure the compiler can find include files for our operation library
@@ -41,7 +41,7 @@ mymesh.cpp mymeshfromstring.cpp mystokes.cpp
 target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 else()
-add_library(feelpplib STATIC environment.cpp mesh.cpp model1.cpp model2.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
+add_library(feelpplib STATIC environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
 mymesh.cpp mymeshfromstring.cpp mystokes.cpp)
 target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
