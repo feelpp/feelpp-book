@@ -91,8 +91,8 @@ The complete code reads as follows :
 
 to compile just type
 ```
->make feelpp_tut_myintegrals
->./feelpp_tut_myintegrals
+make feelpp_tut_myintegrals
+./feelpp_tut_myintegrals
 ```
 
 !CODEFILE "code/myintegrals.cpp" 
