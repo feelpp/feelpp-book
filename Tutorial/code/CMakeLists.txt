@@ -1,7 +1,7 @@
 #  cmakeLists.txt; 
 #
 #  Author(s): Ahmed Bachir <albachirou@gmail.com>
-              Kyoshe Winstone <wkyoshe@gmail.com>
+#             Kyoshe Winstone <wkyoshe@gmail.com>
 #       Date: 2015-07-20
 #
 #  Université de Strasbourg.
