@@ -54,7 +54,7 @@ Instead of defining an expression from a string, you can use
 
 !CODEFILE "code/myexporter.cpp"
 
-The list of the Feel++ Keyword is [here](http://wkyoshe.gitbooks.io/feelpp-kyoshe/content/QuickReference/keywords.html).
+The list of the Feel++ Keyword is [here](Quick Reference/Keywords.md).
 
 # Hard Coded {#hc}
 
