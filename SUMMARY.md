@@ -1,14 +1,14 @@
 # Summary
 
 * [Introduction](README.md)
+   * [This book](book.md)
+   * [Credits](credits.md)
+   * [Consortium](consortium.md)
    * [Prerequisites](GettingStarted/prerequisites/README.md)
        * [Makefile](GettingStarted/prerequisites/makefile.md)
        * [CMake](GettingStarted/prerequisites/cmake.md)
        * [GitHub](GettingStarted/prerequisites/github.md)
        * [Doxygen](GettingStarted/prerequisites/doxygen.md)
-   * [This book](book.md)
-   * [Credits](credits.md)
-   * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
 * [Getting Started](GettingStarted/README.md)
    * [Prerequisites](GettingStarted/prerequisites/README.md)
