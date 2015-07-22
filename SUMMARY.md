@@ -12,8 +12,6 @@
        * [CMake](GettingStarted/prerequisites/cmake.md)
        * [Makefile](makefile.md)
 * [Getting Started](GettingStarted/README.md)
-   * [Prerequisites](GettingStarted/prerequisites/README.md)
-       * [Makefile](GettingStarted/prerequisites/makefile.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
    * [Mac OS X](GettingStarted/mac.md)
