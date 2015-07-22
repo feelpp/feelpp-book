@@ -6,7 +6,7 @@
    * [Download](GettingStarted/download.md)
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
-   * Prerequisites
+   * [Prerequisites](prerequisites.md)
 * [Getting Started](GettingStarted/README.md)
    * [Prerequisites](GettingStarted/prerequisites/README.md)
        * [Makefile](GettingStarted/prerequisites/makefile.md)
