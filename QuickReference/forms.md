@@ -33,8 +33,10 @@ From `mylaplacian.cpp`
 marker_form1   
 !CODEFILE "code/mylaplacian.cpp" 
 
-From `myadvection.cpp`
-!CODEFILE "code/myadvection.cpp" marker_form1
+From `myadvection.cpp`   
+marker_form1
+
+!CODEFILE "code/myadvection.cpp" 
 
 Notice that \c += operator is working with linear and bilinear forms.
 
@@ -63,8 +65,10 @@ From `mylaplacian.cpp`
 
 !CODEFILE "code/mylaplacian.cpp"
 
-From `mystokes.cpp`:
-!CODEFILE "code/mystokes.cpp" marker_form2
+From `mystokes.cpp`:   
+marker_form2
+
+!CODEFILE "code/mystokes.cpp" 
 
 Notice that \c += operator is working with linear and bilinear forms.
 
