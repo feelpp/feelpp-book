@@ -29,8 +29,9 @@ $$
 Then you can customize it using integration tools.
 
 *Example*
-From `mylaplacian.cpp`
-!CODEFILE "code/mylaplacian.cpp" marker_form1
+From `mylaplacian.cpp`   
+marker_form1   
+!CODEFILE "code/mylaplacian.cpp" 
 
 From `myadvection.cpp`
 !CODEFILE "code/myadvection.cpp" marker_form1
@@ -57,8 +58,10 @@ $$
 Then you can custom it using integrations tools
 
 \Example
-From `mylaplacian.cpp`
-!CODEFILE "code/mylaplacian.cpp" marker_form2
+From `mylaplacian.cpp`   
+ marker_form2
+
+!CODEFILE "code/mylaplacian.cpp"
 
 From `mystokes.cpp`:
 !CODEFILE "code/mystokes.cpp" marker_form2
@@ -87,8 +90,10 @@ Optional Parameters:
 * `_name`  Default = "".
 
 *Example*
-From `laplacian.cpp`:
-!CODEFILE "code/mylaplacian.cpp" marker_solve
+From `laplacian.cpp`:   
+
+ marker_solve   
+ !CODEFILE "code/mylaplacian.cpp"
 
 ## on on
 The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.<br>
@@ -105,13 +110,15 @@ Required Parameters:
 This function is used with += operator.
 
 *Example*
-From `mylaplacian.cpp`:
-!CODEFILE "code/mylaplacian.cpp" marker_on
-There we add the condition:$$ u  =  0  \text{ on }\;\partial\Omega \;$$.
+From `mylaplacian.cpp`:   
+marker_on   
+!CODEFILE "code/mylaplacian.cpp"    
+There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
-From `mystokes.cpp`:
-!CODEFILE "code/mystokes.cpp" marker_on
+From `mystokes.cpp`:   
+marker_on
 
+!CODEFILE "code/mystokes.cpp"    
 You can also apply boundary conditions using :
  ```cpp
   a+=on(_range=markedfaces(mesh,"top"),_element=u[Component::Y],_rhs=l,_expr=cst(0.))
