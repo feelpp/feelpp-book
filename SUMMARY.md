@@ -16,7 +16,7 @@
    * [Linux](GettingStarted/linux.md)
    * [Mac OS X](GettingStarted/mac.md)
 * [Tutorial](Tutorial/README.md)
-   * [Output Directories](output_directories.md)
+   * [Output Directories](Tutorial/outputdirectories.md)
    * [Environment](Tutorial/01-SettingUpEnvironment.md)
    * [Loading a Mesh](Tutorial/02-LoadingMesh.md)
    * [Using expressions](Tutorial/03-UsingExpressions.md)
