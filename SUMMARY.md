@@ -17,6 +17,7 @@
    * [Mac OS X](GettingStarted/mac.md)
 * [Tutorial](Tutorial/README.md)
    * [Environment](Tutorial/01-SettingUpEnvironment.md)
+       * Output Directories
    * [Loading a Mesh](Tutorial/02-LoadingMesh.md)
    * [Using expressions](Tutorial/03-UsingExpressions.md)
    * [Evaluating functions](Tutorial/04-EvaluatingFunctions.md)
