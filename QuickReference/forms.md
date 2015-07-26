@@ -31,7 +31,7 @@ Then you can customize it using integration tools.
 *Example*
 From `mylaplacian.cpp`   
 marker_form1   
-!CODEFILE "..Tutorial/code/mylaplacian.cpp" 
+!CODEFILE "../Tutorial/code/mylaplacian.cpp" 
 
 From `myadvection.cpp`   
 marker_form1
