@@ -37,7 +37,7 @@ From `myadvection.cpp`
 marker_form1
 
 
-!CODEFILE "../code/myadvection.cpp" 
+!CODEFILE "../Tutorial/code/myadvection.cpp" 
 
 Notice that \c += operator is working with linear and bilinear forms.
 
@@ -64,12 +64,12 @@ Then you can custom it using integrations tools
 From `mylaplacian.cpp`   
  marker_form2
 
-!CODEFILE "../code/mylaplacian.cpp"
+!CODEFILE "../Tutorial/code/mylaplacian.cpp"
 
 From `mystokes.cpp`:   
 marker_form2
 
-!CODEFILE "../code/mystokes.cpp" 
+!CODEFILE "../Tutorial/code/mystokes.cpp" 
 
 Notice that \c += operator is working with linear and bilinear forms.
 
@@ -98,7 +98,7 @@ Optional Parameters:
 From `laplacian.cpp`:   
 
  marker_solve   
- !CODEFILE "../code/mylaplacian.cpp"
+ !CODEFILE "../Tutorial/code/mylaplacian.cpp"
 
 ## on on
 The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.<br>
@@ -117,13 +117,15 @@ This function is used with += operator.
 *Example*
 From `mylaplacian.cpp`:   
 marker_on   
-!CODEFILE "../code/mylaplacian.cpp"    
+!CODEFILE "../Tutorial/code/mylaplacian.cpp" 
+
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
 From `mystokes.cpp`:   
 marker_on
 
-!CODEFILE "../code/mystokes.cpp"    
+!CODEFILE "../Tutorial/code/mystokes.cpp" 
+
 You can also apply boundary conditions using :
  ```cpp
   a+=on(_range=markedfaces(mesh,"top"),_element=u[Component::Y],_rhs=l,_expr=cst(0.))
