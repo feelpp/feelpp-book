@@ -43,9 +43,9 @@ Optional parameters:
 * `_geomap`  = type of geometric mapping to use, that is to say:
 <table class="manual">
 <tr><th>Feel Parameter</th><th>Description</th></tr>
-<tr><td>``` GEOMAP_HO```</td><td>High order approximation (same of the mesh)</td></tr>
-<tr><td>``` GEOMAP_OPT```</td><td>Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior</td></tr>
-<tr><td>``` GEOMAP_01```</td><td>Order 1 approximation (same of the mesh)</td></tr>
+<tr><td>  GEOMAP_HO </td><td>High order approximation (same of the mesh)</td></tr>
+<tr><td> GEOMAP_OPT </td><td>Optimal approximation:<br> high order on boundary elements<br> order 1 in the interior</td></tr>
+<tr><td> GEOMAP_01 </td><td>Order 1 approximation (same of the mesh)</td></tr>
 </table>
 
 *Example*
