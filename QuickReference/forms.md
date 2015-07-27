@@ -31,10 +31,21 @@ Then you can customize it using integration tools.
 *Example*
 From `mylaplacian.cpp`   
 marker_form1   
-!CODEFILE "../Tutorial/code/mylaplacian.cpp" 
+
+```c++   
+// right hand side
+    auto l = form1( _test=Vh );
+    l = integrate(_range=elements(mesh), _expr=id(v));
+```
 
 From `myadvection.cpp`   
-marker_form1
+marker_form1   
+
+```c++
+    // right hand side
+    auto l = form1( _test=Xh );
+    l+= integrate( _range=elements( mesh ), _expr=f*id( v ) );
+```
 
 
 
@@ -42,7 +53,7 @@ marker_form1
 Notice that \c += operator is working with linear and bilinear forms.
 
 
-## form2 form2
+## form2 
 **Interface***
 ```cpp
 form2(_trial, _test, _init);
@@ -62,24 +73,38 @@ Then you can custom it using integrations tools
 
 \Example
 From `mylaplacian.cpp`   
- marker_form2
+ marker_form2   
+ 
+ ```c++
+    // left hand side
+    auto a = form2( _trial=Vh, _test=Vh );
+    a = integrate(_range=elements(mesh),
+                  _expr=gradt(u)*trans(grad(v)) );
 
-!CODEFILE "../Tutorial/code/mylaplacian.cpp"
+ ```
 
 From `mystokes.cpp`:   
-marker_form2
+marker_form2   
 
-!CODEFILE "../Tutorial/code/mystokes.cpp" 
+```c++
+    // left hand side
+    auto a = form2( _trial=Vh, _test=Vh );
+    a = integrate(_range=elements(mesh),
+                  _expr=trace(gradt(u)*trans(grad(u))) );
+    a+= integrate(_range=elements(mesh),
+                  _expr=-div(u)*idt(p)-divt(u)*id(p));
+
+```
 
 Notice that \c += operator is working with linear and bilinear forms.
 
 
 
 
-# Solver Solver
+# Solver 
 In this section we present syntax to solve variational formulations. For more general linear problems see \ref Linear.<br>
 
-## solve solve
+## solve 
 Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form.<br>
 The `solve()`  function presented there is a method from the class `BilinearForm.` <br>
 **Interface***
@@ -98,9 +123,12 @@ Optional Parameters:
 From `laplacian.cpp`:   
 
  marker_solve   
- !CODEFILE "../Tutorial/code/mylaplacian.cpp"
+ ```c++
+     // solve the equation  a(u,v) = l(v)  
+        a.solve(_rhs=l,_solution=u);
+```
 
-## on on
+## on 
 The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.<br>
 **Interface***
 ```cpp
@@ -117,15 +145,20 @@ This function is used with += operator.
 *Example*
 From `mylaplacian.cpp`:   
 marker_on   
-
-!CODEFILE "../Tutorial/code/mylaplacian.cpp" 
+```c++
+    // apply the boundary condition
+    a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
+          _expr=expr(soption("functions.alpha")) );
+```
 
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
 From `mystokes.cpp`:   
-marker_on
-
-!CODEFILE "../Tutorial/code/mystokes.cpp" 
+marker_on   
+```c++
+    a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
+          _expr=expr<2,1,5>(u_exact,syms));
+```
 
 You can also apply boundary conditions using :
  ```cpp
