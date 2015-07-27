@@ -2,7 +2,7 @@ Environment
 ===========
 
 
-In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see \ref detail::Environment "Environment".
+In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  [Environment](environment.md).
 
 # Initialize Feel++
 
