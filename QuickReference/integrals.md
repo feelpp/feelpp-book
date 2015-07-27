@@ -7,15 +7,15 @@ You should be able to create a mesh now. If it is not the case, get back to the 
 To use the tools of this sections, you have to precise the domain range using the following keywords:
 <table class="manual">
 <tr><th>Feel++ Keyword</th><th>Description</th></tr>
-<tr><td> ``` elements(mesh) ```</td><td>All the elements of a mesh</td></tr>
-<tr><td> ``` markedelements(mesh, id) ```</td><td>The precise element defined by the id.<br>It can be any element (line, surface, domain, and so on).</td></tr>
-<tr><td> ``` faces(mesh) ```</td><td>All the faces of the mesh.</td></tr>
-<tr><td> ``` markedfaces(mesh) ```</td><td>All the faces of the mesh which are marked.</td></tr>
-<tr><td> ``` boundaryfaces(mesh) ```</td><td>All elements that own a topological dimension one below the mesh. <br>For example, if you mesh is a 2D one, `boundaryfaces(mesh)`  will return all the lines (because of dimension $$2-1=1$$).<br>These elements which have one dimension less, are corresponding to the boundary faces.</td></tr>
-<tr><td> ``` internalelements(mesh) ```</td><td>All the elements of the mesh which are stricly within the domain that is to say they do not share a face with the boundary.</td></tr>
-<tr><td> ``` boundaryelements(mesh) ```</td><td>All the elements of the mesh which share a face with the boundary of the mesh.</td></tr>
-<tr><td> ``` edges(mesh) ```</td><td>All the edges of the mesh.</td></tr>
-<tr><td> ``` boundaryedges(mesh) ```</td><td>All boundary edges of the mesh.</td></tr>
+<tr><td>  elements(mesh) </td><td>All the elements of a mesh</td></tr>
+<tr><td>  markedelements(mesh, id) </td><td>The precise element defined by the id.<br>It can be any element (line, surface, domain, and so on).</td></tr>
+<tr><td>  faces(mesh) </td><td>All the faces of the mesh.</td></tr>
+<tr><td>  markedfaces(mesh) </td><td>All the faces of the mesh which are marked.</td></tr>
+<tr><td>  boundaryfaces(mesh) </td><td>All elements that own a topological dimension one below the mesh. <br>For example, if you mesh is a 2D one, `boundaryfaces(mesh)`  will return all the lines (because of dimension $$2-1=1$$).<br>These elements which have one dimension less, are corresponding to the boundary faces.</td></tr>
+<tr><td>  internalelements(mesh) </td><td>All the elements of the mesh which are stricly within the domain that is to say they do not share a face with the boundary.</td></tr>
+<tr><td>  boundaryelements(mesh) </td><td>All the elements of the mesh which share a face with the boundary of the mesh.</td></tr>
+<tr><td>  edges(mesh) </td><td>All the edges of the mesh.</td></tr>
+<tr><td>  boundaryedges(mesh) </td><td>All boundary edges of the mesh.</td></tr>
 </table>
 
 
