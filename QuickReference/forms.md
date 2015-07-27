@@ -2,7 +2,7 @@ Forms
 ======
 
 
-We suppose in this section that you know how to define your mesh (see \ref Mesh) and your function spaces (see \ref Spaces). You may need integration tools too (see \ref Integrals).
+We suppose in this section that you know how to define your [Mesh](mesh.md) and your [function spaces](spaces.md). You may need integration tools too, [see  Integrals](integrals.md).
 
 There are Feel++ tools you need to create linear and bilinear forms in order to solve variational formulation.
 
