@@ -59,7 +59,7 @@ Ubuntu. Once you have installed those dependencies, you can jump to \ref Compili
 
 ## Compiling out the source
 
-**Warning** It is not allowed to build the library in the source directory.
+> **Warning** It is not allowed to build the library in the source directory.
 
 It is recommended  to have a directory (e.g. `FEEL`) in which you have
 both the sources and build directories.
@@ -108,8 +108,8 @@ allowed to spawn by using the `-j` flag:
   make -j <nbjobs>
 ```
 
-**Note** from now on, all commands should be typed in
-  `feel.opt` or its subdirectories.
+ > **Note** from now on, all commands should be typed in
+  build directory (e.g `feel.opt`) or its subdirectories.
 
 
 ## Unit tests
