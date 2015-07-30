@@ -1,18 +1,5 @@
-Integrations, Operators and Norms
-=================================
-
-You should be able to create a mesh now. If it is not the case, get back to the section [Mesh](mesh.md).
-
-* [Mesh iterators](QuickReference/Mesh/iterators.md)
-* [Integrate](QuickReference/Integrals/integrate.md)
-* [Mean value](QuickReference/Integrals/mean.md)
-* [Norms](QuickReference/Integrals/norms.md)
-
-
-
-
-
 # Norms
+
 ## $$L^2$$ norm
 
 
@@ -23,11 +10,14 @@ Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() f
   \end{aligned}
 $$</center><br>
 
-**Interface***
+### Interface
+
 ```cpp
   normL2( _range, _expr, _quad, _geomap );
 ```
+
 or squared norm:
+
 ```cpp
   normL2Squared( _range, _expr, _quad, _geomap );
 ```
@@ -40,7 +30,7 @@ Optional parameters:
 * `_quad`  = quadrature to use. Default = `_Q<integer>()`
 * `_geomap`  = type of geometric mapping. Default = `GEOMAP_OPT`
 
-*Example*
+### Example
 From `doc/manual/laplacian/laplacian.cpp`
 ```cpp
   double L2error =normL2( _range=elements( mesh ),
@@ -65,7 +55,7 @@ where $$*$$ is the scalar product $$\cdot$$ when $$f$$ is a scalar
 field and the frobenius scalar product $$:$$ when $$f$$ is a vector
 field
 
-**Interface***
+### Interface
 ```cpp
   normH1( _range, _expr, _grad_expr, _quad, _geomap );
 ```
@@ -86,7 +76,7 @@ Optional parameters:
 normH1() returns a float containing the $$H^1$$ norm.
 
 
-*Example*
+### Example
 With expression:
 ```cpp
   auto g = sin(2*pi*Px())*cos(2*pi*Py());
@@ -107,13 +97,13 @@ With test or trial function `u`
 
 
 
-## Linfinity norm {#integrals.normLinf}
+## Linfinity norm {#normLinf}
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the infinity norm using the normLinf() function:
 
 $$\parallel f \parallel_\infty=\sup_\Omega(|f|)$$
 
-**Interface**
+### Interface
 ```cpp
   normLinf( _range, _expr, _pset, _geomap );
 ```
@@ -132,7 +122,8 @@ The normLinf() function returns not only the maximum of the function over a samp
 * `operator()()`: synonym to `value()`
 * `arg()`: coordinates of the point where the function is maximum
 
-*Example*:
+### Example
+
 ```cpp
   auto uMax = normLinf( _range=elements(mesh),
           _expr=idv(u),
