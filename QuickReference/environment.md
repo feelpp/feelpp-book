@@ -2,11 +2,11 @@ Environment
 ===========
 
 
-In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see \ref detail::Environment "Environment".
+In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  [Environment](environment.md).
 
 # Initialize Feel++
 
-Environment class is necessary to initialize your application, as seen in \ref FirstApp. Interface is as follows:
+Environment class is necessary to initialize your application, as seen in FirstApp. Interface is as follows:
 ```cpp
 Environment env( _argc, _argv, _desc, _about );
 ```

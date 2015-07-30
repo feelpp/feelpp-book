@@ -106,10 +106,12 @@ Post-Processing and Visualization
   $$\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$$. $$\Omega$$
   is approximated by $$\Omega_h$$.
 
-  To define $$\Omega$$ the code reads
-  !CODEFILE "code/myexporter.cpp" mesh
-and $$u$$ :
-  !CODEFILE "code/myexporter.cpp" function
+  To define $$\Omega$$ the code reads   
+  mesh   
+  !CODEFILE "code/myexporter.cpp"   
+  and $$u$$ :   
+  function   
+  !CODEFILE "code/myexporter.cpp" 
 
   We start with an `Exporter`  object that allows to visualize the $$P_1$$ interpolant of $$u$$ over $$\Omega$$.
 
