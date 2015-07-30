@@ -285,9 +285,9 @@ With test or trial function `u`
 
 
 
-## normLinf
+## Linfinity norm
 
-Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the infinity norm:
+Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the infinity norm using the normLinf() function:
 
 $$\parallel f \parallel_\infty=\sup_\Omega(|f|)$$
 
