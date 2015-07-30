@@ -129,9 +129,9 @@ main( int argc, char** argv )
 
 
 
-# Operators Operators
-## Project project
-It is also possible to make projections with the library.
+# Operators 
+## Projection
+It is also possible to make projections with the library using the keywords project() or on()
 
 **Interface***
 ```cpp
