@@ -190,9 +190,9 @@ Required Parameters:
 A lot of data structures, in fact most of them,  in Feel++ are parallel and are associated with a `WorldComm` data structure which allows us to access and manipulate the MPI communicators.
 We provide some utility free functions that allow a transparent access to the `WorldComm` data structure.
 
-We denote a `c` a Feel++ data structure associated to a `WorldComm`.
+We denote by `c` a Feel++ data structure associated to a `WorldComm`.
 
 |Feel++ Keyword|Description|
 |---|---|
 |`rank(c)`| returns the local MPI rank of the data structure `c`|
-|`globalRank(c)`| returns the local MPI rank of the data structure `c`|
+|`globalRank(c)`| returns the global MPI rank of the data structure `c`|
