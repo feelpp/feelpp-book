@@ -79,7 +79,7 @@ From `doc/manual/laplacian/laplacian.cpp`
 ```
 
 
-## Integrals_Computing Computing my first Integrals
+## Computing my first Integrals
 This part explains how to integrate on a mesh with Feel++ (source `doc/manual/tutorial/myintegrals.cpp` ).
 
 Let's consider the domain $$\Omega=[0,1]^d$$ and associated meshes.<br>
