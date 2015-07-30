@@ -59,4 +59,4 @@ Free-function to apply to a mesh to retrieve the iterators over boundary faces o
 
 # integrate
 
-Free-function to define integral expressions entering the definition of integrals, linear and bilinear forms.
+Free-function to define integral expressions entering the definition of integrals, linear and bi-linear forms.
