@@ -1,4 +1,6 @@
-# Mesh iterators
+# Mesh iterators {#iterators}
+
+The following table describes free-functions that allow to define mesh region over which to operate.
 
 |Feel++ Keyword|Description|
 |---|---|
