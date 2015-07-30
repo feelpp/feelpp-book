@@ -285,7 +285,7 @@ With test or trial function `u`
 
 
 
-## Linfinity norm
+## Linfinity norm {#integrals.normLinf}
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the infinity norm using the normLinf() function:
 
