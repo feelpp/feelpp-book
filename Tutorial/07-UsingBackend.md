@@ -34,7 +34,7 @@ same backend or the default without rebuilding it, it will fail.
 backend(_rebuild=true)->solve(_matrix=A1,_rhs=c,_sol=y);
 ```
 
-Each of that options can be retrieved via the \c --help-lib argument in the command line.
+Each of that options can be retrieved via the `\c --help-lib` argument in the command line.
 
 ## Non default Backend
 
@@ -42,27 +42,34 @@ You may need to manage more than one backend in an application: you
 have different systems to solve and you want to keep some already
 computed objects such as preconditioners.
 
-The default backend is in fact an unnamed backend: in order to
-distinguish between backend you have to name them. for example
+- The default backend is in fact an unnamed backend: in order to
+distinguish between backend you have to name them. for example   
+   
+  ***marker_opt***
 
-!CODEFILE "code/mybackend.cpp" marker_opt
 
-After that, you create the backend object:
-!CODEFILE "code/mybackend.cpp" marker_obj
+- After that, you create the backend object:   
 
-Be careful, the backend' name has to match the name you gave at the options step.
+ ***marker_obj***
 
-Then, you load meshes, creates spaces etc. At solve time, or you solve with the default backend:
-!CODEFILE "code/mybackend.cpp" marker_default
+  Be careful, the backend's name has to match the name you gave at the options step.
 
-One of the important backend option is to be able to monitor the residuals and iteration count
+- Then, you load meshes, creates spaces etc. At solve time, or you solve with the default backend:   
+
+ ***marker_default***
+ 
+ One of the important backend option is to be able to monitor the residuals and iteration count
 ```sh
-./feelpp_doc_mybackend --pc-type=id --ksp-monitor=true --myBackend.ksp-monitor=true
+./feelpp_tut_mybackend --pc-type=id --ksp-monitor=true --myBackend.ksp-monitor=true
 ```
 
-Finally you can create a named backend:
-!CODEFILE "code/mybackend.cpp" marker_hm
+- Finally you can create a named backend:   
+
+*** marker_hm***
 
 
-The whole code example :
-!CODEFILE "code/mybackend.cpp" marker_main
+
+The whole code example :   
+
+***marker_main***   
+!CODEFILE "code/mybackend.cpp" 

@@ -16,30 +16,45 @@ A model is defined by :
 - a Name
 - a Description
 - a Model
-- [Parameters](@ref Parameters)
-- [Materials](@ref Materials)
-- [Boundary Conditions](@ref BoundaryConditions)
-- [Post Processing](@ref PostPro)
+- [Parameters](#Parameters)
+- [Materials](#Materials)
+- [Boundary Conditions](#BoundaryConditions)
+- [Post Processing](#PostPro)
 
 ## Parameters {#Parameters}
 A parameter is a non physical property for a model.
 
 ## Materials {#Materials}
-To retrieve the materials properties, we use :
-!CODEFILE "code/aniso" _laplacian.cpp get_mat
-And to apply them :
-!CODEFILE "code/aniso" _laplacian.cpp materials
+To retrieve the materials properties, we use :   
+```  ModelMaterials materials = model.materials(); ```  
+
+And to apply them :   
+
+!CODEFILE "code/model1.cpp"   
+
 
 ## BoundaryConditions {#BoundaryConditions}
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression.
-You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.
-!CODEFILE "code/aniso" _laplacian.cpp get_bc
+You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
+
+```map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };```  
+
+
 We can apply theses boundary condition this way
-!CODEFILE "code/aniso" _laplacian.cpp boundary
+```
+  for(auto it : bc_u){
+    if(boption("myVerbose") && Environment::isMasterRank() )
+      std::cout << "[BC] - Applying " << it.second << " on " << it.first << std::endl;
+    a+=on(_range=markedfaces(mesh,it.first), _rhs=l, _element=u, _expr=it.second );
+  }```
+
+
 
 ## PostProcessing {#PostPro}
 
 # Example {#Example}
-We have set up an example : an anisotropic laplacian.
+We have set up an example : an anisotropic laplacian.   
+!CODEFILE "code/model2.cpp"
 
-!CODEFILE "code/aniso" _laplacian.cpp global
+
+
