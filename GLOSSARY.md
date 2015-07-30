@@ -62,7 +62,12 @@ Free-function to apply to a mesh to retrieve the iterators over boundary faces o
 Free-function to define integral expressions entering the definition of integrals, linear and bi-linear forms.
 
 # project
+
 Free-function to project an expression $$e$$ over a nodal function space $$X_h$$. It would typically return the interpolant $$\Pi_h e \in X_h$$ of the expression in the function space.
+
+# mean
+
+Free-function to compute the average value of a function.
 
 # normL2
 
@@ -74,4 +79,4 @@ Free-function to compute the $$H^1$$ norm of an expression
 
 # normLinf
 
-Free-function to compute the $L^{\infty}$ norm of an expression
+Free-function to compute the $$L^{\infty}$$ norm of an expression
