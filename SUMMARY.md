@@ -39,4 +39,4 @@
 * [Frequently Asked Questions](FAQ/README.md)
    * [Development](FAQ/FAQDevelopment.md)
    * [Runtime](FAQ/FAQExecution.md)
-
+* [Glossary](GLOSSARY.md)
