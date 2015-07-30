@@ -34,7 +34,7 @@
        * [Mesh iterators](QuickReference/Mesh/iterators.md)
        * [Integrate](QuickReference/Integrals/integrate.md)
        * [Mean value](QuickReference/Integrals/mean.md)
-       * [$$L^2, H^1, L^\infty$$ Norms](QuickReference/Integrals/norms.md)
+       * [Norms](QuickReference/Integrals/norms.md)
    * [Spaces](QuickReference/spaces.md)
    * [Forms](QuickReference/forms.md)
    * [Solver](QuickReference/solver.md)
