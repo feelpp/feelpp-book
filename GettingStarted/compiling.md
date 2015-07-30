@@ -59,13 +59,18 @@ Ubuntu. Once you have installed those dependencies, you can jump to \ref Compili
 
 ## Compiling out the source
 
-**It is not allowed to build the library in the source directory **: The best way is to have a directory (`FEEL` for example) in which you have:
+**Warning** It is not allowed to build the library in the source directory.
+
+It is recommended  to have a directory (e.g. `FEEL`) in which you have
+both the sources and build directories.
+
 ```sh
 ls FEEL
-feel/ // Sources
-feel.opt/ // Build directory
+feel/ # Sources
+feel.opt/ # Build directory
 ```
-where `feel` is the top directory where the source have been downloaded, using git or trackballs.
+where `feel` is the top directory where the source have been downloaded, using git or tarballs.
+
 `cmake` is used as it:
 ```sh
  cd FEEL/feel.opt
@@ -88,7 +93,7 @@ system.  To do so, simply create a file named
 `cmake/machines` directory, where `&lt;name&gt;` is the
 machine name returned by the execution of `uname -n`.  The file
 will automatically be recognized and loaded, when you will be
-compiling Feel++ on this system.  </p>
+compiling Feel++ on this system.  
 
 Once CMake has done its work, you are now able to compile the library with:
 ```bash
@@ -103,7 +108,7 @@ allowed to spawn by using the `-j` flag:
   make -j <nbjobs>
 ```
 
-**Important**: from now on, all commands should be typed in
+**Note** from now on, all commands should be typed in
   `feel.opt` or its subdirectories.
 
 
@@ -124,6 +129,3 @@ command: (This might take a while)
 ```bash
   make check-full
 ```
-</p>
-
-<p>
