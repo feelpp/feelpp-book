@@ -4,10 +4,14 @@ Compiling Feel++ from sources
 # Quick start
 
 ```bash
-	cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++ // Generate the makefile
-	sudo make install // actually compile and install the library
-	make -j 4 feelpp_qs_laplacian // Compile the library and an example
-	./quickstart/feelpp_qs_laplacian // execute one example
+# Generate the makefile
+cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++
+# Compile and install the library
+sudo make install
+# Compile the library and an example
+make -j 4 feelpp_qs_laplacian
+# execute one example
+./quickstart/feelpp_qs_laplacian
 ```
 
 # General information
@@ -56,22 +60,22 @@ Ubuntu. Once you have installed those dependencies, you can jump to \ref Compili
 ## Compiling out the source
 
 **It is not allowed to build the library in the source directory **: The best way is to have a directory (`FEEL` for example) in which you have:
-\code
+```sh
 ls FEEL
 feel/ // Sources
 feel.opt/ // Build directory
-\endcode
+```
 where `feel` is the top directory where the source have been downloaded, using git or trackballs.
 `cmake` is used as it:
-```
-	cd FEEL/feel.opt
-	cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_BUILD_TYPE=RelWithDebInfo
+```sh
+ cd FEEL/feel.opt
+ cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ```
 
 You can customize the build type in any way.
 Please have a look to
-```
-	FEEL/feel/CMakeLists.txt
+```sh
+ FEEL/feel/CMakeLists.txt
 ```
 or at the `List of Cmake Options` section.
 

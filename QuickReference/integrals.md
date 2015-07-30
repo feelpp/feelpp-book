@@ -7,7 +7,7 @@ The prerequisite of this section is to be able to .
 * [Iterate over a region of a mesh elements, faces, edges and points](Mesh/iterators.md)
 * [Define expressions](keywords.md)
 
-Defining and computing integrals
-* [Integrals](Integrals/integrate.md)
-* [Mean value](Integrals/mean.md)
-* [Norms](Integrals/norms.md)
+Then you can define and compute integrals
+* [Compute integrals](Integrals/integrate.md)
+* [Compute mean value of a function](Integrals/mean.md)
+* [Compute norms](Integrals/norms.md)
