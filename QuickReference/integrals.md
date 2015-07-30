@@ -8,10 +8,10 @@ To use the tools of this sections, you have to precise the domain range using th
 
 |Feel++ Keyword|Description|
 |---|---|
-|``` elements(mesh) ```|All the elements of a mesh|
-|``` markedelements(mesh, id) ```|The precise element defined by the id.<br>It can be any element (line, surface, domain, and so on).|
+|elements(mesh)|All the elements of a mesh|
+|markedelements(mesh, id)|The precise element defined by the id.<br>It can be any element (line, surface, domain, and so on).|
 | ``` faces(mesh) ```|All the faces of the mesh.|
-| ``` markedfaces(mesh) ```|All the faces of the mesh which are marked.|
+| markedfaces(mesh) |All the faces of the mesh which are marked.|
 | ``` boundaryfaces(mesh) ```|All elements that own a topological dimension one below the mesh. <br>For example, if you mesh is a 2D one, `boundaryfaces(mesh)`  will return all the lines (because of dimension $$2-1=1$$).<br>These elements which have one dimension less, are corresponding to the boundary faces.|
 | ``` internalelements(mesh) ```|All the elements of the mesh which are stricly within the domain that is to say they do not share a face with the boundary.|
 | ``` boundaryelements(mesh) ```|All the elements of the mesh which share a face with the boundary of the mesh.|
@@ -267,18 +267,18 @@ With expression:
 ```cpp
   auto g = sin(2*pi*Px())*cos(2*pi*Py());
   auto gradg = 2*pi*cos(2* pi*Px())*cos(2*pi*Py())*oneX() \
-	           -2*pi*sin(2*pi*Px())*sin(2*pi*Py())*oneY();
+            -2*pi*sin(2*pi*Px())*sin(2*pi*Py())*oneY();
 // There gradg is a column vector!
 // Use trans() to get a row vector
   double normH1_g = normH1( _range=elements(mesh),\
-  			                _expr=g,\
-			                _grad_expr=trans(gradg) );
+                     _expr=g,\
+                   _grad_expr=trans(gradg) );
 ```
 With test or trial function `u`
 ```cpp
   double errorH1 = normH1( _range=elements(mesh),\
-  			               _expr=(u-g),\
-    			           _grad_expr=(gradv(u)-trans(gradg)) );
+                    _expr=(u-g),\
+                  _grad_expr=(gradv(u)-trans(gradg)) );
 ```
 
 
@@ -306,6 +306,6 @@ Optional parameters:
 *Example*:
 ```cpp
   auto uMax = normLinf( _range=elements(mesh),\
-		        _expr=idv(u),\
-		        _pset=_Q<5>() );
+          _expr=idv(u),\
+          _pset=_Q<5>() );
 ```
