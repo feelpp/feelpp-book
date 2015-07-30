@@ -130,7 +130,7 @@ main( int argc, char** argv )
 
 
 
-# Operators 
+# Operators
 ## Projection
 It is also possible to make projections with the library using the keywords project() or on()
 
@@ -194,10 +194,10 @@ From `doc/manual/stokes/stokes.cpp`
 
 
 # Norms
-## L2 norm
+## $$L^2$$ norm
 
 
-Let $$f \in L^2(\Omega)$$ you can evaluate the L2 norm using the normL2() function:
+Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
 <br><center>$$
   \begin{aligned}
 \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2}
@@ -271,18 +271,18 @@ normH1() returns a float containing the $$H^1$$ norm.
 With expression:
 ```cpp
   auto g = sin(2*pi*Px())*cos(2*pi*Py());
-  auto gradg = 2*pi*cos(2* pi*Px())*cos(2*pi*Py())*oneX() \
+  auto gradg = 2*pi*cos(2* pi*Px())*cos(2*pi*Py())*oneX()
             -2*pi*sin(2*pi*Px())*sin(2*pi*Py())*oneY();
 // There gradg is a column vector!
 // Use trans() to get a row vector
-  double normH1_g = normH1( _range=elements(mesh),\
-                     _expr=g,\
+  double normH1_g = normH1( _range=elements(mesh),
+                     _expr=g,
                    _grad_expr=trans(gradg) );
 ```
 With test or trial function `u`
 ```cpp
-  double errorH1 = normH1( _range=elements(mesh),\
-                    _expr=(u-g),\
+  double errorH1 = normH1( _range=elements(mesh),
+                    _expr=(u-g),
                   _grad_expr=(gradv(u)-trans(gradg)) );
 ```
 

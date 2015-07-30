@@ -1,301 +1,0 @@
-
-credits.md,35
-   - University of Coimbra 11,207
-
-FAQ/FAQDevelopment.md,54
-Development FAQ1,0
-auto val2 8,149
-auto val2 9,250
-
-FAQ/FAQDocumentation.md,22
-Documentation FAQ1,0
-
-FAQ/FAQExecution.md,16
-Runtime FAQ1,0
-
-FAQ/README.md,31
-Frequently Asked Questions1,0
-
-GettingStarted/compiling.md,208
-Compiling Feel++ from sources1,0
-<tt>feelpp.machines.&lt;name&gt;gt83,3131
-<tt>cmake/machines</tt> directory, where <tt>&lt;lt84,3182
-<tt>cmake/machines</tt> directory, where <tt>&lt;name&gt;gt84,3182
-
-GettingStarted/download.md,28
-Download Feel++ sources1,0
-
-GettingStarted/linux.md,21
-Feel++ on Linux 1,0
-
-GettingStarted/mac.md,291
-Feel++ on Mac OS X1,0
-gcc in &lt;path to top feel directory&gt;gt20,1066
-gcc in &lt;path to top feel directory&gt;/ports/macosx/macports,macports20,1066
-an experimental version using clang/libc++ in &lt;lt21,1135
-directory&gt;gt22,1202
-href=29,1448
-feel directory&gt;gt262,11709
-
-GettingStarted/README.md,21
-Getting Started 1,0
-
-GettingStarted/UsingInstalledFeelpp.md,116
-Using Installed version1,0
-cmake_minimum_required(19,524
-	FIND_PATH(21,624
-	else(27,885
-As you can see,40,1186
-
-notations.md,2204
-Mathematical Concepts and Notations 2,1
-  Point sets are represented algebraically by a matrix 58,2695
-  scalar,93,4468
-  such as evaluation and derivation at a set of points,94,4548
-  or components 95,4630
-  as a triplet $(K,\mathbb{P},\Sigma)$ where $K$ is a convex,116,5883
-  previously and it remains to describe $\Sigma$. $\Sigma$ is a set of functionals119,6134
-  values in $\mathbb{R}$,$121,6296
-  set of points,123,6481
-  set of points, derivation at a set of points,123,6481
-  - evaluation at a point $x \in K$,126,6638
-  - evaluation at a point $x \in K$, $\ell_x : p \rightarrow p(126,6638
-  - derivation at a point $x \in K$ in the direction $i$, $\ell_{x,i} : p \rightarrow \frac{rac127,6706
-  -  moment integration associated with a polynomial $q \in \mathbb{P}(K)$,128,6829
-  polynomials thanks to the bijection between $\mathcal{athcal132,7106
-  the finite element $(K, \mathbb{P}, \Sigma=igma136,7457
-  and $X 138,7623
-  $\mathbb{P}_{1,2}$-bubble,bubble140,7773
-  To conclude this section,147,7972
-  polynomial set constructions are done on a reference convex,149,8133
-  polynomial set constructions are done on a reference convex, denoted $\hat{K}$,$149,8133
-  which we denote $K$. This map,151,8294
-  which we denote $K$. This map, denoted $\varphi_\mathrm{geo}^K$,K$151,8294
-  defined on $\hat{K} \subset \mathbb{R}^p,p152,8389
-  defined on $\hat{K} \subset \mathbb{R}^p, p=152,8389
-  \subset \mathbb{R}^d$,d$153,8468
-  profiles. For instance,157,8763
-  Lagrange polynomials and therefore it can be a polynomial of arbitrary degree,160,8919
-  allowing thus meshes with elements that have curved edges/faces,faces161,9000
-  \cite gpena_cprudhomme_acomen,162,9071
-  of $\varphi_\mathrm{geo}^K$ being a polynomial of a degree the user can choose,163,9160
-  to define isoparametric 164,9261
-  is no ambiguity,167,9516
-  is no ambiguity, we keep the notation $\varphi_\mathrm{geo}^K$,K$167,9516
-  gradient,172,9779
-  associated with $\varphi_\mathrm{geo}^K$ is its inverse,174,9924
-  the case of an affine transformation,175,10019
-  explicitely. However,176,10085
-  explicitely. However, if $\varphi_\mathrm{geo}^K$ is nonlinear,176,10085
-
-QuickReference/environment.md,248
-Environment1,0
-You can also add a list of options,32,1115
-  makeOptions(39,1247
-  ./myapp --option1=option170,2520
-  makeOptions(81,2719
-  const double E 121,4689
-  const double nu 122,4758
-  Tfinal 126,4879
-* `_subdir`: Default 142,5194
-
-QuickReference/exporter.md,58
-Post-Processing and Visualization1,0
-  <a href=117,4660
-
-QuickReference/forms.md,124
-Forms 1,0
-* `_init`  Default 23,602
-* `_init`  Default 51,1128
-* `_rebuild`  rebuild the solver matrix. Default 86,2047
-
-QuickReference/integrals.md,757
-Integrations,1,0
-Integrations, Operators and Norms1,0
-please notice that the order of the parameter is not important,32,1874
-please notice that the order of the parameter is not important, these are <tt>boost</tt> parameters,32,1874
-To make it clear,33,2025
-  double intf_3 61,3314
- auto l 77,3883
- l 78,3923
-Here,89,4349
-main(100,4598
-<a href=133,5790
-* <tt>_space</tt>: the space in which lives the projected expression,145,6017
-* <tt>_range</tt>: the domain for the projection. Default 149,6189
-  e 156,6454
-tn 163,6606
-In the same idea,235,8321
-In the same idea, you can evaluate the H1 norm or semi norm,235,8321
-  auto gradg 267,9221
-  double normH1_g 271,9407
-  double errorH1 277,9577
-\parallel f \parallel_\infty=nfty287,9848
-
-QuickReference/keywords.md,4215
-Keywords1,0
-with $$n=8,332
-|` mat<m,m71,2986
-|` ones<m,m72,3181
-|` zero<m,m73,3326
-|` constant<m,m74,3471
-|` det(A)`|$$\det et86,4193
-|` sym(A)`|$$\text{Sym}(A)$$|Symmetric part of matrix $$A$$: $$\frac{rac87,4262
-|` antisym(A)`|$$ \text{Asym}(A)$$|Antisymmetric part of  $$A$$: $$\frac{rac88,4367
-|` inner(A,B)`|$$ A.B \\ A:B B97,4931
-|` cos(expr)`|$$\cos(os119,5704
-|` tan(expr)`|$$\tan(an121,5862
-|` acos(expr)`|$$\mathrm{acos}(f(122,5941
-|` asin(expr)`|$$\mathrm{asin}(f(123,6031
-|` atan(expr)`|$$\mathrm{atan}(f(124,6121
-|` sinh(expr)`|$$\sinh(inh126,6293
-|` exp(expr)`|$$\exp(xp128,6457
-|` sqrt(expr)`|$$\sqrt{qrt130,6615
-|` floor(expr)`|$$\lfloor{floor132,6780
-|` sign(expr)`|$$\begin{cases} 1 & \text{if}\ f(133,6867
-|` chi(expr)`|$$\chi(f(\overrightarrow{x}))=\begin{cases}0 & \text{if}\ f(\overrightarrow{x}) = 0\\1 & \text{if}\ f(134,7032
-$$X_h 171,8514
-$$X_h = \mathrm{span}\{ \phi_i,hi_i171,8514
-$$X_h = \mathrm{span}\{ \phi_i, i=171,8514
-|` id(f)` | $$\{\phi_i\}$$ | test function | $$\mathrm{athrm176,8731
-|` idt(f)`| $$\{\phi_i\}$$ | trial function | $$\mathrm{rank}(f(177,8836
-|` idv(f)`| $$f$$ | evaluation function   | $$\mathrm{rank}(f(178,8942
-|` grad(f)` | $$\nabla f$$ | gradient of test function | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ | $$m \times n $$ <br> $$p=179,9046
-|` gradt(f)`| $$\nabla f$$ | grdient of trial function | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=180,9178
-|` gradv(f)`| $$\nabla f$$ | evaluation function gradient  | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=181,9308
-|` curl(f)` | $$\nabla\times f$$ | curl of test function |1| $$n \times 1 $$<br>$$m=$$m185,9820
-|` jump(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of test function |0| $$n \times 1 $$<br>$$m=$$m195,10341
-|` jump(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of test function |0| $$1 \times 1 $$<br>$$m=$$m196,10468
-|` jumpt(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of trial function |0| $$n \times 1 $$<br>$$m=$$m197,10656
-|` jumpt(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of trial function |0| $$1 \times 1 $$<br>$$m=$$m198,10785
-|` jumpv(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of function evaluation |0| $$n \times 1 $$<br>$$m=$$m199,10975
-|` jumpv(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of function evaluation|0| $$1 \times 1 $$<br>$$m=$$m200,11109
-|` average(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of test function|$$\mathrm{athrm201,11303
-|` averaget(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of trial function|$$\mathrm{athrm202,11448
-|` averagev(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of function evaluation|$$\mathrm{athrm203,11595
-|` leftface(f)` |  $$f_0$$ |left test function|$$\mathrm{rank}( f(204,11747
-|` leftfacet(f)` |  $$f_0$$ |left trial function|$$\mathrm{rank}( f(205,11865
-|` leftfacev(f)` |  $$f_0$$ |left function evaluation|$$\mathrm{rank}( f(206,11985
-|` rightface(f)` |  $$f_1$$ |right test function|$$\mathrm{rank}( f(207,12110
-|` rightfacet(f)` |  $$f_1$$ |right trial function|$$\mathrm{rank}( f(208,12230
-|` rightfacev(f)` |  $$f_1$$ |right function evaluation|$$\mathrm{rank}( f(209,12352
-|` maxface(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>test function|$$\mathrm{rank}( f(210,12479
-|` maxfacet(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>trial function|$$\mathrm{rank}( f(211,12619
-|` maxfacev(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>function evaluation|$$\mathrm{rank}( f(212,12761
-|` minface(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>test function|$$\mathrm{rank}( f(213,12908
-|` minfacet(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>trial function|$$\mathrm{rank}( f(214,13048
-|` minfacev(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>function evaluation|$$\mathrm{rank}( f(215,13190
-
-QuickReference/mesh.md,646
-Meshes1,0
-As always,29,761
-The `unitSquare(unitSquare30,843
-<a href=65,2227
- -  `_hsize`_hsize83,2678
- - `_refine`_refine95,3267
-auto mesh 130,4807
-auto mesh 136,4967
-In order to load only `.msh` file,141,5044
-* `_refine`  optionally refine with \p refine levels the mesh. Default 152,5359
-mesh 168,6031
-* `_h`  characteristic size. Default 188,6625
-* `_h`  characteristic size of the mesh. Default 211,7421
-mesh 230,8045
-                    _addmidpoint, _xmin, _xmax, _ymin, _ymax, _zmin, _zmax)244,8566
-* `_h`  characteristic size of the mesh. Default 252,8833
-mesh 279,9999
-mesh_ptrtype mesh 288,10390
-<a href=299,11001
-
-QuickReference/preconditioner.md,768
-Preconditioner strategies1,0
-     \left(eft16,257
-   * $$\omega mega22,481
-   - Expensive, for $$m\times m$$ sparse matrix with bandwidth $$b$$, traditionally requires $$\mathcal{O}(mb^2)$$ time and $$\mathcal{athcal35,805
-     - Optimal in 2D: $$\mathcal{athcal37,1025
-     - Optimal in 3D: $$\mathcal{athcal38,1116
-    - No overlap: $$\textit{its} \in \mathcal{O}\big(ig54,1623
-    - Overlap $$\delta$$: $$\textit{its} \in \big(ig55,1705
-    - $$\textit{its} \in \mathcal{O}\big(ig60,1869
-   - Geometric: define problem on multiple levels,79,2560
-   - Algebraic: define problem only on finest level,80,2641
-   Assemble this matrix: $$A_{$$A_83,2761
-    - Solve on coarse level $$A_{\text{coarse}} x 88,3038
-    - variable coefficients 97,3436
-
-QuickReference/projection.md,166
-Projection1,0
-                      bases<Lagrange<1,Vectorial> > > Xhv_type;20,515
-auto Xhv 21,579
-auto coord 24,723
-auto dx_coord 26,843
-auto dy_coord 27,923
-
-QuickReference/README.md,20
-Quick Reference1,0
-
-QuickReference/solver.md,1014
-Algebraic solutions1,0
-  (P^{-1} A) x 40,910
-  \{ P^{-1} b,41,939
-  \{ P^{-1} b, (P^{-1}A) P^{-1} b,41,939
-  \{ P^{-1} b, (P^{-1}A) P^{-1} b, (P^{-1}A)^2 P^{-1} b,41,939
-  \begin{egin47,1051
-  \{ b, (P^{-1}A)b,49,1093
-  \{ b, (P^{-1}A)b, (P^{-1}A)^2b,b49,1093
-using a matrix $$A$$ and extra information $$A_p$$,59,1406
-of $$P^{-1}A$$ A$$60,1481
-  - $$P^{-1}$$ is dense,63,1533
-  - $$A$$ is rarely used by $$\mathcal{P}$$,$$64,1605
-  - $$A$$ is rarely used by $$\mathcal{P}$$, but $$A_p 64,1605
-  $$ -\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2}, u 97,2880
-  feelpp_qs_laplacian --ksp-monitor=monitor102,3032
-shell> mpirun -np 2 feelpp_qs_laplacian --ksp-monitor=monitor109,3118
-  This problem is indefinite,150,4400
-  - \b Strategies : Uzawa,152,4463
-  lagrangian approach 153,4539
-        M 164,4936
-        \end{nd168,5008
-        - Elman,183,5315
-      P_1 186,5406
-      \end{nd190,5485
-      P_2 191,5512
-      \end{nd195,5597
-      P_3 196,5623
-
-QuickReference/spaces.md,20
-Function Spaces1,0
-
-Tutorial/01-SettingUpEnvironment.md,41
-Setting up the Feel++++ Environment 1,0
-
-Tutorial/02-LoadingMesh.md,20
-Loading a Mesh 1,0
-
-Tutorial/03-SpaceElements.md,25
-Spaces and elements 1,0
-
-Tutorial/03-UsingExpressions.md,36
-Defining and using expressions 1,0
-
-Tutorial/04-EvaluatingFunctions.md,20
-Using function 1,0
-
-Tutorial/05-VisualizingFunctions.md,39
-Visualizing functions over a mesh 1,0
-
-Tutorial/06-ComputingIntegrals.md,35
-Computing integrals over mesh 1,0
-
-Tutorial/07-UsingBackend.md,21
-Using a backend 1,0
-
-Tutorial/08-Model.md,22
-Defining a Model 2,1
-
-Tutorial/README.md,34
-Before reading the following,1,0
-
-SUMMARY.md,0
-
-README.md,0
