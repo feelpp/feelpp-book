@@ -30,6 +30,8 @@
    * [Environment](QuickReference/environment.md)
    * [Mesh](QuickReference/mesh.md)
    * [Integrals](QuickReference/integrals.md)
+       * [Mesh iterators](QuickReference/Mesh/iterators.md)
+       * [Integrate](QuickReference/Integrals/integrate.md)
    * [Spaces](QuickReference/spaces.md)
    * [Forms](QuickReference/forms.md)
    * [Solver](QuickReference/solver.md)
