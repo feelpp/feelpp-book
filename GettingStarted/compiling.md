@@ -57,7 +57,7 @@ Ubuntu. Once you have installed those dependencies, you can jump to \ref Compili
 
 
 
-## Compiling out the source
+## Compiling 
 
 > **Warning** It is not allowed to build the library in the source directory.
 

@@ -1,9 +1,13 @@
 {
     "gitbook": "2.2.0",
-    "plugins": ["anchors","mathjax","include-highlight","ga"],
+    "plugins": ["anchors","mathjax","include-highlight","ga","richquotes"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-65761593-1"
+        },
+        "richquotes" : {
+            "todos" : true, /*false by default*/
+            "fixme" : true /*false by default*/
         }
     },
     "links": {

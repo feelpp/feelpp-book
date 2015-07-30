@@ -23,14 +23,16 @@ directory&gt;/ports/macosx/macports-xc5.
 
 ## Homebrew
 
-**Introduction**: Homebrew is a free/open source software
+> **Info**: Homebrew is a free/open source software
 introduced to simplify the installation of other free/open source
-software on the MacOS X ecosystem. It is distributed under the <a
+software on the MacOS X ecosystem.
+
+Homebrew is distributed under the <a
 href="https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE">BSD
 2 Clause (NetBSD) license</a>. For more information, visit their <a
 href="http://brew.sh">website</a>.
 
-**Installation**: To install the latest version of Homebrew, simply
+**Note**: To install the latest version of Homebrew, simply
 visit their [website](http://brew.sh) and follow the
 instructions. Each new package Homebrew installs is built into an
 intermediate place called the Cellar (usually /usr/local/Cellar) and
