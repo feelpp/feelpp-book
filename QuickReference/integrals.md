@@ -305,6 +305,9 @@ Optional parameters:
 * `_geomap` = type of geometric mapping. Default = `GEOMAP_OPT`
 
 
+The normLinf() function returns not only the maximum of the function over a sampling of each element thanks to the `_pset` argument but also the coordinates of the point where the function is maximum.
+
+
 *Example*:
 ```cpp
   auto uMax = normLinf( _range=elements(mesh),\
