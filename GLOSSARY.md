@@ -63,3 +63,11 @@ Free-function to define integral expressions entering the definition of integral
 
 # project()
 Free-function to project an expression over a nodal function space. It would typically return the interpolant of the expression in the function space.
+
+# normL2()
+
+Free-function to compute the $$L_2$$ norm of an expression
+
+# normLinf()
+
+Free-function to compute the $$L_{\infty}$$ norm of an expression
