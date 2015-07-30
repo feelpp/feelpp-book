@@ -4,7 +4,7 @@ Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean val
 <br><center>$$
   \begin{aligned}
  \bar{f}&=\frac{1}{|\Omega|}\int_\Omega f\\
-&=\frac{1}{\int*mits_\Omega 1}\int_\Omega f.
+&=\frac{1}{\int_\Omega 1}\int_\Omega f.
   \end{aligned}
 $$</center><br>
 
