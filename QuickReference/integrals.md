@@ -18,9 +18,10 @@ To use the tools of this sections, you have to precise the domain range using th
 | edges(mesh) | All the edges of the mesh.|
 | boundaryedges(mesh) |All boundary edges of the mesh.|
 
-# Integrals
+# Integrals {#integrals.integrals}
 ## integrate
-Thank to its finite element embedded language, Feel++ has its owned `integrate()` function.
+
+Thanks to its finite element embedded language, Feel++ has its owned integrate() function.
 
 **Interface***
 ```
