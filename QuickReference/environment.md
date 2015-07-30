@@ -100,7 +100,8 @@ From `/doc/manual/laplacian/laplacian.cpp`
 ```
 
 
-## Options_Accessors Accessors
+## Options Accessors
+
 **Options Description:**<br>
 ```cpp Environment::optionsDescription();```
 Returns options description data structure (`po` options_description).<br>
@@ -181,3 +182,17 @@ void setLogs( std::string const& prefix );
 ```
 Required Parameters:
 * `prefix`  prefix for log filenames.
+
+# Utility functions
+
+## Communications
+
+A lot of data structures, in fact most of them,  in Feel++ are parallel and are associated with a `WorldComm` data structure which allows us to access and manipulate the MPI communicators.
+We provide some utility free functions that allow a transparent access to the `WorldComm` data structure.
+
+We denote a `c` a Feel++ data structure associated to a `WorldComm`.
+
+|Feel++ Keyword|Description|
+|---|---|
+|`rank(c)`| returns the local MPI rank of the data structure `c`|
+|`globalRank(c)`| returns the local MPI rank of the data structure `c`|
