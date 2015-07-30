@@ -231,7 +231,7 @@ From `doc/manual/laplacian/laplacian.cpp`
 From `doc/manual/stokes/stokes.cpp`
 !CODEFILE "code/stokes.cpp" norml2
 
-##  normH1
+##  $$H^1$$ norm
 
 In the same idea, you can evaluate the H1 norm or semi norm, for any
 function $$f \in H^1(\Omega)$$:
@@ -263,6 +263,8 @@ Required parameters:
 Optional parameters:
 * `_quad` = quadrature to use. Default = `_Q<integer>()`
 * `_geomap` = type of geometric mapping. Default = `GEOMAP_OPT`
+
+normH1() returns a float containing the $$H^1$$ norm.
 
 
 *Example*
