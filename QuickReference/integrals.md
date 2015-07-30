@@ -164,8 +164,8 @@ tn = project( _space = Xh->functionSpace<2>(),
 
 
 
-## Mean mean
-Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean value:
+## Mean
+Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean value of a function thanks to the mean() function :
 <br><center>$$
   \begin{aligned}
  \bar{f}&=\frac{1}{|\Omega|}\int_\Omega f\\
@@ -192,9 +192,11 @@ From `doc/manual/stokes/stokes.cpp`
 
 
 
-# Norms Norms
-## NormL2 normL2
-Let $$f \in L^2(\Omega)$$ you can evaluate the L2 norm:
+# Norms
+## L2 norm
+
+
+Let $$f \in L^2(\Omega)$$ you can evaluate the L2 norm using the normL2() function:
 <br><center>$$
   \begin{aligned}
 \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2}
