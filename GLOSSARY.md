@@ -62,4 +62,4 @@ Free-function to apply to a mesh to retrieve the iterators over boundary faces o
 Free-function to define integral expressions entering the definition of integrals, linear and bi-linear forms.
 
 # project()
-Free-function to project an expression over a nodal function space 
+Free-function to project an expression over a nodal function space. It would typically return the interpolant of the expression in the function space.
