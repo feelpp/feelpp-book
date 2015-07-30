@@ -74,4 +74,4 @@ Free-function to compute the $$H^1$$ norm of an expression
 
 # normLinf
 
-Free-function to compute the $$L^{\infty}$$ norm of an expression
+Free-function to compute the $L^{\infty}$ norm of an expression
