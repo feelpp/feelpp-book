@@ -15,8 +15,6 @@ auto mesh=loadMesh( _mesh=new Mesh<Simplex<2>> );
 See this [section](05-VisualizingFunctions.md) for more details about
 exporting and visualizing meshes.
 
-
-# Complete code
 ## The code
 !CODEFILE "code/03-mymesh.cpp"
 ## The config file

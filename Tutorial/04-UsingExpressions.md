@@ -48,12 +48,13 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
 - Finally we evaluate these expressions at one point given by the option `x`  and `y`   
 
 # Code
-## Source
+## Source code
 !CODEFILE "code/04-myexpression.cpp"
 
 ## Config file
 !CODEFILE "code/04-myexpression.cfg"
 
+## Compilation and execution
 to compile just use the `make` command in your compilation directory
 ```bash
 make feelpp_tut_myexpression   
@@ -63,10 +64,6 @@ or
 ```
 ./feelpp_tut_myexpression --a=3 --functions.g="<your_function>" --functions.f="<your_function>"
 ```
-## Source code
-!CODEFILE "code/04-myexpression.cpp"     
-## Config
-!CODEFILE "code/04-myexpression.cfg"     
 
 
 

@@ -1,7 +1,7 @@
 Using a backend {#TutorialBackend}
 ===============
 
-
+<!-- toc -->
 
 # Introduction
 
@@ -65,11 +65,13 @@ distinguish between backend you have to name them. for example
 
 - Finally you can create a named backend:   
 
-*** marker_hm***
+*** marker_hm ***
 
 
 
 The whole code example :   
 
-***marker_main***   
-!CODEFILE "code/mybackend.cpp" 
+## Code
+!CODEFILE "code/09-mybackend.cpp" 
+## Config file
+!CODEFILE "code/09-mybackend.cfg"

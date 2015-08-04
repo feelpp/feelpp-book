@@ -8,7 +8,7 @@ You now have to learn how to define and use function spaces and elements of func
 The source code is available in `myfunctionspace.cpp`
 (The listing is given at the end).
 
-# Constructing a function space {#fs}   
+# Constructing a function space
 - Loading a Mesh in 2D   
   ```c++
    auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
