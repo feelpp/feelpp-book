@@ -12,7 +12,6 @@ Feel++ objects.
 We initialize the environment variables through the Feel++ `Environment` class.
 
 !CODEFILE "code/environment.cpp"
-!CODEFILE "Tutorial/code/environment.cpp"
 
 
 # Adding options
