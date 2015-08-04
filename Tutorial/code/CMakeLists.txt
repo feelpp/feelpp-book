@@ -55,5 +55,11 @@ SET(SRC
   #  mystokes.cpp
   )
 foreach(app ${SRC})
-  feelpp_add_application(${app} SRCS ${app}.cpp CFG ${app}.cfg GEO ${app}.geo)
+  if ( EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${app}.cfg AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${app}.geo )
+    feelpp_add_application( ${app} SRCS ${app}.cpp  CFG ${app}.cfg GEO ${app}.geo)
+  elseif ( EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${app}.cfg )
+    feelpp_add_application( ${app} SRCS ${app}.cpp  CFG ${app}.cfg )
+  else()
+    feelpp_add_application( ${app} SRCS ${app}.cpp )
+  endif()
 endforeach()
