@@ -10,7 +10,7 @@
        * [Doxygen](GettingStarted/prerequisites/doxygen.md)
        * [GitHub](GettingStarted/prerequisites/github.md)
        * [CMake](GettingStarted/prerequisites/cmake.md)
-       * [Makefile](makefile.md)
+       * [Makefile](GettingStarted/prerequisites/makefile.md)
 * [Getting Started](GettingStarted/README.md)
    * [Compiling from sources](GettingStarted/compiling.md)
    * [Linux](GettingStarted/linux.md)
