@@ -1,6 +1,6 @@
 Setting up the Feel++ Environment
 =================================
-
+<!-- toc -->
 
 # Minimal Example
 
@@ -10,8 +10,10 @@ We use the C++ `namespace` to avoid `Feel++::` prefix before
 Feel++ objects.
 
 We initialize the environment variables through the Feel++ `Environment` class.
-
-!CODEFILE "code/environment.cpp"
+## Source code
+!CODEFILE "code/02-environment.cpp"
+## Config file
+!CODEFILE "code/02-environment.cfg"
 
 
 # Adding options

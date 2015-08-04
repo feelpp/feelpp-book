@@ -1,15 +1,17 @@
 Defining and using expressions {#TutorialExpr}
 ================================
-
+<!-- toc -->
 
 
 The next step is to construct a function space over the mesh. The source code is
 available in `myexpression.cpp.`
 
-# Step by step explanations {#ex}
+# Step by step explanations 
 
 - We start by loading a Mesh in 2D   
-```auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );```   
+```
+auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );
+```   
 
 - then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  ,here is an example how to enter them :
 ```c++
@@ -18,28 +20,39 @@ available in `myexpression.cpp.`
 You can print back the expression to the screen to check that everything is ok.
 You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).   
 - then we compute the gradient of `g`  and `f`   
-  ```auto grad_g=grad<2>(g);```   
-  ```auto grad_f=grad(f);```    
+  ```c++
+  auto grad_g=grad<2>(g);  
+  auto grad_f=grad(f);
+  ```    
    
   Notice that template argument are given to `grad`  to specify the shape    of the
   gradient: in the case of $$\nabla g$$ it is $$1\times2$$ and 
   $$2\times 2$$ for $$\nabla f$$ since we are in 2D.   
 - then we compute the laplacian of `g`  and `f`   
-  ```auto laplacian_g=laplacian(g);```   
-  ```auto laplacian_f=laplacian(f);```   
+  ```c++
+  auto laplacian_g=laplacian(g);
+  auto laplacian_f=laplacian(f);
+  ```   
 
 - then we compute the divergence of `f`   
-  ```auto div_f=div(f);```   
+  ```c++
+    auto div_f=div(f);
+  ```  
 
 
 - and the curl of `f`   
-```auto curl_f=curl(f);```   
+  ```
+  auto curl_f=curl(f);
+  ```   
 
 - Finally we evaluate these expressions at one point given by the option `x`  and `y`   
 
-# Complete code {#code}
+# Code
+## Source
+!CODEFILE "code/04-myexpression.cpp"
 
-The complete code reads as follows  
+## Config file
+!CODEFILE "code/04-myexpression.cfg"
 
 to compile just use the `make` command in your compilation directory
 ```bash
@@ -47,13 +60,17 @@ make feelpp_tut_myexpression
 ./feelpp_tut_myexpression  
 ```   
 or    
-``` ./feelpp_tut_myexpression --a=3 --functions.g="<your_function>" --functions.f="<your_function>"```
+```
+./feelpp_tut_myexpression --a=3 --functions.g="<your_function>" --functions.f="<your_function>"
+```
+## Source code
+!CODEFILE "code/04-myexpression.cpp"     
+## Config
+!CODEFILE "code/04-myexpression.cfg"     
 
-!CODEFILE "code/myexpression.cpp"     
 
 
-
-# Some results {#res}
+# Some results 
 
 We start with the following function $$g=1$$ and $$f=(1,1)$$.
 

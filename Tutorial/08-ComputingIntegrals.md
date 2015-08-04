@@ -30,7 +30,7 @@ We start with the following function $$g=1$$. Recall that by default the
 domain is the unit square, hence the $$\int_\Omega g$$ and $$\int_{\partial
 \Omega} g$$ should be equal to 1 and 4 respectively.
 
-```
+```sh
 shell> ./feelpp_tut_myintegrals --functions.g=1
 int_Omega 1 = 1
 int_{boundary of Omega} 1 = 4
@@ -39,7 +39,7 @@ int_{boundary of Omega} 1 = 4
 Now we try $$g=x$$. We need to tell Feel++ what are the symbols associated
 with the expression: here the symbol is `x`  and it works as follows
 
-```
+```sh
 shell> ./feelpp_tut_myintegrals --functions.g=x:x
 int_Omega x = 0.5
 int_{boundary of Omega} x = 2
@@ -50,7 +50,7 @@ Recall that \c : is a separator between the expression and each symbol composing
 Now we try $$g=x y$$. We need to tell Feel++ what are the symbols associated
 with the expression: here the symbol is `x`  and `y`  and it works as follows
 
-```
+```sh
 shell> ./feelpp_tut_myintegrals --functions.g=x*y:x:y
 int_Omega x*y = 0.25
 int_{boundary of Omega} x*y = 1
@@ -58,7 +58,7 @@ int_{boundary of Omega} x*y = 1
 
 More complicated functions are of course doable, such as $$g=\sin( x y )$$.
 
-```
+```sh
 ./feelpp_tut_myintegrals --functions.g="sin(x*y):x:y"
 int_Omega sin(x*y) = 0.239812
 int_{boundary of Omega} sin(x*y) = 0.919395
@@ -67,14 +67,14 @@ int_{boundary of Omega} sin(x*y) = 0.919395
 Here is the last example in parallel over 4 processors which returns, of
 course, the exact same results as in sequential
 
-```
+```sh
 mpirun -np 4 ./feelpp_doc_myintegrals --functions.g="sin(x*y):x:y"
 int_Omega sin(x*y) = 0.239812
 int_{boundary of Omega} sin(x*y) = 0.919395
 ```
 
 Finally we can change the type of domain and compute the area and perimeter of the unit disk as follows
-```
+```sh
 ./feelpp_doc_myintegrals --functions.g="1:x:y" --gmsh.domain.shape=ellipsoid --gmsh.hsize=0.05
 int_Omega 1 = 0.784137
 int_{boundary of Omega} 1 = 3.14033
@@ -90,11 +90,13 @@ integration is different from the exact domain $$\Omega = \{ (x,y)\in
 The complete code reads as follows :   
 
 to compile just type
-```
+```sh
 make feelpp_tut_myintegrals
 ./feelpp_tut_myintegrals
 ```
-
-!CODEFILE "code/myintegrals.cpp" 
+## Code
+!CODEFILE "code/08-myintegrals.cpp" 
+## Config file
+!CODEFILE "code/08-myintegrals.cfg" 
 
 

@@ -1,7 +1,6 @@
 Spaces and elements {#TutorialSpaces}
 ============================
-
-
+<!-- toc -->
 
 You've learned how to discretize the space you want to compute on.
 You now have to learn how to define and use function spaces and elements of functions spaces.
@@ -9,23 +8,22 @@ You now have to learn how to define and use function spaces and elements of func
 The source code is available in `myfunctionspace.cpp`
 (The listing is given at the end).
 
-  
-
-
 # Constructing a function space {#fs}   
 - Loading a Mesh in 2D   
-  ``` auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);```
+  ```c++
+   auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
+  ```
 
 - For basic function spaces, we have predetermined constructors:   
-  ```auto Xh = Pch<2>( mesh );```    
+  ```c++
+  auto Xh = Pch<2>( mesh );
+  ```    
 
 - Defining an element   
-  ```auto u = Xh->element( "u" );```   
-  ```auto w = Xh->element( "w" );```
-
- 
-!CODEFILE "code/myfunctionspace.cpp" 
-
+  ```c++
+    auto u = Xh->element( "u" );
+    auto w = Xh->element( "w" );
+  ```
 One can also use :
 - `Pdh<ORDER>(mesh)` : Polynomial Discontinuous
 - `Pvh<ORDER>(mesh)` : Polynomial Continuous Vectorial
@@ -33,6 +31,8 @@ One can also use :
 - `Pchm<ORDER>(mesh)` : Polynomial Continuous Matrix
 - `Ned1h<ORDER>(mesh)` : Nedelec function spaces   
  
-# Code with other features {#code}   
-all   
-!CODEFILE "code/myfunctionspace.cpp" 
+# Code with other features
+## Code
+!CODEFILE "code/07-myfunctionspace.cpp" 
+## Config file
+!CODEFILE "code/07-myfunctionspace.cfg" 

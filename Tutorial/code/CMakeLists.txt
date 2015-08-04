@@ -32,7 +32,7 @@ option(USE_SHARED
             
 if(USE_SHARED)
 
-add_library(feelpplib SHARED environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
+add_library(feelpplib SHARED myapp.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
 mymesh.cpp mymeshfromstring.cpp mystokes.cpp
 )  
 # Make sure the compiler can find include files for our operation library
