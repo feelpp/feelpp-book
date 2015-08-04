@@ -87,14 +87,13 @@ integration is different from the exact domain $$\Omega = \{ (x,y)\in
 
 #  Complete code {#TutorialIntegralsCode}
 
-The complete code reads as follows :   
-
-to compile just type
+To compile just type
 ```sh
 make feelpp_tut_myintegrals
 ./feelpp_tut_myintegrals
 ```
 ## Code
+The complete code reads as follows :   
 !CODEFILE "code/08-myintegrals.cpp" 
 ## Config file
 !CODEFILE "code/08-myintegrals.cfg" 
