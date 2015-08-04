@@ -1,6 +1,6 @@
 {
     "gitbook": "2.2.0",
-    "plugins": ["anchors","include-highlight","mathjax@0.0.6","ga","richquotes","toc"],
+    "plugins": ["anchors","include-highlight","mathjax@0.0.6","ga","richquotes","toc","expandable-chapters"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-65761593-1"
