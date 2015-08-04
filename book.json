@@ -6,8 +6,8 @@
             "token": "UA-65761593-1"
         },
         "richquotes" : {
-            "todos" : true, /*false by default*/
-            "fixme" : true /*false by default*/
+            "todos" : true,
+            "fixme" : true
         }
     },
     "links": {
