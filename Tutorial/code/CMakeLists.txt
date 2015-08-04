@@ -22,39 +22,38 @@
 #set the CMAKE_CXX_COMPILER
 #set(CMAKE_CXX_COMPILER /usr/bin/clag++ 3.6.0)
 cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
-project(feelpp)
 
-# Create a library called "feelpplib" which includes the source file ".cxx".
-# The extension is already found. Any number of sources could be listed here.
-
-option(USE_SHARED 
-            "use a shared library" OFF)
-            
-if(USE_SHARED)
-
-add_library(feelpplib SHARED myapp.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
-mymesh.cpp mymeshfromstring.cpp mystokes.cpp
-)  
-# Make sure the compiler can find include files for our operation library
-# when other libraries or executables link to feelpp
-
-target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-else()
-add_library(feelpplib STATIC environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
-mymesh.cpp mymeshfromstring.cpp mystokes.cpp)
-target_include_directories (feelpplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
+  cmake_minimum_required(VERSION 2.8)
+  FIND_PATH(FEELPP_CMAKE_MODULES FindFeel++.cmake PATH  /usr/share/feel/cmake/modules/ /usr/local/share/feel/cmake/modules/ $ENV{FEELPP_DIR}/share/feel/cmake/modules )
+  if ( FEELPP_CMAKE_MODULES )
+    set(CMAKE_MODULE_PATH ${FEELPP_CMAKE_MODULES})
+  else()
+    message(FATAL_ERROR "Feel++ does not seem to have been installed on this platform")
+  endif()
+  Find_Package(Feel++)
+  OPTION(FEELPP_ENABLE_SYSTEM_EIGEN3 "enable system eigen3 support" ON)
+  if(ENV{CLN_DIR})
+    INCLUDE_DIRECTORIES(${CLN_DIR}/include)
+  endif()
 endif()
-# 
-# Add executable called "operatiom" that is built from the source files
-# ".cxx"". The extensions are automatically found.
-#
-
-add_executable(feelpp environment.cpp mesh.cpp mybackend.cpp myexporter.cpp myexpression.cpp myfunctionspace.cpp myfunctor.cpp myintegrals.cpp mylaplacian.cpp
-mymesh.cpp mymeshfromstring.cpp mystokes.cpp)
-
-# Link the executable to the operation library. Since the feelpp library has
-# public include directories we will use those link directories when building feelpp
-
-
-target_link_libraries(feelpp LINK_PUBLIC feelpplib)
+SET(SRC
+  02-environment.cpp
+  03-mymesh.cpp
+  04-myexpression.cpp
+  05-myexporter.cpp
+  07-myfunctionspace.cpp
+  08-myintegrals.cpp
+  #  model1.cpp
+  #  model2.cpp
+  #  myadvection.cpp
+  #  myappwithoptions.cpp
+  #  mybackend.cpp
+  #  myfunctor.cpp
+  #  mylaplacian.cpp
+  #  mymeshfromstring.cpp
+  #  mystokes.cpp
+  )
+foreach(app ${SRC})
+  feelpp_add_application(${app} SRCS ${app}.cpp CFG ${app}.cfg GEO ${app}.geo)
+endforeach()
