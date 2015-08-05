@@ -36,12 +36,12 @@ The current developers are
  - Vincent Chabannes <vincent.chabannes@feelpp.org>
  - Guillaume Dollé <gdolle@unistra.fr>
  - Vincent Doyeux <vincent.doyeux@ujf-grenoble.fr>
- - Cecile Daversin <Cecile.Daversin@lncmi.cnrs.fr>
+ - Cecile Daversin <daversin@math.unistra.fr>
  - Vincent Huber <vincent.huber@cemosis.fr>
  - Mourad Ismail <Mourad.Ismail@ujf-grenoble.fr>
  - Pierre Jolivet (former Phd student at U. Joseph Fourier, currently at ETHZ)
  - Christophe Prud'homme <christophe.prudhomme@feelpp.org>
- - Ranine Tarabay <ranine.tarbay@math.unistra.fr>
+ - Ranine Tarabay <tarabay@math.unistra.fr>
  - Christophe Trophime <christophe.trophime@lncmi.cnrs.fr>
  - Jean-Baptiste Wahl <wahl.jb@gmail.com>
 
