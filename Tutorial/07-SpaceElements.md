@@ -5,8 +5,7 @@ Spaces and elements {#TutorialSpaces}
 You've learned how to discretize the space you want to compute on.
 You now have to learn how to define and use function spaces and elements of functions spaces.
 
-The source code is available in `myfunctionspace.cpp`
-(The listing is given at the end).
+The source code is available in [myfunctionspace.cpp](code/07-myfunctionspace.cpp), with its configuration file [myfunctionspace.cfg](code/07-myfunctionspace.cfg)
 
 # Constructing a function space
 - Loading a Mesh in 2D   
