@@ -3,7 +3,7 @@ Computing integrals over mesh {#TutorialIntegrals}
 
 <!-- toc -->
 
-The next step is to compute integrals over the mesh. The source code is available in `myintegrals.cpp.`
+The next step is to compute integrals over the mesh. The source code is available in [myintegrals.cpp](code/08-myintegrals.cpp) with its configuration file [myintegrals.cfg](code/08-myintegrals.cfg)
 
 # Step by step explanations {#TutorialIntegralsSteps}
 
