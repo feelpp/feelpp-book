@@ -2,7 +2,7 @@ Loading a Mesh
 ==============
 <!-- toc -->
 
-The next step is to load a mesh. The source code is available in `02-mymesh.cpp.` 
+The next step is to load a mesh. An example of [source code](code/03-mymesh.cpp) is available, to be used with its [configuration file](code/03-mymesh.cfg)
 
 The `loadMesh` function has a `_name` option set by default as the default value of the `--gmsh.filename` option that point either to a `.geo`, either to a `.msh`, or a ` .h5` file.
 
