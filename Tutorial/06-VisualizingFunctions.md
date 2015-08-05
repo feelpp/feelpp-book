@@ -4,7 +4,7 @@ Visualizing functions over a mesh {#TutorialVisualize}
 
 
 The next step is to visualize function over the mesh. The source code that generate our output is
-available in `05-myexporter.cpp`, presented in the previous section. 
+available in [myexporter.cpp](code/05-myexporter.cpp), presented in the previous section. 
 
 # Reading saved data {#read}
 
