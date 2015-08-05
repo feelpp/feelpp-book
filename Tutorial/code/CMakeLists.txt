@@ -38,12 +38,12 @@ if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
   endif()
 endif()
 SET(SRC
-  02-environment.cpp
-  03-mymesh.cpp
-  04-myexpression.cpp
-  05-myexporter.cpp
-  07-myfunctionspace.cpp
-  08-myintegrals.cpp
+  02-environment
+  03-mymesh
+  04-myexpression
+  05-myexporter
+  07-myfunctionspace
+  08-myintegrals
   #  model1.cpp
   #  model2.cpp
   #  myadvection.cpp
