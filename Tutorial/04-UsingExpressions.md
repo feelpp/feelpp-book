@@ -4,7 +4,7 @@ Defining and using expressions {#TutorialExpr}
 
 
 The next step is to construct a function space over the mesh. The source code is
-available in `myexpression.cpp.`
+available in [myexpression.cpp](code/04-myexpression.cpp) with its configuration file [myexpression.cfg](code/04-myexpression.cfg).
 
 # Step by step explanations 
 
