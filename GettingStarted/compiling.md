@@ -27,7 +27,7 @@ build type:
 * none(default)
 
 In order to install Feel++ on Unix systems (other than Mac OS X, if
-you have a Macintosh, please go to \ref Mac), you have to install many
+you have a Macintosh, please go to [Mac](mac.md) ), you have to install many
 dependencies before. Those libraries and programs are necessary for
 the compilation and installation of the Feel++ libraries.
 
@@ -53,7 +53,7 @@ Optional packages:
 * Python (2.5 or later) for the validation tools
 
 Note that all these packages are available under Debian GNU/Linux and
-Ubuntu. Once you have installed those dependencies, you can jump to \ref Compiling.
+Ubuntu. Once you have installed those dependencies, you can jump to [Compiling](#compiling).
 
 
 
