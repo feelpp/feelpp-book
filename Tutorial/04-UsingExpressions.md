@@ -9,12 +9,12 @@ available in [myexpression.cpp](code/04-myexpression.cpp) with its configuration
 # Step by step explanations 
 
 - We start by loading a Mesh in 2D   
-```
+```c++
 auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );
 ```   
 
 - then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  ,here is an example how to enter them :
-```c++
+```bash
 ./feelpp_tut_myexpression --a=3 --functions.g="a*x*y:x:y:a" --functions.f="{sin(pi*x),cos(pi*y)}:x:y"   
 ```   
 You can print back the expression to the screen to check that everything is ok.
@@ -41,7 +41,7 @@ You want to use as expression `a*x+b*y`, you have to define `a` and `b` as optio
 
 
 - and the curl of `f`   
-  ```
+  ```c++
   auto curl_f=curl(f);
   ```   
 
@@ -61,7 +61,7 @@ make feelpp_tut_myexpression
 ./feelpp_tut_myexpression  
 ```   
 or    
-```
+```bash
 ./feelpp_tut_myexpression --a=3 --functions.g="<your_function>" --functions.f="<your_function>"
 ```
 
