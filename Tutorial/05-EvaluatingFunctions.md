@@ -1,16 +1,15 @@
-Using function {#TutorialFunctions}
-=====================
+Evaluating function 
+==================
 
 Once you  have created an element, you may want to give it a value, that can depends on a lot of parameters (mainly spaces, but others may apply).
 
-To do so, Feel++ relies on expression.
-We may use tree kind of expression :
+To do so, Feel++ relies on expressions.
+We may use various kind of expressions :
 
-- [Build-in](#build)
-- [Hard coded](#hc)
+<!-- toc -->
 
 
-# Built-in {#build}
+# Built-in 
 
 Instead of defining an expression from a string, you can use
 
@@ -18,7 +17,7 @@ Instead of defining an expression from a string, you can use
 
 The list of the Feel++ Keyword is [here](../QuickReference/keywords.md).
 
-# Hard Coded {#hc}
+# Hard Coded 
 
 One other method to define function is described here.
 

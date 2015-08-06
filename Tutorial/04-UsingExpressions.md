@@ -3,9 +3,7 @@ Defining and using expressions {#TutorialExpr}
 <!-- toc -->
 
 
-The next step is to construct a function space over the mesh. The source code is
-available in [myexpression.cpp](code/04-myexpression.cpp) with its configuration file [myexpression.cfg](code/04-myexpression.cfg).
-
+The next step is to construct a function space over the mesh. 
 # Step by step explanations 
 
 - We start by loading a Mesh in 2D   

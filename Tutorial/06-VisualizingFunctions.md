@@ -6,7 +6,7 @@ Visualizing functions over a mesh {#TutorialVisualize}
 The next step is to visualize function over the mesh. The source code that generate our output is
 available in [myexporter.cpp](code/05-myexporter.cpp), presented in the previous section. 
 
-# Reading saved data {#read}
+# Reading saved data 
 
 You can visualize data via :
 - [ensight](https://www.ceisoftware.com/),

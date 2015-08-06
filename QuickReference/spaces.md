@@ -1,14 +1,14 @@
 Function Spaces
 ===============
-
+<!-- toc -->
 # Prerequisites
 
 The prerequisites are
 * [Defining a mesh](mesh.md)
 
 We now turn to the next crucial mathematical ingredient: the function
-space, whose definition depends on $$\Omega_h$$ --- or more precisely
-its partitioning $$\mathcal{T}_h$$ --- and the choice of basis
+space, whose definition depends on $$\Omega_h$$ - or more precisely
+its partitioning $$\mathcal{T}_h$$ - and the choice of basis
 function. Function spaces in Feel++ follow the same definition and
 Feel++ provides support for continuous and discontinuous Galerkin
 methods and in particular approximations in $$L^2$$,
@@ -88,10 +88,10 @@ FunctionSpace<Mesh<Simplex<2>>,
 The most important feature in `FunctionSpace`  is that it embeds the
 definition of element which allows for the strict definition of an \c
 Element of a `FunctionSpace`  and thus ensures the correctness of the
-code.  An element has its representation as a vector --- also in the
-case of product of multiple spaces. --- The vector representation is
+code.  An element has its representation as a vector - also in the
+case of product of multiple spaces. - The vector representation is
 parametrized by one of the linear algebra backends. Other supported
-operations are interpolation and extraction of components --- be it a
+operations are interpolation and extraction of components - be it a
 product of function spaces element or a vectorial/matricial element:
 
 ```cpp

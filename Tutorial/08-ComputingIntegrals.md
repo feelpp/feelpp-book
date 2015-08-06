@@ -3,9 +3,9 @@ Computing integrals over mesh {#TutorialIntegrals}
 
 <!-- toc -->
 
-The next step is to compute integrals over the mesh. The source code is available in [myintegrals.cpp](code/08-myintegrals.cpp) with its configuration file [myintegrals.cfg](code/08-myintegrals.cfg)
+The next step is to compute integrals over the mesh. 
 
-# Step by step explanations {#TutorialIntegralsSteps}
+# Step by step explanations
 
 - We start by loading a Mesh in 2D   
 
@@ -24,7 +24,7 @@ to the screen as the result is the same over all mpi processes if the
 application was run in parallel. Note also that the code actually prints the
 expression passed by the user through the command line option `functions.g.`
 
-# Some results {#TutorialIntegralsResults}
+# Some results
 
 We start with the following function $$g=1$$. Recall that by default the
 domain is the unit square, hence the $$\int_\Omega g$$ and $$\int_{\partial
@@ -85,7 +85,7 @@ $$\Omega_h = \cup_{K \in \mathcal{T}_h} K$$ which we use for the numerical
 integration is different from the exact domain $$\Omega = \{ (x,y)\in
 \mathbb{R}^2 | x^2+y^2 < 1\}$$.
 
-#  Complete code {#TutorialIntegralsCode}
+#  Complete code
 
 To compile just type
 ```sh
