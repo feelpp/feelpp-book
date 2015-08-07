@@ -1,5 +1,6 @@
 #include <feel/feelfilters/loadmesh.hpp>
 #include <feel/feelfilters/exporter.hpp>
+#include <feel/feelvf/vf.hpp>
 
 int main( int argc, char** argv )
 {
