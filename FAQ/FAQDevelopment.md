@@ -14,7 +14,7 @@ auto val2 = integrate(_range=markedfaces(mesh,"markerName"),_expr=print(idv(mySc
 auto val2 = integrate(_range=markedfaces(mesh,"markerName"),_expr=print(trans(idv(myVector)),"myVectorTrans")*print(idv(myVector),"myVector") );
 ```
 
-# How to debug testsuite examples?
+# How to debug testsuite applications?
 
 Q: Feel++ testsuite uses the Boost.Test framework. When used in a debugger and an exception is triggered, the debugger won't catch the exception and provide the backtrace. It is actually Boost.Test that catches all exception which were uncaught which means that the debugger will stop with no backtrace to be displayed. eventually some texts that an exception was thrown is going to be displayed.
 
