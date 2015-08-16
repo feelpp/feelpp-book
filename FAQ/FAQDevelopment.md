@@ -1,7 +1,7 @@
 Development FAQ
 ===============
 
-# How to print from expressions?
+# How to print values taken by expressions in, say, variational formulations?
 
 Q: I would like to know what the values taken by expressions and sub-expressions in Feel++.
 
