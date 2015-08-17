@@ -1,6 +1,14 @@
 Development FAQ
 ===============
 
+# What does `_rebuild=true` do in `backend()` ?
+
+Q:  I've a question concerning the _rebuild=true option for solve what does this option do exactly ? (Because we've got a problem when we try to create 2 independent system, we get a PETSC error with wrong matrix dimension if we don't do a (preconditionner?) rebuild.
+
+A: For a given backend PETSc stores all kind of information and among them the preconditioner. If you try to solve with the same backend two problems of different sizes then PETSc will crash saying that you have wrong dimensions. Either you rebuild the backend (using `_rebuild=true`) or define two separate ones. The later is usually better since it allows you to fine tune the choice of solvers/preconditioners depending on the problem whereas with the first one you have to have a solver/preconditioner that works for in both cases.
+
+
+
 # How to print values taken by expressions in, say, variational formulations?
 
 Q: I would like to know what the values taken by expressions and sub-expressions in Feel++.
