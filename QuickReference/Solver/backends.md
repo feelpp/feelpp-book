@@ -9,4 +9,15 @@ Feel++ interfaces the following libraries:
 Scientific Computation
  - SLEPc : Eigen value solver framework based on PETSc
  - Eigen3
- 
+
+## Backend
+
+Backend is a template class parametrized by the numerical type providing access to
+ - vector
+ - matrix : dense and sparse
+ - algorithms : solvers, preconditioners, ...
+
+PETSc provides sequential and parallel data structures
+whereas Eigen3 is only sequential.
+
+
