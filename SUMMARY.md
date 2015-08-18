@@ -37,7 +37,7 @@
        * [Norms](QuickReference/Integrals/norms.md)
    * [Spaces](QuickReference/spaces.md)
    * [Forms](QuickReference/forms.md)
-   * [Solver](QuickReference/Solver/solver.md)
+   * [Solver](QuickReference/solver.md)
        * [Preconditioner](QuickReference/preconditioner.md)
        * [Backends](QuickReference/solver/backends.md)
    * [Exporter](QuickReference/exporter.md)
