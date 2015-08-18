@@ -5,7 +5,7 @@ Non-/Linear algebra backends are crucial components of Feel++. They provide a un
 ## Libraries 
 
 Feel++ interfaces the following libraries:
- - PETSc  
- - SLEPc
+ - PETSc : Portable, Extensible Toolkit for
+Scientific Computation
+ - SLEPc : Eigen value solver framework based on PETSc
  - Eigen3
- - UBlas
