@@ -39,7 +39,7 @@
    * [Forms](QuickReference/forms.md)
    * [Solver](QuickReference/solver.md)
        * [Preconditioner](QuickReference/preconditioner.md)
-       * [Backends](QuickReference/solver/backends.md)
+       * [Backends](QuickReference/Solver/backends.md)
    * [Exporter](QuickReference/exporter.md)
    * [Keywords](QuickReference/keywords.md)
 * [Frequently Asked Questions](FAQ/README.md)
