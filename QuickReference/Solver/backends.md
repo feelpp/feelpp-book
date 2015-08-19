@@ -20,4 +20,9 @@ Backend is a template class parametrized by the numerical type providing access 
 PETSc provides sequential and parallel data structures
 whereas Eigen3 is only sequential.
 
-
+To create a Backend, use the free function `backend` which has the following interface:
+```cpp
+backend(_name="name_of_backend", 
+        _rebuild=true|false,
+        )
+```
