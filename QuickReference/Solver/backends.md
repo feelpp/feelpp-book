@@ -110,4 +110,4 @@ auto A = b->newMatrix(); // sequential Matrix
 auto f = b->newVector(); // sequential Vector
 ```
 
-> ** Info ** The default WorldComm is provided by `Environment::worldComm()` and it conresponds to the default MPI communicator `MPI_COMM_WORLD`.
+> **Info** The default WorldComm is provided by `Environment::worldComm()` and it conresponds to the default MPI communicator `MPI_COMM_WORLD`.
