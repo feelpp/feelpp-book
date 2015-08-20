@@ -67,7 +67,7 @@ Feel++ supports three kind of Backends:
  - eigen_dense
  - eigen_sparse
 
-> ** Note ** SLEPc uses the PETSc Backend since it is based on PETSc.
+> **Note** SLEPc uses the PETSc Backend since it is based on PETSc.
 
 The kind of Backend can be changed from the command line or configuration file thanks to the "backend" option.
 ```cpp
@@ -93,7 +93,7 @@ b = backend(_name="mybackend",_rebuild=true);
 // solve A1 x1 = f1
 b->solve(_solution=x1,_matrix=A1,_rhs=f1);
 ```
-> ** Note ** Although this feature might appear useful, you have to make sure that the solving strategy applies to all problems because you won't be able to customize the solver/preconditioner for each problem. If you have different problems to solve and need to have custom solver/preconditioner it would be best to have different Backends.
+> **Note** Although this feature might appear useful, you have to make sure that the solving strategy applies to all problems because you won't be able to customize the solver/preconditioner for each problem. If you have different problems to solve and need to have custom solver/preconditioner it would be best to have different Backends.
 
 ### _worldComm
 
