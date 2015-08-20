@@ -2,7 +2,7 @@
 
 Non-/Linear algebra backends are crucial components of Feel++. They provide a uniform interface between Feel++ data structures and underlying the linear algebra libraries used by Feel++.
 
-## Libraries 
+## Libraries
 
 Feel++ interfaces the following libraries:
  - PETSc : Portable, Extensible Toolkit for
@@ -20,9 +20,94 @@ Backend is a template class parametrized by the numerical type providing access 
 PETSc provides sequential and parallel data structures
 whereas Eigen3 is only sequential.
 
-To create a Backend, use the free function `backend` which has the following interface:
+To create a Backend, use the free function `backend(...)` which has the following interface:
 ```cpp
-backend(_name="name_of_backend", 
-        _rebuild=true|false,
+backend(_name="name_of_backend",
+        _rebuild=... /// true|false,
+        _kind=..., // type of backend,
+        _worldcomm=... // communicator
         )
 ```
+
+All these parameters are optional which means that the simplest call reads for example:
+```cpp
+auto b = backend();
+```
+They take default values as described in the following table:
+
+parameter  | type    | default value
+-----------|---------|----------
+_name      | string  | "" (empty string )
+_rebuild   | boolean | false
+_kind      | string  | "petsc"
+_worldcomm | WorldComm | Environment::worldComm()
+
+### _name
+
+Backends are store in a Backend factory and handled by a manager that allows to keep track of allocated backends. They a registered with respect to their name and kind.
+The default name value is en empty string (`""`) which names the default Backend.
+The _name parameter is important because it provides also the name for the command line / config file option section associated to the associated Backend.
+
+Only the command line/config file options for the default backend are registered. Developers have to register the option for each new Backend they define otherwise failures at run-time are to be expected whenever a Backend command line option is accessed.
+
+Consider that you create a Backend name `projection` in your code like this
+```cpp
+auto b = backend(_name="projection");
+```
+to register the command line options of this Backend
+```cpp
+Environment env( _argc=argc, _argv=argv,
+                 _desc=backend_options("projection") );
+```
+
+### _kind
+
+Feel++ supports three kind of Backends:
+ - petsc : PETSC Backend
+ - eigen_dense
+ - eigen_sparse
+
+> ** Note ** SLEPc uses the PETSc Backend since it is based on PETSc.
+
+The kind of Backend can be changed from the command line or configuration file thanks to the "backend" option.
+```cpp
+auto b = backend(_name="name",
+                 _kind=soption(_prefix="name",_name="backend"))
+```
+and in the config file
+```
+[name]
+backend=petsc
+backend=eigen_sparse
+```
+
+### _rebuild
+
+If you want to reuse a Backend and not allocate a new one plus add the corresponding option to the command line/configuration file, you can rebuild the Backend in order to delete the data structures already associated to this Backend and in particular the preconditioner. It is mandatory to do that when you solve say a linear system first with dimensions $$m\times m$ and then solve another one with different dimension $$n \times n$$ because in that case the Backend will throw an error saying that the dimensions are incompatible. To avoid that you have to rebuild the Backend.
+```cpp
+auto b = backend(_name="mybackend");
+// solve A x = f
+b->solve(_solution=x,_matrix=A,_rhs=f);
+// rebuild: clean up the internal Backend data structure
+b = backend(_name="mybackend",_rebuild=true);
+// solve A1 x1 = f1
+b->solve(_solution=x1,_matrix=A1,_rhs=f1);
+```
+> ** Note ** Although this feature might appear useful, you have to make sure that the solving strategy applies to all problems because you won't be able to customize the solver/preconditioner for each problem. If you have different problems to solve and need to have custom solver/preconditioner it would be best to have different Backends.
+
+### _worldComm
+
+One of the strength of Feel++ is to be able to change the communicator and in the case of Feel++ the WorldComm. This allows for example to
+ - solve sequential problems
+ - solve a problem on a subset of MPI processes
+
+ For example passing a sequential WorldComm to `backend()` would then in the subsequent use of the Backend generate sequential data structures (e.g. IndexSet, Vector and Matrix) and algorithms (e.g. Krylov Solvers).
+ ```cpp
+ // create a sequential Backend
+ auto b = backend(_name="seq",
+                  _worldComm=Environment::worldCommSeq());
+auto A = b->newMatrix(); // sequential Matrix
+auto f = b->newVector(); // sequential Vector
+```
+
+> ** Info ** The default WorldComm is provided by `Environment::worldComm()` and it conresponds to the default MPI communicator `MPI_COMM_WORLD`.
