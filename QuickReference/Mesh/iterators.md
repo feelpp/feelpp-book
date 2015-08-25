@@ -29,6 +29,19 @@ auto r2 = elements(*mesh); // OK
 | boundarypoints_t\<MeshType\> | boundarypoints(mesh) |All boundary points of the mesh.|
 | internalpoints_t\<MeshType\> | boundarypoints(mesh) |All internal points of the mesh.|
 
+Here are some examples on how to use these functionSpace
+```cpp
+auto mesh = ...;
+auto r1 = elements(mesh); // elements belonging to current process (no ghost cells)
+auto r2 = markedelements(mesh,"iron"); // elements marked iron
+auto r3 = boundaryfaces(mesh);
+auto r4 = markededges(mesh,"line");
+
+// iterate over the set of edges marked "line" in the mesh
+for ( auto const&  e : r4 )
+{ ... }
+```
+
 ## Extended set of entities
 
 Feel++ allows also to select an extended sets of entities from the mesh, you can extract entities which belongs to the local process but also ghost entities which satisfy the same property as the local ones. Actually you can select both or one one of them thanks to the enum data structure entity_process_t which provides the following options
@@ -63,3 +76,12 @@ for (auto const& e : r )
   {...}
 }
 ```
+
+## Helper function on entities set
+
+Feel++ provides some helper functions to apply on set of entities. We denote by range_t the type of the entities set.
+
+| Type | Function | Description |
+|------|----------|-------------|
+| size_type | nelements(range_t,bool) | returns the local number of elements in entities set range_t of bool is false, other the global number which requires communication (default: global number) |
+| WorldComm | worldComm(range_t) | returns the WorldComm associated to the entities set |
