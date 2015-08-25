@@ -27,16 +27,28 @@ auto r2 = elements(*mesh); // OK
 | points_t\<MeshType\>| points(mesh) | All the points of the mesh.|
 | markedpoints_t\<MeshType\>| markedpoints(mesh,id) | All the points marked id of  mesh.|
 | boundarypoints_t\<MeshType\> | boundarypoints(mesh) |All boundary points of the mesh.|
-| internalpoints_t\<MeshType\> | boundarypoints(mesh) |All internal points of the mesh.|
+| internalpoints_t\<MeshType\> | internalpoints(mesh) |All internal points of the mesh(not on the boundary)|
 
 Here are some examples on how to use these functionSpace
 ```cpp
 auto mesh = ...;
-auto r1 = elements(mesh); // elements belonging to current process (no ghost cells)
-auto r2 = markedelements(mesh,"iron"); // elements marked iron
-auto r3 = boundaryfaces(mesh);
-auto r4 = markededges(mesh,"line");
 
+auto r1 = elements(mesh);
+// iterate over the set of elements local to the process(no ghost cell selected, see next section)
+for ( auto const&  e : r2 )
+{ ... }
+
+auto r2 = markedelements(mesh,"iron");
+// iterate over the set of elements marked iron in the mesh
+for ( auto const&  e : r2 )
+{ ... }
+
+auto r3 = boundaryfaces(mesh);
+// iterate over the set of faces on the boundary of the mesh
+for ( auto const&  e : r3 )
+{ ... }
+
+auto r4 = markededges(mesh,"line");
 // iterate over the set of edges marked "line" in the mesh
 for ( auto const&  e : r4 )
 { ... }
