@@ -1,5 +1,7 @@
 # Mesh iterators {#iterators}
 
+Feel++ mesh data structure allows to iterate over its entities: elements, faces, edges and points.
+
 The following table describes free-functions that allow to define mesh region over which to operate. MeshType denote the type of mesh passed to the free functions in the table.
 
 > **Note** MeshType can be a pointer, a shared_pointer or a reference to a mesh type. for example
@@ -22,7 +24,12 @@ auto r2 = elements(*mesh); // OK
 |internalfaces_t\<MeshType\>| internalelements(mesh) |All the elements of the mesh which are stricly within the domain that is to say they do not share a face with the boundary.|
 | edges_t\<MeshType\>| edges(mesh) | All the edges of the mesh.|
 | boundaryedges_t\<MeshType\> | boundaryedges(mesh) |All boundary edges of the mesh.|
+| points_t\<MeshType\>| points(mesh) | All the points of the mesh.|
+| markedpoints_t\<MeshType\>| markedpoints(mesh,id) | All the points marked id of  mesh.|
+| boundarypoints_t\<MeshType\> | boundarypoints(mesh) |All boundary points of the mesh.|
+| internalpoints_t\<MeshType\> | boundarypoints(mesh) |All internal points of the mesh.|
 
+## Extended set of entities
 
 Feel++ allows also to select an extended sets of entities from the mesh, you can extract entities which belongs to the local process but also ghost entities which satisfy the same property as the local ones. Actually you can select both or one one of them thanks to the enum data structure entity_process_t which provides the following options
 
@@ -30,7 +37,7 @@ Feel++ allows also to select an extended sets of entities from the mesh, you can
 |------------------|-------------|
 | LOCAL_ONLY | only local entities |
 | GHOST_ONLY | only ghost entities |
-| ALL | both local and ghost entities |
+| ALL  | both local and ghost entities |
 
 |Type|Function|Description|
 |----|--------|-----------|
@@ -42,3 +49,17 @@ Feel++ allows also to select an extended sets of entities from the mesh, you can
 |ext_edges_t\<MeshType\>|markededges(mesh, id, entity_process_t)|all the edges marked id of mesh associated to entity_process_t.|
 
 > **Note** the type of the object returned for an entity is always the same, for elements it is ext_elements_t\<MeshType\> whether the elements are marked or not. The reason is that in fact we have to create a temporary data structure embedded in the range object that stores a reference to the elements which are selected.
+
+Here is how to select both local and ghost elements from a Mesh
+```cpp
+auto mesh =...;
+auto r = elements(mesh,entity_process_t::ALL);
+for (auto const& e : r )
+{
+  // do something on the local and ghost element
+  ...
+  // do something special on ghost cells
+  if ( e.isGhostCell() )
+  {...}
+}
+```
