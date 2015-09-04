@@ -40,8 +40,22 @@ It allows us also to provide a recent version to compile the Feel++ projects on 
 The installation procedure is currently [as follows](https://github.com/feelpp/feelpp/blob/develop/.travis.yml).
 
 ## Ubuntu Trusty - 14.04
+<!--
 ```
 	sudo add-apt-repository ppa:feelpp/ppa
 	sudo apt-get -qq update
 	sudo apt-get install feel++-apps libfeel++-dev
+```
+-->
+### Configuration
+```
+ sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev 
+ ```
+ ### Cmake
+```sh
+cmake ../feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPILER=`which clang-3.6` -DFEELPP_MINIMAL_CONFIGURATION=ON -DFEELPP_ENABLE_NLOPT=OFF
+```
+### Compilation
+```sh
+make
 ```
