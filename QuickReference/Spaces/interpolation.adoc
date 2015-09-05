@@ -9,12 +9,16 @@ The framework provides a set of C++ classes and C++ free-functions enabled  shor
 
 == Using interpolation operator
 
+```cpp
+
+
+```
+
 == De Rahm Diagram
 
 
 
-$
-    \begin{array}{ccccccccccc}
+latexmath:[\begin{array}{ccccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
       H_1(\Omega)&
@@ -46,5 +50,4 @@ $
       \overset{div}{\longrightarrow}&
       Z_h&
       \overset{0}{\longrightarrow} \{0\} \\
-    \end{array}
-    $
+    \end{array}]
