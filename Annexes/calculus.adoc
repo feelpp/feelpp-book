@@ -64,29 +64,25 @@ latexmath:[
 ]
 
 Dans le cas d'une transformation $F$ affine, not\'ee :
-latexmath:[
-\left\{
+
+latexmath:[\left\{
 latexmath:[gin{array}{lll}
 x & = & a\hat{x} + b\hat{y} + e\\
 y & = & c\hat{x} + d\hat{y} + f
 \end{array}
-\right.
-$$
-on a :
-$$
+\right.]
+
+we have now
+
+latexmath:[
 \hat{x} = \frac{d(x-e)-b(y-f)}{D},\qquad
 \hat{y} = \frac{-c(x-e)+a(y-f)}{D},\quad \hbox{ et }
 \left| \hbox{det} J_F(\hat{x}) \right| = D = ad-bc
-\vspace*{5 mm}
-]
+\vspace*{5 mm}]
 
 Le calcul pr\'ec\'edent devient alors :
-latexmath:[
-\int_K (\nabla u(x))^2\; dx = \int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{d}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{-c}{D} \right)^2 +
-\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right] |D| \; \; d\hat{x}\, d\hat{y}
-]
+latexmath:[\int_K (\nabla u(x))^2\; dx = \int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{d}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{-c}{D} \right)^2 +
+\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right] |D| \; \; d\hat{x}\, d\hat{y}]
 
-latexmath:[
-\qquad\qquad\quad\qquad = \frac{1}{|D|}\; \int_{\hat{K}} \left[ \left( d\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} - c\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 +
-\left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}
-]
+latexmath:[\qquad\qquad\quad\qquad = \frac{1}{|D|}\; \int_{\hat{K}} \left[ \left( d\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} - c\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 +
+\left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}]
