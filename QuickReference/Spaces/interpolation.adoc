@@ -20,9 +20,9 @@ auto Ih = I( _domain=P1h, _image=P0h );
 
 == De Rahm Diagram
 
-The De Rahm diagram 
+The De Rahm diagram reads as follows: the range of each of the operators coincides with the null space of the next operator in the sequence below, and the last map is a surjection. 
 
-The De Rahm diagram reads as follows: the range of each of the operators coincides with the null space of the next operator in the sequence, and the last map is a surjection. The diagram can be restricted to functions
+NOTE: The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
 
 latexmath:[\begin{array}{ccccccccccc}
