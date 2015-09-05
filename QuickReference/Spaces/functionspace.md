@@ -1,6 +1,6 @@
 # Function Spaces
 
-Function spaces support is provided by the FunctionSpace class
+Function spaces support is provided by the `FunctionSpace` class
 
 ```cpp
  // space of continuous piecewise
