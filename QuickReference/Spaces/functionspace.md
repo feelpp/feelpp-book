@@ -84,15 +84,3 @@ auto p = U.element<1>();
 auto q = U.element<2>();
 ```
 
-## Interpolation
-
-Feel++ provides the Lagrange, $$\mathcal{I}_c^{\mathrm{lag}}, \mathcal{I}_d^{\mathrm{lag}}$$, Crouzeix-Raviart, $$\mathcal{I}^{\mathrm{cr}}$$,
-Raviart-Thomas, $$\mathcal{I}^{\mathrm{RT}}$$ and N&eacute;d&eacute;lec, $$\mathcal{I}^{\mathrm{N}}$$ global interpolation operators.
-In abstract form, they read
-$$
-  \mathcal{I} : \mathbb{X} \ni v \mapsto \sum_{i=1}^{\mathrm{dim}\mathbb{X}} \ell_i(v) \phi_i
-$$
-where $$\mathbb{X}$$ is the infinite dimensional space, $$(\ell_i)_{i=1,...,\mathrm{dim}\mathbb{X}}$$ are
-the linear forms and $$(\phi_i)_{i=1...\mathrm{dim}\mathbb{X}}$$ the basis function associated
-with the various approximations.
-
