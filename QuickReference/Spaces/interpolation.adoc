@@ -57,7 +57,7 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{0}{\longrightarrow} \{0\} \\
     \end{array}]
     
-NOTE: The diagram can be restricted to functions
+> **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
 
 [source,cpp]
