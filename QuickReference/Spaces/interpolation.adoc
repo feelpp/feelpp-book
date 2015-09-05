@@ -89,12 +89,14 @@ latexmath:[\begin{array}{cccccccccc}
 
 .Table List of Interpolation operators
 |===
-| C++ function | Mathematical operator 
-| `I(_domain=Xh,_image=Yh)` | latexmath:[I X_h \rightarrow Yh ]
-| `Grad(_domain=Xh,_image=Wh)` | latexmath:[\nabla: X_h \rightarrow Wh ]
-| `Curl(_domain=Wh,_image=Vh)` | latexmath:[\nabla \times W_h \rightarrow Vh ]
-| `Div(_domain=Vh,_image=Zh)` | latexmath:[\nabla \cdot: V_h \rightarrow Zh ]
+| C++ object | C++ shared object| Mathematical operator 
+| `I(_domain=Xh,_image=Yh)` | `IPtr(...)` | latexmath:[I X_h \rightarrow Yh ]
+| `Grad(_domain=Xh,_image=Wh)` | `GradPtr(...)` | latexmath:[\nabla: X_h \rightarrow Wh ]
+| `Curl(_domain=Wh,_image=Vh)` | `CurlPtr(...)` | latexmath:[\nabla \times W_h \rightarrow Vh ]
+| `Div(_domain=Vh,_image=Zh)` | `DivPtr(...)`|  latexmath:[\nabla \cdot: V_h \rightarrow Zh ]
 |===
+
+Each operator the previous list can be provided as shared pointers
 
 
 [source,cpp]
