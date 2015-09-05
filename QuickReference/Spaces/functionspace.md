@@ -40,14 +40,9 @@ auto Xh = Pch_type<MeshType,3>::New( mesh );
 ```
 
 
-The most important feature in `FunctionSpace`  is that it embeds the
-definition of element which allows for the strict definition of an
-`Element` of a `FunctionSpace`  and thus ensures the correctness of the
-code.  An element has its representation as a vector - also in the
-case of product of multiple spaces. - The vector representation is
-parametrized by one of the linear algebra backends. Other supported
-operations are interpolation and extraction of components - be it a
-product of function spaces element or a vectorial/matricial element:
+> **Note**: one important feature in `FunctionSpace`  is that it embeds the definition of element which allows for the strict definition of an `Element` of a `FunctionSpace`  and thus ensures the correctness of the code.  
+
+An element has its representation as a vector, also in the case of product of multiple spaces. Other supported operations are interpolation and extraction of components be it a product of function spaces element or a vectorial/matricial element:
 
 ```cpp
 FunctionSpace<Mesh<Simplex<2> >,
@@ -69,6 +64,8 @@ auto p = U.element<1>();
 auto q = U.element<2>();
 ```
 
+## Interpolation
+
 Finally Feel++ provides the Lagrange, $$\mathcal{I}_c^{\mathrm{lag}}, \mathcal{I}_d^{\mathrm{lag}}$$, Crouzeix-Raviart, $$\mathcal{I}^{\mathrm{cr}}$$,
 Raviart-Thomas, $$\mathcal{I}^{\mathrm{RT}}$$ and N&eacute;d&eacute;lec, $$\mathcal{I}^{\mathrm{N}}$$ global interpolation operators.
 In abstract form, they read
@@ -78,6 +75,4 @@ $$
 where $$\mathbb{X}$$ is the infinite dimensional space, $$(\ell_i)_{i=1,...,\mathrm{dim}\mathbb{X}}$$ are
 the linear forms and $$(\phi_i)_{i=1...\mathrm{dim}\mathbb{X}}$$ the basis function associated
 with the various approximations.
-
-# Function Space helper functions
 
