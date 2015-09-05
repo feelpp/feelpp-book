@@ -35,13 +35,13 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{0}{\longrightarrow} \{0\} \\
       ~ &
       ~ & 
-      \left\downarrow\rule{0cm}{0.3cm}\right.\pi_h&
+      \left\downarrow\right.\pi_h&
       \cdot & 
-      \left\downarrow\rule{0cm}{0.3cm}\right.\pi_h&
+      \left\downarrow\right.\pi_h&
       ~ &
-      \left\downarrow\rule{0cm}{0.3cm}\right.\pi_h&
+      \left\downarrow\right.\pi_h&
       ~ &
-      \left\downarrow\rule{0cm}{0.3cm}\right.\pi_h&
+      \left\downarrow\right.\pi_h&
       ~ &
       ~ \\
       \mathbb{R}& 
