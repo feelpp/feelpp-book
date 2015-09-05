@@ -75,9 +75,7 @@ latexmath:[\begin{aligned}
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
-latexmath:[\begin{array}{cccccccccc}
-      \mathbb{R}& 
-      \overset{id}{\longrightarrow}&
+latexmath:[\begin{array}{ccccccccc}
       H^1_0(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H_0^{\mathrm{curl}}(\Omega)&
@@ -87,7 +85,7 @@ latexmath:[\begin{array}{cccccccccc}
       L^2_0(\Omega)
     \end{array}]
 
-Interpolation operators are provided as is or as shared pointers. The table below presents the alternatives
+Interpolation operators are provided as is or as shared pointers. The table below presents the alternatives.
 
 .Table List of Interpolation operators
 |===
