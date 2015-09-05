@@ -1,10 +1,11 @@
 Feel++ on Mac OS X
 ==================
 
-Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks. The way to make it work is quite different.
+Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks. 
 
 # Compilers
-In order to make Feel++ and `cmake` work properly, you first have to install *a Xcode for Gcc/clang. <br />
+
+To make Feel++ and `cmake` work properly, you first have to install *a Xcode for Gcc/clang. <br />
 If your computer is recent, you can install it with your DVD that came with your machine (not the
 OS DVD, but the applications one). You don't have to install the complete Xcode (you can uncheck iOS SDK for example,
 it's not necessary here and requires a lot of memory). You can also install Xcode through the App Store.
