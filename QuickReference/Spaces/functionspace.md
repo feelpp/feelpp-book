@@ -1,6 +1,8 @@
 Function Spaces
 ===============
 
+<!-- toc -->
+
 Function spaces support is provided by the `FunctionSpace` class
 
 The `FunctionSpace`  class
@@ -42,10 +44,13 @@ auto Xh = FunctionSpace<MeshType,bases<Lagrange<3>>>::New( mesh );
 auto Xh = Pch_type<MeshType,3>::New( mesh );
 ```
 
+## Functions
 
 > **Note**: one important feature in `FunctionSpace`  is that it embeds the definition of element which allows for the strict definition of an `Element` of a `FunctionSpace`  and thus ensures the correctness of the code.  
 
-An element has its representation as a vector, also in the case of product of multiple spaces. Other supported operations are interpolation and extraction of components be it a product of function spaces element or a vectorial/matricial element.
+An element has its representation as a vector, also in the case of product of multiple spaces.
+
+## Components
 
 ```cpp
 FunctionSpace<Mesh<Simplex<2> >,
