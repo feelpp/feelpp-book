@@ -9,10 +9,14 @@ The framework provides a set of C++ classes and C++ free-functions enabled  shor
 
 == Using interpolation operator
 
-```cpp
-
-
-```
+[source,cpp]
+--
+using MeshType = Mesh<Simplex<2>>;
+auto mesh loadMesh( _mesh=new MeshType );
+auto P1h = Pch<1>( mesh );
+auto P0h = Pdh<0>( mesh );
+auto Ih = I( _domain=P1h, _image=P0h ); 
+--
 
 == De Rahm Diagram
 
@@ -51,3 +55,20 @@ latexmath:[\begin{array}{ccccccccccc}
       Z_h&
       \overset{0}{\longrightarrow} \{0\} \\
     \end{array}]
+    
+[source,cpp]
+--
+auto mesh = loadMesh( _mesh=new Mesh<Simplex<Dim>>());
+auto Xh = Pch<1>(mesh);
+auto Gh = Ned1h<0>(mesh);
+auto Ch = Dh<0>(mesh);
+auto P0h = Pdh<0>(mesh);
+auto Igrad = Grad( _domainSpace = Xh, _imageSpace=Gh );
+auto Icurl = Curl( _domainSpace = Gh, _imageSpace=Ch );
+auto Idiv = Div( _domainSpace = Ch, _imageSpace=P0h );
+
+auto u = Xh->element(<expr>);
+auto w = Igrad(u); // w in Gh
+auto x = Icurl(w); // z in Ch
+auto y = Idiv(x); // y in P0h
+--
