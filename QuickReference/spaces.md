@@ -1,6 +1,7 @@
 Function Spaces
 ===============
 <!-- toc -->
+
 # Prerequisites
 
 The prerequisites are
@@ -54,11 +55,11 @@ elements of degree $$k$$.
 
 The Legrendre and Dubiner basis yield implicitely discontinuous
 approximations, the Legendre and Dubiner boundary adapted basis,
-see~\cite MR1696933, were designed to handle continuous approximations
+see~\cite MR1696933, are designed to handle continuous approximations
 whereas the Lagrange basis can yield either discontinuous or continuous
 (default behavior) approximations.  $$\mathbb{R}\mathbb{T}_h$$ and $$\mathbb{N}_h$$ are implicitely spaces
 of vectorial functions $$\mathbf{f}$$ \st $$\mathbf{f}: \Omega_h \subset \mathbb{R}^d \mapsto
-\mathbb{R}^d$$. As to the other basis functions, \ie Lagrange, Legrendre, Dubiner,
+\mathbb{R}^d$$. As to the other basis functions, i.e. Lagrange, Legrendre, Dubiner,
 etc., they are parametrized by their values namely `Scalar`  ,
 `Vectorial`  or `Matricial.`   Note that
 `FunctionSpace`  handles also products of function spaces.  This is
