@@ -47,13 +47,13 @@ latexmath:[\begin{array}{cccccccccc}
       L^2(\Omega) \\
       ~ &
       ~ & 
-      \left\downarrow\right.\pi_{ch}&
+      \left\downarrow\right.\pi_{c,h}&
       ~ & 
       \left\downarrow\right.\pi^{\mathrm{curl}}_h&
       ~ &
       \left\downarrow\right.\pi^{\mathrm{div}}_h&
       ~ &
-      \left\downarrow\right.\pi_{dh}&
+      \left\downarrow\right.\pi_{d,h}&
       ~ \\
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
@@ -66,7 +66,7 @@ latexmath:[\begin{array}{cccccccccc}
       Z_h\\
     \end{array}]
 
-The diagram is commutative which means that we have the following properties:
+The diagram above is commutative which means that we have the following properties:
 
 latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
     
