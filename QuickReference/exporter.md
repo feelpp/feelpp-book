@@ -91,11 +91,9 @@ Post-Processing and Visualization
 
 
 
+# ExporterReference Reference
 
-
-  # ExporterReference Reference
-
-  ## ExporterReferenceOptions Options
+## Options
 
    `exporter.format`
   * Type: multiple choice `string`
@@ -127,7 +125,7 @@ Post-Processing and Visualization
   * Default Value: results
   * Action: `exporter.directory`  tells where to export the results to
 
-### Ensight Gold specific options {ExporterReferenceOptionsEnsightGold}
+### Ensight Gold specific options 
 
    `exporter.ensightgold.use` -sos
   * Type: `bool`
