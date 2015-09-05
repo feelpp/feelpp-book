@@ -15,9 +15,9 @@ The `FunctionSpace`  class
 |Function         | C++ Type | Function Space |
 |-----------------|------|----------------|
 |`Pch<N>(mesh)`   | `Pch_type<MeshType,N>`  | $$P^N_{c,h}$$ |
-|`Pchv<N>(mesh)`  | `Pchv_type<MeshType,N>` | $$[P^N_{d,h}]^d$$|
+|`Pchv<N>(mesh)`  | `Pchv_type<MeshType,N>` | $$[P^N_{c,h}]^d$$|
 |`Pdh<N>(mesh)`   | `Pdh_type<MeshType,N>`  | $$P^N_{d,h}$$ |
-|`Pdhv<N>(mesh)`  | `Pdhv_type<MeshType,N>` | $$[P^N_{c,h}]^d$$|
+|`Pdhv<N>(mesh)`  | `Pdhv_type<MeshType,N>` | $$[P^N_{d,h}]^d$$|
 |`THch<N>(mesh)`  | `THch_type<MeshType,N>` | $$[P^{N+1}_{c,h}]^d \times P^N_{c,h}$$|
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
