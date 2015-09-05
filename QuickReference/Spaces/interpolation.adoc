@@ -89,7 +89,7 @@ latexmath:[\begin{array}{cccccccccc}
 
 .Table List of Interpolation operators
 |===
-| C++ call | Mathematical operator 
+| C++ function | Mathematical operator 
 | `I(_domain=Xh,_image=Yh)` | latexmath:[I X_h \rightarrow Yh ]
 | `Grad(_domain=Xh,_image=Wh)` | latexmath:[\nabla: X_h \rightarrow Wh ]
 | `Curl(_domain=Wh,_image=Vh)` | latexmath:[\nabla \times W_h \rightarrow Vh ]
