@@ -22,3 +22,17 @@ $$
 
 where $$\mathbb{R}\mathbb{T}_k$$ and $$\mathbb{N}_k$$ are respectively the Raviart-Thomas and N&eacute;d&eacute;lec finite
 elements of degree $$k$$.
+
+
+The Legrendre and Dubiner basis yield implicitely discontinuous
+approximations, the Legendre and Dubiner boundary adapted basis,
+see~\cite MR1696933, are designed to handle continuous approximations
+whereas the Lagrange basis can yield either discontinuous or continuous
+(default behavior) approximations.  $$\mathbb{R}\mathbb{T}_h$$ and $$\mathbb{N}_h$$ are implicitely spaces
+of vectorial functions $$\mathbf{f}$$ such that $$\mathbf{f}: \Omega_h \subset \mathbb{R}^d \mapsto
+\mathbb{R}^d$$. As to the other basis functions, i.e. Lagrange, Legrendre, Dubiner,
+etc., they are parametrized by their values namely `Scalar`  ,
+`Vectorial`  or `Matricial.`   
+
+> **Note**:  products of function spaces must be supported.  This is
+very powerful to describe complex multiphysics problems when coupled with operators, functionals and forms described in the next section. Extracting subspaces or component spaces are part of the interface.
