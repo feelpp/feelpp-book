@@ -87,6 +87,14 @@ latexmath:[\begin{array}{cccccccccc}
       L^2_0(\Omega)
     \end{array}]
 
+.Table List of Interpolation operators
+|===
+| C++ function | Mathematical operator 
+| I(_domain=Xh,_image=Yh) | latexmath:[I X_h \rightarrow Yh ]
+| Grad(_domain=Xh,_image=Wh) | latexmath:[\nabla: X_h \rightarrow Yh ]
+| Curl(_domain=Wh,_image=Vh) | latexmath:[\nabla \times X_h \rightarrow Yh ]
+| Div(_domain=Vh,_image=Zh) | latexmath:[\nabla \cdot: X_h \rightarrow Yh ]
+|===
 [source,cpp]
 --
 auto mesh = loadMesh( _mesh=new Mesh<Simplex<Dim>>());
