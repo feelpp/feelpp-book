@@ -35,9 +35,7 @@ latexmath:[\begin{array}{cccccccccc}
     \end{array}]
     
 An important result is that the diagram transfers to the discrete level
-latexmath:[\begin{array}{cccccccccc}
-      \mathbb{R}& 
-      \overset{id}{\longrightarrow}&
+latexmath:[\begin{array}{cccccccc}
       H^1(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H^{\mathrm{curl}}(\Omega)&
@@ -45,8 +43,6 @@ latexmath:[\begin{array}{cccccccccc}
       H^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
       L^2(\Omega) \\
-      ~ &
-      ~ & 
       \left\downarrow\right.\pi_{c,h}&
       ~ & 
       \left\downarrow\right.\pi_{\mathrm{curl},h}&
@@ -55,8 +51,6 @@ latexmath:[\begin{array}{cccccccccc}
       ~ &
       \left\downarrow\right.\pi_{d,h}&
       ~ \\
-      \mathbb{R}& 
-      \overset{id}{\longrightarrow}&
       U_h&
       \overset{\nabla}{\longrightarrow}&
       V_h&
@@ -75,7 +69,7 @@ latexmath:[\begin{aligned}
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
-latexmath:[\begin{array}{ccccccccc}
+latexmath:[\begin{array}{cccccccc}
       H^1_0(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H_0^{\mathrm{curl}}(\Omega)&
