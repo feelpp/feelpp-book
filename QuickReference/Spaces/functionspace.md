@@ -21,7 +21,7 @@ The `FunctionSpace`  class
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
 [^1]:
-see [Notations](notations.md) for function space definitions.
+see [Notations](notations.md) for the function spaces definitions.
 
 Here are some examples how to define function spaces with Lagrange basis functions.
 ```cpp
