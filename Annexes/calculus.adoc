@@ -24,14 +24,13 @@ latexmath:[
 
 
 Soient latexmath:[\hat{K}] et latexmath:[K] deux ouverts de latexmath:[\mathbb{R}^n]. Soit latexmath:[F] un latexmath:[{\cal C}^1]- diff\'eomorphisme de latexmath:[\hat{K}] dans latexmath:[K], c'est \`a dire une bijection de classe ${\cal C}^1$ dont la r\'eciproque est \'egalement de classe ${\cal C}^1$. On note $(e_1,\ldots,e_n)$ la base canonique de $\RR^n$ et
-latexmath:[
-F : x=\sum_{i=1}^n x_i \, e_i \; \longrightarrow \; F(x) = \sum_{i=1}^n F_i(x_1,\ldots,x_n) \, e_i
-]
+
+latexmath:[F : x=\sum_{i=1}^n x_i \, e_i \; \longrightarrow \; F(x) = \sum_{i=1}^n F_i(x_1,\ldots,x_n) \, e_i]
+
 La matrice jacobienne de $F$ au point $x$, not\'ee $J_F(x)$ est la matrice $n\times n$ d\'efinie par
-latexmath:[
-\left( J_F(x) \right)_{ij} = \frac{\partial F_i}{\partial x_j}(x_1,\ldots,x_n)
-\qquad 1\le i,j \le n
-]
+
+latexmath:[\left( J_F(x) \right)_{ij} = \frac{\partial F_i}{\partial x_j}(x_1,\ldots,x_n)
+\qquad 1\le i,j \le n]
 
 
 On a alors la formule de changement de variable :
