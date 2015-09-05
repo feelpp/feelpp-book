@@ -63,6 +63,8 @@ Pch_type<MeshType,3> P3ch;
 
 // definie an element from P3ch, initialized to 0
 auto u = P3ch.element();
+// definie an element from P3ch, initialized to x^2+y^2
+auto v = P3ch.element(Px()*Px()+Py()*Py());
 
 FunctionSpace<Mesh<Simplex<2> >,
  bases<Lagrange<2,Vectorial>, Lagrange<1,Scalar>,
