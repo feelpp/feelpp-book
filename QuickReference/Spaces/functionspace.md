@@ -2,6 +2,16 @@
 
 Function spaces support is provided by the `FunctionSpace` class
 
+The `FunctionSpace`  class
+
+ -  constructs the table of degrees of freedom which maps local (elementwise) degrees of
+  freedom to the global ones with respect to the geometrical entities,
+ -  embeds the definition of the elements of the function space allowing for a
+  tight coupling between the elements and their function spaces,
+ -  stores an interpolation data structure (\eg region tree) for rapid
+  localisation of point sets (determining in which element they reside).
+
+
 ```cpp
  // space of continuous piecewise
  // $$\P_3$$ functions defined on a mesh
@@ -11,14 +21,6 @@ Function spaces support is provided by the `FunctionSpace` class
 ```
 
 
-The `FunctionSpace`  class
-
- -  constructs the table of degrees of freedom which maps local (elementwise) degrees of
-  freedom to the global ones with respect to the geometrical entities,
- -  embeds the definition of the elements of the function space allowing for a
-  tight coupling between the elements and their function spaces,
- -  stores an interpolation data structure (\eg region tree) for rapid
-  localisation of point sets (determining in which element they reside).
 
 
 
