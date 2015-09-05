@@ -13,7 +13,7 @@ The `FunctionSpace`  class
  
  -  stores an interpolation data structure (e.g. region tree) for rapid localisation of point sets (determining in which element they reside).
 
-| C++ Function         | C++ Type | Function Space [^1] |
+| C++ Function    | C++ Type | Function Space [^1] |
 |-----------------|------|----------------|
 |`Pch<N>(mesh)`   | `Pch_type<MeshType,N>`  | $$P^N_{c,h}$$ |
 |`Pchv<N>(mesh)`  | `Pchv_type<MeshType,N>` | $$[P^N_{c,h}]^d$$|
