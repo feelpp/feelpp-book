@@ -22,12 +22,14 @@ The `FunctionSpace`  class
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
 
+Here are some examples how to define function spaces
 ```cpp
- // space of continuous piecewise
- // $$\P_3$$ functions defined on a mesh
- // of order 2 triangles in 3D
- FunctionSpace<Mesh<Simplex<2,2,3>,
-               bases<Lagrange<3> > > Xh;
+// Mesh with triangles
+using MeshType = Mesh<Simplex<2>>;
+// Space spanned by P_3 Lagrange finite element
+FunctionSpace<Mesh<Simplex<2>,bases<Lagrange<3>>> Xh;
+Pch_type<Mesh>
+
 ```
 
 ```cpp
