@@ -17,7 +17,7 @@ $$A = A^T$$
 **Definite (resp. semi-definite) positive matrix**
 All eigenvalue are 
  1. $$>0$$ (resp $$\geq 0$$) or 
- 2. $$x^T\ A\ x >\ 0\, \forall\ x$$ (resp. $$x^T\ A\ x
+ 2. $$x^T A x > 0, \forall\ x $$ (resp. $$x^T\ A\ x
 \geq 0\, \forall\ x$$)
 
 **Definite (resp. semi-negative) matrix**
