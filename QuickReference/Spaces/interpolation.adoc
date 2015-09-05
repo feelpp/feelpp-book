@@ -22,7 +22,19 @@ auto Ih = I( _domain=P1h, _image=P0h );
 
 The De Rahm diagram reads as follows: the range of each of the operators coincides with the null space of the next operator in the sequence below, and the last map is a surjection. 
 
-
+latexmath:[\begin{array}{ccccccccccc}
+      \mathbb{R}& 
+      \overset{id}{\longrightarrow}&
+      H^1(\Omega)&
+      \overset{\nabla}{\longrightarrow}&
+      H^{\mathrm{curl}}(\Omega)&
+      \overset{\nabla \times}{\longrightarrow}&
+      H^{\mathrm{div}}(\Omega)&
+      \overset{\nabla \cdot}{\longrightarrow}&
+      L^2(\Omega)&
+      \overset{0}{\longrightarrow} \{0\}
+    \end{array}]
+    
 latexmath:[\begin{array}{ccccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
@@ -59,6 +71,18 @@ latexmath:[\begin{array}{ccccccccccc}
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
+latexmath:[\begin{array}{ccccccccccc}
+      \mathbb{R}& 
+      \overset{id}{\longrightarrow}&
+      H^0_1(\Omega)&
+      \overset{\nabla}{\longrightarrow}&
+      H^0_{\mathrm{curl}}(\Omega)&
+      \overset{\nabla \times}{\longrightarrow}&
+      H^0_{\mathrm{div}}(\Omega)&
+      \overset{\nabla \cdot}{\longrightarrow}&
+      L^0_2(\Omega)&
+      \overset{0}{\longrightarrow} \{0\}
+    \end{array}]
 
 [source,cpp]
 --
