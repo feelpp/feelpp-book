@@ -87,6 +87,8 @@ latexmath:[\begin{array}{cccccccccc}
       L^2_0(\Omega)
     \end{array}]
 
+Interpolation operators are provided as is or as shared pointers. The table below presents the alternatives
+
 .Table List of Interpolation operators
 |===
 | C++ object | C++ shared object| Mathematical operator 
@@ -96,7 +98,6 @@ latexmath:[\begin{array}{cccccccccc}
 | `Div(_domain=Vh,_image=Zh)` | `DivPtr(...)`|  latexmath:[\nabla \cdot: V_h \rightarrow Zh ]
 |===
 
-Each operator the previous list can be provided as shared pointers
 
 
 [source,cpp]
