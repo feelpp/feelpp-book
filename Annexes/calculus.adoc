@@ -34,9 +34,8 @@ latexmath:[\left( J_F(x) \right)_{ij} = \frac{\partial F_i}{\partial x_j}(x_1,\l
 
 
 On a alors la formule de changement de variable :
-latexmath:[
-\int_K u(x)\; dx = \int_{\hat{K}} u(F(\hat{x}))\; \left| \hbox{det } J_F(\hat{x}) \right| \; d\hat{x}
-]
+
+latexmath:[\int_K u(x)\; dx = \int_{\hat{K}} u(F(\hat{x}))\; \left| \hbox{det } J_F(\hat{x}) \right| \; d\hat{x}]
 
 
 > **Note** dans la m\'ethode des \'el\'ements finis, on aura souvent \`a calculer de tels changements de variables dans des int\'egrales du type latexmath:[\ds{ \int_K Hu(x)\; dx }], o\`u latexmath:[H] est un op\'erateur aux d\'eriv\'ees partielles (gradient, laplacien, \ldots). Il faudra alors faire attention au changement de variable dans l'opérateur lui-m\^eme. Par exemple dans latexmath:[\RR^2] :
