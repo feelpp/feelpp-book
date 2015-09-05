@@ -26,6 +26,7 @@ see [Notations](notations.md) for the function spaces definitions.
 Here are some examples how to define function spaces with Lagrange basis functions.
 ```cpp
 #include <feel/feeldiscr/pch.hpp>
+
 // Mesh with triangles
 using MeshType = Mesh<Simplex<2>>;
 // Space spanned by P_3 Lagrange finite element
