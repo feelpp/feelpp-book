@@ -50,8 +50,6 @@ auto Xh = Pch_type<MeshType,3>::New( mesh );
 
 An element has its representation as a vector, also in the case of product of multiple spaces.
 
-## Components
-
 ```cpp
 #include <feel/feeldiscr/pch.hpp>
 
@@ -65,6 +63,10 @@ Pch_type<MeshType,3> P3ch;
 auto u = P3ch.element();
 // definie an element from P3ch, initialized to x^2+y^2
 auto v = P3ch.element(Px()*Px()+Py()*Py());
+```
+## Components
+
+```cpp
 
 FunctionSpace<Mesh<Simplex<2> >,
  bases<Lagrange<2,Vectorial>, Lagrange<1,Scalar>,
