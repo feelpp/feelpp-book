@@ -38,13 +38,13 @@ latexmath:[\begin{array}{ccccccccccc}
 latexmath:[\begin{array}{ccccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
-      H_1(\Omega)&
+      H^1(\Omega)&
       \overset{\nabla}{\longrightarrow}&
-      H_{\mathrm{curl}}(\Omega)&
+      H^{\mathrm{curl}}(\Omega)&
       \overset{\nabla \times}{\longrightarrow}&
-      H_{\mathrm{div}}(\Omega)&
+      H^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
-      L_2(\Omega)&
+      L^2(\Omega)&
       \overset{0}{\longrightarrow} \{0\} \\
       ~ &
       ~ & 
@@ -74,13 +74,13 @@ satisfying the homogeneous Dirichlet boundary conditions
 latexmath:[\begin{array}{ccccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
-      H^0_1(\Omega)&
+      H^1_0(\Omega)&
       \overset{\nabla}{\longrightarrow}&
-      H^0_{\mathrm{curl}}(\Omega)&
+      H_0^{\mathrm{curl}}(\Omega)&
       \overset{\nabla \times}{\longrightarrow}&
-      H^0_{\mathrm{div}}(\Omega)&
+      H_0^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
-      L^0_2(\Omega)&
+      L^2_0(\Omega)&
       \overset{0}{\longrightarrow} \{0\}
     \end{array}]
 
