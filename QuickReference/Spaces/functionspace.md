@@ -12,7 +12,7 @@ The `FunctionSpace`  class
  -  stores an interpolation data structure (\eg region tree) for rapid
   localisation of point sets (determining in which element they reside).
 
-|Function         | C++ Type | Function Space |
+|Function         | C++ Type | Function Space [^1] |
 |-----------------|------|----------------|
 |`Pch<N>(mesh)`   | `Pch_type<MeshType,N>`  | $$P^N_{c,h}$$ |
 |`Pchv<N>(mesh)`  | `Pchv_type<MeshType,N>` | $$[P^N_{c,h}]^d$$|
@@ -21,6 +21,8 @@ The `FunctionSpace`  class
 |`THch<N>(mesh)`  | `THch_type<MeshType,N>` | $$[P^{N+1}_{c,h}]^d \times P^N_{c,h}$$|
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
+[^1]:
+see [Notations](notations.md) for space definition.
 
 Here are some examples how to define function spaces with Lagrange basis functions.
 ```cpp
@@ -42,7 +44,7 @@ auto Xh = Pch_type<MeshType,3>::New( mesh );
 
 > **Note**: one important feature in `FunctionSpace`  is that it embeds the definition of element which allows for the strict definition of an `Element` of a `FunctionSpace`  and thus ensures the correctness of the code.  
 
-An element has its representation as a vector, also in the case of product of multiple spaces. Other supported operations are interpolation and extraction of components be it a product of function spaces element or a vectorial/matricial element:
+An element has its representation as a vector, also in the case of product of multiple spaces. Other supported operations are interpolation and extraction of components be it a product of function spaces element or a vectorial/matricial element.
 
 ```cpp
 FunctionSpace<Mesh<Simplex<2> >,
