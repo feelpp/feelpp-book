@@ -1,5 +1,5 @@
-Interpolation
-=============
+= Interpolation
+
 
 Feel++ has a very powerful interpolation framework which allows to seamlessly in parallel:
  - transfer functions from one mesh to another
@@ -7,9 +7,13 @@ Feel++ has a very powerful interpolation framework which allows to seamlessly in
 
 The framework provides a set of C++ classes and C++ free-functions enabled  short, concise and expressive handling of interpolation.
 
-# De Rahm Diagram
+== Using interpolation operator
 
-$$
+== De Rahm Diagram
+
+
+
+$
     \begin{array}{ccccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
@@ -43,4 +47,4 @@ $$
       Z_h&
       \overset{0}{\longrightarrow} \{0\} \\
     \end{array}
-    $$
+    $
