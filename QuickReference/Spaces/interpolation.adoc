@@ -49,9 +49,9 @@ latexmath:[\begin{array}{cccccccccc}
       ~ & 
       \left\downarrow\right.\pi_{c,h}&
       ~ & 
-      \left\downarrow\right.\pi^{\mathrm{curl}}_h&
+      \left\downarrow\right.\pi_{\mathrm{curl},h}&
       ~ &
-      \left\downarrow\right.\pi^{\mathrm{div}}_h&
+      \left\downarrow\right.\pi_{\mathrm{div},_h}&
       ~ &
       \left\downarrow\right.\pi_{d,h}&
       ~ \\
