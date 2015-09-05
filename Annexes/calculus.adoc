@@ -20,10 +20,10 @@ latexmath:[
 ]
 
 
-== Changement de variable dans une int\'egrale}
+== Change of variables in integrals
 
 
-Soient latexmath:[\hat{K}] et latexmath:[K] deux ouverts de latexmath:[\RR^n]. Soit $F$ un ${\cal C}^1$- diff\'eomorphisme de $\hat{K}$ dans $K$, c'est \`a dire une bijection de classe ${\cal C}^1$ dont la r\'eciproque est \'egalement de classe ${\cal C}^1$. On note $(e_1,\ldots,e_n)$ la base canonique de $\RR^n$ et
+Soient latexmath:[\hat{K}] et latexmath:[K] deux ouverts de latexmath:[\RR^n]. Soit latexmath:[F] un ${\cal C}^1$- diff\'eomorphisme de $\hat{K}$ dans $K$, c'est \`a dire une bijection de classe ${\cal C}^1$ dont la r\'eciproque est \'egalement de classe ${\cal C}^1$. On note $(e_1,\ldots,e_n)$ la base canonique de $\RR^n$ et
 latexmath:[
 F : x=\sum_{i=1}^n x_i \, e_i \; \longrightarrow \; F(x) = \sum_{i=1}^n F_i(x_1,\ldots,x_n) \, e_i
 ]
