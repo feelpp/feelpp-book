@@ -55,9 +55,10 @@ An element has its representation as a vector, also in the case of product of mu
 
 // Mesh with triangles
 using MeshType = Mesh<Simplex<2>>;
+auto mesh = loadMesh( _mesh=new MeshType );
 
 // define P3 Lagrange finite element space
-Pch_type<MeshType,3> P3ch;
+auto P3ch = Pch<3>(mesh);
 
 // definie an element from P3ch, initialized to 0
 auto u = P3ch.element();
