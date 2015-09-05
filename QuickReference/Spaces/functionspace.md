@@ -22,7 +22,6 @@ The `FunctionSpace`  class
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
 
-
 ```cpp
  // space of continuous piecewise
  // $$\P_3$$ functions defined on a mesh
