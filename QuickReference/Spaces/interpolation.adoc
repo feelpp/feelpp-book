@@ -47,13 +47,13 @@ latexmath:[\begin{array}{cccccccccc}
       L^2(\Omega) \\
       ~ &
       ~ & 
-      \left\downarrow\right.\pi_h&
+      \left\downarrow\right.\pi_{ch}&
       ~ & 
-      \left\downarrow\right.\pi_h&
+      \left\downarrow\right.\pi^{\mathrm{curl}}_h&
       ~ &
-      \left\downarrow\right.\pi_h&
+      \left\downarrow\right.\pi^{\mathrm{div}}_h&
       ~ &
-      \left\downarrow\right.\pi_h&
+      \left\downarrow\right.\pi_{dh}&
       ~ \\
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
