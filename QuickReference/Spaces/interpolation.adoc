@@ -50,9 +50,9 @@ latexmath:[\begin{array}{ccccccccccc}
       U_h&
       \overset{\nabla}{\longrightarrow}&
       V_h&
-      \overset{curl}{\longrightarrow}&
+      \overset{\nabla \times}{\longrightarrow}&
       W_h&
-      \overset{div}{\longrightarrow}&
+      \overset{\nabla \cdot}{\longrightarrow}&
       Z_h&
       \overset{0}{\longrightarrow} \{0\} \\
     \end{array}]
