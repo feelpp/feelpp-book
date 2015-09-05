@@ -57,50 +57,24 @@ Post-Processing and Visualization
   available for meshes composed only of simplices or quadrilaterals
   (see \ref Notations), in 1D, 2D and 3D.
 
-  <center>
-  <table border=0px>
-  <tr>
-  <td width="15%">\image html circle_p1p1.png "P1" width="15%"</td>
-  <td width="15%">\image html circle_p2p2.png</td>
-  <td width="15%">\image html circle_p2p2_p1interpolator.png</td>
-  </tr>
-  <tr>
-  <td><center>$$u$$: $$P_1$$, $$P_2/P_2$$ and  $$P_2/P_2$$ with $$P_1$$ interpolation </center></td>
-  </tr>
-  <tr>
-  <td width="15%">\image html circle_p3p3.png</td>
-  <td width="15%">\image html circle_p3p3_p1interpolator.png</td>
-  <td width="15%">\image html circle_p4p4.png</td>
-  <td width="15%">\image html circle_p4p4_p1interpolator.png</td>
-  <td width="15%">\image html circle_p5p5.png</td>
-  <td width="15%">\image html circle_p5p5_p1interpolator.png</td>
-  </tr>
-  <tr>
-  <td><center>$$u$$: $$P_1$$, $$P_2/P_2$$ and  $$P_2/P_2$$ with $$P_1$$ interpolation </center></td>
-  </tr>
-  </table>
-  </center>
+| Order 1 | Order 2 | Order 2 with P1 interpolation |
+|---------|---------|--------------|
+|![Mesh order 1 Circle](../pngs/visualisation/circle_p1p1.png)|![](../pngs/visualisation/circle_p2p2.png) | ![](../pngs/visualisation/circle_p2p2_p1interpolator.png) |
+
+|Order 3 | Order 3P1 | Order 4 | Order 4 P1 | Order 5 | Order 5 P1  |
+|--------|-----------|---------|------------|---------|-------------|
+|![](../pngs/visualisation/circle_p3p3.png) | ![](../pngs/visualisation/circle_p3p3_p1interpolator.png) | ![](../pngs/visualisation/circle_p4p4.png) | ![](../pngs/visualisation/circle_p4p4_p1interpolator.png) | ![](../pngs/visualisation/circle_p5p5.png) | ![](../pngs/visualisation/circle_p5p5_p1interpolator.png) |
+  
 
 
   To further illustrate the capabilities of the Feel's exporter to
-  Gmsh, we plot in Figures 1D and 3D functions defined in the $$[-1,1]$$
-  interval and the unit sphere, respectively.
+  Gmsh, we plot in Figures 1D and 3D functions defined in the $$[-1,1]$$  interval and the unit sphere, respectively.
 
-  <center>
-  <table border=0px>
-  <tr>
-  <td width="15%">\image html sphere_p1.png</td>
-  <td width="15%">\image html sphere_p2.png</td>
-  <td width="15%">\image html sphere_p3.png</td>
-  <td width="15%">\image html sphere_p4.png</td>
-  </tr>
-  <tr>
-  <td><center>Low to high order visualization of $$u$$</center></td>
-  </tr>
-  </table>
-  </center>
+| Order 1 | Order 2 | Order 3 | Order 4 |
+|---------|----------|--------|---------|
+|![](../pngs/visualisation/sphere_p1.png)|![](../pngs/visualisation/sphere_p2.png) | ![](../pngs/visualisation/sphere_p3.png) | ![](../pngs/visualisation/sphere_p4.png) | 
 
-  # Visualization Visualization
+# Visualization {Visualization}
 
   We would like to visualize the function $$u=\sin(\pi x)$$ over
   $$\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$$. $$\Omega$$
@@ -153,7 +127,7 @@ Post-Processing and Visualization
   * Default Value: results
   * Action: `exporter.directory`  tells where to export the results to
 
-  ### ExporterReferenceOptionsEnsightGold Ensight Gold specific options
+### Ensight Gold specific options {ExporterReferenceOptionsEnsightGold}
 
    `exporter.ensightgold.use` -sos
   * Type: `bool`
