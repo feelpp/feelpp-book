@@ -24,28 +24,30 @@ directory&gt;/ports/macosx/macports-xc5.
 
 ## Homebrew
 
-> **Info**: Homebrew is a free/open source software
+Homebrew is a free/open source software
 introduced to simplify the installation of other free/open source
-software on the MacOS X ecosystem.
-
-Homebrew is distributed under the <a
+software on the MacOS X ecosystem. Homebrew is distributed under the <a
 href="https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE">BSD
 2 Clause (NetBSD) license</a>. For more information, visit their <a
 href="http://brew.sh">website</a>.
 
-**Note**: To install the latest version of Homebrew, simply
+> **Note**: To install the latest version of Homebrew, simply
 visit their [website](http://brew.sh) and follow the
 instructions. Each new package Homebrew installs is built into an
 intermediate place called the Cellar (usually /usr/local/Cellar) and
 then the packages are symlinked into /usr/local (default).
 
-**Key commands**: Homebrew base command is `brew`. Here is a list of useful commands to use Homebrew:
+### Key commands 
+
+Homebrew base command is `brew`. Here is a list of useful commands to use Homebrew:
 * `brew doctor`: Check if the system has any problem with the current installation of brew,
 * `brew install mypackage`: This action installs the package mypackage,
 * `brew install [--devel|--HEAD] mypackage`: These action respectively installs either the development version or the HEAD version of the package mypackage, if such versions are specified in the Formula file,
 * `brew uninstall mypackage`: This action uninstalls the package mypackage.
 
-**Formula**: A Formula is a [Ruby](https://www.ruby-lang.org) script describing to Homebrew how to install a package. Feel++ uses specific Formulae that you can get in the Feel++ github repository: [feelpp/homebrew-science](https://github.com/feelpp/homebrew-science).
+### Formula 
+
+A Formula is a [Ruby](https://www.ruby-lang.org) script describing to Homebrew how to install a package. Feel++ uses specific Formulae that you can get in the Feel++ github repository: [feelpp/homebrew-science](https://github.com/feelpp/homebrew-science).
 
 ###  First time installation: Homebrew and Feel++
 <p>
