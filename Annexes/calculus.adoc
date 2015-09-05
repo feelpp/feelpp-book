@@ -6,14 +6,14 @@ Let latexmath:[\Omega] be a non-empty open of latexmath:[\mathbb{R}^n], de front
 
 On a les propri\'et\'es suivantes, appel\'ees formules de Green, qui sont en fait simplement des cas particuliers d'int\'egration par parties :
 
-\latexmath:[ 
+latexmath:[ 
 \int_\Omega \frac{\partial u}{\partial x_k}\; v\; dx = - \int_\Omega u \; \frac{\partial v}{\partial x_k} \; dx + \int_{\partial \Omega} u\, v \; (e_k.n)\; ds 
 ]
 
 
 o\`u latexmath:[e_k] est le vecteur unitaire dans la direction latexmath:[x_k].
 
-\latexmath:[\int_\Omega \Delta u \; v\; dx = - \int_\Omega \nabla u \; \nabla v \; dx + \int_{\partial \Omega} \frac{\partial u}{\partial n}\, v \; ds]
+latexmath:[\int_\Omega \Delta u \; v\; dx = - \int_\Omega \nabla u \; \nabla v \; dx + \int_{\partial \Omega} \frac{\partial u}{\partial n}\, v \; ds]
 
 
 latexmath:[
@@ -67,7 +67,7 @@ latexmath:[
 Dans le cas d'une transformation $F$ affine, not\'ee :
 
 latexmath:[\left\{
-latexmath:[gin{array}{lll}
+\begin{array}{lll}
 x & = & a\hat{x} + b\hat{y} + e\\
 y & = & c\hat{x} + d\hat{y} + f
 \end{array}
