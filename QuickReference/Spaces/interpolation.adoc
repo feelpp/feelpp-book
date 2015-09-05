@@ -22,7 +22,7 @@ auto Ih = I( _domain=P1h, _image=P0h );
 
 The De Rahm diagram reads as follows: the range of each of the operators coincides with the null space of the next operator in the sequence below, and the last map is a surjection. 
 
-latexmath:[\begin{array}{ccccccccccc}
+latexmath:[\begin{array}{cccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
       H^1(\Omega)&
@@ -31,12 +31,11 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{\nabla \times}{\longrightarrow}&
       H^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
-      L^2(\Omega)&
-      \overset{0}{\longrightarrow} \{0\}
+      L^2(\Omega)
     \end{array}]
     
 An important result is that the diagram transfers to the discrete level
-latexmath:[\begin{array}{ccccccccccc}
+latexmath:[\begin{array}{cccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
       H^1(\Omega)&
@@ -45,8 +44,7 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{\nabla \times}{\longrightarrow}&
       H^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
-      L^2(\Omega)&
-      \overset{0}{\longrightarrow} \{0\} \\
+      L^2(\Omega) \\
       ~ &
       ~ & 
       \left\downarrow\right.\pi_h&
@@ -56,7 +54,6 @@ latexmath:[\begin{array}{ccccccccccc}
       \left\downarrow\right.\pi_h&
       ~ &
       \left\downarrow\right.\pi_h&
-      ~ &
       ~ \\
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
@@ -66,15 +63,14 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{\nabla \times}{\longrightarrow}&
       W_h&
       \overset{\nabla \cdot}{\longrightarrow}&
-      Z_h&
-      \overset{0}{\longrightarrow} \{0\} \\
+      Z_h\\
     \end{array}]
 it is communative which reads:
 latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
-latexmath:[\begin{array}{ccccccccccc}
+latexmath:[\begin{array}{cccccccccc}
       \mathbb{R}& 
       \overset{id}{\longrightarrow}&
       H^1_0(\Omega)&
@@ -83,8 +79,7 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{\nabla \times}{\longrightarrow}&
       H_0^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
-      L^2_0(\Omega)&
-      \overset{0}{\longrightarrow} \{0\}
+      L^2_0(\Omega)
     \end{array}]
 
 [source,cpp]
