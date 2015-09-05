@@ -146,7 +146,9 @@ If you require specific flags, first install the dependency with the correct fla
 
 ## MacPorts
 
-**Introduction**: MacPorts is an open-source community projet which
+### Introduction
+
+MacPorts is an open-source community projet which
   aims to design an easy-to-use system for compiling, installing and
   upgrading open-source software on Mac OS X operating system. It is
   distributed under <a
@@ -158,7 +160,9 @@ If you require specific flags, first install the dependency with the correct fla
   Mac OS X release (10.9). If you want more information, please visit
   their [website](http://www.macports.org/).
 
-**Installation**: To install the latest version of MacPorts, please go
+### Installation
+
+To install the latest version of MacPorts, please go
 to [Installing
 MacPorts](http://www.macports.org/install.php) page and follow the instructions. The simplest way is to
 install it with the Mac OS X Installer using the `pkg` file
@@ -173,7 +177,9 @@ be installed in `/opt/local/bin` or `/opt/local/sbin`
 for example (that's here you'll find gcc4.7 or later e.g
 `/opt/local/bin/g++-mp-4.7` once being installed).
 
-**Key commands**: In your command-line, the software MacPorts is
+### Key commands
+
+In your command-line, the software MacPorts is
   called by the command `port`. Here is a list of key commands
   for using MacPorts, if you want more informations please go to <a
   href="http://guide.macports.org/#using.port">MacPorts Commands</a>.
@@ -185,7 +191,9 @@ for example (that's here you'll find gcc4.7 or later e.g
  * `port installed`: This action displays all ports installed and their versions, variants and activation status. You can also use the `-v` option to also display the platform and CPU  architecture(s) for which the ports were built, and any variants which were explicitly negated.
  * `sudo port upgrade mypackage`: This action updgrades installed ports and their dependencies when a `Portfile` in the repository has been updated. To avoid the upgrade of a port's dependencies, use the option `-n`.
 
-**Portfile**: A Portfile is a TCL script which usually contains simple
+### Portfile 
+
+A Portfile is a TCL script which usually contains simple
 keyword values and TCL expressions. Each package/port has a
 corresponding Portfile but it's only a part of a port description.
 Feel++ provides some mandatory Portfiles for its compilation which are
