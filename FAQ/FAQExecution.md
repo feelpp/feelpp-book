@@ -1,6 +1,6 @@
 Runtime FAQ
 ===========
-
+<!-- toc -->
 
 
 # Parallel computing

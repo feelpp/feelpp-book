@@ -1,5 +1,6 @@
 Development FAQ
 ===============
+<!-- toc -->
 
 # What does `_rebuild=true` do in `backend()` ?
 
