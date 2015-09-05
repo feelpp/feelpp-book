@@ -27,9 +27,16 @@ Here are some examples how to define function spaces
 // Mesh with triangles
 using MeshType = Mesh<Simplex<2>>;
 // Space spanned by P_3 Lagrange finite element
-FunctionSpace<Mesh<Simplex<2>,bases<Lagrange<3>>> Xh;
-Pch_type<Mesh>
+FunctionSpace<MeshType,bases<Lagrange<3>>> Xh;
+// is equivalent to (they are the same type)
+Pch_type<MeshType,3> Xh;
 
+// using the auto keyword
+MeshType mesh = loadMesh( _mesh=new MeshType );
+auto Xh = Pch<3>( mesh );
+// is equivalent to 
+auto Xh = FunctionSpace<MeshType,bases<Lagrange<3>>>::New(mesh);
+auto Xh = Pch_type<MeshType,3>::New( mesh );
 ```
 
 ```cpp
