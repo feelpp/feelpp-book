@@ -79,7 +79,7 @@ latexmath:[\begin{array}{ccccccc}
 
 Interpolation operators are provided as is or as shared pointers. The table below presents the alternatives.
 
-.Table List of Interpolation operators
+.Table of Interpolation operators
 |===
 | C++ object | C++ shared object| Mathematical operator 
 | `I(_domain=Xh,_image=Yh)` | `IPtr(...)` | latexmath:[I X_h \rightarrow Yh ]
