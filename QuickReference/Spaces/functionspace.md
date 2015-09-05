@@ -1,4 +1,5 @@
-# Function Spaces
+Function Spaces
+===============
 
 Function spaces support is provided by the `FunctionSpace` class
 
@@ -11,6 +12,14 @@ The `FunctionSpace`  class
  -  stores an interpolation data structure (\eg region tree) for rapid
   localisation of point sets (determining in which element they reside).
 
+|Function         | Function Space |
+|-----------------|------------|
+|`Pch<N>(mesh)`   | $$P^N_{c,h}$$ |
+|`Pchv<N>(mesh)`  | $$[P^N_{c,h}]^d$$|
+|`THch<N>(mesh)`  | $$[P^{N+1}_{c,h}]^d \times P^N_{c,h}$$|
+|`Dh<N>(mesh)`    | $$\mathbb{R}\mathbb{T}_h$$|
+|`Ned1h<N>(mesh)` | $$\mathbb{N}_h$$|
+
 
 ```cpp
  // space of continuous piecewise
@@ -19,13 +28,6 @@ The `FunctionSpace`  class
  FunctionSpace<Mesh<Simplex<2,2,3>,
                bases<Lagrange<3> > > Xh;
 ```
-
-
-
-
-
-
-
 
 ```cpp
 // continuous piecewise P3
@@ -87,10 +89,3 @@ with the various approximations.
 
 # Function Space helper functions
 
-Function         | Description
------------------|------------------------------
-`Pch<N>(mesh)`   | generates $$P^N_{c,h}$$
-`Pchv<N>(mesh)`  | generates $$[P^N_{c,h}]^d$$
-`THch<N>(mesh)`  | generates $$[P^{N+1}_{c,h}]^d \times P^N_{c,h}$$
-`Dh<N>(mesh)`    | generates $$\mathbb{R}\mathbb{T}_h$$
-`Ned1h<N>(mesh)` | generates $$\mathbb{N}_h$$
