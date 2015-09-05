@@ -22,7 +22,7 @@ The `FunctionSpace`  class
 |`Dh<N>(mesh)`    | `Dh_type<MeshType,N>`   | $$\mathbb{R}\mathbb{T}_h$$|
 |`Ned1h<N>(mesh)` | `Ned1h_type<MeshType,N>`| $$\mathbb{N}_h$$|
 
-Here are some examples how to define function spaces
+Here are some examples how to define function spaces with Lagrange basis functions.
 ```cpp
 // Mesh with triangles
 using MeshType = Mesh<Simplex<2>>;
@@ -35,32 +35,14 @@ Pch_type<MeshType,3> Xh;
 MeshType mesh = loadMesh( _mesh=new MeshType );
 auto Xh = Pch<3>( mesh );
 // is equivalent to 
-auto Xh = FunctionSpace<MeshType,bases<Lagrange<3>>>::New(mesh);
+auto Xh = FunctionSpace<MeshType,bases<Lagrange<3>>>::New( mesh );
 auto Xh = Pch_type<MeshType,3>::New( mesh );
 ```
 
-```cpp
-// continuous piecewise P3
-// approximations
-FunctionSpace<Mesh<Simplex<2> >,
-  bases<Lagrange<3,Scalar,
-                 Continuous> > > P3ch;
-// discontinuous piecewise P3
-// approximations
-FunctionSpace<Mesh<Simplex<2> >,
-  bases<Lagrange<3,Scalar,
-                 Discontinuous> > > P3dh;
-// mixed (P2 vectorial, P1 scalar,
-// P1 Scalar) approximation
-FunctionSpace<Mesh<Simplex<2>>,
- bases<Lagrange<2,Vectorial>,
-       Lagrange<1,Scalar>,
-       Lagrange<1,Scalar>>> P2P1P1;
-```
 
 The most important feature in `FunctionSpace`  is that it embeds the
-definition of element which allows for the strict definition of an \c
-Element of a `FunctionSpace`  and thus ensures the correctness of the
+definition of element which allows for the strict definition of an
+`Element` of a `FunctionSpace`  and thus ensures the correctness of the
 code.  An element has its representation as a vector - also in the
 case of product of multiple spaces. - The vector representation is
 parametrized by one of the linear algebra backends. Other supported
