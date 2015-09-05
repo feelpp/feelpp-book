@@ -8,6 +8,7 @@ The prerequisite of this section is to be able to .
 * [Define expressions](keywords.md)
 
 Then you can define and compute integrals
+* [Define intergration domain](Integrals/iterators.md)
 * [Compute integrals](Integrals/integrate.md)
 * [Compute mean value of a function](Integrals/mean.md)
 * [Compute norms](Integrals/norms.md)
