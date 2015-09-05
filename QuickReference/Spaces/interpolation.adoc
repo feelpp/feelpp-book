@@ -65,7 +65,9 @@ latexmath:[\begin{array}{cccccccccc}
       \overset{\nabla \cdot}{\longrightarrow}&
       Z_h\\
     \end{array}]
-it is communative which reads:
+
+The diagram is commutative which means that we have the following properties:
+
 latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
     
 > **Note** The diagram can be restricted to functions
