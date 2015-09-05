@@ -1,8 +1,9 @@
 Post-Processing and Visualization
 =================================
 
+<!- toc -->
 
-  # Introduction Introduction
+# Introduction Introduction
 
   Once the PDE is solved we usually would like to
   visualize the solution and possibly other data or fields associated
@@ -15,7 +16,7 @@ Post-Processing and Visualization
 
   To achieve this, Feel++ defines a so-called `Exporter`  object.
 
-  # VisPrinciples General principles
+#  General principles
 
   The library Feel itself does not have any visualization
   capabilities. However, it provides tools to export both scalar and
