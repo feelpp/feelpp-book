@@ -68,7 +68,7 @@ latexmath:[\begin{array}{cccccccccc}
 
 The diagram above is commutative which means that we have the following properties:
 
-latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
+latexmath:[\nabla(\pi_{c,h} u) = \pi_{\mathrm{curl},h}( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
