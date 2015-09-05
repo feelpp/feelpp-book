@@ -10,6 +10,6 @@ The prerequisites are
 
 Here are the steps through function spaces:
 * [Defining Notations](Spaces/notations.md)
-* [Function Space](Spaces/functionspace.md)
-* [Interpolation](Spaces/interpolation.md)
+* [Using Function Space](Spaces/functionspace.md)
+* [Using Interpolation](Spaces/interpolation.md)
 
