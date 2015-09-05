@@ -1,6 +1,12 @@
 Interpolation
 =============
 
+Feel++ has a very powerful interpolation framework which allows to seamlessly in parallel:
+ - transfer functions from one mesh to another
+ - transfer functions from one space type to another.
+
+The framework provides a set of C++ classes and C++ free-functions enabled  short, concise and expressive handling of interpolation.
+
 # De Rahm Diagram
 
 $$
