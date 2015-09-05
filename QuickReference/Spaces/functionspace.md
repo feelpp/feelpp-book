@@ -31,7 +31,7 @@ Here are some examples how to define function spaces with Lagrange basis functio
 
 // Mesh with triangles
 using MeshType = Mesh<Simplex<2>>;
-// Space spanned by P_3 Lagrange finite element
+// Space spanned by P3 Lagrange finite element
 FunctionSpace<MeshType,bases<Lagrange<3>>> Xh;
 // is equivalent to (they are the same type)
 Pch_type<MeshType,3> Xh;
@@ -53,10 +53,17 @@ An element has its representation as a vector, also in the case of product of mu
 ## Components
 
 ```cpp
-FunctionSpace<Mesh<Simplex<2> >,
-  bases<Lagrange<3,Scalar, Continuous> > > P3ch;
-// get an element from P3ch
+#include <feel/feeldiscr/pch.hpp>
+
+// Mesh with triangles
+using MeshType = Mesh<Simplex<2>>;
+
+// define P3 Lagrange finite element space
+Pch_type<MeshType,3> P3ch;
+
+// definie an element from P3ch, initialized to 0
 auto u = P3ch.element();
+
 FunctionSpace<Mesh<Simplex<2> >,
  bases<Lagrange<2,Vectorial>, Lagrange<1,Scalar>,
        Lagrange<1,Scalar> > > P2P1P1;
@@ -74,7 +81,7 @@ auto q = U.element<2>();
 
 ## Interpolation
 
-Finally Feel++ provides the Lagrange, $$\mathcal{I}_c^{\mathrm{lag}}, \mathcal{I}_d^{\mathrm{lag}}$$, Crouzeix-Raviart, $$\mathcal{I}^{\mathrm{cr}}$$,
+Feel++ provides the Lagrange, $$\mathcal{I}_c^{\mathrm{lag}}, \mathcal{I}_d^{\mathrm{lag}}$$, Crouzeix-Raviart, $$\mathcal{I}^{\mathrm{cr}}$$,
 Raviart-Thomas, $$\mathcal{I}^{\mathrm{RT}}$$ and N&eacute;d&eacute;lec, $$\mathcal{I}^{\mathrm{N}}$$ global interpolation operators.
 In abstract form, they read
 $$
