@@ -70,7 +70,7 @@ latexmath:[\begin{array}{ccccccccccc}
       \overset{0}{\longrightarrow} \{0\} \\
     \end{array}]
 it is communative which reads:
-latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ), \ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
+latexmath:[\nabla(\pi_h u) = \pi_h( \nabla u ),\ \nabla\times(\pi_h u) = \pi_h( \nabla\times u ),\ \nabla\cdot(\pi_h u) = \pi_h( \nabla\cdot u )]
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
