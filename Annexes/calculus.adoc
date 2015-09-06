@@ -1,5 +1,7 @@
 = Calculus
 
+<!-- toc --> 
+
 == Green Formula
 
 Let $$\Omega$$ be a non-empty open of $$\mathbb{R}^n$$, denote  $$\partial\Omega$$ its boundary. Denote $$\mathbf{n}$$ the local normal to $$\partial\Omega$$.
@@ -104,6 +106,8 @@ $$
  \left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}
 
 \end{aligned}$$
+
+=== Some change of variable formulas 
 
 Denote $$f: K \mapsto \mathbb{R}$$ and $$\hat{f}: \hat{K} \mapsto \mathbb{R}$$ such that $$\hat{f} = f \circ F$$ and 
 $$\mathbf{F}: K \mapsto \mathbb{R}^d$$ and $$\mathbf{\hat{F}}: \hat{K} \mapsto \mathbb{R}^d$$ such that
