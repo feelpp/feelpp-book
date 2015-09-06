@@ -2,16 +2,16 @@
 
 == Green Formula
 
-Let latexmath:[\Omega] be a non-empty open of latexmath:[\mathbb{R}^n], de fronti\`ere not\'ee latexmath:[\partial\Omega]. On note latexmath:[n] la normale locale sur latexmath:[\partial\Omega].
+Let $$\Omega$$ be a non-empty open of latexmath:[\mathbb{R}^n], de fronti\`ere not\'ee latexmath:[\partial\Omega]. On note latexmath:[n] la normale locale sur latexmath:[\partial\Omega].
 
 On a les propri\'et\'es suivantes, appel\'ees formules de Green, qui sont en fait simplement des cas particuliers d'int\'egration par parties :
 
-latexmath:[ 
+$$
 \int_\Omega \frac{\partial u}{\partial x_k}\; v\; dx = - \int_\Omega u \; \frac{\partial v}{\partial x_k} \; dx + \int_{\partial \Omega} u\, v \; (e_k.n)\; ds 
-]
+$$
 
 
-o\`u latexmath:[e_k] est le vecteur unitaire dans la direction latexmath:[x_k].
+o\`u $$e_k$$ est le vecteur unitaire dans la direction $$x_k$$.
 
 latexmath:[\int_\Omega \Delta u \; v\; dx = - \int_\Omega \nabla u \; \nabla v \; dx + \int_{\partial \Omega} \frac{\partial u}{\partial n}\, v \; ds]
 
