@@ -2,12 +2,13 @@
 
 == Green Formula
 
-Let $$\Omega$$ be a non-empty open of $$\mathbb{R}^n$$, de fronti\`ere not\'ee $$\partial\Omega$$. On note $$n$$ la normale locale sur $$\partial\Omega$$.
+Let $$\Omega$$ be a non-empty open of $$\mathbb{R}^n$$, denote  $$\partial\Omega$$ its boundary. Denote $$\mathbf{n}$$ the local normal to $$\partial\Omega$$.
 
-On a les propri\'et\'es suivantes, appel\'ees formules de Green, qui sont en fait simplement des cas particuliers d'int\'egration par parties :
+We have the following properties called Green formulas which are simply special cases of integration by parts.
+
 
 $$
-\int_\Omega \frac{\partial u}{\partial x_k}\; v\; dx = - \int_\Omega u \; \frac{\partial v}{\partial x_k} \; dx + \int_{\partial \Omega} u\, v \; (e_k.n)\; ds
+\int_\Omega \frac{\partial u}{\partial x_k}\; v\; dx = - \int_\Omega u \; \frac{\partial v}{\partial x_k} \; dx + \int_{\partial \Omega} u\, v \; (e_k \cdot \mathvf{n})\; ds
 $$
 
 
@@ -39,21 +40,20 @@ On a alors la formule de changement de variable :
 $$\int_K u(x)\; dx = \int_{\hat{K}} u(F(\hat{x}))\; \left| \hbox{det } J_F(\hat{x}) \right| \; d\hat{x}$$
 
 
-> **Note** dans la m\'ethode des \'el\'ements finis, on aura souvent \`a calculer de tels changements de variables dans des int\'egrales du type $$\ds{ \int_K Hu(x)\; dx }$$, o\`u $$H$$ est un op\'erateur aux d\'eriv\'ees partielles (gradient, laplacien, \ldots). Il faudra alors faire attention au changement de variable dans l'opérateur lui-m\^eme. Par exemple dans $$\RR^2$$ :
+> **Note** dans la m\'ethode des \'el\'ements finis, on aura souvent \`a calculer de tels changements de variables dans des int\'egrales du type $$\int_K Hu(x)\; dx$$, o\`u $$H$$ est un op\'erateur aux d\'eriv\'ees partielles (gradient, laplacien, \ldots). Il faudra alors faire attention au changement de variable dans l'opérateur lui-m\^eme. Par exemple dans $$\mathbb{R}^2$$ :
+
 $$\begin{eqnarray*}
-\int_K (\nabla u(x))^2\; dx & = & {\ds \int_K \left[ \left(\frac{\partial u(x,y)}{\partial x} \right)^2 + \left(\frac{\partial u(x,y)}{\partial y} \right)^2 \right$$\; dx\; dy }\\
-& = & \ds{ \int_{\hat{K}} \left[ \left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial x}  \right)^2 +
-\left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial y} \right)^2 \right$$ \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
-}\\
+\int_K (\nabla u(x))^2\; dx & = & \int_K \left[ \left(\frac{\partial u(x,y)}{\partial x} \right)^2 + \left(\frac{\partial u(x,y)}{\partial y} \right)^2 \right]\; dx\; dy \\
 
-& = & \ds{ \int_{\hat{K}} \left[ \left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial
- \hat{x}} \;  \frac{\partial \hat{x}}{\partial x} + \frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial x} \right)^2  \right.
-}\\
+& = & \int_{\hat{K}} \left[ \left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial x}  \right)^2 +
+\left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial y} \right)^2 \right] \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}\\
 
-& & \qquad
- \ds{ \left. +
-\left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{x}} \;  \frac{\partial \hat{x}}{\partial y} + \frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial y} \right)^2 \right$$ \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
-}
+& = & \int_{\hat{K}} \left[ \left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial
+ \hat{x}} \;  \frac{\partial \hat{x}}{\partial x} + \frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial x} \right)^2  \right.\\
+
+& & \qquad \left. +
+\left(\frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{x}} \;  \frac{\partial \hat{x}}{\partial y} + \frac{\partial u(F(\hat{x},\hat{y}))}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial y} \right)^2 \right] \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
+
 \end{eqnarray*}
 $$
 
@@ -61,7 +61,7 @@ $$
 \quad
  \int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial
  \hat{x}} \;  \frac{\partial \hat{x}}{\partial x} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial x} \right)^2 +
-\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{\partial \hat{x}}{\partial y} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial y} \right)^2 \right$$ \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
+\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{\partial \hat{x}}{\partial y} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial y} \right)^2 \right] \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
 $$
 
 Dans le cas d'une transformation $F$ affine, not\'ee :
@@ -83,7 +83,7 @@ $$
 
 Le calcul pr\'ec\'edent devient alors :
 $$\int_K (\nabla u(x))^2\; dx = \int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{d}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{-c}{D} \right)^2 +
-\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right$$ |D| \; \; d\hat{x}\, d\hat{y}$$
+\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right] |D| \; \; d\hat{x}\, d\hat{y}$$
 
 $$\qquad\qquad\quad\qquad = \frac{1}{|D|}\; \int_{\hat{K}} \left[ \left( d\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} - c\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 +
-\left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right$$  \; \; d\hat{x}\, d\hat{y}$$
+\left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}$$
