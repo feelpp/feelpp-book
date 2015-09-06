@@ -123,14 +123,3 @@ $$
 \int_{\partial K}\ \mathbf{F}( x )\ \cdot\ \mathbf{n}(x) dx & = \int_{\partial \hat{K}} \mathbf{\hat{F}}( \xi )\  \cdot \Big(B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \Big) \ J^e( \xi )\ d \xi
 \end{aligned}
 $$
-$$
-    
-$$
-
-$$
-
-$$
-$$
-
- $$
- 
