@@ -27,19 +27,26 @@ $$
 == Change of variables in integrals
 
 
-Soient $$\hat{K}$$ et $$K$$ deux ouverts de $$\mathbb{R}^n$$. Soit $$F$$ un $${\cal C}^1$$- diff\'eomorphisme de $$\hat{K}$$ dans $$K$$, c'est \`a dire une bijection de classe ${\cal C}^1$ dont la r\'eciproque est \'egalement de classe ${\cal C}^1$. On note $(e_1,\ldots,e_n)$ la base canonique de $\RR^n$ et
-
-$$F : x=\sum_{i=1}^n x_i \, e_i \; \longrightarrow \; F(x) = \sum_{i=1}^n F_i(x_1,\ldots,x_n) \, e_i$$
-
-La matrice jacobienne de $F$ au point $x$, not\'ee $J_F(x)$ est la matrice $n\times n$ d\'efinie par
-
-$$\left( J_F(x) \right)_{ij} = \frac{\partial F_i}{\partial x_j}(x_1,\ldots,x_n)
-\qquad 1\le i,j \le n$$
+Let $$\hat{K}$$ and $$K$$ be two open set of $$\mathbb{R}^n$$. Let $$F$$ be a $${\cal C}^1$$-diffeomorphism from $$\hat{K}$$ to $$K$$, i.e. a bijection of class $${\cal C}^1$$ whose reciprocal is also of class $${\cal C}^1$$. Denote  $$(e_1,\ldots,e_n)$$ the canonical basis of $$\mathbb{R}^n$$.  
 
 
-On a alors la formule de changement de variable :
+We have
 
-$$\int_K u(x)\; dx = \int_{\hat{K}} u(F(\hat{x}))\; \left| \hbox{det } J_F(\hat{x}) \right| \; d\hat{x}$$
+$$
+F : x=\sum_{i=1}^n x_i \, e_i \; \longrightarrow \; F(x) = \sum_{i=1}^n F_i(x_1,\ldots,x_n) \, e_i
+$$
+
+The jacobian matrix of $$F$$ at a point $$x$$, denote $$J_F(x)$$ is the matrix of size $$n\times n$$ such that its entries read:
+
+$$
+\left( J_F(x) \right)_{ij} = \frac{\partial F_i}{\partial x_j}(x_1,\ldots,x_n) \qquad 1\le i,j \le n
+$$
+
+We have the following formula for the change of variable to compute an integral over $$K$$ as an integral over $$\hat{K}$$
+
+$$
+\int_K u(x)\; dx = \int_{\hat{K}} u(F(\hat{x}))\; \left| \mathrm{det} J_F(\hat{x}) \right| \; d\hat{x}
+$$
 
 
 > **Note** dans la m\'ethode des \'el\'ements finis, on aura souvent \`a calculer de tels changements de variables dans des int\'egrales du type $$\int_K Hu(x)\; dx$$, o\`u $$H$$ est un op\'erateur aux d\'eriv\'ees partielles (gradient, laplacien, \ldots). Il faudra alors faire attention au changement de variable dans l'opérateur lui-m\^eme. Par exemple dans $$\mathbb{R}^2$$ :
@@ -66,26 +73,60 @@ $$
 \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{\partial \hat{x}}{\partial y} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{\partial \hat{y}}{\partial y} \right)^2 \right] \left| \hbox{det} J_F(\hat{x}) \right| \; \; d\hat{x}\, d\hat{y}
 $$
 
-Dans le cas d'une transformation $F$ affine, not\'ee :
-
-$$\left\{
+In the case the transformation $$F$$ is affine, for example
+$$
+\left\{
 \begin{array}{lll}
 x & = & a\hat{x} + b\hat{y} + e\\
 y & = & c\hat{x} + d\hat{y} + f
 \end{array}
-\right.$$
+\right.
+$$
 
-we have now
+we have 
 
 $$
-\hat{x} = \frac{d(x-e)-b(y-f)}{D},\qquad
-\hat{y} = \frac{-c(x-e)+a(y-f)}{D},\quad \hbox{ et }
-\left| \hbox{det} J_F(\hat{x}) \right| = D = ad-bc
-\vspace*{5 mm}$$
+\begin{aligned}
+\hat{x} &= \frac{d(x-e)-b(y-f)}{D},\\
+\hat{y} &= \frac{-c(x-e)+a(y-f)}{D},\\
+\left| \hbox{det} J_F(\hat{x}) \right| &= D = ad-bc
+\end{aligned}
+$$
 
-Le calcul pr\'ec\'edent devient alors :
-$$\int_K (\nabla u(x))^2\; dx = \int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{d}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{-c}{D} \right)^2 +
-\left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right] |D| \; \; d\hat{x}\, d\hat{y}$$
+The previous calculus becomes
+$$
+\begin{aligned}
+\int_K (\nabla u(x))^2\; dx &= 
+\int_{\hat{K}} \left[ \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{d}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{-c}{D} \right)^2 + 
+   \left(\frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \;  \frac{-b}{D} + \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \; \frac{a}{D} \right)^2 \right] |D| \; \; d\hat{x}\, d\hat{y}\\
 
-$$\qquad\qquad\quad\qquad = \frac{1}{|D|}\; \int_{\hat{K}} \left[ \left( d\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} - c\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 +
-\left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}$$
+& = \frac{1}{|D|}\; \int_{\hat{K}} \left[  \left( d\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} - c\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 +
+ \left(-b\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{x}} \; + a\, \frac{\partial \hat{u}(\hat{x},\hat{y})}{\partial \hat{y}} \right)^2 \right]  \; \; d\hat{x}\, d\hat{y}
+
+\end{aligned}$$
+
+Denote $$f: K \mapsto \mathbb{R}$$ and $$\hat{f}: \hat{K} \mapsto \mathbb{R}$$ such that $$\hat{f} = f \circ F$$ and 
+$$\mathbf{F}: K \mapsto \mathbb{R}^d$$ and $$\mathbf{\hat{F}}: \hat{K} \mapsto \mathbb{R}^d$$ such that
+  $$\hat{\mathbf{F}} = \mathbf{F} \circ \chi^e$$.
+
+Moreover denote  $$\mathbf{n}$$ the local outward normal to $$\Omega$$ and $$\mathbf{n}$$ the local outward normal to $$\hat{\Omega}$$.
+  
+we have the following relations
+$$ 
+\begin{aligned}
+\int_{K} \ f\ dx\ &= \int_{\hat{K}} f( \chi^e(\xi) ) J^e( \xi )\ d \xi \ =\ \int_{\Omst} \hat{f}(\xi) J^e( \xi )\ d \xi\\
+
+\int_{K}\ \nabla f\ dx\ &=\ \int_{\hat{K}} \Big(\nabla^{\text{st}} \underbrace{\hat{f}(\xi)}_{f \circ \chi^e(\xi)} B^e(\xi)\Big) J^e( \xi )\ d \xi
+\end{aligned}
+$$
+$$
+    
+$$
+
+$$
+\int_{\partial \Om{e}}\ f( x )\ dx = \int_{\partial \Omst} \hat{f}(\xi)\  \| B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \|\ J^e( \xi )\ d \xi
+$$
+$$
+\int_{\partial \Om{e}}\ \mathbf{F}( x )\ \cdot\ \mathbf{n}(x) dx = \int_{\partial \Omst} \mathbf{\hat{F}}( \xi )\  \cdot \Big(B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \Big) \ J^e( \xi )\ d \xi
+ $$
+ 
