@@ -114,9 +114,13 @@ Moreover denote  $$\mathbf{n}$$ the local outward normal to $$\Omega$$ and $$\ma
 we have the following relations
 $$ 
 \begin{aligned}
-\int_{K} \ f\ dx\ &= \int_{\hat{K}} f( \chi^e(\xi) ) J^e( \xi )\ d \xi \ =\ \int_{\Omst} \hat{f}(\xi) J^e( \xi )\ d \xi\\
+\int_{K} \ f\ dx\ &= \int_{\hat{K}} f( \chi^e(\xi) ) J^e( \xi )\ d \xi \ =\ \int_{\hat{K}} \hat{f}(\xi) J^e( \xi )\ d \xi\\
 
-\int_{K}\ \nabla f\ dx\ &=\ \int_{\hat{K}} \Big(\nabla^{\text{st}} \underbrace{\hat{f}(\xi)}_{f \circ \chi^e(\xi)} B^e(\xi)\Big) J^e( \xi )\ d \xi
+\int_{K}\ \nabla f\ dx\ &=\ \int_{\hat{K}} \Big(\nabla^{\text{st}} \underbrace{\hat{f}(\xi)}_{f \circ \chi^e(\xi)} B^e(\xi)\Big) J^e( \xi )\ d \xi\\
+
+\int_{\partial K}\ f( x )\ dx &= \int_{\partial \hat{K}} \hat{f}(\xi)\  \| B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \|\ J^e( \xi )\ d \xi\\
+
+\int_{\partial K}\ \mathbf{F}( x )\ \cdot\ \mathbf{n}(x) dx & = \int_{\partial \hat{K}} \mathbf{\hat{F}}( \xi )\  \cdot \Big(B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \Big) \ J^e( \xi )\ d \xi
 \end{aligned}
 $$
 $$
@@ -124,9 +128,9 @@ $$
 $$
 
 $$
-\int_{\partial \Om{e}}\ f( x )\ dx = \int_{\partial \Omst} \hat{f}(\xi)\  \| B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \|\ J^e( \xi )\ d \xi
+
 $$
 $$
-\int_{\partial \Om{e}}\ \mathbf{F}( x )\ \cdot\ \mathbf{n}(x) dx = \int_{\partial \Omst} \mathbf{\hat{F}}( \xi )\  \cdot \Big(B^e(\xi)^T \ \mathbf{n^{\text{st}}}(\xi) \Big) \ J^e( \xi )\ d \xi
+
  $$
  
