@@ -66,4 +66,4 @@ make
 ```
 You should consider running parallel compilation (`make -j 12` for example).
 #### Optional: installation
-The one that want Feel++ installed in his system can use `make install`. For more information, we refer to the cmake documentation.
+The one that want Feel++ installed in his system can use `make install`. For more information, we refer to the cmake do
