@@ -1,6 +1,6 @@
 Download Feel++ sources
 =======================
-
+<!-- toc -->
 # Getting the source via an archive
 
 Feel++ is distributed as a tarball once in a while. The tarballs are available :
