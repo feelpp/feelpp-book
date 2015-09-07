@@ -3,7 +3,6 @@
 * [Introduction](README.md)
    * [This book](book.md)
    * [Credits](credits.md)
-   * [Download](GettingStarted/download.md)
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
    * [Prerequisites](prerequisites.md)
