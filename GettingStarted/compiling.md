@@ -1,5 +1,6 @@
 Compiling Feel++ from sources
 =============================
+<!-- toc -->
 
 # Quick start
 
