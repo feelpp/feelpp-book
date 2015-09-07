@@ -99,7 +99,7 @@ Feel++ provides some helper functions to apply on set of entities. We denote by 
 | WorldComm | worldComm(range_t) | returns the WorldComm associated to the entities set |
 
 ## Create a new range
-A range can be also build directly by the user. This customized range is stored in a std container which contains the c++ references of entity object. We use boost::reference_wrapper for store these reference and avoid copy of mesh data. All entities enumerated in the range must have same type (elements,faces,edges,points). Below we have an example of range building represent all active elements in mesh for the current partition (i.e. identical to elements(mesh)). 
+A range can be also build directly by the user. This customized range is stored in a std container which contains the c++ references of entity object. We use boost::reference_wrapper for take c++ references and avoid copy of mesh data. All entities enumerated in the range must have same type (elements,faces,edges,points). Below we have an example which select all active elements in mesh for the current partition (i.e. identical to elements(mesh)). 
 ```cpp
 auto mesh = ...;
 // define reference entity type
@@ -116,4 +116,7 @@ auto myrange = boost::make_tuple( mpl::size_t<MESH_ELEMENTS>(),
                                   myelts->begin(),myelts->end(),myelts );
 
 ```
-
+Next, this range can be used in feel++ language.
+```cpp
+double eval = integrate(_range=myrange,_expr=cst(1.)).evaluate()(0,0);
+```
