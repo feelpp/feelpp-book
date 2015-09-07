@@ -97,3 +97,23 @@ Feel++ provides some helper functions to apply on set of entities. We denote by 
 |------|----------|-------------|
 | size_type | nelements(range_t,bool) | returns the local number of elements in entities set range_t of bool is false, other the global number which requires communication (default: global number) |
 | WorldComm | worldComm(range_t) | returns the WorldComm associated to the entities set |
+
+## Create a new range
+A range can be also build directly by the user. This customized range is stored in a std container which contains the c++ references of entity object. We use boost::reference_wrapper for store these reference and avoid copy of mesh data. All entities enumerated in the range must have same type (elements,faces,edges,points). Below we have an example of range building represent all active elements in mesh for the current partition (i.e. identical to elements(mesh)). 
+```cpp
+auto mesh = ...;
+// define reference entity type
+typedef boost::reference_wrapper<typename mesh_type::element_type const> element_ref_type;
+// store entities in a vector
+typedef std::vector<element_ref_type> cont_range_type;
+boost::shared_ptr<cont_range_type> myelts( new cont_range_type );
+for (auto const& elt : elements(mesh) )
+{
+    myelts->push_back(boost::cref(elt));
+}
+// generate a range object usable in feel++
+auto myrange = boost::make_tuple( mpl::size_t<MESH_ELEMENTS>(),
+                                  myelts->begin(),myelts->end(),myelts );
+
+```
+
