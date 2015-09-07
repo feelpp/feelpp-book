@@ -1,12 +1,10 @@
 # Mean value of a function {#mean}
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean value of a function thanks to the mean() function :
-<br><center>$$
-  \begin{aligned}
- \bar{f}&=\frac{1}{|\Omega|}\int_\Omega f\\
-&=\frac{1}{\int_\Omega 1}\int_\Omega f.
-  \end{aligned}
-$$</center><br>
+<center>
+$$ \bar{f}=\frac{1}{|\Omega|}\int_\Omega f=\frac{1}{\int_\Omega 1}\int_\Omega f $$
+</center>
+
 
 **Interface***
 ```cpp
