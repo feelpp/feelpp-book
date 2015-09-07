@@ -4,11 +4,9 @@
 
 
 Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
-<br><center>$$
-  \begin{aligned}
-\parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2}
-  \end{aligned}
-$$</center><br>
+<center>
+$$\parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2}$$
+</center>
 
 ### Interface
 
