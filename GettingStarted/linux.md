@@ -1,5 +1,6 @@
 Feel++ on Linux
 ===============
+<!-- toc -->
 
 # Debian
 
@@ -25,6 +26,7 @@ The interested user might want to look at the following Ubuntu Launchpad Feel++ 
   Page for all Ubuntu versions](https://launchpad.net/ubuntu/+source/feel++)
 
 ## precise Ubuntu Precise - 12.04
+This section is outdated
 ```
 	sudo add-apt-repository -y ppa:feelpp/ppa
 	sudo add-apt-repository -y ppa:feelpp/petsc
@@ -48,14 +50,20 @@ The installation procedure is currently [as follows](https://github.com/feelpp/f
 ```
 -->
 ### Configuration
+First of all, you have to install dependencies
 ```
  sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev 
  ```
  ### Cmake
+ Then, in your chosen build directory, you have to run the cmake process.
 ```sh
-cmake ../feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPILER=`which clang-3.6` -DFEELPP_MINIMAL_CONFIGURATION=ON -DFEELPP_ENABLE_NLOPT=OFF
+cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPILER=`which clang-3.6` -DFEELPP_MINIMAL_CONFIGURATION=ON -DFEELPP_ENABLE_NLOPT=OFF
 ```
 ### Compilation
+And at last, the compiling process.
 ```sh
 make
 ```
+You should consider running parallel compilation (`make -j 12` for example).
+#### Optional: installation
+The one that want Feel++ installed in his system can use `make install`. For more information, we refer to the cmake documentation.
