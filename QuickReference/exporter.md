@@ -76,10 +76,9 @@ Post-Processing and Visualization
 |![](../pngs/visualisation/sphere_p1.png)|![](../pngs/visualisation/sphere_p2.png) | ![](../pngs/visualisation/sphere_p3.png) | ![](../pngs/visualisation/sphere_p4.png) | 
 
 # Visualization {Visualization}
-
-  We would like to visualize the function $$u=\sin(\pi x)$$ over
-  $$\Omega=\{(x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1\}$$. $$\Omega$$
-  is approximated by $$\Omega_h$$.
+We would like to visualize the function $$u=\sin(\pi x)$$ over 
+$$\Omega= \{ (x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1 \} $$
+$$\Omega$$ is approximated by $$\Omega_h$$.
 
   To define $$\Omega$$ the code reads   
   mesh   
