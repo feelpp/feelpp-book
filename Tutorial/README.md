@@ -5,6 +5,17 @@ Before reading the following, it is recommended to have a look to :
 
 Examples, config files and geometries can be found [on the github repository](https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code).
 
+To try it on your machine, you have to do:
+```sh
+cd your_feelpp_root_source/research
+git clone https://github.com/feelpp/feelpp-book
+cd your_build_dir
+cmake your_feelpp_root_source/ -DFEELPP_ENABLE_RESEARCH_FEELPP-BOOK=ON
+cd your_build_dir/research/feelpp-book/Tutorial/code
+make 
+```
+
+
 The step by step tutorial is decomposed into :   
 - [General information about directories management](01-OutputDirectories.md)
 - [Setting up the Feel++ environment](02-SettingUpEnvironment.md)
