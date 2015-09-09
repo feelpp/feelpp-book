@@ -3,8 +3,6 @@ Before reading the following, it is recommended to have a look to :
 - [Install Feel++](../GettingStarted/download.md)
 - [Using Feel++](../GettingStarted/compiling.md)
 
-After installing and compiling correctly Feel++, you can find all the examples that we used here to : `your_build_folder/doc/manual/tutorial`
-
 Examples, config files and geometries can be found [on the github repository](https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code).
 
 The step by step tutorial is decomposed into :   
