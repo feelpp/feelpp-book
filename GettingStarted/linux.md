@@ -49,8 +49,7 @@ The installation procedure is currently [as follows](https://github.com/feelpp/f
 	sudo apt-get install feel++-apps libfeel++-dev
 ```
 -->
-To our best knowledge, Ubuntu 14.04 does not support C++14 at this time.
-You have to use a `ppa` repository:
+Ubuntu 14.04 does not support C++14 at this time, however they maintain a ppa on lauchpad which provide clang and gcc versions that do support C++14
 ```sh
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
