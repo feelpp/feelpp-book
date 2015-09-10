@@ -59,7 +59,7 @@ sudo apt-get install g++-4.9
 ### Configuration
 First of all, you have to install dependencies
 ```
- sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev 
+ sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev libeigen3-dev
  ```
  ### Cmake
  Then, in your chosen build directory, you have to run the cmake process.
