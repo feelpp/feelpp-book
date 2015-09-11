@@ -175,5 +175,8 @@ marker_on
 You can also apply boundary conditions using :
 [source,cpp]
 --
-  a+=on(_range=markedfaces(mesh,"top"),_element=u[Component::Y],_rhs=l,_expr=cst(0.))
+  a+=on(_range=markedfaces(mesh,"top"),
+        _element=u[Component::Y],
+        _rhs=l,
+        _expr=cst(0.))
 --
