@@ -145,7 +145,7 @@ solve(_solution, _rhs, _rebuild, _name);
 
 | `_name`
 | string(Default = "")
-| name of the associated backend
+| name of the associated [backend](solver.md)
 
 ==== Example
 
