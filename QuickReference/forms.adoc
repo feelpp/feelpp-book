@@ -10,9 +10,7 @@ We suppose in this section that you know how to define your [Mesh](mesh.md) and 
 
 There are Feel++ tools you need to create linear and bilinear forms in order to solve variational formulation.
 
-Notations:
-* `u`  element from your trial function space (unknown function)
-* `v`  element from your test function space
+> **Note** from now on, `u`  denotes an element from your trial function space (unknown function) and  `v` an  element from your test function space
 
 == Building Forms
 
