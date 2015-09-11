@@ -37,7 +37,7 @@ auto l = form1(_test=Xh);
 |===
 
 
-==== Example
+Here are some examples taken from the link:../Tutorial/README.md[Feel++ tutorial].
 
 From `mylaplacian.cpp`   
 
