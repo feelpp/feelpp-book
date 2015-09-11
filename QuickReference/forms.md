@@ -10,7 +10,7 @@ Notations:
 * `u`  element from your trial function space (unknown function)
 * `v`  element from your test function space
 
-# Forms_Building Building Forms
+# Building Forms
 ##form1 form1
 **Interface***
 ```cpp
