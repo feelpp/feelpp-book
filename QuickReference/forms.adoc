@@ -217,8 +217,9 @@ a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
       _expr=expr<2,1,5>(u_exact,syms));
 --
 
-You can also apply boundary conditions using :
+You can also apply boundary conditions per component:
 [source,cpp]
+.Component-wise Dirichlet conditions
 --
 a+=on(_range=markedfaces(mesh,"top"),
       _element=u[Component::Y],
