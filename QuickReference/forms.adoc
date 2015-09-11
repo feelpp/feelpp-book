@@ -128,9 +128,9 @@ a+= integrate(_range=elements(mesh),
 
 Once you created your linear and bilinear forms you can use the `solve()`  member function of your bilinear form.  
 
-Here is an example
-.Solve find latexmath:[u \in X_h \text{ such that } a(u,v)=l(v) \forall v \in X_h]
+The following generic example solves: find latexmath:[u \in X_h \text{ such that } a(u,v)=l(v) \forall v \in X_h]
 [source,cpp]
+.Example
 --
 auto Xh = ...; // function space
 auto u = Xh->element();
@@ -140,7 +140,7 @@ auto l = form1(_test=Xh);
 a.solve(_solution=u, _rhs=l, _rebuild=false, _name="");
 --
 
-.Table of parameters
+.Table of arguments for `solve()`
 |===
 | Name | Parameter | Description | Status
 
