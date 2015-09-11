@@ -35,10 +35,11 @@ When materials are closed to incompressibility formulation in displacement/press
 
 option: `mechanicalproperties.compressible.volumic_law`
 
+Boundary conditions and volumic forces are set in the json files
+
 .Boundary conditions
 |===
 | Name | Options  
-
 
 | Dirichlet 
 | faces, edges and component-wise
@@ -51,5 +52,14 @@ option: `mechanicalproperties.compressible.volumic_law`
 
 | Robin 
 | TODO
+
+|===
+
+.Volumic forces
+|===
+| Name | Options  
+
+| Expression
+| Vectorial
 
 |===
