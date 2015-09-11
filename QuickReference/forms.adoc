@@ -141,12 +141,14 @@ The function `on()`  allows you to add conditions to your bilinear form before u
 
 ==== Interface
 
-```cpp
+[source,cpp]
+--
 on(_range, _rhs, _element, _expr);
-```
+--
+
 Required Parameters:
-* `_range`  domain concerned by this condition (see \ref Integrals ).
-* `_rhs`  right hand side. The linear form.
+. `_range`  domain concerned by this condition (see [Integrals]() ).
+. `_rhs`  right hand side. The linear form.
 * `_element`  element concerned.
 * `_expr`  the condition.
 
@@ -167,7 +169,7 @@ a+=on(_range=boundaryfaces(mesh),
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
 From `mystokes.cpp`:   
-marker_on   
+
 [source,cpp]
 --
 a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
