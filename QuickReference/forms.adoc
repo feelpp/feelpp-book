@@ -23,7 +23,7 @@ To construct a linear form latexmath:[\ell: X_h \rightarrow \mathbb{R}], proceed
 auto mesh = ...;
 // build a P1/Q1 approximation space
 auto Xh = Pch<1>( mesh );
-auto \ell = form1(_test=Xh);
+auto l = form1(_test=Xh);
 ```
 
 Required Parameters:
