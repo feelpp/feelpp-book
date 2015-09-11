@@ -167,22 +167,22 @@ a.solve(_solution=u, _rhs=l, _rebuild=false, _name="");
 
 Here are some examples from the link:../Tutorial/README.md[Feel++ tutorial].
 
-From `laplacian.cpp`:   
 [source,cpp]
+.From `laplacian.cpp`
 --
 // solve the equation  a(u,v) = l(v)  
 a.solve(_rhs=l,_solution=u);
 --
 
-=== Using `on`
+==== Using `on` for Dirichlet conditions
 
-The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.
+The function `on()`  allows you to add Dirichlet  conditions to your bilinear form before using the `solve`  function.
 
-==== Interface
-
+The interface is as follows
 [source,cpp]
+.Interface
 --
-on(_range, _rhs, _element, _expr);
+on(_range=..., _rhs=..., _element=..., _expr=...);
 --
 
 Required Parameters:
@@ -194,10 +194,10 @@ Required Parameters:
 
 This function is used with += operator.
 
-==== Example
+Here are some examples from the link:../Tutorial/README.md[Feel++ tutorial].
 
-From `mylaplacian.cpp`:   
 [source,cpp]
+.From `mylaplacian.cpp`
 --
 // apply the boundary condition
 a+=on(_range=boundaryfaces(mesh), 
@@ -208,9 +208,10 @@ a+=on(_range=boundaryfaces(mesh),
 
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
-From `mystokes.cpp`:   
+
 
 [source,cpp]
+.From `mystokes.cpp`
 --
 a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
       _expr=expr<2,1,5>(u_exact,syms));
