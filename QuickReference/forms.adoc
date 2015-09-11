@@ -206,7 +206,7 @@ a+=on(_range=boundaryfaces(mesh),
       _expr=expr(soption("functions.alpha")) );
 --          
 
-There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
+There we add the condition: latexmath:[u  =  0  \text{ on }\;\partial\Omega \;].
 
 
 [source,cpp]
