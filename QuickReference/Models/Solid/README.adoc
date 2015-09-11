@@ -7,19 +7,49 @@
 
 When materials are closed to incompressibility formulation in displacement/pressure are available.
 
-.Table of Models for `material_law` option
+.Table of Models for `model` option
 |===
 | Model | Name 
 
 | Linear Elasticity 
 | `Elasticity`
 
-| SaintVenant Kirchhoff
+| Hyper Elasticity 
 | `Hyper-Elasticity`
+
+|===
+
+.Table of Models for `material_law` in hyper elasticity
+|===
+| Model | Name   | Volumic law
+
+| SaintVenant Kirchhoff
+| `SaintVenantKirchhoff`
+| classic, simo1985
 
 | NeoHookean
 | `NeoHookean`
+| classic, simo1985
 
 |===
-    
 
+option: `mechanicalproperties.compressible.volumic_law`
+
+.Boundary conditions
+|===
+| Name | Options  
+
+
+| Dirichlet 
+| faces, edges and component-wise
+
+| Neumann 
+| scalar, vectorial
+
+| Pressure follower ,
+| Nonlinear boundary condition set in deformed domain
+
+| Robin 
+| TODO
+
+|===
