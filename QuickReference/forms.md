@@ -11,7 +11,7 @@ Notations:
 * `v`  element from your test function space
 
 # Building Forms
-##form1 form1
+## form1
 **Interface***
 ```cpp
 form1(_test, _init);
@@ -28,7 +28,7 @@ l(v)=\int_\Omega v
 $$
 Then you can customize it using integration tools.
 
-*Example*
+### Example
 From `mylaplacian.cpp`   
 marker_form1   
 
@@ -62,7 +62,7 @@ a1 = a2;
 
 
 ## form2 
-**Interface***
+### Interface
 ```cpp
 form2(_trial, _test, _init);
 ```
@@ -79,9 +79,8 @@ a(u,v)=\int_\Omega uv
 $$
 Then you can custom it using integrations tools
 
-\Example
+### Example
 From `mylaplacian.cpp`   
- marker_form2   
  
  ```c++
     // left hand side
@@ -92,7 +91,6 @@ From `mylaplacian.cpp`
  ```
 
 From `mystokes.cpp`:   
-marker_form2   
 
 ```c++
     // left hand side
@@ -104,18 +102,21 @@ marker_form2
 
 ```
 
-Notice that \c += operator is working with linear and bilinear forms.
+> **Note** see note above on operators `+=` and `=`
 
 
 
 
 # Solver 
-In this section we present syntax to solve variational formulations. For more general linear problems see \ref Linear.<br>
+
+In this section we present syntax to solve variational formulations. For more general linear problems see  Linear.
 
 ## solve 
-Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form.<br>
-The `solve()`  function presented there is a method from the class `BilinearForm.` <br>
-**Interface***
+
+Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form. The `solve()`  function presented there is a method from the class `BilinearForm.` 
+
+### Interface
+
 ```cpp
 solve(_solution, _rhs, _rebuild, _name);
 ```
@@ -127,10 +128,10 @@ Optional Parameters:
 * `_rebuild`  rebuild the solver matrix. Default = `false.`
 * `_name`  Default = "".
 
-*Example*
+### Example
 From `laplacian.cpp`:   
 
- marker_solve   
+
  ```c++
      // solve the equation  a(u,v) = l(v)  
         a.solve(_rhs=l,_solution=u);
@@ -150,9 +151,9 @@ Required Parameters:
 
 This function is used with += operator.
 
-*Example*
+### Example
 From `mylaplacian.cpp`:   
-marker_on   
+  
 ```c++
     // apply the boundary condition
     a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
