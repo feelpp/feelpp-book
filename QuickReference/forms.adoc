@@ -74,6 +74,8 @@ latexmath:[
 a(u,v)=\int_\Omega uv
 ]
 
+==== Building `form2`
+
 The free-function `form2` allows you to simply define such a bilinear form using the link:keywords.md[Feel++ language]:
 [source,cpp]
 --
@@ -122,22 +124,19 @@ a+= integrate(_range=elements(mesh),
 
 
 
-== Solver 
+==== Solving variational formulations
 
-In this section we present syntax to solve variational formulations. For more general linear problems see  Linear.
+Once you created your linear and bilinear forms you can use the `solve()`  member function of your bilinear form.  
 
-=== Using `solve`
-
-Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form. The `solve()`  function presented there is a method from the class `BilinearForm.` 
-
-Here 
+Here is an example
+.Solve find latexmath:[u \in X_h \text{ such that } a(u,v)=l(v) \forall v \in X_h]
 [source,cpp]
 --
 auto Xh = ...; // function space
 auto u = Xh->element();
 auto a = form2(_test=Xh, _trial=Xh);
 auto l = form1(_test=Xh);
-// solve find u in Xh such that  a(u,v)=l(v) for all v in Xh
+
 a.solve(_solution=u, _rhs=l, _rebuild=false, _name="");
 --
 
