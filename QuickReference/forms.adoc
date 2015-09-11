@@ -121,7 +121,12 @@ Once you created your linear and bilinear forms you can use the `solve()`  funct
 
 [source,cpp]
 --
-solve(_solution, _rhs, _rebuild, _name);
+auto Xh = ...; // function space
+auto u = Xh->element();
+auto a = form2(_test=Xh, _trial=Xh);
+auto l = form1(_test=Xh);
+// solve find u in Xh such that  a(u,v)=l(v) for all v in Xh
+a.solve(_solution=u, _rhs=l, _rebuild=false, _name="");
 --
 
 .Table of parameters
