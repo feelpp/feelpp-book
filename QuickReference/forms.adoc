@@ -1,4 +1,6 @@
 = Bilinear and Linears Forms
+:source-highlighter: pygments
+:toc:
 
 We consider in this section bilinear and linear forms
 latexmath:[a: X_h \times X_h \rightarrow \mathbb{R}] 
@@ -113,12 +115,11 @@ a+= integrate(_range=elements(mesh),
 
 In this section we present syntax to solve variational formulations. For more general linear problems see  Linear.
 
-=== solve 
+=== Using `solve`
 
 Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form. The `solve()`  function presented there is a method from the class `BilinearForm.` 
 
-==== Interface
-
+Here 
 [source,cpp]
 --
 auto Xh = ...; // function space
