@@ -39,7 +39,7 @@ auto l = form1(_test=Xh);
 
 Here are some examples taken from the link:../Tutorial/README.md[Feel++ tutorial].
 
-From link:../Tutorial/codes/mylaplacian.cpp[mylaplacian.cpp]
+From link:../Tutorial/code/mylaplacian.cpp[mylaplacian.cpp]
 [source,cpp]
 --
 // right hand side
