@@ -155,12 +155,14 @@ This function is used with += operator.
 ==== Example
 
 From `mylaplacian.cpp`:   
-  
-```c++
-    // apply the boundary condition
-    a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u,
-          _expr=expr(soption("functions.alpha")) );
-```
+[source,cpp]
+--
+// apply the boundary condition
+a+=on(_range=boundaryfaces(mesh), 
+       _rhs=l, 
+       _element=u,
+      _expr=expr(soption("functions.alpha")) );
+--          
 
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
