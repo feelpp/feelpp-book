@@ -165,7 +165,7 @@ a.solve(_solution=u, _rhs=l, _rebuild=false, _name="");
 | Optional
 |===
 
-==== Example
+Here are some examples from the link:../Tutorial/README.md[Feel++ tutorial].
 
 From `laplacian.cpp`:   
 [source,cpp]
