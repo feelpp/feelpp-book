@@ -41,7 +41,6 @@ marker_form1
 ```
 
 From `myadvection.cpp`   
-marker_form1   
 
 ```c++
     // right hand side
