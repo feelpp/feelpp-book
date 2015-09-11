@@ -1,5 +1,9 @@
-Forms
-======
+= Bilinear and Linears Forms
+
+We consider in this section bilinear and linear forms
+latexmath:[a: X_h \times X_h \rightarrow \mathbb{R}] 
+and 
+latexmath:[\ell: X_h \rightarrow \mathbb{R}].
 
 
 We suppose in this section that you know how to define your [Mesh](mesh.md) and your [function spaces](spaces.md). You may need integration tools too, [see  Integrals](integrals.md).
