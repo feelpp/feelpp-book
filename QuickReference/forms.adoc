@@ -209,7 +209,6 @@ a+=on(_range=boundaryfaces(mesh),
 There we add the condition: $$ u  =  0  \text{ on }\;\partial\Omega \;$$.
 
 
-
 [source,cpp]
 .From `mystokes.cpp`
 --
