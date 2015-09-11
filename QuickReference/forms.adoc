@@ -14,25 +14,22 @@ Notations:
 * `u`  element from your trial function space (unknown function)
 * `v`  element from your test function space
 
-# Building Forms
-## form1
-**Interface***
+== Building Forms
+
+=== Using `form1`
+
+To construct a linear form latexmath:[\ell: X_h \rightarrow \mathbb{R}], proceed as follows
 ```cpp
-form1(_test, _init);
+auto mesh = ...;
+// build a P1/Q1 approximation space
+auto Xh = Pch<1>( mesh );
+auto \ell = form1(_test=Xh);
 ```
+
 Required Parameters:
 * `_test`  test function space.
 
-Optional Parameters:
-* `_init`  Default = `false.`
-
-By default, a new linear form is:
-$$
-l(v)=\int_\Omega v
-$$
-Then you can customize it using integration tools.
-
-### Example
+==== Example
 From `mylaplacian.cpp`   
 marker_form1   
 
