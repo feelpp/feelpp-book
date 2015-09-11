@@ -160,7 +160,7 @@ a.solve(_rhs=l,_solution=u);
 
 === Using `on`
 
-The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.<br>
+The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.
 
 ==== Interface
 
