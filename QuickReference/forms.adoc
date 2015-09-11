@@ -65,26 +65,34 @@ a1 = a2;
 
 
 === Using `form2`
-==== Interface
-```cpp
-form2(_trial, _test, _init);
-```
-Required Parameters:
 
-* `_trial`  test function space
-* `_test`  trial function space
-
-Optional Parameters:
-
-* `_init`  Default = `false.`
-
-By default, a new bilinear form is:
-$$
+To define a bilinear form latexmath:[a: X_h \times X_h \rightarrow \mathbb{R}], for example
+latexmath:[
 a(u,v)=\int_\Omega uv
-$$
-Then you can custom it using integrations tools
+]
 
-=== Example
+The free-function `form2` allows you to simply define such a bilinear form using the link:keywords.md[Feel++ language]:
+[source,cpp]
+--
+// define function space
+auto Xh = ...; 
+// define a : Xh x Xh -> R
+auto a = form2(_trial=Xh, _test=Xh );
+// a(u,v) = \int_\Omega u v
+a = integrate(_range=elements(mesh), _expr=idt(u)*id(v));
+--
+
+.Table of parameters
+|===
+| Name | Parameter | Description | Status
+
+| `test` | function space e.g. `Xh` | define test function space | Required
+| `trial` | function space e.g. `Xh` | define trial function space | Optional
+
+|===
+
+Here are some examples taken from the link:../Tutorial/README.md[Feel++ tutorial]
+
 From `mylaplacian.cpp`   
  
 [source,cpp]
