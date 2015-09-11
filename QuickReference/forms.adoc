@@ -85,25 +85,25 @@ Then you can custom it using integrations tools
 === Example
 From `mylaplacian.cpp`   
  
- ```c++
-    // left hand side
-    auto a = form2( _trial=Vh, _test=Vh );
-    a = integrate(_range=elements(mesh),
-                  _expr=gradt(u)*trans(grad(v)) );
-
- ```
+[source,cpp]
+--
+// left hand side
+auto a = form2( _trial=Vh, _test=Vh );
+a = integrate(_range=elements(mesh),
+              _expr=gradt(u)*trans(grad(v)) );
+--
 
 From `mystokes.cpp`:   
 
-```c++
-    // left hand side
-    auto a = form2( _trial=Vh, _test=Vh );
-    a = integrate(_range=elements(mesh),
-                  _expr=trace(gradt(u)*trans(grad(u))) );
-    a+= integrate(_range=elements(mesh),
-                  _expr=-div(u)*idt(p)-divt(u)*id(p));
-
-```
+[source,cpp]
+--
+// left hand side
+auto a = form2( _trial=Vh, _test=Vh );
+a = integrate(_range=elements(mesh),
+              _expr=trace(gradt(u)*trans(grad(u))) );
+a+= integrate(_range=elements(mesh),
+              _expr=-div(u)*idt(p)-divt(u)*id(p));
+--
 
 > **Note** see note above on operators `+=` and `=`
 
