@@ -226,3 +226,4 @@ a+=on(_range=markedfaces(mesh,"top"),
       _rhs=l,
       _expr=cst(0.))
 --
+The notation `u[Component:Y]` allows to access the `Y` component of `u`. `Component::X` and `Component::Z` are respectively the `X` and `Z` components.
