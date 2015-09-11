@@ -140,7 +140,7 @@ solve(_solution, _rhs, _rebuild, _name);
 
 | `_rebuild`
 | boolean(Default = `false`)
-| rebuild the solver matrix
+| rebuild the solver components
 | Optional 
 
 | `_name`
@@ -170,8 +170,9 @@ on(_range, _rhs, _element, _expr);
 --
 
 Required Parameters:
-. `_range`  domain concerned by this condition (see [Integrals]() ).
-. `_rhs`  right hand side. The linear form.
+
+* `_range`  domain concerned by this condition (see [Integrals]() ).
+* `_rhs`  right hand side. The linear form.
 * `_element`  element concerned.
 * `_expr`  the condition.
 
