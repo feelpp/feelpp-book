@@ -124,13 +124,28 @@ Once you created your linear and bilinear forms you can use the `solve()`  funct
 solve(_solution, _rhs, _rebuild, _name);
 --
 
-Required Parameters:
-* `_solution`  the solution.
-* `_rhs`  right hand side. The linear form.
+.Table of parameters
+|===
+| Name | Parameter | Description | Status
 
-Optional Parameters:
-* `_rebuild`  rebuild the solver matrix. Default = `false.`
-* `_name`  Default = "".
+| `_solution`
+| element of domain function space
+| the solution
+| Required
+
+| `_rhs`
+| linear form
+| right hand side
+| Required
+
+| `_rebuild`
+| boolean(Default = `false`)
+| rebuild the solver matrix
+| Optional 
+
+| `_name`
+| string(Default = "")
+| name of the associated backend
 
 ==== Example
 
