@@ -50,7 +50,15 @@ marker_form1
 
 
 
-Notice that \c += operator is working with linear and bilinear forms.
+> **Note** The operators `+=` and `=` are supported by linear and bilinear forms.
+```cpp
+auto a1 = form2(_test=Xh,_trial=Xh);
+auto a2 = form2(_test=Xh,_trial=Xh);
+// operations on a2 ...
+// check that they have the same type and 
+// copy matrix associated to a2 in a1
+a1 = a2; 
+```
 
 
 ## form2 
