@@ -39,9 +39,7 @@ auto l = form1(_test=Xh);
 
 Here are some examples taken from the link:../Tutorial/README.md[Feel++ tutorial].
 
-From `mylaplacian.cpp`   
-
-
+From link:../Tutorial/codes/mylaplacian.cpp[mylaplacian.cpp]
 [source,cpp]
 --
 // right hand side
@@ -50,7 +48,6 @@ l = integrate(_range=elements(mesh), _expr=id(v));
 --
 
 From `myadvection.cpp`   
-
 [source,cpp]
 --
 // right hand side
