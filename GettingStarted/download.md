@@ -1,5 +1,6 @@
 Download Feel++ sources
 =======================
+<!-- toc -->
 
 # Getting the source via an archive
 

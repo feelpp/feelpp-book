@@ -33,7 +33,7 @@ if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
   endif()
   Find_Package(Feel++)
 endif()
-add_custom_target(check-tumor COMMAND "ctest" ARGS "-R" "tumor")
+# add_custom_target(check-tumor COMMAND "ctest" ARGS "-R" "tumor")
 
 add_subdirectory( Tutorial/code )
 
