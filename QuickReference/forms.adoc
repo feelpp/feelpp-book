@@ -17,36 +17,38 @@ There are Feel++ tools you need to create linear and bilinear forms in order to 
 === Using `form1`
 
 To construct a linear form latexmath:[\ell: X_h \rightarrow \mathbb{R}], proceed as follows
-```cpp
+[source,cpp]
+--
 auto mesh = ...;
 // build a P1/Q1 approximation space
 auto Xh = Pch<1>( mesh );
 auto l = form1(_test=Xh);
-```
+--
 
 Required Parameters:
+
 * `_test`  test function space.
 
 ==== Example
 
 From `mylaplacian.cpp`   
-marker_form1   
 
-```c++   
+
+[source,cpp]
+--
 // right hand side
-    auto l = form1( _test=Vh );
-    l = integrate(_range=elements(mesh), _expr=id(v));
-```
+auto l = form1( _test=Vh );
+l = integrate(_range=elements(mesh), _expr=id(v));
+--
 
 From `myadvection.cpp`   
 
-```c++
-    // right hand side
-    auto l = form1( _test=Xh );
-    l+= integrate( _range=elements( mesh ), _expr=f*id( v ) );
-```
-
-
+[source,cpp]
+--
+// right hand side
+auto l = form1( _test=Xh );
+l+= integrate( _range=elements( mesh ), _expr=f*id( v ) );
+--
 
 
 > **Note** The operators `+=` and `=` are supported by linear and bilinear forms.
@@ -66,10 +68,12 @@ a1 = a2;
 form2(_trial, _test, _init);
 ```
 Required Parameters:
+
 * `_trial`  test function space
 * `_test`  trial function space
 
 Optional Parameters:
+
 * `_init`  Default = `false.`
 
 By default, a new bilinear form is:
@@ -115,9 +119,11 @@ Once you created your linear and bilinear forms you can use the `solve()`  funct
 
 ==== Interface
 
-```cpp
+[source,cpp]
+--
 solve(_solution, _rhs, _rebuild, _name);
-```
+--
+
 Required Parameters:
 * `_solution`  the solution.
 * `_rhs`  right hand side. The linear form.
@@ -126,14 +132,14 @@ Optional Parameters:
 * `_rebuild`  rebuild the solver matrix. Default = `false.`
 * `_name`  Default = "".
 
-### Example
+==== Example
+
 From `laplacian.cpp`:   
-
-
- ```c++
-     // solve the equation  a(u,v) = l(v)  
-        a.solve(_rhs=l,_solution=u);
-```
+[source,cpp]
+--
+// solve the equation  a(u,v) = l(v)  
+a.solve(_rhs=l,_solution=u);
+--
 
 === Using `on`
 
