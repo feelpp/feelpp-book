@@ -60,8 +60,8 @@ a1 = a2;
 ```
 
 
-## form2 
-### Interface
+=== Using `form2`
+==== Interface
 ```cpp
 form2(_trial, _test, _init);
 ```
@@ -78,7 +78,7 @@ a(u,v)=\int_\Omega uv
 $$
 Then you can custom it using integrations tools
 
-### Example
+=== Example
 From `mylaplacian.cpp`   
  
  ```c++
@@ -105,16 +105,15 @@ From `mystokes.cpp`:
 
 
 
-
-# Solver 
+== Solver 
 
 In this section we present syntax to solve variational formulations. For more general linear problems see  Linear.
 
-## solve 
+=== solve 
 
 Once you created your linear and bilinear forms you can use the `solve()`  function on your bilinear form. The `solve()`  function presented there is a method from the class `BilinearForm.` 
 
-### Interface
+==== Interface
 
 ```cpp
 solve(_solution, _rhs, _rebuild, _name);
@@ -136,9 +135,12 @@ From `laplacian.cpp`:
         a.solve(_rhs=l,_solution=u);
 ```
 
-## on 
+=== Using `on`
+
 The function `on()`  allows you to add conditions to your bilinear form before using the `solve`  function.<br>
-**Interface***
+
+==== Interface
+
 ```cpp
 on(_range, _rhs, _element, _expr);
 ```
@@ -150,7 +152,8 @@ Required Parameters:
 
 This function is used with += operator.
 
-### Example
+==== Example
+
 From `mylaplacian.cpp`:   
   
 ```c++
