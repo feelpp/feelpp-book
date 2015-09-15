@@ -68,7 +68,8 @@ brew install feelpp
 # (useful if you plan to use a different version from the master one, e.g. develop)
 brew install --only-dependencies feelpp
 ```
-
+ > **Note** If you encountered problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
+  
 <!--
 or in a more detailed way:
 ```
