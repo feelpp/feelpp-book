@@ -44,7 +44,7 @@
    * [Solver](QuickReference/solver.md)
        * [Preconditioner](QuickReference/preconditioner.md)
        * [Backends](QuickReference/Solver/backends.md)
-       * [Eigen problem](QuickReference/Solver/eigenproblem.adoc)
+       * [Eigen problem](QuickReference/Solver/eigensolver.adoc)
    * [Exporter](QuickReference/exporter.md)
    * [Keywords](QuickReference/keywords.md)
 * [Frequently Asked Questions](FAQ/README.md)
