@@ -12,7 +12,7 @@ u.save( _path="/path/to/save", _type="hdf5" );
 ```
 
 The `path` parameter creates a directory at this path to store all the degrees of liberty of this function. +
-The `type` parameter can be "binary", "text" or "hdf5". The first two will create one file per processor, whereas "hdf5" will creates only one file.
+The `type` parameter can be `binary`, `text` or `hdf5` . The first two will create one file per processor, whereas "hdf5" will creates only one file.
 
 == Loading functions from disk
 
