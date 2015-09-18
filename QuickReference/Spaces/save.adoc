@@ -16,3 +16,12 @@ The `type` parameter can be "binary", "text" or "hdf5". The first two will creat
 
 == Loading functions from disk
 
+WARNING: To load a function, the mesh need to be exactly the same as the one used when saving it.
+
+```cpp
+auto Vh = Pch<1>( mesh );
+auto u = Vh->element();
+u.load( _path="/path/to/load/", _type="hdf5" );
+```
+
+The `path` and `type` parameters need to be the same as the one used to save the function.
