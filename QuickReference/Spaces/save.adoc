@@ -16,4 +16,3 @@ The `type` parameter can be "binary", "text" or "hdf5". The first two will creat
 
 == Loading functions from disk
 
-WARNING: attention frefrg
