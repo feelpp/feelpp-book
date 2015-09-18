@@ -22,6 +22,7 @@ A special case of the generalized problem is when the matrices are not Hermitian
 The type of the problem can be specified using the EigenProblemType, or at run time with the command line option `--solvereigen.problem` and the following value :
 
 .Table of problem type
+[options="header"]
 |===
 | Problem type | EigenProblemType | command line key
 |Standard Hermitian | HEP | "hep"
@@ -49,8 +50,27 @@ One can choose which eigenpairs will be computed. The user can set it programmat
 
 == Spectral transformation
 
-It is observed that the algorithms use to solve the eigenvalue problems find solutions at the extremities of the spectrum 
+It is observed that the algorithms used to solve the eigenvalue problems find solutions at the extremities of the spectrum. To improve the convergence, one need to compute the eigenpairs of a transformed operator. Those spectral transformations allow to compute solutions that are not on the boundary of the spectrum.
 
-== Solvers
+There are 3 types of spectral transformation:
+
+Shift:: $$A-\sigma I$$ or $$B^{-1}A-\sigma I$$
+Shift and invert:: $$(A-\sigma I)^{-1}$$ or $$(A-\sigma B)^{-1}B$$
+Cayley:: $$(A-\sigma I)^{-1}(A+\nu I)$$ or $$(A-\sigma B)^{-1}(A+\nu B)$$
+
+By default, shift and invert is used. You can change it with `--solvereigen.transform`.
+
+.Table of spectral transformation
+[options="header"]
+|===
+| Spectral transformation | SpectralTransformationType | command line key
+| Shift | SHIFT | shift
+| Shift and invert | SINVERT | shift_invert
+| Cayley | CAYLEY | cayley
+|===
+
+== Eigensolvers
+
+
 
 == Special cases of spectrum
