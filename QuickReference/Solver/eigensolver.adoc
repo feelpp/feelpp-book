@@ -34,7 +34,7 @@ The type of the problem can be specified using the EigenProblemType, or at run t
 
 == Position of spectrum
 
-One can choose which eigenpairs will be computed. The user can set it programmatically with `PositionOfSpectrum` or at run time with the command line option `--solvereigen.spectrum` and the following value :
+You can choose which eigenpairs will be computed. The user can set it programmatically with `PositionOfSpectrum` or at run time with the command line option `--solvereigen.spectrum` and the following value :
 
 .Table of position of spectrum
 [options="header"]
@@ -71,6 +71,48 @@ By default, shift and invert is used. You can change it with `--solvereigen.tran
 
 == Eigensolvers
 
+The details of the implementation of the different solvers can be found in the http://slepc.upv.es/documentation/manual.htm[SLEPc Technical Reports].
 
+The default solver is Krylov-Schur, but can be modified using `EigenSolverType` or the option `--solvereigen.solver`.
+
+.Table of eigensolver
+[options="header"]
+|===
+| Solver | EigenSolverType | command line key
+| Power | POWER | power
+| Lapack | LAPACK | lapack
+| Subspace | SUBSPACE | subspace
+| Arnoldi | Arnoldi | arnoldi
+| Lanczos | LANCZOS | lanczos
+| Krylov-Schur | KRYLOVSCHUR | krylovschur
+| Arpack | ARPACK | arpack
+|===
+
+Be careful that all solvers can not compute all the problem types and positions of the spectrum. The possibilities are summarize in the following table.
+
+.Supported problem type for the eigensolvers
+[options="header"]
+|===
+| Solver | Position of spectrum | Problem type
+| Power | Largest magnitude | any
+| Lapack | any | any
+| Subspace | Largest magnitude | any
+| Arnoldi | any | any
+| Lanczos | any | standard and generalized Hermitian
+| Krylov-Schur | any | any
+| Arpack | any | any
+|===
 
 == Special cases of spectrum
+
+=== Computing a large portion of the spectrum
+
+In the case where you want compute a large number of eigenpairs, the rule for `ncv` implies a huge amount of memory to be used. To improve the performance, you can set the `mpd` parameter, which will limit the dimension of the projected problem.
+
+You can set it via the command line with `--solvereigen.mpd <mpd>`.
+
+=== Computing all the eigenpairs in a interval
+
+If you want to compute all the eigenpairs in a given interval, you need to use the option `--solvereigen.interval-a` to set the beginning of the interval and `--solvereigen.interval-b` to set the end.
+
+In this case, be aware that the problem need to be generalized and hermitian. The solver will be set to Krylov-Schur and the transformation to shift and invert. Beside, you'll need to use a linear solver that will compute the inertia of the matrix, this is set to Cholesky, with mumps if you can use it.
