@@ -2,6 +2,56 @@
 
 To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problem. It comes with many solvers for both standard and generalized problems, Hermitian or not.
 
+== Problem type
+
 The standard formulation reads :
 
-Find \(\lambda\) 
+Find $$\lambda\in \mathbb{R}$$ such that $$Ax = \lambda x$$
+
+where $$\lambda$$ is an eigenvalue and $$x$$ an eigenvector.
+
+But in the case of the finite element method, we will deal with the generalized form :
+
+Find $$\lambda\in\mathbb{R}$$such that $$Ax = \lambda Bx$$
+
+A standard problem is Hermitian if the matrix $$A$$ is Hermitian ($$A=A^*$$). +
+A generalized problem is Hermitian if the matrices $$A$$ and $$B$$ are Hermitian and if $$B$$ is positive definite. +
+If the problem is Hermitian, then the eigenvalues are real.
+A special case of the generalized problem is when the matrices are not Hermitian but \(B\) is positive definite.
+
+The type of the problem can be specified using the EigenProblemType, or at run time with the command line option `--solvereigen.problem` and the following value :
+
+.Table of problem type
+|===
+| Problem type | EigenProblemType | command line key
+
+|Standard Hermitian | HEP | "hep"
+|Standard non-Hermitian | NHEP | "nhep"
+|Generalized Hermitian | GHEP | "ghep"
+|Generalized non-Hermitian | GNHEP | "gnhep"
+|Positive definite Generalized non-Hermitian | PGNHEP | "pgnhep"
+|===
+
+== Position of spectrum
+
+One can choose which eigenpairs will be computed. The user can set it programmatically with `PositionOfSpectrum` or at run time with the command line option `--solvereigen.spectrum` and the following value :
+
+.Table of position of spectrum
+[options="header"]
+|===
+|Position of spectrum | PositionOfSpectrum | command line key
+|Largest magnitude | LARGEST_MAGNITUDE | "largest_magnitude"
+|Smallest magnitude | SMALLEST_MAGNITUDE | "smallest_magnitude"
+|Largest real | LARGEST_REAL | "largest_real"
+|Smallest real | SMALLEST_REAL | "smallest_real"
+|Largest imaginary | LARGEST_IMAGINARY | "largest_imaginary"
+|Smallest imaginary | SMALLEST_IMAGINARY | "smallest_imaginary"
+|===
+
+== Spectral transformation
+
+It is observed that the algorithms use to solve the eigenvalue problems find solutions at the extremities of the spectrum 
+
+== Solvers
+
+== Special cases of spectrum
