@@ -4,11 +4,14 @@
 
 To save a function on disk to use it later, for example in another application, you can use the `save` function.
 
+The saved file will be named after the name registered for the variable in the constructor (default : `u`).
 ```cpp
 auto Vh = Pch<1>( mesh );
-auto u = Vh->element();
+auto u = Vh->element("v"); 
 // do something with u
-u.save( _path="/path/to/save", _type="hdf5" );
+...
+// save /path/to/save/v.h5
+u.save( _path="/path/to/save", _type="hdf5" ); 
 ```
 
 The `path` parameter creates a directory at this path to store all the degrees of liberty of this function. +
@@ -16,12 +19,13 @@ The `type` parameter can be `binary`, `text` or `hdf5` . The first two will crea
 
 == Loading functions from disk
 
-WARNING: To load a function, the mesh need to be exactly the same as the one used when saving it.
+> WARNING: To load a function, the mesh need to be exactly the same as the one used when saving it.
 
 ```cpp
 auto Vh = Pch<1>( mesh );
-auto u = Vh->element();
-u.load( _path="/path/to/load/", _type="hdf5" );
+auto u = Vh->element("v");
+// load /path/to/load/v.h5
+u.load( _path="/path/to/load/", _type="hdf5" ); 
 ```
 
 The `path` and `type` parameters need to be the same as the one used to save the function.
