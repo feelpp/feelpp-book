@@ -24,7 +24,6 @@ The type of the problem can be specified using the EigenProblemType, or at run t
 .Table of problem type
 |===
 | Problem type | EigenProblemType | command line key
-
 |Standard Hermitian | HEP | "hep"
 |Standard non-Hermitian | NHEP | "nhep"
 |Generalized Hermitian | GHEP | "ghep"
