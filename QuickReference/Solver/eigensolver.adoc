@@ -2,6 +2,53 @@
 
 To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problem. It comes with many solvers for both standard and generalized problems, Hermitian or not.
 
+We want to find \((\lambda_i,x_i)\) such that \(Ax = \lambda x\). To do that, most eigensolvers project the problem onto a low-dimensional subspace, this is called a Rayleigh-Ritz projection. +
+Let \(V_j=[v_1,v_2,...,v_j]\) be an orthogonal basis of this subspace, then the projected problem reads:
+\(Find \((\teta_i,s_i)\) for \(i=1,...,j\) such that \(B_j s_i=\teta_i s_i\) where \(B_j=V_j^T A V_j\).
+
+Then the approximate eigenpairs \((\lambda_i,x_i)\) of the original problem are obtained as:
+\(\lambda_i=\teta_i\) and \(x_i=V_j s_i\).
+
+The eigensolvers differ from each other in the way the subspace is built.
+
+== Code
+
+In Feel++, there is two functions that can be used to solve this type of problems, `eigs` and `veigs`.
+
+Here is an example of how to use `veigs`.
+```cpp
+auto Vh = Pch<Order>( mesh );
+auto a = form2( _test=Vh, _trial=Vh );
+// fill a
+auto b = form2( _test=Vh, _trial=Vh );
+// fill b
+auto eigenmodes = veigs( _formA=a, _formB=b );
+```
+where `eigenmodes` is a `std::vector<std::pair<value_type, element_type> >` with `value_type` the type of the eigenvalue, and `element_type` the type of the eigenvector, a function of the space `Vh`.
+
+The `eigs` function does not take the bilinear forms but two matrices. Also, the solver used, the type of the problem, the position of the spectrum and the spectral transformation are not read from the options.
+```cpp
+auto Vh = Pch<Order>( mesh );
+auto a = form2( _test=Vh, _trial=Vh );
+// fill a
+auto matA = a.matrixPtr();
+auto b = form2( _test=Vh, _trial=Vh );
+// fill b
+auto matB = b.matrixPtr();
+auto eigenmodes = eigs( _matrixA=aHat,
+                        _matrixB=bHat,
+                        _solver=(EigenSolverType)EigenMap[soption("solvereigen.solver")],
+                        _problem=(EigenProblemType)EigenMap[soption("solvereigen.problem")],
+                        _transform=(SpectralTransformType)EigenMap[soption("solvereigen.transform")],
+                        _spectrum=(PositionOfSpectrum)EigenMap[soption("solvereigen.spectrum")]
+                         );
+auto femodes = std::vector<decltype(Vh->element())>( eigenmodes.size(), Vh->element() );
+int i = 0;
+for( auto const& mode : modes )
+    femodes[i++] = *mode.second.get<2>();
+```
+where `eigenmodes` is a `std::map<real_type, eigenmodes_type>` with `real_type` of the magnitude of the eigenvalue. And `eigenmodes_type` is a `boost::tuple<real_type, real_type, vector_ptrtype>` with the first `real_type` representing the real part of the eigenvalue, the second `real_type`the imaginary part and the vector_ptrtype is not an element of a functio
+
 == Problem type
 
 The standard formulation reads :
@@ -115,4 +162,5 @@ You can set it via the command line with `--solvereigen.mpd <mpd>`.
 
 If you want to compute all the eigenpairs in a given interval, you need to use the option `--solvereigen.interval-a` to set the beginning of the interval and `--solvereigen.interval-b` to set the end.
 
-In this case, be aware that the problem need to be generalized and hermitian. The solver will be set to Krylov-Schur and the transformation to shift and invert. Beside, you'll need to use a linear solver that will compute the inertia of the matrix, this is set to Cholesky, with mumps if you can use it.
+In this case, be aware that the problem need to be generalized and hermitian. The solver will be set to Krylov-Schur and the transformation to shift and invert. Beside, you'll need to use a linear solver that will compute the inertia of the matrix, this is set to Cholesky, with mumps if you can use it. +
+For now, this method is only implemented in the `eigs` function.
