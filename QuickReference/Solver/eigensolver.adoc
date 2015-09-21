@@ -4,10 +4,10 @@ To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc i
 
 We want to find \((\lambda_i,x_i)\) such that \(Ax = \lambda x\). To do that, most eigensolvers project the problem onto a low-dimensional subspace, this is called a Rayleigh-Ritz projection. +
 Let \(V_j=[v_1,v_2,...,v_j]\) be an orthogonal basis of this subspace, then the projected problem reads:
-\(Find \((\teta_i,s_i)\) for \(i=1,...,j\) such that \(B_j s_i=\teta_i s_i\) where \(B_j=V_j^T A V_j\).
+Find \((\theta_i,s_i)\) for \(i=1,...,j\) such that \(B_j s_i=\theta_i s_i\) where \(B_j=V_j^T A V_j\).
 
 Then the approximate eigenpairs \((\lambda_i,x_i)\) of the original problem are obtained as:
-\(\lambda_i=\teta_i\) and \(x_i=V_j s_i\).
+\(\lambda_i=\theta_i\) and \(x_i=V_j s_i\).
 
 The eigensolvers differ from each other in the way the subspace is built.
 
@@ -47,10 +47,10 @@ int i = 0;
 for( auto const& mode : modes )
     femodes[i++] = *mode.second.get<2>();
 ```
-where `eigenmodes` is a `std::map<real_type, eigenmodes_type>` with `real_type` of the magnitude of the eigenvalue. And `eigenmodes_type` is a `boost::tuple<real_type, real_type, vector_ptrtype>` with the first `real_type` representing the real part of the eigenvalue, the second `real_type`the imaginary part and the vector_ptrtype is not an element of a functionspace.
+where `eigenmodes` is a `std::map<real_type, eigenmodes_type>` with `real_type` of the magnitude of the eigenvalue. And `eigenmodes_type` is a `boost::tuple<real_type, real_type, vector_ptrtype>` with the first `real_type` representing the real part of the eigenvalue, the second `real_type` the imaginary part and the `vector_ptrtype` is a vector but not an element of a functionspace.
 
-The two functions take a parameter `_nev` that tel how many eigenpair to compute. This can be set from the command line option`--solvereigen.nev`. +
-Another important parameter is `_ncv` which is the size of the subspace, `j` above. This parameter should always be greater than `nev`. SLEPc recommends to set it to `max(nev+15, 2*nev)`. This can be set from the command line option`--solvereigen.ncv`.
+The two functions take a parameter `_nev` that tel how many eigenpair to compute. This can be set from the command line option `--solvereigen.nev`. +
+Another important parameter is `_ncv` which is the size of the subspace, `j` above. This parameter should always be greater than `nev`. SLEPc recommends to set it to `max(nev+15, 2*nev)`. This can be set from the command line option `--solvereigen.ncv`.
 
 == Problem type
 
