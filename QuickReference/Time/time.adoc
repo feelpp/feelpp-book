@@ -1,5 +1,5 @@
 = Time adaptation strategy for incompressible Navier Stokes and convection-diffusion equations
-:author: Christoophe Prud'homme
+:author: Christophe Prud'homme
 :toc:
 
 The following strategy can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
