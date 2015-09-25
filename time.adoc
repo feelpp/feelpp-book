@@ -9,19 +9,19 @@ The particularity is that the schme works with the discrete acceleration rather 
 
 == Notations
 
-Denote $$\Omega \subset \mathbb{R}^3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partia \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
+Denote $$\Omega \subset \mathbb{R}^3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
-We wish to solve the NS equations on $[0,T]$, we denote $\{t_n\}_{n=0,\ldots,N}$ the interval discretisation points and $\{k_n\}_{n=0,\ldots,N}$. We denote $(\mathbf{u}^n,p^n, \mathbf{d}^n)$ the velocity, pressure and discrete acceleration at time $n$.
+We wish to solve the NS equations on $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=0,\ldots,N}$$. We denote $$(\mathbf{u}^n,p^n, \mathbf{d}^n)$$ the velocity, pressure and discrete acceleration at time $$n$$.
 
- - $\mu$ : dynamic viscosity
- - $\rho$ : density
- - $\mathbf{n}$: the unit outward normal to $\partial \Omega$
- - $(\cdot,\cdot)$ : the $L^2$ scalar product in $\Omega$
- - $(\cdot,\cdot)_{\partial \Omega}$ : the $L^2$ scalar product on $\partial \Omega$
- - $\mathbf{f}$ the volumic force density
+ - $$\mu$$ : dynamic viscosity
+ - $$\rho$$ : density
+ - $$\mathbf{n}$$: the unit outward normal to $$\partial \Omega$$
+ - $$(\cdot,\cdot)$$ : the $$L^2$$ scalar product in $$\Omega$$
+ - $$(\cdot,\cdot)_{\partial \Omega}$$ : the $$L^2$$ scalar product on $$\partial \Omega$$
+ - $$\mathbf{f}$$ the volumic force density
 
- - $\mathbf{u}^n = \mathbf{g}_D(t^{n}) \text{ on } \partial \Omega_D$
- - $\sigma(\mathbg{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$
+ - $$\mathbf{u}^n = \mathbf{g}_D(t^{n}) \text{ on } \partial \Omega_D$$
+ - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
  
 == CN scheme for NS
 
