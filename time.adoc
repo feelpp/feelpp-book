@@ -118,7 +118,7 @@ $$
 and at 
 $$t=t_{n+1}$$
 $$
-t_{n+1} = t^*+\frac{k_{n+1}}{2},\quad \mathbf{u}^{n+1}=u^*+\frac{1}{2}k_{n+1} \mathbf{d}^n,\quad \frac{\partial \mathbf{u}^{n+1}}{\partial t}=\mathbf{d}^n
+t_{n+1} = t^*+\frac{k_{n+1}}{2},\quad \mathbf{u}^{n+1}=\mathbf{u}^*+\frac{1}{2}k_{n+1} \mathbf{d}^n,\quad \frac{\partial \mathbf{u}^{n+1}}{\partial t}=\mathbf{d}^n
 $$
 
 
