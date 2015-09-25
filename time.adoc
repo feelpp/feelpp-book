@@ -91,9 +91,18 @@ e^{n+1} = \frac{||\mathbf{u}^{n+1}-\mathbf{u}^{n+1}_{AB2}||}{3 (1+k_{n+1}/k_n)}
 $$
 
 that is used to adjust the time step
-
+$$
+k_{n+2}=k_{n+1} \left( \frac{\varepsilon}{e^{n+1}} \right)^{1/3}
+$$
+Features:
+ - easily adapted to convection-diffusion equations, solid mechanics (introduce velocity as an auxiliary field)
+ - 
 
 Issue:
 
  1. starting this algorithm and initial time step
  2. the ringing effect (or cancellation due to change of sign of the acceleration): averaging every $$n^*$$ iterations
+
+[bibliography]
+.Bibliography
+ - [[[kay]]] Adaptive time-stepping for incompressible flow part ii: Navier-stokes equations, DA Kay, PM Gresho, DF Griffiths, DJ Silvester - SIAM Journal on Scientific Computing, 2010 
