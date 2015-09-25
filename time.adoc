@@ -81,7 +81,7 @@ $$
 
 Then using the second order Adams-Baschforth scheme
 $$
-\mathbf{u}^{n+1}_{AB2} = \mathbf{u}^n + \frac{k_{n+1}}{2} \left[ (1+k_{n+1}/k_n)*\frac{\partial u^{n}}{\partial t} + \frac{k_{n+1}}{k_n}\frac{\partial u^{n-1}}{\partial t}\right]
+\mathbf{u}^{n+1}_{AB2} = \mathbf{u}^n + \frac{k_{n+1}}{2} \left[ (1+k_{n+1}/k_n)\frac{\partial u^{n}}{\partial t} + \frac{k_{n+1}}{k_n}\frac{\partial u^{n-1}}{\partial t}\right]
 $$
 
 we compute the error between $$\mathbf{u}^{n+1}$$ and $$\mathbf{u}^{n+1}_{AB2}$$:
