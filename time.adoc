@@ -53,11 +53,10 @@ $$
 $$
 
 we rewrite the previous problem with the discrete acceleration
-[env.equationalign]
---
+$$
 \mathbf{d}^n &=\frac{\mathbf{u}^{n+1}-\mathbf{u}^n}{k_{n+1}},\\
 \mathbf{u}^{n+1} &= \mathbf{u}^n+k_{n+1} \mathbf{d}^n
---
+$$
 
 [env.equationalign]
 --
