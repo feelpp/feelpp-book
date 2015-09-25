@@ -41,7 +41,7 @@ $$
 
 where
 $$
-(\frac{\partial \mathbf{u}^n}{\partial t}, v)=\mu \Delta \mathbf{u}^n - u^n\cdot \nabla \mathbf{u}^n - \nabla p^n
+\frac{\partial \mathbf{u}^n}{\partial t}:=\mu \Delta \mathbf{u}^n - u^n\cdot \nabla \mathbf{u}^n - \nabla p^n
 $$
 which reads
 $$
@@ -94,14 +94,33 @@ that is used to adjust the time step
 $$
 k_{n+2}=k_{n+1} \left( \frac{\varepsilon}{e^{n+1}} \right)^{1/3}
 $$
-Features:
- - easily adapted to convection-diffusion equations, solid mechanics (introduce velocity as an auxiliary field)
- - 
 
-Issue:
+
+Features:
+
+ - easily adapted to convection-diffusion equations, solid mechanics (introduce velocity as an auxiliary field)
+ - simple decision per time step to select or not $$k_{n+2}$$, simply reject $$k_{n+2}$$ if $$e^{n+1} > \alpha \varepsilon$$ with $$\alpha < 1$$ (in the code $$\alpha=0.7$$ and re-run current step $$n+1$$ with small time-step  
+ 
+$$
+ k_{n+1}=k_{n+1}\left( \frac{\varepsilon}{e^{n+1}} \right)^{1/3}
+$$
+
+Issues:
 
  1. starting this algorithm and initial time step
- 2. the ringing effect (or cancellation due to change of sign of the acceleration): averaging every $$n^*$$ iterations
+ 2. the ringing effect which prohibits large time steps (or cancellation due to change of sign of the acceleration): averaging every $$n^*$$ iterations
+ 
+In order to fix the ringing effect, select a frequency $$n^*$$ at which velocity and acceleration are averaged as follows:
+save at $$t^*=t_n$$, $$u^*=u^n$$, and do at $$t=t_n$$
+$$
+t_n = t_n+\frac{k_n}{2},\quad \mathbf{u}^n=\frac{1}{2}\left(u^*+u^{n-1}\right),\quad \frac{\partial \mathbf{u}^n}{\partial t}=\frac{1}{2}\left(\frac{\partial \mathbf{u}^n}{\partial t}+\frac{\partial \mathbf{u}^{n-1}}{\partial t}\right)
+$$
+and at 
+$$t=t_{n+1}$$
+$$
+t_{n+1} = t^*+\frac{k_{n+1}}{2},\quad \mathbf{u}^{n+1}=u^*+\frac{1}{2}k_{n+1} \mathbf{d}^n,\quad \frac{\partial \mathbf{u}^{n+1}}{\partial t}=\mathbf{d}^n
+$$
+
 
 [bibliography]
 .Bibliography
