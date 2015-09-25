@@ -43,17 +43,12 @@ where
 $$
 (\frac{\partial \mathbf{u}^n}{\partial t}, v)=\mu \Delta \mathbf{u}^n - u^n\cdot \nabla \mathbf{u}^n - \nabla p^n
 $$
-denote
-\[
-g^{n+1} = (-p^{n+1} I + 2\mu D(\mathbf{u}^{n+1}))\cdot n \text{ on } {\partial \Omega}
-\]
-
-we have
+which reads
 $$
 \begin{split}
-(\rho \mathbf{u}^{n+1}/k_{n+1},v) + ( \mu \nabla \mathbf{u}^{n+1}, \nabla v)+\\
+(\rho \mathbf{u}^{n+1}/k_{n+1},v) + ( \mu \nabla \mathbf{u}^{n+1}, \nabla v)+
  ( \rho  \mathbf{w}^{n+1} \cdot \nabla \mathbf{u}^{n+1} , v) - ( p^{n+1}, \nabla \cdot v )  -  \\
- (  \nabla \cdot \mathbf{u}^{n+1}, q )  = (\frac{\partial \mathbf{u}^n}{\partial t}, v) +( f, v) + (g^{n+1},v)
+ (  \nabla \cdot \mathbf{u}^{n+1}, q )  = (\frac{\partial \mathbf{u}^n}{\partial t}, v) +( f, v) + (\mathbf{g}^{n+1},v)
  \end{split}
 $$
 
