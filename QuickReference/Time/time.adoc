@@ -23,7 +23,7 @@ We wish to solve the NS equations on $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,
  - $$\mathbf{u}^n = \mathbf{g}_D(t^{n}) \text{ on } \partial \Omega_D$$
  - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
  
-== CN scheme for NS
+== Navier Stokes equations
 
 We start by writing the NS equations using the CN scheme.
 We first extrapolate the convection velocity using a 2nd order formula
