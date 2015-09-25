@@ -1,4 +1,4 @@
-= Time adaptation strategy for incompressible Navier Stokes and convection-diffusion equations
+= Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
 :author: Christophe Prud'homme
 :toc:
 
