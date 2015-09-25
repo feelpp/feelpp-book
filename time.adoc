@@ -64,19 +64,11 @@ $$
 \begin{split}
 (\rho k_{n+1} \mathbf{d}^{n}/k_{n+1},v) + ( \mu \nabla k_{n+1} \mathbf{d}^{n}, \nabla v)  +  ( \rho k_{n+1}  \mathbf{w}^{n+1} \cdot \nabla \mathbf{d}^{n} , v) - \\
  ( p^{n+1}, \nabla \cdot v )  - (  k_{n+1} \nabla \cdot \mathbf{d}^{n}, q ) =\\
-(\rho \mathbf{u}^{n},v) - ( \mu \nabla u^{n}, \nabla v)  - ( \rho   \mathbf{w}^{n+1} \cdot \nabla u^{n} , v) + 
- & (\frac{\partial \mathbf{u}^n}{\partial t}, v) +( f, v) + (g^{n+1},v) + (div \mathbf{u}^n, q)
+ - ( \mu \nabla u^{n}, \nabla v)  - ( \rho   \mathbf{w}^{n+1} \cdot \nabla u^{n} , v) + 
+  (\frac{\partial \mathbf{u}^n}{\partial t}, v) +( f, v) + (g^{n+1},v)_{\partial \Omega} + (div \mathbf{u}^n, q)
 \end{split}
 $$
 
-$$
-$$
-\begin{array}{rl}
-(\rho k_{n+1} d^{n)/k_{n+1},v) + ( \mu \nabla k_{n+1} d^{n}, \nabla v)  + ( \rho k_{n+1}  \mathbf{w}^{n+1} \cdot \nabla d^{n} , v) - & \\
- ( p^{n+1}, \nabla \cdot v )  - (  k_{n+1} \nabla \cdot d^{n}, q ) = &  (\rho u^{n),v) - ( \mu \nabla u^{n}, \nabla v)  - ( \rho   \mathbf{w}^{n+1} \cdot \nabla u^{n} , v) + \\
- & (\frac{\partial \mathbf{u}^n}{\partial t}, v) +( f, v) + (g^{n+1},v) + (div \mathbf{u}^n, q)
-\end{array}
-$$
 
 once $$\mathbf{d}^n$$ is computed, we update $$\mathbf{u}^{n+1}$$ and $$\frac{\partial \mathbf{u}^{n+1}}{\partial t}$$ as follows
 
