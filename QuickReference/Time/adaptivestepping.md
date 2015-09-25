@@ -1,13 +1,12 @@
-= Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
-:author: Christophe Prud'homme
-:toc:
+#Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
+
 
 The following strategy can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order2 (AB2) to adapt time steps.
 The particularity is that the schme works with the discrete acceleration rather than the velocity in order to get a more accurate/stable schemes
 
-== Notations
+##  Notations
 
 Denote $$\Omega \subset \mathbb{R}^3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
@@ -23,7 +22,7 @@ We wish to solve the NS equations on $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,
  - $$\mathbf{u}^n = \mathbf{g}_D(t^{n}) \text{ on } \partial \Omega_D$$
  - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
  
-== Navier Stokes equations
+## Navier Stokes equations
 
 We start by writing the NS equations using the CN scheme.
 We first extrapolate the convection velocity using a 2nd order formula
