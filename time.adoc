@@ -27,9 +27,11 @@ We wish to solve the NS equations on $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,
 
 We start by writing the NS equations using the CN scheme.
 We first extrapolate the convection velocity using a 2nd order formula
-$$\mathbf{w}^{n+1} = \left(1+\frac{k_{n+1}}{k_n}\right)\mathbf{u}^n-\frac{k_{n+1}}{k_n} \mathbf{u}^{n-1}$$
+$$
+\mathbf{w}^{n+1} = \left(1+\frac{k_{n+1}}{k_n}\right)\mathbf{u}^n-\frac{k_{n+1}}{k_n} \mathbf{u}^{n-1}
+$$
 
-then we find $(\mathbf{u}^{n+1},p^{n+1})$ such that for all $(\mathbf{v},q)$
+then we find $$(\mathbf{u}^{n+1},p^{n+1})$$ such that for all $$(\mathbf{v},q)$$
 $$
 \begin{split}
 (2 \rho \mathbf{u}^{n+1}/k_{n+1},v) + ( \mu \nabla \mathbf{u}^{n+1}, \nabla v)  + ( \rho  \mathbf{w}^{n+1} \cdot \nabla \mathbf{u}^{n+1} , v)  \\
@@ -39,7 +41,7 @@ $$
 
 where
 $$
-(\frac{\partial \mathbf{u}^n}{\partial t}, v)=\mu \Delta \mathbf{u}^n - w^{n-1}\cdot \nabla \mathbf{u}^n - \nabla p^n
+(\frac{\partial \mathbf{u}^n}{\partial t}, v)=\mu \Delta \mathbf{u}^n - u^n\cdot \nabla \mathbf{u}^n - \nabla p^n
 $$
 denote
 \[
