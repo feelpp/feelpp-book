@@ -5,13 +5,13 @@ The following strategy can be adapted to any first order in time PDE. We focus h
 
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order 2 (AB2) to adapt time steps.
-The particularity is that the scheme works with the discrete rate of change of the field of interest rather than the field itself in order to get a more accurate/stable and adaptive scheme.
+The particularity is that the scheme works with the discrete rate of change of the field of interest rather than the field itself in order to get a more accurate/stable and adaptive scheme see [[[kay]]].
 
 ##  Notations
 
 Denote $$\Omega \subset \mathbb{R}^d, d=1,2,3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
-We wish to solve equations on the time interval $$[0,T]$$ divided into $$N$$ intervals, we denote $$\{t_n\}_{n=1,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=1,\ldots,N}$$ the time steps. We have $$k_{n+1}=t_{n+1}-t_{n}$$.
+We wish to solve equations on the time interval $$[0,T]$$ divided into $$N$$ intervals, we denote $$\{t_n\}_{n=1,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=2,\ldots,N}$$ the time steps. We have $$k_{n+1}=t_{n+1}-t_{n}$$.
 
  - $$\mathbf{n}$$: the unit outward normal to $$\partial \Omega$$
  - $$(\cdot,\cdot)$$ : the $$L^2$$ scalar product in $$\Omega$$
