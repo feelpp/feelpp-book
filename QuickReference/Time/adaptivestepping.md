@@ -24,12 +24,13 @@ We wish to solve equations on the time interval $$[0,T]$$ divided into $$N$$ int
 ## Navier Stokes equations
 
 Denote
- - $$\mu$$ : dynamic viscosity [SI Pa.s = kg/(s.m)]
- - $$\rho$$ : density
+ - $$\mu$$ : dynamic viscosity [SI $$Pa.s = kg/(s.m)$$]
+ - $$\rho$$ : density [SI $$kg/m^3$$]
  - $$\mathbf{f}$$ the volumic force density
  - $$\mathbf{u}$$ the velocity
  - $$p$$ the pressure
- - $$D(\mathbf{u})=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$
+ - $$D(\mathbf{u})=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$ the deformation tensor.
+ - $$\sigma(\mathbf{u},p)=-p I + 2\mu D(\mathbf{u})$$ the newtonian stress tensor
  
 We consider the NS equations with Dirichlet and Neumann boundary conditions, 
 Find $$(\mathbf{u},p)$$ such that 
