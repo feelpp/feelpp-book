@@ -4,25 +4,44 @@
 The following strategy can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order2 (AB2) to adapt time steps.
-The particularity is that the schme works with the discrete acceleration rather than the velocity in order to get a more accurate/stable schemes
+The particularity is that the scheme works with the discrete acceleration rather than the velocity in order to get a more accurate/stable scheme.
 
 ##  Notations
 
-Denote $$\Omega \subset \mathbb{R}^3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
+Denote $$\Omega \subset \mathbb{R}^d, d=1,2,3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
-We wish to solve the NS equations on $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=0,\ldots,N}$$. We denote $$(\mathbf{u}^n,p^n, \mathbf{d}^n)$$ the velocity, pressure and discrete acceleration at time $$n$$.
+We wish to solve equations on the time interval $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=0,\ldots,N}$$. 
 
- - $$\mu$$ : dynamic viscosity
- - $$\rho$$ : density
  - $$\mathbf{n}$$: the unit outward normal to $$\partial \Omega$$
  - $$(\cdot,\cdot)$$ : the $$L^2$$ scalar product in $$\Omega$$
  - $$(\cdot,\cdot)_{\partial \Omega}$$ : the $$L^2$$ scalar product on $$\partial \Omega$$
- - $$\mathbf{f}$$ the volumic force density
 
- - $$\mathbf{u}^n = \mathbf{g}_D(t^{n}) \text{ on } \partial \Omega_D$$
- - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
  
+## Convection-Diffusion equation
+
+
+
 ## Navier Stokes equations
+
+Denote
+ - $$\mu$$ : dynamic viscosity
+ - $$\rho$$ : density
+ - $$\mathbf{f}$$ the volumic force density
+ - $$\mathbf{u}$$ the velocity
+ - $$p$$ the pressure
+ - $$\mathbb{D}=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$
+ 
+We consider the NS equations with Dirichlet and Neumann boundary conditions, 
+Find $$(\mathbf{u},p)$$ such that 
+$$
+\begin{split}
+\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) - 
+\end{split}
+$$
+
+ - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
+
+We denote $$(\mathbf{u}^n,p^n, \mathbf{d}^n)$$ the velocity, pressure and discrete acceleration at time $$n$$.
 
 We start by writing the NS equations using the CN scheme.
 We first extrapolate the convection velocity using a 2nd order formula
