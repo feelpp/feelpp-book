@@ -29,7 +29,7 @@ Denote
  - $$\mathbf{f}$$ the volumic force density
  - $$\mathbf{u}$$ the velocity
  - $$p$$ the pressure
- - $$\mathbb{D}=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$
+ - $$D(\mathbf{u})=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$
  
 We consider the NS equations with Dirichlet and Neumann boundary conditions, 
 Find $$(\mathbf{u},p)$$ such that 
