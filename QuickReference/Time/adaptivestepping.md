@@ -31,7 +31,8 @@ Denote
  - $$p$$ the pressure
  - $$D(\mathbf{u})=\frac{1}{2}\left(\nabla \mathbf{u}+\nabla \mathbf{u}^T\right)$$ the deformation tensor.
  - $$\sigma(\mathbf{u},p)=-p I + 2\mu D(\mathbf{u})$$ the newtonian stress tensor
- 
+
+
 We consider the NS equations with Dirichlet and Neumann boundary conditions, 
 Find $$(\mathbf{u},p)$$ such that 
 $$
@@ -40,11 +41,12 @@ $$
 \end{split}
 $$
 
- - $$\sigma(\mathbf{u}^n,p^n)\cdot \mathbf{n} = (-p^{n} I + 2\mu D(\mathbf{u}^{n}) ) \cdot \mathbf{n} = \mathbf{g}_N(t^{n}) \text{ on } \partial \Omega_N$$
+completed with Dirichlet and Neumann boundary conditions
+$$
+\sigma(\mathbf{u},p)\cdot \mathbf{n} = \mathbf{g}_N \text{ on } \partial \Omega_N, \quad \mathbf{u} = \mathbf{g}_D \text{ on } \partial \Omega_D
+$$
 
-We denote $$(\mathbf{u}^n,p^n, \mathbf{d}^n)$$ the velocity, pressure and discrete acceleration at time $$n$$.
-
-We start by writing the NS equations using the CN scheme.
+We denote $$(\mathbf{u}^n,p^n, \mathbf{d}^n)$$ the velocity, pressure and discrete acceleration at time $$n$$. We start by writing the NS equations using the CN scheme.
 We first extrapolate the convection velocity using a 2nd order formula
 $$
 \mathbf{w}^{n+1} = \left(1+\frac{k_{n+1}}{k_n}\right)\mathbf{u}^n-\frac{k_{n+1}}{k_n} \mathbf{u}^{n-1}
@@ -60,7 +62,7 @@ $$
 
 where
 $$
-\frac{\partial \mathbf{u}^n}{\partial t}:=\mu \Delta \mathbf{u}^n - u^n\cdot \nabla \mathbf{u}^n - \nabla p^n
+\frac{\partial \mathbf{u}^n}{\partial t}:=\mu \Delta \mathbf{u}^n - \mathbf{u}^n\cdot \nabla \mathbf{u}^n - \nabla p^n
 $$
 which reads
 $$
