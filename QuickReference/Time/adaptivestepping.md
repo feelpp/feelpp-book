@@ -5,7 +5,7 @@ The following strategy can be adapted to any first order in time PDE. We focus h
 
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order 2 (AB2) to adapt time steps.
-The particularity is that the scheme works with the discrete acceleration rather than the velocity in order to get a more accurate/stable scheme.
+The particularity is that the scheme works with the discrete rate of change of the field of interest rather than the field itself in order to get a more accurate/stable and adaptive scheme.
 
 ##  Notations
 
@@ -34,8 +34,7 @@ Denote
  - $$\sigma(\mathbf{u},p)=-p I + 2\mu D(\mathbf{u})$$ the newtonian stress tensor
 
 
-We consider the NS equations with Dirichlet and Neumann boundary conditions, 
-Find $$(\mathbf{u},p)$$ such that 
+We consider the Navier-Stokes equations, namely find $$(\mathbf{u},p)$$ such that 
 $$
 \begin{split}
 \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) - \mu \nabla^2 \mathbf{u} + \nabla p = \mathbf{f}\ \text{ and } \nabla \cdot \mathbf{u} = 0
