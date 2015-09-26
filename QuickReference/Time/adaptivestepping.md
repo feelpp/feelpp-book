@@ -10,7 +10,7 @@ The particularity is that the scheme works with the discrete acceleration rather
 
 Denote $$\Omega \subset \mathbb{R}^d, d=1,2,3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
-We wish to solve equations on the time interval $$[0,T]$$, we denote $$\{t_n\}_{n=0,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=0,\ldots,N}$$. 
+We wish to solve equations on the time interval $$[0,T]$$ divided into $$N$$ intervals, we denote $$\{t_n\}_{n=1,\ldots,N}$$ the interval discretisation points and $$\{k_n\}_{n=1,\ldots,N}$$ the time steps. We have $$k_{n+1}=t_{n+1}-t_{n}$$.
 
  - $$\mathbf{n}$$: the unit outward normal to $$\partial \Omega$$
  - $$(\cdot,\cdot)$$ : the $$L^2$$ scalar product in $$\Omega$$
@@ -24,7 +24,7 @@ We wish to solve equations on the time interval $$[0,T]$$, we denote $$\{t_n\}_{
 ## Navier Stokes equations
 
 Denote
- - $$\mu$$ : dynamic viscosity
+ - $$\mu$$ : dynamic viscosity [SI Pa.s = kg/(s.m)]
  - $$\rho$$ : density
  - $$\mathbf{f}$$ the volumic force density
  - $$\mathbf{u}$$ the velocity
@@ -35,7 +35,7 @@ We consider the NS equations with Dirichlet and Neumann boundary conditions,
 Find $$(\mathbf{u},p)$$ such that 
 $$
 \begin{split}
-\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) - 
+\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) - \mu \nabla^2 \mathbf{u} + \nabla p = \mathbf{f}\ \text{ and } \nabla \cdot \mathbf{u} = 0
 \end{split}
 $$
 
