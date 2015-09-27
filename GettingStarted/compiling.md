@@ -39,7 +39,7 @@ Required packages:
 * ~~g++ (4.7, 4.8, 4.9, 5.1) OR Clang (3.3, 3.4, 3.5, 3.6, 3.7)~~
 * g++ >= 4.9 OR clang >= 3.4 for C++14 compatibility
 * MPI: openmpi (preferred) or mpich
-* Boost >= 1.55
+* Boost >= 1.55 and <= 1.59
 * Petsc >= 3.2
 * CMake >= 2.8.7
 * Gmsh >= 2.8.3 (can be found at [http://www.geuz.org/gmsh](http://www.geuz.org/gmsh))
