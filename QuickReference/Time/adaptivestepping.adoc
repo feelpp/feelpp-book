@@ -1,7 +1,7 @@
 = Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
 
 
-The following strategy proposed in [[[kay]]] can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
+The following strategy proposed in <<kay>> can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
 
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order 2 (AB2) to adapt time steps.
