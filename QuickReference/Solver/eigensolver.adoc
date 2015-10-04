@@ -2,12 +2,12 @@
 
 To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problem. It comes with many solvers for both standard and generalized problems, Hermitian or not.
 
-We want to find $$(\lambda_i,x_i)$$ such that \(Ax = \lambda x\). To do that, most eigensolvers project the problem onto a low-dimensional subspace, this is called a Rayleigh-Ritz projection. +
-Let \(V_j=[v_1,v_2,...,v_j]\) be an orthogonal basis of this subspace, then the projected problem reads:
-Find \((\theta_i,s_i)\) for \(i=1,...,j\) such that \(B_j s_i=\theta_i s_i\) where \(B_j=V_j^T A V_j\).
+We want to find $$(\lambda_i,x_i)$$ such that $$Ax = \lambda x$$. To do that, most eigensolvers project the problem onto a low-dimensional subspace, this is called a Rayleigh-Ritz projection. +
+Let $$V_j=[v_1,v_2,...,v_j]$$ be an orthogonal basis of this subspace, then the projected problem reads:
+Find $$(\theta_i,s_i)$$ for $$i=1,...,j$$ such that $$B_j s_i=\theta_i s_i$$ where $$B_j=V_j^T A V_j$$.
 
-Then the approximate eigenpairs \((\lambda_i,x_i)\) of the original problem are obtained as:
-\(\lambda_i=\theta_i\) and \(x_i=V_j s_i\).
+Then the approximate eigenpairs $$(\lambda_i,x_i)$$ of the original problem are obtained as:
+$$\lambda_i=\theta_i$$ and $$x_i=V_j s_i$$.
 
 The eigensolvers differ from each other in the way the subspace is built.
 
@@ -56,18 +56,18 @@ Another important parameter is `_ncv` which is the size of the subspace, `j` abo
 
 The standard formulation reads :
 
-Find \(\lambda\in \mathbb{R}\) such that \(Ax = \lambda x\)
+Find $$\lambda\in \mathbb{R}$$ such that $$Ax = \lambda x$$
 
-where \(\lambda\) is an eigenvalue and \(x\) an eigenvector.
+where $$\lambda$$ is an eigenvalue and $$x$$ an eigenvector.
 
 But in the case of the finite element method, we will deal with the generalized form :
 
-Find \(\lambda\in\mathbb{R}\) such that \(Ax = \lambda Bx\)
+Find $$\lambda\in\mathbb{R}$$ such that $$Ax = \lambda Bx$$
 
-A standard problem is Hermitian if the matrix \(A\) is Hermitian (\(A=A^*\)). +
-A generalized problem is Hermitian if the matrices \(A\) and \(B\) are Hermitian and if \(B\) is positive definite. +
+A standard problem is Hermitian if the matrix $$A$$ is Hermitian ($$A=A^*$$). +
+A generalized problem is Hermitian if the matrices $$A$$ and $$B$$ are Hermitian and if $$B$$ is positive definite. +
 If the problem is Hermitian, then the eigenvalues are real.
-A special case of the generalized problem is when the matrices are not Hermitian but \(B\) is positive definite.
+A special case of the generalized problem is when the matrices are not Hermitian but $$B$$ is positive definite.
 
 The type of the problem can be specified using the EigenProblemType, or at run time with the command line option `--solvereigen.problem` and the following value :
 
@@ -104,9 +104,9 @@ It is observed that the algorithms used to solve the eigenvalue problems find so
 
 There are 3 types of spectral transformation:
 
-Shift:: \(A-\sigma I\) or \(B^{-1}A-\sigma I\)
-Shift and invert:: \((A-\sigma I)^{-1}\) or \((A-\sigma B)^{-1}B\)
-Cayley:: \((A-\sigma I)^{-1}(A+\nu I)\) or \((A-\sigma B)^{-1}(A+\nu B)\)
+Shift:: $$A-\sigma I$$ or $$B^{-1}A-\sigma I$$
+Shift and invert:: $$(A-\sigma I)^{-1}$$ or $$(A-\sigma B)^{-1}B$$
+Cayley:: $$(A-\sigma I)^{-1}(A+\nu I)$$ or $$(A-\sigma B)^{-1}(A+\nu B)$$
 
 By default, shift and invert is used. You can change it with `--solvereigen.transform`.
 
