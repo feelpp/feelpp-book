@@ -20,7 +20,7 @@ The `type` parameter can be `binary`, `text` or `hdf5` . The first two will crea
 
 == Loading functions from disk
 
-> WARNING: To load a function, the mesh need to be exactly the same as the one used when saving it.
+> **WARNING** To load a function, the mesh need to be exactly the same as the one used when saving it.
 
 ```cpp
 auto Vh = Pch<1>( mesh );
