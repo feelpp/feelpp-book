@@ -5,7 +5,7 @@
 To save a function on disk to use it later, for example in another application, you can use the `save` function.
 
 The saved file will be named after the name registered for the variable in the constructor (default : `u`).
-```cpp
+[source]
 auto Vh = Pch<1>( mesh );
 auto u = Vh->element("v"); 
 // do something with u
