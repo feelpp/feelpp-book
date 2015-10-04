@@ -36,7 +36,7 @@ This is the list of all the libraries you must have installed on your
 computer, and the `*-dev` packages for some of them.
 
 Required packages:
-* g++ >= 4.9 OR clang >= 3.4 for C++14 compatibility
+* g++ >= 5.0 OR clang >= 3.4 for C++14 compatibility
 * MPI: openmpi (preferred) or mpich
 * Boost >= 1.55 and <= 1.59
 * Petsc >= 3.2 and <= 3.6.x
