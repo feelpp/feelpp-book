@@ -1,13 +1,13 @@
-#Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
+= Time adaptation strategy for incompressible Navier Stokes equations and convection-diffusion equations
 
 
-The following strategy can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
+The following strategy proposed in [[[kay]]] can be adapted to any first order in time PDE. We focus here on the Navier-Stokes equations to illustrate the scheme but it can be easily adapted to other PDE.
 
 
 We present here a 2nd order in time adaptive strategy based on the Crank-Nicolson (CN) scheme coupled with Adam-Bashforth order 2 (AB2) to adapt time steps.
 The particularity is that the scheme works with the discrete rate of change of the field of interest rather than the field itself in order to get a more accurate/stable and adaptive scheme see [[[kay]]].
 
-##  Notations
+==  Notations
 
 Denote $$\Omega \subset \mathbb{R}^d, d=1,2,3$$ the computation domain and $$\partial \Omega$$ its boundary. $$\partial \Omega = \partial \Omega_D \cup \partial \Omega_N $$ which correspond to the Dirichlet and Neumann boundaries
 
@@ -18,11 +18,11 @@ We wish to solve equations on the time interval $$[0,T]$$ divided into $$N$$ int
  - $$(\cdot,\cdot)_{\partial \Omega}$$ : the $$L^2$$ scalar product on $$\partial \Omega$$
 
  
-## Convection-Diffusion equation
+== Convection-Diffusion equation
 
 
 
-## Navier Stokes equations
+== Navier Stokes equations
 
 Denote
  - $$\mu$$ : dynamic viscosity [SI $$Pa.s = kg/(s.m)$$]
