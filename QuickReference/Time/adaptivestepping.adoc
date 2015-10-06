@@ -127,7 +127,7 @@ $$
 
 Issues:
 
- 1. starting this algorithm and initial time step,
+ 1. starting this algorithm and initial time step, see <<kay>>,
  2. the ringing effect which prohibits large time steps (or cancellation due to change of sign of the acceleration): averaging every $$n^*$$ iterations.
  
 In order to fix the ringing effect, select a frequency $$n^*$$ at which velocity and acceleration are averaged as follows:
