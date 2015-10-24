@@ -216,10 +216,11 @@ We denote by `c` a Feel++ data structure associated to a `WorldComm`.
 | globalRank(c)| returns the global MPI rank of the data 
 |===
 
-For example to print the rank
+For example to print the rank of a mesh data structure
 
 [source,cpp]
 --
+// initialise environment...
 auto mesh = makeMesh<Simplex<2,1>>();
 std::cout << "local rank : " << rank(mesh) << "\n";
 --
