@@ -15,19 +15,21 @@ Environment env( _argc, _argv, _desc, _about );
 None of those parameters are required but it is highly recommended to use the minimal declaration:
 [source,cpp]
 --
-Environment env( _argc=argc, _argv=argv,
-                 _desc=feel_option(),
-                 _about=about(_name="name_of_your_app",
-                              _author="your_name",
-                              _email="your_email_adress") );
+Environment env( _argc=argc, _argv=argv, 
+                 _desc=feel_option(),  
+                 _about=about(_name="name_of_your_app", 
+                 _author="your_name",
+                 _email="your_email_adress"));
 --
 
-* `_argc` and `_argv`` are the arguments of your main function.
+* `_argc` and `_argv` are the arguments of your main function.
 * `_desc` is a description of your options.
 * `_about` is a brief description of your application.
 
 == Options Description {{description}}
-## Options_Custom Add Options
+
+=== Adding Options {{adding}}
+
 `feel_option()`  returns a list of default options used in Feel++.<br>
 
 You can create a personal list of options as seen in \ref FirstApp.
