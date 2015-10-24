@@ -1,29 +1,32 @@
-Environment
-===========
+= Environment
+
 
 
 In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  [Environment](environment.md).
 
-# Initialize Feel++
+== Initialize Feel++
 
 Environment class is necessary to initialize your application, as seen in FirstApp. Interface is as follows:
-```cpp
+[source,cpp]
+--
 Environment env( _argc, _argv, _desc, _about );
-```
+--
+
 None of those parameters are required but it is highly recommended to use the minimal declaration:
-```cpp
-  Environment env( _argc=argc, _argv=argv,
-                   _desc=feel_option(),
-                   _about=about(_name="name_of_your_app",
-                                _author="your_name",
-                                _email="your_email_adress") );
-```
+[source,cpp]
+--
+Environment env( _argc=argc, _argv=argv,
+                 _desc=feel_option(),
+                 _about=about(_name="name_of_your_app",
+                              _author="your_name",
+                              _email="your_email_adress") );
+--
 
 * `_argc` and `_argv`` are the arguments of your main function.
 * `_desc` is a description of your options.
 * `_about` is a brief description of your application.
 
-# Options Feel++ Options Description
+== Options Description {{description}}
 ## Options_Custom Add Options
 `feel_option()`  returns a list of default options used in Feel++.<br>
 
