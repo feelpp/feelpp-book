@@ -105,14 +105,14 @@ From `/doc/manual/laplacian/laplacian.cpp`
 ```
 
 
-## Options Accessors
+=== Options Accessors
 
-**Options Description:**<br>
+**Options Description:**
 ```cpp Environment::optionsDescription();```
 Returns options description data structure (`po` options_description).<br>
 
 
-**Variable map**<br>
+**Variable map**
 You can access to the parameters of your application environment using the following function:
 ```cpp
   Environment::vm(_name);
@@ -121,7 +121,7 @@ You can access to the parameters of your application environment using the follo
 This function returns a `po` variable_value .<br>
 Use template methode to cast the parameter into the appropriate type.<br>
 
-**Examples:**<br>
+**Examples:**
 From `doc/manual/solid/beam.cpp`
 ```cpp
   const double E = Environment::vm(_name="E").template as<double>();
@@ -133,8 +133,10 @@ From `doc/manual/fd/penalisation.cpp`
 ```
 
 
-# Repository Repository
-## Change changeRepository
+== Repository {{Repository}}
+
+=== Change changeRepository
+
 You can change the default repository.
 
 Interface
@@ -162,11 +164,15 @@ From `doc/manual/laplacian/laplacian.cpp`
 Then results will be store in: "/doc/manual/laplacian/<appName>/<shape>-<Dim>/P<Order>/h_<meshSize>/"
 
 
-## Find findFile
+=== findFile
 
-Interface
-```cpp
-std::string findFile( std::string const& filename );```
+==== Interface
+
+[source,cpp]
+--
+std::string findFile( std::string const& filename );
+--
+
 Returns the string containing the filename path.
 
 The lookup is as follows:
@@ -174,30 +180,40 @@ The lookup is as follows:
 * look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
 
 If the file has an extension .geo or .msh, try also to
-* look into `localGeoRepository()`  which is usually $HOME/feel/geo
-* look into `systemGeoRepository()`  which is usually $FEELPP_DIR/share/feel/geo
+
+- look into `localGeoRepository()`  which is usually $HOME/feel/geo
+
+- look into `systemGeoRepository()`  which is usually $FEELPP_DIR/share/feel/geo
 
 If `filename` is not found, then the empty string is returned.
 
 
-## SetLogs setLogs
-**Interface***
-```cpp
+=== setLogs {{setLogs}}
+
+==== Interface
+
+[source,cpp]
+--
 void setLogs( std::string const& prefix );
-```
+--
+
 Required Parameters:
-* `prefix`  prefix for log filenames.
 
-# Utility functions
+- `prefix`  prefix for log filenames.
 
-## Communications
+== Utility functions
+
+=== Communications
 
 A lot of data structures, in fact most of them,  in Feel++ are parallel and are associated with a `WorldComm` data structure which allows us to access and manipulate the MPI communicators.
 We provide some utility free functions that allow a transparent access to the `WorldComm` data structure.
 
 We denote by `c` a Feel++ data structure associated to a `WorldComm`.
 
-|Feel++ Keyword|Description|
-|---|---|
-|`rank(c)`| returns the local MPI rank of the data structure `c`|
-|`globalRank(c)`| returns the global MPI rank of the data structure `c`|
+|===
+| Feel++ Keyword | Description
+| rank(c)| returns the local MPI rank of the data structure `c`
+|globalRank(c)| returns the global MPI rank of the data 
+|===
+
+
