@@ -1,5 +1,8 @@
-#Output Directories    
-We can find generated files after Feel++ compilation in following directories :   
+= Output Directories    
+
+Feel++ generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with {%feelpp%} and its 
+
+  
 - Log files : `tmp/<your login>/feelpp/feelpp_tut_<your_app_name>` 
 
 -  Mesh : `$FEELPP_WORKDIR/feel/<your_app_name>/np_1`   
