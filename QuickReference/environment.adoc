@@ -30,50 +30,52 @@ Environment env( _argc=argc, _argv=argv,
 
 === Adding Options {{adding}}
 
-`feel_option()`  returns a list of default options used in Feel++.<br>
+`feel_options()`  returns a list of default options used in Feel++.
 
-You can create a personal list of options as seen in \ref FirstApp.
-
-You can also add a list of options, using a routine as follows:
-```cpp
-  using namespace Feel;
-
-
-  inline
-  po::options_description
-  makeOptions()
-  {
+You can create your own list of options  as follows:
+[source,cpp]
+--
+using namespace Feel;
+inline
+po::options_description
+makeOptions()
+{
     po::options_description myappOptions( "My app options" );
     myappOptions.add_options()
       ( "option1", po::value<type1>()->default_value( value1 ), "description1" )
       ( "option2", po::value<type2>()->default_value( value2 ), "description2" )
       ( "option3", po::value<type3>()->default_value( value3 ), "description3" )
       ;
-    return myappOptions.add( feel_options() ); // Add the default feel options to your list
-  }
-```
-* `makeOptions`  is the usual name of this routine but you can change it
-* `myappOptions`  the name of you options list
-* `option` #: the name of parameter #
-* `type` #: the type parameter #
-* `value` #: the default value of parameter #
-* `description` #: the description of parameter #
+     // Add the default feel options to your list
+    return myappOptions.add( feel_options() ); 
+}
+--
 
-The data returned is typically used as an argument of a Feel::Application subclass.
+`makeOptions` is the usual name of this routine but you can change it amd `myappOptions` is the name of you options list.
 
-This routine has to be declared before your `main`  function. Then you can use it to initialize Feel++ Environment:
-```cpp
-  Environment env( _argc=argc, _argv=argv,
-                   _desc=makeOptions(),
-                   _about=about(_name="myapp",
-                                _author="myname",
-                                _email="my@email.com") );
-```
+|===
+| *Parameter* | *Description*
+| `option`|  the name of parameter 
+| `type` | the type parameter 
+| `value` | the default value of parameter 
+| `description` | the description of parameter 
+|===
 
-So you can change this parameter when you execute your app:
-```cpp
+You can then use `makeOptions()` to initialize the Feel++ Environment as follows
+[source,cpp]
+--
+Environment env( _argc=argc, _argv=argv,
+                 _desc=makeOptions(),
+                 _about=about(_name="myapp",
+                              _author="myname",
+                              _email="my@email.com") );
+--                              
+
+Then, at runtime,  you can change the parameter as follows
+[source,cpp
+--
   ./myapp --option1=alpha --option2=beta --option3=gama
-```
+--
 
 
 **Example:**<br>
