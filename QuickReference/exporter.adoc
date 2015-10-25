@@ -42,16 +42,7 @@ To illustrate both approaches in visualizing high degree polynomials   in curved
 |image::../pngs/visualisation/circle_p3p3.png[]| image::../pngs/visualisation/circle_p3p3_p1interpolator.png[]| image::../pngs/visualisation/circle_p4p4.png[] | image::../pngs/visualisation/circle_p4p4_p1interpolator.png[] | image::../pngs/visualisation/circle_p5p5.png[] | image::../pngs/visualisation/circle_p5p5_p1interpolator.png[]
 |===
 
-
-
-|  |
-|--------|-----------|---------|------------|---------|-------------|
-|
-  
-
-
-  To further illustrate the capabilities of the Feel's exporter to
-  Gmsh, we plot in Figures 1D and 3D functions defined in the $$[-1,1]$$  interval and the unit sphere, respectively.
+To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot in Figures 1D and 3D functions defined in the $$[-1,1]$$  interval and the unit sphere, respectively.
 
 | Order 1 | Order 2 | Order 3 | Order 4 |
 |---------|----------|--------|---------|
