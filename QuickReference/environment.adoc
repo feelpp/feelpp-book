@@ -188,19 +188,6 @@ If the file has an extension .geo or .msh, try also to
 If `filename` is not found, then the empty string is returned.
 
 
-=== setLogs {{setLogs}}
-
-==== Interface
-
-[source,cpp]
---
-void setLogs( std::string const& prefix );
---
-
-Required Parameters:
-
-- `prefix`  prefix for log filenames.
-
 == Utility functions
 
 === Communications
@@ -211,7 +198,7 @@ We provide some utility free functions that allow a transparent access to the `W
 We denote by `c` a Feel++ data structure associated to a `WorldComm`.
 
 |===
-| Feel++ Keyword | Description
+| *Feel++ Keyword* | *Description*
 | rank(c)| returns the local MPI rank of the data structure `c`
 | globalRank(c)| returns the global MPI rank of the data 
 |===
