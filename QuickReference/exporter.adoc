@@ -1,6 +1,6 @@
 = Post-Processing and Visualization
 
-<!-- toc -->
+:toc:
 
 == Introduction
 
@@ -56,7 +56,7 @@ To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot i
 | image:../pngs/visualisation/sphere_p4.png[]
 |===
 
-[[Visualization]]
+
 == Visualization
 
 We would like to visualize the function $$u=\sin(\pi x)$$ over 
