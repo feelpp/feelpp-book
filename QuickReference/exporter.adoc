@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-== Introduction {#intro}
+== Introduction
 
 Once the PDE is solved we usually would like to
 visualize the solution and possibly other data or fields associated with the problem. Feel++ provides a very powerful framework for  post-processing allowing to:
@@ -57,7 +57,7 @@ To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot i
 |===
 
 
-== Visualization {#visualization}
+== Visualization
 
 We would like to visualize the function $$u=\sin(\pi x)$$ over 
 $$\Omega= \{ (x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1 \} $$
