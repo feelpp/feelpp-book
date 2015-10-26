@@ -57,7 +57,7 @@ To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot i
 |===
 
 
-== Visualization {Visualization}
+== Visualization 
 
 We would like to visualize the function $$u=\sin(\pi x)$$ over 
 $$\Omega= \{ (x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1 \} $$
