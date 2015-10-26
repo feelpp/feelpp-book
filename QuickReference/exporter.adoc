@@ -66,12 +66,12 @@ $$\Omega$$ is approximated by $$\Omega_h$$.
 To define $$\Omega$$ the code reads     mesh   
 [source,cpp,indent=0]
 --
-include:code/myexporter.cpp[]
+include:../Tutorial/code/myexporter.cpp[]
 --
 and $$u$$ :   
 [source,cpp,indent=0]
 --
-include:code/myexporter.cpp[]
+include:../Tutorial/code/myexporter.cpp[]
 --
 
 We start with an `Exporter`  object that allows to visualize the $$P_1$$ interpolant of $$u$$ over $$\Omega$$.
