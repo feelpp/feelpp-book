@@ -33,28 +33,29 @@ To illustrate both approaches in visualizing high degree polynomials   in curved
 
 .Comparison between various geometrical interpolation order
 |===
-| Order 1 | Order 2 | Order 2 with P1 interpolation
-|image::../pngs/visualisation/circle_p1p1.png[Order 1 Circle]|image::../pngs/visualisation/circle_p2p2.png[Order 2] | image::../pngs/visualisation/circle_p2p2_p1interpolator.png[P2isoP1]
+| Order 1 | Order 2 | P2isoP1| Order 3 | P3isoP1 | Order 4 | P4isoP1 | Order 5 | P5isoP1
+|image:../pngs/visualisation/circle_p1p1.png[]
+|image:../pngs/visualisation/circle_p2p2.png[] 
+|image:../pngs/visualisation/circle_p2p2_p1interpolator.png[]
+|image:../pngs/visualisation/circle_p3p3.png[]
+| image:../pngs/visualisation/circle_p3p3_p1interpolator.png[]
+| image:../pngs/visualisation/circle_p4p4.png[] 
+| image:../pngs/visualisation/circle_p4p4_p1interpolator.png[] 
+| image:../pngs/visualisation/circle_p5p5.png[] 
+| image:../pngs/visualisation/circle_p5p5_p1interpolator.png[]
 |===
 
-|===
-| Order 3 | P3isoP1 | Order 4 | P4isoP1 | Order 5 | P5isoP1
-|image::../pngs/visualisation/circle_p3p3.png[]| image::../pngs/visualisation/circle_p3p3_p1interpolator.png[]| image::../pngs/visualisation/circle_p4p4.png[] | image::../pngs/visualisation/circle_p4p4_p1interpolator.png[] | image::../pngs/visualisation/circle_p5p5.png[] | image::../pngs/visualisation/circle_p5p5_p1interpolator.png[]
-|===
+To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot in Figures 1D and 3D functions defined on the unit sphere.
 
-To further illustrate the capabilities of the Feel's exporter to Gmsh, we plot in Figures 1D and 3D functions defined in the $$[-1,1]$$  interval and the unit sphere, respectively.
-
+.Visualisation of a function using geometrical 1 to 4 in 3D
 |===
 |Order 1 | Order 2 | Order 3 | Order 4 
-| image::../pngs/visualisation/sphere_p1.png[]
-| image::../pngs/visualisation/sphere_p2.png[] 
-| image::../pngs/visualisation/sphere_p3.png[] 
-| image::../pngs/visualisation/sphere_p4.png[]
+| image:../pngs/visualisation/sphere_p1.png[]
+| image:../pngs/visualisation/sphere_p2.png[] 
+| image:../pngs/visualisation/sphere_p3.png[] 
+| image:../pngs/visualisation/sphere_p4.png[]
 |===
 
-| 
-|---------|----------|--------|---------|
-|| 
 
 == Visualization {Visualization}
 
@@ -65,12 +66,12 @@ $$\Omega$$ is approximated by $$\Omega_h$$.
 To define $$\Omega$$ the code reads     mesh   
 [source,cpp,indent=0]
 --
-include::code/myexporter.cpp[]
+include:code/myexporter.cpp[]
 --
 and $$u$$ :   
 [source,cpp,indent=0]
 --
-include::code/myexporter.cpp[]
+include:code/myexporter.cpp[]
 --
 
 We start with an `Exporter`  object that allows to visualize the $$P_1$$ interpolant of $$u$$ over $$\Omega$$.
