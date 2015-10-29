@@ -21,12 +21,14 @@ cmake_minimum_required(VERSION 2.8)
 # you need to specify the FEELPP_DIR variable to the root
 # of your installation directory or add the path of your 
 # installation in the PATHS section
-find_package(Feel++ 
-    PATHS $ENV{FEELPP_DIR}/share/feel/cmake 
-          /usr/share/feel/cmake 
-          /usr/local/share/feel/cmake 
-          /opt/share/feel/cmake
-)
+if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
+    find_package(Feel++ 
+        PATHS $ENV{FEELPP_DIR}/share/feel/cmake 
+            /usr/share/feel/cmake 
+              /usr/local/share/feel/cmake 
+              /opt/share/feel/cmake
+    )
+endif()
 
 # Then you can add your application and the associated hpp, cpp, geo, msh and cfg files
 feelpp_add_application(
