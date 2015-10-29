@@ -25,9 +25,12 @@ if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
     find_package(Feel++ 
         PATHS $ENV{FEELPP_DIR}/share/feel/cmake 
             /usr/share/feel/cmake 
-              /usr/local/share/feel/cmake 
-              /opt/share/feel/cmake
+            /usr/local/share/feel/cmake 
+            /opt/share/feel/cmake
     )
+    if(NOT FEELPP_FOUND)
+        message(FATAL_ERROR "Feel++ was not found on your system. Make sure to install it and specify the FEELPP_DIR to reference the installation directory.")
+    endif()
 endif()
 
 # Then you can add your application and the associated hpp, cpp, geo, msh and cfg files
