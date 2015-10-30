@@ -90,8 +90,8 @@ or at the `List of Cmake Options` section.
 If you need to set specific CMake variables to fit an exotic system
 (e.g. supercomputer), you can create a machine file fitting this
 system.  To do so, simply create a file named
-`feelpp.machines.&lt;name&gt;.cmake` in the
-`cmake/machines` directory, where `&lt;name&gt;` is the
+`feelpp.machines.<name>.cmake` in the
+`cmake/machines` directory, where `<name>` is the
 machine name returned by the execution of `uname -n`.  The file
 will automatically be recognized and loaded, when you will be
 compiling Feel++ on this system.  
