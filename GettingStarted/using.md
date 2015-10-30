@@ -1,16 +1,7 @@
 Using Feel++
 ============
 
-# Introduction
-
-We now consider the case where Feel++ has been installed on your system
-either via a package manager or via Feel++ build system.
-
-# Checking out your project
-
-First, get a clone of your current project or create a directory and put your code in it.
-
-# Configure
+# Step 1 : Configure your project with Feel++
 
 In order to configure your project to use Feel++, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. To detect your Feel++ installation and configure your application you can use the following file example:
 ```
@@ -68,12 +59,38 @@ feelpp_add_application(
 
 -->
 
-Then create a separate build directory (to keep your code separate from build data) and configure your application:
+
+# Step 2 : Build your project with Feel++
+
+There are two ways that you can configure your project to use Feel++:
+- You can use the research directory located in Feel++ sources,
+- You can install Feel++ and use it as an external library for your project.
+
+## Using the research directory
+
+The first possibility is to use the research directory located inside Feel++ source directory.
+To do so, simply copy the directory containing your source code into the research directory. Then you can follow the [compilation guide](https://github.com/feelpp/feelpp-book/blob/master/GettingStarted/compiling.md) with a simple additional step: You have to enable your project when typing the `cmake` command.
+
+To do so, you must add the following option `-DFEELPP_ENABLE_RESEARCH_<directory>=ON` to cmake, with `<directory>` begin the name of the directory that you copied in research. 
+
+Then you can proceed by going to your project directory in the build directory and type the `make` command.
+
+## Using an installation of Feel++ 
+
+If you already installed Feel++ either through your package manager or with a manual installation, then you can directly compile your project.
+
+Create a separate build directory (to keep your code separate from build data) and configure your application:
 
 ```sh
 # Create a build directory
 mkdir -p /path/to/build/directory
 cd /path/to/build/directory
+
+# If you installed Feel++ in a directory referenced in the CMakeLists.txt
+# previsouly described, then you have nothing to add
+# Otherwise you should set the FEELPP_DIR environment variable to the location
+# of your Feel++ installation, i.e. the one you specified with -DCMAKE_INSTALL_PREFIX
+# ex: export FEELPP_DIR=/home/login/opt
 
 # Configure your project
 cmake /path/to/source/directory \
