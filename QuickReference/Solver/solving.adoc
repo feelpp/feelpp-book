@@ -91,7 +91,9 @@ pc-type=jacobi
 --
 # linear
 ksp_monitor=1
+# non-linear
 snes-monitor=1
+# eigen value problem
 eps-monitor=1
 ```
 
