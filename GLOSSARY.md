@@ -116,3 +116,7 @@ A library based on PETSc providing a framework to solve eigenvalue problems.
 ## UMFPACK
 
 UMFPACK /ˈʌmfpæk/ is a set of routines for solving sparse linear systems of the form Ax=b, using the Unsymmetric MultiFrontal method (Matrix A is not required to be symmetric) [source: https://en.wikipedia.org/wiki/UMFPACK]
+
+## Pastix
+
+PaStiX (Parallel Sparse matriX package) is a scientific library that provides a high performance parallel solver for very large sparse linear systems based on direct methods.  Numerical algorithms are implemented in single or double precision (real or complex) using LLt, LDLt and LU with static pivoting (for non symmetric matrices having a symmetric pattern).  This solver provides also an adaptive blockwise iLU(k) factorization that can be used as a parallel preconditioner using approximated supernodes to build a coarser block structure of the incomplete factors.
