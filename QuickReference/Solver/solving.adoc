@@ -39,19 +39,32 @@ Using the link::backends.md[PETSc backend] allows to choose different packages t
 | pastix, Parallel Sparse matriX package, yes, yes, yes
 |===
 
-To choose between these implementation
+To choose between these factorization package
 [source,ini]
 --
 # choose mumps
 pc-factor-mat-solver-package=mumps
-# choose umfpack
+# choose umfpack (sequential)
 pc-factor-mat-solver-package=umfpack
 --
 
+In order to perform a cholesky type of factorisation, it is required to 
+set the underlying matrix to be SPD
 
-== To use GMRES+ILU(3) with a relative tolerance of 1e-12 and a restart of 300:
+[source,cpp]
+--
+# matrix
+auto A = backend->newMatrix(_test=...,_trial=...,_properties=SPD);
+# bilinear form
+auto a = form2( _test=..., _trial=..., _properties=SPD );
+--
 
-[source,cfg]
+== Using iterative solvers
+
+=== GMRES+ILU(3) 
+
+with a relative tolerance of 1e-12 and a restart of 300:
+[source,ini]
 --
 -ksp-rtol 1.e-12
 -ksp-type gmres
@@ -60,47 +73,25 @@ pc-factor-mat-solver-package=umfpack
 -pc_factor_levels 3
 --
 
+=== Using GMRES+Jacobi 
 
-## To use the direct LU solver from UMFPACK
-```
--ksp_type preonly
--pc_type lu
--pc_factor_mat_solver_package umfpack
-```
+With a relative tolerance of 1e-12 and a restart of 100:
+[source,ini]
+--
+ksp-rtol=1.e-12
+ksp-type=gmres
+ksp-gmres-restart 100
+pc-type=jacobi
+--
 
-##To use the direct LU solver from MUMPS
+== Monitoring  linear non-linear and eigen problem solver residuals
 
-```
--ksp_type preonly
--pc_type lu
--pc_factor_mat_solver_package mumps
-```
-
-## To preallocate 300 nonzero elements per line in the matrix
-```
--petsc_prealloc 300
-```
-
-## To monitor the linear solver residuals
-```
--ksp_monitor
+[source,ini]
+--
+# linear
+ksp_monitor=1
+snes-monitor=1
+eps-monitor=1
 ```
 
-## To monitor the non-linear solver residuals
-```
--snes_monitor
-```
 
-## To monitor the slepc eigen value solver residuals
-```
--eps_monitor
-```
-
-## To use GMRES+Jacobi with a relative tolerance of 1e-12 and a restart of 100:
-```
--ksp_rtol 1.e-12
--ksp_type gmres
--ksp_gmres_restart 100
--pc_type jacobi
--pc_factor_levels 3
-```
