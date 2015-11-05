@@ -1,0 +1,86 @@
+= Solving a linear system
+
+The configuration files `.cfg` allow for a wide range of options to solve
+a linear or non-linear system.
+
+We consider now the following example 
+[sources,cpp]
+--
+include::../../Tutorial/codes/mylaplacian.cpp[]
+--
+To execute this example
+[source,shell]
+--
+# sequential
+./feelpp_tut_laplacian
+# parallel on 4 cores
+mpirun -np 4 ./feelpp_tut_laplacian 
+--
+As described in section 
+
+== Direct solver
+
+`cholesky` and `lu` factorisation are available. However the parallel implementation depends on the availability of MUMPS.
+[source,ini]
+--
+# no iterative solver
+--ksp-type preonly
+# 
+-pc-type cholesky
+--
+
+== To use GMRES+ILU(3) with a relative tolerance of 1e-12 and a restart of 300:
+
+[source,cfg]
+--
+-ksp-rtol 1.e-12
+-ksp-type gmres
+-ksp_gmres_restart 300
+-pc_type ilu
+-pc_factor_levels 3
+--
+
+
+## To use the direct LU solver from UMFPACK
+```
+-ksp_type preonly
+-pc_type lu
+-pc_factor_mat_solver_package umfpack
+```
+
+##To use the direct LU solver from MUMPS
+
+```
+-ksp_type preonly
+-pc_type lu
+-pc_factor_mat_solver_package mumps
+```
+
+## To preallocate 300 nonzero elements per line in the matrix
+```
+-petsc_prealloc 300
+```
+
+## To monitor the linear solver residuals
+```
+-ksp_monitor
+```
+
+## To monitor the non-linear solver residuals
+```
+-snes_monitor
+```
+
+## To monitor the slepc eigen value solver residuals
+```
+-eps_monitor
+```
+
+## To use GMRES+Jacobi with a relative tolerance of 1e-12 and a restart of 100:
+```
+-ksp_rtol 1.e-12
+-ksp_type gmres
+-ksp_gmres_restart 100
+-pc_type jacobi
+-pc_factor_levels 3
+```
