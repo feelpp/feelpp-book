@@ -33,11 +33,11 @@ Using the link::backends.md[PETSc backend] allows to choose different packages t
 
 .Table of factorization package
 |===
-| Package | Description | LU | CHOLESKY | Parallel
-| petsc, PETSc own implementation (KLU), yes, yes, yes
-| mumps, MUltifrontal Massively Parallel sparse direct Solver, yes, yes, yes
-| umfpack, Unsymmetric MultiFrontal package, yes, yes, no
-| pastix, Parallel Sparse matriX package, yes, yes, yes
+| Package | Description |  Parallel
+| petsc, PETSc own implementation,  yes
+| mumps, MUltifrontal Massively Parallel sparse direct Solver, yes
+| umfpack, Unsymmetric MultiFrontal package, no
+| pastix, Parallel Sparse matriX package, yes
 |===
 
 To choose between these factorization package
@@ -67,11 +67,11 @@ auto a = form2( _test=..., _trial=..., _properties=SPD );
 with a relative tolerance of 1e-12 and a restart of 300:
 [source,ini]
 --
--ksp-rtol 1.e-12
--ksp-type gmres
--ksp_gmres_restart 300
--pc_type ilu
--pc_factor_levels 3
+ksp-rtol=1.e-12
+ksp-type=gmres
+ksp-gmres-restart=300
+pc-type=ilu
+pc-factor-levels=3
 --
 
 === Using GMRES+Jacobi 
