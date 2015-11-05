@@ -62,7 +62,9 @@ auto a = form2( _test=..., _trial=..., _properties=SPD );
 
 == Using iterative solvers
 
-=== CG+ICC(3) 
+=== Using CG
+
+==== ICC(3) 
 
 with a relative tolerance of 1e-12:
 [source,ini]
@@ -73,7 +75,9 @@ pc-type=icc
 pc-factor-levels=3
 --
 
-=== GMRES+ILU(3) 
+=== Using GMRES
+
+==== ILU(3) 
 
 with a relative tolerance of 1e-12 and a restart of 300:
 [source,ini]
@@ -85,7 +89,7 @@ pc-type=ilu
 pc-factor-levels=3
 --
 
-=== Using GMRES+Jacobi 
+==== Jacobi 
 
 With a relative tolerance of 1e-12 and a restart of 100:
 [source,ini]
