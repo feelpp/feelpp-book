@@ -45,6 +45,7 @@
    * [Forms](QuickReference/forms.adoc)
    * [Solver](QuickReference/solver.md)
        * [Preconditioner](QuickReference/preconditioner.md)
+       * [Solving linear systems](QuickReference/Solver/solving.adoc)
        * [Backends](QuickReference/Solver/backends.md)
        * [Eigen problem](QuickReference/Solver/eigensolver.adoc)
    * [Time Stepping](QuickReference/Time/README.md)
