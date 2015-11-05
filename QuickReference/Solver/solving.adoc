@@ -39,6 +39,15 @@ Using the link::backends.md[PETSc backend] allows to choose different packages t
 | pastix, Parallel Sparse matriX package, yes, yes, yes
 |===
 
+To choose between these implementation
+[source,ini]
+--
+# choose mumps
+pc-factor-mat-solver-package=mumps
+# choose umfpack
+pc-factor-mat-solver-package=umfpack
+--
+
 
 == To use GMRES+ILU(3) with a relative tolerance of 1e-12 and a restart of 300:
 
