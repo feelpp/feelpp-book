@@ -34,10 +34,10 @@ Using the link::backends.md[PETSc backend] allows to choose different packages t
 .Table of factorization package
 |===
 | Package | Description |  Parallel
-| petsc, PETSc own implementation,  yes
-| mumps, MUltifrontal Massively Parallel sparse direct Solver, yes
-| umfpack, Unsymmetric MultiFrontal package, no
-| pastix, Parallel Sparse matriX package, yes
+| petsc | PETSc own implementation|  yes
+| mumps | MUltifrontal Massively Parallel sparse direct Solver| yes
+| umfpack | Unsymmetric MultiFrontal package | no
+| pastix | Parallel Sparse matriX package| yes
 |===
 
 To choose between these factorization package
