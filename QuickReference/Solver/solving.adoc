@@ -1,4 +1,5 @@
 = Solving a linear system
+:toc:
 
 The configuration files `.cfg` allow for a wide range of options to solve
 a linear or non-linear system.
