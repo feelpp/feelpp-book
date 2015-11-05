@@ -83,7 +83,7 @@ Free-function to compute the average value of a function.
 
 ## MUMPS
 
-A parallel sparse direct solvers which provides
+A parallel sparse direct solvers 
 
 ## normH1
 
@@ -117,10 +117,10 @@ MPI local rank of a data structure
 
 A library based on PETSc providing a framework to solve eigenvalue problems.
 
-## UMFPACK
-
-UMFPACK /ˈʌmfpæk/ is a set of routines for solving sparse linear systems of the form Ax=b, using the Unsymmetric MultiFrontal method (Matrix A is not required to be symmetric) [source: https://en.wikipedia.org/wiki/UMFPACK]
-
 ## SPD
 
 Symmetric Positive Definite
+
+## UMFPACK
+
+UMFPACK /ˈʌmfpæk/ is a set of routines for solving sparse linear systems of the form Ax=b, using the Unsymmetric MultiFrontal method (Matrix A is not required to be symmetric) [source: https://en.wikipedia.org/wiki/UMFPACK]
