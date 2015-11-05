@@ -35,6 +35,8 @@ Using the link::backends.md[PETSc backend] allows to choose different packages t
 | Package | Description | LU | CHOLESKY | Parallel
 | petsc, PETSc own implementation (KLU), yes, yes, yes
 | mumps, MUltifrontal Massively Parallel sparse direct Solver, yes, yes, yes
+| umfpack, Unsymmetric MultiFrontal package, yes, yes, no
+| pastix, Parallel Sparse matriX package, yes, yes, yes
 |===
 
 
