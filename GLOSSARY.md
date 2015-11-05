@@ -99,7 +99,7 @@ Free-function to compute the $$L^{\infty}$$ norm of an expression
 
 ## Pastix
 
-PaStiX (Parallel Sparse matriX package) is a scientific library that provides a high performance parallel solver for very large sparse linear systems based on direct methods.  Numerical algorithms are implemented in single or double precision (real or complex) using LLt, LDLt and LU with static pivoting (for non symmetric matrices having a symmetric pattern).  This solver provides also an adaptive blockwise iLU(k) factorization that can be used as a parallel preconditioner using approximated supernodes to build a coarser block structure of the incomplete factors.
+PaStiX (Parallel Sparse matriX package) is a scientific library that provides a high performance parallel solver for very large sparse linear systems based on direct methods.  Numerical algorithms are implemented in single or double precision (real or complex) using LLt, LDLt and LU with static pivoting (for non symmetric matrices having a symmetric pattern).  This solver provides also an adaptive blockwise iLU(k) factorization that can be used as a parallel preconditioner using approximated supernodes to build a coarser block structure of the incomplete factors. See http://pastix.gforge.inria.fr/.
 
 ## PETSc
 
