@@ -5,7 +5,6 @@ int main(int argc, char**argv )
   using namespace Feel;
   po::options_description laplacianoptions( "Laplacian options" );
   laplacianoptions.add_options()
-    ("myModel", po::value< std::string >()-> default_value("model"), "Name of our model")
     ("myVerbose", po::value< bool >()-> default_value( true ), "Display information during execution")
     ;
   Environment env( _argc=argc, _argv=argv,
@@ -13,11 +12,11 @@ int main(int argc, char**argv )
       _about=about(_name="aniso_laplacian",
         _author="Feel++ Consortium",
         _email="feelpp-devel@feelpp.org"));
-  ModelProperties model(Environment::expand(soption("myModel")));
+  ModelProperties model; // Will load --mod-file
   map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };
   ModelMaterials materials = model.materials();
   if(boption("myVerbose") && Environment::isMasterRank() )
-    std::cout << "Model " << Environment::expand( soption("myModel")) << " loaded." << std::endl;
+    std::cout << "Model " << Environment::expand( soption("mod-file")) << " loaded." << std::endl;
   auto f = expr( soption(_name="functions.f"), "f" );
   auto mesh = loadMesh(_mesh=new Mesh<Simplex<MODEL_DIM>>);
   auto Vh = Pch<2>( mesh );
