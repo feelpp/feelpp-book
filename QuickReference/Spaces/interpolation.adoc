@@ -22,7 +22,8 @@ auto Ih = I( _domain=P1h, _image=P0h );
 
 The De Rahm diagram reads as follows: the range of each of the operators coincides with the null space of the next operator in the sequence below, and the last map is a surjection. 
 
-latexmath:[\begin{array}{ccccccc}
+$$
+\begin{array}{ccccccc}
       H^1(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H^{\mathrm{curl}}(\Omega)&
@@ -30,10 +31,12 @@ latexmath:[\begin{array}{ccccccc}
       H^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
       L^2(\Omega)
-    \end{array}]
+    \end{array}
+$$
     
 An important result is that the diagram transfers to the discrete level
-latexmath:[\begin{array}{ccccccc}
+$$
+\begin{array}{ccccccc}
       H^1(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H^{\mathrm{curl}}(\Omega)&
@@ -56,18 +59,22 @@ latexmath:[\begin{array}{ccccccc}
       W_h&
       \overset{\nabla \cdot}{\longrightarrow}&
       Z_h\\
-    \end{array}]
+    \end{array}
+$$
 
 The diagram above is commutative which means that we have the following properties:
 
-latexmath:[\begin{aligned}
+$$
+\begin{aligned}
 \nabla(\pi_{c,h} u) &= \pi_{\mathrm{curl},h}( \nabla u ),\\ \nabla\times(\pi_{\mathrm{curl},h} u) &= \pi_{\mathrm{div},h}( \nabla\times u ),\\
 \nabla\cdot(\pi_{\mathrm{div},h} u) &= \pi_{d,h}( \nabla\cdot u )
-\end{aligned}]
+\end{aligned}
+$$
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
-latexmath:[\begin{array}{ccccccc}
+$$
+\begin{array}{ccccccc}
       H^1_0(\Omega)&
       \overset{\nabla}{\longrightarrow}&
       H_0^{\mathrm{curl}}(\Omega)&
@@ -75,17 +82,18 @@ latexmath:[\begin{array}{ccccccc}
       H_0^{\mathrm{div}}(\Omega)&
       \overset{\nabla \cdot}{\longrightarrow}&
       L^2_0(\Omega)
-    \end{array}]
+    \end{array}
+$$
 
 Interpolation operators are provided as is or as shared pointers. The table below presents the alternatives.
 
 .Table of Interpolation operators
 |===
 | C++ object | C++ shared object| Mathematical operator 
-| `I(_domain=Xh,_image=Yh)` | `IPtr(...)` | latexmath:[I X_h \rightarrow Yh ]
-| `Grad(_domain=Xh,_image=Wh)` | `GradPtr(...)` | latexmath:[\nabla: X_h \rightarrow Wh ]
-| `Curl(_domain=Wh,_image=Vh)` | `CurlPtr(...)` | latexmath:[\nabla \times W_h \rightarrow Vh ]
-| `Div(_domain=Vh,_image=Zh)` | `DivPtr(...)`|  latexmath:[\nabla \cdot: V_h \rightarrow Zh ]
+| `I(_domain=Xh,_image=Yh)` | `IPtr(...)` | $$I: X_h \rightarrow Y_h $$
+| `Grad(_domain=Xh,_image=Wh)` | `GradPtr(...)` | $$\nabla: X_h \rightarrow W_h $$
+| `Curl(_domain=Wh,_image=Vh)` | `CurlPtr(...)` | $$\nabla \times : W_h \rightarrow V_h $$
+| `Div(_domain=Vh,_image=Zh)` | `DivPtr(...)`|  $$\nabla \cdot: V_h \rightarrow Z_h $$
 |===
 
 
