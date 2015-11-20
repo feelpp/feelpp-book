@@ -1,15 +1,19 @@
 = Interpolation
 
 
-Feel++ has a very powerful interpolation framework which allows to seamlessly in parallel:
- - transfer functions from one mesh to another
- - transfer functions from one space type to another.
+Feel++ has a very powerful interpolation framework which allows to:
 
+* transfer functions from one mesh to another
+
+* transfer functions from one space type to another.
+
+this is done seamlessly in parallel.
 The framework provides a set of C++ classes and C++ free-functions enabled  short, concise and expressive handling of interpolation.
 
 == Using interpolation operator
 
 [source,cpp]
+.Building interpolation operator $$I_h : P^1_{c,h} \rightarrow P^0_{td.h}$$
 --
 using MeshType = Mesh<Simplex<2>>;
 auto mesh loadMesh( _mesh=new MeshType );
