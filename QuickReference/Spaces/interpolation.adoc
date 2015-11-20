@@ -127,6 +127,7 @@ functionspace_type<decltype(Zh)>>`
 
 
 [source,cpp]
+.Building the discrete operators associated to the De Rahm diagram in Feel++
 --
 auto mesh = loadMesh( _mesh=new Mesh<Simplex<Dim>>());
 auto Xh = Pch<1>(mesh);
