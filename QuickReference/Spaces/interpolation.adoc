@@ -90,7 +90,13 @@ Interpolation operators are provided as is or as shared pointers. The table belo
 .Table of Interpolation operators
 |===
 | C++ object | C++ Type | C++ shared object | C++ Type | Mathematical operator 
-| `I(_domain=Xh,_image=Yh)` | | `IPtr(...)` | $$I: X_h \rightarrow Y_h $$
+| `I(_domain=Xh,_image=Yh)` 
+| I_t<functionspace_type<decltype(Xh)>, 
+functionspace_type<decltype(Xh)>>
+| `IPtr(...)` 
+| I_ptr_t<functionspace_type<decltype(Xh)>, 
+functionspace_type<decltype(Xh)>>
+| $$I: X_h \rightarrow Y_h $$
 | `Grad(_domain=Xh,_image=Wh)` 
 | `Grad_t<functionspace_type<decltype(Xh)>,
 functionspace_type<decltype(Wh)>>` 
@@ -104,7 +110,7 @@ functionspace_type<decltype(Vh)>>`
 | `CurlPtr(...)` 
 | `Curl_ptr_t<functionspace_type<decltype(Wh)>,
 functionspace_type<decltype(Vh)>>`
-| $$\nabla \times : W_h \rightarrow V_h $$|
+| $$\nabla \times : W_h \rightarrow V_h $$
 | `Div(_domain=Vh,_image=Zh)` 
 | `Div_t<functionspace_type<decltype(Vh)>,
 functionspace_type<decltype(Zh)>>`
