@@ -91,11 +91,11 @@ Interpolation operators are provided as is or as shared pointers. The table belo
 |===
 | C++ object | C++ Type | C++ shared object | C++ Type | Mathematical operator 
 | `I(_domain=Xh,_image=Yh)` 
-| I_t<functionspace_type<decltype(Xh)>, 
-functionspace_type<decltype(Xh)>>
+| `I_t<functionspace_type<decltype(Xh)>, 
+functionspace_type<decltype(Xh)>>`
 | `IPtr(...)` 
-| I_ptr_t<functionspace_type<decltype(Xh)>, 
-functionspace_type<decltype(Xh)>>
+| `I_ptr_t<functionspace_type<decltype(Xh)>, 
+functionspace_type<decltype(Xh)>>`
 | $$I: X_h \rightarrow Y_h $$
 | `Grad(_domain=Xh,_image=Wh)` 
 | `Grad_t<functionspace_type<decltype(Xh)>,
