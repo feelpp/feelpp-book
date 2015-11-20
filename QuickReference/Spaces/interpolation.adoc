@@ -89,14 +89,29 @@ Interpolation operators are provided as is or as shared pointers. The table belo
 
 .Table of Interpolation operators
 |===
-| C++ object | C++ Type | C++ shared object| Mathematical operator 
+| C++ object | C++ Type | C++ shared object | C++ Type | Mathematical operator 
 | `I(_domain=Xh,_image=Yh)` | | `IPtr(...)` | $$I: X_h \rightarrow Y_h $$
-| `Grad(_domain=Xh,_image=Wh)` | `Grad_t<functionspace_type<decltype(Xh)>,
-functionspace_type<decltype(Wh)>>` | `GradPtr(...)` | $$\nabla: X_h \rightarrow W_h $$
-| `Curl(_domain=Wh,_image=Vh)` | `Curl_t<functionspace_type<decltype(Xh)>,
-functionspace_type<decltype(Wh)>>`| `CurlPtr(...)` | $$\nabla \times : W_h \rightarrow V_h $$
-| `Div(_domain=Vh,_image=Zh)` | `Div_t<functionspace_type<decltype(Xh)>,
-functionspace_type<decltype(Wh)>>`| `DivPtr(...)`|  $$\nabla \cdot: V_h \rightarrow Z_h $$
+| `Grad(_domain=Xh,_image=Wh)` 
+| `Grad_t<functionspace_type<decltype(Xh)>,
+functionspace_type<decltype(Wh)>>` 
+| `GradPtr(...)` 
+| `Grad_ptr_t<functionspace_type<decltype(Xh)>,
+functionspace_type<decltype(Wh)>>` 
+| $$\nabla: X_h \rightarrow W_h $$
+| `Curl(_domain=Wh,_image=Vh)` 
+| `Curl_t<functionspace_type<decltype(Wh)>,
+functionspace_type<decltype(Vh)>>`
+| `CurlPtr(...)` 
+| `Curl_ptr_t<functionspace_type<decltype(Wh)>,
+functionspace_type<decltype(Vh)>>`
+| $$\nabla \times : W_h \rightarrow V_h $$|
+| `Div(_domain=Vh,_image=Zh)` 
+| `Div_t<functionspace_type<decltype(Vh)>,
+functionspace_type<decltype(Zh)>>`
+| `DivPtr(...)`
+| `Div_ptr_t<functionspace_type<decltype(Vh)>,
+functionspace_type<decltype(Zh)>>`
+|  $$\nabla \cdot: V_h \rightarrow Z_h $$
 |===
 
 
