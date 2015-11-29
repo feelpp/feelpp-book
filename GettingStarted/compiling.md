@@ -36,13 +36,15 @@ This is the list of all the libraries you must have installed on your
 computer, and the `*-dev` packages for some of them.
 
 Required packages:
-* g++ >= 5.0 OR clang >= 3.4 for C++14 compatibility
+* g++ >= 5.0 or clang >= 3.4 for C++14 compatibility 
 * MPI: openmpi (preferred) or mpich
 * Boost >= 1.55 and <= 1.59
 * Petsc >= 3.2 and <= 3.6.x
 * CMake >= 2.8.7
 * Gmsh >= 2.8.3 (can be found at [http://www.geuz.org/gmsh](http://www.geuz.org/gmsh))
 * Libxml2
+
+> **Warning** if you use clang (>= 3.4) and the standard C++ library from GCC, you have to use at least the version from g++ 4.9.
 
 Optional packages:
 * Superlu
