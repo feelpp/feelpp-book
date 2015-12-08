@@ -109,7 +109,7 @@ A library for High Performance Computing providing parallel data structures and 
 
 Free-function to project an expression $$e$$ over a nodal function space $$X_h$$. It would typically return the interpolant $$\Pi_h e \in X_h$$ of the expression in the function space.
 
-## rank
+## rank()
 
 MPI local rank of a data structure
 
