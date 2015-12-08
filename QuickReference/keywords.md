@@ -173,15 +173,15 @@ is a finite element space.
 
 |Feel++ Keyword | Math Object | Description | Rank | Dimension |
 |---------------|-------------|-------------|------|-----------|
-|` id(f)` | $$\{\phi_i\}$$ | test function | $$\mathrm{rank}(f(\overrightarrow{x}))$$ | $$m \times p $$|
-|` idt(f)`| $$\{\phi_i\}$$ | trial function | $$\mathrm{rank}(f(\overrightarrow{x}))$$ | $$m \times p $$|
-|` idv(f)`| $$f$$ | evaluation function   | $$\mathrm{rank}(f(\overrightarrow{x}))$$ | $$m \times p $$|
-|` grad(f)` | $$\nabla f$$ | gradient of test function | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ | $$m \times n $$ <br> $$p=1$$|
-|` gradt(f)`| $$\nabla f$$ | grdient of trial function | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=1$$|
-|` gradv(f)`| $$\nabla f$$ | evaluation function gradient  | $$\mathrm{rank}(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=1$$|
-|` div(f)` | $$\nabla\cdot f$$ | divergence of test function | $$\mathrm{rank}(f(\overrightarrow{x}))-1$$ | $$1 \times 1 $$|
-|` divt(f)`| $$\nabla\cdot f$$ | divergence of trial function | $$\mathrm{rank}(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$|
-|` divv(f)`| $$\nabla\cdot f$$ | evaluation function divergence  | $$\mathrm{rank}(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$|
+|` id(f)` | $$\{\phi_i\}$$ | test function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$|
+|` idt(f)`| $$\{\phi_i\}$$ | trial function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$|
+|` idv(f)`| $$f$$ | evaluation function   | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$|
+|` grad(f)` | $$\nabla f$$ | gradient of test function | rank$$(f(\overrightarrow{x}))+1$$ | $$m \times n $$ <br> $$p=1$$|
+|` gradt(f)`| $$\nabla f$$ | grdient of trial function | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=1$$|
+|` gradv(f)`| $$\nabla f$$ | evaluation function gradient  | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$<br> $$p=1$$|
+|` div(f)` | $$\nabla\cdot f$$ | divergence of test function | rank$$(f(\overrightarrow{x}))-1$$ | $$1 \times 1 $$|
+|` divt(f)`| $$\nabla\cdot f$$ | divergence of trial function | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$|
+|` divv(f)`| $$\nabla\cdot f$$ | evaluation function divergence  | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$|
 |` curl(f)` | $$\nabla\times f$$ | curl of test function |1| $$n \times 1 $$<br>$$m=n$$|
 |` curlt(f)`| $$\nabla\times f$$ | curl of trial function |1 |$$n \times 1 $$<br>$$m=n$$|
 |` curlv(f)`| $$\nabla\times f$$ | evaluation function curl  |1 |$$n \times 1 $$<br>$$m=n$$|
@@ -198,21 +198,21 @@ is a finite element space.
 |` jumpt(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of trial function |0| $$1 \times 1 $$<br>$$m=2$$|
 |` jumpv(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of function evaluation |0| $$n \times 1 $$<br>$$m=1$$|
 |` jumpv(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of function evaluation|0| $$1 \times 1 $$<br>$$m=2$$|
-|` average(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of test function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` averaget(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of trial function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` averagev(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of function evaluation|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftface(f)` |  $$f_0$$ |left test function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftfacet(f)` |  $$f_0$$ |left trial function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftfacev(f)` |  $$f_0$$ |left function evaluation|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightface(f)` |  $$f_1$$ |right test function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightfacet(f)` |  $$f_1$$ |right trial function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightfacev(f)` |  $$f_1$$ |right function evaluation|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` maxface(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>test function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` maxfacet(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>trial function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` maxfacev(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>function evaluation|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minface(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>test function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minfacet(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>trial function|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minfacev(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>function evaluation|$$\mathrm{rank}( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` average(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` averaget(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` averagev(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` leftface(f)` |  $$f_0$$ |left test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` leftfacet(f)` |  $$f_0$$ |left trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` leftfacev(f)` |  $$f_0$$ |left function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` rightface(f)` |  $$f_1$$ |right test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` rightfacet(f)` |  $$f_1$$ |right trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` rightfacev(f)` |  $$f_1$$ |right function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
+|` maxface(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` maxfacet(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` maxfacev(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` minface(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` minfacet(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|` minfacev(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
 
 
 
