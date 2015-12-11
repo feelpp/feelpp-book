@@ -186,7 +186,15 @@ is a finite element space.
 |` curlt(f)`| $$\nabla\times f$$ | curl of trial function |1 |$$n \times 1 $$<br>$$m=n$$|
 |` curlv(f)`| $$\nabla\times f$$ | evaluation function curl  |1 |$$n \times 1 $$<br>$$m=n$$|
 |` hess(f)`| $$\nabla^2 f$$ | hessian of test function  |2 |$$n \times n $$<br>$$m=p=1$$|
-
+|` dn(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of test function  |0 |$$1 \times 1 $$<br>$$m=p=1$$|
+|` dn(f)`| $$\nabla f \  \overrightarrow{N}$$ | normal derivative of test function  |1 |$$m \times 1 $$<br>$$p=1$$|
+|` dnt(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of trial function  |0 |$$1 \times1 $$<br>$$m=p=1$$|
+|` dnt(f)`| $$\nabla f \ \overrightarrow{N}$$ | normal derivative of trial function |1 |$$m \times 1 $$<br>$$p=1$$|
+|` dnv(f)`| $$\nabla f \cdot \ \overrightarrow{N}$$ | evaluation of normal derivative |0 |$$1 \times 1 $$<br>$$m=p=1$$|
+|` dnv(f)`| $$\nabla f \ \overrightarrow{N}$$ | evaluation of normal derivative |1 |$$m \times 1 $$<br>$$p=1$$|
+|` dx(f)`| $$\nabla f \cdot \overrightarrow{i}$$ | derivative of test function in $$x$$  |0 |$$1 \times 1 $$<br>$$m=p=1$$|
+|` dy(f)`| $$\nabla f \cdot \overrightarrow{j}$$ | derivative of test function in $$y$$  |0 |$$1 \times 1 $$<br>$$m=p=1$$|
+|` dz(f)`| $$\nabla f \cdot \overrightarrow{k}$$ | derivative of test function in $$z$$  |0 |$$1 \times 1 $$<br>$$m=p=1$$|
 
 ##  Two Valued Operators
 
