@@ -26,10 +26,9 @@ differential equations.
    variational formulations
    
  . a library that offers solving strategies that scales up to
-   thousands and even tens of thousands of cores (it is supported by a
-   european Prace project currently )
+   thousands and even tens of thousands of cores
    
- . a library entirely in ''C++'' allowing to create ''C++'' complex
+ . a library entirely in `C++` allowing to create `C++` complex
    and typically non-linear multi-physics applications currently in
    industry, physics and health-care.
 
@@ -38,13 +37,14 @@ differential equations.
 We're always happy to help out with Feel++ or any other questions you
 might have. You can ask a question or signal an issue at the Gitter
 Feel++ salon
+link::
 [![Join the chat at https://gitter.im/feelpp/feelpp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/feelpp/feelpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 ### Contribute to this documentation
 
 You can contribute to improve this documentation on
-[GitHub](https://github.com/feelpp/feelpp-book).
+https://github.com/feelpp/feelpp-book[GitHub]
 
 ---
 
