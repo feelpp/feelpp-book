@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Introduction](README.adoc)
    * [This book](book.md)
    * [Credits](credits.md)
    * [Consortium](consortium.md)
