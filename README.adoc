@@ -6,11 +6,11 @@ Finite Element Embedded Library in C++
 
 
 
-{{ feelpp }} is a unified C++ implementation of Galerkin methods (finite and
+Feel\++ is a unified C++ implementation of Galerkin methods (finite and
 spectral element methods) in 1D, 2D and 3D to solve partial
 differential equations.
 
-{{ feelpp }} is
+Feel++ is
 
  . a versatile mathematical kernel solving easily problems using
    different techniques thus allowing testing and comparing methods,
