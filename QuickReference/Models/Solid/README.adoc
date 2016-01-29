@@ -122,17 +122,17 @@ The fields allowed to be exported in the `Fields` section are:
 - principal-stresses
 - all
 
-In the `Measures` section, the measure type can be either the value on a set of points, `Points`, or the `Maximum` or `Minimum` over a set of range. +
-In the case where one want to evaluate on a point, range type is `coords` and its value is the coordinate of the point (`"{0,0,0}"` for example). +
-In the case where one want to evaluate over a range, range type is `markers` and its value is the name of the marker.
-
-[options=headers]
+.Measure type and range type associated
 |===
 |Measure type | Range type | example
+
 |Points | coords | "{0,0,0}"
 |Maximum | markers | "marker1"
 |Minimum | markers | "marker1"
+|volume_variation* | - | "volume_variation":""
 |===
+
+*volume_variation does not take a set of point or of range, it is a volumic measure.
 
 The fields on which one can do measures:
 
