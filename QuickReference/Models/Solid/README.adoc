@@ -61,28 +61,33 @@ The condition types are explain in the two following tables.
 
 .Boundary conditions
 |===
-| Name | Options  
+| Name | Options | Type 
 
 | Dirichlet 
 | faces, edges and component-wise
+| "Dirichlet"
 
 | Neumann 
 | scalar, vectorial
+| "Neumann_scalar" or "Neumann_vectorial"
 
 | Pressure follower ,
 | Nonlinear boundary condition set in deformed domain
+| TODO
 
 | Robin 
+| TODO
 | TODO
 
 |===
 
 .Volumic forces
 |===
-| Name | Options  
+| Name | Options | Type
 
 | Expression
 | Vectorial
+| "VolumicForces"
 
 |===
 
