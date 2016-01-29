@@ -1,5 +1,6 @@
 = Solid Mechanics Models
 
+== Properties
 
 * Linear 
 * SaintVenant Kirchhoff
@@ -35,6 +36,8 @@ When materials are closed to incompressibility formulation in displacement/press
 
 option: `mechanicalproperties.compressible.volumic_law`
 
+== Boundary Conditions
+
 Boundary conditions and volumic forces are set in the json files
 
 .Boundary conditions
@@ -63,3 +66,69 @@ Boundary conditions and volumic forces are set in the json files
 | Vectorial
 
 |===
+
+== Post Process
+
+The fields allowed to be exported in the json file are:
+
+- displacement
+- velocity
+- acceleration
+- stress or normal-stress
+- pressure
+- material-properties
+- pid
+- fsi
+- Von-Mises
+- Tresca
+- principal-stresses
+- all
+
+It can be set by:
+[source,json]
+.Post process section
+----
+"PostProcess":
+{
+    "Fields":["displacement","Von-Mises","tresca","principal-stresses"]
+}
+----
+
+The fields on which one can do measures:
+
+- volume_variation
+- displacement
+- velocity
+- acceleration
+- pressure
+- principal-stress-0
+- principal-stress-1
+- principal-stress-2
+- sigma_xx, sigma_xy, ...
+
+It can be measured on a point or find the maximum or minimum over a marked range:
+[source,json]
+.Measures section
+----
+"PostProcess":
+{
+    "Measures":
+    {
+        "Points":
+        {
+            "pointA":
+            {
+                "coord":"{0.6,0.2,0}",
+                "fields":["displacement","velocity"]
+            }
+        },
+        "Maximum":
+        {
+            "free-wall":
+            {
+                "markers":"free-wall",
+                "fields":["displacement","velocity"]
+            }
+        }
+    }
+}
