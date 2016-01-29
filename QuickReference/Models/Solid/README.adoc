@@ -36,6 +36,25 @@ When materials are closed to incompressibility formulation in displacement/press
 
 option: `mechanicalproperties.compressible.volumic_law`
 
+== Materials
+
+[source,json]
+.Materials section
+----
+"Materials":
+{
+    "marker":
+    {
+        "name":"solid",
+        "E":"1.4e6",
+        "nu":"0.4",
+        "rho":"1e3"
+    }
+}
+----
+
+where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio and `rho` the density in $$kg\cdot m^{-3}$$ .
+
 == Boundary Conditions
 
 Boundary conditions and volumic forces are set in the json files
