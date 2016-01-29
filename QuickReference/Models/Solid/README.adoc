@@ -39,6 +39,25 @@ option: `mechanicalproperties.compressible.volumic_law`
 == Boundary Conditions
 
 Boundary conditions and volumic forces are set in the json files
+[source,json]
+.Example for boundary conditions
+----
+"BoundaryConditions":
+{
+    "field":
+    {
+        "<condition type>":
+        {
+            "marker":
+            {
+                "expr": "value"
+            }
+        }
+    }
+}
+----
+where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
+The condition types are explain in the following table.
 
 .Boundary conditions
 |===
@@ -69,7 +88,26 @@ Boundary conditions and volumic forces are set in the json files
 
 == Post Process
 
-The fields allowed to be exported in the json file are:
+[source,json]
+----
+"PostProcess":
+{
+    "Fields":["field1","field2",...],
+    "Measures":
+    {
+        "<measure type>":
+        {
+            "label":
+            {
+                "<range type>":"value",
+                "fields":["field1","field3"]
+            }
+        }
+    }
+}
+----
+
+The fields allowed to be exported in the `Fields` section are:
 
 - displacement
 - velocity
@@ -84,15 +122,17 @@ The fields allowed to be exported in the json file are:
 - principal-stresses
 - all
 
-It can be set by:
-[source,json]
-.Post process section
-----
-"PostProcess":
-{
-    "Fields":["displacement","Von-Mises","tresca","principal-stresses"]
-}
-----
+In the `Measures` section, the measure type can be either the value on a set of points, `Points`, or the `Maximum` or `Minimum` over a set of range. +
+In the case where one want to evaluate on a point, range type is `coords` and its value is the coordinate of the point (`"{0,0,0}"` for example). +
+In the case where one want to evaluate over a range, range type is `markers` and its value is the name of the marker.
+
+[options=headers]
+|===
+|Measure type | Range type | example
+|Points | coords | "{0,0,0}"
+|Maximum | markers | "marker1"
+|Minimum | markers | "marker1"
+|===
 
 The fields on which one can do measures:
 
@@ -105,30 +145,3 @@ The fields on which one can do measures:
 - principal-stress-1
 - principal-stress-2
 - sigma_xx, sigma_xy, ...
-
-It can be measured on a point or find the maximum or minimum over a marked range:
-[source,json]
-.Measures section
-----
-"PostProcess":
-{
-    "Measures":
-    {
-        "Points":
-        {
-            "pointA":
-            {
-                "coord":"{0.6,0.2,0}",
-                "fields":["displacement","velocity"]
-            }
-        },
-        "Maximum":
-        {
-            "free-wall":
-            {
-                "markers":"free-wall",
-                "fields":["displacement","velocity"]
-            }
-        }
-    }
-}
