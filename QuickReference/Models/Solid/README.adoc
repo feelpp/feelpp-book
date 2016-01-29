@@ -57,7 +57,7 @@ Boundary conditions and volumic forces are set in the json files
 }
 ----
 where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
-The condition types are explain in the following table.
+The condition types are explain in the two following tables.
 
 .Boundary conditions
 |===
