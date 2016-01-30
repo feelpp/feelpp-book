@@ -17,7 +17,7 @@ make
 
 
 The step by step tutorial is decomposed into :   
-- [General information about directories management](01-OutputDirectories.md)
+- [General information about directories management](01-OutputDirectories.adoc)
 - [Setting up the Feel++ environment](02-SettingUpEnvironment.md)
 - [How to handle a mesh](03-LoadingMesh.md)
 - [How to manage expressions](04-UsingExpressions.md)
