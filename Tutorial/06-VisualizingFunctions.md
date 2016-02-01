@@ -10,7 +10,7 @@ available in [myexporter.cpp](code/05-myexporter.cpp), presented in the previous
 
 You can visualize data via :
 - [ensight](https://www.ceisoftware.com/),
-- [paraview](www.paraview.org/),
+- [paraview](http://www.paraview.org/),
 - [gmsh](http://geuz.org/gmsh).
 
 The results files are in 
