@@ -15,7 +15,7 @@
        * [Downloading Feel++](GettingStarted/download.adoc)
        * [Compiling Feel++](GettingStarted/compiling.adoc)
    * [Installing on Linux](GettingStarted/linux.adoc)
-   * [Installing on Mac OS X](GettingStarted/mac.md)
+   * [Installing on Mac OS X](GettingStarted/mac.adoc)
    * [Configuring your own project with CMake](GettingStarted/using.md)
 * [Tutorial](Tutorial/README.md)
    * [Output Directories](Tutorial/01-OutputDirectories.adoc)
