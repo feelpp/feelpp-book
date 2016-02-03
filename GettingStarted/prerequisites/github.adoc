@@ -1,60 +1,65 @@
-##GIT
+## GIT
+
 Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
-desktop. The basic commands to get started with git are:   
+desktop. The basic commands to get started with git are: 
+
 Clone an existing repository    
-```$ git clone ssh://user@domain.com/repository_name.git```  
+
+`$ git clone ssh://user@domain.com/repository_name.git`  
 
 Create a new local repository  
-```$ git init```   
+`$ git init`   
 
 Add a new file   
-```$ git add <file>```   
+`$ git add <file>`  
 
 Download changes and directly merge/integrate into HEAD    
-```$ git pull ```   
+`$ git pull `   
 
 Publish local changes on a remote   
-```$ git push ```   
+`$ git push `   
 
-Click [here](http://www.git-tower.com/blog/git-cheat-sheet/) for more info about git commands .
+Click link:http://www.git-tower.com/blog/git-cheat-sheet/[here] for more info about git commands.
 
+## GITHUB
 
-
-##GITHUB
 GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
 
 If you are new to github, these are the basic things you need to know to get started with GitHub:
    
  -  Creating a personal account  
- The first step to using GitHub is to set up a personal [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/).If you already have an account, visit [github.com](https://github.com/) and sign in.
+ The first step to using GitHub is to set up a personal link:https://help.github.com/articles/signing-up-for-a-new-github-account/[GitHub account]. If you already have an account, visit link:https://github.com/[github.com] and sign in.
  
  
 
 - Adding files   
 Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type:  
-   ``` git add file_Name  ```   
+
+`git add file_Name`   
    
 - Making a commit   
 After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, the next step is to go ahead, and do the commit itself. To add a commit message, in the command line, write:   
-```sh  
-git commit -m "write the commit message"
-```   
 
+[source,sh]
+----
+git commit -m "write the commit message"
+----   
 
 - Checking differences   
-Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit:   
-``` git diff ```   
+Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit: 
+
+`git diff`
+
 Inside the index file, it'll show you the changes in two ways.
 
-  If you have a branch set up to track a remote branch, you can use the   
-```git pull```   
-command to automatically fetch and then merge a remote branch into your current branch. 
+If you have a branch set up to track a remote branch, you can use the `git pull` command to automatically fetch and then merge a remote branch into your current branch. 
 
 - Pushing to Your Remotes   
 When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple:   
- ```git push [remote-name] [branch-name] ```.    
+
+`git push [remote-name] [branch-name]`.    
  
-*NOTE: ```git remote rename file_name``` and ```git remote rm file_name``` will rename and remove the given file respectively from a repo.*
+_**NOTE:** ```git remote rename file_name``` and ```git remote rm file_name``` will rename and remove the given file respectively from a repo._
 
 
  - Pull	requests	let	you	tell	others	about	changes	you've	pushed	to	a	repository	on	GitHub. The	request,	printed	to	the
