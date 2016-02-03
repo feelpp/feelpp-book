@@ -16,7 +16,7 @@
        * [Compiling Feel++](GettingStarted/compiling.adoc)
    * [Installing on Linux](GettingStarted/linux.adoc)
    * [Installing on Mac OS X](GettingStarted/mac.adoc)
-   * [Configuring your own project with CMake](GettingStarted/using.md)
+   * [Configuring your own project with CMake](GettingStarted/using.adoc)
 * [Tutorial](Tutorial/README.md)
    * [Output Directories](Tutorial/01-OutputDirectories.adoc)
    * [Environment](Tutorial/02-SettingUpEnvironment.md)
