@@ -1,6 +1,6 @@
-# Building Feel++ {#Building}
+# Building Feel++
 
 In this section, we will explain how to download and build Feel++.
 
-* [Downloading Feel++](download.md)
-* [Compiling Feel++](compiling.md)
+* link:download.adoc[Downloading Feel++]
+* link:compiling.adoc[Compiling Feel++]
