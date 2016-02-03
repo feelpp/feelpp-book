@@ -190,8 +190,8 @@ class operation
 
 Using this project, we will present here : 
 
-- how to compile the program using a link:makefile.md[MakeFile]
-- how to make it simpler with link:cmake.md[CMake]
-- what is git and link:github.md[GitHub]
-- How the code has to be link:doxygen.md[documented] .
+- how to compile the program using a link:makefile.adoc[MakeFile]
+- how to make it simpler with link:cmake.adoc[CMake]
+- what is git and link:github.adoc[GitHub]
+- How the code has to be link:doxygen.adoc[documented] .
 
