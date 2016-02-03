@@ -59,5 +59,5 @@
    * [Runtime](FAQ/FAQExecution.md)
 * [Annexes](Annexes/README.adoc)
    * [Calculus](Annexes/calculus.adoc)
-* [Glossary](GLOSSARY.md)
+* [Glossary](GLOSSARY.adoc)
 
