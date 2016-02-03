@@ -11,7 +11,7 @@
        * [CMake](GettingStarted/prerequisites/cmake.adoc)
        * [Makefile](GettingStarted/prerequisites/makefile.adoc)
 * [Getting Started](GettingStarted/README.adoc)
-   * [Building Feel++ from sources](GettingStarted/building.md)
+   * [Building Feel++ from sources](GettingStarted/building.adoc)
        * [Downloading Feel++](GettingStarted/download.md)
        * [Compiling Feel++](GettingStarted/compiling.md)
    * [Installing on Linux](GettingStarted/linux.adoc)
