@@ -4,7 +4,7 @@ Doxygen is a tool for auto-generating API documentation. It generates documentat
 
 **So, what's the value to Doxygen?** 
 
-Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *Makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen.So Doxygen automatically generates an example Doxyfile for you on request.
+Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *Makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen. So Doxygen automatically generates an example Doxyfile for you on request.
 
 The source comments can use any of three formats:   
 
@@ -46,8 +46,7 @@ Special comments can contain Doxygen tags that let you specify particulars about
      */
 
 
-We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run `make`   commands.    
-To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
+We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run `make`   commands. To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
 
 [source,sh]
 ----
@@ -68,9 +67,9 @@ find_package(Doxygen)
 endif()
 
 ----
-To generate the documentation, we have to set `option(BUID_DOCUMENTATION = ON)` and `OFF`  if we don't desire a documentation.
+To generate the documentation, we have to set `option(BUID_DOCUMENTATION = ON)` and `OFF` if we don't desire a documentation.
 
-**NOTE** : To reset the option's initial value,we use the cmake command:   
+**NOTE** : To reset the option's initial value, we use the cmake command:   
 
  - For our project   
 [source,sh]
@@ -85,7 +84,7 @@ cmake -DOPTION_NAME=NEW_VALUE
 
 The base situation is like this :   
 
-After a  CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.
+After a CMake run, you can type “make doc” to have CMake run Doxygen. To keep the source tree clean in out-of-source builds, the documentation is generated in the corresponding build directory.
 
 - To view the online html online documentation, we use the following command line in the source directory:
 
@@ -93,7 +92,7 @@ After a  CMake run, you can type “make doc” to have CMake run Doxygen. To ke
 open html/index.html
 ----
 
-- To generate the pdf format of the documentation from the Latek files created, go to the Latex  directory and then use the command line:
+- To generate the pdf format of the documentation from the Latek files created, go to the Latex directory and then use the command line:
 [source,sh]
 ---- 
 pdflatex   
