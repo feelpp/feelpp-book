@@ -8,7 +8,7 @@
    * [Prerequisites](GettingStarted/prerequisites/prerequisites.adoc)
        * [Doxygen](GettingStarted/prerequisites/doxygen.adoc)
        * [GitHub](GettingStarted/prerequisites/github.adoc)
-       * [CMake](GettingStarted/prerequisites/cmake.md)
+       * [CMake](GettingStarted/prerequisites/cmake.adoc)
        * [Makefile](GettingStarted/prerequisites/makefile.md)
 * [Getting Started](GettingStarted/README.md)
    * [Building Feel++ from sources](GettingStarted/building.md)
