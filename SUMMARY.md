@@ -2,7 +2,7 @@
 
 * [Introduction](README.adoc)
    * [This book](book.adoc)
-   * [Credits](credits.md)
+   * [Credits](credits.adoc)
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
    * [Prerequisites](prerequisites.md)
