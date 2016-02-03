@@ -3,7 +3,7 @@ Credits
 
 ##  Copyright  
 
-  * Feel++ is Copyright (C) 2010-2015 by- Feel++ Consortium
+  * Feel\++ is Copyright (C) 2010-2015 by- Feel++ Consortium
 
   * Feel++ is Copyright (C) 2005-2015 by
    - Université Joseph Fourier (Grenoble, France)
@@ -21,7 +21,8 @@ Credits
 
 ##  Management  
 
-Feel++ is managed by Christophe Prud'homme <christophe.prudhomme@feelpp.org>,
+Feel++ is managed by Christophe Prud'homme
+mailto:christophe.prudhomme@feelpp.org[] ,
 Professor in applied mathematic and scientific computing at U. de Strasbourg,
 France.
 
@@ -32,26 +33,26 @@ France.
 The current developers are
 
 
- - Alexandre Ancel <alexandre.ancel@cemosis.fr>
- - Vincent Chabannes <vincent.chabannes@feelpp.org>
- - Guillaume Dollé <gdolle@unistra.fr>
- - Vincent Doyeux <vincent.doyeux@ujf-grenoble.fr>
- - Cecile Daversin <daversin@math.unistra.fr>
- - Vincent Huber <vincent.huber@cemosis.fr>
- - Mourad Ismail <Mourad.Ismail@ujf-grenoble.fr>
+ - Alexandre Ancel mailto:alexandre.ancel@cemosis.fr[]
+ - Vincent Chabannes mailto:vincent.chabannes@feelpp.org[]
+ - Guillaume Dollé mailto:gdolle@unistra.fr[]
+ - Vincent Doyeux mailto:vincent.doyeux@ujf-grenoble.fr[]
+ - Cecile Daversin mailto:daversin@math.unistra.fr[]
+ - Vincent Huber mailto:vincent.huber@cemosis.fr[]
+ - Mourad Ismail mailto:Mourad.Ismail@ujf-grenoble.fr[]
  - Pierre Jolivet (former Phd student at U. Joseph Fourier, currently at ETHZ)
- - Christophe Prud'homme <christophe.prudhomme@feelpp.org>
- - Ranine Tarabay <tarabay@math.unistra.fr>
- - Christophe Trophime <christophe.trophime@lncmi.cnrs.fr>
- - Jean-Baptiste Wahl <wahl.jb@gmail.com>
+ - Christophe Prud'homme mailto:christophe.prudhomme@feelpp.org[]
+ - Ranine Tarabay mailto:tarabay@math.unistra.fr[]
+ - Christophe Trophime mailto:christophe.trophime@lncmi.cnrs.fr[]
+ - Jean-Baptiste Wahl mailto:wahl.jb@gmail.com[]
 
 Feel++ benefits from the many discussions and close research collaborations with
 the following persons
 
- - Zakaria Belhachmi <zakaria.belhachmi@uha.fr>
- - Silvia Bertoluzza <silvia.bertoluzza@imati.cnr.it>
- - Micol Pennacchio <Micol.Pennacchio@imati.cnr.it>
- - Marcela Szopos <mszopos@math.unistra.fr>
+ - Zakaria Belhachmi mailto:zakaria.belhachmi@uha.fr[]
+ - Silvia Bertoluzza mailto:silvia.bertoluzza@imati.cnr.it[]
+ - Micol Pennacchio mailto:Micol.Pennacchio@imati.cnr.it[]
+ - Marcela Szopos mailto:mszopos@math.unistra.fr[]
 
 Finally Feel++ also benefits from discussions within collaborative projects with
 many people (in no particular order):
@@ -77,25 +78,26 @@ Daniele Di Pietro.
 
 ###  Current funding 
 
- Feel++ is supported by
+Feel++ is supported by
+
  * ANR projects:
-   - [VIVABRAIN](http://www.vivabrain.fr)   (MN call - 2013-2017)
+   - link:http://www.vivabrain.fr[VIVABRAIN]   (MN call - 2013-2017)
    - CHORUS (MN call - 2013-2017)
 
  * PRACE projects
    - HP-FEEL++ 2015-2016
 
- * [LABEX IRMIA](http://labex-irmia.u-strasbg.fr/)
+ * link:http://labex-irmia.u-strasbg.fr/[LABEX IRMIA]
 
 ###   Past funding 
 
 
  * ANR
-   - [HAMM](http://www.hamm-project.fr) - (Cosinus call - 2010-2014)
-   - [OPUS](http://www.opus-project.fr) - (TLOG call - 2008-2011)
+   - link:http://www.hamm-project.fr[HAMM] - (Cosinus call - 2010-2014)
+   - link:http://www.opus-project.fr[OPUS] - (TLOG call - 2008-2011)
 
  * IDEX
-   - Funding for [Cemosis](http://www.cemosis.fr)
+   - Funding for link:http://www.cemosis.fr[Cemosis]
 
  * FRAE
    - RB4FASTSIM - 2010-2014
@@ -104,15 +106,14 @@ Daniele Di Pietro.
    - HP-FEEL++ 2013-2014
    - HP-PDE{1,2} 2012-2014
 
- * the region Rhônes-Alpes thanks the cluster ISLE[fn:2] and the project
-   CHPID since 2009
+ * the region Rhônes-Alpes thanks the cluster ISLE <<fn:2>> and the    project CHPID since 2009
 
 ## Footnotes
 
-[fn:1] http://www.agence-nationale-recherche.fr/
+[[[fn:1]]] http://www.agence-nationale-recherche.fr/
 
-[fn:2] http://cluster-isle.grenoble-inp.fr/
+[[[fn:2]]] http://cluster-isle.grenoble-inp.fr/
 
-[fn:3] http://chpid.www.forge.imag.fr/
+[[[fn:3]]] http://chpid.www.forge.imag.fr/
 
-[fn:4] http://www.fnrae.org
+[[[fn:4]]] http://www.fnrae.org
