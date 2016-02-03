@@ -1,15 +1,19 @@
-Prerequisites  {#prerequisites}
-=====
+Prerequisites 
+=============
 
 In order to use Feel++, a set of tools are required.
-In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.   
-####Dummy project
+In the following, we will briefly present them *via* a simple project that performs basic arithmetic operations.
+
+### Dummy project
 
 The aim of this project is to sum, subtract, divide and multiply two numbers given *via* the command line using a C++ class.   
 
 **The project files are :**
+
 #### main.cpp   
-```c++
+
+[source,c++]
+----
 /**
  * \brief     operation.h
  * \date      june 19, 2015
@@ -50,10 +54,12 @@ int main(int argc, char **argv)
   cout << B.getX() << "*" << B.getY() << "=" << B.multiplication() << endl;
   cout << B.getX() << "/" << B.getY() << "=" << B.division() << endl;
   return 0;
-}
-```
+----
+
 ### operation.cpp
-```c++
+
+[source,c++]
+----
 #include "operation.h"
 #include <iostream>
 using namespace std;
@@ -132,10 +138,12 @@ double operation::division( )
   cout << "Error: division by zero.\n";
   return 0;
 }
-```
-### operation.h
-```c++
+----
 
+### operation.h
+
+[source,c++]
+----
 /**
  *@brief     operation.h
  *@date      june 23, 2015
@@ -178,10 +186,12 @@ class operation
   double x,y;
 };
 #endif
-```
+----
+
 Using this project, we will present here : 
-- how to compile the program using a [MakeFile](makefile.md)
-- how to make it simpler with [CMake](cmake.md)
-- what is git and [GitHub](github.md)
-- How the code has to be [documented](doxygen.md)  .
+
+- how to compile the program using a link:makefile.md[MakeFile]
+- how to make it simpler with link:cmake.md[CMake]
+- what is git and link:github.md[GitHub]
+- How the code has to be link:doxygen.md[documented] .
 
