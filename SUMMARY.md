@@ -4,7 +4,7 @@
    * [This book](book.adoc)
    * [Credits](credits.adoc)
    * [Consortium](consortium.adoc)
-   * [Sponsors](sponsors.md)
+   * [Sponsors](sponsors.adoc)
    * [Prerequisites](prerequisites.md)
        * [Doxygen](GettingStarted/prerequisites/doxygen.md)
        * [GitHub](GettingStarted/prerequisites/github.md)
