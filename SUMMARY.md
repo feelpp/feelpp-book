@@ -10,7 +10,7 @@
        * [GitHub](GettingStarted/prerequisites/github.adoc)
        * [CMake](GettingStarted/prerequisites/cmake.adoc)
        * [Makefile](GettingStarted/prerequisites/makefile.adoc)
-* [Getting Started](GettingStarted/README.md)
+* [Getting Started](GettingStarted/README.adoc)
    * [Building Feel++ from sources](GettingStarted/building.md)
        * [Downloading Feel++](GettingStarted/download.md)
        * [Compiling Feel++](GettingStarted/compiling.md)
