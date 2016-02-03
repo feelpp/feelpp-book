@@ -5,7 +5,7 @@
    * [Credits](credits.adoc)
    * [Consortium](consortium.adoc)
    * [Sponsors](sponsors.adoc)
-   * [Prerequisites](prerequisites.md)
+   * [Prerequisites](prerequisites.adoc)
        * [Doxygen](GettingStarted/prerequisites/doxygen.md)
        * [GitHub](GettingStarted/prerequisites/github.md)
        * [CMake](GettingStarted/prerequisites/cmake.md)
