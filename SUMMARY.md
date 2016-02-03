@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.adoc)
-   * [This book](bookmd.adoc)
+   * [This book](book.adoc)
    * [Credits](credits.md)
    * [Consortium](consortium.md)
    * [Sponsors](sponsors.md)
