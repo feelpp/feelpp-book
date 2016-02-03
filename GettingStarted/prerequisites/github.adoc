@@ -33,21 +33,18 @@ If you are new to github, these are the basic things you need to know to get sta
  
 
 - Adding files   
-Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type:  
-
+Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type: +
 `git add file_Name`   
    
 - Making a commit   
-After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, the next step is to go ahead, and do the commit itself. To add a commit message, in the command line, write:   
-
+After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, the next step is to go ahead, and do the commit itself. To add a commit message, in the command line, write: 
 [source,sh]
 ----
 git commit -m "write the commit message"
 ----   
 
 - Checking differences   
-Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit: 
-
+Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit: +
 `git diff`
 
 Inside the index file, it'll show you the changes in two ways.
@@ -55,21 +52,17 @@ Inside the index file, it'll show you the changes in two ways.
 If you have a branch set up to track a remote branch, you can use the `git pull` command to automatically fetch and then merge a remote branch into your current branch. 
 
 - Pushing to Your Remotes +
-When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple:   
-
+When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: + 
 `git push [remote-name] [branch-name]`.    
  
 _**NOTE:** ```git remote rename file_name``` and ```git remote rm file_name``` will rename and remove the given file respectively from a repo._
 
 
-- Pull requests let you tell others	about changes you've pushed to a repository on GitHub. The request, printed to the standard output, summarizes the changes and indicates from where they can	be pulled.
-
-`git request-pull' [-p] <start> <url> [<end>]`
-
+- Pull requests let you tell others	about changes you've pushed to a repository on GitHub. The request, printed to the standard output, summarizes the changes and indicates from where they can	be pulled. +
+`git request-pull' [-p] <start> <url> [<end>]` +
 The upstream project is expected to have the commit named by `<start>` and the output asks it to integrate the changes you made since that commit, up to the commit named by `<end>`, by visiting the repository named by `<url>`.   
 
-
-- Option +
+* Option +
 -p include patch text in the output. +   
 `<start>` Commit to start at. This names a commit that is already in the upstream history. +  
 `<url>` The repository URL to be pulled from. +
