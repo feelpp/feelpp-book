@@ -6,7 +6,7 @@
    * [Consortium](consortium.adoc)
    * [Sponsors](sponsors.adoc)
    * [Prerequisites](prerequisites.adoc)
-       * [Doxygen](GettingStarted/prerequisites/doxygen.md)
+       * [Doxygen](GettingStarted/prerequisites/doxygen.adoc)
        * [GitHub](GettingStarted/prerequisites/github.md)
        * [CMake](GettingStarted/prerequisites/cmake.md)
        * [Makefile](GettingStarted/prerequisites/makefile.md)
