@@ -7,7 +7,7 @@
    * [Sponsors](sponsors.adoc)
    * [Prerequisites](GettingStarted/prerequisites/prerequisites.adoc)
        * [Doxygen](GettingStarted/prerequisites/doxygen.adoc)
-       * [GitHub](GettingStarted/prerequisites/github.md)
+       * [GitHub](GettingStarted/prerequisites/github.adoc)
        * [CMake](GettingStarted/prerequisites/cmake.md)
        * [Makefile](GettingStarted/prerequisites/makefile.md)
 * [Getting Started](GettingStarted/README.md)
