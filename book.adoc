@@ -34,4 +34,4 @@ This book is the result of many contributions and in particular from
 
 This book is  licensed under LGPL 2.1.
 
-image:http://creativecommons.org/images/public/cc-LGPL-a.png[align="center",link="http://creativecommons.org/licenses/LGPL/2.1/"]
+image::http://creativecommons.org/images/public/cc-LGPL-a.png[link="http://creativecommons.org/licenses/LGPL/2.1/", align="center"]
