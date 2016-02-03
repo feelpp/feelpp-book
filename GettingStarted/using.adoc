@@ -1,10 +1,11 @@
 Using Feel++
 ============
 
-# Step 1 : Configure your project with Feel++
+## Step 1 : Configure your project with Feel++
 
-In order to configure your project to use Feel++, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. To detect your Feel++ installation and configure your application you can use the following file example:
-```
+In order to configure your project to use Feel+\+, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. To detect your Feel++ installation and configure your application you can use the following file example:
+
+----
 cmake_minimum_required(VERSION 2.8)
 
 # This will check for the installed Feel++ library
@@ -31,9 +32,10 @@ feelpp_add_application(
   GEO geoFile1 geoFile2
   DEFS A_DEF=2
   CFG cfgFile1.cfg cfgFile2.cfg )
-```
+----
 
-<!-- Kept for further use
+//// 
+Kept for further use
 In order to take care of that various situation, here is provided a default `CMakeLists.txt` to be put at the top of your project directory:
 ```cmake
 cmake_minimum_required(VERSION 2.8)
@@ -55,33 +57,31 @@ feelpp_add_application(
   GEO geoFile1 geoFile2
   DEFS A_DEF=2
   CFG cfgFile1.cfg cfgFile2.cfg )
-```
+////
 
--->
-
-
-# Step 2 : Build your project with Feel++
+## Step 2 : Build your project with Feel++
 
 There are two ways that you can configure your project to use Feel++:
+
 - You can use the research directory located in Feel++ sources,
 - You can install Feel++ and use it as an external library for your project.
 
-## Using the research directory
+### Using the research directory
 
-The first possibility is to use the research directory located inside Feel++ source directory.
-To do so, simply copy the directory containing your source code into the research directory. Then you can follow the [compilation guide](https://github.com/feelpp/feelpp-book/blob/master/GettingStarted/compiling.md) with a simple additional step: You have to enable your project when typing the `cmake` command.
+The first possibility is to use the research directory located inside Feel++ source directory. To do so, simply copy the directory containing your source code into the research directory. Then you can follow the https://github.com/feelpp/feelpp-book/blob/master/GettingStarted/compiling.md[compilation guide] with a simple additional step: You have to enable your project when typing the `cmake` command.
 
 To do so, you must add the following option `-DFEELPP_ENABLE_RESEARCH_<directory>=ON` to cmake, with `<directory>` begin the name of the directory that you copied in research. 
 
 Then you can proceed by going to your project directory in the build directory and type the `make` command.
 
-## Using an installation of Feel++ 
+### Using an installation of Feel++ 
 
 If you already installed Feel++ either through your package manager or with a manual installation, then you can directly compile your project.
 
 Create a separate build directory (to keep your code separate from build data) and configure your application:
 
-```sh
+[source,sh]
+----
 # Create a build directory
 mkdir -p /path/to/build/directory
 cd /path/to/build/directory
@@ -97,16 +97,17 @@ cmake /path/to/source/directory \
  -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
  -DCMAKE_C_COMPILER=/usr/bin/clang \
  -DCMAKE_BUILD_TYPE=RelWithDebInfo
-```
+----
 
-# Compile your project
+## Compile your project
 
 Eventually, you can build your application: 
 
-```cpp
+[source,cpp]
+----
 # Build your project, you can use concurrent jobs by
 # adding the -j flag, this will reduce the compilation time
 make -j 2 feelpp_applicationName
 cd ./where/is/my/app
 ./feelpp_applicationName
-```
+----
