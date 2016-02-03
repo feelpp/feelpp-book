@@ -1,10 +1,12 @@
-Getting Started {#GettingStarted}
+Getting Started
 ===============
+
 In this section, we will explain how to download and install Feel++.
- * [Building Feel++ from sources](building.md)
-  * [Downloading Feel++](download.md)
-  * [Compiling Feel++](compiling.md)
- * [Installing on Linux](linux.md)
- * [Installing on Mac OS X](mac.md)
- * [Configuring your own project with CMake](using.md)
+
+* link:building.adoc[Building Feel++ from sources]
+    - link:download.adoc[Downloading Feel++]
+    - link:compiling.adoc[Compiling Feel++]
+* link:linux.adoc[Installing on Linux]
+* link:mac.adoc[Installing on Mac OS X]
+* link:using.adoc[Configuring your own project with CMake]
  
