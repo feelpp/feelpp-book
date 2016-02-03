@@ -10,40 +10,45 @@ The source comments can use any of three formats:
 
  1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
  
-
-     /**
-      *@brief     operation.
-      *@date      june 19, 2015
-      *@author:   kyoshe winstone
-      *@version   1.1
-      */
+----
+/**
+*@brief     operation.
+*@date      june 19, 2015
+*@author:   kyoshe winstone
+*@version   1.1
+*/
+----
 
  2. You can also use an exclamation point instead of the second asterisk 
   
-
-      /*!
-       *x is variable
-       *y is variable too
-       */
+----
+/*!
+*x is variable
+*y is variable too
+*/
+----
  
  3. Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
 
-
-    ///
-    /// @return the x value
-    ///
+----
+///
+/// @return the x value
+///
+----
  
 **Tags**:
 
 Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:   
 
-    /**
-     * @brief, which provides a brief description of the function.
-     * @param, which identifies a single parameter to the function (you may have more than one param tag).
-     * @return, which describes the function's return value.
-     * @date, which describes the date of documentation
-     * @todo
-     */
+----
+/**
+* @brief, which provides a brief description of the function.
+* @param, which identifies a single parameter to the function (you may have more than one param tag).
+* @return, which describes the function's return value.
+* @date, which describes the date of documentation
+* @todo
+*/
+----
 
 
 We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run `make`   commands. To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
