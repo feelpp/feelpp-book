@@ -46,7 +46,7 @@ Special comments can contain Doxygen tags that let you specify particulars about
      */
 
 
-We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run ```make```   commands.    
+We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run `make`   commands.    
 To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
 
 [source,sh]
