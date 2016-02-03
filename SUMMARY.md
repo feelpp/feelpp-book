@@ -14,7 +14,7 @@
    * [Building Feel++ from sources](GettingStarted/building.md)
        * [Downloading Feel++](GettingStarted/download.md)
        * [Compiling Feel++](GettingStarted/compiling.md)
-   * [Installing on Linux](GettingStarted/linux.md)
+   * [Installing on Linux](GettingStarted/linux.adoc)
    * [Installing on Mac OS X](GettingStarted/mac.md)
    * [Configuring your own project with CMake](GettingStarted/using.md)
 * [Tutorial](Tutorial/README.md)
