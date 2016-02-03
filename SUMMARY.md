@@ -3,7 +3,7 @@
 * [Introduction](README.adoc)
    * [This book](book.adoc)
    * [Credits](credits.adoc)
-   * [Consortium](consortium.md)
+   * [Consortium](consortium.adoc)
    * [Sponsors](sponsors.md)
    * [Prerequisites](prerequisites.md)
        * [Doxygen](GettingStarted/prerequisites/doxygen.md)
