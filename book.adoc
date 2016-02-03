@@ -3,7 +3,8 @@ This book
 
 This book is available on Github and Gitbook. We use Gitter to discuss the changes in the book.
 
-[![Join the chat at https://gitter.im/feelpp/feelpp-book](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/feelpp/feelpp-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+https://gitter.im/feelpp/feelpp-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge[
+image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.im/feelpp/feelpp-book]]
 
 It is organized as follows:
 
@@ -19,7 +20,7 @@ It is organized as follows:
 
 #  Contributors
 
- This book is the result of many contributions and in particular from
+This book is the result of many contributions and in particular from
 
  - Alexandre Ancel
  - Denis Barbier
@@ -33,6 +34,4 @@ It is organized as follows:
 
 This book is  licensed under LGPL 2.1.
 
-<center>
-<a href="http://creativecommons.org/licenses/LGPL/2.1/"><img alt="CC-GNU LGPL" border="0" src="http://creativecommons.org/images/public/cc-LGPL-a.png" /></a>
-</center>
+image:http://creativecommons.org/images/public/cc-LGPL-a.png[align="center",link="http://creativecommons.org/licenses/LGPL/2.1/"]
