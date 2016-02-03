@@ -100,7 +100,6 @@ pdflatex
 pdflatex fileName
 ----
 
-
 For detailed information about doxygen, please consult link:http://www.stack.nl/~dimitri/doxygen/manual/index.html[the online doxygen documentation] and link:http://www.digilife.be/quickreferences/QRC/Doxygen%20Quick%20Reference.pdf[Doxygen quick reference]
 
 
