@@ -27,7 +27,7 @@
    * [Creating a function space and functions](Tutorial/07-SpaceElements.adoc)
    * [Computing integrals](Tutorial/08-ComputingIntegrals.adoc)
    * [Using linear algebra backends](Tutorial/09-UsingBackend.adoc)
-   * [Creating a model](Tutorial/10-Model.md)
+   * [Creating a model](Tutorial/10-Model.adoc)
 * [Quick Reference](QuickReference/README.md)
    * [Environment](QuickReference/environment.adoc)
    * [Mesh](QuickReference/mesh.md)
