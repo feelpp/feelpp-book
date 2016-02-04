@@ -26,7 +26,7 @@
    * [Visualizing functions](Tutorial/06-VisualizingFunctions.adoc)
    * [Creating a function space and functions](Tutorial/07-SpaceElements.adoc)
    * [Computing integrals](Tutorial/08-ComputingIntegrals.adoc)
-   * [Using linear algebra backends](Tutorial/09-UsingBackend.md)
+   * [Using linear algebra backends](Tutorial/09-UsingBackend.adoc)
    * [Creating a model](Tutorial/10-Model.md)
 * [Quick Reference](QuickReference/README.md)
    * [Environment](QuickReference/environment.adoc)
