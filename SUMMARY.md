@@ -34,7 +34,7 @@
        * [Mesh iterators](QuickReference/Mesh/iterators.adoc)
    * [Integrals](QuickReference/integrals.adoc)
        * [Integrate](QuickReference/Integrals/integrate.adoc)
-       * [Mean value](QuickReference/Integrals/mean.md)
+       * [Mean value](QuickReference/Integrals/mean.adoc)
        * [Norms](QuickReference/Integrals/norms.md)
    * [Spaces](QuickReference/spaces.md)
        * [Defining notations](QuickReference/Spaces/notations.md)
