@@ -166,4 +166,4 @@ The normLinf() function returns not only the maximum of the function over a samp
           _pset=_Q<5>() );
   std::cout << "maximum value : " << uMax.value() << std::endl
             <<  "         arg : " << uMax.arg() << std::endl;
------
+----
