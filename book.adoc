@@ -10,7 +10,7 @@ It is organized as follows:
 
   - link:GettingStarted/GettingStarted.adoc[Getting Started] which includes instructions for installation from sources or from Debian/Ubuntu and MacOSX.
 
-  - link:Tutorial.adoc[Tutorial] where we dive step by step into Feel++.
+  - link:Tutorial/README.adoc[Tutorial] where we dive step by step into Feel++.
 
 
   - link:QuickReference/README.adoc[Quick reference] which describes the various components of Feel++ applications.
