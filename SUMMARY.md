@@ -28,7 +28,7 @@
    * [Computing integrals](Tutorial/08-ComputingIntegrals.adoc)
    * [Using linear algebra backends](Tutorial/09-UsingBackend.adoc)
    * [Creating a model](Tutorial/10-Model.adoc)
-* [Quick Reference](QuickReference/README.md)
+* [Quick Reference](QuickReference/README.adoc)
    * [Environment](QuickReference/environment.adoc)
    * [Mesh](QuickReference/mesh.md)
        * [Mesh iterators](QuickReference/Mesh/iterators.md)
