@@ -20,7 +20,7 @@
 * [Tutorial](Tutorial/README.adoc)
    * [Output Directories](Tutorial/01-OutputDirectories.adoc)
    * [Environment](Tutorial/02-SettingUpEnvironment.adoc)
-   * [Loading a Mesh](Tutorial/03-LoadingMesh.md)
+   * [Loading a Mesh](Tutorial/03-LoadingMesh.adoc)
    * [Using expressions](Tutorial/04-UsingExpressions.md)
    * [Evaluating functions](Tutorial/05-EvaluatingFunctions.md)
    * [Visualizing functions](Tutorial/06-VisualizingFunctions.md)
