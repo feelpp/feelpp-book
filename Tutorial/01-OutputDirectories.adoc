@@ -1,13 +1,13 @@
 = Output Directories    
 
-Feel++ generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with Feel+\+ .
+Feel{plus}+ generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with Feel{plus}+ . 
 
 
 == Results
 
 == Log files
 
-{{ book.feelpp }} uses https://github.com/google/glog[Google Glog].  
+Feel++ uses https://github.com/google/glog[Google Glog].  
 
   
 - Log files : `tmp/<your login>/feelpp/feelpp_tut_<your_app_name>` 
