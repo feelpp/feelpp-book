@@ -22,7 +22,7 @@
    * [Environment](Tutorial/02-SettingUpEnvironment.adoc)
    * [Loading a Mesh](Tutorial/03-LoadingMesh.adoc)
    * [Using expressions](Tutorial/04-UsingExpressions.adoc)
-   * [Evaluating functions](Tutorial/05-EvaluatingFunctions.md)
+   * [Evaluating functions](Tutorial/05-EvaluatingFunctions.adoc)
    * [Visualizing functions](Tutorial/06-VisualizingFunctions.md)
    * [Creating a function space and functions](Tutorial/07-SpaceElements.md)
    * [Computing integrals](Tutorial/08-ComputingIntegrals.md)
