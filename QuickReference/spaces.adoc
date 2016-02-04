@@ -1,16 +1,19 @@
 Function Spaces
 ===============
-<!-- toc -->
 
 # Prerequisites
 
 The prerequisites are
-* [Defining a mesh](mesh.md)
 
+* link:mesh.adoc[Defining a mesh]
 
 Here are the steps through function spaces:
-* [Defining Notations](Spaces/notations.md)
-* [Using Function Space](Spaces/functionspace.md)
-* [Using Interpolation](Spaces/interpolation.adoc)
-* [Saving Functions](Spaces/save.adoc)
+
+* link:Spaces/notations.md[Defining Notations]
+
+* link:Spaces/functionspace.md[Using Function Space]
+
+* link:Spaces/interpolation.adoc[Using Interpolation]
+
+* link:Spaces/save.adoc[Saving Functions]
 
