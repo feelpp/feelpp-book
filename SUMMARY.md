@@ -30,7 +30,7 @@
    * [Creating a model](Tutorial/10-Model.adoc)
 * [Quick Reference](QuickReference/README.adoc)
    * [Environment](QuickReference/environment.adoc)
-   * [Mesh](QuickReference/mesh.md)
+   * [Mesh](QuickReference/mesh.adoc)
        * [Mesh iterators](QuickReference/Mesh/iterators.md)
    * [Integrals](QuickReference/integrals.md)
        * [Integrate](QuickReference/Integrals/integrate.md)
