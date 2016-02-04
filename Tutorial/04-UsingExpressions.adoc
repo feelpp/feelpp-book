@@ -1,6 +1,6 @@
-Defining and using expressions {#TutorialExpr}
+Defining and using expressions
 ================================
-<!-- toc -->
+
 
 
 The next step is to construct a function space over the mesh. 
