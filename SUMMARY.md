@@ -19,7 +19,7 @@
    * [Configuring your own project with CMake](GettingStarted/using.adoc)
 * [Tutorial](Tutorial/README.adoc)
    * [Output Directories](Tutorial/01-OutputDirectories.adoc)
-   * [Environment](Tutorial/02-SettingUpEnvironment.md)
+   * [Environment](Tutorial/02-SettingUpEnvironment.adoc)
    * [Loading a Mesh](Tutorial/03-LoadingMesh.md)
    * [Using expressions](Tutorial/04-UsingExpressions.md)
    * [Evaluating functions](Tutorial/05-EvaluatingFunctions.md)
