@@ -29,19 +29,23 @@ int main( int argc, char** argv )
 ----
 
 As always, we initialize the Feel\++ environment (see section  link:[FirstApp] ). The `unitSquare()` will generate a mesh for a square geometry. Feel++ provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file `.geo` and a mesh file `.msh.` We can visualize them in GMSH.
-```cpp
+
+[source,cpp]
+----
   gmsh <entity_name>.msh
-```
+----
 
 Finally we use the `exporter()` (see \ref Exporter) function to export the mesh for post processing. It will create by default a Paraview format file `.sos` and an Ensight format file `.case.`
-```cpp
+
+[source,cpp]
+----
   paraview <app_name>.sos
-```
+----
 
-In this section, we present some of the mesh definition and manipulation tools provided by Feel++. For more information you can also see \ref Gmsh.<br>
+In this section, we present some of the mesh definition and manipulation tools provided by Feel++. For more information you can also see \ref Gmsh.
 
 
-#  Basic Meshes
+##  Basic Meshes
 
 There is a list of basic geometries you can automatically generate with Feel++ library.
 
@@ -56,31 +60,37 @@ There is a list of basic geometries you can automatically generate with Feel++ l
 
 
 
-**Examples:**<br>
+**Examples:**
+
 From `doc/manual/tutorial/myfunctionspace.cpp`
-```cpp
+
+[source,cpp]
+----
 auto mesh = unitSquare();
-```
+----
 
-
-[top](# )
-
-#  Load Meshes
-##  loadMesh
+##  Load Meshes
+###  loadMesh
 
 You can use this function to:
+
 * load a `.msh` file and use the mesh data structure
+
 * load a `.geo` file and automatically generate a mesh data structure on this geometrical structure
 
-**Interface:**<br>
-```cpp
+**Interface:**
+
+[source,cpp]
+----
 mesh_ptrtype loadMesh(_mesh, _filename, _refine, _update, physical_are_elementary_regions);
-```
+----
 
 Required Parameters:
+
 * `_mesh`  a mesh data structure.
 
 Optional Parameters:
+
  -  `_hsize`  (double): characteristic size of the mesh. This option will edit the `.geo` file and change the variable `h` if defined
    - Default: `0.1`
    -  Option: `gmsh.hsize`
@@ -119,23 +129,30 @@ Feel++ looks for `.geo` and `.msh` files in the following directories (in this o
 * systemGeoRepository() which is usually \c "$FEELPP_DIR/share/feel/geo" (cf: \ref Environment)
 
 
-**Examples:**<br>
+**Examples:**
+
 Load a mesh data structure from the file \c "$HOME/feel/mymesh.msh".
-```cpp
+
+[source,cpp]
+----
 auto mesh = loadMesh(_mesh=new mesh_type,
                      _filename="mymesh.msh");
-```
-<br>
+----
+
 Load a geometric structure from the file `./mygeo.geo` and automatically create a mesh data structure.
-```cpp
+
+[source,cpp]
+----
 auto mesh = loadMesh(_mesh=new mesh_type,
                      _filename="mygeo.geo");
-```
-<br>
+----
+
 Create a mesh data structure from the file `./feel.geo`.
-```cpp
+
+[source,cpp]
+----
 auto mesh = loadMesh(_mesh=new Mesh<Simplex< 2 > > );
-```
+----
 
 ##  loadGMSHMesh
 
