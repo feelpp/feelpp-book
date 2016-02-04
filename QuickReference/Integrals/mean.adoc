@@ -22,7 +22,7 @@ Required parameters:
 Optional parameters:
 
 * `_quad` = quadrature to use. 
-   - Default = \lstinline!_Q<integer>()!
+   - Default = `_Q<integer>()`
 
 * `_geomap` = type of geometric mapping. 
    - Default = `GEOMAP_OPT`
