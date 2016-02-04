@@ -38,7 +38,7 @@
        * [Norms](QuickReference/Integrals/norms.adoc)
    * [Spaces](QuickReference/spaces.adoc)
        * [Defining notations](QuickReference/Spaces/notations.adoc)
-       * [Using function spaces](QuickReference/Spaces/functionspace.md)
+       * [Using function spaces](QuickReference/Spaces/functionspace.adoc)
        * [Using interpolation](QuickReference/Spaces/interpolation.adoc)
        * [Saving functions](QuickReference/Spaces/save.adoc)
    * [Forms](QuickReference/forms.adoc)
