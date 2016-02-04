@@ -1,11 +1,13 @@
 Meshes
 ======
 
-#  Introduction
+## Introduction
 
-Feel++ provides some tools to manipulate meshes.<br>
+Feel++ provides some tools to manipulate meshes.
 Here is a basic example that shows how to generate a mesh for a square geometry (source `doc/manual/tutorial/mymesh.cpp`).
-```cpp
+
+[source,cpp]
+----
 int main( int argc, char** argv )
 {
   // initialize Feel++ Environment
@@ -24,10 +26,9 @@ int main( int argc, char** argv )
   e->save();
 }
 // main
-```
+----
 
-As always, we initialize the Feel++ environment (see section \ref FirstApp ).<br>
-The `unitSquare()` will generate a mesh for a square geometry. Feel++ provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file `.geo` and a mesh file `.msh.` We can visualize them in GMSH.
+As always, we initialize the Feel\++ environment (see section  link:[FirstApp] ). The `unitSquare()` will generate a mesh for a square geometry. Feel++ provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file `.geo` and a mesh file `.msh.` We can visualize them in GMSH.
 ```cpp
   gmsh <entity_name>.msh
 ```
