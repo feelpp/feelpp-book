@@ -5,7 +5,7 @@ FEEL++ Consortium
 Feel++ was initially developed at École Polytechnique Fédérale de
 Lausanne(Suisse) and is now a joint effort between Université de
 Strasbourg, Université Joseph Fourier (Grenoble), University of
-Coimbra (Portugal), CNRS and link:http://www.cemosis.fr[Cemosis].
+Coimbra (Portugal), CNRS and http://www.cemosis.fr[Cemosis].
 
 
 image:pngs/logos/logo_uds.png[width="100",link="http://www.unistra.fr/"] 
