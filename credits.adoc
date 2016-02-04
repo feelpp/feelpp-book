@@ -81,23 +81,23 @@ Daniele Di Pietro.
 Feel++ is supported by
 
  * ANR projects:
-   - link:http://www.vivabrain.fr[VIVABRAIN]   (MN call - 2013-2017)
+   - http://www.vivabrain.fr[VIVABRAIN]   (MN call - 2013-2017)
    - CHORUS (MN call - 2013-2017)
 
  * PRACE projects
    - HP-FEEL++ 2015-2016
 
- * link:http://labex-irmia.u-strasbg.fr/[LABEX IRMIA]
+ * http://labex-irmia.u-strasbg.fr/[LABEX IRMIA]
 
 ###   Past funding 
 
 
  * ANR
-   - link:http://www.hamm-project.fr[HAMM] - (Cosinus call - 2010-2014)
-   - link:http://www.opus-project.fr[OPUS] - (TLOG call - 2008-2011)
+   - http://www.hamm-project.fr[HAMM] - (Cosinus call - 2010-2014)
+   - http://www.opus-project.fr[OPUS] - (TLOG call - 2008-2011)
 
  * IDEX
-   - Funding for link:http://www.cemosis.fr[Cemosis]
+   - Funding for http://www.cemosis.fr[Cemosis]
 
  * FRAE
    - RB4FASTSIM - 2010-2014
