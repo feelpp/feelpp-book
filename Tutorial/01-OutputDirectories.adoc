@@ -14,4 +14,4 @@
 
 -  Mesh : `$FEELPP_WORKDIR/feel/<your_app_name>/np_1`   
 
-- Config files :`$FEELPP_WORKDIR/<your_build_folder>/doc/manual/tutorial`
+- Config files : `$FEELPP_WORKDIR/<your_build_folder>/doc/manual/tutorial`
