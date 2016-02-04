@@ -22,7 +22,7 @@ Optional parameters:
 * `_geomap`: type of geometric mapping. 
    - Default = `GEOMAP_OPT`
 
-*Example*
+*Example:*
 
 From `doc/manual/laplacian/laplacian.cpp`
 
