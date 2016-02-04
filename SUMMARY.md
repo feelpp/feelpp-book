@@ -24,7 +24,7 @@
    * [Using expressions](Tutorial/04-UsingExpressions.adoc)
    * [Evaluating functions](Tutorial/05-EvaluatingFunctions.adoc)
    * [Visualizing functions](Tutorial/06-VisualizingFunctions.adoc)
-   * [Creating a function space and functions](Tutorial/07-SpaceElements.md)
+   * [Creating a function space and functions](Tutorial/07-SpaceElements.adoc)
    * [Computing integrals](Tutorial/08-ComputingIntegrals.md)
    * [Using linear algebra backends](Tutorial/09-UsingBackend.md)
    * [Creating a model](Tutorial/10-Model.md)
