@@ -1,6 +1,6 @@
 = Output Directories    
 
-{{ book.feelpp }} generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with {{book.feelpp}}.
+Feel++ generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with Feel+\+ .
 
 
 == Results
