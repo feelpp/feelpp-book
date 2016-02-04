@@ -21,7 +21,7 @@
    * [Output Directories](Tutorial/01-OutputDirectories.adoc)
    * [Environment](Tutorial/02-SettingUpEnvironment.adoc)
    * [Loading a Mesh](Tutorial/03-LoadingMesh.adoc)
-   * [Using expressions](Tutorial/04-UsingExpressions.md)
+   * [Using expressions](Tutorial/04-UsingExpressions.adoc)
    * [Evaluating functions](Tutorial/05-EvaluatingFunctions.md)
    * [Visualizing functions](Tutorial/06-VisualizingFunctions.md)
    * [Creating a function space and functions](Tutorial/07-SpaceElements.md)
