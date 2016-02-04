@@ -8,12 +8,12 @@ image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.i
 
 It is organized as follows:
 
-  - link:GettingStarted/GettingStarted.md[Getting Started] which includes instructions for installation from sources or from Debian/Ubuntu and MacOSX.
+  - link:GettingStarted/GettingStarted.adoc[Getting Started] which includes instructions for installation from sources or from Debian/Ubuntu and MacOSX.
 
-  - link:Tutorial.md[Tutorial] where we dive step by step into Feel++.
+  - link:Tutorial.adoc[Tutorial] where we dive step by step into Feel++.
 
 
-  - link:QuickReference/README.md[Quick reference] which describes the various components of Feel++ applications.
+  - link:QuickReference/README.adoc[Quick reference] which describes the various components of Feel++ applications.
 
 #  Contributors
 
