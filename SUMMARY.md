@@ -23,7 +23,7 @@
    * [Loading a Mesh](Tutorial/03-LoadingMesh.adoc)
    * [Using expressions](Tutorial/04-UsingExpressions.adoc)
    * [Evaluating functions](Tutorial/05-EvaluatingFunctions.adoc)
-   * [Visualizing functions](Tutorial/06-VisualizingFunctions.md)
+   * [Visualizing functions](Tutorial/06-VisualizingFunctions.adoc)
    * [Creating a function space and functions](Tutorial/07-SpaceElements.md)
    * [Computing integrals](Tutorial/08-ComputingIntegrals.md)
    * [Using linear algebra backends](Tutorial/09-UsingBackend.md)
