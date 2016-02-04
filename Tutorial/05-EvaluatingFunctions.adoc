@@ -6,19 +6,22 @@ Once you  have created an element, you may want to give it a value, that can dep
 To do so, Feel++ relies on expressions.
 We may use various kind of expressions :
 
-<!-- toc -->
-
-
-# Built-in 
+## Built-in 
 
 Instead of defining an expression from a string, you can use
 
-!CODEFILE "code/05-myexporter.cpp"
+[source,c++]
+----
+include::code/05-myexporter.cpp
+----
 
-The list of the Feel++ Keyword is [here](../QuickReference/keywords.md).
+The list of the Feel++ Keyword is link:../QuickReference/keywords.md[here].
 
-# Hard Coded 
+## Hard Coded 
 
 One other method to define function is described here.
 
-!CODEFILE "code/myfunctor.cpp"
+[source,c++]
+----
+include::code/myfunctor.cpp
+----
