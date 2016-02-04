@@ -49,14 +49,14 @@ In this section, we present some of the mesh definition and manipulation tools p
 
 There is a list of basic geometries you can automatically generate with Feel++ library.
 
-|Feel++ function  | Dim | Description|
-|-----------------|:---:|------------|
-|`unitSegment()`  | 1   | Build a mesh of the unit segment $$[0,1]$$|
-|`unitSquare()`   | 2   | Build a mesh of the unit square $$[0,1]^2$$ using triangles|
-|`unitCircle()`   | 2   | Build a mesh of the unit circle using triangles|
-|`unitHypercube()`| 3   | Build a mesh of the unit hypercube $$[0,1]^3$$ using tetrahedrons|
-|`unitSphere()`   | 3   | Build a mesh of the unit sphere using tetrahedrons|
-<
+|===
+|Feel++ function  | Dim | Description
+|`unitSegment()`  | 1   | Build a mesh of the unit segment $$[0,1]$$
+|`unitSquare()`   | 2   | Build a mesh of the unit square $$[0,1]^2$$ using triangles
+|`unitCircle()`   | 2   | Build a mesh of the unit circle using triangles
+|`unitHypercube()`| 3   | Build a mesh of the unit hypercube $$[0,1]^3$$ using tetrahedrons
+|`unitSphere()`   | 3   | Build a mesh of the unit sphere using tetrahedrons
+|===
 
 
 
@@ -91,41 +91,43 @@ Required Parameters:
 
 Optional Parameters:
 
- -  `_hsize`  (double): characteristic size of the mesh. This option will edit the `.geo` file and change the variable `h` if defined
+* `_hsize`  (double): characteristic size of the mesh. This option will edit the `.geo` file and change the variable `h` if defined
    - Default: `0.1`
    -  Option: `gmsh.hsize`
- -  `_geo_variables_list`  (string): Set a list of variable that may be defined in a `.geo` file
+* `_geo_variables_list`  (string): Set a list of variable that may be defined in a `.geo` file
    - Default: \c ""
    -  Option: `gmsh.geo`-variables-list
- -  `_filename`  (string): filename with extension.
+* `_filename`  (string): filename with extension.
    - Default: `feel.geo`
    -  Option: `gmsh.filename`
- -  `_depends`  (string): list of files (separated by , or ;) on which `gmsh.filename` depends
+* `_depends`  (string): list of files (separated by , or ;) on which `gmsh.filename` depends
    - Default: \c ""
    -  Option: `gmsh.depends`
- - `_refine`  (boolean): optionally refine with \p refine levels the mesh.
+* `_refine`  (boolean): optionally refine with \p refine levels the mesh.
    - Default: `0.`
    - Option: `gmsh.refine`
- - `_update`  (integer): update the mesh data structure (build internal faces and edges).
+* `_update`  (integer): update the mesh data structure (build internal faces and edges).
    - Default: `true`
- -  `_physical_are_elementary_regions`  (boolean): to load specific meshes formats.
+* `_physical_are_elementary_regions`  (boolean): to load specific meshes formats.
    - Default: `false.`
    - Option: gmsh.physical_are_elementary_regions
- - `_straighten`  (boolean): in case of curvilinear elements, straighten the elements
+* `_straighten`  (boolean): in case of curvilinear elements, straighten the elements
    which are not touching with a face the boundary of the domain
    - Default: `true`
    - Option: `gmsh.straighten`
- - `_partitioner`  (integer): define the mesh partitioner to use:
+* `_partitioner`  (integer): define the mesh partitioner to use:
    - Default: `1` (if Metis is available) `0` if not (CHACO)
    - Option: gmsh.partitioner
 
-
-<br>
-The file you want to load has to be in an appropriate repository.<br>
+The file you want to load has to be in an appropriate repository.
 Feel++ looks for `.geo` and `.msh` files in the following directories (in this order):
+
 * current path
+
 * paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
+
 * localGeoRepository() which is usually \c "$HOME/feel/geo"  (cf: \ref Environment )
+
 * systemGeoRepository() which is usually \c "$FEELPP_DIR/share/feel/geo" (cf: \ref Environment)
 
 
