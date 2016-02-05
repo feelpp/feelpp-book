@@ -11,9 +11,9 @@ We denote $$\Omega^e$$ current mesh element.
 
 The genesis of the language can be found in \cite prudhomme05:_domain_specif_embed_languag_c and an update on Feel++ is available in \cite PRUDHOMME:2012:HAL-00662868:3.
 
-# Points
+## Points
 
-## Current Point:
+### Current Point:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension
@@ -23,7 +23,7 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 |`Pz()`|$$P_z$$|$$z$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
 |===
 
-## Element Barycenter Point:
+### Element Barycenter Point:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
@@ -34,7 +34,7 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 |`Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
 |===
 
-## Normal at Current Point:
+### Normal at Current Point:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
@@ -46,9 +46,9 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 
 
 
-# Vectors and Matrix
+## Vectors and Matrix
 
-## Building Vectors
+### Building Vectors
 
 Usual syntax to create vectors:
 
@@ -68,7 +68,7 @@ You can also use expressions and the unit base vectors:
 
 
 
-## Building Matrix
+### Building Matrix
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
@@ -81,7 +81,7 @@ You can also use expressions and the unit base vectors:
 |===
 
 
-## Manipulating Vectors and Matrix
+### Manipulating Vectors and Matrix
 
 Let $$A$$ be a square matrix of size $$n$$.
 
@@ -104,7 +104,7 @@ Let A and B be two matrix (or two vectors) of same dimension $$m \times n$$.
 |`cross(A,B)`|$$ A\times B$$|Cross product of two vectors|$$n \times 1$$
 |===
 
-# Expressions
+## Expressions
 
 Following tables present tools to declare and manipulate expressions.
 |===
@@ -138,9 +138,9 @@ You can of course use all current operators ( + - / * ) and the usual following 
 |`chi(expr)`|$$\chi(f(\overrightarrow{x}))=\begin{cases}0 & \text{if}\ f(\overrightarrow{x}) = 0\\1 & \text{if}\ f(\overrightarrow{x}) \neq 0\\\end{cases}$$|element wise boolean test of $$f$$
 |===
 
-# Operators
+## Operators
 
-## Operations
+### Operations
 
 You can use the usual operations and logical operators.
 |===
@@ -161,7 +161,7 @@ You can use the usual operations and logical operators.
 |`!` |$$ !g$$|element wise logical not
 |===
 
-## Differential Operators
+### Differential Operators
 
 Feel++ finit element language use _test_ and _trial_ functions. Keywords are different according to the kind of the manipulated function. +
 **Usual operators** are for **test** functions. +
@@ -203,50 +203,50 @@ is a finite element space.
 |`dz(f)`| $$\nabla f \cdot \overrightarrow{k}$$ | derivative of test function in $$z$$  |0 |$$1 \times 1 $$ $$m=p=1$$
 |===
 
-##  Two Valued Operators
+###  Two Valued Operators
 
-|Feel++ Keyword | Math Object | Description | Rank | Dimension |
-|----------------|-------------|-------------|------------------|
-|` jump(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of test function |0| $$n \times 1 $$<br>$$m=1$$|
-|` jump(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of test function |0| $$1 \times 1 $$<br>$$m=2$$|
-|` jumpt(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of trial function |0| $$n \times 1 $$<br>$$m=1$$|
-|` jumpt(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of trial function |0| $$1 \times 1 $$<br>$$m=2$$|
-|` jumpv(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of function evaluation |0| $$n \times 1 $$<br>$$m=1$$|
-|` jumpv(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of function evaluation|0| $$1 \times 1 $$<br>$$m=2$$|
-|` average(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` averaget(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` averagev(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftface(f)` |  $$f_0$$ |left test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftfacet(f)` |  $$f_0$$ |left trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` leftfacev(f)` |  $$f_0$$ |left function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightface(f)` |  $$f_1$$ |right test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightfacet(f)` |  $$f_1$$ |right trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` rightfacev(f)` |  $$f_1$$ |right function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$<br>$$m=n$$|
-|` maxface(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` maxfacet(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` maxfacev(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left<br>function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minface(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minfacet(f)` |  $$\min(f_0,f_1)$$ |minimum of right and lefttrial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
-|` minfacev(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left<br>function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$|
+|===
+|Feel++ Keyword | Math Object | Description | Rank | Dimension 
+|`jump(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of test function |0| $$n \times 1 $$ $$m=1$$
+|`jump(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of test function |0| $$1 \times 1 $$ $$m=2$$
+|`jumpt(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of trial function |0| $$n \times 1 $$ $$m=1$$
+|`jumpt(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of trial function |0| $$1 \times 1 $$ $$m=2$$
+|`jumpv(f)` |  $$[f]=f_0\overrightarrow{N_0}+f_1\overrightarrow{N_1}$$ | jump of function evaluation |0| $$n \times 1 $$ $$m=1$$
+|`jumpv(f)` |  $$[\overrightarrow{f}]=\overrightarrow{f_0}\cdot\overrightarrow{N_0}+\overrightarrow{f_1}\cdot\overrightarrow{N_1}$$ | jump of function evaluation|0| $$1 \times 1 $$ $$m=2$$
+|`average(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`averaget(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`averagev(f)` |  $${f}=\frac{1}{2}(f_0+f_1)$$ | average of function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`leftface(f)` |  $$f_0$$ |left test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`leftfacet(f)` |  $$f_0$$ |left trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`leftfacev(f)` |  $$f_0$$ |left function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`rightface(f)` |  $$f_1$$ |right test function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`rightfacet(f)` |  $$f_1$$ |right trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`rightfacev(f)` |  $$f_1$$ |right function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times n $$ $$m=n$$
+|`maxface(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|`maxfacet(f)` |  $$\max(f_0,f_1)$$ |maximum of right and lef trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|`maxfacev(f)` |  $$\max(f_0,f_1)$$ |maximum of right and left function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|`minface(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left test function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|`minfacet(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left trial function|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|`minfacev(f)` |  $$\min(f_0,f_1)$$ |minimum of right and left function evaluation|rank$$( f(\overrightarrow{x}))$$| $$n \times p $$
+|===
 
 
+## Geometric Transformations
 
-# Geometric Transformations
-
-## Jacobian Matrix
+### Jacobian Matrix
 
 You can access to the jacobian matrix, $$J$$, of the geometric
 transformation, using the keyword: `J()` There are some tools to
 manipulate this jacobian.
 
-|Feel++ Keyword | Math Object | Description |
-----------------|-------------|-------------|
-|`detJ()`|$$\det(J)$$|Determinant of jacobian matrix |
-|`invJT()`|$$(J^{-1})^T$$|Transposed inverse of jacobian matrix |
+|===
+|Feel++ Keyword | Math Object | Description 
+|`detJ()`|$$\det(J)$$|Determinant of jacobian matrix 
+|`invJT()`|$$(J^{-1})^T$$|Transposed inverse of jacobian matrix 
+|===
 
 
-
-# Multiscale Image
+## Multiscale Image
 
 in order to deal with large scale image, several tools have been
 developed to facilitate access to images.
@@ -260,7 +260,8 @@ todo: define image format
 
 todo: define transformation
 
-|Feel++ Keyword | Math Object | Description |
-|---------------|-------------|-------------|
-|`msi(f)`       | $$T(f)$$    | the transformation from the coarse to fine level |
+|===
+|Feel++ Keyword | Math Object | Description 
+|`msi(f)`       | $$T(f)$$    | the transformation from the coarse to fine level 
+|===
 
