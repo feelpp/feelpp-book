@@ -1,6 +1,6 @@
-# Norms
+= Norms
 
-## $$L^2$$ norm
+== $$L^2$$ norm
 
 
 Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
@@ -9,8 +9,7 @@ $$
 \parallel f\parallel_{L^2(\Omega)}=\sqrt{\int_\Omega |f|^2}
 $$
 
-
-### Interface
+=== Interface
 
 [source,cpp]
 ----
@@ -33,8 +32,11 @@ Required parameters:
 Optional parameters:
 
 * `_quad`  = quadrature to use.
+   
    - Default = `_Q<integer>()`
+
 * `_geomap`  = type of geometric mapping.
+   
    - Default = `GEOMAP_OPT`
 
 ### Example
@@ -54,20 +56,22 @@ From `doc/manual/stokes/stokes.cpp`
 include::code/stokes.cpp[norml2]
 ----
 
-##  $$H^1$$ norm
+==  $$H^1$$ norm
 
 In the same idea, you can evaluate the H1 norm or semi norm, for any function $$f \in H^1(\Omega)$$:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
  \parallel f \parallel_{H^1(\Omega)}&=\sqrt{\int_\Omega |f|^2+|\nabla f|^2}\\
 &=\sqrt{\int_\Omega |f|^2+\nabla f * \nabla f^T}\\
 |f|_{H^1(\Omega)}&=\sqrt{\int_\Omega |\nabla f|^2}
-\end{aligned}$$
+\end{aligned}
+$$
 
 where $$*$$ is the scalar product $$\cdot$$ when $$f$$ is a scalar
 field and the frobenius scalar product $$:$$ when $$f$$ is a vector field.
 
-### Interface
+=== Interface
 
 [source,cpp]
 ----
@@ -92,13 +96,16 @@ Required parameters:
 Optional parameters:
 
 * `_quad` = quadrature to use. 
+   
    - Default = `_Q<integer>()`
+
 * `_geomap` = type of geometric mapping.
+   
    - Default = `GEOMAP_OPT`
 
 normH1() returns a float containing the $$H^1$$ norm.
 
-### Example
+=== Example
 
 With expression:
 
@@ -123,13 +130,15 @@ With test or trial function `u`
                   _grad_expr=(gradv(u)-trans(gradg)) );
 ----
 
-## Linfinity norm 
+== Linfinity norm 
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the infinity norm using the normLinf() function:
 
-$$\parallel f \parallel_\infty=\sup_\Omega(|f|)$$
+$$
+\parallel f \parallel_\infty=\sup_\Omega(|f|)
+$$
 
-### Interface
+=== Interface
 
 [source,cpp]
 ----
@@ -147,6 +156,7 @@ Required parameters:
 Optional parameters:
 
 * `_geomap` = type of geometric mapping.
+   
    - Default = `GEOMAP_OPT`
 
 The normLinf() function returns not only the maximum of the function over a sampling of each element thanks to the `_pset` argument but also the coordinates of the point where the function is maximum. The returned data structure provides the following interface
@@ -157,7 +167,7 @@ The normLinf() function returns not only the maximum of the function over a samp
 
 * `arg()`: coordinates of the point where the function is maximum
 
-### Example
+=== Example
 
 [source,cpp]
 ----
