@@ -1,9 +1,9 @@
 Runtime FAQ
 ===========
 
-## Parallel computing
+== Parallel computing
 
-### How to bind Feel++ mpi processes to cores
+=== How to bind Feel++ mpi processes to cores
 
 For performance reasons, it can be very efficient to bind mpi processes to cores. You should read the mpirun manual and the binding section.
 
@@ -14,9 +14,9 @@ Here is the command line to bind the processes:
 mpirun -np 4 -bind-to-core feelpp_qs_laplacian
 ----
 
-##  Feel++ and memory
+==  Feel++ and memory
 
-### How to monitor the memory usage in Feel++
+=== How to monitor the memory usage in Feel++
 
 It is not easy to have a precise account for memory usage in a code with standard unix tools. `top` , `ps`  or `htop`  can tell you more or less what memory has been allocated with the OS to your application but it is not, and by far, a precise account.
 
@@ -36,9 +36,9 @@ Environment::logMemoryUsage("memory usage after:");
 
 Otherwise there are tools like `valgrind`  (OpenSource) or `ddt/map` (Commercial) that allow to better better the memory usage for data structures other than PETSc ones.
 
-## Error or Exception messages
+== Error or Exception messages
 
-### locale::facet::_S_create_c_locale name not valid
+=== locale::facet::_S_create_c_locale name not valid
 
 On Ubuntu systems and possibly others, locale (language, money, ...) information might be set and we don't handle that very well at the moment. You might get the following message at the execution of any Feel++ applications
 
