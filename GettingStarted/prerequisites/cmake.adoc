@@ -1,8 +1,8 @@
-## CMAKE
+== CMAKE
 
 CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as _**Makefiles**_ and Visual Studio project files.
 
-**Building with CMake** +  
+=== Building with CMake   
 Setting up a bunch of CMakeLists.txt files will not immediately allow you to build your project. CMake is just a cross platform wrapper around more traditional build systems. In the case of linux, this means make. A quick preprocessing step will convert your CMakeLists.txt description into a traditional make build system automatically. One nice and highly recommended feature of CMake is the ability to do out of source builds. In this way you can make all your .o files, various temporary depend files, and even the binary executables without cluttering up your source tree.   
 
 Here below is a cmake for our simple project.
@@ -42,7 +42,6 @@ To use out of source builds, create a build directory in your top-level folder (
 `cd build` : Takes us to build directory. +   
 `cmake ..` : Runs cmake pointing it to the src directory   
 
-
 Then run the command. 
 [source,sh]
 ----
@@ -50,7 +49,5 @@ make doc
 ----
 
 Remember to be in your build directory and point cmake only to the directory containing the top-level CMakeLists.txt file, not the file itself. If all goes well, cmake will process your CMakeLists.txt files, find the location of all libraries and include paths and spew a bunch of configuration information including a traditional _**Makefile**_ in your build directory.
-
-
 
 This only touches the surface of what CMake can do. Check out the link:http://www.cmake.org/Wiki/CMake[CMake Wiki] for more info.
