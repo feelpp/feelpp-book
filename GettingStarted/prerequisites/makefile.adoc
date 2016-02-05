@@ -1,6 +1,7 @@
-## MAKEFILES
+== MAKEFILES
 
-**Compiling by hand :** +
+=== Compiling by hand 
+
 The trivial way to compile our files and obtain an executable, is by running the command:
 
 [source,sh]
@@ -12,7 +13,7 @@ To simplify compiling of several source files, Makefiles are special format file
 
 It is recommended (actually mandatory for Feel++) to separate source code and build directory.
 
-### Creating a Makefile
+=== Creating a Makefile
 
 A  *Makefile* is composed of :
 [source,makefile]
@@ -38,7 +39,7 @@ clean:
 	rm -rf *.o 
 ----
 
-#### The make utility
+==== The make utility
 The `make`
 command will look for a file named `Makefile` in the current directory, and execute the `main` target.
 
