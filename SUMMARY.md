@@ -45,7 +45,7 @@
    * [Solver](QuickReference/solver.adoc)
        * [Preconditioner](QuickReference/preconditioner.adoc)
        * [Solving linear systems](QuickReference/Solver/solving.adoc)
-       * [Backends](QuickReference/Solver/backends.md)
+       * [Backends](QuickReference/Solver/backends.adoc)
        * [Eigen problem](QuickReference/Solver/eigensolver.adoc)
    * [Time Stepping](QuickReference/Time/README.md)
        * [Adaptive Time Stepping](QuickReference/Time/adaptivestepping.adoc)
