@@ -20,11 +20,17 @@ It is organized as follows:
 This book is the result of many contributions and in particular from
 
  - Alexandre Ancel
+ 
  - Denis Barbier
+ 
  - Guillaume Dollé
+ 
  - Vincent Huber
+ 
  - Christophe Prud'homme
+ 
  - Ranine Tarabay
+ 
  - Jean-Baptiste Wahl
 
 # License
