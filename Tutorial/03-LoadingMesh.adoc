@@ -10,16 +10,19 @@ The `loadMesh` function has a `_name` option set by default as the default value
 auto mesh=loadMesh( _mesh=new Mesh<Simplex<2>> );
 ----
 
-## Exporting the Mesh for visualisation 
+== Exporting the Mesh for visualisation 
 
 See this link:06-VisualizingFunctions.adoc[section] for more details about exporting and visualizing meshes.
 
-## The code
+== The code
+
 [source,c++]
 ----
 include::code/03-mymesh.cpp[]
 ----
-## The config file
+
+== The config file
+
 [source,c++]
 ----
 include::code/03-mymesh.cfg[]
