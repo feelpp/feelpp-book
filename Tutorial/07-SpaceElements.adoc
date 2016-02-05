@@ -4,7 +4,7 @@ Spaces and elements
 You've learned how to discretize the space you want to compute on.
 You now have to learn how to define and use function spaces and elements of functions spaces.
 
-## Constructing a function space
+== Constructing a function space
 
 - Loading a Mesh in 2D   
 
@@ -30,18 +30,26 @@ You now have to learn how to define and use function spaces and elements of func
 One can also use :
 
 - `Pdh<ORDER>(mesh)` : Polynomial Discontinuous
+
 - `Pvh<ORDER>(mesh)` : Polynomial Continuous Vectorial
+
 - `Pdhv<ORDER>(mesh)` : Polynomial Discontinuous Vectorial
+
 - `Pchm<ORDER>(mesh)` : Polynomial Continuous Matrix
+
 - `Ned1h<ORDER>(mesh)` : Nedelec function spaces   
  
-## Code with other features
-### Code
+== Code with other features
+
+=== Code
+
 [source,c++]
 ----
 include::code/07-myfunctionspace.cpp[]
 ----
-### Config file
+
+=== Config file
+
 [source,c++]
 ----
 include::code/07-myfunctionspace.cfg[]
