@@ -1,7 +1,7 @@
 Function Spaces
 ===============
 
-# Prerequisites
+== Prerequisites
 
 The prerequisites are
 
