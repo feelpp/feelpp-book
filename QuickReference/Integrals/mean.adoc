@@ -1,4 +1,4 @@
-# Mean value of a function
+= Mean value of a function
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean value of a function thanks to the mean() function :
 
