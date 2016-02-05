@@ -52,30 +52,33 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 
 Usual syntax to create vectors:
 
-|Feel++ Keyword | Math Object | Description | Dimension |
-|---------------|-------------|-------------|-----------|
-|` vec<n>(v_1,v_2,...,v_n)`|$$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$$|Column Vector with $$n$$ rows<br>entries being expressions|$$n \times 1$$|
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|` vec<n>(v_1,v_2,...,v_n)`|$$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$$|Column Vector with $$n$$ rows<br>entries being expressions|$$n \times 1$$
+|===
 
 You can also use expressions and the unit base vectors:
 
-|Feel++ Keyword | Math Object | Description |
-|---------------|-------------|-------------|
-|`oneX()` | $$\begin{pmatrix} 1\\0\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{i}$$|
-|`oneY()` | $$\begin{pmatrix} 0\\1\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{j}$$|
-|`oneZ()` | $$\begin{pmatrix} 0\\0\\1 \end{pmatrix}$$|Unit vector $$\overrightarrow{k}$$|
+|===
+|Feel++ Keyword | Math Object | Description 
+|`oneX()` | $$\begin{pmatrix} 1\\0\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{i}$$
+|`oneY()` | $$\begin{pmatrix} 0\\1\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{j}$$
+|`oneZ()` | $$\begin{pmatrix} 0\\0\\1 \end{pmatrix}$$|Unit vector $$\overrightarrow{k}$$
+|===
 
 
 
 ## Building Matrix
 
-|Feel++ Keyword | Math Object | Description | Dimension |
-|---------------|-------------|-------------|-----------|
-|` mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix<br> entries beeing expressions |$$m \times n$$|
-|` ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 1 |$$m \times n$$|
-|` zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 0 |$$m \times n$$|
-|` constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with a constant c |$$m \times n$$|
-|` eye<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$|
-|` Id<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$|
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|` mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix<br> entries beeing expressions |$$m \times n$$
+|` ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 1 |$$m \times n$$
+|` zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 0 |$$m \times n$$
+|` constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with a constant c |$$m \times n$$
+|` eye<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$
+|` Id<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$
+|===
 
 
 ## Manipulating Vectors and Matrix
