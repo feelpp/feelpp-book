@@ -1,7 +1,7 @@
 Keywords
 ========
 
-One of Feel++ assets is it finite element embedded language. The language follows the C++ grammar, and provides keywords as well as operations between objects which are, mathematically, tensors of rank 0, 1 or 2.
+One of Feel{plus}+ assets is it finite element embedded language. The language follows the C++ grammar, and provides keywords as well as operations between objects which are, mathematically, tensors of rank 0, 1 or 2.
 
 In all following tables we use the notations:
 $$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$$  
@@ -15,22 +15,23 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 
 ## Current Point:
 
-|Feel++ Keyword | Math Object | Description | Dimension|
-|---------------|-------------|-------------|----------|
-|` P()`|$$\overrightarrow{P}$$| $$(P_x, P_y, P_z)^T$$|$$d \times 1$$|
-|` Px()`|$$P_x$$|$$x$$ coordinate of $$\overrightarrow{P}$$|$$1 \times 1$$|
-|` Py()`|$$P_y$$|$$y$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D)|$$1 \times 1$$|
-|` Pz()`|$$P_z$$|$$z$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$|
-
+|===
+|Feel++ Keyword | Math Object | Description | Dimension
+|` P()`|$$\overrightarrow{P}$$| $$(P_x, P_y, P_z)^T$$|$$d \times 1$$
+|` Px()`|$$P_x$$|$$x$$ coordinate of $$\overrightarrow{P}$$|$$1 \times 1$$
+|` Py()`|$$P_y$$|$$y$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D)|$$1 \times 1$$
+|` Pz()`|$$P_z$$|$$z$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
+|===
 
 ## Element Barycenter Point:
 
-|Feel++ Keyword | Math Object | Description | Dimension |
-|---------------|-------------|-------------|-----------|
-|` C()`|$$\overrightarrow{C}$$| $$(C_x, C_y, C_z)^T$$|$$d \times 1$$|
-|` Cx()`|$$C_x$$|$$x$$ coordinate of $$\overrightarrow{C}$$|$$1 \times 1$$|
-|` Cy()`|$$C_y$$|$$y$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D)|$$1 \times 1$$|
-|` Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$|
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+
+|` C()`|$$\overrightarrow{C}$$| $$(C_x, C_y, C_z)^T$$|$$d \times 1$$
+|` Cx()`|$$C_x$$|$$x$$ coordinate of $$\overrightarrow{C}$$|$$1 \times 1$$
+|` Cy()`|$$C_y$$|$$y$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D)|$$1 \times 1$$
+|` Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
 
 
 ## Normal at Current Point:
