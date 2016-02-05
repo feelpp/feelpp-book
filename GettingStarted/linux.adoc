@@ -1,7 +1,7 @@
 Feel++ on Linux
 ===============
 
-## Debian
+== Debian
 
 Debian is the platform of choice for Feel+\+, it was developed mainly on it. The commands to install Feel++ on Debian are
 
@@ -24,7 +24,7 @@ Feel++ has its own PPA, checkout https://launchpad.net/~feelpp/+archive/ppa[feel
 The interested user might want to look at the following Ubuntu Launchpad Feel\++ page https://launchpad.net/ubuntu/\+source/feel++[Ubuntu Source
   Page for all Ubuntu versions]
 
-### precise Ubuntu Precise - 12.04
+=== precise Ubuntu Precise - 12.04
 
 This section is outdated
 
@@ -40,7 +40,7 @@ This section is outdated
 
 It allows us also to provide a recent version to compile the Feel++ projects on https://travis-ci.org/feelpp/feelpp[Travis-ci], which is a continuous integration tool. The installation procedure is currently https://github.com/feelpp/feelpp/blob/develop/.travis.yml[as follows].
 
-### Ubuntu Trusty - 14.04
+=== Ubuntu Trusty - 14.04
 
 ----
 	sudo add-apt-repository ppa:feelpp/ppa
@@ -57,7 +57,7 @@ Ubuntu 14.04 does not support C+\+14 at this time, however they maintain a ppa o
     sudo apt-get install g++-4.9
 ----
 
-### Configuration
+=== Configuration
 
 First of all, you have to install dependencies
 
@@ -65,7 +65,7 @@ First of all, you have to install dependencies
  sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev libeigen3-dev
 ----
 
-### Cmake
+=== Cmake
 
 Then, in your chosen build directory, you have to run the cmake process.
 [source,sh]
@@ -73,7 +73,7 @@ Then, in your chosen build directory, you have to run the cmake process.
 cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPILER=`which clang-3.6` -DFEELPP_MINIMAL_CONFIGURATION=ON -DFEELPP_ENABLE_NLOPT=OFF
 ----
 
-### Compilation
+=== Compilation
 
 And at last, the compiling process.
 [source,sh]
@@ -83,5 +83,5 @@ make
 
 You should consider running parallel compilation (`make -j 12` for example).
 
-#### Optional: installation
+==== Optional: installation
 The one that want Feel++ installed in his system can use `make install`. For more information, we refer to the cmake documentation.
