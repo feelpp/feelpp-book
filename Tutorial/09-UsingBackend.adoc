@@ -1,7 +1,7 @@
 Using a backend
 ===============
 
-## Introduction
+== Introduction
 
 After the discretization process, one may have to solve a (non) linear system. Feel++ interfaces with PETSc/SLEPc and Eigen3. Consider this system $$A x = b $$
 
@@ -29,7 +29,7 @@ backend(_rebuild=true)->solve(_matrix=A1,_rhs=c,_sol=y);
 
 Each of that options can be retrieved via the `\c --help-lib` argument in the command line.
 
-### Non default Backend
+=== Non default Backend
 
 You may need to manage more than one backend in an application: you have different systems to solve and you want to keep some already computed objects such as preconditioners.
 
@@ -65,13 +65,13 @@ One of the important backend option is to be able to monitor the residuals and i
 
 The whole code example :   
 
-### Code
+=== Code
 
 ----  
 include::code/09-mybackend.cpp[]
 ----  
 
-### Config file
+=== Config file
 
 ----  
 include::code/09-mybackend.cfg[]
