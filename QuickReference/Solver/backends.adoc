@@ -1,8 +1,8 @@
-# Algebra Backends
+= Algebra Backends
 
 Non-Linear algebra backends are crucial components of Feel{plus}{plus}. They provide a uniform interface between Feel{plus}{plus} data structures and underlying the linear algebra libraries used by Feel++.
 
-## Libraries
+== Libraries
 
 Feel++ interfaces the following libraries:
  
@@ -12,7 +12,7 @@ Feel++ interfaces the following libraries:
  
  - Eigen3
 
-## Backend
+== Backend
 
 Backend is a template class parametrized by the numerical type providing access to
 
@@ -53,7 +53,7 @@ They take default values as described in the following table:
 |_worldcomm | WorldComm | Environment::worldComm()
 |===
 
-### _name
+=== _name
 
 Backends are store in a Backend factory and handled by a manager that allows to keep track of allocated backends. They a registered with respect to their name and kind. The default name value is en empty string (`""`) which names the default Backend. The _name parameter is important because it provides also the name for the command line/config file option section associated to the associated Backend.
 
@@ -74,7 +74,7 @@ Environment env( _argc=argc, _argv=argv,
                  _desc=backend_options("projection") );
 ----
 
-### _kind
+=== _kind
 
 Feel++ supports three kind of Backends:
  
@@ -103,7 +103,7 @@ backend=petsc
 backend=eigen_sparse
 ----
 
-### _rebuild
+=== _rebuild
 
 If you want to reuse a Backend and not allocate a new one plus add the corresponding option to the command line/configuration file, you can rebuild the Backend in order to delete the data structures already associated to this Backend and in particular the preconditioner. It is mandatory to do that when you solve say a linear system first with dimensions $$m\times m$$ and then solve another one with different dimension $$n \times n$$ because in that case the Backend will throw an error saying that the dimensions are incompatible. To avoid that you have to rebuild the Backend.
 
@@ -120,7 +120,7 @@ b->solve(_solution=x1,_matrix=A1,_rhs=f1);
 
 > **Note** Although this feature might appear useful, you have to make sure that the solving strategy applies to all problems because you won't be able to customize the solver/preconditioner for each problem. If you have different problems to solve and need to have custom solver/preconditioner it would be best to have different Backends.
 
-### _worldComm
+=== _worldComm
 
 One of the strength of Feel{plus}+ is to be able to change the communicator and in the case of Feel++ the WorldComm. This allows for example to
  
