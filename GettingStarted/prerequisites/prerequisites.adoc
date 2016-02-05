@@ -1,16 +1,15 @@
 Prerequisites 
 =============
 
-In order to use Feel++, a set of tools are required.
-In the following, we will briefly present them _via_ a simple project that performs basic arithmetic operations.
+In order to use Feel++, a set of tools are required. In the following, we will briefly present them _via_ a simple project that performs basic arithmetic operations.
 
-### Dummy project
+## Dummy project
 
 The aim of this project is to sum, subtract, divide and multiply two numbers given _via_ the command line using a C++ class.   
 
 **The project files are :**
 
-#### main.cpp   
+### main.cpp   
 
 [source,c++]
 ----
@@ -191,7 +190,10 @@ class operation
 Using this project, we will present here : 
 
 - how to compile the program using a link:makefile.adoc[MakeFile]
+
 - how to make it simpler with link:cmake.adoc[CMake]
+
 - what is git and link:github.adoc[GitHub]
+
 - How the code has to be link:doxygen.adoc[documented] .
 
