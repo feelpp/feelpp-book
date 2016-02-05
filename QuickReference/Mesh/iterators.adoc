@@ -1,4 +1,4 @@
-# Mesh iterators 
+= Mesh iterators 
 
 Feel++ mesh data structure allows to iterate over its entities: elements, faces, edges and points.
 
@@ -58,7 +58,7 @@ for ( auto const&  e : r4 )
 { ... }
 ----
 
-## Extended set of entities
+== Extended set of entities
 
 Feel++ allows also to select an extended sets of entities from the mesh, you can extract entities which belongs to the local process but also ghost entities which satisfy the same property as the local ones. Actually you can select both or one one of them thanks to the enum data structure entity_process_t which provides the following options
 
@@ -97,7 +97,7 @@ for (auto const& e : r )
 }
 ----
 
-## Helper function on entities set
+== Helper function on entities set
 
 Feel++ provides some helper functions to apply on set of entities. We denote by range_t the type of the entities set.
 
@@ -107,7 +107,7 @@ Feel++ provides some helper functions to apply on set of entities. We denote by 
 | WorldComm | worldComm(range_t) | returns the WorldComm associated to the entities set 
 |===
 
-## Create a new range
+== Create a new range
 
 A range can be also build directly by the user. This customized range is stored in a std container which contains the c{plus}+ references of entity object. We use boost::reference_wrapper for take c++ references and avoid copy of mesh data. All entities enumerated in the range must have same type (elements,faces,edges,points). Below we have an example which select all active elements in mesh for the current partition (i.e. identical to elements(mesh)). 
 
