@@ -46,7 +46,7 @@ auto Xh = FunctionSpace<MeshType,bases<Lagrange<3>>>::New( mesh );
 auto Xh = Pch_type<MeshType,3>::New( mesh );
 ----
 
-## Functions
+== Functions
 
 > **Note:** One important feature in `FunctionSpace`  is that it embeds the definition of element which allows for the strict definition of an `Element` of a `FunctionSpace`  and thus ensures the correctness of the code.  
 
@@ -69,7 +69,7 @@ auto u = P3ch.element();
 auto v = P3ch.element(Px()*Px()+Py()*Py());
 ----
 
-## Components
+== Components
 
 [source,cpp]
 ----
