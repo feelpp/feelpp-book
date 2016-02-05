@@ -1,7 +1,7 @@
 Meshes
 ======
 
-## Introduction
+== Introduction
 
 Feel++ provides some tools to manipulate meshes.
 Here is a basic example that shows how to generate a mesh for a square geometry (source `doc/manual/tutorial/mymesh.cpp`).
@@ -45,7 +45,7 @@ Finally we use the `exporter()` (see \ref Exporter) function to export the mesh 
 In this section, we present some of the mesh definition and manipulation tools provided by Feel++. For more information you can also see \ref Gmsh.
 
 
-##  Basic Meshes
+== Basic Meshes
 
 There is a list of basic geometries you can automatically generate with Feel++ library.
 
@@ -69,8 +69,9 @@ From `doc/manual/tutorial/myfunctionspace.cpp`
 auto mesh = unitSquare();
 ----
 
-##  Load Meshes
-###  loadMesh
+==  Load Meshes
+
+===  loadMesh
 
 You can use this function to:
 
@@ -92,39 +93,56 @@ Required Parameters:
 Optional Parameters:
 
 * `_hsize`  (double): characteristic size of the mesh. This option will edit the `.geo` file and change the variable `h` if defined
+   
    - Default: `0.1`
-   -  Option: `gmsh.hsize`
+   
+   - Option: `gmsh.hsize`
 
 * `_geo_variables_list`  (string): Set a list of variable that may be defined in a `.geo` file
+   
    - Default: \c ""
-   -  Option: `gmsh.geo`-variables-list
+   
+   - Option: `gmsh.geo`-variables-list
 
 * `_filename`  (string): filename with extension.
+   
    - Default: `feel.geo`
-   -  Option: `gmsh.filename`
+   
+   - Option: `gmsh.filename`
 
 * `_depends`  (string): list of files (separated by , or ;) on which `gmsh.filename` depends
+   
    - Default: \c ""
-   -  Option: `gmsh.depends`
+   
+   - Option: `gmsh.depends`
 
 * `_refine`  (boolean): optionally refine with \p refine levels the mesh.
+   
    - Default: `0.`
+   
    - Option: `gmsh.refine`
 
 * `_update`  (integer): update the mesh data structure (build internal faces and edges).
+   
    - Default: `true`
 
 * `_physical_are_elementary_regions`  (boolean): to load specific meshes formats.
+   
    - Default: `false.`
+   
    - Option: gmsh.physical_are_elementary_regions
 
 * `_straighten`  (boolean): in case of curvilinear elements, straighten the elements
    which are not touching with a face the boundary of the domain
+   
    - Default: `true`
+   
    - Option: `gmsh.straighten`
 
 * `_partitioner`  (integer): define the mesh partitioner to use:
+   
    - Default: `1` (if Metis is available) `0` if not (CHACO)
+   
    - Option: gmsh.partitioner
 
 The file you want to load has to be in an appropriate repository.
@@ -215,9 +233,9 @@ mesh = loadGMSHMesh( _mesh=new mesh_type,
 ----
 
 
-##  Create Meshes
+== Create Meshes
 
-###  createGMSHMesh
+===  createGMSHMesh
 
 **Interface:**
 
@@ -257,7 +275,7 @@ Optional Parameters:
 
 To generate your mesh you need a description parameter. This one can be create by one the two following function.
 
-###  geo
+===  geo
 
 Use this function to create a description from a `.geo` file.
 
@@ -313,7 +331,7 @@ mesh = createGMSHMesh( _mesh=new mesh_type,
 ----
 
 
-###  domain
+=== domain
 
 Use this function to generate a simple geometrical domain from parameters.
 
@@ -405,7 +423,7 @@ mesh_ptrtype mesh = createGMSHMesh( _mesh=new mesh_type,
                                                   _h=meshSize ) );
 ----
 
-##  Todo
+== Todo
 
 [source,cpp]
 ----
