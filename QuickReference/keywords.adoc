@@ -42,7 +42,7 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 |` Nx()`|$$N_x$$|$$x$$ coordinate of $$\overrightarrow{N}$$|$$1 \times 1$$
 |` Ny()`|$$N_y$$|$$y$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D)|$$1 \times 1$$
 |` Nz()`|$$N_z$$|$$z$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
-|=
+|===
 
 
 
