@@ -1,8 +1,9 @@
-# Introduction
+= Introduction
 
 We now turn to the next crucial mathematical ingredient: the function space, whose definition depends on $$\Omega_h$$ - or more precisely its partitioning $$\mathcal{T}_h$$ - and the choice of basis function. Function spaces in Feel{plus}+ follow the same definition and Feel++ provides support for continuous and discontinuous Galerkin methods and in particular approximations in $$L^2$$, $$H^1$$-conforming and $$H^1$$-nonconforming, $$H^2$$, $$H(\mathrm{div})$$ and $$H(\mathrm{curl})$$[^1].
 
 We introduce the following spaces
+
 $$
 \begin{aligned}
     \mathbb{W}_h &= \{v_h \in L^2(\Omega_h): \ \forall K \in \mathcal{T}_h, v_h|_K    \in \mathbb{P}_K\},\\
