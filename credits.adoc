@@ -1,7 +1,7 @@
 Credits 
 =======
 
-##  Copyright  
+==  Copyright  
 
   * Feel\++ is Copyright (C) 2010-2015 by- Feel++ Consortium
 
@@ -21,14 +21,14 @@ Credits
 
 
 
-##  Management  
+==  Management  
 
 Feel++ is managed by Christophe Prud'homme
 mailto:christophe.prudhomme@feelpp.org[], Professor in applied mathematic and scientific computing at U. de Strasbourg, France.
 
-## Developers
+== Developers
 
-###  Current Developers and Contributors 
+===  Current Developers and Contributors 
 
 The current developers are
 
@@ -74,7 +74,7 @@ many people (in no particular order):
 Yannick Hoarau, Philippe Gilotte, Benjamin Surowiec, Romain Hild, Marion Spreng, Benjamin Vanthong, Thomas Lantz, Mamadou Camara, Camille Boulard, Pierre Gerhard, Frédéric Hecht, Michel Fouquembergh, Denis Barbier, Jean-Marc Gratien, Daniele Di Pietro.
 
 
-###  Past Developers and Contributors 
+=== Past Developers and Contributors 
 
  - Abdoulaye Samake (former Phd student at U. Joseph Fourier,
    currently at NERSC in Norway)
@@ -90,9 +90,9 @@ Yannick Hoarau, Philippe Gilotte, Benjamin Surowiec, Romain Hild, Marion Spreng,
  - Christoph Winkelmann (formerly at EPFL)
 
 
-## Funding
+== Funding
 
-###  Current funding 
+===  Current funding 
 
 Feel++ is supported by
 
@@ -108,7 +108,7 @@ Feel++ is supported by
 
  * http://labex-irmia.u-strasbg.fr/[LABEX IRMIA]
 
-###   Past funding 
+=== Past funding 
 
 
  * ANR
@@ -133,7 +133,7 @@ Feel++ is supported by
 
  * the region Rhônes-Alpes thanks the cluster ISLE <<fn:2>> and the project CHPID since 2009
 
-## Footnotes
+== Footnotes
 
 [[[fn:1]]] http://www.agence-nationale-recherche.fr/
 
