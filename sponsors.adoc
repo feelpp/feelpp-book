@@ -1,14 +1,14 @@
 Sponsors
 ========
 
-# Current Sponsors
+## Current Sponsors
 
 image:pngs/logos/logo_anr.png[width="100",link="http://www.agence-nationale-recherche.fr/", align="center"]
 image:pngs/logos/logo_amies.png[width="100",link="http://agence-maths-entreprises.fr/"]
 image:pngs/logos/logoIRMIA.png[width="100",link="http://labex-irmia.u-strasbg.fr/"] 
 
 
-# Former Sponsors
+## Former Sponsors
 
 image:pngs/logos/logo_isle.jpeg[width="100",link="http://cluster-isle.grenoble-inp.fr/"]
 image:pngs/logos/logo_ra.png[width="100",link="http://www.rhonealpes.fr/"] 
