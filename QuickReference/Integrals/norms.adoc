@@ -39,7 +39,7 @@ Optional parameters:
    
    - Default = `GEOMAP_OPT`
 
-### Example
+=== Example
 
 From `doc/manual/laplacian/laplacian.cpp`
 
