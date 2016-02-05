@@ -1,7 +1,7 @@
 Using Feel++
 ============
 
-## Step 1 : Configure your project with Feel++
+== Step 1 : Configure your project with Feel++
 
 In order to configure your project to use Feel+\+, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. To detect your Feel++ installation and configure your application you can use the following file example:
 
@@ -59,14 +59,14 @@ feelpp_add_application(
   CFG cfgFile1.cfg cfgFile2.cfg )
 ////
 
-## Step 2 : Build your project with Feel++
+== Step 2 : Build your project with Feel++
 
 There are two ways that you can configure your project to use Feel++:
 
 - You can use the research directory located in Feel++ sources,
 - You can install Feel++ and use it as an external library for your project.
 
-### Using the research directory
+=== Using the research directory
 
 The first possibility is to use the research directory located inside Feel++ source directory. To do so, simply copy the directory containing your source code into the research directory. Then you can follow the https://github.com/feelpp/feelpp-book/blob/master/GettingStarted/compiling.md[compilation guide] with a simple additional step: You have to enable your project when typing the `cmake` command.
 
@@ -99,7 +99,7 @@ cmake /path/to/source/directory \
  -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
-## Compile your project
+== Compile your project
 
 Eventually, you can build your application: 
 
