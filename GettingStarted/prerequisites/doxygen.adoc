@@ -8,8 +8,9 @@ Some of Doxygen's output is extracted from the semantics of the source programs.
 
 The source comments can use any of three formats:   
 
- 1. Special comments can mimic a Javadoc comment by using an extra asterisk in a multiline comment
- 
+- Special comments can mimic a Javadoc comment by using an extra 
+asterisk in a multiline comment
+
 ----
 /**
 *@brief     operation.
@@ -19,7 +20,7 @@ The source comments can use any of three formats:
 */
 ----
 
- 2. You can also use an exclamation point instead of the second asterisk 
+- You can also use an exclamation point instead of the second asterisk 
   
 ----
 /*!
@@ -27,8 +28,8 @@ The source comments can use any of three formats:
 *y is variable too
 */
 ----
- 
- 3. Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+
+- Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
 
 ----
 ///
@@ -49,7 +50,6 @@ Special comments can contain Doxygen tags that let you specify particulars about
 * @todo
 */
 ----
-
 
 We can configure our cmake system to enable Doxygen to automatically generate an API documentation when we run `make`   commands. To generate a documentation for our simple simple project using doxygen, add to our CMakeLists.txt the following:
 
