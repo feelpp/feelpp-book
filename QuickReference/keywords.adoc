@@ -113,7 +113,7 @@ Following tables present tools to declare and manipulate expressions.
 |`Py()`    | Variable $$y$$ 
 |`Pz()`  |Variable $$z$$ 
 |`cst( c )` | Constant function equal to $$c$$ 
-|=
+|===
 
 You can of course use all current operators ( + - / * ) and the usual following functions:
 
