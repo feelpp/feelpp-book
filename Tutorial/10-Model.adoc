@@ -1,12 +1,12 @@
 Defining a Model
 ================
 
-## Introduction 
+== Introduction 
 
 It is well known an equation can describe a huge range of physical
 problems. Each of theses problems will have a particular environment, but the equation to solve will be the same. To make our program applicable to theses range of problem, we have defined a model.
 
-## What is a model
+== What is a model
 
 A model is defined by :
 
@@ -18,10 +18,12 @@ A model is defined by :
 - Boundary Conditions
 - Post Processing
 
-### Parameters
+=== Parameters
+
 A parameter is a non physical property for a model.
 
-### Materials
+=== Materials
+
 To retrieve the materials properties, we use :   
 
 [source,c++]
@@ -29,14 +31,14 @@ To retrieve the materials properties, we use :
 ModelMaterials materials = model.materials(); 
 ----  
 
-### BoundaryConditions
+=== BoundaryConditions
+
 Thanks to GiNaC, we handle boundary conditions (Dirichlet, Neumann, Robin) as expression. You have to indicate in the json file the quantity to handle (velocity, pressure...) and the associated expression.   
 
 [source,c++]
 ----  
 map_scalar_field<2> bc_u { model.boundaryConditions().getScalarFields<2>("heat","dirichlet") };
 ---- 
-
 
 We can apply theses boundary condition this way
 
@@ -49,17 +51,19 @@ We can apply theses boundary condition this way
   }
 ----
 
-### Code
+=== Code
 
 [source,c++]
 ----  
 include::code/10-model1.cpp[]
 ----
 
-### PostProcessing 
+=== PostProcessing 
+
 TODO: fill that part.
 
-### Example 
+=== Example 
+
 We have set up an example : an anisotropic laplacian. 
 
 [source,c++]
