@@ -1,4 +1,4 @@
-## DOXYGEN
+== DOXYGEN
 
 Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated sources. The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
 
