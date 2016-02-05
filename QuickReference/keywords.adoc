@@ -32,16 +32,17 @@ The genesis of the language can be found in \cite prudhomme05:_domain_specif_emb
 |` Cx()`|$$C_x$$|$$x$$ coordinate of $$\overrightarrow{C}$$|$$1 \times 1$$
 |` Cy()`|$$C_y$$|$$y$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D)|$$1 \times 1$$
 |` Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
-
+|===
 
 ## Normal at Current Point:
 
-|Feel++ Keyword | Math Object | Description | Dimension |
-|---------------|-------------|-------------|-----------|
-|` N()`|$$\overrightarrow{N}$$| $$(N_x, N_y, N_z)^T$$|$$d \times 1$$|
-|` Nx()`|$$N_x$$|$$x$$ coordinate of $$\overrightarrow{N}$$|$$1 \times 1$$|
-|` Ny()`|$$N_y$$|$$y$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D)|$$1 \times 1$$|
-|` Nz()`|$$N_z$$|$$z$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$|
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|` N()`|$$\overrightarrow{N}$$| $$(N_x, N_y, N_z)^T$$|$$d \times 1$$
+|` Nx()`|$$N_x$$|$$x$$ coordinate of $$\overrightarrow{N}$$|$$1 \times 1$$
+|` Ny()`|$$N_y$$|$$y$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D)|$$1 \times 1$$
+|` Nz()`|$$N_z$$|$$z$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
+|=
 
 
 
