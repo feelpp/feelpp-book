@@ -42,7 +42,7 @@
        * [Using interpolation](QuickReference/Spaces/interpolation.adoc)
        * [Saving functions](QuickReference/Spaces/save.adoc)
    * [Forms](QuickReference/forms.adoc)
-   * [Solver](QuickReference/solver.md)
+   * [Solver](QuickReference/solver.adoc)
        * [Preconditioner](QuickReference/preconditioner.md)
        * [Solving linear systems](QuickReference/Solver/solving.adoc)
        * [Backends](QuickReference/Solver/backends.md)
