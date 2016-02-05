@@ -53,7 +53,7 @@
    * [Keywords](QuickReference/keywords.adoc)
    * [Models](QuickReference/Models/README.adoc)
        * [Computation Fluid Mechanics](QuickReference/Models/Fluid/README.adoc)
-       * [Computation Solid Mechanics](QuickReference/Models/Solid/README.adoc)
+* [Computation Solid Mechanics](QuickReference/Models/Solid/README.adoc)
 * [Frequently Asked Questions](FAQ/README.md)
    * [Development](FAQ/FAQDevelopment.md)
    * [Runtime](FAQ/FAQExecution.md)
