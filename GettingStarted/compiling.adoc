@@ -2,7 +2,7 @@ Compiling Feel++ from sources
 =============================
 
 
-## Quick start
+== Quick start
 
 [source,bash]
 ----
@@ -16,7 +16,7 @@ make -j 4 feelpp_qs_laplacian
 ./quickstart/feelpp_qs_laplacian
 ----
 
-## General information
+== General information
 
 Feel+\+ uses http://www.cmake.org[`cmake`] as its build system. Check that \cmake is using `gcc4.7` (or a higher version) or `clang++` as C+\+ compiler (you can use the option `CMAKE_CXX_COMPILER=<path>/g++-4.7` where the `path` depends on your OS, it's probably `/usr/bin` or `/opt/local/bin` but you can also change it with the command `ccmake` and press `t` for advanced options). Feel++, using `cmake`, can be built either in source and out of source and different build type:
 
@@ -53,7 +53,7 @@ Optional packages:
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can jump to link:#Compiling[Compiling].
 
-## Compiling 
+== Compiling 
 
 > **Warning** It is not allowed to build the library in the source directory.
 
