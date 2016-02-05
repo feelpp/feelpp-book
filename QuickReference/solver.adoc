@@ -1,9 +1,9 @@
 Algebraic solutions
 ====================
 
-#  Definitions
+==  Definitions
 
-##  Matrices
+===  Matrices
 
 **Matrix Definition** A  matrix is a linear transformation between finite dimensional vector spaces.
 
@@ -30,9 +30,9 @@ There exists
  1. positive and negative eigenvalue (Stokes, Helmholtz) or
  2. there exists $$x,y$$ such that $$x^TAx > 0 > y^T A y$$
 
-## Preconditioners
+=== Preconditioners
 
-### Definition
+==== Definition
 
 Let $$A$$ be a $$\mathbb{R}^{n\times n}$$ matrix, $$x$$ and $$b$$ be $$\mathbb{R}^n$$ vectors, we wish to solve
 $$A x = b.$$
@@ -51,7 +51,7 @@ $$\{ b, (P^{-1}A)b, (P^{-1}A)^2b, \dotsc \}$$
 
 Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is never assembled.
 
-### Properties
+==== Properties
 
 Let us now describe some  properties of preconditioners
 
@@ -71,7 +71,7 @@ Here are some numerical methods to solve the system $$A x = b$$
 
 More details and strategies are available in the link:preconditioner.adoc[Preconditioner section].
 
-# Principles 
+== Principles 
 
 Feel++ abstracts the PETSc library and provides a subset (sufficient in most cases) to the PETSc features. It interfaces with the following PETSc libraries: `Mat` , `Vec` , `KSP` , `PC` , `SNES.` 
  
@@ -96,9 +96,9 @@ All linear algebra are encapsulated within backends using the command line optio
 
 The default `backend` is `petsc.` 
 
-# Examples
+== Examples
 
-## Laplacian
+=== Laplacian
 
 We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
@@ -143,9 +143,9 @@ PC Object: 2 MPI processes
       not using I-node (on process 0) routines
 ----
 
-### Solvers and preconditioners
+=== Solvers and preconditioners
 
-## Stokes
+== Stokes
 
 We now turn to the quickstart Stokes example, recall that we wish to, given a domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
 
@@ -211,5 +211,5 @@ $$
 
 where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1} \approx A^{-1}$$
 
-# Options
+== Options
 
