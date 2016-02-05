@@ -37,7 +37,7 @@ asterisk in a multiline comment
 ///
 ----
  
-**Tags**:
+=== Tags
 
 Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:   
 
