@@ -1,13 +1,13 @@
-# Vectors and Matrices
+= Vectors and Matrices
 
-## Vectors
+== Vectors
 
-### Creating vectors
+=== Creating vectors
 
-### Vector Interface
+=== Vector Interface
 
-## Matrices
+== Matrices
 
-### Creating matrices
+=== Creating matrices
 
-### Matrix Interface
+=== Matrix Interface
