@@ -83,6 +83,7 @@ $$
 f(x,y,z) = x^2 + y^2 + z^2
 \end{aligned}
 $$
+
 on the whole domain $$\Omega$$ and on part of the boundary $$\Omega$$.
 
 There is the appropriate code:
