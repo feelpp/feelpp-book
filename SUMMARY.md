@@ -43,7 +43,7 @@
        * [Saving functions](QuickReference/Spaces/save.adoc)
    * [Forms](QuickReference/forms.adoc)
    * [Solver](QuickReference/solver.adoc)
-       * [Preconditioner](QuickReference/preconditioner.md)
+       * [Preconditioner](QuickReference/preconditioner.adoc)
        * [Solving linear systems](QuickReference/Solver/solving.adoc)
        * [Backends](QuickReference/Solver/backends.md)
        * [Eigen problem](QuickReference/Solver/eigensolver.adoc)
