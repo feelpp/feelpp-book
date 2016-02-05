@@ -124,7 +124,7 @@ Application of multigrid preconditioner ($$ V $$-cycle)
 
 - Most theory applies to SPD systems
     
-    * variable coefficients (\eg discontinuous): low energy interpolants.
+    * variable coefficients (e.g. discontinuous): low energy interpolants.
     
     * mesh- and/or physics-induced anisotropy: semi-coarsening/line smoothers.
     
@@ -132,9 +132,9 @@ Application of multigrid preconditioner ($$ V $$-cycle)
     
 - Deeper algorithmic difficulties
 
-    * nonsymmetric (\eg advection, shallow water, Euler).
+    * nonsymmetric (e.g. advection, shallow water, Euler).
     
-    * indefinite (\eg incompressible flow, Helmholtz).
+    * indefinite (e.g. incompressible flow, Helmholtz).
 
 - Performance considerations
    
