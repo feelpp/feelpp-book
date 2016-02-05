@@ -179,28 +179,28 @@ is a finite element space.
 
 |===
 |Feel++ Keyword | Math Object | Description | Rank | Dimension 
-|` id(f)` | $$\{\phi_i\}$$ | test function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
-|` idt(f)`| $$\{\phi_i\}$$ | trial function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
-|` idv(f)`| $$f$$ | evaluation function   | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
-|` grad(f)` | $$\nabla f$$ | gradient of test function | rank$$(f(\overrightarrow{x}))+1$$ | $$m \times n $$ $$p=1$$
-|` gradt(f)`| $$\nabla f$$ | grdient of trial function | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$ $$p=1$$
-|` gradv(f)`| $$\nabla f$$ | evaluation function gradient  | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$ $$p=1$$
-|` div(f)` | $$\nabla\cdot f$$ | divergence of test function | rank$$(f(\overrightarrow{x}))-1$$ | $$1 \times 1 $$
-|` divt(f)`| $$\nabla\cdot f$$ | divergence of trial function | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$
-|` divv(f)`| $$\nabla\cdot f$$ | evaluation function divergence  | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$
-|` curl(f)` | $$\nabla\times f$$ | curl of test function |1| $$n \times 1 $$ $$m=n$$
-|` curlt(f)`| $$\nabla\times f$$ | curl of trial function |1 |$$n \times 1 $$ $$m=n$$
-|` curlv(f)`| $$\nabla\times f$$ | evaluation function curl  |1 |$$n \times 1 $$ $$m=n$$
-|` hess(f)`| $$\nabla^2 f$$ | hessian of test function  |2 |$$n \times n $$ $$m=p=1$$
-|` dn(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of test function  |0 |$$1 \times 1 $$ $$m=p=1$$
-|` dn(f)`| $$\nabla f \  \overrightarrow{N}$$ | normal derivative of test function  |1 |$$m \times 1 $$ $$p=1$$
-|` dnt(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of trial function  |0 |$$1 \times1 $$ $$m=p=1$$
-|` dnt(f)`| $$\nabla f \ \overrightarrow{N}$$ | normal derivative of trial function |1 |$$m \times 1 $$ $$p=1$$
-|` dnv(f)`| $$\nabla f \cdot \ \overrightarrow{N}$$ | evaluation of normal derivative |0 |$$1 \times 1 $$ $$m=p=1$$
-|` dnv(f)`| $$\nabla f \ \overrightarrow{N}$$ | evaluation of normal derivative |1 |$$m \times 1 $$ $$p=1$$
-|` dx(f)`| $$\nabla f \cdot \overrightarrow{i}$$ | derivative of test function in $$x$$  |0 |$$1 \times 1 $$ $$m=p=1$$
-|` dy(f)`| $$\nabla f \cdot \overrightarrow{j}$$ | derivative of test function in $$y$$  |0 |$$1 \times 1 $$ $$m=p=1$$
-|` dz(f)`| $$\nabla f \cdot \overrightarrow{k}$$ | derivative of test function in $$z$$  |0 |$$1 \times 1 $$ $$m=p=1$$
+|`id(f)` | $$\{\phi_i\}$$ | test function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
+|`idt(f)`| $$\{\phi_i\}$$ | trial function | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
+|`idv(f)`| $$f$$ | evaluation function   | rank$$(f(\overrightarrow{x}))$$ | $$m \times p $$
+|`grad(f)` | $$\nabla f$$ | gradient of test function | rank$$(f(\overrightarrow{x}))+1$$ | $$m \times n $$ $$p=1$$
+|`gradt(f)`| $$\nabla f$$ | grdient of trial function | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$ $$p=1$$
+|`gradv(f)`| $$\nabla f$$ | evaluation function gradient  | rank$$(f(\overrightarrow{x}))+1$$ |$$m \times n $$ $$p=1$$
+|`div(f)` | $$\nabla\cdot f$$ | divergence of test function | rank$$(f(\overrightarrow{x}))-1$$ | $$1 \times 1 $$
+|`divt(f)`| $$\nabla\cdot f$$ | divergence of trial function | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$
+|`divv(f)`| $$\nabla\cdot f$$ | evaluation function divergence  | rank$$(f(\overrightarrow{x}))-1$$ |$$1 \times 1 $$
+|`curl(f)` | $$\nabla\times f$$ | curl of test function |1| $$n \times 1 $$ $$m=n$$
+|`curlt(f)`| $$\nabla\times f$$ | curl of trial function |1 |$$n \times 1 $$ $$m=n$$
+|`curlv(f)`| $$\nabla\times f$$ | evaluation function curl  |1 |$$n \times 1 $$ $$m=n$$
+|`hess(f)`| $$\nabla^2 f$$ | hessian of test function  |2 |$$n \times n $$ $$m=p=1$$
+|`dn(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of test function  |0 |$$1 \times 1 $$ $$m=p=1$$
+|`dn(f)`| $$\nabla f \  \overrightarrow{N}$$ | normal derivative of test function  |1 |$$m \times 1 $$ $$p=1$$
+|`dnt(f)`| $$\nabla f \cdot \overrightarrow{N}$$ | normal derivative of trial function  |0 |$$1 \times1 $$ $$m=p=1$$
+|`dnt(f)`| $$\nabla f \ \overrightarrow{N}$$ | normal derivative of trial function |1 |$$m \times 1 $$ $$p=1$$
+|`dnv(f)`| $$\nabla f \cdot \ \overrightarrow{N}$$ | evaluation of normal derivative |0 |$$1 \times 1 $$ $$m=p=1$$
+|`dnv(f)`| $$\nabla f \ \overrightarrow{N}$$ | evaluation of normal derivative |1 |$$m \times 1 $$ $$p=1$$
+|`dx(f)`| $$\nabla f \cdot \overrightarrow{i}$$ | derivative of test function in $$x$$  |0 |$$1 \times 1 $$ $$m=p=1$$
+|`dy(f)`| $$\nabla f \cdot \overrightarrow{j}$$ | derivative of test function in $$y$$  |0 |$$1 \times 1 $$ $$m=p=1$$
+|`dz(f)`| $$\nabla f \cdot \overrightarrow{k}$$ | derivative of test function in $$z$$  |0 |$$1 \times 1 $$ $$m=p=1$$
 |===
 
 ##  Two Valued Operators
