@@ -16,18 +16,23 @@ The eigensolvers differ from each other in the way the subspace is built.
 In Feel++, there is two functions that can be used to solve this type of problems, `eigs` and `veigs`.
 
 Here is an example of how to use `veigs`.
-```cpp
+
+[source,cpp]
+----
 auto Vh = Pch<Order>( mesh );
 auto a = form2( _test=Vh, _trial=Vh );
 // fill a
 auto b = form2( _test=Vh, _trial=Vh );
 // fill b
 auto eigenmodes = veigs( _formA=a, _formB=b );
-```
+----
+
 where `eigenmodes` is a `std::vector<std::pair<value_type, element_type> >` with `value_type` the type of the eigenvalue, and `element_type` the type of the eigenvector, a function of the space `Vh`.
 
 The `eigs` function does not take the bilinear forms but two matrices. Also, the solver used, the type of the problem, the position of the spectrum and the spectral transformation are not read from the options.
-```cpp
+
+[source,cpp]
+----
 auto Vh = Pch<Order>( mesh );
 auto a = form2( _test=Vh, _trial=Vh );
 // fill a
@@ -46,7 +51,8 @@ auto femodes = std::vector<decltype(Vh->element())>( eigenmodes.size(), Vh->elem
 int i = 0;
 for( auto const& mode : modes )
     femodes[i++] = *mode.second.get<2>();
-```
+----
+
 where `eigenmodes` is a `std::map<real_type, eigenmodes_type>` with `real_type` of the magnitude of the eigenvalue. And `eigenmodes_type` is a `boost::tuple<real_type, real_type, vector_ptrtype>` with the first `real_type` representing the real part of the eigenvalue, the second `real_type` the imaginary part and the `vector_ptrtype` is a vector but not an element of a functionspace.
 
 The two functions take a parameter `_nev` that tel how many eigenpair to compute. This can be set from the command line option `--solvereigen.nev`. +
