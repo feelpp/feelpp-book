@@ -21,8 +21,11 @@ make -j 4 feelpp_qs_laplacian
 Feel+\+ uses http://www.cmake.org[`cmake`] as its build system. Check that \cmake is using `gcc4.7` (or a higher version) or `clang++` as C+\+ compiler (you can use the option `CMAKE_CXX_COMPILER=<path>/g++-4.7` where the `path` depends on your OS, it's probably `/usr/bin` or `/opt/local/bin` but you can also change it with the command `ccmake` and press `t` for advanced options). Feel++, using `cmake`, can be built either in source and out of source and different build type:
 
 * minsizerel: minimal size release
+
 * release: release
+
 * debug: debug
+
 * none (default)
 
 In order to install Feel\++ on Unix systems (other than Mac OS X, if you have a Macintosh, please go to link:mac.adoc[Mac]), you have to install many dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
@@ -32,11 +35,17 @@ This is the list of all the libraries you must have installed on your computer, 
 Required packages:
 
 * g\++ >= 5.0 or clang >= 3.4 for C++14 compatibility 
+
 * MPI: openmpi (preferred) or mpich
+
 * Boost >= 1.55 and <= 1.59
+
 * Petsc >= 3.2 and <= 3.6.x
+
 * CMake >= 2.8.7
+
 * Gmsh >= 2.8.3 (can be found at http://www.geuz.org/gmsh[http://www.geuz.org/gmsh])
+
 * Libxml2
 
 > **Warning** if you use clang (>= 3.4) and the standard C\++ library from GCC, you have to use at least the version from g++ 4.9.
@@ -44,11 +53,15 @@ Required packages:
 Optional packages:
 
 * Superlu
+
 * Suitesparse (umfpack)
+
 * Metis: scotch with the metis interface (preferred), metis (non-free)
+
 * Google perftools
-* Paraview, this is not stricly required to run Feel++ programs but it is somehow
-  necessary for visualization. (Can be found at http://www.paraview.org[http://www.paraview.org])
+
+* Paraview, this is not stricly required to run Feel++ programs but it is somehow necessary for visualization. (Can be found at http://www.paraview.org[http://www.paraview.org])
+
 * Python (2.5 or later) for the validation tools
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can jump to link:#Compiling[Compiling].
