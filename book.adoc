@@ -15,7 +15,7 @@ It is organized as follows:
 
   - link:QuickReference/README.adoc[Quick reference] which describes the various components of Feel++ applications.
 
-#  Contributors
+==  Contributors
 
 This book is the result of many contributions and in particular from
 
@@ -33,7 +33,7 @@ This book is the result of many contributions and in particular from
  
  - Jean-Baptiste Wahl
 
-# License
+== License
 
 This book is  licensed under LGPL 2.1.
 
