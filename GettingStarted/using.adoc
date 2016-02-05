@@ -74,7 +74,7 @@ To do so, you must add the following option `-DFEELPP_ENABLE_RESEARCH_<directory
 
 Then you can proceed by going to your project directory in the build directory and type the `make` command.
 
-==== Using an installation of Feel++ 
+=== Using an installation of Feel++ 
 
 If you already installed Feel++ either through your package manager or with a manual installation, then you can directly compile your project.
 
