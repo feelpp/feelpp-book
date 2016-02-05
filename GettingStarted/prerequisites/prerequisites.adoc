@@ -3,13 +3,13 @@ Prerequisites
 
 In order to use Feel++, a set of tools are required. In the following, we will briefly present them _via_ a simple project that performs basic arithmetic operations.
 
-## Dummy project
+== Dummy project
 
 The aim of this project is to sum, subtract, divide and multiply two numbers given _via_ the command line using a C++ class.   
 
-**The project files are :**
+=== The project files are :
 
-### main.cpp   
+=== main.cpp   
 
 [source,c++]
 ----
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
   return 0;
 ----
 
-### operation.cpp
+=== operation.cpp
 
 [source,c++]
 ----
@@ -139,7 +139,7 @@ double operation::division( )
 }
 ----
 
-### operation.h
+=== operation.h
 
 [source,c++]
 ----
