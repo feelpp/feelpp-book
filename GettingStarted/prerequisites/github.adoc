@@ -1,4 +1,4 @@
-## GIT
+== GIT
 
 Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
 desktop. The basic commands to get started with git are: 
