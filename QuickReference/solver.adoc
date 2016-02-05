@@ -56,37 +56,43 @@ Note that the product $$P^{-1}A$$ or $$A P^{-1}$$ is never assembled.
 Let us now describe some  properties of preconditioners
 
   - $$P^{-1}$$ is dense, $$P$$ is often not available and is not needed
+  
   - $$A$$ is rarely used by $$\mathcal{P}$$, but $$A_p = A$$ is common
+  
   - $$A_p$$ is often a sparse matrix, the \e preconditioning  \e matrix
   
 Here are some numerical methods to solve the system $$A x = b$$
+
   - **Matrix-based**: Jacobi, Gauss-Seidel, SOR, ILU(k), LU
+ 
   - **Parallel**: Block-Jacobi, Schwarz, Multigrid, FETI-DP, BDDC
+ 
   - **Indefinite**: Schur-complement, Domain Decomposition, Multigrid
 
-More details and strategies are available in the [Preconditioner section](preconditioner.md).
+More details and strategies are available in the link:preconditioner.adoc[Preconditioner section].
 
 # Principles 
 
-  Feel++ abstracts the PETSc library and provides a subset (sufficient in most
-  cases) to the PETSc features. It interfaces with the following PETSc
-  libraries: `Mat` , `Vec` , `KSP` , `PC` , `SNES.` 
+Feel++ abstracts the PETSc library and provides a subset (sufficient in most cases) to the PETSc features. It interfaces with the following PETSc libraries: `Mat` , `Vec` , `KSP` , `PC` , `SNES.` 
+ 
   - `Vec`  Vector handling library
+  
   - `Mat`  Matrix handling library
+  
   - `KSP`  Krylov SubSpace library implements various iterative solvers
+  
   - `PC`  Preconditioner library implements various  preconditioning strategies
+  
   - `SNES`  Nonlinear solver library implements various  nonlinear solve strategies
 
 All linear algebra are encapsulated within backends using the command line option `--backend=<backend>` or config file option `backend=<backend>` which provide interface to several libraries
 
-
-| Library | Format  | Backend |
-|---------|---------|---------|
-| PETSc   | sparse  | `petsc` |
-| Eigen   | sparse  | `eigen` |
-| Eigen   | dense   | `eigen_dense` |
-
-
+|===
+| Library | Format  | Backend 
+| PETSc   | sparse  | `petsc` 
+| Eigen   | sparse  | `eigen` 
+| Eigen   | dense   | `eigen_dense` 
+|===
 
 The default `backend` is `petsc.` 
 
@@ -96,19 +102,22 @@ The default `backend` is `petsc.`
 
 We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
-$$-\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
-u = g \mbox{ on } \partial \Omega $$
+$$
+-\nabla \cdot (k \nabla u) = f \mbox{ in } \Omega \subset \mathbb{R}^{2},\\
+u = g \mbox{ on } \partial \Omega
+$$
 
 Monitoring KSP solvers
 
-```cpp
+[source,sh]
+----
 feelpp_qs_laplacian --ksp-monitor=true
-```
+----
 
 Viewing KSP solvers
 
-
-```sh
+[source,sh]
+----
 shell> mpirun -np 2 feelpp_qs_laplacian --ksp-monitor=1  --ksp-view=1
   0 KSP Residual norm 8.953261456448e-01
   1 KSP Residual norm 7.204431786960e-16
@@ -132,32 +141,36 @@ PC Object: 2 MPI processes
     total: nonzeros=5727, allocated nonzeros=5727
     total number of mallocs used during MatSetValues calls =0
       not using I-node (on process 0) routines
-  ```
+----
 
 ### Solvers and preconditioners
 
 ## Stokes
 
-  We now turn to the quickstart Stokes example, recall that we wish to, given a
-  domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
+We now turn to the quickstart Stokes example, recall that we wish to, given a domain $$\Omega$$, find $$(\mathbf{u},p) $$ such that
 
-  $$
+$$
   -\Delta \mathbf{u} + \nabla p = \mathbf{ f} \mbox{ in } \Omega,\\
   \nabla \cdot \mathbf{u} =    0 \mbox{ in } \Omega,\\
   \mathbf{u} = \mathbf{g} \mbox{ on } \partial \Omega
-  $$
+$$
 
- This problem is indefinite. Possible solution strategies are
+This problem is indefinite. Possible solution strategies are
+
  - Uzawa, 
+ 
  - penalty(techniques from optimisation), 
+ 
  - augmented lagrangian approach (Glowinski,Le Tallec)
 
 **Note** that The Inf-sup condition must be satisfied. In particular for a multigrid strategy, the smoother needs to preserve it.
 
 ### General approach for saddle point problems
 
- The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have :
-$$M =   \begin{pmatrix}
+The Krylov subspace solvers for indefinite problems are MINRES, GMRES. As to preconditioning, we look first at the saddle point matrix $$M$$ and its block factorization $$M = LDL^T$$, indeed we have :
+
+$$
+M =   \begin{pmatrix}
           A & B \\
           B^T & 0
         \end{pmatrix}
@@ -195,8 +208,8 @@ P_3 =
 0 & \tilde{S}
 \end{pmatrix}
 $$
-where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1}
-    \approx A^{-1}$$
+
+where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1} \approx A^{-1}$$
 
 # Options
 
