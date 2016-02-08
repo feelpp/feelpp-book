@@ -1,6 +1,6 @@
 Models
 ======
 
- * link:Solid/README.adoc[Solid model]
+ * link:Solid/README.adoc[Solid models]
  
- * link:Fluid/README.adoc[Fluid model]
+ * link:Fluid/README.adoc[Fluid models]
