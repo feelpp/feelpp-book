@@ -36,7 +36,7 @@ Optional parameters:
 | ``` GEOMAP_01``` | Order 1 approximation (same of the mesh) 
 |===
 
-*Example:*
+== Example
 
 From `doc/manual/tutorial/dar.cpp`
 
