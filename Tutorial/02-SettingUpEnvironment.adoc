@@ -25,7 +25,7 @@ We initialize the environment variables through the Feel++ `Environment` class.
 
 [source,c++]
 ----
-include::code/02-environment.cfg[]
+{% include "code/02-environment.cfg" %}
 ----
 
 == Adding options
