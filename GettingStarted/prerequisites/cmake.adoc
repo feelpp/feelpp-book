@@ -1,4 +1,9 @@
 == CMAKE
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 CMake is a tool that helps simplify the build process for development projects across different platforms. CMake automates the generation of buildsystems such as _**Makefiles**_ and Visual Studio project files.
 
