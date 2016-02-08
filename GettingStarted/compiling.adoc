@@ -1,6 +1,10 @@
 Compiling Feel++ from sources
 =============================
+:toc:
+:toc-placement: macro
+:toclevels: 1
 
+toc::[]
 
 == Quick start
 
