@@ -1,6 +1,9 @@
 = Bilinear and Linears Forms
-:source-highlighter: pygments
 :toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 We consider in this section bilinear and linear forms
 $$a: X_h \times X_h \rightarrow \mathbb{R}$$
