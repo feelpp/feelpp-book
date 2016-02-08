@@ -1,5 +1,10 @@
 Feel++ on Linux
 ===============
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Debian
 
