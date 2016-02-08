@@ -1,5 +1,9 @@
 = Solving a linear system
 :toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 The configuration files `.cfg` allow for a wide range of options to solve a linear or non-linear system.
 
