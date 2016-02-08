@@ -17,7 +17,7 @@ Instead of defining an expression from a string, you can use
 
 [source,c++]
 ----
-include::code/05-myexporter.cpp[]
+{% include "code/05-myexporter.cpp" %}
 ----
 
 The list of the Feel++ Keyword is link:../QuickReference/keywords.md[here].
@@ -28,5 +28,5 @@ One other method to define function is described here.
 
 [source,c++]
 ----
-include::code/myfunctor.cpp[]
+{% include "code/myfunctor.cpp" %}
 ----
