@@ -1,4 +1,9 @@
 = Saving and loading functions on disk
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Saving functions on disk
 
