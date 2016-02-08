@@ -1,4 +1,9 @@
 = Environment
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  link:environment.adoc[Environment].
 
