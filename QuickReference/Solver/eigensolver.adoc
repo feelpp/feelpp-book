@@ -1,4 +1,9 @@
 = Eigen Problem
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problem. It comes with many solvers for both standard and generalized problems, Hermitian or not.
 
