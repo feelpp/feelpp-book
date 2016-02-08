@@ -77,7 +77,7 @@ The whole code example :
 
 [source,cpp]
 ----  
-{% include: "code/09-mybackend.cpp" %}
+{% include "code/09-mybackend.cpp" %}
 ----  
 
 === Config file
