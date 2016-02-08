@@ -1,4 +1,9 @@
 = Mesh iterators 
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 Feel++ mesh data structure allows to iterate over its entities: elements, faces, edges and points.
 
