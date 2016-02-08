@@ -68,7 +68,7 @@ One of the important backend option is to be able to monitor the residuals and i
 
 - Finally you can create a named backend:   
 ----  
-** marker_hm **
+**marker_hm**
 ----  
 
 The whole code example :   
