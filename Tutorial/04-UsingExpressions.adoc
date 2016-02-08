@@ -1,5 +1,10 @@
 Defining and using expressions
 ==============================
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 The next step is to construct a function space over the mesh. 
 
