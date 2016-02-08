@@ -73,11 +73,11 @@ The whole code example :
 === Code
 
 ----  
-include::code/09-mybackend.cpp[]
+{% include: "code/09-mybackend.cpp" %}
 ----  
 
 === Config file
 
 ----  
-include::code/09-mybackend.cfg[]
+{% include "code/09-mybackend.cfg" %}
 ----  
