@@ -1,4 +1,4 @@
-# Building Feel++
+= Building Feel++
 
 In this section, we will explain how to download and build Feel++.
 
