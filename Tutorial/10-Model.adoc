@@ -16,11 +16,17 @@ problems. Each of theses problems will have a particular environment, but the eq
 A model is defined by :
 
 - a Name
+
 - a Description
+
 - a Model
+
 - Parameters
+
 - Materials
+
 - Boundary Conditions
+
 - Post Processing
 
 === Parameters
