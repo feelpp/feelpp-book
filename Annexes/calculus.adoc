@@ -1,35 +1,30 @@
 = Calculus
-:toc: right
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 == Green Formula
 
 Let $$\Omega$$ be a non-empty open of $$\mathbb{R}^d$$, denote  $$\partial\Omega$$ its boundary. Denote $$\mathbf{n}$$ the local normal to $$\partial\Omega$$.
 
 We have the following properties called Green formulas which are simply special cases of integration by parts. Let $$\mathbf{e}_k$$ is the unit vector in the direction $$x_k$$, $$u,v$$ be scalar fields and $$\mathbf{E}$$ be a vector field.
 
-
-
 $$
 \int_\Omega \frac{\partial u}{\partial x_k}\; v\; dx = - \int_\Omega u \; \frac{\partial v}{\partial x_k} \; dx + \int_{\partial \Omega} u\, v \; (\mathbf{e}_k \cdot \mathbf{n})\; ds
 $$
-
-
 
 $$
 \int_\Omega \Delta u \; v\; dx = - \int_\Omega \nabla u \cdot \nabla v \; dx + \int_{\partial \Omega} \frac{\partial u}{\partial n}\, v \; ds
 $$
 
-
 $$
 \int_\Omega u \; \nabla \cdot  \mathbf{E} \; dx = - \int_\Omega \nabla u \cdot \mathbf{E} \; dx + \int_{\partial \Omega}  u \; (\mathbf{E} \cdot \mathbf{n})\; ds
 $$
 
-
 == Change of variables in integrals
 
-
 Let $$\hat{K}$$ and $$K$$ be two open set of $$\mathbb{R}^d$$. Let $$\varphi$$ be a $${\cal C}^1$$-diffeomorphism from $$\hat{K}$$ to $$K$$, i.e. a bijection of class $${\cal C}^1$$ whose reciprocal is also of class $${\cal C}^1$$. Denote  $$(e_1,\ldots,e_d)$$ the canonical basis of $$\mathbb{R}^d$$.  
-
 
 We have
 
@@ -76,6 +71,7 @@ $$
 $$
 
 In the case the transformation $$F$$ is affine, for example
+
 $$
 \left\{
 \begin{array}{lll}
@@ -96,6 +92,7 @@ $$
 $$
 
 The previous calculus becomes
+
 $$
 \begin{aligned}
 \int_K (\nabla u(x))^2\; dx &= 
@@ -116,6 +113,7 @@ $$\mathbf{F}: K \mapsto \mathbb{R}^d$$ and $$\mathbf{\hat{F}}: \hat{K} \mapsto \
 Moreover denote  $$\mathbf{n}$$ the local outward normal to $$\Omega$$ and $$\mathbf{n}$$ the local outward normal to $$\hat{\Omega}$$.
   
 we have the following relations
+
 $$ 
 \begin{aligned}
 \int_{K} \ f\ dx\ &= \int_{\hat{K}} f( \chi^e(\xi) ) J^e( \xi )\ d \xi \ =\ \int_{\hat{K}} \hat{f}(\xi) J^e( \xi )\ d \xi\\

@@ -1,4 +1,9 @@
 = Solid Mechanics Models
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Properties
 
