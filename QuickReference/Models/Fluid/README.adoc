@@ -40,7 +40,7 @@ option: `mechanicalproperties.compressible.volumic_law`
 }
 ----
 
-where `rho` the density in $$kg\cdot m^{-3}$$ .
+where `rho` the density in $$kg\cdot m^{-3}$$ and `mu` the dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
 
 == Boundary Conditions
 
