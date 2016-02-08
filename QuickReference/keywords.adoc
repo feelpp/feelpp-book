@@ -14,7 +14,7 @@ with $$n=1,2,3, m=1,2,3, p=1,2,3$$.
 
 We denote $$\Omega^e$$ current mesh element.
 
-The genesis of the language can be found in \cite prudhomme05:_domain_specif_embed_languag_c and an update on Feel++ is available in \cite PRUDHOMME:2012:HAL-00662868:3.
+The genesis of the language can be found in <<Prud'homme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
 
 == Points
 
@@ -267,4 +267,8 @@ todo: define transformation
 |Feel++ Keyword | Math Object | Description 
 |`msi(f)`       | $$T(f)$$    | the transformation from the coarse to fine level 
 |===
+
+Bibliography :
+
+- [[[Prud'homme]]]] Christophe Prud'homme, _A domain specific embedded language in C++ for automatic differentiation, projection, integration and variational formulations_, Scientific Programming, 2006.
 
