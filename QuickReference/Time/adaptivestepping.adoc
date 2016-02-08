@@ -5,7 +5,6 @@
 
 toc::[]
 
-
 The following strategy, proposed in <<kay>>, can be adapted to any first order in time PDE. We focus here on the Convection-Diffusion equation and the Navier-Stokes equations to illustrate the scheme.
 
 The strategy is 2nd order : it is based on the Crank-Nicolson (CN) implicit scheme coupled with the Adam-Bashforth order 2 (AB2) explicit scheme to adapt time steps. The particularity is that the scheme works with the discrete rate of change of the field of interest rather than the field itself in order to get a more accurate/stable and adaptive scheme, see <<kay>>.
