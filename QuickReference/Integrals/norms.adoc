@@ -4,7 +4,8 @@
 :toclevels: 2
 
 toc::[]
-== $$d$$
+
+== $$L^2$$
 
 Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
 
