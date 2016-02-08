@@ -1,5 +1,9 @@
 = Interpolation
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 
 Feel++ has a very powerful interpolation framework which allows to:
 
