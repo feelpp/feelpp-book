@@ -1,3 +1,8 @@
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 == GIT
 
 Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
