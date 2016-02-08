@@ -1,5 +1,10 @@
 Loading a Mesh 
 ==============
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 The next step is to load a mesh.
 
