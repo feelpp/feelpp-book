@@ -7,22 +7,17 @@ toc::[]
 
 == Properties
 
-When materials are closed to incompressibility formulation in displacement/pressure are available.
 
 .Table of Models for `model` option
 |===
 | Model | Name 
 
-| Linear Elasticity 
-| `Elasticity`
-
-| Hyper Elasticity 
-| `Hyper-Elasticity`
+| Navier-Stokes 
+| `Navier-Stokes`
 
 |===
 
 
-option: `mechanicalproperties.compressible.volumic_law`
 
 == Materials
 
@@ -77,25 +72,8 @@ The condition types are explain in the two following tables.
 | scalar, vectorial
 | "Neumann_scalar" or "Neumann_vectorial"
 
-| Pressure follower ,
-| Nonlinear boundary condition set in deformed domain
-| TODO
-
-| Robin 
-| TODO
-| TODO
-
 |===
 
-.Volumic forces
-|===
-| Name | Options | Type
-
-| Expression
-| Vectorial
-| "VolumicForces"
-
-|===
 
 == Post Process
 
