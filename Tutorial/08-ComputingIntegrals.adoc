@@ -101,14 +101,14 @@ The complete code reads as follows :
 
 [source,sh]
 ----
-include::code/08-myintegrals.cpp[]
+{% include "code/08-myintegrals.cpp" %}
 ----
 
 === Config file
 
 [source,sh]
 ----
-include::code/08-myintegrals.cfg[]
+{% include "code/08-myintegrals.cfg" %}
 ----
 
 
