@@ -1,5 +1,10 @@
 Download Feel++ sources
 =======================
+:toc:
+:toc-placement: macro
+:toclevels: 1
+
+toc::[]
 
 == Getting the source via an archive
 
