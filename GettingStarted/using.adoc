@@ -1,5 +1,10 @@
 Using Feel++
 ============
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Step 1 : Configure your project with Feel++
 
