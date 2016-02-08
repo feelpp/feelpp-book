@@ -1,6 +1,9 @@
 = Calculus
-:toc: right
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 == Green Formula
 
 Let $$\Omega$$ be a non-empty open of $$\mathbb{R}^d$$, denote  $$\partial\Omega$$ its boundary. Denote $$\mathbf{n}$$ the local normal to $$\partial\Omega$$.
