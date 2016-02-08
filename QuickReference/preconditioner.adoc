@@ -1,5 +1,10 @@
 Preconditioner strategies
 =========================
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Relaxation
 
