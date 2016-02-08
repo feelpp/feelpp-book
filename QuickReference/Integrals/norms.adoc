@@ -5,8 +5,6 @@
 
 toc::[]
 
-== $$L^2$$ norm
-
 Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
 
 $$
