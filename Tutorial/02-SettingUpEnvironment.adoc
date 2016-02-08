@@ -1,6 +1,10 @@
 Setting up the Feel++ Environment
 =================================
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 
 == Minimal Example
 
