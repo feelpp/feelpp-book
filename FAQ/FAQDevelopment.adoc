@@ -1,6 +1,10 @@
 Development FAQ
 ===============
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 
 == What does `_rebuild=true` do in `backend()` ?
 
