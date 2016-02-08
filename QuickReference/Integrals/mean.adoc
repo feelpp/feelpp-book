@@ -1,4 +1,9 @@
 = Mean value of a function
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 Let $$f$$ a bounded function on domain $$\Omega$$. You can evaluate the mean value of a function thanks to the mean() function :
 
@@ -6,7 +11,7 @@ $$
 \bar{f}=\frac{1}{|\Omega|}\int_\Omega f=\frac{1}{\int_\Omega 1}\int_\Omega f 
 $$
 
-**Interface:**
+== Interface
 
 [source,cpp]
 ----
