@@ -1,5 +1,10 @@
 Computing integrals over mesh 
 =============================
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 The next step is to compute integrals over the mesh. 
 
