@@ -1,8 +1,13 @@
 = Integrals
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 Feel++ provide the integrate() function to define integral expressions which can be used to compute integrals, define linear and bi-linear forms.
 
-**Interface**
+== Interface
 
 ----
   integrate( _range, _expr, _quad, _geomap );
@@ -73,7 +78,7 @@ From `doc/manual/laplacian/laplacian.cpp`
                 _expr = nu*gradg*vf::N()*id( v ) );
 ----
 
-## Computing my first Integrals
+== Computing my first Integrals
 This part explains how to integrate on a mesh with Feel++ (source `doc/manual/tutorial/myintegrals.cpp` ).
 
 Let's consider the domain $$\Omega=[0,1]^d$$ and associated meshes. Here, we want to integrate the following function
