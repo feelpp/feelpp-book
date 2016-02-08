@@ -1,4 +1,9 @@
 = Algebra Backends
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 Non-Linear algebra backends are crucial components of Feel{plus}{plus}. They provide a uniform interface between Feel{plus}{plus} data structures and underlying the linear algebra libraries used by Feel++.
 
