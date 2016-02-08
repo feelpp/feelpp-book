@@ -1,5 +1,10 @@
 Spaces and elements
 ===================
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 You've learned how to discretize the space you want to compute on.
 You now have to learn how to define and use function spaces and elements of functions spaces.
