@@ -1,5 +1,9 @@
 = Post-Processing and Visualization
 :toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
 
 == Introduction
 
