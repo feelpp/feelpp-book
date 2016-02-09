@@ -12,6 +12,7 @@ The following table describes free-functions that allow to define mesh region ov
 > **Note:** MeshType can be a pointer, a shared_pointer or a reference to a mesh type.
 
 For example :
+
 ----
 auto mesh = loadMesh( _mesh=Mesh<Simplex<2>>);
 auto r1 = elements(mesh); // OK

@@ -11,7 +11,7 @@ and
 $$\ell: X_h \rightarrow \mathbb{R}$$.
 
 
-We suppose in this section that you know how to define your link:msh.adoc[Mesh] and your link:space.adoc[function spaces]. You may need integration tools too, link:integrals.adoc[see  Integrals].
+We suppose in this section that you know how to define your link:mesh.adoc[Mesh] and your link:spaces.adoc[function spaces]. You may need integration tools too, link:integrals.adoc[see  Integrals].
 
 There are Feel++ tools you need to create linear and bilinear forms in order to solve variational formulation.
 

@@ -9,9 +9,9 @@ The prerequisites are
 
 Here are the steps through function spaces:
 
-* link:Spaces/notations.md[Defining Notations]
+* link:Spaces/notations.adoc[Defining Notations]
 
-* link:Spaces/functionspace.md[Using Function Space]
+* link:Spaces/functionspace.adoc[Using Function Space]
 
 * link:Spaces/interpolation.adoc[Using Interpolation]
 

@@ -39,12 +39,14 @@ Each of that options can be retrieved via the `\c --help-lib` argument in the co
 You may need to manage more than one backend in an application: you have different systems to solve and you want to keep some already computed objects such as preconditioners.
 
 - The default backend is in fact an unnamed backend: in order to
-distinguish between backend you have to name them. for example   
+distinguish between backend you have to name them. For example   
+
 ----   
 **marker_opt**
 ----
 
 - After that, you create the backend object:   
+
 ----  
 **marker_obj**
 ----  
@@ -52,6 +54,7 @@ distinguish between backend you have to name them. for example
 Be careful, the backend's name has to match the name you gave at the options step.
 
 - Then, you load meshes, creates spaces etc. At solve time, or you solve with the default backend:   
+
 ----  
 **marker_default**
 ----  
@@ -65,19 +68,21 @@ One of the important backend option is to be able to monitor the residuals and i
 
 - Finally you can create a named backend:   
 ----  
-** marker_hm **
+**marker_hm**
 ----  
 
 The whole code example :   
 
 === Code
 
+[source,cpp]
 ----  
-include::code/09-mybackend.cpp[]
+{% include "code/09-mybackend.cpp" %}
 ----  
 
 === Config file
 
+[source,cfg]
 ----  
-include::code/09-mybackend.cfg[]
+{% include "code/09-mybackend.cfg" %}
 ----  

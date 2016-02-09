@@ -64,19 +64,13 @@ We would like to visualize the function $$u=\sin(\pi x)$$ over
 $$\Omega= \{ (x,y) \in \mathbb{R}^2 | x^2 + y^2 < 1 \} $$
 $$\Omega$$ is approximated by $$\Omega_h$$.
 
-To define $$\Omega$$ the code reads mesh
+To define $$\Omega$$ and $$u$$ the code reads mesh
 
 [source,cpp,indent=0]
 ----
-include:../Tutorial/code/myexporter.cpp[]
+{% include "/Tutorial/code/05-myexporter.cpp" %}
 ----
 
-and $$u$$ :   
-
-[source,cpp,indent=0]
-----
-include:../Tutorial/code/myexporter.cpp[]
-----
 
 We start with an `Exporter`  object that allows to visualize the $$P_1$$ interpolant of $$u$$ over $$\Omega$$.
 

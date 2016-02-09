@@ -5,7 +5,7 @@
 
 toc::[]
 
-== $$L^2$$ norm
+== $$L^2$$ norms
 
 Let $$f \in L^2(\Omega)$$ you can evaluate the $$L^2$$ norm using the normL2() function:
 
@@ -57,7 +57,7 @@ From `doc/manual/stokes/stokes.cpp`
 
 [source,cpp]
 ----
-include::code/stokes.cpp[norml2]
+{% include "../../Tutorial/code/mystokes.cpp" %}
 ----
 
 ==  $$H^1$$ norm

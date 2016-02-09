@@ -38,5 +38,5 @@ From `doc/manual/stokes/stokes.cpp`
 
 [source,cpp]
 ----
-include::code/stokes.cpp[]
+{% include "../../Tutorial/code/mystokes.cpp" %}
 ----
