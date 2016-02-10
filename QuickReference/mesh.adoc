@@ -213,7 +213,7 @@ Optional Parameters:
 * `_physical_are_elementary_regions`  to load specific meshes formats. 
    - Default = `false`
 
-The file you want to load has to be in an appropriate repository. See link: LoadMesh.
+The file you want to load has to be in an appropriate repository. See link:Tutorial/03-LoadingMesh.adoc[LoadMesh].
 
 **Examples:**
 
@@ -257,25 +257,25 @@ Required Parameters:
 Optional Parameters:
 
 * `_h`  characteristic size. 
-   - Default = `0.1.`
+   - Default = `0.1`
 
 * `_order`  order. 
-   - Default = `1.`
+   - Default = `1`
 
 * `_parametricnodes`  
-   - Default = `0.`
+   - Default = `0`
 
 * `_refine`  optionally refine with \p refine levels the mesh.
-   - Default =`0.`
+   - Default =`0`
 
 * `_update`  update the mesh data structure (build internal faces and edges). 
-   - Default =`true.`
+   - Default =`true`
 
 * `_force_rebuild`  rebuild mesh if already exists.
-   - Default = `false.`
+   - Default = `false`
 
 * `_physical_are_elementary_regions`  to load specific meshes formats. 
-   - Default = `false.`
+   - Default = `false`
 
 To generate your mesh you need a description parameter. This one can be create by one the two following function.
 
@@ -308,7 +308,7 @@ Optional Parameters:
 * `_files_path`  path to the file. 
    - Default = `localGeoRepository().`
 
-The file you want to load has to be in an appropriate repository. See \ref LoadMesh.
+The file you want to load has to be in an appropriate repository. See link:Tutorial/03-LoadingMesh.adoc[LoadMesh].
 
 *Example:*
 
