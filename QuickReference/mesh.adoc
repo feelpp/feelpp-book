@@ -105,7 +105,7 @@ Optional Parameters:
 
 * `_geo_variables_list`  (string): Set a list of variable that may be defined in a `.geo` file
    
-   - Default: \c ""
+   - Default: ""
    
    - Option: `gmsh.geo`-variables-list
 
@@ -117,7 +117,7 @@ Optional Parameters:
 
 * `_depends`  (string): list of files (separated by , or ;) on which `gmsh.filename` depends
    
-   - Default: \c ""
+   - Default: ""
    
    - Option: `gmsh.depends`
 
@@ -137,8 +137,7 @@ Optional Parameters:
    
    - Option: gmsh.physical_are_elementary_regions
 
-* `_straighten`  (boolean): in case of curvilinear elements, straighten the elements
-   which are not touching with a face the boundary of the domain
+* `_straighten`  (boolean): in case of curvilinear elements, straighten the elements which are not touching with a face the boundary of the domain
    
    - Default: `true`
    
@@ -155,16 +154,16 @@ Feel++ looks for `.geo` and `.msh` files in the following directories (in this o
 
 * current path
 
-* paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
+* paths that went through `changeRepository()`, it means that we look for example into the path from which the executable was run
 
-* localGeoRepository() which is usually \c "$HOME/feel/geo"  (cf: \ref Environment )
+* `localGeoRepository()` which is usually "$HOME/feel/geo"  (cf link:environment.adoc[Environment] )
 
-* systemGeoRepository() which is usually \c "$FEELPP_DIR/share/feel/geo" (cf: \ref Environment)
+* `systemGeoRepository()` which is usually "$FEELPP_DIR/share/feel/geo" (cf link:environment.adoc[Environment])
 
 
 **Examples:**
 
-Load a mesh data structure from the file \c "$HOME/feel/mymesh.msh".
+Load a mesh data structure from the file "$HOME/feel/mymesh.msh".
 
 [source,cpp]
 ----
@@ -206,15 +205,15 @@ Required Parameters:
 
 Optional Parameters:
 
-* `_refine`  optionally refine with \p refine levels the mesh.       - Default =`0.`
+* `_refine`  optionally refine with \p refine levels the mesh.       - Default =`0`
 
 * `_update`  update the mesh data structure (build internal faces and edges). 
-   - Default =`true.`
+   - Default =`true`
 
 * `_physical_are_elementary_regions`  to load specific meshes formats. 
-   - Default = `false.`
+   - Default = `false`
 
-The file you want to load has to be in an appropriate repository. See \ref LoadMesh.
+The file you want to load has to be in an appropriate repository. See link: LoadMesh.
 
 **Examples:**
 
