@@ -13,7 +13,6 @@ After the discretization process, one may have to solve a (non) linear system. F
 We call `Backend` an object that manages the solution strategy to
 solve it. Some explanation are available at link:../QuickReference/solver.adoc[Solver] and link:../QuickReference/preconditioner.adoc[Preconditioner].
 
-
 Feel++ provides a default backend that is mostly hidden to the final user. In many examples, you do not have to take care of the
 backend. You change the backend behavior via the command line or
 config files. For example
