@@ -23,8 +23,8 @@ None of those parameters are required but it is highly recommended to use the mi
 Environment env( _argc=argc, _argv=argv, 
                  _desc=feel_option(),  
                  _about=about(_name="name_of_your_app", 
-                 _author="your_name",
-                 _email="your_email_adress"));
+                              _author="your_name",
+                              _email="your_email_adress"));
 ----
 
 * `_argc` and `_argv` are the arguments of your main function.
