@@ -9,7 +9,7 @@ toc::[]
 
 Function spaces support is provided by the `FunctionSpace` class
 
-The `FunctionSpace`  class
+The `FunctionSpace` class
 
  -  constructs the table of degrees of freedom which maps local (elementwise) degrees of freedom to the global ones with respect to the geometrical entities,
 
