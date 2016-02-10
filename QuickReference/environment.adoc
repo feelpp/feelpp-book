@@ -37,7 +37,7 @@ Environment env( _argc=argc, _argv=argv,
 
 === Adding Options 
 
-`feel_options()`  returns a list of default options used in Feel++.
+`feel_options()` returns a list of default options used in Feel++.
 
 You can create your own list of options  as follows:
 
