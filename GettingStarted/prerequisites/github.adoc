@@ -6,11 +6,9 @@ toc::[]
 
 == GIT
 
-Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
-desktop. The basic commands to get started with git are: 
+Git is the open source distributed version control system that facilitates GitHub activities on your laptop or desktop. The basic commands to get started with git are: 
 
-Clone an existing repository    
-
+Clone an existing repository
 `$ git clone ssh://user@domain.com/repository_name.git`  
 
 Create a new local repository  
@@ -20,10 +18,10 @@ Add a new file
 `$ git add <file>`  
 
 Download changes and directly merge/integrate into HEAD    
-`$ git pull `   
+`$ git pull`   
 
 Publish local changes on a remote   
-`$ git push `   
+`$ git push`   
 
 Click link:http://www.git-tower.com/blog/git-cheat-sheet/[here] for more info about git commands.
 
