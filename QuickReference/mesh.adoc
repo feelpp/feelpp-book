@@ -33,14 +33,14 @@ int main( int argc, char** argv )
 // main
 ----
 
-As always, we initialize the Feel\++ environment (see section  link:[FirstApp] ). The `unitSquare()` will generate a mesh for a square geometry. Feel++ provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file `.geo` and a mesh file `.msh.` We can visualize them in GMSH.
+As always, we initialize the Feel\++ environment (see section  link:[FirstApp] ). The `unitSquare()` will generate a mesh for a square geometry. Feel++ provides several functions to automate the GMSH mesh generation for different topologies. These functions will create a geometry file `.geo` and a mesh file `.msh`. We can visualize them in GMSH.
 
 [source,cpp]
 ----
   gmsh <entity_name>.msh
 ----
 
-Finally we use the `exporter()` (see \ref Exporter) function to export the mesh for post processing. It will create by default a Paraview format file `.sos` and an Ensight format file `.case.`
+Finally we use the `exporter()` (see \ref Exporter) function to export the mesh for post processing. It will create by default a Paraview format file `.sos` and an Ensight format file `.case`.
 
 [source,cpp]
 ----
