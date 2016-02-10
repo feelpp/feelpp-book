@@ -17,7 +17,7 @@ The next step is to construct a function space over the mesh.
 auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );
 ----  
 
-- then we define some expression through the command line of config file: `g`  is a scalar field and `f`  is a vector field  , here is an example how to enter them :
+- then we define some expression through the command line of config file: `g` is a scalar field and `f` is a vector field, here is an example how to enter them :
 
 [source,bash]
 ----
@@ -26,7 +26,7 @@ auto mesh = loadMesh( _mesh=new Mesh<Simplex<2>> );
 
 You can print back the expression to the screen to check that everything is ok. You want to use as expression `a*x+b*y`, you have to define `a` and `b` as option (either in your code, either in the library).   
 
-- then we compute the gradient of `g`  and `f`.   
+- then we compute the gradient of `g` and `f`.   
 
 [source,c++]
 ----
@@ -58,7 +58,7 @@ auto div_f=div(f);
 auto curl_f=curl(f);
 ---- 
 
-- Finally we evaluate these expressions at one point given by the option `x`  and `y`.  
+- Finally we evaluate these expressions at one point given by the option `x` and `y`.  
 
 == Code
 
