@@ -195,7 +195,7 @@ The lookup is as follows:
 
 * look into current path
 
-* look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
+* look into paths that went through `changeRepository()`, it means that we look for example into the path from which the executable was run
 
 If the file has an extension .geo or .msh, try also to
 
