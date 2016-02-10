@@ -96,35 +96,35 @@ We start with an `Exporter`  object that allows to visualize the $$P_1$$ interpo
   
   * Default value: change_coords_only
   
-  * Action: `exporter.geometry`  tells to the exporter if the mesh changes over time steps : no
-  changes(`static)`  coordinates only (`change_coords_only)`  or remeshed (`changes)`
+  * Action: `exporter.geometry`  tells to the exporter if the mesh   changes over time steps : no changes (`static)` coordinates     only (`change_coords_only)`  or remeshed (`changes)`
 
 `exporter.fileset`
 
   * Type: `bool`
   
-  * Values: 0, 1
+  * Values: `0`, `1`
   
-  * Default value: 0
+  * Default value: `0`
   
-  * Action: `exporter.fileset` =0 save one file per timestep per subdomain,  whereas `exporter.fileset` =1 use one file per subdomain to store all time
-  steps. \note This option, `exporter.fileset` =1, reduces tremendously the number of files generated for transient simulations.
+  * Action: `exporter.fileset`=0 save one file per timestep per subdomain,  whereas `exporter.fileset`=1 use one file per subdomain to store all time steps.
+  
+> This option, `exporter.fileset`=1, reduces tremendously the number of files generated for transient simulations.
 
 `exporter.prefix`
 
   * Type: `string`
   
-  * Default Value: <empty string>
+  * Default Value: `<empty string>`
   
   * Action: `exporter.prefix`  defines the prefix to be user by the exporter. It is especially useful when using multiple exporters and avoid name collision.
 
 `exporter.directory`
 
-  * Type: string
+  * Type: `string`
   
   * Default Value: results
   
-  * Action: `exporter.directory`  tells where to export the results to
+  * Action: `exporter.directory` tells where to export the results 
 
 ==== Ensight Gold specific options 
 
