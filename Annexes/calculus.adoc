@@ -46,7 +46,7 @@ $$
 
 
 > **Note** in the finite element method we have often to compute integrals using change of variables of the type
-$$\int_K Hu(x)\; dx$$, where $$H$$ is an operator (gradient, laplacian, ...). You then have to use to be careful when applying the change of variablesI.
+$$\int_K Hu(x)\; dx$$, where $$H$$ is an operator (gradient, laplacian, ...). You then have to use to be careful when applying the change of variables.
 
 $$
 \begin{eqnarray*}
@@ -107,8 +107,7 @@ $$
 === Some change of variable formulas 
 
 Denote $$f: K \mapsto \mathbb{R}$$ and $$\hat{f}: \hat{K} \mapsto \mathbb{R}$$ such that $$\hat{f} = f \circ F$$ and 
-$$\mathbf{F}: K \mapsto \mathbb{R}^d$$ and $$\mathbf{\hat{F}}: \hat{K} \mapsto \mathbb{R}^d$$ such that
-  $$\hat{\mathbf{F}} = \mathbf{F} \circ \chi^e$$.
+$$\mathbf{F}: K \mapsto \mathbb{R}^d$$ and $$\mathbf{\hat{F}}: \hat{K} \mapsto \mathbb{R}^d$$ such that $$\hat{\mathbf{F}} = \mathbf{F} \circ \chi^e$$.
 
 Moreover denote  $$\mathbf{n}$$ the local outward normal to $$\Omega$$ and $$\mathbf{n}$$ the local outward normal to $$\hat{\Omega}$$.
   
