@@ -31,20 +31,19 @@ GitHub is a web-based Git repository hosting service, which offers all of the di
 
 If you are new to github, these are the basic things you need to know to get started with GitHub:
    
- -  Creating a personal account  
- The first step to using GitHub is to set up a personal link:https://help.github.com/articles/signing-up-for-a-new-github-account/[GitHub account]. If you already have an account, visit link:https://github.com/[github.com] and sign in.
+ -  Creating a personal account +
+The first step to using GitHub is to set up a personal link:https://help.github.com/articles/signing-up-for-a-new-github-account/[GitHub account]. If you already have an account, visit link:https://github.com/[github.com] and sign in.
  
  
 
-- Adding files   
+- Adding files +
 Now that we have a Git repo up and running, we need to add some files for it to track. Now remember, git doesn't just automatically track every file in the directory as soon as you put it there. It only tracks the files that you tell it to, a file can be either tracked or untracked. Now since we don't have a commit as soon as we add some files to this folder automatically they are going to come in as untracked files. To add files to a repo, in the command line type: 
-
 [source,sh]
 ----
 git add file_Name
 ----
    
-- Making a commit   
+- Making a commit +
 After we have added some files to our empty Git repo,(we used the Git add Cmd to then stage those files). So, the next step is to go ahead, and do the commit itself. To add a commit message, in the command line, write: 
 
 [source,sh]
@@ -52,7 +51,7 @@ After we have added some files to our empty Git repo,(we used the Git add Cmd to
 git commit -m "write the commit message"
 ----   
 
-- Checking differences   
+- Checking differences +
 Most of the time you're going to want to automatically add all of your modified files for your next commit. But there are times when you might want to check to see what's been changed before you make your commit:
 
 [source,sh]
