@@ -22,7 +22,7 @@ The next step is to compute integrals over the mesh.
 
 - and we print the results to the screen.   
 
-Only the rank 0 process (thanks to `Environment`) isMasterRank() prints to the screen as the result is the same over all mpi processes if the application was run in parallel. Note also that the code actually prints the expression passed by the user through the command line option `functions.g.`
+Only the rank 0 process (thanks to `Environment`) isMasterRank() prints to the screen as the result is the same over all mpi processes if the application was run in parallel. Note also that the code actually prints the expression passed by the user through the command line option `functions.g`.
 
 == Some results
 
