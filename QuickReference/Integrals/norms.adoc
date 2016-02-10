@@ -176,8 +176,8 @@ The normLinf() function returns not only the maximum of the function over a samp
 [source,cpp]
 ----
   auto uMax = normLinf( _range=elements(mesh),
-          _expr=idv(u),
-          _pset=_Q<5>() );
+                        _expr=idv(u),
+                        _pset=_Q<5>() );
   std::cout << "maximum value : " << uMax.value() << std::endl
             <<  "         arg : " << uMax.arg() << std::endl;
 ----
