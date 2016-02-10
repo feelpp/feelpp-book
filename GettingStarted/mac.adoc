@@ -11,9 +11,7 @@ toc::[]
 == Compilers
 
 To make Feel\++ and `cmake` work properly, you first have to install a Xcode for Gcc/clang. If your computer is recent, you can install it with your DVD that came with your machine (not the
-OS DVD, but the applications one). You don't have to install the complete Xcode (you can uncheck iOS SDK for example,
-it's not necessary here and requires a lot of memory). You can also install Xcode through the App Store. Xcode will provide your computer all the basic tools to compile, such as gcc and clang.
-It's the first step, you'll see later how to easily install the necessary tools to build Feel++.
+OS DVD, but the applications one). You don't have to install the complete Xcode (you can uncheck iOS SDK for example, it's not necessary here and requires a lot of memory). You can also install Xcode through the App Store. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It's the first step, you'll see later how to easily install the necessary tools to build Feel++.
 
 === Package management systems
 
@@ -22,24 +20,22 @@ also present in the source tree of Feel+\+. You can find a version using gcc in 
 
 === Homebrew
 
-Homebrew is a free/open source software
-introduced to simplify the installation of other free/open source
-software on the MacOS X ecosystem. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
+Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on the MacOS X ecosystem. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
 
 > **Note**: To install the latest version of Homebrew, simply
-visit their http://brew.sh[website] and follow the
-instructions. Each new package Homebrew installs is built into an
-intermediate place called the Cellar (usually /usr/local/Cellar) and
+visit their http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
 then the packages are symlinked into /usr/local (default).
-
 
 ==== Key commands 
 
 Homebrew base command is `brew`. Here is a list of useful commands to use Homebrew:
 
 * `brew doctor`: Check if the system has any problem with the current installation of brew.
+
 * `brew install mypackage`: This action installs the package mypackage.
+
 * `brew install [--devel|--HEAD] mypackage`: These action respectively installs either the development version or the HEAD version of the package mypackage, if such versions are specified in the Formula file.
+
 * `brew uninstall mypackage`: This action uninstalls the package mypackage.
 
 === Formula 
@@ -173,7 +169,7 @@ In your command-line, the software MacPorts is called by the command `port`. Her
  
  * `sudo port uninstall mypackage`: This action uninstall the port mypackage.
  
- * `port installed`: This action displays all ports installed and their versions, variants and activation status. You can also use the `-v` option to also display the platform and CPU  architecture(s) for which the ports were built, and any variants which were explicitly negated.
+ * `port installed`: This action displays all ports installed and their versions, variants and activation status. You can also use the `-v` option to also display the platform and CPU architecture(s) for which the ports were built, and any variants which were explicitly negated.
  
  * `sudo port upgrade mypackage`: This action updgrades installed ports and their dependencies when a `Portfile` in the repository has been updated. To avoid the upgrade of a port's dependencies, use the option `-n`.
 
@@ -233,9 +229,9 @@ To do that uncomment the following line in the file
 buildmakejobs	0 $\#$ all the cores
 ----
 
-At the end of the `sudo port install feel\++ `, you have all
+At the end of the `sudo port install feel++`, you have all
 dependencies installed. To build all the Makefile, `\cmake` is
-automatically launched but can have some libraries may not be found but they are not mandatory for build Feel++, only the features related to the missing libraries will be missing.
+automatically launched but can have some libraries may not be found but they are not mandatory for build Feel{plus}+, only the features related to the missing libraries will be missing.
 
 ==== Missing ports
 
@@ -253,4 +249,4 @@ file:
 cxx_stdlib  libc++
 ----
 
-This requires MacPorts to be at least on version 2.2.1 for the flag to be recognized and will normally cause all the packages you will install to be recompiled using libc++ instead of libstdc++.
+This requires MacPorts to be at least on version 2.2.1 for the flag to be recognized and will normally cause all the packages you will install to be recompiled using libc\++ instead of libstdc++.
