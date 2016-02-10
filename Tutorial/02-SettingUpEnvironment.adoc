@@ -16,7 +16,7 @@ Feel++ objects.
 We initialize the environment variables through the Feel++ `Environment` class.
 
 === Source code
- [source,c++]
+[source,c++]
 ----
 {% include "code/02-environment.cpp" %}
 ----
