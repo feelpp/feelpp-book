@@ -44,7 +44,7 @@ int_Omega x = 0.5
 int_{boundary of Omega} x = 2
 ----
 
-Recall that \c : is a separator between the expression and each symbol composing it.
+Recall that : is a separator between the expression and each symbol composing it.
 
 Now we try $$g=x y$$. We need to tell Feel++ what are the symbols associated with the expression: here the symbol is `x`  and `y`  and it works as follows
 
