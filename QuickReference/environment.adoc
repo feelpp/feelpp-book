@@ -201,7 +201,7 @@ If the file has an extension .geo or .msh, try also to
 
 - look into `localGeoRepository()`  which is usually $HOME/feel/geo
 
-- look into `systemGeoRepository()`  which is usually $FEELPP_DIR/share/feel/geo
+- look into `systemGeoRepository()` which is usually $FEELPP_DIR/share/feel/geo
 
 If `filename` is not found, then the empty string is returned.
 
