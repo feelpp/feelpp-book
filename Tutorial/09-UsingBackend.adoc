@@ -8,7 +8,7 @@ toc::[]
 
 == Introduction
 
-After the discretization process, one may have to solve a (non) linear system. Feel++ interfaces with PETSc/SLEPc and Eigen3. Consider this system $$A x = b $$
+After the discretization process, one may have to solve a (non) linear system. Feel++ interfaces with PETSc/SLEPc and Eigen3. Consider this system $$A x = b$$
 
 We call `Backend` an object that manages the solution strategy to
 solve it. Some explanation are available at link:../QuickReference/solver.adoc[Solver] and link:../QuickReference/preconditioner.adoc[Preconditioner].
@@ -32,7 +32,7 @@ If you try to solve a different system $$A_1 y= c$$ (in size) with the same back
 backend(_rebuild=true)->solve(_matrix=A1,_rhs=c,_sol=y);
 ----
 
-Each of that options can be retrieved via the `\c --help-lib` argument in the command line.
+Each of that options can be retrieved via the `--help-lib` argument in the command line.
 
 === Non default Backend
 
