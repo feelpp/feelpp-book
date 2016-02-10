@@ -14,7 +14,7 @@ with $$n=1,2,3, m=1,2,3, p=1,2,3$$.
 
 We denote $$\Omega^e$$ current mesh element.
 
-The genesis of the language can be found in <<Prud'homme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
+The genesis of the language can be found in <<Prudhomme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
 
 == Points
 
@@ -123,7 +123,7 @@ You can of course use all current operators ( + - / * ) and the usual following 
 
 |===
 |Feel++ Keyword | Math Object | Description
-|`abs(expr) `|$$|f(\overrightarrow{x})|$$|element wise absolute value of $$f$$
+|`abs(expr)`|$$|f(\overrightarrow{x})|$$|element wise absolute value of $$f$$
 |`cos(expr)`|$$\cos(f(\overrightarrow{x}))$$|element wise cos value of $$f$$
 |`sin(expr)`|$$\sin(f(\overrightarrow{x}))$$|element wise sin value of $$f$$
 |`tan(expr)`|$$\tan(f(\overrightarrow{x}))$$|element wise tan value of $$f$$
@@ -270,5 +270,5 @@ todo: define transformation
 
 Bibliography :
 
-- [[[Prud'homme]]]] Christophe Prud'homme, _A domain specific embedded language in C++ for automatic differentiation, projection, integration and variational formulations_, Scientific Programming, 2006.
+- [[[Prudhomme]]] Christophe Prud'homme, _A domain specific embedded language in C++ for automatic differentiation, projection, integration and variational formulations_, Scientific Programming, 2006.
 
