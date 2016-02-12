@@ -5,7 +5,7 @@
 
 toc::[]
 
-{% include "git+https://github.com/feelpp/feelpp-benchmarking-book/CFD.git/readme.adoc#_Incompressible_Navier-Stokes_model" %}
+{% include "git+https://github.com/feelpp/feelpp-benchmarking-book/blob/master/CFD.git/readme.adoc" %}
 
 == Properties
 
