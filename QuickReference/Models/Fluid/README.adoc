@@ -5,7 +5,7 @@
 
 toc::[]
 
-{% include "git+https://github.com/feelpp/feelpp-benchmarking-book.git/README.adoc" %}
+{% include "git+https://github.com/feelpp/feelpp-book.git/README.adoc" %}
 
 
 == Properties
