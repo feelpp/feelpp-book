@@ -5,6 +5,33 @@
 
 toc::[]
 
+== Models
+
+=== Incompressible Navier-Stokes model
+
+Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
+
+* momentum conservation equation 
+
+$$
+\rho_{f} \left. \frac{\partial\mathbf{u}_f}{\partial t} \right|_\mathrm{x}
++ \rho_{f} \left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}
+- \nabla_{\mathrm{x}} \cdot \boldsymbol{\sigma}_{f} = \boldsymbol{f}^t_f , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right]
+$$
+
+* mass conservation equation
+
+$$
+\nabla_{\mathrm{x}} \cdot \boldsymbol{u}_{f} = 0                     , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right] 
+$$
+
+We add to them the material constitutive equation :
+
+$$
+\boldsymbol{\sigma}_{f} = -p_f \boldsymbol{I} + \mu_f (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
+$$
+
+
 == Properties
 
 * Linear 
