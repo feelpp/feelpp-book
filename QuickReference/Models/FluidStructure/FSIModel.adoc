@@ -1,14 +1,3 @@
-== Fluid structure model 
-
-To describe and solve our fluid-structure interaction problem, we need to define a model, which regroup structure model and fluid model parts.
-
-We have then in one hand link:../CFD/readme.adoc[the fluid equations], and in the other hand link:../CSM/readme.adoc[the structure equations].
-
-[[img-geometry1]]
-image::FSIModel.png[caption="Figure 1 : ", title="FSI case example", alt="FSI", width="500", align="center"] 
-
-The solution of this model are $$(\mathcal{A}^t, \boldsymbol{u}_f, p_f, \boldsymbol{\eta}_s)$$
-
 == Fluid structure coupling conditions
 
 In order to have a correct fluid-structure model, we need to add to other equations some coupling conditions :
