@@ -54,7 +54,7 @@
    * [Models](QuickReference/Models/README.adoc)
        * [Computation Solid Mechanics](QuickReference/Models/Solid/README.adoc)
        * [Computation Fluid Mechanics](QuickReference/Models/Fluid/README.adoc)
-       * Fluid Structure Interaction 
+       * [Fluid Structure Interaction](QuickReference/Models/FluidStructure/README.adoc)
 * [Frequently Asked Questions](FAQ/README.adoc)
    * [Development](FAQ/FAQDevelopment.adoc)
    * [Runtime](FAQ/FAQExecution.adoc)
