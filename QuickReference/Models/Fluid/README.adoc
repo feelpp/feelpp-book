@@ -5,7 +5,7 @@
 
 toc::[]
 
-{% include "git+https://github.com/feelpp/feelpp-book.git/README.adoc#_Help_and_Support" %}
+{% include "NavierStokes.adoc" %}
 
 
 == Properties
