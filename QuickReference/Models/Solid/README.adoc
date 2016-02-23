@@ -5,6 +5,7 @@
 
 toc::[]
 
+{% include "SaintVenantKirchhoff.adoc" %}
 
 == Properties
 
