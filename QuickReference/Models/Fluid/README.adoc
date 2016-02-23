@@ -7,7 +7,6 @@ toc::[]
 
 {% include "NavierStokes.adoc" %}
 
-
 == Properties
 
 
