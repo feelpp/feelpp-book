@@ -19,7 +19,6 @@ toc::[]
 |===
 
 
-
 == Materials
 
 [source,json]
