@@ -55,11 +55,11 @@
        * [Computation Fluid Mechanics](QuickReference/Models/Fluid/README.adoc)
        * [Computation Solid Mechanics](QuickReference/Models/Solid/README.adoc)
        * [Fluid Structure Interaction](QuickReference/Models/FluidStructure/README.adoc)
+* Applications
 * [Frequently Asked Questions](FAQ/README.adoc)
    * [Development](FAQ/FAQDevelopment.adoc)
    * [Runtime](FAQ/FAQExecution.adoc)
 * [Annexes](Annexes/README.adoc)
    * [Calculus](Annexes/calculus.adoc)
-* Applications
 * [Glossary](GLOSSARY.adoc)
 
