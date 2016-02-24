@@ -57,7 +57,7 @@
        * [Fluid Structure Interaction](QuickReference/Models/FluidStructure/README.adoc)
 * [Applications](Applications/readme.adoc)
    * [Mesh](Applications/Mesh/readme.adoc)
-   * Models
+   * [Models](Applications/Models/readme.adoc)
 * [Frequently Asked Questions](FAQ/README.adoc)
    * [Development](FAQ/FAQDevelopment.adoc)
    * [Runtime](FAQ/FAQExecution.adoc)
