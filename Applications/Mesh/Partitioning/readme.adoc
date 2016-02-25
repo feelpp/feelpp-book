@@ -1,2 +1,3 @@
 # Partitioning
 
+In `feelpp/applications/mesh`, an application, named `feelpp_mesh_partitioner`, can generate a hdf5 file from which a parallel mesh can be loaded.
