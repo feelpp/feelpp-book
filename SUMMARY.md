@@ -57,7 +57,7 @@
        * [Fluid Structure Interaction](QuickReference/Models/FluidStructure/README.adoc)
 * [Applications](Applications/readme.adoc)
    * [Mesh](Applications/Mesh/readme.adoc)
-       * Partitioning
+       * [Partitioning](Applications/Mesh/Partitioning/readme.adoc)
    * [Models](Applications/Models/readme.adoc)
    * [Info](Applications/Info/readme.adoc)
 * [Frequently Asked Questions](FAQ/README.adoc)
