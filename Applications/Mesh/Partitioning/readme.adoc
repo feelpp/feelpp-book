@@ -1,3 +1,16 @@
 # Partitioning
 
 In `feelpp/applications/mesh`, an application, named `feelpp_mesh_partitioner`, can generate a hdf5 file from which a parallel mesh can be loaded.
+
+## Options
+
+The partitioner executable need some options in order to supply our result files.
+
+* dim : the dimension of the mesh
+- default : 3
+
+* shape : the shape of the mesh elements 
+- default : Simplex
+
+* part : the number of partition we want
+- default : 
