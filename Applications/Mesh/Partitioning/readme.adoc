@@ -21,3 +21,5 @@ Some options are also optionnal
 * odir : the output directory 
 
 * ofile : the output file name
+
+## Code 
