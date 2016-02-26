@@ -13,4 +13,11 @@ The partitioner executable need some options in order to supply our result files
 - default : Simplex
 
 * part : the number of partition we want
-- default : 
+
+* ifile : name ( or path ) of the mesh 
+
+Some options are also optionnal 
+
+* odir : the output directory 
+
+* ofile : the output file name
