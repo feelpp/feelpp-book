@@ -58,6 +58,7 @@
 * [Applications](Applications/readme.adoc)
    * [Mesh](Applications/Mesh/readme.adoc)
        * [Partitioning](Applications/Mesh/Partitioning/readme.adoc)
+       * Reading
    * [Info](Applications/Info/readme.adoc)
    * [Models](Applications/Models/readme.adoc)
 * [Frequently Asked Questions](FAQ/README.adoc)
