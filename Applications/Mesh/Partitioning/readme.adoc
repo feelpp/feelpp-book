@@ -24,4 +24,4 @@ Some options are also optionnal
 
 ## Code 
 
-The code will decompose a mesh, given by `ifile` option, into a number of partition equals to `part`. The result of this operation will then be export into two files, one in HDF5 format and the other as a json file. This last one will be the one used by Feel++ to read and retrieve the data. 
+The code will decompose a mesh, given by `ifile` option, into a number of partition equals to `part`. The result of this operation will then be export into two files, one in HDF5 format and the other as a json file. This last one is the one we given to Feel++ to retrieve the data. 
