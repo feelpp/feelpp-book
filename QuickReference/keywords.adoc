@@ -10,11 +10,11 @@ One of Feel{plus}+ assets is it finite element embedded language. The language f
 
 In all following tables we use the notations:
 $$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$$  
-with $$n=1,2,3, m=1,2,3, p=1,2,3$$.
+with $$n=1,2,3$$, $$m=1,2,3$$, $$p=1,2,3$$.
 
 We denote $$\Omega^e$$ current mesh element.
 
-The genesis of the language can be found in <<Prud'homme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
+The genesis of the language can be found in <<Prudhomme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
 
 == Points
 
@@ -24,8 +24,8 @@ The genesis of the language can be found in <<Prud'homme>> paper and an update o
 |Feel++ Keyword | Math Object | Description | Dimension
 |`P()`|$$\overrightarrow{P}$$| $$(P_x, P_y, P_z)^T$$|$$d \times 1$$
 |`Px()`|$$P_x$$|$$x$$ coordinate of $$\overrightarrow{P}$$|$$1 \times 1$$
-|`Py()`|$$P_y$$|$$y$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D)|$$1 \times 1$$
-|`Pz()`|$$P_z$$|$$z$$ coordinate of $$\overrightarrow{P}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
+|`Py()`|$$P_y$$|$$y$$ coordinate of $$\overrightarrow{P}$$ (value is 0 in 1D)|$$1 \times 1$$
+|`Pz()`|$$P_z$$|$$z$$ coordinate of $$\overrightarrow{P}$$  (value is 0 in 1D and 2D)|$$1 \times 1$$
 |===
 
 === Element Barycenter Point:
@@ -35,8 +35,8 @@ The genesis of the language can be found in <<Prud'homme>> paper and an update o
 
 |`C()`|$$\overrightarrow{C}$$| $$(C_x, C_y, C_z)^T$$|$$d \times 1$$
 |`Cx()`|$$C_x$$|$$x$$ coordinate of $$\overrightarrow{C}$$|$$1 \times 1$$
-|`Cy()`|$$C_y$$|$$y$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D)|$$1 \times 1$$
-|`Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
+|`Cy()`|$$C_y$$|$$y$$ coordinate of $$\overrightarrow{C}$$ (value is 0 in 1D)|$$1 \times 1$$
+|`Cz()`|$$C_z$$|$$z$$ coordinate of $$\overrightarrow{C}$$ (value is 0 in 1D and 2D)|$$1 \times 1$$
 |===
 
 === Normal at Current Point:
@@ -45,8 +45,8 @@ The genesis of the language can be found in <<Prud'homme>> paper and an update o
 |Feel++ Keyword | Math Object | Description | Dimension 
 |`N()`|$$\overrightarrow{N}$$| $$(N_x, N_y, N_z)^T$$|$$d \times 1$$
 |`Nx()`|$$N_x$$|$$x$$ coordinate of $$\overrightarrow{N}$$|$$1 \times 1$$
-|`Ny()`|$$N_y$$|$$y$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D)|$$1 \times 1$$
-|`Nz()`|$$N_z$$|$$z$$ coordinate of $$\overrightarrow{N}$$<br>(value is 0 in 1D and 2D)|$$1 \times 1$$
+|`Ny()`|$$N_y$$|$$y$$ coordinate of $$\overrightarrow{N}$$ (value is 0 in 1D)|$$1 \times 1$$
+|`Nz()`|$$N_z$$|$$z$$ coordinate of $$\overrightarrow{N}$$ (value is 0 in 1D and 2D)|$$1 \times 1$$
 |===
 
 
@@ -77,12 +77,12 @@ You can also use expressions and the unit base vectors:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
-|`mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix<br> entries beeing expressions |$$m \times n$$
-|`ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 1 |$$m \times n$$
-|`zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with 0 |$$m \times n$$
-|`constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix <br>Filled with a constant c |$$m \times n$$
-|`eye<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$
-|`Id<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix <br> of size$$n\times n$$ |$$n \times n$$
+|`mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix entries beeing expressions |$$m \times n$$
+|`ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 1 |$$m \times n$$
+|`zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 0 |$$m \times n$$
+|`constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with a constant c |$$m \times n$$
+|`eye<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix of size$$n\times n$$ |$$n \times n$$
+|`Id<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix of size$$n\times n$$ |$$n \times n$$
 |===
 
 
@@ -94,17 +94,17 @@ Let $$A$$ be a square matrix of size $$n$$.
 |Feel++ Keyword | Math Object | Description | Dimension 
 |`inv(A)`|$$A^{-1}$$|Inverse of matrix $$A$$ |$$n \times n$$
 |`det(A)`|$$\det (A)$$|Determinant of matrix $$A$$ |$$1 \times 1$$
-|`sym(A)`|$$\text{Sym}(A)$$|Symmetric part of matrix $$A$$: $$\frac{1}{2}(A+A^T)$$<br> |$$n \times n$$
-|`antisym(A)`|$$ \text{Asym}(A)$$|Antisymmetric part of  $$A$$: $$\frac{1}{2}(A-A^T)$$<br> |$$n \times n$$
+|`sym(A)`|$$\text{Sym}(A)$$|Symmetric part of matrix $$A$$: $$\frac{1}{2}(A+A^T)$$ |$$n \times n$$
+|`antisym(A)`|$$ \text{Asym}(A)$$|Antisymmetric part of  $$A$$: $$\frac{1}{2}(A-A^T)$$ |$$n \times n$$
 |===
 
 Let A and B be two matrix (or two vectors) of same dimension $$m \times n$$.
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
-|`trace(A)`|$$\text{tr}(A)$$|Trace of matrix $$A$$<br>Generalized on non-squared Matrix<br>Generalized on Vectors |$$1 \times 1$$
-|`trans(B)`|$$B^T$$|Transpose of matrix $$B$$<br>Can be used on non-squared Matrix<br>Can be used on Vectors |$$n \times m$$
-|`inner(A,B)`|$$ A.B \\ A:B = \text{tr}(A*B^T)$$|Scalar product of two vectors<br>Generalized scalar product of two matrix |$$1 \times 1$$
+|`trace(A)`|$$\text{tr}(A)$$|Trace of matrix $$A$$ Generalized on non-squared Matrix Generalized on Vectors |$$1 \times 1$$
+|`trans(B)`|$$B^T$$|Transpose of matrix $$B$$ Can be used on non-squared Matrix Can be used on Vectors |$$n \times m$$
+|`inner(A,B)`|$$ A.B \\ A:B = \text{tr}(A*B^T)$$|Scalar product of two vectors Generalized scalar product of two matrix |$$1 \times 1$$
 |`cross(A,B)`|$$ A\times B$$|Cross product of two vectors|$$n \times 1$$
 |===
 
@@ -123,7 +123,7 @@ You can of course use all current operators ( + - / * ) and the usual following 
 
 |===
 |Feel++ Keyword | Math Object | Description
-|`abs(expr) `|$$|f(\overrightarrow{x})|$$|element wise absolute value of $$f$$
+|`abs(expr)`|$$|f(\overrightarrow{x})|$$|element wise absolute value of $$f$$
 |`cos(expr)`|$$\cos(f(\overrightarrow{x}))$$|element wise cos value of $$f$$
 |`sin(expr)`|$$\sin(f(\overrightarrow{x}))$$|element wise sin value of $$f$$
 |`tan(expr)`|$$\tan(f(\overrightarrow{x}))$$|element wise tan value of $$f$$
@@ -152,7 +152,7 @@ You can use the usual operations and logical operators.
 |`+` |$$ f+g$$|tensor sum
 |`-` |$$ f-g$$|tensor substraction
 |`*` |$$ f*g$$|tensor product
-|`/` |$$ f/g$$|tensor tensor division <br>($$g$$ scalar field)
+|`/` |$$ f/g$$|tensor tensor division  ($$g$$ scalar field)
 |`<` |$$ f<g$$|element wise less
 |`<=` |$$ f<=g$$|element wise less or equal
 |`>` |$$ f>g$$|element wise greater
@@ -270,5 +270,5 @@ todo: define transformation
 
 Bibliography :
 
-- [[[Prud'homme]]]] Christophe Prud'homme, _A domain specific embedded language in C++ for automatic differentiation, projection, integration and variational formulations_, Scientific Programming, 2006.
+- [[[Prudhomme]]] Christophe Prud'homme, _A domain specific embedded language in C++ for automatic differentiation, projection, integration and variational formulations_, Scientific Programming, 2006.
 

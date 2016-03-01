@@ -12,7 +12,7 @@ The next step is to compute integrals over the mesh.
 
 - We start by loading a Mesh in 2D   
 
-- then we define the Feel\++ expression that we are going to integrate using the \c soption function that retrieves the command line option string `functions.g`. We then transform this string into a Feel++ expression using `expr().`   
+- then we define the Feel\++ expression that we are going to integrate using the soption function that retrieves the command line option string `functions.g`. We then transform this string into a Feel++ expression using `expr().`   
 
 - then we compute two integrals over the domain and its boundary respectively
 
@@ -22,7 +22,7 @@ The next step is to compute integrals over the mesh.
 
 - and we print the results to the screen.   
 
-Only the rank 0 process (thanks to `Environment`) isMasterRank() prints to the screen as the result is the same over all mpi processes if the application was run in parallel. Note also that the code actually prints the expression passed by the user through the command line option `functions.g.`
+Only the rank 0 process (thanks to `Environment`) isMasterRank() prints to the screen as the result is the same over all mpi processes if the application was run in parallel. Note also that the code actually prints the expression passed by the user through the command line option `functions.g`.
 
 == Some results
 
@@ -44,7 +44,7 @@ int_Omega x = 0.5
 int_{boundary of Omega} x = 2
 ----
 
-Recall that \c : is a separator between the expression and each symbol composing it.
+Recall that : is a separator between the expression and each symbol composing it.
 
 Now we try $$g=x y$$. We need to tell Feel++ what are the symbols associated with the expression: here the symbol is `x`  and `y`  and it works as follows
 
@@ -64,8 +64,7 @@ int_Omega sin(x*y) = 0.239812
 int_{boundary of Omega} sin(x*y) = 0.919395
 ----
 
-Here is the last example in parallel over 4 processors which returns, of
-course, the exact same results as in sequential
+Here is the last example in parallel over 4 processors which returns, of course, the exact same results as in sequential
 
 [source,sh]
 ----

@@ -43,6 +43,7 @@ $$
 $$
     
 An important result is that the diagram transfers to the discrete level
+
 $$
 \begin{array}{ccccccc}
       H^1(\Omega)&
@@ -81,6 +82,7 @@ $$
     
 > **Note** The diagram can be restricted to functions
 satisfying the homogeneous Dirichlet boundary conditions 
+
 $$
 \begin{array}{ccccccc}
       H^1_0(\Omega)&

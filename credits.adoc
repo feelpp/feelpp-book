@@ -19,8 +19,6 @@ Credits
 
   * Feel++ is Copyright (C) 2005-2006 by Ecole Polytechnique Fédérale de Lausanne (EPFL, Switzerland)
 
-
-
 ==  Management  
 
 Feel++ is managed by Christophe Prud'homme

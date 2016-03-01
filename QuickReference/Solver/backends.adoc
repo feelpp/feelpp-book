@@ -52,10 +52,10 @@ They take default values as described in the following table:
 
 |===
 |parameter  | type    | default value
-|_name      | string  | "" (empty string )
-|_rebuild   | boolean | false
-|_kind      | string  | "petsc"
-|_worldcomm | WorldComm | Environment::worldComm()
+|`_name`      | string  | "" (empty string )
+|`_rebuild`   | boolean | false
+|`_kind`      | string  | "petsc"
+|`_worldcomm` | WorldComm | Environment::worldComm()
 |===
 
 === _name

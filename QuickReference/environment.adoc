@@ -23,8 +23,8 @@ None of those parameters are required but it is highly recommended to use the mi
 Environment env( _argc=argc, _argv=argv, 
                  _desc=feel_option(),  
                  _about=about(_name="name_of_your_app", 
-                 _author="your_name",
-                 _email="your_email_adress"));
+                              _author="your_name",
+                              _email="your_email_adress"));
 ----
 
 * `_argc` and `_argv` are the arguments of your main function.
@@ -37,7 +37,7 @@ Environment env( _argc=argc, _argv=argv,
 
 === Adding Options 
 
-`feel_options()`  returns a list of default options used in Feel++.
+`feel_options()` returns a list of default options used in Feel++.
 
 You can create your own list of options  as follows:
 
@@ -195,13 +195,13 @@ The lookup is as follows:
 
 * look into current path
 
-* look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
+* look into paths that went through `changeRepository()`, it means that we look for example into the path from which the executable was run
 
 If the file has an extension .geo or .msh, try also to
 
 - look into `localGeoRepository()`  which is usually $HOME/feel/geo
 
-- look into `systemGeoRepository()`  which is usually $FEELPP_DIR/share/feel/geo
+- look into `systemGeoRepository()` which is usually $FEELPP_DIR/share/feel/geo
 
 If `filename` is not found, then the empty string is returned.
 

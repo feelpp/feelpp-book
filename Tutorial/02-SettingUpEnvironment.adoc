@@ -16,7 +16,7 @@ Feel++ objects.
 We initialize the environment variables through the Feel++ `Environment` class.
 
 === Source code
- [source,c++]
+[source,c++]
 ----
 {% include "code/02-environment.cpp" %}
 ----
@@ -91,7 +91,7 @@ In the case where some options are duplicated in the files, the priority is give
   
   * `ex2.cfg` can overwrite options in `ex1.cfg`
 
-All files in ` --config-files ` can overwrite options given by ` --config-file `. And all options in the command line can overwrite all options given in cfg files.
+All files in `--config-files` can overwrite options given by `--config-file`. And all options in the command line can overwrite all options given in cfg files.
 
 == Initializing PETSc, SLEPc and other third party libraries
 
