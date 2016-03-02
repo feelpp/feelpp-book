@@ -37,3 +37,9 @@ u.load( _path="/path/to/load/", _type="hdf5" );
 ----
 
 The `path` and `type` parameters need to be the same as the one used to save the function.
+
+== Extended parallel doftable
+
+In some cases, when we use parallel data, informations from other interfaces of partitions are need. To manage this, we can add ghost degree of freedom on ghost elements at these locations. However, we have to know if data have extended parallel doftable to load and use it.
+
+In order to pass above this restriction, the two function `load` and `save` has been updated to use hdf5 format. With this format, extended parallel doftable or not, the function will work without any issues. 
