@@ -5,7 +5,7 @@
 
 toc::[]
 
-To resolve eigen problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problem. It comes with many solvers for both standard and generalized problems, Hermitian or not.
+To solve standard and generalized eigenvalue problems, Feel++ interfaces http://slepc.upv.es[SLEPc]. SLEPc is a library which extends PETSc to provide the functionality necessary for the solution of eigenvalue problems. It comes with many stategies for both standard and generalized problems, Hermitian or not.
 
 We want to find $$(\lambda_i,x_i)$$ such that $$Ax = \lambda x$$. To do that, most eigensolvers project the problem onto a low-dimensional subspace, this is called a Rayleigh-Ritz projection. +
 Let $$V_j=[v_1,v_2,...,v_j]$$ be an orthogonal basis of this subspace, then the projected problem reads:
