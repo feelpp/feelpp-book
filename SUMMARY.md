@@ -61,7 +61,7 @@
        * [Reading](Applications/Mesh/Applications/Reading/reading.adoc)
    * [Info](Applications/Info/readme.adoc)
    * [Models](Applications/Models/readme.adoc)
-       * [Computation Fluid Mechanics](QuickReference/Models/Fluid/README.adoc)
+       * Computation Fluid Mechanics
 * [Frequently Asked Questions](FAQ/README.adoc)
    * [Development](FAQ/FAQDevelopment.adoc)
    * [Runtime](FAQ/FAQExecution.adoc)
