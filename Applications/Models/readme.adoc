@@ -1,7 +1,7 @@
 # Models
 
- * link:Solid/README.adoc[Solid models]
+ * link:../../QuickReference/Models/Solid/README.adoc[Solid models]
  
- * link:Fluid/README.adoc[Fluid models]
+ * link:../../QuickReference/Models/Fluid/README.adoc[Fluid models]
  
- * link:FluidStructure/README.adoc[Fluid Structure models]
+ * link:../../QuickReference/Models/FluidStructure/README.adoc[Fluid Structure models]
