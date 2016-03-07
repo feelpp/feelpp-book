@@ -1,6 +1,6 @@
 == Fluid structure coupling conditions
 
-In order to have a correct fluid-structure model, we need to add to other equations some coupling conditions :
+In order to have a correct fluid-structure model, we need to add to the solid model and the fluid model equations some coupling conditions :
 
 
 $$
