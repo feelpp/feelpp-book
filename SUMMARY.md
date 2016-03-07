@@ -29,6 +29,7 @@
    * [Using linear algebra backends](Tutorial/09-UsingBackend.adoc)
    * [Creating a model](Tutorial/10-Model.adoc)
 * [Applications](Applications/readme.adoc)
+   * [Info](Applications/Info/readme.adoc)
    * [Mesh](Applications/Mesh/readme.adoc)
        * [Partitioning](Applications/Mesh/Partitioning/readme.adoc)
        * [Info](Applications/Info/readme.adoc)
