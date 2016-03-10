@@ -22,6 +22,7 @@ typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
     auto FM = model_type::New("fluid");
     FM->init();
     FM->printAndSaveInfo();
+    
     if ( FM->isStationary() )
     {
         FM->solve();
