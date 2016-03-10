@@ -13,8 +13,10 @@ Quick Reference
  
  * link:solver.adoc[Solver]
 
-* link:Time/.adoc[Time Stepping]
+ * link:Time/README.adoc[Time Stepping]
  
  * link:exporter.adoc[Exporters]
  
  * link:keywords.adoc[Keywords]
+
+ * link:Models/README.adoc[Models]
