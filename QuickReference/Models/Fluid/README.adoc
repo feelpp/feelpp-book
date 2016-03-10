@@ -212,7 +212,7 @@ Then the configuration and the associated Json files
 {% include "../Examples/cavity3d.json" %}
 ----
 
-First at all, we define some general informations like the name ( and short name ) and the model we would like to use
+First at all, we define some general information like the name ( and short name ) and the model we would like to use
 
 ----
 
