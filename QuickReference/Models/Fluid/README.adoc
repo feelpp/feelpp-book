@@ -144,3 +144,5 @@ The fields on which one can do measures:
 Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
 
 Here is the code 
+
+{% include "../Examples/fluid_model.cpp" %}
