@@ -164,6 +164,13 @@ We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_
     auto FM = model_type::New("fluid");
 ----
 
+With this object, we can initialize our model, with data from the config file, and by extension, the Json file. The useful data, such as , are then save and print on the terminal. This is made by 
+
+----
+FM->init();
+FM->printAndSaveInfo();
+----
+
 
 Then the configuration and the associated Json files
 
