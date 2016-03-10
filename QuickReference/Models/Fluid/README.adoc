@@ -206,7 +206,7 @@ Then the configuration and the associated Json files
 {% include "../Examples/cavity3d.cfg" %}
 ----
 
-The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be for example files paths as follows
+The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be, for example, files paths as follows
 
 ----
 [fluid]
@@ -217,7 +217,7 @@ filename=$cfgdir/cavity3d.json
 directory=applications/models/fluid/cavity3d/$fluid_tag
 ----
 
-or
+It can also be resolution dependent parameters such as mesh elements size, solvers used
 
 ----
 
