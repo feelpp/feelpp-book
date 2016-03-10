@@ -235,7 +235,7 @@ Then we define the link:#Material[material properties]. In our case, the fluid i
     },
 ----
 
-The link:#Boundary\_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
+The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
 
 [source,json]
 ----
