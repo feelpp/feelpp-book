@@ -149,3 +149,10 @@ Here is the code
 ----
 {% include "../Examples/fluid_model.cpp" %}
 ----
+
+Then the configuration and the associated Json files
+
+[source,cfg]
+----
+
+---
