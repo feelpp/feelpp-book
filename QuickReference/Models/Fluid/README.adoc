@@ -215,21 +215,65 @@ Then the configuration and the associated Json files
 First at all, we define some general information like the name ( and short name ) and the model we would like to use
 
 ----
-
-
+"Name": "Fluid Mechanics",
+"ShortName":"Fluid",
+"Model":"Navier-Stokes",
 ----
 
 Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
 
 ----
-
+"Materials":
+    {
+        "Fluid":{
+            "name":"myFluidMat",
+            "rho":"1.0",
+            "mu":"0.01"
+        }
+    },
 ----
 
 The link:#Boundary\_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$$$ Dirichlet conditions at two specific places : `lid` and `wall`.
 
 ----
-
-
+"BoundaryConditions":
+    {
+        "velocity":
+        {
+            "Dirichlet":
+            {
+                "lid":
+                {
+                    "expr":"{ 1,0,0}:x:y:z"
+                },
+                "wall":
+                {
+                    "expr":"{0,0,0}"
+                }
+            }
+        }
+    },
 ----
 
-The link:#Post\_Process[post process] aspect is the last one to define
+The link:#Post\_Process[post process] aspect is the last one to define.
+
+----
+"PostProcess":
+    {
+        "Fields":["velocity","pressure","pid"],
+        "Measures":
+        {
+            "Forces":"wall",
+            "Points":
+            {
+                "pointA":
+                {
+                    "coord":"{0.5,0.5,0.5}",
+                    "fields":"pressure"
+                }
+            }
+        }
+    }
+
+}
+----
