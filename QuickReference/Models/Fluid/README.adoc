@@ -214,6 +214,7 @@ Then the configuration and the associated Json files
 
 First at all, we define some general information like the name ( and short name ) and the model we would like to use
 
+[source,json]
 ----
 "Name": "Fluid Mechanics",
 "ShortName":"Fluid",
@@ -222,6 +223,7 @@ First at all, we define some general information like the name ( and short name 
 
 Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
 
+[source,json]
 ----
 "Materials":
     {
@@ -235,6 +237,7 @@ Then we define the link:#Material[material properties]. In our case, the fluid i
 
 The link:#Boundary\_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
 
+[source,json]
 ----
 "BoundaryConditions":
     {
@@ -257,6 +260,7 @@ The link:#Boundary\_Conditions[boundary conditions] are the next aspect we defin
 
 The link:#Post\_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
 
+[source,json]
 ----
 "PostProcess":
     {
