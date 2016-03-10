@@ -212,3 +212,22 @@ Then the configuration and the associated Json files
 {% include "../Examples/cavity3d.json" %}
 ----
 
+First at all, we define some general informations like the name ( and short name ) and the model we would like to use
+
+----
+
+
+----
+
+Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
+
+----
+
+----
+
+The link:#Boundary\_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$$$ Dirichlet conditions at two specific places : `lid` and `wall`.
+
+----
+
+
+----
