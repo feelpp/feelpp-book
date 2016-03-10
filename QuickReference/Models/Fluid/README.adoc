@@ -206,6 +206,19 @@ Then the configuration and the associated Json files
 {% include "../Examples/cavity3d.cfg" %}
 ----
 
+The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be for example files paths as follows
+
+----
+[fluid]
+geofile=$cfgdir/cavity3d.geo
+filename=$cfgdir/cavity3d.json
+
+[exporter]
+directory=applications/models/fluid/cavity3d/$fluid_tag
+----
+
+or 
+
 ==== Json
 [source,json]
 ----
