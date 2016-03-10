@@ -150,9 +150,15 @@ Here is the code
 {% include "../Examples/fluid_model.cpp" %}
 ----
 
+
 Then the configuration and the associated Json files
 
 [source,cfg]
 ----
+{% include "../Examples/cavity3d.cfg" %}
+----
 
----
+[source,json]
+----
+{% include "../Examples/cavity3d.json" %}
+----
