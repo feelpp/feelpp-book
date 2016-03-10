@@ -154,14 +154,14 @@ First at all, we define our model type with
 
 ----
 typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
-                                    Lagrange<OrderVelocity, Vectorial,Continuous,PointSetFekete>,
-                                    Lagrange<OrderPressure, Scalar,Continuous,PointSetFekete> > model_type;
+                                    Lagrange<OrderVelocity,Vectorial,Continuous,PointSetFekete>,
+                                    Lagrange<OrderPressure,Scalar,Continuous,PointSetFekete> > model_type;
 ----
 
 We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure velocity. This definition allows us to create our fluid model object FM like this
-
+ 
 ----
-    auto FM = model_type::New("fluid");
+auto FM = model_type::New("fluid");
 ----
 
 With this object, we can initialize our model, with data from the config file, and by extension, the Json file. The useful data, such as , are then save and print on the terminal. This is made by 
