@@ -6,14 +6,14 @@ int
 main( int argc, char** argv )
 {
     using namespace Feel;
-	po::options_description fluidmecoptions( "application fluid-mechanics options" );
+    po::options_description fluidmecoptions( "application fluid-mechanics options" );
     fluidmecoptions.add( feelmodels_options("fluid") );
 
 Environment env( _argc=argc, _argv=argv,
-                     _desc=fluidmecoptions,
-                     _about=about(_name="application_fluid",
-                                  _author="Feel++ Consortium",
-                                  _email="feelpp-devel@feelpp.org"));
+                 _desc=fluidmecoptions,
+                 _about=about(_name="application_fluid",
+                              _author="Feel++ Consortium",
+                              _email="feelpp-devel@feelpp.org"));
 
 typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
                                         Lagrange<2, Vectorial,Continuous,PointSetFekete>,
