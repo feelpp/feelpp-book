@@ -146,6 +146,7 @@ Let's finish with a simple example in order to show how this works and how to us
 Here is the code 
 
 [source,cpp]
+
 ---
 {% include "../Examples/fluid_model.cpp" %}
 ---
