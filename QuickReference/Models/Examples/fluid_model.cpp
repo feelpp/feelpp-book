@@ -16,8 +16,8 @@ Environment env( _argc=argc, _argv=argv,
                               _email="feelpp-devel@feelpp.org"));
 
 typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
-                                        Lagrange<2, Vectorial,Continuous,PointSetFekete>,
-                                        Lagrange<1, Scalar,Continuous,PointSetFekete> > model_type;
+                                    Lagrange<2, Vectorial,Continuous,PointSetFekete>,
+                                    Lagrange<1, Scalar,Continuous,PointSetFekete> > model_type;
     
     auto FM = model_type::New("fluid");
     FM->init();
