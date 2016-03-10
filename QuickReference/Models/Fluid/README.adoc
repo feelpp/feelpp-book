@@ -258,7 +258,7 @@ The link:#Boundary\_Conditions[boundary conditions] are the next aspect we defin
     }
 ----
 
-The link:#Post\_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
+The link:#Post_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
 
 [source,json]
 ----
