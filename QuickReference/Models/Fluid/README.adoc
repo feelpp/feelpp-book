@@ -222,21 +222,11 @@ It can also be resolution dependent parameters such as mesh elements size, metho
 ----
 [fluid]
 solver=Oseen #Picard,Newton
-#verbose_solvertimer=1
 
 linearsystem-cst-update=false
 jacobian-linear-update=false
 
-#start-by-solve-stokes-stationary=1
-#reuse-prec=true
-#reuse-jac=true
-#reuse-jac.rebuild-at-first-newton-step=true
-#reuse-prec.rebuild-at-first-newton-step=true
-
-# ksp-converged-reason=true
-# snes-converged-reason=true
 snes-monitor=true
-# ksp-monitor=true
 snes-maxit=100
 snes-maxit-reuse=100
 snes-ksp-maxit=1000
