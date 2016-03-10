@@ -217,12 +217,34 @@ filename=$cfgdir/cavity3d.json
 directory=applications/models/fluid/cavity3d/$fluid_tag
 ----
 
-It can also be resolution dependent parameters such as mesh elements size, solvers used
+It can also be resolution dependent parameters such as mesh elements size, methods used  to define our problem and solvers.
 
 ----
+[fluid]
+solver=Oseen #Picard,Newton
+#verbose_solvertimer=1
 
+linearsystem-cst-update=false
+jacobian-linear-update=false
+
+#start-by-solve-stokes-stationary=1
+#reuse-prec=true
+#reuse-jac=true
+#reuse-jac.rebuild-at-first-newton-step=true
+#reuse-prec.rebuild-at-first-newton-step=true
+
+# ksp-converged-reason=true
+# snes-converged-reason=true
+snes-monitor=true
+# ksp-monitor=true
+snes-maxit=100
+snes-maxit-reuse=100
+snes-ksp-maxit=1000
+snes-ksp-maxit-reuse=100
+
+pc-type=lu #gasm,lu,fieldsplit,ilu
 ----
-
+In this case, we use Oseen to define our problem, we set the update of linear system constant and jacobian linear as "no update", we discretize values associated to SNES ( Scalable Nonlinear Equations Solvers ), and finally we choose LU method as the preconditioner.
 
 
 ==== Json
