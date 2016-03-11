@@ -19,6 +19,7 @@ toc::[]
 | Model | Name 
 
 | Navier-Stokes|`Navier-Stokes`
+| Stokes|`Stokes`
 
 |===
 
