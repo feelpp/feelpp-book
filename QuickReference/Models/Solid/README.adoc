@@ -9,7 +9,8 @@ toc::[]
 
 {% include "SaintVenantKirchhoff.adoc" %}
 
-== Properties
+== Json file
+=== Properties
 
 * Linear 
 * SaintVenant Kirchhoff
@@ -64,7 +65,7 @@ option: `mechanicalproperties.compressible.volumic_law`
 
 where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio and `rho` the density in $$kg\cdot m^{-3}$$ .
 
-== Boundary Conditions
+=== Boundary Conditions
 
 Boundary conditions and volumic forces are set in the json files
 [source,json]
@@ -119,7 +120,7 @@ The condition types are explain in the two following tables.
 
 |===
 
-== Post Process
+=== Post Process
 
 [source,json]
 ----
