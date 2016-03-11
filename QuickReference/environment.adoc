@@ -1,40 +1,48 @@
 = Environment
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
+toc::[]
 
-
-In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  [Environment](environment.md).
+In this section, we present some tools to initialize and manipulate Feel++ environment. For more information, see  link:environment.adoc[Environment].
 
 == Initialize Feel++
 
 Environment class is necessary to initialize your application, as seen in FirstApp. Interface is as follows:
+
 [source,cpp]
---
+----
 Environment env( _argc, _argv, _desc, _about );
---
+----
 
 None of those parameters are required but it is highly recommended to use the minimal declaration:
+
 [source,cpp]
---
+----
 Environment env( _argc=argc, _argv=argv, 
                  _desc=feel_option(),  
                  _about=about(_name="name_of_your_app", 
-                 _author="your_name",
-                 _email="your_email_adress"));
---
+                              _author="your_name",
+                              _email="your_email_adress"));
+----
 
 * `_argc` and `_argv` are the arguments of your main function.
+
 * `_desc` is a description of your options.
+
 * `_about` is a brief description of your application.
 
-== Options Description {{description}}
+== Options Description 
 
-=== Adding Options {{adding}}
+=== Adding Options 
 
-`feel_options()`  returns a list of default options used in Feel++.
+`feel_options()` returns a list of default options used in Feel++.
 
 You can create your own list of options  as follows:
+
 [source,cpp]
---
+----
 using namespace Feel;
 inline
 po::options_description
@@ -49,7 +57,7 @@ makeOptions()
      // Add the default feel options to your list
     return myappOptions.add( feel_options() ); 
 }
---
+----
 
 `makeOptions` is the usual name of this routine but you can change it amd `myappOptions` is the name of you options list.
 
@@ -62,25 +70,29 @@ makeOptions()
 |===
 
 You can then use `makeOptions()` to initialize the Feel++ Environment as follows
+
 [source,cpp]
---
+----
 Environment env( _argc=argc, _argv=argv,
                  _desc=makeOptions(),
                  _about=about(_name="myapp",
                               _author="myname",
                               _email="my@email.com") );
---                              
+----                            
 
 Then, at runtime,  you can change the parameter as follows
-[source,cpp
---
+
+[source,cpp]
+----
   ./myapp --option1=alpha --option2=beta --option3=gama
---
+----
 
 **Example:**
+
 From `doc/manual/laplacian/laplacian.cpp`
+
 [source,cpp]
---
+----
 using namespace Feel;
 
 inline
@@ -104,48 +116,49 @@ makeOptions()
           ;
  return laplacianoptions.add( Feel::feel_options() );
 }
---
-
+----
 
 === Options Accessors
 
-**Options Description:**
+==== Options Description :
+
 [source,cpp]
---
+----
 Environment::optionsDescription();
---
+----
 
-Returns options description data structure of type `po::options_description` `po` where is a namespace alias defined in {{ book.feelpp }} for `boost::program_options`
+Returns options description data structure of type `po::options_description` `po` where is a namespace alias defined in Feel++ for `boost::program_options`.
 
+==== Variable map
 
-**Variable map**
 You can access to the parameters of your application environment using the following function:
-[source,cpp]
---
-Environment::vm(_name);
---
 
-`_name`  is the name of the parameter as seen in the previous paragraph. This function returns a data structure of type `po::variable_value`.
-You can then extract the proper parameter value as follows
 [source,cpp]
---
+----
+Environment::vm(_name);
+----
+
+`_name`  is the name of the parameter as seen in the previous paragraph. This function returns a data structure of type `po::variable_value`. You can then extract the proper parameter value as follows
+
+[source,cpp]
+----
 const double E = Environment::vm(_name="E").template as<double>();
 const double nu = Environment::vm(_name="nu").template as<double>();
 
 auto Tfinal =  Environment::vm( _name="test" ).template as<int>()*dt;
---
+----
 
-
-== Repository {{Repository}}
+== Repository
 
 === Change changeRepository
 
 You can change the default repository where the results are stored
 
 [source,cpp]
---
+----
 void changeRepository( _directory, _subdir, _filename );
---
+----
+
 |===
 | *Parameter* | *Description* | *Status* | *Default value*
 | `_directory`| directory name | Required | 
@@ -156,37 +169,39 @@ void changeRepository( _directory, _subdir, _filename );
 You can use `boost` format to customize the path as follows:
 
 [source,cpp]
---
+----
 Environment::changeRepository( boost::format( "doc/manual/laplacian/%1%/%2%-%3%/P%4%/h_%5%/" )
                                    % this->about().appName()
                                    % shape
                                    % Dim
                                    % Order
                                    % meshSize );
---
-Then results will be store in: `/doc/manual/laplacian/<appName>/<shape>-<Dim>/P<Order>/h_<meshSize>/`
+----
 
+Then results will be store in: `/doc/manual/laplacian/<appName>/<shape>-<Dim>/P<Order>/h_<meshSize>/`
 
 === findFile
 
 ==== Interface
 
 [source,cpp]
---
+----
 std::string findFile( std::string const& filename );
---
+----
 
 Returns the string containing the filename path.
 
 The lookup is as follows:
+
 * look into current path
-* look into paths that went through changeRepository(), it means that we look for example into the path from which the executable was run
+
+* look into paths that went through `changeRepository()`, it means that we look for example into the path from which the executable was run
 
 If the file has an extension .geo or .msh, try also to
 
 - look into `localGeoRepository()`  which is usually $HOME/feel/geo
 
-- look into `systemGeoRepository()`  which is usually $FEELPP_DIR/share/feel/geo
+- look into `systemGeoRepository()` which is usually $FEELPP_DIR/share/feel/geo
 
 If `filename` is not found, then the empty string is returned.
 
@@ -195,7 +210,7 @@ If `filename` is not found, then the empty string is returned.
 
 === Communications
 
-A lot of data structures, in fact most of them,  in Feel++ are parallel and are associated with a `WorldComm` data structure which allows us to access and manipulate the MPI communicators.
+A lot of data structures, in fact most of them, in Feel++ are parallel and are associated with a `WorldComm` data structure which allows us to access and manipulate the MPI communicators.
 We provide some utility free functions that allow a transparent access to the `WorldComm` data structure.
 
 We denote by `c` a Feel++ data structure associated to a `WorldComm`.
@@ -209,10 +224,10 @@ We denote by `c` a Feel++ data structure associated to a `WorldComm`.
 For example to print the rank of a mesh data structure
 
 [source,cpp]
---
+----
 // initialise environment...
 auto mesh = makeMesh<Simplex<2,1>>();
 std::cout << "local rank : " << rank(mesh) << "\n";
---
+----
 
 

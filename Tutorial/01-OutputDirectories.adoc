@@ -1,17 +1,22 @@
-= Output Directories    
+= Output Directories
+:toc:
+:toc-placement: macro
+:toclevels: 2
 
-{{ book.feelpp }} generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with {{book.feelpp}}.
+toc::[]
+
+Feel{plus}+ generates various files that are spread over various directories. For this tutorial, it would be beneficial to check the content of these files to familiarize yourself with Feel{plus}+ . 
 
 
 == Results
 
 == Log files
 
-{{ book.feelpp }} uses https://github.com/google/glog[Google Glog].  
+Feel++ uses https://github.com/google/glog[Google Glog].  
 
   
 - Log files : `tmp/<your login>/feelpp/feelpp_tut_<your_app_name>` 
 
 -  Mesh : `$FEELPP_WORKDIR/feel/<your_app_name>/np_1`   
 
-- Config files :`$FEELPP_WORKDIR/<your_build_folder>/doc/manual/tutorial`
+- Config files : `$FEELPP_WORKDIR/<your_build_folder>/doc/manual/tutorial`
