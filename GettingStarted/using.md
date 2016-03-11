@@ -14,7 +14,7 @@ cmake_minimum_required(VERSION 2.8)
 # installation in the PATHS section
 if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR} )
     find_package(Feel++ 
-        PATHS $ENV{FEELPP_DIR}/cmake/modules
+        PATHS $ENV{FEELPP_DIR}/share/feel/cmake/modules
             /usr/share/feel/cmake/modules
             /usr/local/share/feel/cmake/modules
             /opt/share/feel/cmake/modules
