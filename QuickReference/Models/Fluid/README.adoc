@@ -10,8 +10,8 @@ toc::[]
 {% include "NavierStokes.adoc" %}
 
 
-= JSON file
-== Properties
+== JSON file
+=== Properties
 
 
 .Table of Models for `model` option
@@ -23,7 +23,7 @@ toc::[]
 |===
 
 
-== Materials
+=== Materials
 
 [source,json]
 .Materials section
@@ -41,7 +41,7 @@ toc::[]
 
 where `rho` the density in $$kg\cdot m^{-3}$$ and `mu` the dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
 
-== Boundary Conditions
+=== Boundary Conditions
 
 Boundary conditions and volumic forces are set in the json files
 [source,json]
@@ -79,7 +79,7 @@ The condition types are explain in the two following tables.
 |===
 
 
-== Post Process
+=== Post Process
 
 [source,json]
 ----
