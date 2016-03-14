@@ -335,27 +335,37 @@ Materials":
     },
 ----
 
-The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
+The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the displacement several conditions.
 
 [source,json]
 ----
-"BoundaryConditions":
+BoundaryConditions":
     {
-        "velocity":
+        "displacement":
         {
             "Dirichlet":
             {
-                "lid":
+                "fixed-wall":
                 {
-                    "expr":"{ 1,0,0}:x:y:z"
-                },
-                "wall":
+                    "expr":"{0,0}"
+                }
+            },
+            "Neumann_scalar":
+            {
+                "free-wall":
                 {
-                    "expr":"{0,0,0}"
+                    "expr":"0"
+                }
+            },
+            "VolumicForces":
+            {
+                "":
+                {
+                    "expr":"{0,-gravity*1e3}:gravity"
                 }
             }
         }
-    }
+    },
 ----
 
 The link:#Post_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
