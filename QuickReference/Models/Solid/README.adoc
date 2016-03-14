@@ -335,7 +335,11 @@ Materials":
     },
 ----
 
-The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the displacement several conditions.
+The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the displacement several conditions :
+
+- A Dirichlet condition on fixed wall
+- A Neumann condition on free wall
+- A volumic force, represent here by the action of the gravity on the solid.
 
 [source,json]
 ----
