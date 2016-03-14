@@ -210,6 +210,27 @@ auto SM = model_type::New("solid");
 
 The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
 
+----
+SM->isStationary()
+----
+
+will determine if our model is stationary or not.
+
+If it isn't, w
+
+----
+    {
+        SM->init();
+        SM->printAndSaveInfo();
+
+        for ( ; !SM->timeStepBase()->isFinished(); SM->updateTimeStep() )
+        {
+            SM->solve();
+            SM->exportResults();
+        }
+    }
+----
+
 
 === Config and Json files
 Then the configuration and the associated Json files
