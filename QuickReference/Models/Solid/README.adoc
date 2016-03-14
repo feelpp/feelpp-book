@@ -254,12 +254,9 @@ Then the configuration and the associated Json files
 The config file is used to define options  linked to our case we would have the possibility to change at will. It can be, for example, files paths as follows
 
 ----
-[fluid]
-geofile=$cfgdir/cavity3d.geo
-filename=$cfgdir/cavity3d.json
+[solid]
+filename=$top_srcdir/applications/models/solid/TurekHron/csm3.json
 
-[exporter]
-directory=applications/models/fluid/cavity3d/$fluid_tag
 ----
 
 It can also be resolution dependent parameters such as mesh elements size, methods used  to define our problem and solvers.
