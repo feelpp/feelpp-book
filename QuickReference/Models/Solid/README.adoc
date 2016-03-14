@@ -341,7 +341,7 @@ BoundaryConditions":
     },
 ----
 
-The link:#Post_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
+The link:#Post_Process[post process] aspect is the last one to define. We want to export displacement values as well as measure displacement and velocity on point $$A$$ along with the maximum of this values on all the free wall.
 
 [source,json]
 ----
