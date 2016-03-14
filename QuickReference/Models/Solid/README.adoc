@@ -182,3 +182,176 @@ The fields on which one can do measures:
 - principal-stress-1
 - principal-stress-2
 - sigma_xx, sigma_xy, ...
+
+== Action
+
+Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
+
+=== Feel++ code
+Here is the code 
+
+[source,cpp]
+----
+{% include "../Examples/solid_model.cpp" %}
+----
+
+First at all, we define our model type with 
+
+----
+
+----
+
+We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure velocity. This definition allows us to create our fluid model object SM like this
+ 
+----
+auto SM = model_type::New("solid");
+----
+
+The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
+
+With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by 
+
+----
+FM->init();
+FM->printAndSaveInfo();
+----
+
+Now that our model is completed, we can solve the associated problem. To begin the resolution
+
+----
+FM->isStationary()
+----
+
+determine if our model is stationary or not.
+
+If it is, then we need to solve our system only one time and export the obtained results.
+
+----
+FM->solve();
+FM->exportResults();
+----
+
+If it's not, our model is time reliant, and a loop on time is necessary. Our model is then solve and the results are export at each time step.
+
+----
+ for ( ; !FM->timeStepBase()->isFinished(); FM->updateTimeStep() )
+        {
+            FM->solve();
+            FM->exportResults();
+        }
+----
+
+=== Config and Json files
+Then the configuration and the associated Json files
+
+==== Config 
+[source,cfg]
+----
+{% include "../Examples/cavity3d.cfg" %}
+----
+
+The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be, for example, files paths as follows
+
+----
+[fluid]
+geofile=$cfgdir/cavity3d.geo
+filename=$cfgdir/cavity3d.json
+
+[exporter]
+directory=applications/models/fluid/cavity3d/$fluid_tag
+----
+
+It can also be resolution dependent parameters such as mesh elements size, methods used  to define our problem and solvers.
+
+----
+[fluid]
+solver=Oseen #Picard,Newton
+
+linearsystem-cst-update=false
+jacobian-linear-update=false
+
+snes-monitor=true
+snes-maxit=100
+snes-maxit-reuse=100
+snes-ksp-maxit=1000
+snes-ksp-maxit-reuse=100
+
+pc-type=lu #gasm,lu,fieldsplit,ilu
+----
+In this case, we use Oseen to define our problem, we set the update of linear system constant and jacobian linear as "no update", we discretize values associated to SNES ( Scalable Nonlinear Equations Solvers ), and finally we choose LU as the preconditioner method.
+
+
+==== Json
+[source,json]
+----
+{% include "../Examples/cavity3d.json" %}
+----
+
+First at all, we define some general information like the name ( and short name ) and the model we would like to use
+
+[source,json]
+----
+"Name": "Fluid Mechanics",
+"ShortName":"Fluid",
+"Model":"Navier-Stokes",
+----
+
+Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
+
+[source,json]
+----
+"Materials":
+    {
+        "Fluid":{
+            "name":"myFluidMat",
+            "rho":"1.0",
+            "mu":"0.01"
+        }
+    },
+----
+
+The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
+
+[source,json]
+----
+"BoundaryConditions":
+    {
+        "velocity":
+        {
+            "Dirichlet":
+            {
+                "lid":
+                {
+                    "expr":"{ 1,0,0}:x:y:z"
+                },
+                "wall":
+                {
+                    "expr":"{0,0,0}"
+                }
+            }
+        }
+    }
+----
+
+The link:#Post_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
+
+[source,json]
+----
+"PostProcess":
+    {
+        "Fields":["velocity","pressure","pid"],
+        "Measures":
+        {
+            "Forces":"wall",
+            "Points":
+            {
+                "pointA":
+                {
+                    "coord":"{0.5,0.5,0.5}",
+                    "fields":"pressure"
+                }
+            }
+        }
+    }
+}
+----
