@@ -237,7 +237,7 @@ If it is stationary, we need to check if we are in quasi static mode or not.
 bool algoQuasiStatic = boption(_name="solve-quasi-static");
 ----
 
-If not, 
+If not, we save and print our model and solvers. Then the system is solve and we can export the results.
 
 ----
 if ( !algoQuasiStatic )
