@@ -185,7 +185,7 @@ The fields on which one can do measures:
 
 == Action
 
-Let's finish with a simple example in order to show how this works and how to use them. We will interest us to .
+Let's finish with a simple example in order to show how this works and how to use them. We will interest us to the deformation of an elastic structure.
 
 === Feel++ code
 Here is the code 
