@@ -163,7 +163,7 @@ typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
                                     Lagrange<OrderPressure,Scalar,Continuous,PointSetFekete> > model_type;
 ----
 
-We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure velocity. This definition allows us to create our fluid model object FM like this
+We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure order. This definition allows us to create our fluid model object FM like this
  
 ----
 auto FM = model_type::New("fluid");
