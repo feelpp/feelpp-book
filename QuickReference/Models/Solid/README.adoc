@@ -202,7 +202,7 @@ typedef FeelModels::SolidMechanics< Simplex<FEELPP_DIM,1>,
                                     Lagrange<OrderDisp, Vectorial,Continuous,PointSetFekete> > model_type;
 ----
 
-We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure order. This definition allows us to create our fluid model object SM like this
+We choose $$\mathbb{P}_1$$ space for Lagrange order. This definition allows us to create our fluid model object SM like this
  
 ----
 auto SM = model_type::New("solid");
