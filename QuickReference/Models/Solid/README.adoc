@@ -216,7 +216,7 @@ SM->isStationary()
 
 will determine if our model is stationary or not.
 
-If it isn't, w
+If it isn't, our model is time reliant, and a loop on time is necessary. We then solve our problem and export the results at each time step.
 
 ----
     {
@@ -229,6 +229,24 @@ If it isn't, w
             SM->exportResults();
         }
     }
+----
+
+If it is stationary, we need to check if we are in quasi static mode or not.
+
+----
+bool algoQuasiStatic = boption(_name="solve-quasi-static");
+----
+
+If not, 
+
+----
+if ( !algoQuasiStatic )
+        {
+            SM->init();
+            SM->printAndSaveInfo();
+            SM->solve();
+            SM->exportResults();
+        }
 ----
 
 
