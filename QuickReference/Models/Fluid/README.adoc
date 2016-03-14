@@ -258,7 +258,7 @@ First at all, we define some general information like the name ( and short name 
 "Model":"Navier-Stokes",
 ----
 
-Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
+Then we define the link:#Material[material properties]. In our case, the fluid, define  by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$, is the only material we have to define.
 
 [source,json]
 ----
