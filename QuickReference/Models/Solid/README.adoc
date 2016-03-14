@@ -210,37 +210,6 @@ auto SM = model_type::New("solid");
 
 The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
 
-With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by 
-
-----
-FM->init();
-FM->printAndSaveInfo();
-----
-
-Now that our model is completed, we can solve the associated problem. To begin the resolution
-
-----
-FM->isStationary()
-----
-
-determine if our model is stationary or not.
-
-If it is, then we need to solve our system only one time and export the obtained results.
-
-----
-FM->solve();
-FM->exportResults();
-----
-
-If it's not, our model is time reliant, and a loop on time is necessary. Our model is then solve and the results are export at each time step.
-
-----
- for ( ; !FM->timeStepBase()->isFinished(); FM->updateTimeStep() )
-        {
-            FM->solve();
-            FM->exportResults();
-        }
-----
 
 === Config and Json files
 Then the configuration and the associated Json files
