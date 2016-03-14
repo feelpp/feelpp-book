@@ -303,21 +303,34 @@ First at all, we define some general information like the name ( and short name 
 
 [source,json]
 ----
-"Name": "Fluid Mechanics",
-"ShortName":"Fluid",
-"Model":"Navier-Stokes",
+"Name": "Solid Mechanics ",
+"ShortName":"Solid",
+"Model":"Hyper-Elasticity",
 ----
 
-Then we define the link:#Material[material properties]. In our case, the fluid is the only material we have to define by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
+Then we define parameters we will need to solve our problem. Here we define a gravitational constant.
+
+----
+"Parameters":
+    {
+        "gravity":
+        {
+            "value":"2"
+        }
+    },
+----
+
+After that, we define the link:#Material[material properties]. In our case, we define the solid we will study, named beam here, by $$E$$, $$\nu$$ and $$\rho$$, respectivelly  
 
 [source,json]
 ----
-"Materials":
+Materials":
     {
-        "Fluid":{
-            "name":"myFluidMat",
-            "rho":"1.0",
-            "mu":"0.01"
+        "beam":{
+            "name":"solid",
+            "E":"1.4e6",
+            "nu":"0.4",
+            "rho":"1e3"
         }
     },
 ----
