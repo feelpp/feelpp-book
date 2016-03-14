@@ -376,21 +376,28 @@ The link:#Post_Process[post process] aspect is the last one to define. We choose
 
 [source,json]
 ----
-"PostProcess":
+PostProcess":
     {
-        "Fields":["velocity","pressure","pid"],
+        "Fields":["displacement"],
         "Measures":
         {
-            "Forces":"wall",
             "Points":
             {
                 "pointA":
                 {
-                    "coord":"{0.5,0.5,0.5}",
-                    "fields":"pressure"
+                    "coord":"{0.6,0.2,0}",
+                    "fields":["displacement","velocity"]
+                }
+            },
+            "Maximum":
+            {
+                "free-wall":
+                {
+                    "markers":"free-wall",
+                    "fields":["displacement","velocity"]
                 }
             }
         }
     }
-}
+
 ----
