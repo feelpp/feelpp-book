@@ -248,10 +248,10 @@ Then the configuration and the associated Json files
 ==== Config 
 [source,cfg]
 ----
-{% include "../Examples/cavity3d.cfg" %}
+{% include "../Examples/csm3.cfg" %}
 ----
 
-The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be, for example, files paths as follows
+The config file is used to define options  linked to our case we would have the possibility to change at will. It can be, for example, files paths as follows
 
 ----
 [fluid]
