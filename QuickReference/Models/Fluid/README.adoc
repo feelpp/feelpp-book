@@ -326,12 +326,12 @@ Once you've a build dir, you just have to realise the command `make` at
 {buildir}/applications/models/fluid
 --------------------
 
-This will generate an executable named `feelpp_application_fluid_2d`. To execute it, you need to give the path of the cfg file associated to your case, with `--config-file`.
+This will generate executables named `feelpp_application_fluid_*`. To execute it, you need to give the path of the cfg file associated to your case, with `--config-file`.
 
 For example
 
 ----
-./feelpp_application_fluid_2d --config-file={sourcedir}/applications/models/fluid/cavity/cavity3d.cfg
+./feelpp_application_fluid_3d --config-file={sourcedir}/applications/models/fluid/cavity/cavity3d.cfg
 ----
 
 is how to execute the case ahead.
