@@ -1,0 +1,3 @@
+= Backward Differentiation Formula
+
+The backward differentiation formula, also abriged BDF, is a set of implict methods used with ordinary differential equation ( ODE ) for numerical integration. For a given time and function, these methods try to approximate the derivative of this functions, using old computed times data.
