@@ -1,7 +1,7 @@
 = Backward Differentiation Formula
 
 == General approach
-The backward differentiation formula, also abriged BDF, is a set of implicit methods used with ordinary differential equation ( ODE ) for numerical integration. For example, the initial value problem :
+The backward differentiation formula, also abridged BDF, is a set of implicit methods used with ordinary differential equation ( ODE ) for numerical integration. For example, the initial value problem :
 
 $$
 y' = f(t,y), \quad y(t_0) = y_0.
@@ -26,4 +26,4 @@ $$BDF2:  y_{n+2} - \tfrac43 y_{n+1} + \tfrac13 y_n = \tfrac23 h f(t_{n+2}, y_{n+
 
 BDF is a subclass derivative from Time-Stepping ( or TS ). It implements, as his name says, backward differentiation formulas up to order $$s\leq 4$$ . As a subclass, BDF share input parameters, which can be set via `ts.{asterisk}`, but have also its own parameters ( such as the order ), define by `bdf.{asterisk}`.
 
-If different time steppers are used simultaneously, you can cutomize them by adding a prefix like `bdf_options(“myfluid”)`. For example, link:../Models/Fluid/README.adoc[FluidMechanics] offers an interface to this type of case.
+If different time steppers are used simultaneously, you can customize them by adding a prefix like `bdf_options(“myfluid”)`. For example, link:../Models/Fluid/README.adoc[FluidMechanics] offers an interface to this type of case.
