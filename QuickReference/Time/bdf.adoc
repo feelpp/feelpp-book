@@ -1,7 +1,7 @@
 = Backward Differentiation Formula
 
 == General approach
-The backward differentiation formula, also abriged BDF, is a set of implict methods used with ordinary differential equation ( ODE ) for numerical integration. For example, the initial value problem :
+The backward differentiation formula, also abriged BDF, is a set of implicit methods used with ordinary differential equation ( ODE ) for numerical integration. For example, the initial value problem :
 
 $$
 y' = f(t,y), \quad y(t_0) = y_0.
