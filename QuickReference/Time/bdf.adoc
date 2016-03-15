@@ -1,5 +1,6 @@
 = Backward Differentiation Formula
 
+== General approach
 The backward differentiation formula, also abriged BDF, is a set of implict methods used with ordinary differential equation ( ODE ) for numerical integration. For example, the initial value problem :
 
 $$
@@ -20,3 +21,11 @@ $$BDF1:  y_{n+1} - y_n = h f(t_{n+1}, y_{n+1})$$
 ( This is the backward Euler method )
 
 $$BDF2:  y_{n+2} - \tfrac43 y_{n+1} + \tfrac13 y_n = \tfrac23 h f(t_{n+2}, y_{n+2})$$
+
+== In Feel++
+
+BDF is a subclass derivative from Time-Stepping ( or TS ). It implements, as his name says, backward differentiation formulas up to order $$s$$ equals to 4.
+
+As a subclass, BDF share input parameters, which can be set via `ts.{asterisk}`, but have also its own parameters ( such as the order ), define by `bdf.{asterisk}`.
+
+We are currently working on other strategies such as adaptive time-stepping strategies that will derive also from TS. time-stepping strategies share similar input parameters and they are set via ts.* parameters.  And then you may have different time steppers, you cutomize them by adding a prefix using bdf_options(“myfluid”). FluidMechanics offers an interface for all that. Hope these explanations help.
