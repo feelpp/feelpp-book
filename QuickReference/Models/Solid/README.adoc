@@ -407,5 +407,22 @@ PostProcess":
             }
         }
     }
+----
+
+=== Compilation/Execution
+
+Once you've a build dir, you just have to realise the command `make` at 
+
+--------------------
+{buildir}/applications/models/solid
+--------------------
+
+This will generate executables named `feelpp_application_solid_*`. To execute it, you need to give the path of the cfg file associated to your case, with `--config-file`.
+
+For example
 
 ----
+./feelpp_application_fluid_2d --config-file={sourcedir}/applications/models/solid/TurekHron/csm3.cfg
+----
+
+is how to execute the case ahead.
