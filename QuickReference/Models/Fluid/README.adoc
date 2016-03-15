@@ -317,3 +317,28 @@ The link:#Post_Process[post process] aspect is the last one to define. We choose
     }
 }
 ----
+
+=== Compilation/Execution
+
+Once you've a build dir, you just have to realise a `make` into 
+
+First at all, the main code is located into the following folder :
+
+[align="center"]
+--------------------
+feelpp/applications/models/fluid
+--------------------
+
+To select on which case ( CFD1, CFD2 or CFD3 ) we want to work, a specific configuration file need to be linked at the execution. They can be found at the path below 
+
+----
+feelpp/applications/models/fluid/TurekHron
+----
+
+The result files are then stored by default in 
+
+----
+    feel/applications/models/fluid/TurekHron/"case_name"/
+   "velocity_space""pression_space""Geometric_order"/"processor_used"
+----
+
