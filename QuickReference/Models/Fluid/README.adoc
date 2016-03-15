@@ -320,23 +320,23 @@ The link:#Post_Process[post process] aspect is the last one to define. We choose
 
 === Compilation/Execution
 
-Once you've a build dir, you just have to realise a `make` into 
+Once you've a build dir, you just have to realise the command `make` at 
 
-First at all, the main code is located into the following folder :
-
-[align="center"]
 --------------------
-feelpp/applications/models/fluid
+{buildir}/applications/models/fluid
 --------------------
 
-To select on which case ( CFD1, CFD2 or CFD3 ) we want to work, a specific configuration file need to be linked at the execution. They can be found at the path below 
+This will generate an executable named `feelpp_application_fluid_2d`. To execute it, you need to give the path of the cfg file associated to your case, with `--config-file`.
+
+For example
 
 ----
-feelpp/applications/models/fluid/TurekHron
+./feelpp_application_fluid_2d --config-file={sourcedir}/applications/models/fluid/cavity/cavity3d.cfg
 ----
+
+is how to execute the case ahead.
 
 The result files are then stored by default in 
-
 ----
     feel/applications/models/fluid/TurekHron/"case_name"/
    "velocity_space""pression_space""Geometric_order"/"processor_used"
