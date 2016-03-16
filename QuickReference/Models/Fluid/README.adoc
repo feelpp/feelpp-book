@@ -339,14 +339,14 @@ is how to execute the case ahead.
 The result files are then stored by default in 
 
 ----
- feel/applications/models/fluid/TurekHron/"case_name"/
+ feel/applications/models/fluid/"case_name"/
    "velocity_space""pression_space""Geometric_order"/"processor_used"
 ----
 
 If we return once again at our example, the result files are in 
 
 ----
- feel/applications/models/fluid/TurekHron/cavity3d/P2P1G1/np_1
+ feel/applications/models/fluid/cavity3d/P2P1G1/np_1
 ----
 
 
