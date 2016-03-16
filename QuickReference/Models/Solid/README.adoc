@@ -426,3 +426,9 @@ For example
 ----
 
 is how to execute the case ahead.
+
+The result files are then stored by default in 
+
+If we return once again at our example, the result files are in 
+
+
