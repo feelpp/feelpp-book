@@ -422,13 +422,22 @@ This will generate executables named `feelpp_application_solid_*`. To execute it
 For example
 
 ----
-./feelpp_application_fluid_2d --config-file={sourcedir}/applications/models/solid/TurekHron/csm3.cfg
+mpirun -np 4 feelpp_application_fluid_2d --config-file={sourcedir}/applications/models/solid/TurekHron/csm3.cfg
 ----
 
-is how to execute the case ahead.
+is how to execute the case ahead on 4 processors.
 
 The result files are then stored by default in 
+The result files are then stored by default in 
 
-If we return once again at our example, the result files are in 
+----
+feel/applications/models/solid/{case_name}/{OrderDisp""Geometric_order"/"processor_used"
+----
+
+If we return once again at the example, the result files are in 
+
+----
+feel/applications/models/solid/TurekHron/csm3/P1G1/np_8
+----
 
 
