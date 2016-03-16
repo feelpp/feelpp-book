@@ -427,14 +427,13 @@ mpirun -np 4 feelpp_application_fluid_2d --config-file={sourcedir}/applications/
 
 is how to execute the case ahead on 4 processors.
 
-The result files are then stored by default in 
-The result files are then stored by default in 
+The result files are then stored by default in  
 
 ----
 feel/applications/models/solid/{case_name}/{OrderDisp""Geometric_order"/"processor_used"
 ----
 
-If we return once again at the example, the result files are in 
+If we return once again at the example, they are in 
 
 ----
 feel/applications/models/solid/TurekHron/csm3/P1G1/np_8
