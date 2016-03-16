@@ -430,7 +430,7 @@ is how to execute the case ahead on 4 processors.
 The result files are then stored by default in  
 
 ----
-feel/applications/models/solid/{case_name}/{OrderDisp""Geometric_order"/"processor_used"
+feel/applications/models/solid/{case_name}/{OrderDis}{Geometric_order}/{processor_used}
 ----
 
 If we return once again at the example, they are in 
