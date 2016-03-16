@@ -93,9 +93,12 @@ cd /path/to/build/directory
 
 # If you installed Feel++ in a directory referenced in the CMakeLists.txt
 # previsouly described, then you have nothing to add
-# Otherwise you should set the FEELPP_DIR environment variable to the location
-# of your Feel++ installation, i.e. the one you specified with -DCMAKE_INSTALL_PREFIX
-# ex: export FEELPP_DIR=/home/login/opt
+
+# Otherwise you should either set the FEELPP_DIR or CMAKE_PREFIX_PATH environment variable.
+# For example, if you manually installed Feel++ to <install_dir>, either set:
+# - CMAKE_PREFIX_PATH to <install_dir>/share/feel/cmake/modules/
+# or
+# - FEELPP_DIR to <install_dir>
 
 # Configure your project
 cmake /path/to/source/directory \
