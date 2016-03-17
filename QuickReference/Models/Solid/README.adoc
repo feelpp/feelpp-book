@@ -298,6 +298,7 @@ snes-ksp-maxit-reuse=100
 pc-type=lu #lu,gasm,ml
 ksp-converged-reason=1
 ----
+
 In this case, we use the Saint-Venant-Kirchhoff model to  define our problem, we set the update of linear system constant and jacobian linear as "no update", we discretize values associated to solvers ( SNES and KSP ), and finally we choose LU as the preconditioner method.
 
 
