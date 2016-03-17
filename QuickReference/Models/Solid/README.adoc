@@ -66,7 +66,7 @@ option: `mechanicalproperties.compressible.volumic_law`
 }
 ----
 
-where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio and `rho` the density in $$kg\cdot m^{-3}$$ .
+where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$ .
 
 === Boundary Conditions
 
