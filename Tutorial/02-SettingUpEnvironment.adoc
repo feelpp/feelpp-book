@@ -87,7 +87,7 @@ It's also possible to give several configuration files with the option `--config
 
 In the case where some options are duplicated in the files, the priority is given at the end :
 
-  * `ex3.cfg` can overwrite options in `ex2.cfg` and `ex3.cfg`
+  * `ex3.cfg` can overwrite options in `ex2.cfg` and `ex1.cfg`
   
   * `ex2.cfg` can overwrite options in `ex1.cfg`
 
