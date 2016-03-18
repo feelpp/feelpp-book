@@ -89,7 +89,7 @@ where `feel` is the top directory where the source have been downloaded, using g
 [source,sh]
 ----
  cd FEEL/feel.opt
- cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_BUILD_TYPE=RelWithDebInfo
+ cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
 You can customize the build type in any way.
