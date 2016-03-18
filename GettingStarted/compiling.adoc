@@ -11,7 +11,7 @@ toc::[]
 [source,bash]
 ----
 # Generate the makefile
-cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++
+cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.8
 # Compile and install the library
 sudo make install
 # Compile the library and an example
