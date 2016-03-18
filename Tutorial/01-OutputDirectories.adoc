@@ -10,6 +10,8 @@ Feel{plus}+ generates various files that are spread over various directories. Fo
 
 == Results
 
+- Results `$FEELPP_WORKDIR/feel/<your_app_name>/np_1`
+
 == Log files
 
 Feel++ uses https://github.com/google/glog[Google Glog].  
