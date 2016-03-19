@@ -10,13 +10,24 @@ toc::[]
 
 [source,bash]
 ----
+# Get Feel++ sources, either via git of packages
+# Go into the source directory
+# Create a build directory and go into it
+
 # Generate the makefile
-cmake ../feelpp -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6
+# If you do not have administration rights, you must specify the installation
+# path with -DCMAKE_INSTALL_PREFIX=..., when using CMake
+cmake .. -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6
+
+# Compile and install the library
+# You need to use sudo, if you didn't specify the CMAKE_INSTALL_PREFIX option
+make install-feelpp-lib
+
 # Compile the library and an example
 make -j 4 feelpp_qs_laplacian
+
 # execute one example
 ./quickstart/feelpp_qs_laplacian
-----
 
 == General information
 
