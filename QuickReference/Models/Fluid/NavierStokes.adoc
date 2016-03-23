@@ -21,3 +21,17 @@ We add to them the material constitutive equation :
 $$
 \boldsymbol{\sigma}_{f} = -p_f \boldsymbol{I} + \mu_f (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
 $$
+
+
+|===
+| Notation | Quantity | Unit 
+|$$\rho_f$$|fluid density|$$kg/m^3$$
+|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
+|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
+|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
+|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
+|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
+|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
+|$$\nu$$|kinematic viscosity|$$m^2/s$$
+|$$L$$| characteristic length|$$m$$
+|===

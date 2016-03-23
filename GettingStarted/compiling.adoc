@@ -17,7 +17,7 @@ toc::[]
 # Generate the makefile
 # If you do not have administration rights, you must specify the installation
 # path with -DCMAKE_INSTALL_PREFIX=..., when using CMake
-cmake .. -DCMAKE_CXX_COMPILER=/usr/bin/clang++
+cmake .. -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6
 
 # Compile and install the library
 # You need to use sudo, if you didn't specify the CMAKE_INSTALL_PREFIX option
@@ -28,11 +28,10 @@ make -j 4 feelpp_qs_laplacian
 
 # execute one example
 ./quickstart/feelpp_qs_laplacian
-----
 
 == General information
 
-Feel+\+ uses http://www.cmake.org[`cmake`] as its build system. Check that \cmake is using `gcc4.7` (or a higher version) or `clang++` as C+\+ compiler (you can use the option `CMAKE_CXX_COMPILER=<path>/g++-4.7` where the `path` depends on your OS, it's probably `/usr/bin` or `/opt/local/bin` but you can also change it with the command `ccmake` and press `t` for advanced options). Feel++, using `cmake`, can be built either in source and out of source and different build type:
+Feel{plus}{plus} uses http://www.cmake.org[`cmake`] as its build system. Check that \cmake is using `gcc4.7` (or a higher version) or `clang++` as C{plus}{plus} compiler (you can use the option `CMAKE_CXX_COMPILER=<path>/g++-4.7` where the `path` depends on your OS, it's probably `/usr/bin` or `/opt/local/bin` but you can also change it with the command `ccmake` and press `t` for advanced options). Feel++, using `cmake`, can be built either in source and out of source and different build type:
 
 * minsizerel: minimal size release
 
@@ -101,7 +100,7 @@ where `feel` is the top directory where the source have been downloaded, using g
 [source,sh]
 ----
  cd FEEL/feel.opt
- cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_BUILD_TYPE=RelWithDebInfo
+ cmake ../feel -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
 You can customize the build type in any way.

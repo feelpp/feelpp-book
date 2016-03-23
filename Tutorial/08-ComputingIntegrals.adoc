@@ -30,7 +30,7 @@ We start with the following function $$g=1$$. Recall that by default the domain 
 
 [source,sh]
 ----
-shell> ./feelpp_tut_myintegrals --functions.g=1
+./feelpp_tut_myintegrals --functions.g=1
 int_Omega 1 = 1
 int_{boundary of Omega} 1 = 4
 ----
@@ -39,7 +39,7 @@ Now we try $$g=x$$. We need to tell Feel++ what are the symbols associated with 
 
 [source,sh]
 ----
-shell> ./feelpp_tut_myintegrals --functions.g=x:x
+./feelpp_tut_myintegrals --functions.g=x:x
 int_Omega x = 0.5
 int_{boundary of Omega} x = 2
 ----
@@ -50,7 +50,7 @@ Now we try $$g=x y$$. We need to tell Feel++ what are the symbols associated wit
 
 [source,sh]
 ----
-shell> ./feelpp_tut_myintegrals --functions.g=x*y:x:y
+./feelpp_tut_myintegrals --functions.g=x*y:x:y
 int_Omega x*y = 0.25
 int_{boundary of Omega} x*y = 1
 ----
