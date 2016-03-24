@@ -20,6 +20,7 @@ We initialize the environment variables through the Feel++ `Environment` class.
 ----
 {% include "code/02-environment.cpp" %}
 ----
+[include:-6](code/02-environment.cpp)
 
 === Config file
 
