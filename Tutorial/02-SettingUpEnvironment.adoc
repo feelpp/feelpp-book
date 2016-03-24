@@ -28,7 +28,7 @@ We initialize the environment variables through the Feel++ `Environment` class.
 {% include "code/02-environment.cfg" %}
 ----
 
-[import:2-3](code/02-environment.cfg)
+[include:2-3](code/02-environment.cfg)
 
 == Adding options
 
