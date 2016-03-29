@@ -45,6 +45,7 @@ auto v = project( _space=Xh, _range=elements(mesh),
 ----
 The expression will be evaluated on each point of our mesh.
 
+In order to visualize the result, we create an exporter, named `exhi`, and add to it the projection. 
 ----
 auto exhi = exporter( _mesh=mesh, _name="exhi" );
 int max = 10; double dt = 0.1;
