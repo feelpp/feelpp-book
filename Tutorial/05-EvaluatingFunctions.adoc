@@ -67,6 +67,7 @@ One other method to define function is described here.
 {% include "code/myfunctor.cpp" %}
 ----
 
+In this seccond method, we will use functor :
 ----
 struct Functor
 {
@@ -85,16 +86,19 @@ struct Functor
 };
 ----
 
+we create a unit square meshed by triangles and we define the associated function space : 
 ----
 auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
 auto Xh= Pch<2>(mesh);
 ----
 
+From this space, we can define two elements, here one equals to the variable $$x$$ and the other to the variable $$y$$, obtain from Functor class.
 ----
 auto u = Xh.element(idf(Functor(0))); // Will contain x
 auto v = Xh.element(idf(Functor(1))); // Will contain y
 ----
 
+The exporter creation, completion and saving is the final step to visualize our expression $$x$$ and $$y$$ on the defined mesh.
 ----
 auto ex1 = exporter(_mesh=mesh,_name="ex1");
 ex1->add("u",u);
