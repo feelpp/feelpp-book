@@ -36,13 +36,14 @@ Then the expression we would like to evaluate :
 auto myExpr = sin(pi*Px());
 ----
 
-Px() refers to the variable x of our space ( see link:../QuickReference/keywords.adoc#_Expressions[keywords] ).
+`Px()` refers to the variable x of our space ( see link:../QuickReference/keywords.adoc#_Expressions[keywords] ).
 
-To evaluate this, we will project it on our function space :
+With this,we can `project` it on our function space :
 ----
 auto v = project( _space=Xh, _range=elements(mesh),
                   _expr=myExpr);
 ----
+The expression will be evaluated on each point of our mesh.
 
 == Hard Coded 
 
