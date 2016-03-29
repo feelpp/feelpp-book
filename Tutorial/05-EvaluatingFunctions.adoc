@@ -24,10 +24,11 @@ The list of the Feel++ Keyword is link:../QuickReference/keywords.adoc[here].
 
 This example represent the evaluation of the expression $$ sin(\pi x)$$ on a unit circle.
 
-First at all, we define the unit circle space :
+First at all, we define the unit circle and its interpolation space :
 
 ----
  auto mesh = unitCircle<2>();
+ auto Xh = Pch<2>( mesh );
 ----
 
 Then the expression we would like to evaluate :
