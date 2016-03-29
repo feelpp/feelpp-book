@@ -22,6 +22,19 @@ Instead of defining an expression from a string, you can use
 
 The list of the Feel++ Keyword is link:../QuickReference/keywords.adoc[here].
 
+This example represent the evaluation of the expression $$ sin(\pi x)$$ on a unit circle.
+
+First at all, we define the unit circle space :
+
+----
+ auto mesh = unitCircle<2>();
+----
+
+Then the expression we would like to evaluate :
+----
+auto myExpr = sin(pi*Px());
+----
+
 == Hard Coded 
 
 One other method to define function is described here.
