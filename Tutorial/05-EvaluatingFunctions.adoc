@@ -66,3 +66,38 @@ One other method to define function is described here.
 ----
 {% include "code/myfunctor.cpp" %}
 ----
+
+----
+struct Functor
+{
+    static const size_type context = vm::JACOBIAN|vm::POINT;
+    typedef double value_type;
+    typedef Feel::uint16_type uint16_type;
+    static const uint16_type rank = 0;
+    static const uint16_type imorder = 1;
+    static const bool imIsPoly = true;
+    myFunctor( int i ): coord(i){}
+    double operator()( uint16_type a, uint16_type b, ublas::vector<double> const& x, ublas::vector<double> const& n ) const
+        {
+            return x[coord];
+        }
+    int coord = 0;
+};
+----
+
+----
+auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
+auto Xh= Pch<2>(mesh);
+----
+
+----
+auto u = Xh.element(idf(Functor(0))); // Will contain x
+auto v = Xh.element(idf(Functor(1))); // Will contain y
+----
+
+----
+auto ex1 = exporter(_mesh=mesh,_name="ex1");
+ex1->add("u",u);
+ex1->add("v",v);
+ex1->save();
+----
