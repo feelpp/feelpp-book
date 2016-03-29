@@ -67,7 +67,7 @@ One other method to define function is described here.
 {% include "code/myfunctor.cpp" %}
 ----
 
-In this seccond method, we will use functor :
+In this seccond method, we will use Functor :
 ----
 struct Functor
 {
@@ -86,7 +86,7 @@ struct Functor
 };
 ----
 
-we create a unit square meshed by triangles and we define the associated function space : 
+We create a unit square meshed by triangles and we define the associated function space : 
 ----
 auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
 auto Xh= Pch<2>(mesh);
