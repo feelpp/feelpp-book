@@ -45,6 +45,18 @@ auto v = project( _space=Xh, _range=elements(mesh),
 ----
 The expression will be evaluated on each point of our mesh.
 
+----
+auto exhi = exporter( _mesh=mesh, _name="exhi" );
+int max = 10; double dt = 0.1;
+double time = 0;
+for (int i = 0; i<max; i++)
+  {
+    exhi->step( time )->add( "vhi", v );
+    time += dt;
+    exhi->save();
+  }
+----
+
 == Hard Coded 
 
 One other method to define function is described here.
