@@ -21,7 +21,7 @@ $$$$
 u=1 \text{ on } ∂Ω
 $$where u is the unknown and v a test function.
 
-The steps to implement this are
+The steps to implement it are
 
 - Loading a mesh, creating the function space and associated elements
 ----
