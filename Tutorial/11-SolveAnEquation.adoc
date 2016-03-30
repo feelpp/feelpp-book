@@ -1,4 +1,4 @@
-== Solve an equation
+== Solve an partial differential equation
 
 With all the previously notions we approach, the definition of a partial differential equation and boundary conditions are our next step. More details on these aspects can be retrieve at this link:../QuickReference/forms.adoc[page].
 
@@ -84,5 +84,5 @@ The complete code reads as follows :
 
 [source,sh]
 ----
-{% include "code/08-myintegrals.cfg" %}
+{% include "code/11-mylaplacian.cfg" %}
 ----
