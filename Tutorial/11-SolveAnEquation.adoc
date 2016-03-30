@@ -37,7 +37,8 @@ a+=on(_range=boundaryfaces(mesh),
       _rhs=l, _element=u, _expr=cst(0.) );
 ----
 
-We impose, in this case, $$u=0$$ on $$\delta\Omega$$. You can find more information on link:../QuickReference/Mesh/iterators.adoc[range] and 
+We impose, in this case, $$u=0$$ on $$\delta\Omega$$, with the keyword on. More precise information can be retrieve at the end of this link:link:../QuickReference/forms.adoc[page]. 
+
 
 - Solving the problem
 
