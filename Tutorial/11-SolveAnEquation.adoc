@@ -4,7 +4,6 @@ With all the previously notions we approach, the definition of a partial differe
 
 == Construction of the equation
 
-
 - Loading a mesh, creating the function space and associated elements
 ----
  auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
@@ -17,8 +16,8 @@ With all the previously notions we approach, the definition of a partial differe
 
 ----
 auto l = form1( _test=Vh );
-    l = integrate(_range=elements(mesh),
-                  _expr=id(v));
+l = integrate(_range=elements(mesh),
+              _expr=id(v));
 ----
 
 - Definition of bilinear form $$a$$
@@ -29,12 +28,16 @@ a = integrate(_range=elements(mesh),
               _expr=gradt(u)*trans(grad(v)) );
 ----
 
+form1 and form2 are used to define respectively the left and right side of our partial differential equation. More details can be found link:../QuickReference/forms.adoc[here].
+
 - Add boundary condition on $$u$$
 
 ----
 a+=on(_range=boundaryfaces(mesh), 
       _rhs=l, _element=u, _expr=cst(0.) );
 ----
+
+We impose, in this case, $$u=0$$ on $$\delta\Omega$$. You can find more information on link:../QuickReference/Mesh/iterators.adoc[range] and 
 
 - Solving the problem
 
