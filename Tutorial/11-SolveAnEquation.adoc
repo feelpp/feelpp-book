@@ -47,7 +47,7 @@ a = integrate(_range=elements(mesh),
               _expr=gradt(u)*trans(grad(v)) );
 ----
 
-form1 and form2 are used to define respectively the left and right side of our partial differential equation.
+`form1` and `form2` are used to define respectively the left and right side of our partial differential equation.
 
 - Add boundary condition on $$u$$
 
@@ -56,7 +56,7 @@ a+=on(_range=boundaryfaces(mesh),
       _rhs=l, _element=u, _expr=cst(0.) );
 ----
 
-We impose, in this case, $$u=0$$ on $$\partial\Omega$$, with the keyword on.
+We impose, in this case, $$u=0$$ on $$\partial\Omega$$, with the keyword `on`.
 
 - Solving the problem
 
