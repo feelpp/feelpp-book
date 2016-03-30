@@ -19,7 +19,7 @@ $$
 \int_\Omega \nabla u \nabla v = \int_\Omega v
 $$$$
 u=1 \text{ on } ∂Ω
-$$where u is the unknown and v the test function.
+$$where u is the unknown and v a test function.
 
 The steps to implement this are
 
