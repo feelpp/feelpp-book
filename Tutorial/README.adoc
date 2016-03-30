@@ -37,6 +37,8 @@ The step by step tutorial is decomposed into :
 
 - link:08-ComputingIntegrals.adoc[Computing integrals]
 
+- link:11-SolveAnEquation.adoc[Solving an equation]
+
 - link:09-UsingBackend.adoc[Using a backend]
 
 - link:10-Model.adoc[Creating a model]
