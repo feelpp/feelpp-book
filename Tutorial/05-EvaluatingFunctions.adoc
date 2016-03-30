@@ -101,7 +101,7 @@ auto u = Xh.element(idf(Functor(0))); // Will contain x
 auto v = Xh.element(idf(Functor(1))); // Will contain y
 ----
 
-The exporter creation, completion and saving is the final step to visualize our expression $$x$$ and $$y$$ on the defined mesh.
+The data exportation is the final step to visualize our expression $$x$$ and $$y$$ on the defined mesh.
 
 ----
 auto ex1 = exporter(_mesh=mesh,_name="ex1");
