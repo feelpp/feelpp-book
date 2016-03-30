@@ -1,8 +1,8 @@
-= Solve an equation
+== Solve an equation
 
 With all the previously notions we approach, the definition of a partial differential equation and boundary conditions are our next step. More details on these aspects can be retrieve at this link:../QuickReference/forms.adoc[page].
 
-== Construction of the equation
+=== Construction of the equation
 
 This example refers to a laplacian problem, define by
 
@@ -70,4 +70,19 @@ a.solve(_rhs=l,_solution=u);
 auto e = exporter( _mesh=mesh );
 e->add( "u", u );
 e->save();
+----
+
+=== Code
+The complete code reads as follows :
+
+[source,sh]
+----
+{% include "code/11-mylaplacian.cpp" %}
+----
+
+=== Config file
+
+[source,sh]
+----
+{% include "code/08-myintegrals.cfg" %}
 ----
