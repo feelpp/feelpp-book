@@ -39,5 +39,5 @@ The step by step tutorial is decomposed into :
 
 - link:09-UsingBackend.adoc[Using a backend]
 
-- link:10-Model.adoc[using a model]
+- link:10-Model.adoc[Creating a model]
 
