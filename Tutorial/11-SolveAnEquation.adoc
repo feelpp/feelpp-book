@@ -1,8 +1,27 @@
 = Solve an equation
 
-With all the previously notions we approach, the definition of a partial differential equation and boundary conditions are our next step.
+With all the previously notions we approach, the definition of a partial differential equation and boundary conditions are our next step. More details on these aspects can be retrieve at this link:../QuickReference/forms.adoc[page].
 
 == Construction of the equation
+
+This example refers to a laplacian problem, define by
+
+$$
+−Δu=1 \text{ in } Ω=[0,1]^2
+$$
+$$
+u=1 \text{ on } ∂Ω
+$$
+
+After turning it into its weak form, we have 
+
+$$
+\int_\Omega \nabla u \nabla v = \int_\Omega v
+$$$$
+u=1 \text{ on } ∂Ω
+$$where u is the unknown and v the test function.
+
+The steps to implement this are
 
 - Loading a mesh, creating the function space and associated elements
 ----
@@ -28,7 +47,7 @@ a = integrate(_range=elements(mesh),
               _expr=gradt(u)*trans(grad(v)) );
 ----
 
-form1 and form2 are used to define respectively the left and right side of our partial differential equation. More details can be found link:../QuickReference/forms.adoc[here].
+form1 and form2 are used to define respectively the left and right side of our partial differential equation.
 
 - Add boundary condition on $$u$$
 
@@ -37,8 +56,7 @@ a+=on(_range=boundaryfaces(mesh),
       _rhs=l, _element=u, _expr=cst(0.) );
 ----
 
-We impose, in this case, $$u=0$$ on $$\delta\Omega$$, with the keyword on. More precise information can be retrieve at the end of this link:link:../QuickReference/forms.adoc[page]. 
-
+We impose, in this case, $$u=0$$ on $$\partial\Omega$$, with the keyword on.
 
 - Solving the problem
 
