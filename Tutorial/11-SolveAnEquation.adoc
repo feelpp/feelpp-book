@@ -1,2 +1,51 @@
 = Solve an equation
 
+With all the previously notions we approach, the definition of a partial differential equation and boundary conditions are our next step.
+
+== Construction of the equation
+
+
+- Loading a mesh, creating the function space and associated elements
+----
+ auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
+ auto Vh = Pch<2>( mesh );
+ auto u = Vh->element();
+ auto v = Vh->element();
+----
+
+- Definition of linear form $$l$$
+
+----
+auto l = form1( _test=Vh );
+    l = integrate(_range=elements(mesh),
+                  _expr=id(v));
+----
+
+- Definition of bilinear form $$a$$
+
+----
+auto a = form2( _trial=Vh, _test=Vh);
+a = integrate(_range=elements(mesh),
+              _expr=gradt(u)*trans(grad(v)) );
+----
+
+- Add boundary condition on $$u$$
+
+----
+a+=on(_range=boundaryfaces(mesh), 
+      _rhs=l, _element=u, _expr=cst(0.) );
+----
+
+- Solving the problem
+
+----
+a.solve(_rhs=l,_solution=u);
+----
+
+- Exporting the solution
+
+----
+auto e = exporter( _mesh=mesh );
+e->add( "u", u );
+e->save();
+----
