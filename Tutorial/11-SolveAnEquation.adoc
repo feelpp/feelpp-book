@@ -75,14 +75,14 @@ e->save();
 === Code
 The complete code reads as follows :
 
-[source,sh]
+[source,cpp]
 ----
 {% include "code/11-mylaplacian.cpp" %}
 ----
 
 === Config file
 
-[source,sh]
+[source,cfg]
 ----
 {% include "code/11-mylaplacian.cfg" %}
 ----
