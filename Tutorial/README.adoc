@@ -37,7 +37,7 @@ The step by step tutorial is decomposed into :
 
 - link:08-ComputingIntegrals.adoc[Computing integrals]
 
-- link:11-SolveAnEquation.adoc[Solving an equation]
+- link:11-SolveAnEquation.adoc[Solving a partial differential equation]
 
 - link:09-UsingBackend.adoc[Using a backend]
 
