@@ -28,7 +28,7 @@ CMake]
 .. link:Tutorial/07-SpaceElements.adoc[Creating a function space and
 functions]
 .. link:Tutorial/08-ComputingIntegrals.adoc[Computing integrals]
-.. link:Tutorial/11-SolveAnEquation.adoc[Solve an equation]
+.. link:Tutorial/11-SolveAnEquation.adoc[Solve an partial differential equation]
 .. link:Tutorial/09-UsingBackend.adoc[Using linear algebra backends]
 .. link:Tutorial/10-Model.adoc[Creating a model]
 . link:Applications/readme.adoc[Applications]
