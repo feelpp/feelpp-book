@@ -8,7 +8,8 @@ toc::[]
 
 == Step 1 : Configure your project with Feel++
 
-In order to configure your project to use Feel+\+, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. To detect your Feel++ installation and configure your application you can use the following file example:
+In order to configure your project to use Feel+\+, you will have to use CMake and add a `CMakeLists.txt` file in the root directory of your sources. + 
+To detect your Feel++ installation and configure your application you can use the following template file:
 
 ----
 cmake_minimum_required(VERSION 2.8)
