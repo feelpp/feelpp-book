@@ -1,5 +1,5 @@
-Prerequisites 
-=============
+Software prerequisites 
+======================
 
 In order to use Feel++, a set of tools are required. In the following, we will briefly present them _via_ a simple project that performs basic arithmetic operations.
 
@@ -189,11 +189,11 @@ class operation
 
 Using this project, we will present here : 
 
-- how to compile the program using a link:makefile.adoc[MakeFile]
+- How to compile the program using a link:makefile.adoc[MakeFile]
 
-- how to make it simpler with link:cmake.adoc[CMake]
+- How to make it simpler with link:cmake.adoc[CMake]
 
-- what is git and link:github.adoc[GitHub]
+- What is git and link:github.adoc[GitHub]
 
 - How the code has to be link:doxygen.adoc[documented] .
 
