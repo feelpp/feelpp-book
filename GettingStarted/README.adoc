@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-In this section, we will explain how to download and install Feel++.
+This section describes the available ways to to download and install Feel++.
 
 * link:building.adoc[Building Feel++ from sources]
    

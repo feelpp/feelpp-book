@@ -2,14 +2,14 @@
 
 Doxygen is a tool for auto-generating API documentation. It generates documentation from annotated sources. The main advantage of Doxygen is that you can write documentation directly within the comments of your source code. Doxygen searches for source code in your tree and generates API documentation for it.   
 
-**So, what's the value to Doxygen?** 
+**So, what's the added value to Doxygen?** 
 
 Some of Doxygen's output is extracted from the semantics of the source programs. Other parts are from special comments you embed in your code. The entire process requires a special configuration file that specifies exactly what you want to do. Just as your development directory usually has a *Makefile* that controls the build process, you also have a *Doxyfile* that contains the options used by Doxygen. So Doxygen automatically generates an example Doxyfile for you on request.
 
 The source comments can use any of three formats:   
 
 - Special comments can mimic a Javadoc comment by using an extra 
-asterisk in a multiline comment
+asterisk in a multiline comment:
 
 ----
 /**
@@ -20,7 +20,7 @@ asterisk in a multiline comment
 */
 ----
 
-- You can also use an exclamation point instead of the second asterisk 
+- You can also use an exclamation point instead of the second asterisk:
   
 ----
 /*!
@@ -29,7 +29,7 @@ asterisk in a multiline comment
 */
 ----
 
-- Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment.   
+- Two or more single line comments (//) that have at least one extra slash or exclamation point following the comment marker also form a special comment:
 
 ----
 ///
@@ -39,14 +39,14 @@ asterisk in a multiline comment
  
 === Tags
 
-Special comments can contain Doxygen tags that let you specify particulars about your program. By default, comments refer to the next lexical element, for example:   
+Special comments can contain Doxygen tags that let you specify features of your program. By default, comments refer to the next lexical element, for example:   
 
 ----
 /**
-* @brief, which provides a brief description of the function.
-* @param, which identifies a single parameter to the function (you may have more than one param tag).
-* @return, which describes the function's return value.
-* @date, which describes the date of documentation
+* @brief, provides a brief description of the function.
+* @param, identifies a single parameter to the function (you may have more than one param tag).
+* @return, describes the function's return value.
+* @date, describes the date of documentation
 * @todo
 */
 ----

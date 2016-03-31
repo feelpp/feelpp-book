@@ -1,5 +1,5 @@
-This book
-=========
+Content of this book
+====================
 
 This book is available on Github and Gitbook. We use Gitter to discuss the changes in the book.
 
@@ -8,16 +8,16 @@ image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.i
 
 It is organized as follows:
 
-  - link:GettingStarted/README.adoc[Getting Started] which includes instructions for installation from sources or from Debian/Ubuntu and MacOSX.
+  - link:GettingStarted/README.adoc[Getting Started], which includes instructions for installation from sources or from Debian/Ubuntu and MacOSX.
 
-  - link:Tutorial/README.adoc[Tutorial] where we dive step by step into Feel++.
+  - link:Tutorial/README.adoc[Tutorial], where we dive step by step into Feel++.
 
 
-  - link:QuickReference/README.adoc[Quick reference] which describes the various components of Feel++ applications.
+  - link:QuickReference/README.adoc[Quick reference], which describes the various components of Feel++ applications.
 
 ==  Contributors
 
-This book is the result of many contributions and in particular from
+This book is the result of many contributions and in particular from:
 
  - Alexandre Ancel
  
