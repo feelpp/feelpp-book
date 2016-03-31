@@ -10,17 +10,26 @@ toc::[]
 
 == Compilers
 
-To make Feel\++ and `cmake` work properly, you first have to install a Xcode for Gcc/clang. If your computer is recent, you can install it with your DVD that came with your machine (not the
-OS DVD, but the applications one). You don't have to install the complete Xcode (you can uncheck iOS SDK for example, it's not necessary here and requires a lot of memory). You can also install Xcode through the App Store. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It's the first step, you'll see later how to easily install the necessary tools to build Feel++.
+To make Feel\++ and `cmake` work properly, you first have to install Xcode for Gcc/clang.
+The easiest way to do so is to go through the App Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It is the first step, you'll see later how to easily install the necessary tools to build Feel++.
 
 === Package management systems
 
-Currently, building Feel\++ is only available through http://brew.sh[Homebrew]. http://www.macports.org/install.php[MacPorts] versions are
-also present in the source tree of Feel+\+. You can find a version using gcc in `<path to top feel directory>/ports/macosx/macports`, and an experimental version using `clang/libc++` in `<path to top feel directory>/ports/macosx/macports-xc5`.
+Currently, building Feel\++ is only available through http://brew.sh[Homebrew]. + 
+http://www.macports.org/install.php[MacPorts] versions are
+also present in the source tree of Feel++. +
+You can find a version using gcc in: +
+```
+<path to top feel directory>/ports/macosx/macports
+```
+and an experimental version using `clang/libc++` in: +
+```
+<path to top feel directory>/ports/macosx/macports-xc5
+```
 
 === Homebrew
 
-Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on the MacOS X ecosystem. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
+Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
 
 > **Note**: To install the latest version of Homebrew, simply
 visit their http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
@@ -28,41 +37,44 @@ then the packages are symlinked into /usr/local (default).
 
 ==== Key commands 
 
-Homebrew base command is `brew`. Here is a list of useful commands to use Homebrew:
+Homebrew base command is `brew`. Here is a list of base available commands:
 
-* `brew doctor`: Check if the system has any problem with the current installation of brew.
+* `brew doctor`: Check if the system has any problem with the current installation of Homebrew;
 
-* `brew install mypackage`: This action installs the package mypackage.
+* `brew install mypackage`: This command installs the package mypackage;
 
-* `brew install [--devel|--HEAD] mypackage`: These action respectively installs either the development version or the HEAD version of the package mypackage, if such versions are specified in the Formula file.
+* `brew install [--devel|--HEAD] mypackage`: These options respectively installs either the development version or the HEAD version of the package mypackage, if such versions are specified in the Formula file;
 
-* `brew uninstall mypackage`: This action uninstalls the package mypackage.
+* `brew uninstall mypackage`: This command allows to uninstall the package mypackage.
 
-=== Formula 
+==== Formula 
 
-A Formula is a https://www.ruby-lang.org[Ruby] script describing to Homebrew how to install a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: https://github.com/feelpp/homebrew-science[feelpp/homebrew-science].
+A Formula is a https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: https://github.com/feelpp/homebrew-science[feelpp/homebrew-science].
 
 ====  First time installation: Homebrew and Feel++
 
-This section is aimed at users that do not have Homebrew already installed. If it is not your case, keep in mind the repository to tap and see the next section so you do not miss any important dependency. In order to build Feel++ from Homebrew, you have to do the following steps:
+This section is aimed at users that do not have Homebrew already installed. + 
+In order to build Feel++ from Homebrew, you have to do the following steps:
 
 ----
 # Install Homebrew:
 ruby -e "$ (curl -fsSL https://raw.github.com/feelpp/homebrew/go/install)"
+
 # Check that everything is ok or fix warnings/errors if necessary:
 brew doctor
-# Get the Formulae specific to Feel++ on the github of feelpp:
+
+# Get the specific Feel++ Formulae on the Github repository of feelpp:
 brew tap feelpp/science
 
 # Finally either:
 # - Install Feel++ and all its dependencies:
 brew install feelpp
 # - Or install only the dependencies:
-# (useful if you plan to use a different version from the master one, e.g. develop)
+# (Useful if you plan to build Feel++ from sources)
 brew install --only-dependencies feelpp
 ----
 
-> **Note** If you encountered problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
+> **Note** If you encounter problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
 
 ////
 or in a more detailed way:
@@ -86,12 +98,6 @@ brew install feelpp
 ////
 
 And you should be set to use Feel++ on MacOS X.
-
-Be careful: you have to specifically use clang++ (and not clang).
-
-////
-cmake ../where/is/my/code -DCMAKE_CXX_COMPILER=`which clang++`
-////
 
 ====  Advanced usage: Homebrew and Feel++ dependencies
 
@@ -125,7 +131,7 @@ Required: libevent
     Enable MPI_THREAD_MULTIPLE
 ----
 
-You then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
+Tehn, you then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
 
 **Important:** Needed dependencies for Feel++:
 
