@@ -22,7 +22,7 @@ Credits
 ==  Management  
 
 Feel++ is managed by Christophe Prud'homme
-mailto:christophe.prudhomme@feelpp.org[], Professor in applied mathematic and scientific computing at U. de Strasbourg, France.
+mailto:christophe.prudhomme@feelpp.org[], Professor in applied mathematic and scientific computing at the link:University of Strasbourg[www.en.unistra.fr], France.
 
 == Developers
 
