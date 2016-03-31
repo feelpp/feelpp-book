@@ -5,7 +5,7 @@
 .. link:credits.adoc[Credits]
 .. link:consortium.adoc[Consortium]
 .. link:sponsors.adoc[Sponsors]
-.. link:GettingStarted/prerequisites/prerequisites.adoc[Prerequisites]
+.. link:GettingStarted/prerequisites/prerequisites.adoc[Software prerequisites]
 ... link:GettingStarted/prerequisites/doxygen.adoc[Doxygen]
 ... link:GettingStarted/prerequisites/github.adoc[GitHub]
 ... link:GettingStarted/prerequisites/cmake.adoc[CMake]
