@@ -10,11 +10,6 @@
             "fixme" : true
         }
     },
-    {
-    "structure": {
-      "readme": "intro.adoc"
-      }
-    },
     "links": {
         "sidebar": {
             "Feel++": "http://www.feelpp.org/",
