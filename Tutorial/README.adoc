@@ -1,10 +1,10 @@
-Before reading the following, it is recommended to have a look to :
+Before reading the following, it is recommended to have a look at:
 
 - link:../GettingStarted/download.adoc[Install Feel++]
 
 - link:../GettingStarted/compiling.adoc[Using Feel++]
 
-Examples, config files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
+Examples, configuration files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
 
 To try it on your machine, you have to do:
 
