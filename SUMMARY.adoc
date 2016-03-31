@@ -1,6 +1,7 @@
 = Summary
 
-. link:book_intro.adoc[Introduction]
+. link:README.adoc[Introduction]
+. link:book_intro.adoc[Book Introduction]
 .. link:book.adoc[Content of this book]
 .. link:credits.adoc[Credits]
 .. link:consortium.adoc[Consortium]
