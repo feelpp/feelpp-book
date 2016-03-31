@@ -117,11 +117,15 @@ Please have a look at:
  FEEL/feel/CMakeLists.txt
 ----
 
-or at the `List of Cmake Options` section.
+// <ndlr>: Where is the list ?
+// or at the `List of Cmake Options` section.
 
 ## Per-system specific configuration
 
-If you need to set specific CMake variables to fit an exotic system (e.g. supercomputer), you can create a machine file fitting this system. To do so, simply create a file named `feelpp.machines.<name>.cmake` in the `cmake/machines` directory, where `<name>` is the machine name returned by the execution of `uname -n`. The file will automatically be recognized and loaded, when you will be compiling Feel++ on this system.  
+If you need to set specific CMake variables to fit an exotic system (e.g. supercomputer), you can create a machine file fitting this system. + 
+To do so, simply create a file named `feelpp.machines.<name>.cmake` in the `cmake/machines` directory, where `<name>` is the machine name returned by the execution of `uname -n`. The file will automatically be recognized and loaded, when you will be compiling Feel++ on this system.  
+
+## Compilation
 
 Once CMake has done its work, you are now able to compile the library with:
 
@@ -130,7 +134,7 @@ Once CMake has done its work, you are now able to compile the library with:
   make
 ----
 
-You can speed up the compilation process, if you have a multicore processor. To do so, you have to specify the number of parallel jobs `make` will be allowed to spawn by using the `-j` flag:
+You can speed up the compilation process, if you have a multicore processor. To do so, you can specify the number of parallel jobs `make` will be allowed to spawn by using the `-j` flag:
 
 [source,bash]
 ----
