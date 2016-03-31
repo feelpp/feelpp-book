@@ -189,11 +189,9 @@ class operation
 
 Using this project, we will present here : 
 
-- How to compile the program using a link:makefile.adoc[MakeFile]
+- How to compile the program using a link:makefile.adoc[MakeFile],
+- How to make it simpler with link:cmake.adoc[CMake],
+- How the code has to be link:doxygen.adoc[documented],
+- What is git and link:github.adoc[GitHub].
 
-- How to make it simpler with link:cmake.adoc[CMake]
-
-- What is git and link:github.adoc[GitHub]
-
-- How the code has to be link:doxygen.adoc[documented] .
 
