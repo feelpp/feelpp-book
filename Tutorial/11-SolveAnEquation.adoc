@@ -4,6 +4,7 @@ With all the previously notions we approach, the definition of a partial differe
 
 
 === Construction of the equation
+
 This example refers to a laplacian problem, define by
 
 $$
@@ -31,7 +32,7 @@ $$
 
 === Implementation
 
-The steps to implement it are
+The steps to implement this problem are
 
 - Loading a 2D mesh, creating the function space $$Vh$$, composed of piecewise polynomial functions of order 2, and its associated elements
 
