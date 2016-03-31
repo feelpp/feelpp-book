@@ -1,5 +1,5 @@
-This book
-=========
+Content of this book
+====================
 
 This book is available on Github and Gitbook. We use Gitter to discuss the changes in the book.
 
