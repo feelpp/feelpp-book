@@ -1,10 +1,10 @@
-Before reading the following, it is recommended to have a look to :
+Before reading the following, it is recommended to have a look at:
 
 - link:../GettingStarted/download.adoc[Install Feel++]
 
 - link:../GettingStarted/compiling.adoc[Using Feel++]
 
-Examples, config files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
+Examples, configuration files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
 
 To try it on your machine, you have to do:
 
@@ -37,7 +37,9 @@ The step by step tutorial is decomposed into :
 
 - link:08-ComputingIntegrals.adoc[Computing integrals]
 
+- link:11-SolveAnEquation.adoc[Solving a partial differential equation]
+
 - link:09-UsingBackend.adoc[Using a backend]
 
-- link:10-Model.adoc[using a model]
+- link:10-Model.adoc[Creating a model]
 

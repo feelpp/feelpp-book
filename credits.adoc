@@ -22,49 +22,49 @@ Credits
 ==  Management  
 
 Feel++ is managed by Christophe Prud'homme
-mailto:christophe.prudhomme@feelpp.org[], Professor in applied mathematic and scientific computing at U. de Strasbourg, France.
+mailto:christophe.prudhomme@feelpp.org[], Professor in applied mathematic and scientific computing at the link:www.en.unistra.fr[University of Strasbourg], France.
 
 == Developers
 
 ===  Current Developers and Contributors 
 
-The current developers are
+The current developers are:
 
 
- - Alexandre Ancel mailto:alexandre.ancel@cemosis.fr[]
+ - Alexandre Ancel, mailto:alexandre.ancel@cemosis.fr[]
 
- - Vincent Chabannes mailto:vincent.chabannes@feelpp.org[]
+ - Vincent Chabannes, mailto:vincent.chabannes@feelpp.org[]
 
- - Guillaume Dollé mailto:gdolle@unistra.fr[]
+ - Guillaume Dollé, mailto:gdolle@unistra.fr[]
 
- - Vincent Doyeux mailto:vincent.doyeux@ujf-grenoble.fr[]
+ - Vincent Doyeux, mailto:vincent.doyeux@ujf-grenoble.fr[]
 
- - Cecile Daversin mailto:daversin@math.unistra.fr[]
+ - Cecile Daversin, mailto:daversin@math.unistra.fr[]
 
- - Vincent Huber mailto:vincent.huber@cemosis.fr[]
+ - Vincent Huber, mailto:vincent.huber@cemosis.fr[]
 
- - Mourad Ismail mailto:Mourad.Ismail@ujf-grenoble.fr[]
+ - Mourad Ismail, mailto:Mourad.Ismail@ujf-grenoble.fr[]
 
- - Pierre Jolivet (former Phd student at U. Joseph Fourier, currently at ETHZ)
+ - Pierre Jolivet, (former Phd student at U. Joseph Fourier, currently at ETHZ)
  
- - Christophe Prud'homme mailto:christophe.prudhomme@feelpp.org[]
+ - Christophe Prud'homme, mailto:christophe.prudhomme@feelpp.org[]
  
- - Ranine Tarabay mailto:tarabay@math.unistra.fr[]
+ - Ranine Tarabay, mailto:tarabay@math.unistra.fr[]
  
- - Christophe Trophime mailto:christophe.trophime@lncmi.cnrs.fr[]
+ - Christophe Trophime, mailto:christophe.trophime@lncmi.cnrs.fr[]
  
- - Jean-Baptiste Wahl mailto:wahl.jb@gmail.com[]
+ - Jean-Baptiste, Wahl mailto:wahl.jb@gmail.com[]
 
 Feel++ benefits from the many discussions and close research collaborations with
-the following persons
+the following persons:
 
- - Zakaria Belhachmi mailto:zakaria.belhachmi@uha.fr[]
+ - Zakaria Belhachmi, mailto:zakaria.belhachmi@uha.fr[]
  
- - Silvia Bertoluzza mailto:silvia.bertoluzza@imati.cnr.it[]
+ - Silvia Bertoluzza, mailto:silvia.bertoluzza@imati.cnr.it[]
  
- - Micol Pennacchio mailto:Micol.Pennacchio@imati.cnr.it[]
+ - Micol Pennacchio, mailto:Micol.Pennacchio@imati.cnr.it[]
  
- - Marcela Szopos mailto:mszopos@math.unistra.fr[]
+ - Marcela Szopos, mailto:mszopos@math.unistra.fr[]
 
 Finally Feel++ also benefits from discussions within collaborative projects with
 many people (in no particular order):
@@ -92,7 +92,7 @@ Yannick Hoarau, Philippe Gilotte, Benjamin Surowiec, Romain Hild, Marion Spreng,
 
 ===  Current funding 
 
-Feel++ is supported by
+Feel++ is supported by:
 
  * ANR projects:
    
@@ -109,27 +109,27 @@ Feel++ is supported by
 === Past funding 
 
 
- * ANR
+ * ANR:
    
    - http://www.hamm-project.fr[HAMM] - (Cosinus call - 2010-2014)
    
    - http://www.opus-project.fr[OPUS] - (TLOG call - 2008-2011)
 
- * IDEX
+ * IDEX:
    
    - Funding for http://www.cemosis.fr[Cemosis]
 
- * FRAE
+ * FRAE:
    
    - RB4FASTSIM - 2010-2014
 
- * PRACE projects
+ * PRACE projects:
    
    - HP-FEEL++ 2013-2014
    
    - HP-PDE{1,2} 2012-2014
 
- * the region Rhônes-Alpes thanks the cluster ISLE <<fn:2>> and the project CHPID since 2009
+ * The region Rhônes-Alpes thanks the cluster ISLE <<fn:2>> and the project CHPID since 2009
 
 == Footnotes
 
