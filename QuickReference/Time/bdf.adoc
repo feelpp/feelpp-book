@@ -27,3 +27,15 @@ $$BDF2:  y_{n+2} - \tfrac43 y_{n+1} + \tfrac13 y_n = \tfrac23 h f(t_{n+2}, y_{n+
 BDF is a subclass derivative from Time-Stepping ( or TS ). It implements, as his name says, backward differentiation formulas up to order $$s\leq 4$$ . As a subclass, BDF share input parameters, which can be set via `ts.{asterisk}`, but have also its own parameters ( such as the order ), define by `bdf.{asterisk}`.
 
 If different time steppers are used simultaneously, you can customize them by adding a prefix like `bdf_options(“myfluid”)`. For example, link:../Models/Fluid/README.adoc[FluidMechanics] offers an interface to this type of case.
+
+Here are some of the main methods from BDF :
+
+|===
+|Feel++ Keyword | Description 
+|`bdf( _space, _name)` | BDF constructor
+|`start( )` | start the bdf at the initial time value
+|`isFinished( )` | stop the bdf if the time end is reach
+|`next( )` | increment the time by `time.step`
+|`next(u)` | increment the time by `u`
+|`time( )` | return the current time
+|===
