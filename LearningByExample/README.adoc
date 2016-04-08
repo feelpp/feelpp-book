@@ -1,0 +1,3 @@
+All the source codes for this section examples are avaible in the Feel++
+sources in the directory "doc/manual"
+
