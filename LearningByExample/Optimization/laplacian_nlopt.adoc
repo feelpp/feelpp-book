@@ -11,8 +11,7 @@ details here
 First example
 -------------
 
-Here we propose to solve the following problem, finding the parameters $$ b,c,d
-$$
+Here we propose to solve the following problem, finding the parameters $$b,c,d$$
 solution of the following homogeneous heat equation
 
 $$
