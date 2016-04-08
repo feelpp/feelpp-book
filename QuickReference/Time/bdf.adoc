@@ -11,7 +11,7 @@ can be solved with BDF.
 
 For a given time and function, these methods try to approximate the derivative of this functions, using old computed times data.
 
-The methods, components of BDF, are split by their order value. We have then BDF1, BDF2,..., and so on.The general formula can be written as
+The methods, components of BDF, are splitted by their order value. We have then BDF1, BDF2,..., and so on. The general formula can be written as
 
 $$
 \sum_{k=0}^s a_k y_{n+k} = h \beta f(t_{n+s}, y_{n+s}) 
