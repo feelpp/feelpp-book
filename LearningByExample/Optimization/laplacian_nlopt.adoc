@@ -1,15 +1,5 @@
-Inverse problem simple example
-==============================
-include::header.adoc[]
-
-The next example is based on the [FreeFem++
-documentation](http://www.freefem.org/ff++/ftp/freefem++doc.pdf) section 3.13
-Optimal control.  Note that for inverse problem course, you can find more
-details here
-[E.Blayo](https://team.inria.fr/moise/files/2012/03/Methodes-Inverses-Var-M2-math-2009.pdf)
-
-First example
--------------
+Laplacian nlopt
+===============
 
 Here we propose to solve the following problem, finding the parameters $$b,c,d$$
 solution of the following homogeneous heat equation
