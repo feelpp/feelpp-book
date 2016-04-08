@@ -1,5 +1,6 @@
 Inverse problem simple example
 ==============================
+include::header.adoc[]
 
 The next example is based on the [FreeFem++
 documentation](http://www.freefem.org/ff++/ftp/freefem++doc.pdf) section 3.13
@@ -10,8 +11,8 @@ details here
 First example
 -------------
 
-Here we propose to solve the following problem, finding the parameters $ b,c,d
-$
+Here we propose to solve the following problem, finding the parameters $$ b,c,d
+$$
 solution of the following homogeneous heat equation
 
 $$
@@ -25,36 +26,36 @@ $$
 \label{eq:heatnlopt}
 $$
 
-with $ \kappa\rightarrow\kappa(\kappa_0,\kappa_1,\kappa_2)$ and
-where $ \Omega $ denotes the whole domain, $ \partial\Omega $ denotes
+with $$ \kappa\rightarrow\kappa(\kappa_0,\kappa_1,\kappa_2)$$ and
+where $$ \Omega $$ denotes the whole domain, $$ \partial\Omega $$ denotes
 the boundary of the domain such that these parameters verify the observation
-$ u_\text{obs} $.
+$$ u_\text{obs} $$.
 
-In other words, the goal is to minimize an objective function $ J(\kappa_0,\kappa_1,\kappa_2) $
+In other words, the goal is to minimize an objective function $$ J(\kappa_0,\kappa_1,\kappa_2) $$
 
 $$
   \min_{\kappa_0,\kappa_1,\kappa_2\in\mathbb{R}} J = \frac{1}{2}\int_{U} (u-u_\text{obs})^2
 $$
 
-with $ U\in\Omega $ an open subset of all observable measures.
+with $$ U\in\Omega $$ an open subset of all observable measures.
 
 TIP: In practice, observations are often boundary measurement taken on a subset of the
-domain boundary $ U\subseteq\partial\Omega $. Thus arise concerns about existence
+domain boundary $$ U\subseteq\partial\Omega $$. Thus arise concerns about existence
 and uniqueness of solution for the inverse problem, especially if observations
 does not cover the whole boundary.
 
-For the following example, we take $ U=\Omega $ and we define
+For the following example, we take $$ U=\Omega $$ and we define
 
 $$
 \kappa=1+{\kappa_0}_{\vert_{I_0}} + {\kappa_1}_{\vert_{I_1}} + {\kappa_2}_{\vert_{I_2}}
 $$
 
-where $ I_0, I_1, I_2 $ are different subset (inclusions) of $ \Omega $.
+where $$ I_0, I_1, I_2 $$ are different subset (inclusions) of $$ \Omega $$.
 
 Adjoint method
 ~~~~~~~~~~~~~~
 
-We add a small perturbation to the given parameter $ b, c, d $ denoted
+We add a small perturbation to the given parameter $$ b, c, d $$ denoted
 
 $$
 \kappa_0^\delta = \kappa_0 + \alpha\delta \kappa_0 \\
@@ -62,8 +63,8 @@ $$
 \kappa_2^\delta = \kappa_2 + \alpha\delta \kappa_2 \\
 $$
 
-for $ \alpha\in\mathbb{R} $.
-Then $ u^\delta=u+\alpha\delta u $ is the perturbed solution of the equation
+for $$ \alpha\in\mathbb{R} $$.
+Then $$ u^\delta=u+\alpha\delta u $$ is the perturbed solution of the equation
 
 $$
 \begin{cases}
@@ -77,9 +78,9 @@ $$
 $$
 
 where the diffusion coefficient for the perturbation
-$ \kappa^\delta \rightarrow \kappa( \kappa_0^\delta, \kappa_1^\delta, \kappa_2^\delta ) $
+$$ \kappa^\delta \rightarrow \kappa( \kappa_0^\delta, \kappa_1^\delta, \kappa_2^\delta ) $$
 
-Lets note $ \delta J $ the shift for the cost function $ J $ such that
+Lets note $$ \delta J $$ the shift for the cost function $$ J $$ such that
 
 $$
 \begin{aligned}
@@ -91,7 +92,7 @@ $$
     u_\text{obs}) ) \\
 \end{aligned}
 $$
-If we divide by $ \alpha $ and look when $ \alpha\rightarrow 0 $, then we have
+If we divide by $$ \alpha $$ and look when $$ \alpha\rightarrow 0 $$, then we have
 
 $$
 \delta J \approx \int_U \delta u(u - u_\text{obs})
@@ -105,7 +106,7 @@ $$
 = -\nabla\cdot(\kappa \nabla u)
 $$
 
-We introduce a state variable $ p $ (the adjoint) choosen appropriatly as we
+We introduce a state variable $$ p $$ (the adjoint) choosen appropriatly as we
 will see further. We multiply the previous model by this variable and integrate
 on the domain.
 
@@ -125,9 +126,9 @@ $$
 -\int_\Omega\kappa\frac{\partial u}{\partial\mathbf n}p
 $$
 
-we expand the perturbed diffusion coefficient as $ \kappa^\delta=\kappa +\alpha\delta\kappa $ 
-and rearrange terms by $u^\delta -u $ ($ =\alpha\delta u $).
-We divide by $ \alpha $ as previously and makes $ \alpha\rightarrow 0 $, we
+we expand the perturbed diffusion coefficient as $$ \kappa^\delta=\kappa +\alpha\delta\kappa $$ 
+and rearrange terms by $$u^\delta -u $$ ($$ =\alpha\delta u $$).
+We divide by $$ \alpha $$ as previously and makes $$ \alpha\rightarrow 0 $$, we
 have
 
 $$
@@ -156,7 +157,7 @@ $$
 \right)
 $$
 
-we obtain finally for $ p=0 $ on the boundary
+we obtain finally for $$ p=0 $$ on the boundary
 
 $$
 -\int_\Omega \delta u \nabla\cdot(\kappa \nabla p)
@@ -165,8 +166,8 @@ $$
 $$
 
 Now to compute the gradient, we recall the previous equation for
-$ J $ and we deduce from build from the previous equation the following
-model (adjoint equation) for the state variable $ p $
+$$ J $$ and we deduce from build from the previous equation the following
+model (adjoint equation) for the state variable $$ p $$
 
 $$
 \begin{cases}
@@ -179,7 +180,7 @@ $$
 \label{eq:heatadjnlopt}
 $$
 
-If we multiply this equation by $ u^\delta-u $ and integrate 
+If we multiply this equation by $$ u^\delta-u $$ and integrate 
 over the domain, we obtain
 
 $$
@@ -210,7 +211,7 @@ $$
 \end{aligned}
 $$
 
-We recall $ \kappa $ choosen as
+We recall $$ \kappa $$ choosen as
 
 $$
 \kappa=1+{k_0}_{\vert_{I_0}} + {k_1}_{\vert_{I_1}} + {k_2}_{\vert_{I_2}}
