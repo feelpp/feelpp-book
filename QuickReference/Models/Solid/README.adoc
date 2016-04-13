@@ -188,12 +188,6 @@ The fields on which one can do measures:
 Let's finish with a simple example in order to show how this works and how to use them. We will interest us to the deformation of an elastic structure.
 
 === Feel++ code
-Here is the code 
-
-[source,cpp]
-----
-{% include "../Examples/solid_model.cpp" %}
-----
 
 First at all, we define our model type with 
 
@@ -249,15 +243,15 @@ if ( !algoQuasiStatic )
         }
 ----
 
+==== Code
+Here is the code 
 
-=== Config and Json files
-Then the configuration and the associated Json files
+[source,cpp]
+----
+{% include "../Examples/solid_model.cpp" %}
+----
 
-==== Config 
-[source,cfg]
-----
-{% include "../Examples/csm3.cfg" %}
-----
+=== Configuration file 
 
 The config file is used to define options  linked to our case we would have the possibility to change at will. It can be, for example, files paths as follows
 
@@ -301,12 +295,13 @@ ksp-converged-reason=1
 
 In this case, we use the Saint-Venant-Kirchhoff model to  define our problem, we set the update of linear system constant and jacobian linear as "no update", we discretize values associated to solvers ( SNES and KSP ), and finally we choose LU as the preconditioner method.
 
+==== Code
+[source,cfg]
+----
+{% include "../Examples/csm3.cfg" %}
+----
 
-==== Json
-[source,json]
-----
-{% include "../Examples/csm3.json" %}
-----
+=== Json file
 
 First at all, we define some general information like the name ( and short name ) and the model we would like to use
 
@@ -409,6 +404,14 @@ PostProcess":
         }
     }
 ----
+
+==== Code
+
+[source,cfg]
+----
+{% include "../Examples/csm3.json" %}
+----
+
 
 === Compilation/Execution
 

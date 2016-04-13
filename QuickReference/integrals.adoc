@@ -5,9 +5,9 @@ You should be able to create a mesh now. If it is not the case, get back to the 
 
 The prerequisite of this section is to be able to :
 
-* link:Mesh/iterators.adoc[Iterate over a region of a mesh elements, faces, edges and points].
+* link:Mesh/iterators.adoc[Iterate over a region of a mesh elements, faces, edges and points]
 
-* link:keywords.adoc[Define expressions].
+* link:keywords.adoc[Define expressions]
 
 Then you can define and compute integrals
 

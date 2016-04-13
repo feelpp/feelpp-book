@@ -8,30 +8,30 @@ toc::[]
 
 == Debian
 
-Debian is the platform of choice for Feel+\+, it was developed mainly on it. The commands to install Feel++ on Debian are
+Debian is the platform of choice for Feel+\+, it was developed mainly on it. The commands to install Feel++ on Debian are:
 
 ----
   sudo apt-get update
   sudo apt-get install feel++-apps libfeel++-dev feel++-doc
 ----
 
-The interested user is encouraged to follow the Feel\++ PTS page
+The interested user is encouraged to follow the Feel\++ PTS page:
 
-* Feel++ http://packages.qa.debian.org/f/feel%2B%2B.html[Debian Packages Tracking System]
+* Feel++, http://packages.qa.debian.org/f/feel%2B%2B.html[Debian Packages Tracking System]
 
 At the moment Feel++ compiles and is available on the following Debian platforms:
 
-* Feel++ https://buildd.debian.org/status/package.php?p=feel%2b%2b[Build results]
+* Feel++: https://buildd.debian.org/status/package.php?p=feel%2b%2b[Build results]
 
 ##  Ubuntu
 Feel++ has its own PPA, checkout https://launchpad.net/~feelpp/+archive/ppa[feelpp ppa for Trusty, Saucy and Precise].
 
-The interested user might want to look at the following Ubuntu Launchpad Feel\++ page https://launchpad.net/ubuntu/\+source/feel++[Ubuntu Source
-  Page for all Ubuntu versions]
+The interested user might want to look at the following Ubuntu Launchpad Feel\++ page: https://launchpad.net/ubuntu/\+source/feel++[Ubuntu Source
+  Page for all Ubuntu versions].
 
-=== precise Ubuntu Precise - 12.04
+=== Ubuntu 12.04 - Precise Pangolin
 
-This section is outdated
+This section is outdated.
 
 ----
 	sudo add-apt-repository -y ppa:feelpp/ppa
@@ -45,7 +45,7 @@ This section is outdated
 
 It allows us also to provide a recent version to compile the Feel++ projects on https://travis-ci.org/feelpp/feelpp[Travis-ci], which is a continuous integration tool. The installation procedure is currently https://github.com/feelpp/feelpp/blob/develop/.travis.yml[as follows].
 
-=== Ubuntu Trusty - 14.04
+=== Ubuntu 14.04 - Trusty Tahr
 
 ----
 	sudo add-apt-repository ppa:feelpp/ppa
@@ -53,7 +53,7 @@ It allows us also to provide a recent version to compile the Feel++ projects on 
 	sudo apt-get install feel++-apps libfeel++-dev
 ----
 
-Ubuntu 14.04 does not support C+\+14 at this time, however they maintain a ppa on lauchpad which provide clang and gcc versions that do support C++14
+Ubuntu 14.04 does not support C+\+14 at this time, however a ppa providing clang and gcc versions that do support C++14, is available.
 
 [source,sh]
 ----
@@ -64,7 +64,7 @@ Ubuntu 14.04 does not support C+\+14 at this time, however they maintain a ppa o
 
 === Configuration
 
-First of all, you have to install dependencies
+First of all, you have to install dependencies:
 
 ----
  sudo apt-get install git libboost1.55-all-dev petsc-dev libgmsh2 libgmsh-dev paraview gcc-4.9 clang-3.6  libopenmpi1.6 libopenmpi-dev libcln-dev libxml2-dev automake libtool cmake cmake-curses-gui libgoogle-glog-dev libeigen3-dev
@@ -72,7 +72,7 @@ First of all, you have to install dependencies
 
 === Cmake
 
-Then, in your chosen build directory, you have to run the cmake process.
+Then, in your chosen build directory, you have to run the cmake command: 
 [source,sh]
 ----
 cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPILER=`which clang-3.6` -DFEELPP_MINIMAL_CONFIGURATION=ON -DFEELPP_ENABLE_NLOPT=OFF
@@ -80,7 +80,7 @@ cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPI
 
 === Compilation
 
-And at last, the compiling process.
+And evntually compile the library and sample applications:
 [source,sh]
 ----
 make
@@ -88,5 +88,16 @@ make
 
 You should consider running parallel compilation (`make -j 12` for example).
 
-==== Optional: installation
-The one that want Feel++ installed in his system can use `make install`. For more information, we refer to the cmake documentation.
+==== Installation
+You can then install Feel++ in your system. By default, the target directory will be `/usr/local`, be sure to change it with the `-DCMAKE_INSTALL_PREFIX=...` option if you do not have administration rights. +
+To perform the installation, you have several options listed below:
+```
+# Only builds and install the feelpp library
+make install-feelpp-lib
+
+# Builds and install the feelpp library and sample applications
+make install-feelpp-base
+
+# Builds and install the feelpp library and all the applications (This might take some time)
+make install
+```

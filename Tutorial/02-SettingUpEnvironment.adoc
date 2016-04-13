@@ -13,20 +13,25 @@ Let's begin with our first program using the Feel\++ framework.  To start, you i
 We use the C\++ `namespace` to avoid `Feel::` prefix before
 Feel++ objects.
 
-We initialize the environment variables through the Feel++ `Environment` class.
+We initialize the environment variables through the Feel++ `Environment` class, which can be found link:../QuickReference/environment.adoc[here].
 
 === Source code
-[source,c++]
+
+[source,cpp,numbered]
 ----
 {% include "code/02-environment.cpp" %}
 ----
 
+[include:-6,numbered](code/02-environment.cpp)
+
 === Config file
 
-[source,c++]
+[source,c++,numbered]
 ----
 {% include "code/02-environment.cfg" %}
 ----
+
+[include:2-3](code/02-environment.cfg)
 
 == Adding options
 
