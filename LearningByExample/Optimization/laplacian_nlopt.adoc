@@ -95,7 +95,7 @@ $$
 = -\nabla\cdot(\kappa \nabla u)
 $$
 
-We introduce a state variable $$ p $$ (the adjoint) choosen appropriatly as we
+We introduce a state variable $$ p $$ (the adjoint) chosen appropriately as we
 will see further. We multiply the previous model by this variable and integrate
 on the domain.
 
@@ -200,7 +200,7 @@ $$
 \end{aligned}
 $$
 
-We recall $$ \kappa $$ choosen as
+We recall $$ \kappa $$ chosen as
 
 $$
 \kappa=1+{k_0}_{\vert_{I_0}} + {k_1}_{\vert_{I_1}} + {k_2}_{\vert_{I_2}}
