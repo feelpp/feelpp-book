@@ -4,4 +4,4 @@ Optimization problems
 This section presents some mathematical optimization problems.
 The following examples source codes are located in "doc/manual/opt/".
 
-- [laplacian_nlopt](LearningByExample/Optimization/laplacian_nlopt.adoc) ([source code](https://github.com/feelpp/feelpp/blob/develop/doc/manual/opt/laplacian_nlopt.cpp))
+- link:laplacian_nlopt.adoc[laplacian_nlopt] (link:https://github.com/feelpp/feelpp/blob/develop/doc/manual/opt/laplacian_nlopt.cpp[source code])
