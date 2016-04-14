@@ -33,4 +33,4 @@ auto val2 = integrate(_range=markedfaces(mesh,"markerName"),_expr=print(trans(id
 
 Q: Feel++ testsuite uses the Boost.Test framework. When used in a debugger and an exception is triggered, the debugger won't catch the exception and provide the backtrace. It is actually Boost.Test that catches all exception which were uncaught which means that the debugger will stop with no backtrace to be displayed. eventually some texts that an exception was thrown is going to be displayed.
 
-A: It suffices to tell the Debugger to catch events before running the Feel\++ application. Start the debugger then issue the following command : `catch throw`, then the debugger will stop if an exception is thrown by Feel++ or a third party library and you get a nice backtrace to understand why the exception was thrown.
+A: It suffices to tell the Debugger to catch events before running the Feel\++ application. Start the debugger then issue the following command : `catch throw` in gdb or `break set -E c++` in lldb, then the debugger will stop if an exception is thrown by Feel++ or a third party library and you get a nice backtrace to understand why the exception was thrown.

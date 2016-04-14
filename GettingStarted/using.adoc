@@ -74,11 +74,10 @@ There are two ways that you can configure your project to use Feel++:
 
 === Using the research directory
 
-The first possibility is to use the research directory located inside Feel++ source directory. To do so, simply copy the directory containing your source code into the research directory. Then you can follow the https://github.com/feelpp/feelpp-book/blob/master/GettingStarted/compiling.md[compilation guide] with a simple additional step: You have to enable your project when typing the `cmake` command.
-
-To do so, you must add the following option `-DFEELPP_ENABLE_RESEARCH_<directory>=ON` to cmake, with `<directory>` begin the name of the directory that you copied in research. 
-
-Then you can proceed by going to your project directory in the build directory and type the `make` command.
+1. Create a file named `README.md` or `README.adoc` in your source directory.
+2. Move your source directory in `feelpp/research`
+3. (Re-)run the `cmake` process with `-DFEELPP_ENABLE_RESEARCH_<directory>=ON` (everything in uppercase)
+4. Compile everything (`cd build/research/project; make feelpp_my_personal_app`)
 
 === Using an installation of Feel++ 
 
