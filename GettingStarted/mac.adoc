@@ -131,7 +131,7 @@ Required: libevent
     Enable MPI_THREAD_MULTIPLE
 ----
 
-Tehn, you then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
+Then, you then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
 
 **Important:** Needed dependencies for Feel++:
 
