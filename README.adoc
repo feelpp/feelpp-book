@@ -35,7 +35,7 @@ image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.i
 === Contribute to this documentation
 
 You can contribute to improve this documentation on
-https://github.com/feelpp/feelpp-book[GitHub].
+https://github.com/feelpp/feelpp-book[GitHub] and follow the  https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
 
 
