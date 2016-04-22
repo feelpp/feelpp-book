@@ -279,7 +279,7 @@ K.on(_range=elements(mesh), _expr=fit(idv(T)[,dataFile(string),[type(int)]]));
 Kd.on(_range=elements(mesh), _expr=fitDiff(idv(T)[,dataFile(string),[type(int)]]));
 ----
 
-=== Options:
+=== Options
 
 |===
 | `--fit.datafile` | the data file to interpolate (two columns)
