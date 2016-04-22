@@ -271,13 +271,15 @@ todo: define transformation
 == Fitting Datafile
 
 To deal with datafile interpolation, the `fit` and `fitDiff` keywords have been developed.
-```c++
+```cpp
 auto Xh = Pch<2>(mesh);
 auto K = Xh->element();
 K.on(_range=elements(mesh), _expr=fit(idv(T)[,dataFile(string),[type(int)]]));
 Kd.on(_range=elements(mesh), _expr=fitDiff(idv(T)[,dataFile(string),[type(int)]]));
 ```
+
 === Options:
+
 |===
 | `--fit.datafile` | the data file to interpolate (two columns)
 | `--fit.kind` | P0 (=0), P1 (=1), Spline (=2), Akima (=3)
@@ -289,6 +291,7 @@ Kd.on(_range=elements(mesh), _expr=fitDiff(idv(T)[,dataFile(string),[type(int)]]
 |===
 
 === Example
+
 See `feelpp/testsuite/feelfit/test_interpolator.cpp`
 
 Bibliography :
