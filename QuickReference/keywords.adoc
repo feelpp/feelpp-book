@@ -271,12 +271,13 @@ todo: define transformation
 == Fitting Datafile
 
 To deal with datafile interpolation, the `fit` and `fitDiff` keywords have been developed.
-```cpp
+[source,cpp]
+----
 auto Xh = Pch<2>(mesh);
 auto K = Xh->element();
 K.on(_range=elements(mesh), _expr=fit(idv(T)[,dataFile(string),[type(int)]]));
 Kd.on(_range=elements(mesh), _expr=fitDiff(idv(T)[,dataFile(string),[type(int)]]));
-```
+----
 
 === Options:
 
