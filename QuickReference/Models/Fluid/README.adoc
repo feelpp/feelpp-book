@@ -6,9 +6,9 @@
 toc::[]
 
 == Models 
-////
-{% include "/QuickReference/Models/Fluid/NavierStokes.adoc" %}
-////
+
+{% include "NavierStokes.adoc" %}
+
 
 == JSON file
 

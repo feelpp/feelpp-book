@@ -7,9 +7,8 @@ toc::[]
 
 == Models 
 
-////
-{% include "/QuickReference/Models/Solid/SaintVenantKirchhoff.adoc" %}
-////
+{% include "SaintVenantKirchhoff.adoc" %}
+
 
 == Json file
 
