@@ -113,7 +113,7 @@ auto E_1 = internalfaces(mesh);
 auto E_2 = markedfaces(mesh,"Gamma_1");
 auto E_3 = markedfaces(mesh,"Gamma_2");
 auto newset = concatenate( E_1, E_2, E_3 );
-cout << "measure of newset = " << integrate(_range=newset, _expr=cst(1.)).evalute() << std::endl;
+cout << "measure of newset = " << integrate(_range=newset, _expr=cst(1.)).evaluate() << std::endl;
 ```
 
 
