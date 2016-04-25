@@ -105,7 +105,7 @@ for (auto const& e : r )
 
 == Concatenate sets of entities
 
-Denote $$\mathcal{E}_{e_1}, \ldots ,\mathcal{E}_{e_n}$$ $$n$$ *disjoints* sets of the same type of entities (eg elements, faces, edges or points). We wish to concatenate these $$n$$ sets. To this end, we use `concatenate` which takes an arbitrary number of *disjoints* sets.
+Denote $$\mathcal{E}_{1}, \ldots ,\mathcal{E}_{n}$$ $$n$$ *disjoints* sets of the same type of entities (eg elements, faces, edges or points). We wish to concatenate these $$n$$ sets. To this end, we use `concatenate` which takes an arbitrary number of *disjoints* sets.
 ```c++
 #include <feel/feelmesh/concatenate.hpp>
 ...
