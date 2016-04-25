@@ -103,6 +103,24 @@ for (auto const& e : r )
 }
 ----
 
+== Concatenate sets of entities
+
+Denote $$\mathcal{E}_{e_1}, \ldots ,\mathcal{E}_{e_n}$$ $$n$$ *disjoints* sets of the same type of entities (eg elements, faces, edges or points). We wish to concatenate these $$n$$ sets. To this end, we use `concatenate` which takes an arbitrary number of *disjoints* sets.
+```c++
+#include <feel/feelmesh/concatenate.hpp>
+...
+auto E_1 = internalfaces(mesh);
+auto E_2 = markedfaces(mesh,"Gamma_1");
+auto E_3 = markedfaces(mesh,"Gamma_2");
+auto newset = concatenate( E_1, E_2, E_3 );
+cout << "measure of newset = " << integrate(_range=newset, _expr=cst(1.)).evalute() << std::endl;
+```
+
+
+== Compute the complement of a set of entities
+
+Denote $$\mathcal{E}_e$$ a set of entities, eg. the set of all faces (both  internal and boundary faces). Denote $$\Gamma_e$$ a set of entities
+
 == Helper function on entities set
 
 Feel++ provides some helper functions to apply on set of entities. We denote by range_t the type of the entities set.
