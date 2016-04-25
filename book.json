@@ -1,6 +1,6 @@
 {
-    "gitbook": "2.x.x",
-    "plugins": ["anchors","include-codeblock","include-highlight","mathjax","ga","richquotes","toc","expandable-chapters","unicodecss"],
+    "gitbook": ">=3.0.0-pre.0",
+    "plugins": ["anchors","include-codeblock","include-highlight","mathjax","ga","richquotes","toc","expandable-chapters","unicodecss","-search"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-65761593-1"
@@ -18,6 +18,5 @@
     },
     "variables": {
         "feelpp": "Feel++"
-    },
-    "plugins": ["-search"]
+    }
 }
