@@ -105,7 +105,7 @@ for (auto const& e : r )
 
 == Concatenate sets of entities
 
-Denote $$\mathcal{E}_{1}, \ldots ,\mathcal{E}_{n}$$ $$n$$ *disjoints* sets of the same type of entities (eg elements, faces, edges or points). We wish to concatenate these $$n$$ sets. To this end, we use `concatenate` which takes an arbitrary number of *disjoints* sets.
+Denote $$\mathcal{E}_{1}, \ldots ,\mathcal{E}_{n}$$ $$n$$ *disjoints* sets of the same type of entities (eg elements, faces, edges or points), $$\cup_{i=1}^{n} \mathcal{E}_i$$ with $$\cap_{i=0}^{n} \mathcal{E}_i = \emptyset$$. We wish to concatenate these $$n$$ sets. To this end, we use `concatenate` which takes an arbitrary number of *disjoints* sets.
 ```c++
 #include <feel/feelmesh/concatenate.hpp>
 ...
@@ -119,7 +119,17 @@ cout << "measure of newset = " << integrate(_range=newset, _expr=cst(1.)).evalua
 
 == Compute the complement of a set of entities
 
-Denote $$\mathcal{E}_e$$ a set of entities, eg. the set of all faces (both  internal and boundary faces). Denote $$\Gamma_e$$ a set of entities
+Denote $$\mathcal{E}$$ a set of entities, eg. the set of all faces (both  internal and boundary faces). Denote $$\mathcal{E}_\Gamma$$ a set of entities marked by $$\Gamma$$. We wish to build $${\Gamma}^c=\mathcal{E}\backslash\Gamma$$. To compute the complement, Feel++ provides a `complement` template function that requires $$\mathcal{E}$$ and a predicate that return `true` if an entity of $$\mathcal{E}$$ belongs to $$\Gamma$$, `false` otherwise. The function returns mesh iterators over $$\Gamma^c$$.
+```c++
+#include <feel/feelmesh/complement.hpp>
+...
+auto E = faces(mesh);
+// build set of boundary faces, equivalent to boundaryfaces(mesh)
+auto bdyfaces = complement(E,[](auto const& e){return e.isOnBoundary()});
+cout << "measure of bdyfaces = " << integrate(_range=bdyfaces, _expr=cst(1.)).evaluate() << std::endl;
+// should be the same as above
+cout << "measure of boundaryfaces = " << integrate(_range=boundaryfaces(mesh), _expr=cst(1.)).evaluate() << std::endl;
+```
 
 == Helper function on entities set
 
