@@ -31,5 +31,22 @@ then edit the `CMakeLists.txt` in your application directory and add the followi
 feelpp_add_testcase(mytestcase)
 ```
 
+Then type `make feelpp_add_testcase_mytestcase` in the build directory of your application `myapp`. It will copy in the build directory of your application the directory mytestcase. 
+
+> Note: if you updated the testcase data files, executing `make feelpp_testcase_mytestcase` will use `rsync` to update the files that were changed in the source.
+
+The macro `feelpp_add_testcase` supports options:
+
+* `PREFIX` (default is `feelpp`) set the prefix of the target to avoid eg name clash
+```cmake
+feelpp_add_testcase(mytestcase PREFIX foo)
+```
+then the target is `foo_add_testcase_mytestcase`. 
+
+* `DEPS` set the dependencies of the testcase
+```cmake
+feelpp_add_testcase(mytestcase DEPS myothertestcase)
+```
+it allows to update a testcase depending on changes in an other one. 
 
 
