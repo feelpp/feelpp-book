@@ -1,0 +1,7 @@
+= CMake and Feel++ applications
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
+
+Feel\++ offers a development environment for solving partial differential equations. It uses many tools to cover the different steps  pre-processing, processing and post-processing and large range of numerical methods and needs. To this end it is crucial to have a powerful build environment. Feel\++ uses CMake from Kitware
