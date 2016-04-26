@@ -9,5 +9,27 @@ Feel\++ offers a development environment for solving partial differential equati
 
 == CMake macros
 
+=== Setting up Feel++ environment
+
+=== Adding a new application
+
+=== Adding a new testcase
+
+For a give application or multiple applications you may define testcases. testcases are difrectory containing a set of files that may include geometry, mesh, cfg or json files.
+
+To define a new testcase case, create a sub-directory where your application, say `myapp` like in the previous section, stands and copy the required files there.
+
+```sh
+cd <source directory of my application>
+mkdir mytestcase
+# copy files (.geo, .msh, .cfg...) to mytestcase
+...
+```
+then edit the `CMakeLists.txt` in your application directory and add the following line:
+
+```cmake
+feelpp_add_testcase(mytestcase)
+```
+
 
 
