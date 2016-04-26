@@ -11,9 +11,11 @@ Feel\++ offers a development environment for solving partial differential equati
 
 === Setting up Feel++ environment
 
+See section link:../GettingStart/using.adoc:[Using Feel++].
+
 === Adding a new application
 
-See 
+See section link:../GettingStart/using.adoc:[Using Feel++].
 
 === Adding a new testcase
 
