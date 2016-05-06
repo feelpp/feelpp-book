@@ -8,7 +8,7 @@ With all the previously notions we approach, the definition of a partial differe
 This example refers to a laplacian problem, define by
 
 $$
-−Δu=1 \text{ in } Ω=[0,1]^2
+−\Delta u=1 \text{ in } Ω=[0,1]^2
 $$
 $$
 u=1 \text{ on } ∂Ω
