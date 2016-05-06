@@ -32,9 +32,9 @@ make -j 4 feelpp_qs_laplacian
 
 == General information
 
-Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `gcc4.9` (or a higher version) or `clang++` as C{plus}{plus} compiler. You can set the compiler with following option :
+Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `clang-3.4` (or a higher version) (or `g++`, but it has a huge memory footprint) as C{plus}{plus} compiler. You can set the compiler with following option :
 ```
--DCMAKE_CXX_COMPILER=<path>/g++-4.9
+-DCMAKE_CXX_COMPILER=<path>/clang++-3.4
 ``` 
 where the `path` depends on your OS. By default, it should be `/usr/bin` or `/opt/local/bin`, but you can also change it with the command `ccmake` and press `t` for advanced options). +
 
@@ -52,15 +52,14 @@ This is the list of all the libraries you must have installed on your computer, 
 
 Required packages:
 
-* g\++ >= 4.9 or clang >= 3.4 for C++14 compatibility ,
+* clang >= 3.4 for C++14 compatibility,
+* libstdc++ 4.9 or higher (gcc 4.9)
 * MPI: openmpi (preferred) or mpich,
 * Boost >= 1.55,
 * Petsc >= 3.2,
 * CMake >= 2.8.7,
 * Gmsh >= 2.8.3 (can be found at http://www.geuz.org/gmsh[http://www.geuz.org/gmsh]),
 * Libxml2.
-
-> **Warning** if you use clang (>= 3.4) and the standard C\++ library from GCC, you have to use at least the version from g++ 4.9.
 
 Optional packages:
 
