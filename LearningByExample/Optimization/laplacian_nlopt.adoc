@@ -45,9 +45,11 @@ Adjoint method
 We add a small perturbation to the given parameter $$ b, c, d $$ denoted
 
 $$
-\kappa_0^\delta = \kappa_0 + \alpha\delta \kappa_0 \\
-\kappa_1^\delta = \kappa_1 + \alpha\delta \kappa_1 \\
-\kappa_2^\delta = \kappa_2 + \alpha\delta \kappa_2 \\
+\begin{aligned}
+\kappa_0^\delta = \kappa_0 + \alpha\delta \kappa_0  \\
+\kappa_1^\delta = \kappa_1 + \alpha\delta \kappa_1  \\
+\kappa_2^\delta = \kappa_2 + \alpha\delta \kappa_2 
+\end{aligned}
 $$
 
 for $$ \alpha\in\mathbb{R} $$.
