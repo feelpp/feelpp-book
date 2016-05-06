@@ -7,12 +7,10 @@ solution of the following homogeneous heat equation
 $$
 \begin{cases}
 \begin{aligned}
-\displaystyle
--\nabla\cdot(\kappa\nabla u) &= 0 \quad \text{on}\;\Omega \\
+-\nabla\cdot(\kappa\nabla u) &=0 \quad \text{on}\;\Omega \\
   u &= g \quad \text{on}\;\partial\Omega
-\end{aligned}
+  \end{aligned}
 \end{cases}
-\label{eq:heatnlopt}
 $$
 
 with $$ \kappa\rightarrow\kappa(\kappa_0,\kappa_1,\kappa_2)$$ and
@@ -63,7 +61,6 @@ $$
   u^\delta &= 0 \quad \text{on}\;\partial\Omega
 \end{aligned}
 \end{cases}
-\label{eq:heat2nlopt}
 $$
 
 where the diffusion coefficient for the perturbation
@@ -166,7 +163,6 @@ $$
   u &= 0 \quad \text{on}\;\partial\Omega
 \end{aligned}
 \end{cases}
-\label{eq:heatadjnlopt}
 $$
 
 If we multiply this equation by $$ u^\delta-u $$ and integrate 
