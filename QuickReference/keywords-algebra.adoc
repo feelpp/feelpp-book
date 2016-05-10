@@ -1,0 +1,65 @@
+Keywords
+========
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
+
+
+== Vectors and Matrix
+
+=== Building Vectors
+
+Usual syntax to create vectors:
+
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|` vec<n>(v_1,v_2,...,v_n)`|$$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$$|Column Vector with $$n$$ rows<br>entries being expressions|$$n \times 1$$
+|===
+
+You can also use expressions and the unit base vectors:
+
+|===
+|Feel++ Keyword | Math Object | Description 
+|`oneX()` | $$\begin{pmatrix} 1\\0\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{i}$$
+|`oneY()` | $$\begin{pmatrix} 0\\1\\0 \end{pmatrix}$$|Unit vector $$\overrightarrow{j}$$
+|`oneZ()` | $$\begin{pmatrix} 0\\0\\1 \end{pmatrix}$$|Unit vector $$\overrightarrow{k}$$
+|===
+
+
+
+=== Building Matrix
+
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|`mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix entries beeing expressions |$$m \times n$$
+|`ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 1 |$$m \times n$$
+|`zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 0 |$$m \times n$$
+|`constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with a constant c |$$m \times n$$
+|`eye<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix of size$$n\times n$$ |$$n \times n$$
+|`Id<n>()`|$$\begin{pmatrix} 1 & 0 & ...\\ 0 & 1 & ...\\ \vdots & & \end{pmatrix}$$|Unit diagonal Matrix of size$$n\times n$$ |$$n \times n$$
+|===
+
+
+=== Manipulating Vectors and Matrix
+
+Let $$A$$ be a square matrix of size $$n$$.
+
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|`inv(A)`|$$A^{-1}$$|Inverse of matrix $$A$$ |$$n \times n$$
+|`det(A)`|$$\det (A)$$|Determinant of matrix $$A$$ |$$1 \times 1$$
+|`sym(A)`|$$\text{Sym}(A)$$|Symmetric part of matrix $$A$$: $$\frac{1}{2}(A+A^T)$$ |$$n \times n$$
+|`antisym(A)`|$$ \text{Asym}(A)$$|Antisymmetric part of  $$A$$: $$\frac{1}{2}(A-A^T)$$ |$$n \times n$$
+|===
+
+Let A and B be two matrix (or two vectors) of same dimension $$m \times n$$.
+
+|===
+|Feel++ Keyword | Math Object | Description | Dimension 
+|`trace(A)`|$$\text{tr}(A)$$|Trace of matrix $$A$$ Generalized on non-squared Matrix Generalized on Vectors |$$1 \times 1$$
+|`trans(B)`|$$B^T$$|Transpose of matrix $$B$$ Can be used on non-squared Matrix Can be used on Vectors |$$n \times m$$
+|`inner(A,B)`|$$ A.B \\ A:B = \text{tr}(A*B^T)$$|Scalar product of two vectors Generalized scalar product of two matrix |$$1 \times 1$$
+|`cross(A,B)`|$$ A\times B$$|Cross product of two vectors|$$n \times 1$$
+|===
