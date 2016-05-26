@@ -137,6 +137,7 @@ at.solveb(_rhs=ft,_solution=U,_backend=backend(_name="ns"),_prec=a_blockns);
 ----
 
 Then the results are exported at the time t, in order to observe them change over time.
+
 ----
         w.on( _range=elements(mesh), _expr=curlv(u) );
         e->step(mybdf->time())->add( "u", u );

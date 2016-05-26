@@ -27,7 +27,7 @@ $$
 
 == Json file
 
-Let's describe how a json file is build.
+Let's describe how the json file is build.
 
 === Properties
 
