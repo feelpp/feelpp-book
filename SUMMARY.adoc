@@ -72,8 +72,7 @@ Stepping]
 Mechanics]
 ... link:QuickReference/Models/Solid/README.adoc[Computation Solid
 Mechanics]
-... link:QuickReference/Models/FluidStructure/README.adoc[Fluid Structure
-Interaction]
+... link:QuickReference/Models/FluidStructure/README.adoc[Fluid Structure Interaction]
 ... link:QuickReference/Models/Advection/README.adoc[Advection Model]
 . link:FAQ/README.adoc[Frequently Asked Questions]
 .. link:FAQ/FAQDevelopment.adoc[Development]
