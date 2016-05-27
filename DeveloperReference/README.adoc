@@ -1,4 +1,4 @@
 Developer Reference
 ===================
 
-- link:DeveloperReference/CMake.adoc[CMake]
+- link:CMake.adoc[CMake]
