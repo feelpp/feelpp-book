@@ -1,4 +1,4 @@
 Developer Reference
 ===================
 
-- link:Optimization/CMake.adoc[CMake]
+- link:DeveloperReference/CMake.adoc[CMake]
