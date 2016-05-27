@@ -1,2 +1,90 @@
-= Developer Reference
+== CMake
 
+This section aims at helping the developers adding new features regarding the use of CMake.
+
+=== CMake file layout
+
+CMake uses `CMakeLists.txt` text file to describe how it will process the different source code files. Operations that can be done ranges from the creation of target and libraries linking to executing external processus to build additional code or download data from the web.
+
+CMake files layout for Feel++:
+
+```
+1.  CMakeLists.txt
+2.  ...
+3.  cmake/
+4.  -- modules/
+5.  ---- CMakeLists.txt
+6.  ---- feelpp.dependencies.cmake
+7.  ---- Feel++Config.cmake.in
+8.  ---- Find*.cmake
+9.  ---- feelpp.macro.cmake
+10. ---- feelpp.module.*.cmake
+11. ---- ...
+12. -- machines/
+13. ---- feelpp.machines.*.cmake
+14. ...
+15. research/
+16. -- CMakeLists.txt
+```
+
+We highlight here some of the important CMake files for Feel++.
+
+* (1) The initial entry point. It is the `CMakeLists.txt` that is first read when invoking the `cmake` command.
+* (4) The `cmake/modules` directory contains cmake files that are global to the whole source code. 
+** When typing `make install`, all these files are installed using the description in (5).
+** (6) will attempt to find all the needed dependencies using `find_package`, `find_library` or `find_path` directives.
+** (7) is a file configured by CMake. It is used when Feel++ is installed as a library. It allows to keep track of the dependencies Feel++ was compiled with and to configure an application to use the installation.
+** (8) are files that describe how to find a library in the system. They are by the `find_package` directive. 
+** (9) Describes macro that are used in other files, like `feelpp_add_application` to configure an application.
+** (10) are used to download and configure external applications.
+** The files located in (12) define options for specific systems that are detected with their hostname.
+** (15) is a directory where you can drop your projects. In this directory, the projects can be set for build using the `-DFEELPP_ENABLE_RESEARCH_<DirectoryName>=ON` option
+
+=== Adding a new dependency (libraries, headers ...)
+
+==== Using a pre-installed depedency
+
+To add a new dependency to Feel++, you will have to edit the `cmake/modules/feelpp.dependencies.cmake` file.
+
+Let us consider that you want to add a dependency named `SciencePackage`.
+If a `Find<package>.cmake` file (in our case FindSciencePackage.cmake) already exists in the system (typically in /usr/share/cmake-*) or in `cmake/modules`, you can simply add a dependency using the following template:
+```
+# Create an option for enabling/disabling the dependency
+OPTION(FEELPP_ENABLE_SCIENCEPACKAGE "Enable SciencePackage support" ON )
+
+# If the option is enabled
+if(FEELPP_ENABLE_SCIENCEPACKAGE)
+  # Attempt to find the package
+  FIND_PACKAGE( SciencePackage )
+  # When going out of the previous directive, several variables are typically defined to store information on the library:
+  # - SciencePackage_FOUND: defined if the package has been found
+  # - SciencePackage_INCLUDE_DIR: location of include files
+  # - SciencePackage_LIBRARIES: list of libraries to be used
+  if ( SciencePackage_FOUND )
+     # Defined a variable declaring that we found the library, can be used in feel/feelconfig.h.in to inform the source code that the library has been found or not
+    set(FEELPP_HAS_SCIENCEPACKAGE 1)
+   
+    # Include the headers for copmilation
+    include_directories(${SciencePackage_INCLUDE_DIR})
+    # Mark the libraries to be used when linking apps
+    SET(FEELPP_LIBRARIES ${PETSC_LIBRARIES} ${FEELPP_LIBRARIES})
+    # Mark the package as enabled
+    SET(FEELPP_ENABLED_OPTIONS "${FEELPP_ENABLED_OPTIONS} SciencePackage" )
+  endif()
+endif()
+```
+
+==== Dynamically download and compile a new dependency
+
+To download a dependence dynamically, you have mainly two options:
+
+* Using the `ExternalProject_Add`, it allows you to download a package from internet or use a local package, configure and build it easily. You can even apply patches to the source code. Here is a simple example:
+
+```
+ExternalProject_Add(SciencePackage
+            GIT_REPOSITORY "http://git.url"
+            GIT_TAG release_42
+            CMAKE_ARGS -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${USER_DEFINED_INSTALL_PREFIX}
+        )
+```
+* Using the `execute_process(COMMAND ...)` that allows you to execute shell commands.
