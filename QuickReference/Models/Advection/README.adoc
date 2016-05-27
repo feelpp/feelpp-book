@@ -8,7 +8,7 @@ toc::[]
 
 == JSON file
 
-Let's describe how a json file is build.
+Let's describe how the json file is build.
 
 === Properties
 
@@ -25,7 +25,7 @@ Let's describe how a json file is build.
 
 === Boundary Conditions
 
-Boundary conditions and volumic forces are set in the json files
+Boundary conditions are set in the json files
 [source,json]
 .Example for boundary conditions
 ----
