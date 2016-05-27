@@ -81,5 +81,5 @@ Interaction]
 . link:Annexes/README.adoc[Annexes]
 .. link:Annexes/calculus.adoc[Calculus]
 . link:GLOSSARY.adoc[Glossary]
-. link:DeveloperReference/CMake.adoc[Developer Reference]
+. link:DeveloperReference/README.adoc[Developer Reference]
 
