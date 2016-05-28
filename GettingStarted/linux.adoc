@@ -84,7 +84,7 @@ cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPI
 
 === Compilation
 
-And evntually compile the library and sample applications:
+And eventually compile the library and sample applications:
 [source,sh]
 ----
 make
