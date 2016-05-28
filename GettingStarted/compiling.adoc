@@ -82,19 +82,19 @@ This is the list of all the libraries you must have installed on your computer, 
 |===
 | Library | Notes
 
-| superlu | superlu and superlu_dist
-| suitesparse | umfpack (colamd,amd)
+| Superlu | superlu and superlu_dist
+| Suitesparse | umfpack (colamd,amd)
 | OpenTURNS |
 |===
 
-Optional packages:
+.Table Optional tools
+|===
+| Tool | Notes
 
-* Superlu;
-* Suitesparse (umfpack);
-* Metis: scotch with the metis interface (preferred), metis (non-free);
-* Google perftools;
-* Paraview: This is not strictly required to run Feel\++ programs, but it is useful for visualization and Feel++ allows you to directly interface with it (Can be found at http://www.paraview.org[http://www.paraview.org]);
-* Python (2.5 or later) for the validation tools.
+| Google perftools|
+| Paraview | for visualisation purposes
+| Gmsh application | for meshing purposes
+|===
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
 
