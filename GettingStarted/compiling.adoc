@@ -6,31 +6,54 @@ Compiling Feel++ from sources
 
 toc::[]
 
-== Quick start
+== Five minutes configuration
 
+* First retrieve the source
 [source,bash]
 ----
-# Get Feel++ sources, either via git of packages
-# Go into the source directory
-# Create a build directory and go into it
-
-# Generate the makefile
-# If you do not have administration rights, you must specify the installation
-# path with -DCMAKE_INSTALL_PREFIX=..., when using CMake
-cmake .. -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6
-
-# Compile and install the library
-# You need to use sudo, if you didn't specify the CMAKE_INSTALL_PREFIX option
-make install-feelpp-lib
-
-# Compile the library and an example
-make -j 4 feelpp_qs_laplacian
-
-# execute one example
-./quickstart/feelpp_qs_laplacian
+git clone https://github.com/feelpp/feelpp.git
 ----
 
-== General information
+* * Create a build directory
+[source,bash]
+----
+mkdir build
+cd build
+----
+
+* Configure Feel++
+[source,bash]
+----
+CXX=clang++ ../feelpp/configure -r
+----
+
+* Compile the Feel++ library
+[source,bash]
+----
+# use 4 parallel jobs
+make -j4 feelpp
+----
+
+* Compile your first Feel++ application
+[source,bash]
+----
+# a 2D laplacian
+make feelpp_qs_laplacian_2d
+# or a 3D laplacian
+make feelpp_qs_laplacian_3d
+----
+
+* Execute your first Feel++ application
+[source,bash]
+----
+cd quickstart/laplacian
+mpirun -np 4 feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
+# or in 3D
+mpirun -np 4 feelpp_qs_laplacian_3d --config-file qs_laplacian_3d.cfg
+----
+
+
+== Detailed build instructions
 
 Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `clang-3.5` (or a higher version) (or `g++`, but it has a huge memory footprint) as C{plus}{plus} compiler. You can set the compiler with following option :
 ```
