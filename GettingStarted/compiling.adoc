@@ -44,9 +44,10 @@ make feelpp_qs_laplacian_3d
 ----
 
 * Execute your first Feel++ application
-[source,bash]
+[source,sh]
 ----
 cd quickstart/laplacian
+# in 2D
 mpirun -np 4 feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
 # or in 3D
 mpirun -np 4 feelpp_qs_laplacian_3d --config-file qs_laplacian_3d.cfg
@@ -71,7 +72,7 @@ There are different build type that you can set with `-DCMAKE_BUILD_TYPE` (case 
 
 In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
 
-== Required and optional libraries and tools
+=== Required and optional libraries and tools
 
 This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
 
@@ -123,7 +124,7 @@ This is the list of all the libraries you must have installed on your computer, 
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
 
-== Configuration step 
+=== Configuration step 
 
 > **Warning** It is not allowed to build the library in the top source directory.
 
@@ -139,7 +140,7 @@ feel.opt/ # Build directory
 
 In this case, `feelpp` is the top directory where the source have been downloaded, using git or tarballs.
 
-=== Using cmake directly
+==== Using cmake directly
 
 `CMake` is used as it:
 
@@ -149,7 +150,7 @@ cd FEEL/feel.opt
 cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
-=== Using the configure script
+==== Using the configure script
 
 Alternatively you can use the `configure` script which calls `cmake`. `configure --help` will provide the following help.
 [source,sh]
@@ -186,45 +187,44 @@ CXX=clang++ ../feelpp/configure -r
 CXX=clang++ ../feelpp/configure -d -stdlib=c++
 ----
 
-=== Advanced configure setting
+=== Advanced configuration setting
 
 ==== Per-system specific configuration
 
 If you need to set specific CMake variables to fit an exotic system (e.g. supercomputer), you can create a machine file fitting this system. + 
 To do so, simply create a file named `feelpp.machines.<name>.cmake` in the `cmake/machines` directory, where `<name>` is the machine name returned by the execution of `uname -n`. The file will automatically be recognized and loaded, when you will be compiling Feel++ on this system.  
 
-== Compilation step
+=== Compilation step
 
 Once CMake has done its work, you are now able to compile the library with:
 
 [source,bash]
 ----
-  make
+make
 ----
 
 You can speed up the compilation process, if you have a multicore processor. To do so, you can specify the number of parallel jobs `make` will be allowed to spawn by using the `-j` flag:
 
 [source,bash]
 ----
-  make -j <nbjobs>
+# build Feel++ library
+# make -j <nbjobs>
+make -j4 feelpp
 ----
 
 > **Note** From now on, all commands should be typed in
   build directory (e.g `feel.opt`) or its subdirectories.
 
-## Unit tests
+=== Running Feel++ Testsuite
 
-Feel++ comes with built-in unit tests to ensure that the library is working correctly. You can launch basic tests based on the quickstart application by typing:
+If you encounter issues with Feel++, you can run the testsuite and send the resulting report. Feel{plus}{plus} has more than 300 tests running daily on our servers. Most of the tests are run both in sequential and in parallel.
 
+In order to run the testsuite, follow the steps below
+
+.Listing running the Feel++ testsuite
 [source,bash]
 ----
-  make check
+cd testsuite
+ctest -j4 -R .
 ----
-
-Or you can execute the whole testsuite, by typing the following
-command: (This might take a while)
-
-[source,bash]
-----
-  make check-full
-----
+it will run 4 tests at a time.
