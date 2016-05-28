@@ -48,6 +48,8 @@ There are different build type that you can set with `-DCMAKE_BUILD_TYPE` (case 
 
 In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
 
+== Required and optional libraries and tools
+
 This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
 
 
@@ -98,7 +100,7 @@ This is the list of all the libraries you must have installed on your computer, 
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
 
-== Compiling 
+== Configuration step 
 
 > **Warning** It is not allowed to build the library in the top source directory.
 
@@ -114,31 +116,61 @@ feel.opt/ # Build directory
 
 In this case, `feelpp` is the top directory where the source have been downloaded, using git or tarballs.
 
+=== Using cmake directly
+
 `CMake` is used as it:
 
 [source,sh]
 ----
- cd FEEL/feel.opt
- cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+cd FEEL/feel.opt
+cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
-You can customize the build type in any way.
-Please have a look at:
+=== Using the configure script
 
+Alternatively you can use the `configure` script which calls `cmake`. `configure --help` will provide the following help.
 [source,sh]
+.Listing Configure help
 ----
- FEEL/feelpp/CMakeLists.txt
+Options: 
+ -b, --build                         build type: Debug, Release, RelWithDebInfo                                                   
+ -d, --debug                         debug mode                             
+-rd, --relwithdebinfo                relwithdebinfo mode 
+ -r, --release                       release mode  
+     --std=c++xx                     c++ standard: c++14, c++1z (default: c++14)                                                   
+     --stdlib=libxx                  c++ standard library: stdc++(GCC), c++(CLANG) (default: stdc++)                                  
+     --max-order=x                   maximum polynomial order to instantiate(default: 3)                                          
+     --cxxflags                      override cxxflags    
+     --cmakeflags                    add extra cmake flags 
+     --prefix=PATH                   define install path  
+ -v, --verbose                       enable verbose output 
+ -h, --help                          help page       
+     --<package>-dir=PACKAGE_PATH    define <package> install directory   
+     --disable-<package>             disable <package>     
+     --generator=GENERATOR           cmake generator       
 ----
 
-// <ndlr>: Where is the list ?
-// or at the `List of Cmake Options` section.
+We display below a set of possible configurations:
+[source,sh]
+.Feel++ configure options
+----
+cd feelpp.opt/
+# compile using Release build type, default c++ compiler and libstdc++
+../feelpp/configure -r
+# compile using Release build type, clang++ compiler and libstdc++
+CXX=clang++ ../feelpp/configure -r
+# compile using Debug build type, clang++ compiler and libc++ 
+CXX=clang++ ../feelpp/configure -d -stdlib=c++
+----
 
-## Per-system specific configuration
+=== Advanced configure setting
+
+==== Per-system specific configuration
 
 If you need to set specific CMake variables to fit an exotic system (e.g. supercomputer), you can create a machine file fitting this system. + 
 To do so, simply create a file named `feelpp.machines.<name>.cmake` in the `cmake/machines` directory, where `<name>` is the machine name returned by the execution of `uname -n`. The file will automatically be recognized and loaded, when you will be compiling Feel++ on this system.  
 
-## Compilation
+== Compilation step
 
 Once CMake has done its work, you are now able to compile the library with:
 
