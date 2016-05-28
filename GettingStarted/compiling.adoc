@@ -46,20 +46,46 @@ There are different build type that you can set with `-DCMAKE_BUILD_TYPE` (case 
 * MinSizeRel
 * RelWithDebInfo
 
-In order to compile and install Feel\++ on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
+In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
 
 This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
 
-Required packages:
 
-* clang >= 3.5 for C++14 compatibility,
-* libstdc++ 4.9 or higher (gcc 4.9)
-* MPI: openmpi (preferred) or mpich,
-* Boost >= 1.55 and tested up to 1.61
-* Petsc >= 3.2,
-* CMake >= 2.8.7,
-* Gmsh >= 2.8.3 (can be found at http://www.geuz.org/gmsh[http://www.geuz.org/gmsh]),
-* Libxml2.
+> *Warning* Feel{plus}{plus} use C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
+
+.Table C{plus}{plus} compilers and standard libraries combinations
+|===
+| Compiler  | Standard Library 
+
+| clang (3.5, 3.6, 3.7, 3.8) | libstdc{plus}{plus} 4.9 
+| clang  |  libc{plus}{plus} (corresponding clang version)
+| GCC 5 | libstdc{plus}{plus} 5
+| GCC 6 | libstdc{plus}{plus} 6
+
+|===
+
+
+
+.Table required tools to compile Feel++
+|===
+| Name | Minimum Version | Maximum Version | Notes
+
+| CMake | 2.8.7 | -- | 
+| MPI   | -- | -- | openmpi or mpich
+| Boost | 1.55 | 1.61 | 
+| PETSc | 3.2 | 3.7 | 
+| Gmsh  | 2.8.7 | 2.12 | 
+|===
+
+.Table optional external libraries
+
+|===
+| Library | Notes
+
+| superlu | superlu and superlu_dist
+| suitesparse | umfpack (colamd,amd)
+| OpenTURNS |
+|===
 
 Optional packages:
 
