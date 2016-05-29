@@ -133,7 +133,7 @@ In order to compile and install Feel{plus}{plus} on Linux systems (other than Ma
 This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
 
 
-> *Warning* Feel{plus}{plus} use C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
+> **Warning** Feel{plus}{plus} use C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
 
 .Table C{plus}{plus} compilers and standard libraries combinations
 |===
@@ -206,7 +206,7 @@ cd FEEL/feel.opt
 cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
-> *Info*: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
+> **Info**: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
 > 
  * None
  * Debug : typically `-g`
