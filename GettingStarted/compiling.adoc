@@ -14,7 +14,7 @@ toc::[]
 git clone https://github.com/feelpp/feelpp.git
 ----
 
-* * Create a build directory
+* Create a build directory
 [source,bash]
 ----
 mkdir build
@@ -132,7 +132,7 @@ feelpp/ # Sources
 feel.opt/ # Build directory
 ----
 
-In this case, `feelpp` is the top directory where the source have been downloaded, using git or tarballs.
+`feelpp` is the top directory where the source have been downloaded, using git or tarballs.
 
 ==== Using cmake directly
 
@@ -217,16 +217,16 @@ make -j4 feelpp
 > **Note** From now on, all commands should be typed in
   build directory (e.g `feel.opt`) or its subdirectories.
 
-=== Running Feel++ Testsuite
+=== Running the Feel++ Testsuite
 
 If you encounter issues with Feel++, you can run the testsuite and send the resulting report. Feel{plus}{plus} has more than 300 tests running daily on our servers. Most of the tests are run both in sequential and in parallel.
 
 In order to run the testsuite, follow the steps below
 
-.Listing running the Feel++ testsuite
+.Listing: Running the Feel++ testsuite
 [source,bash]
 ----
 cd testsuite
 ctest -j4 -R .
 ----
-it will run 4 tests at a time.
+It will run 4 tests at a time thanks to the option `-j4`.
