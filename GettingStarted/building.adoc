@@ -6,6 +6,6 @@ In this section, we will explain how to download and build Feel++ from source.
 
 * link:compiling.adoc[Compiling Feel++]
 
-{% include download.adoc %}
+{% include "download.adoc" %}
 
-{% include compiling.adoc %}
+{% include "compiling.adoc" %}
