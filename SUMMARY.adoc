@@ -13,8 +13,6 @@
 ... link:GettingStarted/prerequisites/github.adoc[GitHub]
 . link:GettingStarted/README.adoc[Getting Started]
 .. link:GettingStarted/building.adoc[Building Feel++ from sources]
-... link:GettingStarted/download.adoc[Downloading Feel++]
-... link:GettingStarted/compiling.adoc[Compiling Feel++]
 .. link:GettingStarted/linux.adoc[Installing on Linux]
 .. link:GettingStarted/mac.adoc[Installing on Mac OS X]
 .. link:GettingStarted/using.adoc[Configuring your own project with
