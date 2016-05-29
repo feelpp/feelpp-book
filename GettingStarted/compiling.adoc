@@ -62,13 +62,7 @@ Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check t
 ``` 
 where the `path` depends on your OS. By default, it should be `/usr/bin` or `/opt/local/bin`, but you can also change it with the command `ccmake` and press `t` for advanced options). +
 
-There are different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
 
-* None
-* Debug
-* Release
-* MinSizeRel
-* RelWithDebInfo
 
 In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
 
@@ -149,6 +143,14 @@ In this case, `feelpp` is the top directory where the source have been downloade
 cd FEEL/feel.opt
 cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
+
+> *Info*: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
+> 
+ * None
+ * Debug : typically `-g`
+ * Release : typically `-O3`
+ * MinSizeRel : typically `-Os`
+ * RelWithDebInfo :  typically `-g -O2`
 
 ==== Using the configure script
 
