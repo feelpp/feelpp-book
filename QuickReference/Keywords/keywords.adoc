@@ -6,21 +6,6 @@ Keywords
 
 toc::[]
 
-One of Feel{plus}+ assets is it finite element embedded language. The language follows the C++ grammar, and provides keywords as well as operations between objects which are, mathematically, tensors of rank 0, 1 or 2.
-
-In all following tables we use the notations:
-$$f: \mathbb{R}^n \mapsto \mathbb{R}^{m\times p}$$  
-with $$n=1,2,3$$, $$m=1,2,3$$, $$p=1,2,3$$.
-
-We denote $$\Omega^e$$ current mesh element.
-
-The genesis of the language can be found in <<Prudhomme>> paper and an update on Feel++ is available https://hal.archives-ouvertes.fr/hal-00662868[here].
-
-
-- link:keywords-geometry.adoc[Geometry]
-- link:keywords-algebra.adoc[Vector and Matrices]
-- link:keywords-operators.adoc[Operations and Operators]
-
 == Expressions
 
 Following tables present tools to declare and manipulate expressions.
