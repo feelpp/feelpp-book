@@ -9,5 +9,7 @@ This section describes the available ways to to download and install Feel++.
 
 * link:mac.adoc[Installing on Mac OS X]
 
+* link:docker.adoc[Using Feel++ with docker]
+
 * link:using.adoc[Configuring your own project with CMake]
  
