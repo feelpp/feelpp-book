@@ -15,6 +15,7 @@
 .. link:GettingStarted/building.adoc[Building Feel++ from sources]
 .. link:GettingStarted/linux.adoc[Installing on Linux]
 .. link:GettingStarted/mac.adoc[Installing on Mac OS X]
+.. link:GettingStarted/docker.adoc[Using Feel++ with docker]
 .. link:GettingStarted/using.adoc[Configuring your own project with
 CMake]
 . link:Tutorial/README.adoc[Tutorial]
