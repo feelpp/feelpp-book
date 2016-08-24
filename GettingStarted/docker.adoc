@@ -118,23 +118,21 @@ Each time you will launch the `docker run` command a new container will be creat
 If you want to access a container that you previously launched with the `docker run` command, you first have to get its container id or name.   
 To do so use the `docker ps -a` command, you will get an output like the following:
 
-[sources]
----
+```
 CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS                        PORTS               NAMES
 c1812620c995        feelpp/debian-unstable:latest   /bin/bash              8 days ago          Exited (130) 51 seconds ago                       angry_mclean
----
+```
 
 The container with the ID `c1812620c995` and name `angry_mclean` is marked as exited. If you want to re-enter it, use the following commands:
 
-[sources]
----
+```
 # Start the container
 # "docker start c1812620c995" would also work
 docker start angry_mclean
 # Attach to the now running container
 # "docker attach c1812620c995" would also work
 docker attach angry_mclean
----
+```
 
 === Commiting changes to an image
 
