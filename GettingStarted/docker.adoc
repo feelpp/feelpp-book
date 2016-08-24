@@ -1,5 +1,9 @@
-Using Feel++ with docker {#Docker}
-======
+= Using Feel++ with docker {#Docker}
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
 
 == Introduction
 Docker is a platform that allows to package applications and their dependencies with controlled versions, so that they work in any environment. This allows to have applications with consistent behaviours independently on the base operating system you are using, be it any Linux flavour, Windows or Mac OS X. For more information, please refer to the [main site](https://www.docker.com) or to [what is docker ?](https://www.docker.com/what-docker).
@@ -42,7 +46,7 @@ docker-compose build feelpp-develop-full
 
 It will build two images : `feelpp/feelpp-env:latest`, the software environment needed to build Feel++ and `feelpp/develop:latest`, the software environment plus the feelpp library.
 
-<!--
+
 ==== Advanced : Build your own Feel++ container to use Feel++
 
 To build a container with Feelpp installed in it, you can use the following Dockerfile as a base (which is a similar concept as Makefiles). Just copy the following text into a file named Dockerfile:
@@ -80,38 +84,43 @@ RUN make -j 16 install-feelpp
 
 CMD ["/bin/bash"]
 ```
+
 Then execute the following command in the directory containing the Dockerfile:   
 `docker build -t feelpp/ubuntu-14.04 .`   
 The process will take some time to download the applications and compile Feel++. Then you can check if the image has been correctly built with:   
-```docker images```  
+`docker images`
 The image name should appear at the top of the list.
 
 For more information about Dockerfiles, refer to [https://docs.docker.com/engine/reference/builder](https://docs.docker.com/engine/reference/builder).
 
--->
 
-## Using the container
+== Using the container
 
 When using docker, there is an important point to keep in mind, you will work with 2 differents objects: images and containers. Images are the *snapshot* of a filesystem (for example when you use `docker pull` or `docker build`) and you can see the containers as *active versions of images*.
 
-### Creating a container
+=== Creating a container
 
 To create a container from an image and get an interactive shell in it, you can basically do:   
-```docker run -ti <image-name> /bin/bash```   
+[sources,bash]
+---
+docker run -ti <image-name> /bin/bash
+---
+
 You will then get a prompt inside of the container. To leave the container, just exit the terminal like you normally would and the container will stop.
 
 *Note*: By default, you will be root in a container, with your own process space and allocated resources. You won't interfere with the host system. 
 
-### Starting/Reattaching to an exited container
+=== Starting/Reattaching to an exited container
 
 Each time you will launch the `docker run` command a new container will be created. 
 If you want to access a container that you previously launched with the `docker run` command, you first have to get its container id or name.   
 To do so use the `docker ps -a` command, you will get an output like the following:
 
-```
+[sources]
+---
 CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS                        PORTS               NAMES
 c1812620c995        feelpp/debian-unstable:latest   /bin/bash              8 days ago          Exited (130) 51 seconds ago                       angry_mclean
-```
+---
 
 The container with the ID `c1812620c995` and name `angry_mclean` is marked as exited. If you want to re-enter it, use the following commands:
 
