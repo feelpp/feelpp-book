@@ -86,7 +86,10 @@ CMD ["/bin/bash"]
 ```
 
 Then execute the following command in the directory containing the Dockerfile:   
-`docker build -t feelpp/ubuntu-14.04 .`   
+```
+docker build -t feelpp/ubuntu-14.04 .
+```
+
 The process will take some time to download the applications and compile Feel++. Then you can check if the image has been correctly built with:   
 `docker images`
 The image name should appear at the top of the list.
@@ -101,14 +104,13 @@ When using docker, there is an important point to keep in mind, you will work wi
 === Creating a container
 
 To create a container from an image and get an interactive shell in it, you can basically do:   
-[sources,bash]
----
+```
 docker run -ti <image-name> /bin/bash
----
+```
 
 You will then get a prompt inside of the container. To leave the container, just exit the terminal like you normally would and the container will stop.
 
-*Note*: By default, you will be root in a container, with your own process space and allocated resources. You won't interfere with the host system. 
+> **Note**: By default, you will be root in a container, with your own process space and allocated resources. You won't interfere with the host system. 
 
 === Starting/Reattaching to an exited container
 
