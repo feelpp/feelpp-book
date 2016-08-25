@@ -134,6 +134,11 @@ docker start angry_mclean
 docker attach angry_mclean
 ```
 
+=== Copying data from/to a container
+
+The easiest way to copy data from a container is to use the `docker cp` command.   
+You can also mount directories from the host into the container. To do so, please have a look at the `-v` option available to `docker run`.
+
 === Commiting changes to an image
 
 If you want to create an image from a container, you can use the `docker commit` command.
