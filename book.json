@@ -9,7 +9,7 @@
         "expandable-chapters",
         "-search",
         "mathjax",
-        "code-highlighter"
+        "-code-highlighter"
     ],
     "pluginsConfig": {
         "ga": {
