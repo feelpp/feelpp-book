@@ -10,7 +10,7 @@
         "-search",
         "mathjax",
         "-code-highlighter",
-        "theme-latex"
+        "-theme-latex"
     ],
     "pluginsConfig": {
         "ga": {
