@@ -1,13 +1,23 @@
 {
     "gitbook": ">=3.0.0",
-    "plugins": ["anchors","include-codeblock","ga","richquotes","toc","expandable-chapters","-search","mathjax"],
+    "plugins": [
+        "anchors",
+        "include-codeblock",
+        "ga",
+        "richquotes",
+        "toc",
+        "expandable-chapters",
+        "-search",
+        "mathjax",
+        "code-highlighter"
+    ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-65761593-1"
         },
-        "richquotes" : {
-            "todos" : true,
-            "fixme" : true
+        "richquotes": {
+            "todos": true,
+            "fixme": true
         }
     },
     "links": {
