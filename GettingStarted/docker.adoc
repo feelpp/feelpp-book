@@ -14,138 +14,16 @@ To install docker, please refer to docker [documentation](https://docs.docker.co
 
 To use Feel++ with docker, you can rely on pre-built images or generate them yourself by writing a file name Dockerfile and that acts like a Makefile for docker.
 
-=== Prebuilt images
+=== Prebuilt images on Dockerhub
 
 Prebuilt images are available on the [Feel++ repository on Dockerhub](https://hub.docker.com/u/feelpp/).
 
 Several images are available:
    
-* `feelpp/dev-env` provides a working software environment for the latest version of Feel++,   
+* `feelpp/dev-env` provides a working software environment for the latest version of Feel++ based on Ubuntu (currently Ubuntu 16.10),   
 * `feelpp/develop` provides the working software environment, plus the feelpp library installed in the system. 
+* `feelpp/apps` provides the Feel++ applications
 
 To get one of these images, you can use the `docker pull` command.   
 Refer to the `Using the container` section of this page for the usage.
 
-=== Build your own Feel++ container
-
-The repository [feelpp/docker](https://github.com/feelpp/docker) contains several base Dockerfile that you can use as bases to build upon.
-
-To do so, go into the directory of the Dockerfile corresponding to the image you want to build and then type:   
-
-```
-docker build -f Dockerfile .
-```   
-You can specify the image name that will be used with the `-t` option. 
-
-This repository also allows you to build containers and their dependant containers using an other tool named `docker-compose` (a tool that is not installed with docker and that you have to install separately). Docker-compose uses a file name docker-compose.yml located at the base of the repository.
-
-For example, if you type:   
-```
-docker-compose build feelpp-develop-full
-``` 
-
-It will build two images : `feelpp/feelpp-env:latest`, the software environment needed to build Feel++ and `feelpp/develop:latest`, the software environment plus the feelpp library.
-
-
-==== Advanced : Build your own Feel++ container to use Feel++
-
-To build a container with Feelpp installed in it, you can use the following Dockerfile as a base (which is a similar concept as Makefiles). Just copy the following text into a file named Dockerfile:
-
-```
-FROM ubuntu:14.04.2
-
-ENV FEELPP_CXX clang++-3.6
-ENV FEELPP_CC clang-3.6
-ENV BUILDTYPE Release
-
-ENV CC ${FEELPP_CC}
-ENV CXX ${FEELPP_CXX}
-
-RUN apt-get -qq update
-RUN apt-get install -y software-properties-common python-software-properties
-RUN add-apt-repository ppa:ubuntu-toolchain-r/test
-RUN apt-get -qq update
-RUN apt-get install -y -qq gcc-4.9 g++-4.9
-RUN apt-get install -y -qq cmake git make vim automake libtool man libreadline-dev
-RUN apt-get install -y -qq ${FEELPP_CC} mpi-default-dev mpi-default-bin
-RUN apt-get install -y -qq bison flex libcln-dev libann-dev libglpk-dev
-RUN apt-get install -y -qq libboost1.55-all-dev libhdf5-mpi-dev libxml2-dev
-RUN apt-get install -y -qq libeigen3-dev petsc-dev libgmsh-dev gmsh
-
-RUN mkdir /src
-WORKDIR /src
-RUN git clone --depth=1 --branch=develop git://github.com/feelpp/feelpp.git /src/feelpp
-RUN mkdir -p /build/opt-llvm
-WORKDIR /build/opt-llvm
-RUN cmake /src/feelpp -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_BUILD_TYPE=${BUILDTYPE}
-RUN make -j 16 install-feelpp
-# RUN make -j 16 quickstart
-# RUN make -j 16 install
-
-CMD ["/bin/bash"]
-```
-
-Then execute the following command in the directory containing the Dockerfile:   
-```
-docker build -t feelpp/ubuntu-14.04 .
-```
-
-The process will take some time to download the applications and compile Feel++. Then you can check if the image has been correctly built with:   
-`docker images`
-The image name should appear at the top of the list.
-
-For more information about Dockerfiles, refer to [https://docs.docker.com/engine/reference/builder](https://docs.docker.com/engine/reference/builder).
-
-
-== Using the container
-
-When using docker, there is an important point to keep in mind, you will work with 2 differents objects: images and containers. Images are the *snapshot* of a filesystem (for example when you use `docker pull` or `docker build`) and you can see the containers as *active versions of images*.
-
-=== Creating a container
-
-To create a container from an image and get an interactive shell in it, you can basically do:   
-```
-docker run -ti <image-name> /bin/bash
-```
-
-You will then get a prompt inside of the container. To leave the container, just exit the terminal like you normally would and the container will stop.
-
-> **Note**: By default, you will be root in a container, with your own process space and allocated resources. You won't interfere with the host system. 
-
-=== Starting/Reattaching to an exited container
-
-Each time you will launch the `docker run` command a new container will be created. 
-If you want to access a container that you previously launched with the `docker run` command, you first have to get its container id or name.   
-To do so use the `docker ps -a` command, you will get an output like the following:
-
-```
-CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS                        PORTS               NAMES
-c1812620c995        feelpp/debian-unstable:latest   /bin/bash              8 days ago          Exited (130) 51 seconds ago                       angry_mclean
-```
-
-The container with the ID `c1812620c995` and name `angry_mclean` is marked as exited. If you want to re-enter it, use the following commands:
-
-```
-# Start the container
-# "docker start c1812620c995" would also work
-docker start angry_mclean
-# Attach to the now running container
-# "docker attach c1812620c995" would also work
-docker attach angry_mclean
-```
-
-=== Copying data from/to a container
-
-The easiest way to copy data from a container is to use the `docker cp` command.   
-You can also mount directories from the host into the container. To do so, please have a look at the `-v` option available to `docker run`.
-
-=== Commiting changes to an image
-
-If you want to create an image from a container, you can use the `docker commit` command.
-
-=== Cleaning
-
-Container and images tend to take disk space. To cleanup previous images or containers you might have built, you can use:
-
-* `docker rmi` : to delete images. You can get the list of images with `docker images`, e.g if you want to delete all the images, use: `docker rmi $(docker images -q)`
-* `docker rm` : to delete containers. You can get the list of containers with `docker ps -a`, e.g if you want to delete all the containers, use: `docker rmi $(docker ps -aq)`
