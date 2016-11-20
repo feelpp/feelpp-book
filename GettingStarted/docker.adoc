@@ -22,7 +22,7 @@ Several images are available:
    
 * `feelpp/dev-env` provides a working software environment for the latest version of Feel++ based on Ubuntu (currently Ubuntu 16.10),   
 * `feelpp/develop` provides the working software environment, plus the feelpp library installed in the system. 
-* `feelpp/apps` provides the Feel++ applications
+* +feelpp/apps+ provides the Feel++ applications
 
 To get one of these images, you can use the `docker pull` command.   
 Refer to the `Using the container` section of this page for the usage.
