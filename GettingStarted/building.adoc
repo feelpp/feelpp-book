@@ -1,7 +1,294 @@
 = Building Feel++
 
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
+
 In this section, we will explain how to download and build Feel++ from source.
 
-* link:download.adoc[Downloading Feel++]
+== Five minutes configuration
 
-* link:compiling.adoc[Compiling Feel++]
+* First retrieve the source
+[source,bash]
+----
+git clone https://github.com/feelpp/feelpp.git
+----
+
+* Create a build directory
+[source,bash]
+----
+mkdir build
+cd build
+----
+
+* Configure Feel++
+[source,bash]
+----
+CXX=clang++ ../feelpp/configure -r
+----
+
+* Compile the Feel++ library
+[source,bash]
+----
+# use 4 parallel jobs
+make -j4 feelpp
+----
+
+* Compile your first Feel++ application
+[source,bash]
+----
+# a 2D laplacian
+make feelpp_qs_laplacian_2d
+# or a 3D laplacian
+make feelpp_qs_laplacian_3d
+----
+
+* Execute your first Feel++ application
+[source,sh]
+----
+cd quickstart/laplacian
+# in 2D
+mpirun -np 4 feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
+# or in 3D
+mpirun -np 4 feelpp_qs_laplacian_3d --config-file qs_laplacian_3d.cfg
+----
+
+
+== Downloading Feel++ sources
+
+=== Getting the source via an archive
+
+Feel++ is distributed as tarballs following each major release. The tarballs are available at:
+
+https://github.com/feelpp/feelpp/releases
+
+Download the latest tarball, then uncompress it with:
+
+----
+tar -xzf feelpp-X.YY.0.tar.gz
+cd feelpp-X.YY.0
+----
+
+Eventually, you can move to the compilation and installation step via the CMake procedure.
+
+=== Getting the source via Git
+
+Alternatively, you can download the sources of Feel++ directly from https://github.com/feelpp/feelpp[the source repository], thanks to Git.
+
+You can either download them anonymously or with your
+Github account. As an open-source project, we strongly suggest you to create an account and take part of the project by sharing your ideas, developments or suggestions. For now, if you want to get the sources without an account, open a command-line and type:
+
+----
+git clone --depth=xx https://github.com/feelpp/feelpp.git
+----
+
+with `xx` the number of last commits you want to save.
+`xx=1` will allow you to reduce the time to clone.
+Then you can go to the Feel++ top directory with:
+
+----
+  cd feel
+----
+
+You should obtain a directory tree such as:
+
+----
+applications/   # functional applications
+benchmarks/  # applications under test
+cmake/   # do not touch, used for compilation
+contrib/
+data/   # geometric data
+doc/   # tutorial and examples
+feel/   # Feel++ library
+ports/   # used for Mac OS X installation
+quickstart/   # basic examples
+research/   # research projects using Feel++
+scripts/ # various scripts
+testsuite/ # Feel++ unit tests testsuite
+CMakeLists.txt   # the file for cmake to build, do not modify
+...
+----
+
+== Compiling Feel++ 
+
+
+
+
+=== Detailed build instructions
+
+Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `clang-3.5` (or a higher version) (or `g++`, but it has a huge memory footprint) as C{plus}{plus} compiler. You can set the compiler with following option :
+```
+-DCMAKE_CXX_COMPILER=<path>/clang++-3.5
+``` 
+where the `path` depends on your OS. By default, it should be `/usr/bin` or `/opt/local/bin`, but you can also change it with the command `ccmake` and press `t` for advanced options). +
+
+
+
+In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
+
+=== Required and optional libraries and tools
+
+This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
+
+
+> **Warning** Feel{plus}{plus} use C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
+
+.Table C{plus}{plus} compilers and standard libraries combinations
+|===
+| Compiler  | Standard Library 
+
+| clang (3.5, 3.6, 3.7, 3.8) | libstdc{plus}{plus} 4.9 
+| clang  |  libc{plus}{plus} (corresponding clang version)
+| GCC 5 | libstdc{plus}{plus} 5
+| GCC 6 | libstdc{plus}{plus} 6
+
+|===
+
+
+
+.Table required tools to compile Feel++
+|===
+| Name | Minimum Version | Maximum Version | Notes
+
+| CMake | 2.8.7 | -- | 
+| MPI   | -- | -- | openmpi or mpich
+| Boost | 1.55 | 1.61 | 
+| PETSc | 3.2 | 3.7 | 
+| Gmsh  | 2.8.7 | 2.12 | 
+|===
+
+.Table optional external libraries
+
+|===
+| Library | Notes
+
+| Superlu | superlu and superlu_dist
+| Suitesparse | umfpack (colamd,amd)
+| OpenTURNS |
+|===
+
+.Table Optional tools
+|===
+| Tool | Notes
+
+| Google perftools|
+| Paraview | for visualisation purposes
+| Gmsh application | for meshing purposes
+|===
+
+Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
+
+=== Configuration step 
+
+> **Warning** It is not allowed to build the library in the top source directory.
+
+It is recommended  to have a directory (e.g. `FEEL`) in which you have
+both the sources and build directories.
+
+[source,sh]
+----
+ls FEEL
+feelpp/ # Sources
+feel.opt/ # Build directory
+----
+
+`feelpp` is the top directory where the source have been downloaded, using git or tarballs.
+
+==== Using cmake directly
+
+`CMake` is used as it:
+
+[source,sh]
+----
+cd FEEL/feel.opt
+cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+----
+
+> **Info**: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
+> 
+ * None
+ * Debug : typically `-g`
+ * Release : typically `-O3`
+ * MinSizeRel : typically `-Os`
+ * RelWithDebInfo :  typically `-g -O2`
+
+==== Using the configure script
+
+Alternatively you can use the `configure` script which calls `cmake`. `configure --help` will provide the following help.
+[source,sh]
+.Listing Configure help
+----
+Options: 
+ -b, --build                         build type: Debug, Release, RelWithDebInfo                                                   
+ -d, --debug                         debug mode                             
+-rd, --relwithdebinfo                relwithdebinfo mode 
+ -r, --release                       release mode  
+     --std=c++xx                     c++ standard: c++14, c++1z (default: c++14)                                                   
+     --stdlib=libxx                  c++ standard library: stdc++(GCC), c++(CLANG) (default: stdc++)                                  
+     --max-order=x                   maximum polynomial order to instantiate(default: 3)                                          
+     --cxxflags                      override cxxflags    
+     --cmakeflags                    add extra cmake flags 
+     --prefix=PATH                   define install path  
+ -v, --verbose                       enable verbose output 
+ -h, --help                          help page       
+     --<package>-dir=PACKAGE_PATH    define <package> install directory   
+     --disable-<package>             disable <package>     
+     --generator=GENERATOR           cmake generator       
+----
+
+We display below a set of possible configurations:
+[source,sh]
+.Feel++ configure options
+----
+cd feelpp.opt/
+# compile using Release build type, default c++ compiler and libstdc++
+../feelpp/configure -r
+# compile using Release build type, clang++ compiler and libstdc++
+CXX=clang++ ../feelpp/configure -r
+# compile using Debug build type, clang++ compiler and libc++ 
+CXX=clang++ ../feelpp/configure -d -stdlib=c++
+----
+
+==== Advanced configuration setting
+
+===== Per-system specific configuration
+
+If you need to set specific CMake variables to fit an exotic system (e.g. supercomputer), you can create a machine file fitting this system. + 
+To do so, simply create a file named `feelpp.machines.<name>.cmake` in the `cmake/machines` directory, where `<name>` is the machine name returned by the execution of `uname -n`. The file will automatically be recognized and loaded, when you will be compiling Feel++ on this system.  
+
+==== Compilation step
+
+Once CMake has done its work, you are now able to compile the library with:
+
+[source,bash]
+----
+make
+----
+
+You can speed up the compilation process, if you have a multicore processor. To do so, you can specify the number of parallel jobs `make` will be allowed to spawn by using the `-j` flag:
+
+[source,bash]
+----
+# build Feel++ library
+# make -j <nbjobs>
+make -j4 feelpp
+----
+
+> **Note** From now on, all commands should be typed in
+  build directory (e.g `feel.opt`) or its subdirectories.
+
+==== Running the Feel++ Testsuite
+
+If you encounter issues with Feel++, you can run the testsuite and send the resulting report. Feel{plus}{plus} has more than 300 tests running daily on our servers. Most of the tests are run both in sequential and in parallel.
+
+In order to run the testsuite, follow the steps below
+
+.Listing: Running the Feel++ testsuite
+[source,bash]
+----
+cd testsuite
+ctest -j4 -R .
+----
+It will run 4 tests at a time thanks to the option `-j4`.

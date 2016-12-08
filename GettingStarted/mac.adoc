@@ -4,7 +4,7 @@ Feel++ on Mac OS X
 :toc-placement: macro
 :toclevels: 2
 
-Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks. 
+Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
 
 toc::[]
 

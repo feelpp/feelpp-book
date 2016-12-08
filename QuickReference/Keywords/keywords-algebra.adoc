@@ -15,7 +15,7 @@ Usual syntax to create vectors:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
-|` vec<n>(v_1,v_2,...,v_n)`|$$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$$|Column Vector with $$n$$ rows<br>entries being expressions|$$n \times 1$$
+|`vec<n>(v_1,v_2,...,v_n)`|$$\begin{pmatrix} v_1\\v_2\\ \vdots \\v_n \end{pmatrix}$$|Column Vector with $$n$$ rows entries being expressions|$$n \times 1$$
 |===
 
 You can also use expressions and the unit base vectors:
@@ -33,7 +33,7 @@ You can also use expressions and the unit base vectors:
 
 |===
 |Feel++ Keyword | Math Object | Description | Dimension 
-|`mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix entries beeing expressions |$$m \times n$$
+|`mat<m,n>(m_11,m_12,...,m_mn)`|$$\begin{pmatrix} m_{11} & m_{12} & ...\\ m_{21} & m_{22} & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix entries being expressions |$$m \times n$$
 |`ones<m,n>()`|$$\begin{pmatrix} 1 & 1 & ...\\ 1 & 1 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 1 |$$m \times n$$
 |`zero<m,n>()`|$$\begin{pmatrix} 0 & 0 & ...\\ 0 & 0 & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with 0 |$$m \times n$$
 |`constant<m,n>(c)`|$$\begin{pmatrix} c & c & ...\\ c & c & ...\\ \vdots & & \end{pmatrix}$$|$$m\times n$$ Matrix Filled with a constant c |$$m \times n$$

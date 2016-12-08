@@ -6,6 +6,10 @@ Feel++ on Linux
 
 toc::[]
 
+== LLVM Compiler
+
+Latest LLVM Compiler are available via `apt` thanks to http://llvm.org/apt/[llvm.org].
+
 == Debian
 
 Debian is the platform of choice for Feel+\+, it was developed mainly on it. The commands to install Feel++ on Debian are:
@@ -31,7 +35,7 @@ The interested user might want to look at the following Ubuntu Launchpad Feel\++
 
 === Ubuntu 12.04 - Precise Pangolin
 
-This section is outdated.
+**This section is outdated.**
 
 ----
 	sudo add-apt-repository -y ppa:feelpp/ppa
@@ -80,7 +84,7 @@ cmake /where/is/feelpp/ -DCMAKE_CXX_COMPILER=`which clang++-3.6` -DCMAKE_C_COMPI
 
 === Compilation
 
-And evntually compile the library and sample applications:
+And eventually compile the library and sample applications:
 [source,sh]
 ----
 make
