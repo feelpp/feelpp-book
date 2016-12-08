@@ -167,8 +167,9 @@ Application of multigrid preconditioner ($$ V $$-cycle)
 
 == List of PETSc Preconditioners
 
-see this [PETSc page]() for a complete list
-.Table of Preconditioners as of PETSc 
+See this link:http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCType.html[PETSc page] for a complete list.
+
+.Table of Preconditioners as of PETSc 3.7
 |===
 | PETSc | Description |  Parallel
 | none || 
