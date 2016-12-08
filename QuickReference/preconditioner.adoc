@@ -167,4 +167,26 @@ Application of multigrid preconditioner ($$ V $$-cycle)
 
 == List of Preconditioners
 
-none jacobi pbjacobi bjacobi sor lu shell mg eisenstat ilu icc cholesky asm gasm ksp composite redundant nn mat fieldsplit galerkin exotic cp lsc redistribute svd gamg kaczmarz telescope hypre pfmg syspfmg tfs bddc
+.Table of Preconditioners
+|===
+| PETSc | Description |  Parallel
+| none || 
+| jacobi || 
+| bjacobi || 
+| sor ||
+| lu || 
+| shell || 
+| mg || 
+| ilu || 
+| icc || 
+| cholesky ||
+| asm || 
+| gasm ||  
+| ksp || 
+| fieldsplit || 
+| lsc || 
+| gamg ||
+| hypre || 
+| bddc ||
+|===
+
