@@ -165,9 +165,10 @@ Application of multigrid preconditioner ($$ V $$-cycle)
 
     * assume strong smoothers, emphasize aggressive coarsening.
 
-== List of Preconditioners
+== List of PETSc Preconditioners
 
-.Table of Preconditioners
+see this [PETSc page]() for a complete list
+.Table of Preconditioners as of PETSc 
 |===
 | PETSc | Description |  Parallel
 | none || 
