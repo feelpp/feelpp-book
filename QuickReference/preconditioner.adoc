@@ -178,17 +178,17 @@ See this link:http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCT
 | sor | SOR preconditioner | yes
 | lu | Direct solver as preconditioner | depends on the factorization package (e.g.mumps,pastix: OK) 
 | shell | User defined preconditioner | depends on the user preconditioner  
-| mg | multigrid prec| 
-| ilu || 
-| icc || 
-| cholesky ||
-| asm || 
-| gasm ||  
-| ksp || 
-| fieldsplit || 
-| lsc || 
-| gamg ||
-| hypre || 
-| bddc ||
+| mg | multigrid prec| yes 
+| ilu |incomplete lu| 
+| icc |incomplete cholesky| 
+| cholesky |Cholesky factorisation| yes
+| asm | Additive Schwarz Method| yes 
+| gasm | Scalable Additive Schwarz Method | yes  
+| ksp | Krylov subspace preconditioner | yes 
+| fieldsplit | block preconditioner framework |  yes
+| lsc | Least Square Commutator | yes 
+| gamg | Scalable Algebraic Multigrid | yes
+| hypre | Hypre framework (multigrid...)| 
+| bddc |balancing domain decomposition by constraints preconditioner| yes
 |===
 

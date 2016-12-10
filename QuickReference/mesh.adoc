@@ -44,7 +44,7 @@ Finally we use the `exporter()` (see \ref Exporter) function to export the mesh 
 
 [source,cpp]
 ----
-  paraview <app_name>.sos
+  paraview <app_name>.case
 ----
 
 In this section, we present some of the mesh definition and manipulation tools provided by Feel++. For more information you can also see \ref Gmsh.
