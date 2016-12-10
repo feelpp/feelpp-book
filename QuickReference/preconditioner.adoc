@@ -172,13 +172,13 @@ See this link:http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCT
 .Table of Preconditioners as of PETSc 3.7
 |===
 | PETSc | Description |  Parallel
-| none || 
-| jacobi || 
-| bjacobi || 
-| sor ||
-| lu || 
-| shell || 
-| mg || 
+| none |No preconditioner| yes 
+| jacobi | diagonal preconditioner | yes 
+| bjacobi | block diagonal preconditioner | yes 
+| sor | SOR preconditioner | yes
+| lu | Direct solver as preconditioner | depends on the factorization package (e.g.mumps,pastix: OK) 
+| shell | User defined preconditioner | depends on the user preconditioner  
+| mg | multigrid prec| 
 | ilu || 
 | icc || 
 | cholesky ||
