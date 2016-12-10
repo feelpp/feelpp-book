@@ -5,15 +5,26 @@
 
 toc::[]
 
-== Introduction
+== Feel++ Formats
+
+== Pre-Processing formats
 
 Feel++ supports various file formats as inputs and outputs.
 
 |===
 | Format  | Description | Mode | Type 
+| `acumesh` | Acusim(ALTAIR) mesh file format | Read | Ascii
 | `gmsh`  |  Gmsh mesh file format | Read/Write | Ascii/Binary
-| `acumesh` | Acusim mesh file format | Read | Ascii
 | `json+hdf5` | Feel++ parallel file format | Read/Write | Metadata & Binary
+| `med`  |  MED(Salome) mesh file format | Read/Write | Ascii/Binary
+| `mesh`  |  MEDIT(INRIA) mesh file format | Read/Write | Ascii
+|===
+
+== Post Processing formats
+
+|===
+| Format  | Description | Mode | Type 
+| `gmsh`  |  Gmsh mesh file format | Read/Write | Ascii/Binary
 | `ensightgold` | Ensight  Gold case format | Write | Binary
 | `xdmf` | XML/HDF5 file format | Write
 | `VTK`   | VTK file format | Write
