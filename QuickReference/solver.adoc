@@ -2,7 +2,7 @@ Algebraic solutions
 ====================
 :toc:
 :toc-placement: macro
-:toclevels: 2
+:toclevels: 4
 
 toc::[]
 
