@@ -23,10 +23,10 @@ $$
 \nabla\cdot(-k\nabla T) &= \sigma\nabla V\cdot \nabla V &\text{ in } \Omega
 \end{align}
 $$where $$k$$ is the thermal conductivity. +
-The thermal exchanges with air are not considered, leading to a Neumann condition on $$\Gamma_T$$. While the thermal exchanges with the cooling water depends on a heat transfer coefficient $$h$$ and the water temperature $$T_w$$, leading to a Robin condition on $$\Gamma_C$$:
+The thermal exchanges with air are not considered, leading to a Neumann condition on $$\Gamma_T$$. While the thermal exchanges with the cooling water depends on a heat transfer coefficient $$h$$ and the cooling temperature $$T_c$$, leading to a Robin condition on $$\Gamma_C$$:
 
 - $$-k\nabla T\cdot \mathbf{n} = 0$$ on $$\Gamma_T$$
-- $$-k\nabla T\cdot\mathbf{n} = h(T-T_w)$$ on $$\Gamma_{C}$$
+- $$-k\nabla T\cdot\mathbf{n} = h(T-T_c)$$ on $$\Gamma_{C}$$
 
 
 == Thermo-Electric problem
@@ -38,8 +38,25 @@ We gather in the following table parameter ranges, nominal values as well as uni
 | Parameters | Ranges |  Nominal value | Units
 | $$\sigma$$ | $$[52.10^{6};58.10^{6}]$$ | $$53\cdot 10^{6}$$ | $$S \cdot m^{-1}$$
 | $$k$$ | $$[360;380]$$| $$370$$ | $$W\cdot m^{-1} \cdot K^{-1}$$
-| $$T_w$$ | $$[293;310]$$ | 300 | K
+| $$T_c$$ | $$[293;310]$$ | 300 | K
 | $$h$$ | $$[70000;90000]$$ | $$850000$$ | $$W \cdot m^{-2} \cdot K^{-1}$$
 |===
 
 In the linear case, we first solve for $$V$$ and then  for $$T$$ using $$V$$ to compute the joule effect that generate heat inside $$\Omega$$.
+
+== Running the Thermo-electric application
+
+Using link:GettingStarted/docker.adoc[Feel++ for Docker] , you can run Feel++ model application and in particular the thermo-electric model using the following command
+
+[source,shell]
+----
+docker run -it -v $HOME/feel:/feel feelpp/apps:latest
+----
+
+Then type the following command in docker environment to run the model
+[source,shell]
+----
+cd Testcases/models/thermoelectric/test
+mpirun -np 4 /usr/local/bin/feelpp_application_thermoelectric_3d --config-file model.cfg
+----
+
