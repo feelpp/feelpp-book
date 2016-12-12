@@ -294,7 +294,7 @@ All linear algebra are encapsulated within backends using the command line optio
 
 The default `backend` is `petsc.` 
 
-== Options
+== Somes generic examples
 
 The configuration files `.cfg` allow for a wide range of options to solve a linear or non-linear system.
 
@@ -410,10 +410,7 @@ snes-monitor=1
 eps-monitor=1
 ----
 
-
-== Example
-
-=== Laplacian
+=== Solving the Laplace problem
 
 We start with the quickstart Laplacian example, recall that we wish to, given a domain $$\Omega$$, find $$u$$ such that
 
