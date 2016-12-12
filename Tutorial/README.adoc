@@ -1,4 +1,4 @@
-In order to go through the following tutorial, we are going to use link:[Feel++ in a docker environment].
+In order to go through the following tutorial, we are going to use link:../GettingStarted.adoc#dockerhub[Feel++ in a docker environment].
 
 Before reading the following, it is recommended to have a look at:
 
