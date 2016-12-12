@@ -15,7 +15,9 @@ We also want the other boundaries to be electrically insulating:
 
 - $$-\sigma\nabla V\cdot\mathbf{n}=\mathbf{j}\cdot\mathbf{n} = 0$$ on $$\Gamma_E$$
 
-And find the temperature $$T$$ by solving a thermal problem, where the source term comes from Joule effect:
+== Heat transfer problem
+
+Find the temperature $$T$$ by solving a thermal problem, where the source term comes from Joule effect:
 $$
 \begin{align}
 \nabla\cdot(-k\nabla T) &= \sigma\nabla V\cdot \nabla V &\text{ in } \Omega
@@ -26,12 +28,17 @@ The thermal exchanges with air are not considered, leading to a Neumann conditio
 - $$-k\nabla T\cdot \mathbf{n} = 0$$ on $$\Gamma_T$$
 - $$-k\nabla T\cdot\mathbf{n} = h(T-T_w)$$ on $$\Gamma_{C}$$
 
+
+== Thermo-Electric problem
+
+We gather in the following table some parameter range 
+
 .Table of parameters for the simulation
 |===
 | Parameters | Ranges |  Nominal value | Units
 | $$\sigma$$ | $$[52.10^{6};58.10^{6}]$$ | $$53\cdot 10^{6}$$ | $$S \cdot m^{-1}$$
 | $$k$$ | $$[360;380]$$| $$370$$ | $$W\cdot m^{-1} \cdot K^{-1}$$
-| $$T_w$$ | $$[280;310]$$ | 300 | K
-| $$h$$ | $$[40000;50000]$$ | |
+| $$T_w$$ | $$[293;310]$$ | 300 | K
+| $$h$$ | $$[70000;90000]$$ | $$850000$$ | $$W \cdot m^{-2} \cdot K^{-1}$$
 |===
 
