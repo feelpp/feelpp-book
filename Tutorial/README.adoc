@@ -1,24 +1,16 @@
+= Feel++ Tutorial
+=================
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
+
+== Using docker for the Feel++ tutorial
+
 In order to go through the following tutorial, we are going to use link:../GettingStarted.adoc#dockerhub[Feel++ in a docker environment].
 
-Before reading the following, it is recommended to have a look at:
 
-- link:../GettingStarted/download.adoc[Install Feel++]
-
-- link:../GettingStarted/compiling.adoc[Using Feel++]
-
-Examples, configuration files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
-
-To try it on your machine, you have to do:
-
-[source,sh]
-----
-cd your_feelpp_root_source/research
-git clone https://github.com/feelpp/feelpp-book
-cd your_build_dir
-cmake your_feelpp_root_source/ -DFEELPP_ENABLE_RESEARCH_FEELPP-BOOK=ON
-cd your_build_dir/research/feelpp-book/Tutorial/code
-make 
-----
 
 
 The step by step tutorial is decomposed into :   
@@ -44,4 +36,26 @@ The step by step tutorial is decomposed into :
 - link:09-UsingBackend.adoc[Using a backend]
 
 - link:10-Model.adoc[Creating a model]
+
+== Compiling the Feel++ tutorial
+
+You can also go through the Feel++ tutorial by compiling it yourself, and follow the steps described below
+
+- link:../GettingStarted/download.adoc[Install Feel++]
+
+- link:../GettingStarted/compiling.adoc[Using Feel++]
+
+Examples, configuration files and geometries can be found https://github.com/feelpp/feelpp-book/tree/master/Tutorial/code[on the github repository].
+
+To try it on your machine, you have to do:
+
+[source,sh]
+----
+cd your_feelpp_root_source/research
+git clone https://github.com/feelpp/feelpp-book
+cd your_build_dir
+cmake your_feelpp_root_source/ -DFEELPP_ENABLE_RESEARCH_FEELPP-BOOK=ON
+cd your_build_dir/research/feelpp-book/Tutorial/code
+make 
+----
 
