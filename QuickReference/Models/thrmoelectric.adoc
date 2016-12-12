@@ -26,4 +26,12 @@ The thermal exchanges with air are not considered, leading to a Neumann conditio
 - $$-k\nabla T\cdot \mathbf{n} = 0$$ on $$\Gamma_T$$
 - $$-k\nabla T\cdot\mathbf{n} = h(T-T_w)$$ on $$\Gamma_{C}$$
 
+.Table of parameters for the simulation
+|===
+| Parameters | Ranges |  Nominal value | Units
+| $$\sigma$$ | $$[52.10^{6};58.10^{6}]$$ | $$53\cdot 10^{6}$$ | $$S \cdot m^{-1}$$
+| $$k$$ | $$[360;380]$$| $$370$$ | $$W\cdot m^{-1} \cdot K^{-1}$$
+| $$T_w$$ | $$[280;310]$$ | 300 | K
+| $$h$$ | $$[40000;50000]$$ | |
+|===
 
