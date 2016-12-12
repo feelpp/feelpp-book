@@ -234,5 +234,5 @@ $$
 
 where $$\tilde{S} \approx S^{-1} = B^T A^{-1} B$$ and  $$\tilde{A}^{-1} \approx A^{-1}$$
 
-== Options
+
 
