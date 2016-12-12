@@ -31,7 +31,7 @@ The thermal exchanges with air are not considered, leading to a Neumann conditio
 
 == Thermo-Electric problem
 
-We gather in the following table some parameter range 
+We gather in the following table parameter ranges, nominal values as well as units for $$\sigma, k, T_w, h$$.
 
 .Table of parameters for the simulation
 |===
@@ -42,3 +42,4 @@ We gather in the following table some parameter range
 | $$h$$ | $$[70000;90000]$$ | $$850000$$ | $$W \cdot m^{-2} \cdot K^{-1}$$
 |===
 
+In the linear case, we first solve for $$V$$ and then  for $$T$$ using $$V$$ to compute the joule effect that generate heat inside $$\Omega$$.
