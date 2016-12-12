@@ -1,4 +1,13 @@
-We want to solve a coupled electro-thermal problem on $$\Omega$$ with $$\partial\Omega=\Gamma=\Gamma_{C}\cup\Gamma_{T}=\Gamma_E\cup\Gamma_{in}\cup\Gamma_{out}$$. 
+= Electro-Thermic Model
+=======================
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
+
+Let $$\Omega \subset \mathbb{R}^d, d=2,3$$ with $$\partial\Omega=\Gamma=\Gamma_{C}\cup\Gamma_{T}=\Gamma_E\cup\Gamma_{in}\cup\Gamma_{out}$$. 
+We are interested in defining and solving an thermo-electric model involving the coupling of electrostatic and heat transfer models.
 
 == Electrostatic problem
 We need to find the electric potential $$V$$ by solving:
@@ -31,7 +40,9 @@ The thermal exchanges with air are not considered, leading to a Neumann conditio
 
 == Thermo-Electric problem
 
-We gather in the following table parameter ranges, nominal values as well as units for $$\sigma, k, T_w, h$$.
+In the thermo-electric model, we have 4 parameters $$\sigma, k, T_c, h$$ which can be scalars or fields.
+
+We gather in the following table parameter ranges, nominal values as well as units for $$\sigma, k, T_c, h$$.
 
 .Table of parameters for the simulation
 |===
@@ -46,7 +57,7 @@ In the linear case, we first solve for $$V$$ and then  for $$T$$ using $$V$$ to 
 
 == Running the Thermo-electric application
 
-Using link:GettingStarted/docker.adoc[Feel++ for Docker] , you can run Feel++ model application and in particular the thermo-electric model using the following command
+Using link:../../GettingStarted/docker.adoc[Feel++ for Docker] , you can run Feel++ model application and in particular the thermo-electric model using the following command
 
 [source,shell]
 ----
