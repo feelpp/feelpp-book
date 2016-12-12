@@ -44,6 +44,7 @@ docker run -it -v $HOME/feel:/feel feelpp/apps:latest
 
 The previous command will execute the latest `feelpp/apps` docker image in interactive mode in a terminal (`-ti`) and mount `$HOME/feel` in the directory `/feel` of the docker image.
 
+> **Note** Note that mouting a host sub-directory on `/feel` is mandatory. If you don't, the Feel++ applications will exit due to lack of permissions.
 
 
 
