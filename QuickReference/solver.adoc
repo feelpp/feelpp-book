@@ -112,14 +112,14 @@ $$
 u = g \mbox{ on } \partial \Omega
 $$
 
-Monitoring KSP solvers
+==== Monitoring KSP solvers
 
 [source,sh]
 ----
 feelpp_qs_laplacian --ksp-monitor=true
 ----
 
-Viewing KSP solvers
+==== Viewing KSP solvers
 
 [source,sh]
 ----
@@ -148,7 +148,25 @@ PC Object: 2 MPI processes
       not using I-node (on process 0) routines
 ----
 
-=== Solvers and preconditioners
+==== Solvers and preconditioners
+
+You can now change the Krylov subspace solver using the `--ksp-type` option and the preconditioner using `--pc-ptype` option.
+
+For example, 
+
+* to solve use the conjugate gradient,`cg`, solver and the default preconditioner use the following
+[source,shell]
+----
+./feelpp_qs_laplacian --ksp-type=cg --ksp-view=1 --ksp-monitor=1
+----
+
+* to solve using the algebraic multigrid preconditioner, `gamg`, with `cg` as a solver use the following
+[source,shell]
+----
+./feelpp_qs_laplacian --ksp-type=cg --ksp-view=1 --ksp-monitor=1 --pc-type=gamg
+----
+
+
 
 == Stokes
 
