@@ -15,7 +15,7 @@ To install docker, please refer to docker [documentation](https://docs.docker.co
 
 To use Feel++ with docker, you can rely on pre-built images or generate them yourself by writing a file name Dockerfile and that acts like a Makefile for docker.
 
-=== Prebuilt images on Dockerhub
+== Prebuilt images on Dockerhub
 
 Prebuilt images are available on the [Feel++ repository on Dockerhub](https://hub.docker.com/u/feelpp/).
 
@@ -27,4 +27,17 @@ Several images are available:
 
 To get one of these images, you can use the `docker pull` command.   
 Refer to the `Using the container` section of this page for the usage.
+
+=== Runing Feel++ Applications
+
+To run link:/Applications/readme.adoc[Feel++ main applications], you need first to create a directory where you will store the Feel++ simulation files. For example
+[source,shell]
+----
+mkdir $HOME/feel
+----
+
+[source,shell]
+----
+docker run -it -v ~/
+----
 
