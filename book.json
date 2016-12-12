@@ -9,6 +9,7 @@
         "expandable-chapters",
         "-search",
         "mathjax",
+"codesnippet",
         "-code-highlighter",
         "-theme-latex",
         "theme-official"
