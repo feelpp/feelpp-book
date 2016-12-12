@@ -299,11 +299,7 @@ The default `backend` is `petsc.`
 The configuration files `.cfg` allow for a wide range of options to solve a linear or non-linear system.
 
 We consider now the following example 
-
-[source,cpp]
-----
-{% include "../Tutorial/code/mylaplacian.cpp" %}
-----
+{% codesnippet "../Tutorial/code/mylaplacian.cpp", language="cpp" %}{% endcodesnippet %}
 
 To execute this example
 
