@@ -1,0 +1,31 @@
+We want to solve a coupled electro-thermal problem on $$\Omega$$ with $$\partial\Omega=\Gamma=\Gamma_{C}\cup\Gamma_{T}=\Gamma_E\cup\Gamma_{in}\cup\Gamma_{out}$$. +
+We need to find the electric potential $$V$$ by solving:
+$$
+\begin{align}
+\nabla\cdot(-\sigma\nabla V) &= 0 &\text{ in } \Omega
+\end{align}
+$$where $$\sigma$$ is the electric conductivity. On the boundary, to be as respectful of the experimental conditions as possible, we would like to impose the potential on $$\Gamma_{in}$$ and the current intensity on $$\Gamma_{out}$$:
+
+- $$p=0$$ on $$\Gamma_{in}$$
+- $$\int_{\Gamma_{out}}\mathbf{j}\cdot\mathbf{n} = I_{target}$$ where $$\mathbf{j}=-\sigma \nabla p$$ is the current density.
+
+However, this seemed not sufficient to solve the problem. We then decided to impose the potential also on $$\Gamma_{out}$$:
+
+- $$p=V$$ on $$\Gamma_{out}$$
+
+This question still needs to be investigated thoroughly. We also want the other boundaries to be electrically insulating:
+
+- $$-\sigma\nabla p\cdot\mathbf{n}=\mathbf{j}\cdot\mathbf{n} = 0$$ on $$\Gamma_E$$
+
+And find the temperature $$T$$ by solving a thermal problem, where the source term comes from Joule effect:
+$$
+\begin{align}
+\nabla\cdot(-k\nabla T) &= \sigma\nabla p\cdot \nabla p &\text{ in } \Omega
+\end{align}
+$$where $$k$$ is the thermal conductivity. +
+The thermal exchanges with air are not considered, leading to a Neumann condition on $$\Gamma_T$$. While the thermal exchanges with the cooling water depends on a heat transfer coefficient $$h$$ and the water temperature $$T_w$$, leading to a Robin condition on $$\Gamma_C$$:
+
+- $$-k\nabla T\cdot \mathbf{n} = 0$$ on $$\Gamma_T$$
+- $$-k\nabla T\cdot\mathbf{n} = h(T-T_w)$$ on $$\Gamma_{C}$$
+
+In order to obtain a good approximation of $$p$$ and $$\mathbf{j}$$, we will use the following HDG method. In the following, we will be using the notation introduced in link:../hdg_methods_for_diffusion-reaction.adoc[HDG methods for diffusion-reaction].
