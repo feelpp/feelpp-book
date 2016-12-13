@@ -27,7 +27,14 @@ toc::[]
 == Examples
 
 We are now using the `feelpp/apps:latest` docker images
-as described in link:/GettingStarted/README.adoc[Getting Started].
+as described in link:/GettingStarted/README.adoc[Getting Started] to demonstrate `feelpp_mesh_partitioner` usage.
+We use the meshes in `src/feelpp/data/gmsh/primitives` in the docker image.
+
+[source,shell]
+.Starting the docker `feelpp/apps:latest`
+----
+docker run -ti -v $HOME/feel:/feel feelpp/apps:latest
+----
 
 === Generating a single mesh partitioning
 
