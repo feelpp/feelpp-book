@@ -11,6 +11,7 @@ toc::[]
 == Options
 
 `feelpp_mesh_partitioner` requires some options.
+
 .Table of command-line `feelpp_mesh_partitioner` options
 |===
 | Name | Description | Default value
@@ -23,9 +24,13 @@ toc::[]
 |===
 
 
-## Examples
+== Examples
+
+=== Generating a single mesh partitioning
+
+We generate a mesh partitioned on 4 cores with the following command
 
 [source,shell]
 ----
-feelpp_mesh_partitioner --part 4 8 16 32  --ifile HL-31_H1-coarse.msh --odir parts 
+feelpp_mesh_partitioner --part 4  --ifile src/feelpp/data/gmsh/primitives --odir parts 
 ----
