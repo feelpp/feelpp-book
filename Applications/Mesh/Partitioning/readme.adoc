@@ -37,10 +37,14 @@ feelpp_mesh_partitioner --part 4  --ifile src/feelpp/data/gmsh/primitives/torus.
 
 You should have in the current directory 4 files
 
-
 [source,shell]
 ----
 ls torus*
 torus.geo  torus.h5  torus.json  torus.msh
------
-Now 
+----
+
+Now th file `torus.json` can be loaded in a Feel++ application distributed on 4 cores.
+
+=== Generating multiple mesh partitioning
+
+Often we are interested in a set of partitioned meshes in order to do a speed-up study. `feelpp_mesh_partitioner` is the right tool for that.
