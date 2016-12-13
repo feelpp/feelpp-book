@@ -22,4 +22,7 @@ The code will partition a mesh, given by `ifile` option, into a number of partit
 
 ## Examples
 
-> TODO
+[source,shell]
+----
+feelpp_mesh_partitioner --part 4 8 16 32  --ifile HL-31_H1-coarse.msh --odir parts 
+----
