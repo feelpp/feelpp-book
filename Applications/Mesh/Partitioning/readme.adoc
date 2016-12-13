@@ -43,7 +43,7 @@ ls torus*
 torus.geo  torus.h5  torus.json  torus.msh
 ----
 
-Now th file `torus.json` can be loaded in a Feel++ application distributed on 4 cores.
+Now the file `torus.json` can be loaded in a Feel++ application distributed on 4 cores.
 
 === Generating multiple mesh partitioning
 
