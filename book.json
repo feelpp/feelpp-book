@@ -11,7 +11,7 @@
         "mathjax",
 "codesnippet",
         "-code-highlighter",
-        "-theme-latex",
+       
         "theme-official"
     ],
     "pluginsConfig": {
