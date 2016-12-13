@@ -26,6 +26,8 @@ toc::[]
 
 == Examples
 
+We are now using the `feelpp/apps:latest` docker images
+as described in link:/GettingStarted/README.adoc[Getting Started]
 === Generating a single mesh partitioning
 
 We generate a mesh partitioned on 4 cores with the following command
