@@ -35,26 +35,12 @@ We generate a mesh partitioned on 4 cores with the following command
 feelpp_mesh_partitioner --part 4  --ifile src/feelpp/data/gmsh/primitives/torus.geo --ofile torus
 ----
 
-
-
-You should have in the current directory two files
+You should have in the current directory 4 files
 
 
 [source,shell]
 ----
-[ Starting Feel++ ] application mesh_partitioner version 0.102.00 date 2016-Dec-13
- . Results are stored in /home/feelpp
-run partioner with shape Simplex_3_1_3
-[loadMesh] Loading mesh in format geo+msh: "/home/feelpp/src/feelpp/data/gmsh/primitives/torus.geo"
-[loadMesh] Use default geo desc: /home/feelpp/src/feelpp/data/gmsh/primitives/torus.geo 0.1 
-      number of elements in memory : 84
-      number of faces in memory : 60
-      number of edges in memory : 0
-      number of points  in memory : 36
-      number of marked faces inlet with tag 1 : 14
-      number of marked faces outlet with tag 2 : 14
-      number of marked faces wall with tag 3 : 32
-start mesh partitioning and save on disk : /home/feelpp/torus.json
-[env] Time : 0.0306945s
-[ Stopping Feel++ ] application mesh_partitioner execution time 0.0306945s
-----
+ls torus*
+torus.geo  torus.h5  torus.json  torus.msh
+-----
+Now 
