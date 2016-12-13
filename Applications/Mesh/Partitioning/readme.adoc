@@ -6,7 +6,7 @@
 
 toc::[]
 
-`feelpp_mesh_partitioner` is a simple applications which can generate a partitioned mesh and save it in a Feel++ specific  `json+hdf5`  file format. The generated mesh can then be loaded very efficiently in parallel.
+`feelpp_mesh_partitioner` is a simple application which can generate a partitioned mesh and save it in a Feel++ specific  `json+hdf5`  file format. The generated mesh can then be loaded very efficiently in parallel.
 
 == Options
 
