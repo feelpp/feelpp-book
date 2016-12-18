@@ -60,7 +60,7 @@ We start by given a name to our model
 
 === Supported Fluid Model
 
-We start with the fluid model itself.
+We start with the fluid model  by setting the fluid model with the `model`  option. Two are supported at the moment. 
 
 .Table of Models for `model` option
 |===
@@ -73,7 +73,10 @@ We start with the fluid model itself.
 === Materials
 
 
-Here is the list of symbols 
+The next step is to define the fluid material by setting its properties namely the density and viscosity.
+
+We first describe the correspondance between the mathematical names and the json names.
+
 .Correspondance between fluid parameters and symbols in JSon files
 |===
 | Parameter | Symbol 
@@ -81,23 +84,23 @@ Here is the list of symbols
 | $$\rho_f$$  | `rho`
 |===
 
-
+Next we define a `Materials` section which contains a section named after the mesh physical marker used to mark the fluid domain. We suppose now that this marker is `water` and use it to name the section that describe the fluid physical parameters. The code below describes the section.
 
 [source,json]
 .Materials section
 ----
 "Materials":
 {
-    "marker":
+    "water":
     {
-        "name":"fluid",
+        "name":"water",
         "rho":"1.0e3",
         "mu":"1.0"
     }
 }
 ----
 
-where `rho` the density in $$kg\cdot m^{-3}$$ and `mu` the dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$ .
+
 
 === Boundary Conditions
 
