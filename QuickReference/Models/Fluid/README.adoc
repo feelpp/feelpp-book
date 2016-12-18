@@ -47,10 +47,19 @@ $$
 
 == JSON file
 
-Let's describe how a json file is build.
+The JSON file contains the description of the fluid model. The next sub-sections describe the different entries in the file.
 
-=== Properties
+We start by given a name to our model
 
+[source,json]
+-----
+"Name":"Fluid flow around a cylinder",
+"ShortName":"flowcyl"
+-----
+
+=== Supported Fluid Model
+
+We start with the fluid model itself.
 
 .Table of Models for `model` option
 |===
@@ -61,6 +70,17 @@ Let's describe how a json file is build.
 
 
 === Materials
+
+
+Here is the list of symbols 
+.Correspondance between fluid parameters and symbols in JSon files
+|===
+| Parameter | Symbol 
+| $$\mu_f$$ | `mu`
+| $$\rho_f$$  | `rho`
+|===
+
+
 
 [source,json]
 .Materials section
