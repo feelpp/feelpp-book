@@ -55,10 +55,8 @@ Let's describe how a json file is build.
 .Table of Models for `model` option
 |===
 | Model | Name 
-
 | Navier-Stokes|`Navier-Stokes`
 | Stokes|`Stokes`
-
 |===
 
 
