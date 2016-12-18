@@ -52,6 +52,7 @@ The JSON file contains the description of the fluid model. The next sub-sections
 We start by given a name to our model
 
 [source,json]
+.Naming the model
 -----
 "Name":"Fluid flow around a cylinder",
 "ShortName":"flowcyl"
