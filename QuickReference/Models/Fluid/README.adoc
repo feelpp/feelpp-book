@@ -62,6 +62,7 @@ We start by given a name to our model
 
 We start with the fluid model  by setting the fluid model with the `model`  option. Two are supported at the moment. 
 
+[cols="1,1", options="header"]
 .Table of Models for `model` option
 |===
 | Model | Name 
@@ -77,6 +78,7 @@ The next step is to define the fluid material by setting its properties namely t
 
 We first describe the correspondance between the mathematical names and the json names.
 
+[cols="1,1", options="header"]
 .Correspondance between fluid parameters and symbols in JSon files
 |===
 | Parameter | Symbol 
@@ -127,15 +129,17 @@ Boundary conditions and volumic forces are set in the json files
 where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
 The condition types are explain in the two following tables.
 
+[cols="1,2,1", options="header"]
 .Boundary conditions
 |===
 | Name | Options | Type 
+
 | Dirichlet 
 | faces, edges and component-wise
-| "Dirichlet"
+| `Dirichlet`
 | Neumann 
 | scalar, vectorial
-| "Neumann_scalar" or "Neumann_vectorial"
+| `Neumann_scalar` or `Neumann_vectorial`
 |===
 
 
