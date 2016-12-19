@@ -128,15 +128,12 @@ The condition types are explain in the two following tables.
 .Boundary conditions
 |===
 | Name | Options | Type 
-
 | Dirichlet 
 | faces, edges and component-wise
 | "Dirichlet"
-
 | Neumann 
 | scalar, vectorial
 | "Neumann_scalar" or "Neumann_vectorial"
-
 |===
 
 
