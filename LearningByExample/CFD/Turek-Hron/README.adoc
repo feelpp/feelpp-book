@@ -5,7 +5,11 @@ Turek & Hron CFD Benchmark
 :toclevels: 1
 :biblio: ../../Appendix/Bibliography/readme.adoc 
 
-In order to validate our fluid-structure interaction solver, we realize here a benchmark, initially proposed by link:{biblio}#turek2006proposal[Turek and Hron], on the behavior of drag and lift forces in a specific model.
+toc::[]
+
+== Introduction
+
+We implement the benchmark proposed by link:{biblio}#turek2006proposal[Turek and Hron], on the behavior of drag and lift forces of a flow around an object composed by a pole and a bar, see Figure <<img-geometry1>>.
 
 Computer codes, used for the acquisition of results, are from Vincent link:{biblio}#bloodflowChabannes[Chabannes].
 
@@ -299,13 +303,16 @@ $$
 \text{Figure 3 : Lift and drag forces}
 $$
 
+=== Geometrical Order
+
+> **Note** Add a section on geometrical order.
+
 === Conclusion
 
-The reference results have been obtained with a time step $$\Delta t=0.05$$. When we compare them to our results, with the same step and $$BDF2$$, we observe that they are in accordance with reference ones.
+The reference results, link:{biblio}#turek2006proposal[Turek and Hron], have been obtained with a time step $$\Delta t=0.05$$. When we compare our results, with the same step and $$\mathrm{BDF}_2$$, we observe that they are in accordance with the reference results.
 
-With a $$\Delta t$$ smaller, a discrepancy is observe, in particular for the drag force. It can also be seen with the same time step, but with a higher $$BDF$$ ( in this case $$BDF3$$ ). This suggests that the couple $$\Delta t=0.05$$ and $$BDF2$$ isn't enough accurate.
+With a larger $$\Delta t$$, a discrepancy is observed, in particular for the drag force. It can also be seen at the same time step, with a higher order $$\mathrm{BDF}_n$$ ( _e.g._ $$\mathrm{BDF}_3$$ ). This suggests that the couple $$\Delta t=0.05$$ and $$\mathrm{BDF}_2$$ isn't enough accurate.
 
-To conclude, a quick look at geometrical order let us see how its use can give good results without necessarily the need for refine more the mesh. 
 
 == Bibliography
 
