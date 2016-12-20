@@ -11,7 +11,7 @@ toc::[]
 
 We implement the benchmark proposed by link:{biblio}#turek2006proposal[Turek and Hron], on the behavior of drag and lift forces of a flow around an object composed by a pole and a bar, see Figure <<img-geometry1>>.
 
-Computer codes, used for the acquisition of results, are from Vincent link:{biblio}#bloodflowChabannes[Chabannes].
+Computer codes, used for the acquisition of results, are from  link:{biblio}#bloodflowChabannes[Vincent Chabannes].
 
 > **Note** This benchmark is linked to the link:../../CSM/Turek-Hron/readme.adoc[Turek Hron CSM] and link:../../FSI/Turek-Hron/readme.adoc[Turek Hron FSI ] benchmarks.
 
