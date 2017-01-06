@@ -1,5 +1,5 @@
-Software prerequisites 
-======================
+Prerequisites 
+=============
 
 In order to use Feel++, a set of tools are required. In the following, we will briefly present them _via_ a simple project that performs basic arithmetic operations.
 
