@@ -1,5 +1,5 @@
-Book Introduction
-=================
+Introduction
+============
 
 * link:book.adoc[Content of this book]
 
