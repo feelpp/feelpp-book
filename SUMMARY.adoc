@@ -1,11 +1,11 @@
 = Summary
 
-. link:README.adoc[Introduction]
-. link:book_intro.adoc[Introduction]
+. link:book_intro.adoc[Preface]
 .. link:book.adoc[Content of this book]
 .. link:credits.adoc[Credits]
 .. link:consortium.adoc[Consortium]
 .. link:sponsors.adoc[Sponsors]
+. link:README.adoc[Introduction]
 . link:GettingStarted/README.adoc[Installation]
 .. link:GettingStarted/prerequisites/prerequisites.adoc[Prerequisites]
 ... link:GettingStarted/prerequisites/makefile.adoc[Makefile]
