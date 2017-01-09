@@ -1,5 +1,5 @@
-Feel++
-======
+FEEL++ BOOK
+===========
 
 Finite Element Embedded Library in C++
 --------------------------------------
@@ -24,18 +24,71 @@ Feel++ is
  . a library entirely in `C++` allowing to create `C++` complex
    and typically non-linear multi-physics applications currently in industry, physics and health-care.
 
-=== Help and Support
+Help and Support
+----------------
 
-We're always happy to help out with Feel\++ or any other questions you might have. You can ask a question or signal an issue at the Gitter Feel++ salon.
+We're always happy to help out with Feel\++ or any other questions you might
+have. You can ask a question or signal an issue at the Gitter Feel++ salon.
 
 https://gitter.im/feelpp/feelpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge[
 image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.im/feelpp/feelpp]]
 
-
-=== Contribute to this documentation
+Contribute to this documentation
+--------------------------------
 
 You can contribute to improve this documentation on
-https://github.com/feelpp/feelpp-book[GitHub] and follow the  https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
+https://github.com/feelpp/feelpp-book[GitHub] and follow the
+https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
+How to view the book
+--------------------
 
+The book can be read online at https://book.feelpp.org/content
 
+To compile the book on your machine.
+
+1. Install gitbook library to get access to command tools. We recommend using
+npm
+```sh
+npm install gitbook
+```
+2. Clone this repository. Place yourself in the repository directory, then
+install the gitbook requirements. Finally, compile the book.
+```sh
+git clone git@github.com:feelpp/feelpp-book.git
+cd feelpp-book
+gitbook install
+gitbook serve
+```
+
+3. Visualize the book in your browser, generally `http://localhost:4000`
+
+**Remark:**
+
+For more output format option, type
+```
+gitbook help
+```
+
+How to edit the book
+~~~~~~~~~~~~~~~~~~~~
+
+Feel++ developers can edit the book online via https://www.gitbook.com.
+
+But we recommend to proceed via **Pull Request** on the github repository
+
+1. Fork this repository.
+2. Add a new "upstream" remote which point to this repository
+3. Set your master branch to point on this repository master branch.
+4. Create and place yourself in a new branch for writting your change
+
+```sh
+git remote add upstream git://github.com/wp-cli/wp-cli.git
+git fetch upstream
+git checkout upstream/master -B master
+git checkout -b branchname
+```
+
+5. Commit you change in your own branch, the pull-request this branch to master.
+6. Create one branch per big change. Once the pull-request is accepted, you can
+delete your fork.

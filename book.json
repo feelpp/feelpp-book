@@ -1,5 +1,5 @@
 {
-    "gitbook": ">=3.0.0",
+    "gitbook": ">=3.2.2",
     "plugins": [
         "anchors",
         "include-codeblock",
@@ -9,10 +9,12 @@
         "expandable-chapters",
         "-search",
         "mathjax",
-"codesnippet",
         "-code-highlighter"
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
         "ga": {
             "token": "UA-65761593-1"
         },
