@@ -28,9 +28,14 @@ $$
 We add to them the material constitutive equation :
 
 $$
-\boldsymbol{\sigma}_{f} = -p_f \boldsymbol{I} + \mu_f (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
+\boldsymbol{\sigma}_{f} = -p_f \boldsymbol{I} + 2\mu_f D(\boldsymbol{u}_{f})
 $$
 
+with strain tensor $$D(\boldsymbol{u}_{f})$$ defined by :
+
+$$
+D(\boldsymbol{u}_{f}) = \frac{1}{2} (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
+$$
 
 |===
 | Notation | Quantity | Unit 
