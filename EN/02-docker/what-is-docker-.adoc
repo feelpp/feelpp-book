@@ -1,6 +1,10 @@
 Feel++ Docker Framework
 =======================
 
+== Installing Docker
+
+TODO G. Dolle
+
 == Docker and Containers
 
 Container based technologies are revolutionizing 
