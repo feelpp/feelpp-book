@@ -1,5 +1,7 @@
-What is Docker ?
-================
+Feel++ Docker Framework
+=======================
+
+== Docker and Containers
 
 Container based technologies are revolutionizing 
 development, deployment and execution of software.
@@ -14,3 +16,5 @@ image:/assets/VMs vs Containers.png[alt=""]
 
 
 Docker is a container technology providing _(i)_ an engine to start and stop container, _(ii)_ a user friendly interface from the creation to the distribution of containers and _(iii)_ a hub thats provides publicly a huge number of container to download and avoid duplicating work.
+
+== Feel++ Docker
