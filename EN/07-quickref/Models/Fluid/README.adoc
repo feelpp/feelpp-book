@@ -108,6 +108,53 @@ Next we define a `Materials` section which contains a section named after the me
     }
 }
 ----
+==== Generalised Newtonian fluid
+A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
+
+$$
+\dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
+$$
+
+and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$. 
+The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model wich
+takes the useful form :
+
+$$
+  \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right) 
+$$
+
+The simpler exemple of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
+
+$$
+\mu_f \left(\dot{\gamma} \right) = k \dot{\gamma}^{n-1}
+$$
+
+where $$k$$ and $$n < 1$$ are two parameters related to fluid properties.
+In the context of blood flow modeling, an extension of power model was proposed by Walburn and Schneck. Parameters $$k$$ and $$n$$ are related to the haematocric $$Ht$$ :
+
+$$
+k = C_1 exp(C_2 Ht ), \quad\quad    n = 1- C_3 H t
+$$
+and $$C_1$$, $$C_2$$ and $$C_3$$ are 3 parameters.
+
+
+Anothers family of generalised Newtonian model can be defined from a function $$\Phi$$ express by :
+
+$$
+  \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) 
+  = \frac{\mu\left(\dot{\gamma}\right) - \mu_{\infty}}{\mu_{0}-\mu_{\infty}}  
+$$
+
+where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and infinite shear rate.
+
+
+
+[cols="1,1", options="header"]
+|===
+| Viscosity law | $$\Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) $$ 
+| Carreau | $$\left(1+\left(\lambda\dot{\gamma}\right)^{2}\right)^{(n-1)/2}$$ 
+| Carreau-Yasuda | $$\left(1+\left(\lambda\dot{\gamma}\right)^{a}\right)^{(n-1)/a}$$ 
+|===
 
 
 
