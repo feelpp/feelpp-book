@@ -1,6 +1,6 @@
 = Summary
 
-// PREFACE
+. link:README.adoc[Introduction]
 . link:00-preface/README.adoc[Preface]
 .. link:00-preface/book.adoc[Content of this book]
 .. link:00-preface/credits.adoc[Credits]
@@ -8,8 +8,6 @@
 .. link:00-preface/sponsors.adoc[Sponsors]
 
 == Preparing FEEL++
-
-// INSTALLATION
 . link:01-installation/README.adoc[Installation]
 .. link:01-installation/prerequisites/README.adoc[Prerequisites]
 ... link:01-installation/prerequisites/makefile.adoc[Makefile]
@@ -20,16 +18,14 @@
 .. link:01-installation/linux.adoc[Linux]
 .. link:01-installation/mac.adoc[Mac OS X]
 .. link:01-installation/building.adoc[Build from sources]
-// DOCKER
 . link:02-docker/README.adoc[Docker]
 .. link:02-docker/cmakefeel.adoc[Configuring your own project with CMake]
+.. link:02-docker/docker-framework.adoc[Docker Framework]
+.. link:02-docker/what-is-docker-.adoc[What is Docker ?]
 
 == Solving PDEs
-
-// MODELING WITH FEEL++
 . link:03-modeling/README.adoc[Modeling with Feel++]
 .. link:03-modeling/01-modeling.adoc[Creating a model]
-// PROGRAMMING WITH FEEL++
 . link:04-programming/README.adoc[Programming with Feel++]
 .. link:04-programming/01-OutputDirectories.adoc[Output Directories]
 .. link:04-programming/02-SettingUpEnvironment.adoc[Environment]
@@ -41,13 +37,11 @@
 .. link:04-programming/08-ComputingIntegrals.adoc[Computing integrals]
 .. link:04-programming/11-SolveAnEquation.adoc[Solve a partial differential equation]
 .. link:04-programming/09-UsingBackend.adoc[Using linear algebra backends]
-// LEARNING BY EXAMPLE
 . link:05-learning/README.adoc[Learning By Example]
 .. link:05-learning/CFD/README.adoc[CFD]
 ... link:05-learning/CFD/Turek-Hron/README.adoc[Turek-Hron]
 .. link:05-learning/Optimization/README.adoc[Optimization]
 ... link:05-learning/Optimization/laplacian_nlopt.adoc[laplacian_nlopt]
-// APPLICATIONS
 . link:06-applications/readme.adoc[Feel++ Applications]
 .. link:06-applications/Mesh/readme.adoc[Mesh]
 ... link:06-applications/Mesh/Partitioning/readme.adoc[feelpp_mesh_partitioner]
@@ -55,8 +49,6 @@
 .. link:06-applications/Models/readme.adoc[Models]
 
 == Advanced programming
-
-// QUICK REFERENCE
 . link:07-quickref/README.adoc[Quick Reference]
 .. link:07-quickref/cmake.adoc[Development environment]
 .. link:07-quickref/environment.adoc[Setting runtime environment]
@@ -92,12 +84,10 @@
 ... link:07-quickref/Models/FluidStructure/README.adoc[Fluid Structure Interaction]
 ... link:07-quickref/Models/Advection/README.adoc[Advection Model]
 ... link:07-quickref/Models/thrmoelectric.adoc[ThermoElectric]
-// FAQ
 . link:08-faq/README.adoc[Frequently Asked Questions]
 .. link:08-faq/FAQDevelopment.adoc[Development]
 .. link:08-faq/FAQExecution.adoc[Runtime]
-// ANNEXES
 . link:09-annexes/README.adoc[Annexes]
 .. link:09-annexes/calculus.adoc[Calculus]
-// GLOSSARY
 . link:GLOSSARY.adoc[Glossary]
+
