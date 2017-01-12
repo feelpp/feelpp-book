@@ -9,7 +9,49 @@ toc::[]
 Feel++ leverages the power of Docker and provides a stack of container images. 
 
 == First steps
+
+To test Docker is installed properly, try
 [source,bash]
 ----
-$ docker run 
+$ docker run feelpp/feelpp-env  echo "Hello World!"
 ----
+
+This may take a while depending on your internet connection but eventually you should see something like
+
+[source,txt]
+----
+docker run feelpp/feelpp-env
+Unable to find image 'feelpp/feelpp-env:latest' locally
+latest: Pulling from feelpp/feelpp-env
+8e21f82d32cf: Already exists 
+54d6ba364cfb: Already exists 
+451f851c9d9f: Already exists 
+55e763f0d444: Already exists 
+b112a925308f: Already exists 
+7e6b3a318b2e: Downloading 22.14 MB/1.002 GB
+1cb0ee84933d: Download complete 
+150f7ab245df: Download complete 
+8fda3665705b: Download complete 
+4ae60eefb73f: Download complete 
+3c18e13d193b: Download complete 
+0db00e5ba278: Download complete 
+0a8dee947f9b: Download complete 
+----
+
+We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which a Feel++ Ubuntu 16.10 container with the required programming and execution environment for Feel++.
+The first line tells us that there is no local copy of this Feel++ image. Docker checks automatically online on the link:http:://hub.docker.com[Docker Hub] if an image is available.
+
+> **Note:** `feelpp/` in `feelpp/feelpp-env` provides the organization name of the image whereas `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization.
+
+Once the image is downloaded, Docker launches the container and executes the command we provided `echo "Hello World!"` from inside the container. The result of the command is show on the last line of the output log above.
+
+If you run the command again, you won't see the download part and the command will be executed very fast.
+
+We can ask Docker to give us a shell using the following command
+[source,bash]
+----
+$ docker run -it feelpp/feelpp-env
+----
+It provides a shell prompt from inside the container which is very similar to what you obtain when login with `ssh` on a remote machine. The flags `-i` and `-t` tell Docker to provide an interactive session (`-i`) with a TTY attached (`-t`).
+
+
