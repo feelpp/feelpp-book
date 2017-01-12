@@ -56,7 +56,7 @@ It creates the `docker` group if it doesn't already exist and adds the current u
 $ sudo service docker restart
 ----
 
-From now on, we omit the `sudo` command when using `Docker` for the sake of brevity.
+> **Note:** From now on, we omit the `sudo` command when using `Docker` for the sake of brevity.
 
 ==== Warning
 Adding a user to the  `docker` group has security implications, on a shared machine you should consider reading the link:https://docs.docker.com/engine/security/security/[Docker security page].
