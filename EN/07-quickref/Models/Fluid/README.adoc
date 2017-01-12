@@ -280,6 +280,120 @@ The condition types are explain in the two following tables.
 |===
 
 
+[cols="1,1,1,1", options="header"]
+.Boundary conditions
+|===
+| Field | Name | Option | Entity
+
+| velocity
+| Dirichlet
+| expr
+
+ type
+
+ number
+ 
+ alemesh_bc
+  
+| faces, edges, points
+| velocity_x
+
+velocity_y
+
+velocity_z
+
+
+| Dirichlet
+| expr
+
+ type
+
+  number
+  
+  alemesh_bc
+  
+ | faces, edges, points
+
+| velocity
+
+| Neumann_scalar
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_vectorial
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_tensor2
+| expr
+
+number
+
+alemesh_bc
+| faces
+
+| velocity
+| slip
+| alemesh_bc
+| faces
+
+| pressure
+| Dirichlet
+| expr
+
+number
+
+alemesh_bc
+
+|faces
+
+| fluid
+| outlet
+| number
+
+alemesh_bc
+
+model
+
+windkessel_coupling
+
+windkessel_Rd
+
+windkessel_Rp
+
+windkessel_Cd
+
+| faces
+
+| fluid
+
+| inlet
+
+| expr
+
+shape
+
+constraint
+
+number
+
+alemesh_bc
+
+| faces
+
+|===
+
+
 === Post Process
 
 [source,json]
