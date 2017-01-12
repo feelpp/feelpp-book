@@ -40,14 +40,23 @@ The last possibility is to use link:https://docs.docker.com/engine/installation/
 
 At the time of writing this book, the Docker version we used is Docker 1.12. All commands have been tested with this version.
 
+== Running without sudo
+
+
 == Checking Docker
 
 We now check your installation by running ``
-To make sure everything is installed correctly and working, try running the docker version command.
-.Listing : Output of `docker version` on Linux
-[source,bash]
-----
+To make sure everything is installed correctly and working, try running the docker version command. You should see something like the following on Linux or Mac.
 
- ----
+.Listing : Output of `docker version` on Linux
+[include](docker-version-linux.txt)
  
+.Listing : Output of `docker version` on Mac
+[include](docker-version-mac.txt)
  
+If so, you are ready for the next step. If instead you get something like
+
+.Listing : Bad response output of `docker version` on Mac
+[include](docker-version-mac-bad.txt)
+
+then it means that the 
