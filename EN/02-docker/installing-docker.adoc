@@ -1,5 +1,11 @@
 Installing Docker
 =================
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
+
 
 This section covers briefly the installation of Docker. It should be a relatively simple smooth process to install Docker. 
 
