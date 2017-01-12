@@ -20,22 +20,24 @@ This may take a while depending on your internet connection but eventually you s
 
 [source,txt]
 ----
-docker run feelpp/feelpp-env
 Unable to find image 'feelpp/feelpp-env:latest' locally
 latest: Pulling from feelpp/feelpp-env
-8e21f82d32cf: Already exists 
-54d6ba364cfb: Already exists 
-451f851c9d9f: Already exists 
-55e763f0d444: Already exists 
-b112a925308f: Already exists 
-7e6b3a318b2e: Downloading 22.14 MB/1.002 GB
-1cb0ee84933d: Download complete 
-150f7ab245df: Download complete 
-8fda3665705b: Download complete 
-4ae60eefb73f: Download complete 
-3c18e13d193b: Download complete 
-0db00e5ba278: Download complete 
-0a8dee947f9b: Download complete 
+8e21f82d32cf: Pull complete 
+54d6ba364cfb: Pull complete 
+451f851c9d9f: Pull complete 
+55e763f0d444: Pull complete 
+b112a925308f: Pull complete 
+7e6b3a318b2e: Pull complete 
+1cb0ee84933d: Pull complete 
+150f7ab245df: Pull complete 
+8fda3665705b: Pull complete 
+4ae60eefb73f: Pull complete 
+3c18e13d193b: Pull complete 
+0db00e5ba278: Pull complete 
+0a8dee947f9b: Pull complete 
+Digest: sha256:457539dbd781594eccd4ddf26a7aefdf08a2fff9dbeb1f601a22d9e7e3761fbc
+Status: Downloaded newer image for feelpp/feelpp-env:latest
+Hello World! 
 ----
 
 We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which a Feel++ Ubuntu 16.10 container with the required programming and execution environment for Feel++.
