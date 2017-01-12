@@ -42,6 +42,9 @@ At the time of writing this book, the Docker version we used is Docker 1.12. All
 
 == Checking Docker
 
+We now check your installation by running ``
+To make sure everything is installed correctly and working, try running the docker version command.
+.Listing : Output of `docker version` on Linux
 [source,bash]
 ----
 > docker version
@@ -61,3 +64,5 @@ Server:
  Built:        Mon, 10 Oct 2016 21:38:17 +1300
  OS/Arch:      linux/amd64
  ----
+ 
+ 
