@@ -19,9 +19,10 @@
 .. link:01-installation/mac.adoc[Mac OS X]
 .. link:01-installation/building.adoc[Build from sources]
 . link:02-docker/README.adoc[Docker]
+.. link:02-docker/what-is-docker-.adoc[Docker & Containers]
+.. link:02-docker/installing-docker.adoc[Installing Docker]
+.. Feel++ & Docker
 .. link:02-docker/cmakefeel.adoc[Configuring your own project with CMake]
-.. link:02-docker/docker-framework.adoc[Docker Framework]
-.. link:02-docker/what-is-docker-.adoc[What is Docker ?]
 
 == Solving PDEs
 . link:03-modeling/README.adoc[Modeling with Feel++]
