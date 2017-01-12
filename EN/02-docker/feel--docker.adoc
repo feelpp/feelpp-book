@@ -1,6 +1,15 @@
 Feel++ and Docker
 =================
+:toc:
+:toc-placement: macro
+:toclevels: 3
 
+toc::[]
 
+Feel++ leverages the power of Docker and provides a stack of container images. 
 
-Feel++ leverages the power of Docker and provides a stack of container images
+== First steps
+[source,bash]
+----
+$ docker run 
+----
