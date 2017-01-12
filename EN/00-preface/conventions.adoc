@@ -7,7 +7,7 @@ _Italic_ indicates new terms
 
 `typewriter` is used on program listings as well as when referring to programming elements, _e.g._ functions, variables, statements, data types, environment variables or keywords.
 
-`$ typewriter` displays commands that the user types literally without the `$`.
+`$ typewriter` or `> typewriter` displays commands that the user types literally without the `$` or `>`.
 
 > **Tip:** this is a tip or a suggestion.
 
