@@ -1,3 +1,6 @@
-== Feel++ Docker
+Feel++ and Docker
+=================
+
+
 
 Feel++ leverages the power of Docker and provides a stack of container images
