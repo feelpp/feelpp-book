@@ -23,7 +23,7 @@
 . link:02-docker/README.adoc[Docker]
 .. link:02-docker/what-is-docker-.adoc[Docker & Containers]
 .. link:02-docker/installing-docker.adoc[Installing Docker]
-.. link:02-docker/feel--docker.adoc[Feel++ & Docker]
+.. link:02-docker/feelpp-docker.adoc[Feel++ & Docker]
 .. link:02-docker/cmakefeel.adoc[Configuring your own project with CMake]
 
 == Solving PDEs
