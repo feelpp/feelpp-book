@@ -39,3 +39,6 @@ The last possibility is to use link:https://docs.docker.com/engine/installation/
 == Tested with Docker 1.12
 
 At the time of writing this book, the Docker version we used is Docker 1.12. All commands have been tested with this version.
+
+== Checking Docker
+
