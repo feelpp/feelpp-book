@@ -42,6 +42,20 @@ At the time of writing this book, the Docker version we used is Docker 1.12. All
 
 == Running without sudo
 
+On Linux, Docker is a priviledged binary, you need to prefix all your commands with `sudo`, e.g. on Ubuntu. You need first to belong to the `docker` group with the following command on Ubuntu
+[source,bash]
+----
+$ sudo usermod -aG docker
+----
+It creates the `docker` group if it doesn't already exist and adds the current user to the `docker` group. Then you need to log out and log in again. Similar process is available on other distributions. You need also to restart the `docker` service
+[source,bash]
+----
+$ sudo service docker restart
+----
+
+
+==== Warning
+link:https://docs.docker.com/engine/security/security/[Docker security page].
 
 == Checking Docker
 
