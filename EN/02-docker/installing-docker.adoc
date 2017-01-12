@@ -3,7 +3,7 @@ Installing Docker
 
 This section covers briefly the installation of Docker. It should be a relatively simple smooth process to install Docker. 
 
-=== Channels
+== Channels
 
 Docker offers two channels: the stable and beta channels. 
 
@@ -12,3 +12,24 @@ The _stable channel_ is fully baked and tested software providing a reliable pla
 The _beta channel_ offer cutting edge features and experimental versions of the Docker Engine. This is a continuation of the initial Beta program of Docker to experiment with the latest features in development. It incurs far more instabilities than the stable channel but releases are done frequently -- possibly several releases per month.
 
 In the latter we shall consider only installing and using the _stable channel_.
+
+== Installing Docker
+
+At the time of writing this section, Docker is available on Linux, Mac and Windows. 
+
+=== Mac and Windows
+The support for Mac and Windows as Host OS was recently released and Docker Inc provides installation processes link:https://docs.docker.com/docker-for-mac/[_Docker For Mac_] and link:https://docs.docker.com/docker-for-windows/[_Docker for Windows_] which are the recommended way of installing Docker on these platforms.
+
+=== Linux
+
+Most Linux distributions have their own packages but they tend to lag behind the stable releases of Docker which could be a serious  issues considering the development speed of Docker.
+
+To follow Docker releases, it is probably best to use the link:https://docs.docker.com/engine/installation/linux/[packages distributed by Docker].
+
+=== Installing Binaries
+
+The last possibility is to use link:https://docs.docker.com/engine/installation/binaries/[Docker Binaries] to install Docker. This should be used at the last resort if packages are provided either by your distribution or Docker Inc.
+
+== Tested with Docker 1.12
+
+At the time of writing this book, the Docker version we used is Docker 1.12. All commands have been tested with this version.
