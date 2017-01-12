@@ -1,16 +1,16 @@
 > docker version
 Client:
- Version:      1.12.6
+ Version:      1.12.1
  API version:  1.24
- Go version:   go1.6.4
- Git commit:   78d1802
- Built:        Wed Jan 11 00:23:16 2017
- OS/Arch:      darwin/amd64
+ Go version:   go1.6.3
+ Git commit:   23cf638
+ Built:        Mon, 10 Oct 2016 21:38:17 +1300
+ OS/Arch:      linux/amd64
 
 Server:
- Version:      1.12.6
+ Version:      1.12.1
  API version:  1.24
- Go version:   go1.6.4
- Git commit:   78d1802
- Built:        Wed Jan 11 00:23:16 2017
+ Go version:   go1.6.3
+ Git commit:   23cf638
+ Built:        Mon, 10 Oct 2016 21:38:17 +1300
  OS/Arch:      linux/amd64
