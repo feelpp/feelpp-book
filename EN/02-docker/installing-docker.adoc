@@ -63,4 +63,5 @@ If so, you are ready for the next step. If instead you get something like
 .Listing : Bad response output of `docker version` on Mac
 [include](docker-version-mac-bad.txt)
 
-then it means that the 
+then it means that the Docker daemon is not running or that the client cannot access it. 
+To investigate the problem you can try running the daemon manually  -- e.g. `sudo docker daemon`. -- This should give you some informations of what might have gone wrong with your installation.
