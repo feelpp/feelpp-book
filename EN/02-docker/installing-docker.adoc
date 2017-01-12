@@ -56,6 +56,10 @@ To make sure everything is installed correctly and working, try running the dock
  
 If so, you are ready for the next step. If instead you get something like
 
+.Listing : Bad response output of `docker version` on Linux
+[include](docker-version-linux-bad.txt)
+
+
 .Listing : Bad response output of `docker version` on Mac
 [include](docker-version-mac-bad.txt)
 
