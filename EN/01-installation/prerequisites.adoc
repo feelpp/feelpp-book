@@ -10,9 +10,9 @@ This is the list of all the libraries you must have installed on your computer, 
 |===
 | Compiler  | Standard Library 
 
-| clang (3.5, 3.6, 3.7, 3.8) | libstdc{plus}{plus} 4.9 
+| clang (3.6, 3.7, 3.8) | libstdc{plus}{plus} 4.9 
 | clang  |  libc{plus}{plus} (corresponding clang version)
-| GCC 5 | libstdc{plus}{plus} 5
+| clang (3.8, 3.9)  | libstdc{plus}{plus} 6
 | GCC 6 | libstdc{plus}{plus} 6
 
 |===
@@ -23,21 +23,23 @@ This is the list of all the libraries you must have installed on your computer, 
 |===
 | Name | Minimum Version | Maximum Version | Notes
 
-| CMake | 2.8.7 | -- | 
+| CMake | 3.0 | -- | 
 | MPI   | -- | -- | openmpi or mpich
-| Boost | 1.55 | 1.61 | 
-| PETSc | 3.2 | 3.7 | 
-| Gmsh  | 2.8.7 | 2.12 | 
+| Boost | 1.55 | 1.63 | 
+
 |===
+
 
 .Table optional external libraries
 
 |===
-| Library | Notes
+| Library | Minimum Version | Maximum Version  | Notes
 
-| Superlu | superlu and superlu_dist
-| Suitesparse | umfpack (colamd,amd)
-| OpenTURNS |
+| PETSc | 3.2 | 3.7 | 
+| Gmsh  | 2.8.7 | 2.12 | 
+| Superlu  ||| superlu and superlu_dist
+| Suitesparse ||| umfpack (colamd,amd)
+| OpenTURNS |||
 |===
 
 .Table Optional tools
