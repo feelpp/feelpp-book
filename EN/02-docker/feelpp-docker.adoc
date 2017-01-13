@@ -46,4 +46,36 @@ $ docker run -it feelpp/feelpp-env
 ----
 It provides a shell prompt from inside the container which is very similar to what you obtain when login with `ssh` on a remote machine. The flags `-i` and `-t` tell Docker to provide an interactive session (`-i`) with a TTY attached (`-t`).
 
+== Feel++ Container System
 
+The _Feel++ Container System_ (FCS) is organized in layers and provide a set of images.
+
+=== Naming
+
+The naming convention of the FCS allows the user to know where they come from and where they are stored on the link:http://hub.docker.com[Docker Hub]. The name of the images is built as follows
+
+[source,bash]
+----
+feelpp/feelp-<component>[:tag]
+----
+
+where 
+
+ * `feelpp/` is the namespace of the image and organization name 
+ * `feelpp-<component>` the image name and Feel++ component
+ * `[:tag]` an optional tag for the image, by default set to `:latest`
+ 
+Feel++ images(components) are defined as layers in the FCS in the table below
+
+.Table of the components in the FCS
+|===
+| Component | Description | Built From
+
+| `feelpp-env` | Execution and Programming environment | <OS> 
+| `feelpp-libs`  | Feel++ libraries and tools | `feelpp-env`
+| `feelpp-base` | Feel++ base applications | `feelpp-libs` 
+| `feelpp-apps` | Feel++ toolbox applications  | `feelpp-base`
+
+|===
+
+`feelpp-env` depends on an operating system image `<OS>`. Currently 
