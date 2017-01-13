@@ -78,4 +78,7 @@ Feel++ images(components) are defined as layers in the FCS in the table below
 
 |===
 
-`feelpp-env` depends on an operating system image `<OS>`. Currently 
+| **Note:** `feelpp-env` depends on an operating system image `<OS>`, the recommended and default `<OS>` is Ubuntu 16.10. In the future, we will build upon the next Ubuntu LTS or Debian Stable releases. 
+
+=== Tags
+
