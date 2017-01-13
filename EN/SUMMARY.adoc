@@ -10,11 +10,7 @@
 
 == Preparing FEEL++
 . link:01-installation/README.adoc[Installation]
-.. link:01-installation/prerequisites/README.adoc[Prerequisites]
-... link:01-installation/prerequisites/makefile.adoc[Makefile]
-... link:01-installation/prerequisites/cmake.adoc[CMake]
-... link:01-installation/prerequisites/doxygen.adoc[Doxygen]
-... link:01-installation/prerequisites/github.adoc[GitHub]
+.. link:01-installation/prerequisites.adoc[Prerequisites]
 .. link:01-installation/docker.adoc[Docker (recommended)]
 .. link:01-installation/linux.adoc[Linux]
 .. link:01-installation/mac.adoc[Mac OS X]
