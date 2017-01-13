@@ -116,3 +116,15 @@ However Docker shines in continuous integration. It provides a large set of oper
 |===
 
 If you are interested in testing Feel++ in these systems, you can run these flavors.
+
+=== feelpp-env
+
+=== feelpp-libs
+
+=== feelpp-base
+
+=== feelpp-apps
+
+== Other Software
+
+Feel++ deployed with Docker benefits 
