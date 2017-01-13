@@ -28,7 +28,7 @@ The support for Mac and Windows as Host OS was recently released and Docker Inc 
 
 === Linux
 
-Most Linux distributions have their own packages but they tend to lag behind the stable releases of Docker which could be a serious  issues considering the development speed of Docker.
+Most Linux distributions have their own packages but they tend to lag behind the stable releases of Docker which could be a serious  issue considering the development speed of Docker.
 
 To follow Docker releases, it is probably best to use the link:https://docs.docker.com/engine/installation/linux/[packages distributed by Docker].
 
