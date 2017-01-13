@@ -2,6 +2,8 @@
     "gitbook": ">=3.2.2",
     "plugins": [
         "anchors",
+        "ace",
+        "ace-mode-feelpp",
         "include-codeblock",
         "ga",
         "richquotes",
