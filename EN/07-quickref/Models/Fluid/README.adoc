@@ -280,6 +280,29 @@ The condition types are explain in the two following tables.
 |===
 
 
+==== Dirichlet on velocity
+
+$$
+\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma
+$$
+
+==== Dirichlet on pressure
+==== Neumann
+==== Slip
+==== Inlet flow
+==== Outlet flow
+
+
+
+
+
+
+
+
+
+==== Option summary
+
+
 [cols="1,1,1,1", options="header"]
 .Boundary conditions
 |===
@@ -417,18 +440,16 @@ alemesh_bc
 
 The fields allowed to be exported in the `Fields` section are:
 
-- displacement
 - velocity
-- acceleration
-- stress or normal-stress
 - pressure
-- material-properties
+- displacement
+- vorticity
+- stress or normal-stress
+- wall-shear-stress
+- density
+- viscosity
 - pid
-- fsi
-- Von-Mises
-- Tresca
-- principal-stresses
-- all
+- alemesh
 
 .Measure type and range type associated
 |===
@@ -444,15 +465,10 @@ The fields allowed to be exported in the `Fields` section are:
 
 The fields on which one can do measures:
 
-- volume_variation
-- displacement
-- velocity
-- acceleration
-- pressure
-- principal-stress-0
-- principal-stress-1
-- principal-stress-2
-- sigma_xx, sigma_xy, ...
+- Force
+- FlowRate
+- Pressure
+- VelocityDivergence
 
 == Action
 
