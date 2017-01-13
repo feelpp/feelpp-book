@@ -34,7 +34,7 @@ To follow Docker releases, it is probably best to use the link:https://docs.dock
 
 === Installing Binaries
 
-The last possibility is to use link:https://docs.docker.com/engine/installation/binaries/[Docker Binaries] to install Docker. This should be used at the last resort if packages are provided either by your distribution or Docker Inc.
+The last possibility is to use link:https://docs.docker.com/engine/installation/binaries/[Docker Binaries] to install Docker. This should be used at the last resort if packages are provided neither by your distribution nor by Docker Inc.
 
 == Tested with Docker 1.12
 
