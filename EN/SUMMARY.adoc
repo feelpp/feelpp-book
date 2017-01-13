@@ -8,7 +8,6 @@
 .. link:00-preface/sponsors.adoc[Sponsors]
 .. link:00-preface/conventions.adoc[Conventions]
 
-
 == Preparing FEEL++
 . link:01-installation/README.adoc[Installation]
 .. link:01-installation/prerequisites/README.adoc[Prerequisites]
@@ -21,9 +20,9 @@
 .. link:01-installation/mac.adoc[Mac OS X]
 .. link:01-installation/building.adoc[Build from sources]
 . link:02-docker/README.adoc[Docker]
-.. link:02-docker/what-is-docker-.adoc[Docker & Containers]
-.. link:02-docker/installing-docker.adoc[Installing Docker]
-.. link:02-docker/feelpp-docker.adoc[Feel++ & Docker]
+.. link:02-docker/what-is-docker-.adoc[Introduction]
+.. link:02-docker/installing-docker.adoc[Installation]
+.. link:02-docker/feelpp-docker.adoc[Feel++ Containers]
 .. link:02-docker/cmakefeel.adoc[Configuring your own project with CMake]
 
 == Solving PDEs

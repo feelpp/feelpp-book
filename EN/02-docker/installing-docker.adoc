@@ -1,5 +1,5 @@
-Installing Docker
-=================
+Installation
+============
 :toc:
 :toc-placement: macro
 :toclevels: 3

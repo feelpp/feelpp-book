@@ -1,4 +1,4 @@
-Feel++ and Docker
+Feel++ Containers
 =================
 :toc:
 :toc-placement: macro
