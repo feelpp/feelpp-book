@@ -1,10 +1,8 @@
 Prerequisites
 =============
 
-This is the list of all the libraries you must have installed on your computer, and the `*-dev` packages for some of them.
 
-
-> **Warning** Feel{plus}{plus} use C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
+Feel{plus}{plus} uses C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
 
 .Table C{plus}{plus} compilers and standard libraries combinations
 |===
@@ -12,7 +10,7 @@ This is the list of all the libraries you must have installed on your computer, 
 
 | clang (3.6, 3.7, 3.8) | libstdc{plus}{plus} 4.9 
 | clang  |  libc{plus}{plus} (corresponding clang version)
-| clang (3.8, 3.9)  | libstdc{plus}{plus} 6
+| clang (3.8(requires patches), 3.9)  | libstdc{plus}{plus} 6
 | GCC 6 | libstdc{plus}{plus} 6
 
 |===
