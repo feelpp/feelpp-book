@@ -114,3 +114,5 @@ However Docker shines in continuous integration. It provides a large set of oper
 | Debian | testing | `debian-testing`| GCC 6.x, Clang 3.9
 
 |===
+
+If you are interested in testing Feel++ in these systems, you can run these flavors.

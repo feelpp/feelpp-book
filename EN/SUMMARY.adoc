@@ -50,7 +50,7 @@
 ... link:06-applications/Mesh/Reading/readme.adoc[Reading]
 .. link:06-applications/Models/readme.adoc[Models]
 
-== Advanced programming
+== Programming
 . link:07-quickref/README.adoc[Quick Reference]
 .. link:07-quickref/cmake.adoc[Development environment]
 .. link:07-quickref/environment.adoc[Setting runtime environment]
