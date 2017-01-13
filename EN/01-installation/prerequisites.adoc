@@ -18,7 +18,6 @@ This is the list of all the libraries you must have installed on your computer, 
 |===
 
 
-
 .Table required tools to compile Feel++
 |===
 | Name | Minimum Version | Maximum Version | Notes
