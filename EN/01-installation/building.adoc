@@ -1,4 +1,5 @@
-= Building Feel++
+Building Feel++
+===============
 
 :toc:
 :toc-placement: macro
