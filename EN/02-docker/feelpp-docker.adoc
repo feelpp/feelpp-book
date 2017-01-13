@@ -100,11 +100,10 @@ The following table displays the
 
 |===
 
-=== Continuous Integration
+=== Host OS
 
-Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various context.
-
-The FCS takes advantage of Docker to build  and `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
+As we said before the default Host OS is Ubuntu 16.10. 
+However Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various context. The FCS takes advantage of Docker to build  `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
 
 |===
 | Operating system | version | `feelpp-env` Tags | Compilers
@@ -113,6 +112,5 @@ The FCS takes advantage of Docker to build  and `feelpp-libs` for several operat
 | Ubuntu | 16.04 | `ubuntu-16.04` | GCC 6.x, Clang 3.8
 | Debian | sid   | `debian-sid` | GCC 6.x, Clang 3.9,4.0
 | Debian | testing | `debian-testing`| GCC 6.x, Clang 3.9
-
 
 |===
