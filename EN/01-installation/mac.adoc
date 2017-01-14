@@ -4,7 +4,7 @@ Feel++ on Mac OS X
 :toc-placement: macro
 :toclevels: 3
 
-Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
+Feel++ is  supported on Mac OSX, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
 
 toc::[]
 
@@ -153,7 +153,7 @@ Then, you then just have to pass the needed flags, when installing the dependenc
 
 MacPorts is an open-source community projet which aims to design an easy-to-use system for compiling, installing and upgrading open-source software on Mac OS X operating system. It is distributed under http://opensource.org/licenses/bsd-license.php[BSD License] and facilitate the access to thousands of ports (software) without installing or compiling open-source software. MacPorts provides a single software tree which includes the latest stable releases of approximately 17700 ports targeting the current Mac OS X release (10.9). If you want more information, please visit their http://www.macports.org/[website].
 
-==== Installation
+==== MacPorts Installation
 
 To install the latest version of MacPorts, please go
 to http://www.macports.org/install.php[Installing
@@ -191,7 +191,7 @@ corresponding Portfile but it's only a part of a port description.
 Feel\++ provides some mandatory Portfiles for its compilation which are either not available in MacPorts or are buggy but Feel++ also provides some Portfiles which are already available in MacPorts such as gmsh or petsc. They usually provide either some fixes to ensure Feel++ works properly or new version not yet available in MacPorts. These Portfiles are installed in `ports/macosx/macports`.
 
 
-=== MacPorts and Feel++
+=== Installation
 
 To be able to install Feel++, add the following line in
 `/opt/local/etc/macports/source.conf` at the top of the file
