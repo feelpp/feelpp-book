@@ -39,11 +39,12 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 |===
 | Library | Minimum Version | Maximum Version  | Notes
 
-| PETSc | 3.2 | 3.7 | 
-| Gmsh  | 2.8.7 | 2.12 | 
+| PETSc | 3.2 | 3.7 | last is best
+| SLEPc | 3.2 | 3.7 | last is best
+| Gmsh  | 2.8.7 | 2.12 | last is best
 | Superlu  ||| superlu and superlu_dist
 | Suitesparse ||| umfpack (colamd,amd)
-| OpenTURNS |||
+| OpenTURNS | 2.0 ||
 |===
 
 == Recommended tools
