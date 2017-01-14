@@ -49,11 +49,11 @@ Here is a list of libraries that we recommend to use jointly with Feel++.
 | Library | Minimum Version | Maximum Version  | Notes
 
 | PETSc | 3.2 | 3.7 | Last is best; a requirement for parallel and high performance computing
-| SLEPc | 3.2 | 3.7 | last is best; 
-| Gmsh  | 2.8.7 | 2.12 | last is best
+| SLEPc | 3.2 | 3.7 | last is best; a requirement for eigenvalue problem; depends on PETSc
+| Gmsh  | 2.8.7 | 2.12 | last is best; a requirement if you want to be able to read many file formats
 | Superlu  ||| superlu and superlu_dist
 | Suitesparse ||| umfpack (colamd,amd)
-| OpenTURNS | 2.0 ||
+| OpenTURNS | 2.0 || Uncertainty quantification
 |===
 
 == Recommended tools
