@@ -29,6 +29,7 @@ and an experimental version using `clang/libc++` in: +
 
 == Homebrew
 
+=== Introduction
 Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
 
 > **Note**: To install the latest version of Homebrew, simply
@@ -51,7 +52,7 @@ Homebrew base command is `brew`. Here is a list of base available commands:
 
 A Formula is a https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: https://github.com/feelpp/homebrew-science[feelpp/homebrew-science].
 
-====  First time installation: Homebrew and Feel++
+===  Installation
 
 This section is aimed at users that do not have Homebrew already installed. + 
 In order to build Feel++ from Homebrew, you have to do the following steps:
@@ -100,7 +101,7 @@ brew install feelpp
 
 And you should be set to use Feel++ on MacOS X.
 
-====  Advanced usage: Homebrew and Feel++ dependencies
+===  Advanced usage
 
 If Homebrew is already installed on your system, you might want to customize your installation for the correct dependencies to be met for Feel++.
 
