@@ -41,13 +41,15 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 
 == Recommended libraries
 
+Here is a list of libraries that we recommend to use jointly with Feel++.
+
 .Table optional external libraries
 
 |===
 | Library | Minimum Version | Maximum Version  | Notes
 
-| PETSc | 3.2 | 3.7 | last is best
-| SLEPc | 3.2 | 3.7 | last is best
+| PETSc | 3.2 | 3.7 | Last is best; a requirement for parallel and high performance computing
+| SLEPc | 3.2 | 3.7 | last is best; 
 | Gmsh  | 2.8.7 | 2.12 | last is best
 | Superlu  ||| superlu and superlu_dist
 | Suitesparse ||| umfpack (colamd,amd)
@@ -56,19 +58,26 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 
 == Recommended tools
 
-Here is of tools that we suggest to use jointly with Feel++.
+Here is a list of tools that we recommend to use jointly with Feel++.
 
 
 .Table Optional tools
 |===
 | Tool | License | Notes
 
-| Paraview | Open Source | post-processing
-| Ensight | Commercial | post-processing
-| Octave | Open Source | post-processing
-| Open Modelica | Open Source |
+3+>| *Computer Aided Design*
+| Gmsh  | Open Source | 
 
-| Gmsh application | Open Source | pre- and post-processing
+3+>| *Mesh Generation*
+| Gmsh  | Open Source | 
+| MeshGems  | Commercial | 
+
+
+3+>| *Post-Processing*
+| Paraview | Open Source | 
+| Ensight | Commercial | 
+| Octave | Open Source | 
+| Gmsh  | Open Source | 
 
 |===
 
@@ -76,19 +85,22 @@ Note that all these packages are available under Debian GNU/Linux and Ubuntu. On
 
 == Suggested tools
 
-Here is of tools that we suggest to use jointly with Feel++.
+Here is a list of tools that we suggest to use jointly with Feel++.
 
 .Table Optional tools
 |===
-| Tool | Notes
+| Tool | License | Notes
 
-2+>| Computer Aided Design (CAD)  
-| Freecad |
-| Salome | 
+3+>| *Computer Aided Design (CAD)*
+| Freecad | Open Source |
+| Salome | Open Source  |
 
-2+>| Debugging and Profiling 
-| Google perftools|
-| Valgrind |
+3+>| *Modeling, Compilation and Simulation Environment*
+| Open Modelica | Open Source  |
+
+3+>| *Debugging and Profiling* 
+| Google perftools| Open Source  |
+| Valgrind | Open Source |
 
 |===
 
