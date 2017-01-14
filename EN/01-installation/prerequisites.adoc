@@ -53,7 +53,6 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 |===
 | Tool | Notes
 
-
 | Paraview | for visualisation purposes
 | Gmsh application | for meshing purposes
 |===
