@@ -4,7 +4,7 @@ Feel++ on Mac OS X
 :toc-placement: macro
 :toclevels: 3
 
-Feel++ is  supported on Mac OSX, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
+Feel++ is  supported on Mac OSX, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra using <<Homebrew>> or <<MacPorts>>.
 
 toc::[]
 
@@ -27,6 +27,7 @@ and an experimental version using `clang/libc++` in: +
 <path to top feel directory>/ports/macosx/macports-xc5
 ```
 
+[[Homebrew]]
 == Homebrew
 
 === Introduction
@@ -146,7 +147,7 @@ Then, you then just have to pass the needed flags, when installing the dependenc
 
 - `scalapack` can be installed with the following flag: `--without-check`
 
-
+[[MacPorts]]
 == MacPorts
 
 === Introduction
