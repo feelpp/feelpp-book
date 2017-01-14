@@ -5,5 +5,5 @@ Using Feel{plus}{plus} inside Docker is the recommended and fastest way to use F
 
 > **Tip:** We strongly encourage you to follow these steps if you begin with Feel{plus}{plus} in particular as an end-user. 
 
-People who would like to develop with and in Feel{plus}{plus} should read through the remaining section of this chapter.
+People who would like to develop with and in Feel{plus}{plus} should read through the remaining sections of this chapter.
 
