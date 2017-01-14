@@ -32,7 +32,7 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 
 |===
 
-== Optional tools and libraries
+== Recommended libraries
 
 .Table optional external libraries
 
