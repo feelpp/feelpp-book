@@ -1,8 +1,11 @@
 Prerequisites
 =============
 
+== Compilers
 
-Feel{plus}{plus} uses C{plus}{plus}14 compilers. There is a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
+Feel{plus}{plus} uses C{plus}{plus}14 compilers such as GCC6 and Clang. Currently it is not mandatory to have a C++14 stantard library but it will be soon.
+
+> **Warning:** There used to be a major compatibility issue between llvm/clang and GCC compilers since GCC5 released the ABI tag which makes it impossible to compile Feel{plus}{plus} using llvm/clang with GCC5 or GCC6 standard libraries for a time. Please see the following table to understand the working C{plus}{plus} compiler / C{plus}{plus} standard library combinations.
 
 .Table C{plus}{plus} compilers and standard libraries combinations
 |===
@@ -15,6 +18,9 @@ Feel{plus}{plus} uses C{plus}{plus}14 compilers. There is a major compatibility 
 
 |===
 
+== Required tools and libraries
+
+Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools and libraries, namely CMake, Boost C++ libraries and an MPI implementation such as open-mpi or mpich. The table below provides information regarding the minimum and maximum version supported. A -- means it has not necessarily been tested with the latest version but we do not expect any issues. Note that for MPI, an implementation with MPI-IO support would be best.
 
 .Table required tools to compile Feel++
 |===
@@ -26,6 +32,7 @@ Feel{plus}{plus} uses C{plus}{plus}14 compilers. There is a major compatibility 
 
 |===
 
+== Optional tools and libraries
 
 .Table optional external libraries
 
@@ -39,14 +46,28 @@ Feel{plus}{plus} uses C{plus}{plus}14 compilers. There is a major compatibility 
 | OpenTURNS |||
 |===
 
+== Recommended tools
+
 .Table Optional tools
 |===
 | Tool | Notes
 
-| Google perftools|
+
 | Paraview | for visualisation purposes
 | Gmsh application | for meshing purposes
 |===
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
+
+== Suggested tools
+
+.Table Optional tools
+|===
+| Tool | Notes
+
+| Google perftools|
+
+|===
+
+
 
