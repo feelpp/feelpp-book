@@ -1,5 +1,12 @@
 Prerequisites
 =============
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
+
+
 
 == Compilers
 
@@ -49,17 +56,27 @@ Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools
 
 == Recommended tools
 
+Here is of tools that we suggest to use jointly with Feel++.
+
+
 .Table Optional tools
 |===
-| Tool | Notes
+| Tool | License | Notes
 
-| Paraview | for visualisation purposes
-| Gmsh application | for meshing purposes
+| Paraview | Open Source | post-processing
+| Ensight | Commercial | post-processing
+| Octave | Open Source | post-processing
+| Open Modelica | Open Source |
+
+| Gmsh application | Open Source | pre- and post-processing
+
 |===
 
 Note that all these packages are available under Debian GNU/Linux and Ubuntu. Once you have installed those dependencies, you can go to link:#Compiling[Compiling].
 
 == Suggested tools
+
+Here is of tools that we suggest to use jointly with Feel++.
 
 .Table Optional tools
 |===
