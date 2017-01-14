@@ -65,7 +65,13 @@ Note that all these packages are available under Debian GNU/Linux and Ubuntu. On
 |===
 | Tool | Notes
 
+2+>| Computer Aided Design (CAD)  
+| Freecad |
+| Salome | 
+
+2+>| Debugging and Profiling 
 | Google perftools|
+| Valgrind |
 
 |===
 
