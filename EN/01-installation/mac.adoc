@@ -2,7 +2,7 @@ Feel++ on Mac OS X
 ==================
 :toc:
 :toc-placement: macro
-:toclevels: 2
+:toclevels: 3
 
 Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
 
@@ -13,7 +13,7 @@ toc::[]
 To make Feel\++ and `cmake` work properly, you first have to install Xcode for Gcc/clang.
 The easiest way to do so is to go through the App Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It is the first step, you'll see later how to easily install the necessary tools to build Feel++.
 
-=== Package management systems
+== Package management systems
 
 Currently, building Feel\++ is only available through http://brew.sh[Homebrew]. + 
 http://www.macports.org/install.php[MacPorts] versions are
@@ -27,7 +27,7 @@ and an experimental version using `clang/libc++` in: +
 <path to top feel directory>/ports/macosx/macports-xc5
 ```
 
-=== Homebrew
+== Homebrew
 
 Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
 
@@ -146,9 +146,9 @@ Then, you then just have to pass the needed flags, when installing the dependenc
 - `scalapack` can be installed with the following flag: `--without-check`
 
 
-=== MacPorts
+== MacPorts
 
-==== Introduction
+=== Introduction
 
 MacPorts is an open-source community projet which aims to design an easy-to-use system for compiling, installing and upgrading open-source software on Mac OS X operating system. It is distributed under http://opensource.org/licenses/bsd-license.php[BSD License] and facilitate the access to thousands of ports (software) without installing or compiling open-source software. MacPorts provides a single software tree which includes the latest stable releases of approximately 17700 ports targeting the current Mac OS X release (10.9). If you want more information, please visit their http://www.macports.org/[website].
 
@@ -190,7 +190,7 @@ corresponding Portfile but it's only a part of a port description.
 Feel\++ provides some mandatory Portfiles for its compilation which are either not available in MacPorts or are buggy but Feel++ also provides some Portfiles which are already available in MacPorts such as gmsh or petsc. They usually provide either some fixes to ensure Feel++ works properly or new version not yet available in MacPorts. These Portfiles are installed in `ports/macosx/macports`.
 
 
-==== MacPorts and Feel++
+=== MacPorts and Feel++
 
 To be able to install Feel++, add the following line in
 `/opt/local/etc/macports/source.conf` at the top of the file
@@ -205,8 +205,8 @@ Once it's done, type in a command-line:
 
 [source,sh]
 ----
-  cd <your path to feel top directory>/ports/macosx/macports
-  sudo portindex -f
+ $ cd <your path to feel top directory>/ports/macosx/macports
+ $ sudo portindex -f
 ----
 
 You should have an output like this:
@@ -228,7 +228,7 @@ Your are now able to type
 
 [source,bash]
 ----
-  sudo port install feel++
+$ sudo port install feel++
 ----
 
 It might take some time (possibly an entire day) to compile all the requirements for Feel++ to compile properly. If you have several cores on your MacBook Pro, iMac or MacBook, we suggest that you configure macports to use all or some of them.
@@ -245,20 +245,5 @@ At the end of the `sudo port install feel++`, you have all
 dependencies installed. To build all the Makefile, `\cmake` is
 automatically launched but can have some libraries may not be found but they are not mandatory for build Feel{plus}+, only the features related to the missing libraries will be missing.
 
-==== Missing ports
+> **Note** on missing ports: `cmake` can build Makefiles even if some packages are missing (latex2html, VTK ...). It's not necessary to install them but you can complete the installation with MacPorts, `cmake` will find them by itself once they have been installed.
 
-`cmake` can build Makefiles even if some packages are missing
-(latex2html, VTK ...). It's not necessary to install them but you can complete the installation with MacPorts, `cmake` will find them by itself once they have been installed.
-
-==== MacPorts and XCode 5
-
-There is an experimental version of ports for Feel\++ in `<path to top feel directory>/ports/macosx/macports-xc5`. Using these ports will set up the compilation using clang and libc+\+. The process is similar to the one previously described for MacPorts, except for one point: Before starting to install packages, you must switch to the llvm c++ standard library by adding the following line to your macports.conf
-
-file:
-
-[source,bash]
-----
-cxx_stdlib  libc++
-----
-
-This requires MacPorts to be at least on version 2.2.1 for the flag to be recognized and will normally cause all the packages you will install to be recompiled using libc\++ instead of libstdc++.
