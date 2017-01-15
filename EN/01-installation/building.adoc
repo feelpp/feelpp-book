@@ -6,10 +6,10 @@ Building Feel++
 :toclevels: 3
 
 toc::[]
-
+Once the steps to install on Linux
 In this section, we will explain how to download and build Feel++ from source.
 
-== Five minutes configuration
+== For the impatient
 
 First retrieve the source
 [source,bash]
