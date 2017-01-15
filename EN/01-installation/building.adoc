@@ -119,9 +119,6 @@ $ tree -L 1 -d | column
 
 == Compiling Feel++ 
 
-
-
-
 === Detailed build instructions
 
 Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `clang-3.5` (or a higher version) (or `g++`, but it has a huge memory footprint) as C{plus}{plus} compiler. You can set the compiler with following option :
