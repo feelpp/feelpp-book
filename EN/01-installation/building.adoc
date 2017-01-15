@@ -1,13 +1,13 @@
 Building Feel++
 ===============
 
+Once the steps to install on Linux or MacOS X has been followed, we explain, in this section, how to download and build Feel++ from source.
+
 :toc:
 :toc-placement: macro
 :toclevels: 3
 
 toc::[]
-Once the steps to install on Linux
-In this section, we will explain how to download and build Feel++ from source.
 
 == For the impatient
 
