@@ -165,7 +165,7 @@ $ docker run feelpp/feelpp-base
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-apss 
+$ docker run feelpp/feelpp-apps 
 ----
 
 
