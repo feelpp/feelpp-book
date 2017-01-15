@@ -111,6 +111,7 @@ The following table displays the
 As we said before the default Host OS is Ubuntu 16.10. 
 However Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various context. The FCS takes advantage of Docker to build  `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
 
+.Table providing the list of supported Host OS
 |===
 | Operating system | version | `feelpp-env` Tags | Compilers
 
@@ -123,13 +124,41 @@ However Docker shines in continuous integration. It provides a large set of oper
 
 If you are interested in testing Feel++ in these systems, you can run these flavors.
 
-=== feelpp-env
+=== Containers
 
-=== feelpp-libs
+==== feelpp-env
 
-=== feelpp-base
+`feelpp-env` provides the Host OS and  link:../01-installation/prerequisites.adoc[Feel++ dependencies].
 
-=== feelpp-apps
+[source,sh]
+----
+$ docker run feelpp/feelpp-env 
+----
+
+==== feelpp-libs
+
+`feelpp-libs` builds from `feelpp-env` and provides:
+
+  . the Feel{plus}{plus} libraries
+  . the link:../06-applications/Mesh/Partitioning/readme.adoc[Feel++ mesh partitioner]
+
+[source,sh]
+----
+$ docker run feelpp/feelpp-libs 
+----
+
+==== feelpp-base
+
+`feelpp-base` builds from `feelpp-libs` and provides
+
+[source,sh]
+----
+$ docker run feelpp/feelpp-base 
+----
+
+
+
+==== feelpp-apps
 
 == Other Software
 
