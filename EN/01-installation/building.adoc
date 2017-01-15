@@ -150,13 +150,15 @@ $ cd FEEL/feel.opt
 $ cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
-> **Info**: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
-> 
+[INFO]
+======
+CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
  * None
  * Debug : typically `-g`
  * Release : typically `-O3 -DNDEBUG`
  * MinSizeRel : typically `-Os`
  * RelWithDebInfo :  typically `-g -O2 -DNDEBUG`
+======
 
 === Using configure 
 
