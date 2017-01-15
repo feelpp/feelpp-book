@@ -8,33 +8,22 @@ Feel++ is  supported on Mac OSX, starting from OS X 10.9 Mavericks to OS X 10.12
 
 toc::[]
 
-== Compilers
+== First step
 
-To make Feel\++ and `cmake` work properly, you first have to install Xcode for Gcc/clang.
-The easiest way to do so is to go through the App Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It is the first step, you'll see later how to easily install the necessary tools to build Feel++.
+Xcode is required on Mac OSX to install Feel{plus}{plus}.
 
-== Package management systems
-
-Currently, building Feel\++ is only available through http://brew.sh[Homebrew]. + 
-http://www.macports.org/install.php[MacPorts] versions are
-also present in the source tree of Feel++. +
-You can find a version using gcc in: +
-```
-<path to top feel directory>/ports/macosx/macports
-```
-and an experimental version using `clang/libc++` in: +
-```
-<path to top feel directory>/ports/macosx/macports-xc5
-```
+The easiest way to do so is to go through the Apple Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, _e.g_ clang. 
 
 [[Homebrew]]
 == Homebrew
 
-=== Introduction
-Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
+=== Introduction to HomeBrew
+Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the link:https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their link:http://brew.sh[website].
 
-> **Note**: To install the latest version of Homebrew, simply
-visit their http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
+==== Installation
+
+To install the latest version of Homebrew, simply
+visit their link:http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
 then the packages are symlinked into /usr/local (default).
 
 ==== Key commands 
@@ -49,58 +38,47 @@ Homebrew base command is `brew`. Here is a list of base available commands:
 
 * `brew uninstall mypackage`: This command allows to uninstall the package mypackage.
 
-==== Formula 
+==== Formulas 
 
-A Formula is a https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: https://github.com/feelpp/homebrew-science[feelpp/homebrew-science].
+A Formula is a link:https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: link:https://github.com/feelpp/homebrew-feelpp[feelpp/homebrew-feelpp].
 
 ===  Installation
 
-This section is aimed at users that do not have Homebrew already installed. + 
+This section is aimed at users that do not have Homebrew already installed. +
 In order to build Feel++ from Homebrew, you have to do the following steps:
+
+First install Homebrew
+[source,sh]
+----
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+----
+
+then check your Homebrew installation and fix warnings/errors if necessary
 
 [source,sh]
 ----
-# Install Homebrew:
-ruby -e "$ (curl -fsSL https://raw.github.com/feelpp/homebrew/go/install)"
+$ brew doctor
+----
 
-# Check that everything is ok or fix warnings/errors if necessary:
-brew doctor
+Install Homebrew-science and Feel{plus}{plus} taps to get Feel{plus}{plus} and the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
+----
+$ brew tap homebrew/homebrew-science feelpp/homebrew-feelpp
+----
 
-# Get the specific Feel++ Formulae on the Github repository of feelpp:
-brew tap feelpp/science
+The final step is to either install Feel{plus}{plus} 
+[source,sh]
+----
+$ brew install feelpp
+----
 
-# Finally either:
-# - Install Feel++ and all its dependencies:
-brew install feelpp
-# - Or install only the dependencies:
-# (Useful if you plan to build Feel++ from sources)
+or just Feel{plus}{plus} dependencies if you plan to build Feel++ from sources yourself
+[source,sh]
+----
+# (Useful )
 brew install --only-dependencies feelpp
 ----
 
 > **Note** If you encounter problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
-
-////
-or in a more detailed way:
-
-----
-# Install Homebrew:
-ruby -e "$ (curl -fsSL https://raw.github.com/feelpp/homebrew/go)"
-# Check that everything is ok or fix warnings/errors if necessary:
-brew doctor
-# Get the Formulae specific to Feel++ on the github of feelpp:
-brew tap feelpp/science
-# Install openmpi with c++11 support:
-brew install open-mpi --c++11
-# Install boost:
-brew install boost --without-python --without-single --without-static --with-mpi --c++11
-# Install Ann, Petsc, Gmsh and HDF5:
-brew install ann && brew install petsc && brew install gmsh && brew install hdf5
-# Install Feel++:
-brew install feelpp
-----
-////
-
-And you should be set to use Feel++ on MacOS X.
 
 ===  Advanced usage
 
