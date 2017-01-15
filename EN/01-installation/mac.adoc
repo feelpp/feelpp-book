@@ -60,7 +60,7 @@ then check your Homebrew installation and fix warnings/errors if necessary
 $ brew doctor
 ----
 
-Install Homebrew-science  to get the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
+Install Homebrew-science tap to get the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
 ----
 $ brew tap homebrew/homebrew-science 
 ----
@@ -74,6 +74,23 @@ remote: Compressing objects: 100% (656/656), done.
 remote: Total 661 (delta 0), reused 65 (delta 0), pack-reused 0
 Receiving objects: 100% (661/661), 591.93 KiB | 0 bytes/s, done.
 Tapped 644 formulae (680 files, 1.9M)
+----
+
+Next you install Feel{plus}{plus} tap with
+[source,sh]
+----
+brew tap feelpp/homebrew-feelpp
+----
+you should read something like
+[source,sh]
+----
+==> Tapping feelpp/feelpp
+Cloning into '/usr/local/Homebrew/Library/Taps/feelpp/homebrew-feelpp'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+Tapped 1 formula (30 files, 60.7K)
 ----
 
 The final step is to either install Feel{plus}{plus} 
