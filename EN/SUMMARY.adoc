@@ -81,11 +81,24 @@
 ... link:07-quickref/Models/FluidStructure/README.adoc[Fluid Structure Interaction]
 ... link:07-quickref/Models/Advection/README.adoc[Advection Model]
 ... link:07-quickref/Models/thrmoelectric.adoc[ThermoElectric]
+
+== FAQ
+
 . link:08-faq/README.adoc[Frequently Asked Questions]
 .. link:08-faq/FAQDevelopment.adoc[Development]
 .. link:08-faq/FAQExecution.adoc[Runtime]
+
+
+
+== Annexes
+
+
+
 . link:09-annexes/README.adoc[Annexes]
 .. link:09-annexes/calculus.adoc[Calculus]
-.. link:09-annexes/compiling-boost.adoc[Calculus]
+.. link:09-annexes/compiling-boost.adoc[Compiling]
+
+== Glossary
+
 . link:GLOSSARY.adoc[Glossary]
 
