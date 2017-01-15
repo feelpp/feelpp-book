@@ -35,7 +35,10 @@ Hello World!
 We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which is a Feel{plus}{plus} Ubuntu 16.10 container with the required programming and execution environment for Feel{plus}{plus}.
 The first line tells us that there is no local copy of this Feel++ image. Docker checks automatically online on the link:http:://hub.docker.com[Docker Hub] if an image is available.
 
-> **Note:** `feelpp/` in `feelpp/feelpp-env` provides the organization name(or namespace) of the image and `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization.
+[NOTE]
+======
+`feelpp/` in `feelpp/feelpp-env` provides the organization name(or namespace) of the image and `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization. See <<FCS>> for more details.
+======
 
 Once the image is downloaded, Docker launches the container and executes the command we provided `echo "Hello World!"` from inside the container. The result of the command is showed on the last line of the output log above.
 
@@ -48,6 +51,7 @@ $ docker run -it feelpp/feelpp-env
 ----
 It provides a shell prompt from inside the container which is very similar to what you obtain when login with `ssh` on a remote machine. The flags `-i` and `-t` tell Docker to provide an interactive session (`-i`) with a TTY attached (`-t`).
 
+[[FCS]]
 == Feel++ Container System
 
 The _Feel++ Container System_ (FCS) is organized in layers and provide a set of images.
