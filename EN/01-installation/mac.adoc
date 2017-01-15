@@ -12,7 +12,7 @@ toc::[]
 
 Xcode is required on Mac OSX to install Feel{plus}{plus}.
 
-The easiest way to do so is to go through the Apple Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, _e.g_ clang. 
+The easiest way to do so is to go through the Apple Store application and to search for Xcode. Xcode will provide the programming environment, _e.g_ clang, for the next steps.
 
 [[Homebrew]]
 == Homebrew
