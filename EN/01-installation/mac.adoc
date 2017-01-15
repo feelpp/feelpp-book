@@ -60,9 +60,20 @@ then check your Homebrew installation and fix warnings/errors if necessary
 $ brew doctor
 ----
 
-Install Homebrew-science and Feel{plus}{plus} taps to get Feel{plus}{plus} and the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
+Install Homebrew-science  to get the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
 ----
-$ brew tap homebrew/homebrew-science feelpp/homebrew-feelpp
+$ brew tap homebrew/homebrew-science 
+----
+you should see something like
+[source,sh]
+----
+==> Tapping homebrew/science
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-science'...
+remote: Counting objects: 661, done.
+remote: Compressing objects: 100% (656/656), done.
+remote: Total 661 (delta 0), reused 65 (delta 0), pack-reused 0
+Receiving objects: 100% (661/661), 591.93 KiB | 0 bytes/s, done.
+Tapped 644 formulae (680 files, 1.9M)
 ----
 
 The final step is to either install Feel{plus}{plus} 
@@ -74,8 +85,7 @@ $ brew install feelpp
 or just Feel{plus}{plus} dependencies if you plan to build Feel++ from sources yourself
 [source,sh]
 ----
-# (Useful )
-brew install --only-dependencies feelpp
+$ brew install --only-dependencies feelpp
 ----
 
 > **Note** If you encounter problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
