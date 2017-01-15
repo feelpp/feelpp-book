@@ -3,7 +3,7 @@ Feel++ and Docker
 
 Using Feel{plus}{plus} inside Docker is the recommended and fastest way to use Feel{plus}{plus}. The link:../02-docker/README.adoc[second chapter] is dedicated to Docker and using Feel{plus}{plus} in Docker. 
 
-> **Tip:** We strongly encourage you to follow these steps if you begin with Feel{plus}{plus} in particular as an end-user. 
+We strongly encourage you to follow these steps if you begin with Feel{plus}{plus} in particular as an end-user. 
 
 People who would like to develop with and in Feel{plus}{plus} should read through the remaining sections of this chapter.
 
