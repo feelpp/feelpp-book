@@ -149,16 +149,28 @@ $ docker run feelpp/feelpp-libs
 
 ==== feelpp-base
 
-`feelpp-base` builds from `feelpp-libs` and provides
+`feelpp-base` builds from `feelpp-libs` and provides two basic applications:
+
+ . `feelpp_qs_laplacian_*`: 2D and 3D laplacian problem
+ . `feelpp_qs_stokes_*`: 2D and 3D stokes problem
+
+Explanations are available 
 
 [source,sh]
 ----
 $ docker run feelpp/feelpp-base 
 ----
 
-
-
 ==== feelpp-apps
+
+`feelpp-apps` builds from `feelpp-base` and provides
+
+[source,sh]
+----
+$ docker run feelpp/feelpp-apss 
+----
+
+
 
 == Other Software
 
