@@ -111,46 +111,69 @@ $ brew install --only-dependencies feelpp
 
 If Homebrew is already installed on your system, you might want to customize your installation for the correct dependencies to be met for Feel++.
 
+==== Feel++ Dependencies
 You can browse Feel++ dependencies using the following command:
 
 [source,sh]
 ----
-brew deps feelpp
+$ brew deps feelpp | column
 ----
 
+you should read something like
+[source,txt]
+----
+ann		fftw		libtool		slepc
+arpack		gcc		metis		suite-sparse
+autoconf	glpk		mumps		sundials
+automake	gmp		netcdf		superlu
+boost		gmsh		open-mpi	superlu_dist
+cln		hdf5		parmetis	szip
+cmake		hwloc		petsc		tbb
+eigen		hypre		scalapack	veclibfort
+----
+
+==== Customizing builds
 If you want to customize the compilation process for a dependency (Set debug mode, Remove checking steps, Remove the link with certain libraries, etc.), you can access to the building options with the `info` flag. For exemple, with open-mpi:
 
 [source,sh]
 ----
-user@server: brew info open-mpi
-
-open-mpi: stable 1.7.5
-http://www.open-mpi.org/
-Conflicts with: lcdf-typetools, mpich2
-/usr/local/Cellar/open-mpi/1.7.5 (761 files, 23M) *
-  Built from source
-From: https://github.com/Homebrew/homebrew/commits/master/Library/Formula/open-mpi.rb
-==> Dependencies
-Required: libevent
-==> Options
---c++11
-    Build using C++11 mode
---disable-fortran
-    Do not build the Fortran bindings
---enable-mpi-thread-multiple
-    Enable MPI_THREAD_MULTIPLE
+$ brew info open-mpi
 ----
 
-Then, you then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
+You get various information about the `open-mpi` formula
+[source,sh]
+----
+open-mpi: stable 2.0.1 (bottled), HEAD
+High performance message passing library
+https://www.open-mpi.org/
+Conflicts with: lcdf-typetools, mpich
+/usr/local/Cellar/open-mpi/2.0.1 (688 files, 8.6M) *
+  Built from source on 2016-09-26 at 10:36:46 with: --c++11 --with-mpi-thread-multiple
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/open-mpi.rb
+==> Dependencies
+Required: libevent ✔
+==> Requirements
+Recommended: fortran ✔
+Optional: java ✔
+==> Options
+--c++11
+	Build using C++11 mode
+--with-cxx-bindings
+	Enable C++ MPI bindings (deprecated as of MPI-3.0)
+--with-java
+	Build with java support
+--with-mpi-thread-multiple
+	Enable MPI_THREAD_MULTIPLE
+--without-fortran
+	Build without fortran support
+--HEAD
+	Install HEAD version
+----
 
-**Important:** Needed dependencies for Feel++:
+Then, you then just have to pass the needed flags, when installing the dependency. 
 
-- `boost` needs to be installed with the following flags: `--without-python --without-single --without-static --with-mpi --c++11`.
-- `mumps` needs to be installed with the following flag: `--with-scotch5`
+> **Important:**  `boost` has to be installed with mpi and c++11 support and `mumps` needs to be installed with the following scotch5 support.
 
-**Tips:** Reducing the compilation time:
-
-- `scalapack` can be installed with the following flag: `--without-check`
 
 [[MacPorts]]
 == MacPorts
