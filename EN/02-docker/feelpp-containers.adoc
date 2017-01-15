@@ -171,7 +171,7 @@ $ docker run feelpp/feelpp-apss
 
 == Runing Feel++ Applications
 
-To run link:/Applications/readme.adoc[Feel++ main applications], you need first to create a directory where you will store the Feel++ simulation files. For example, type
+To run link:/Applications/readme.adoc[Feel{plus}{plus} main applications], you need first to create a directory where you will store the Feel{plus}{plus} simulation files. For example, type
 [source,shell]
 ----
 $ mkdir $HOME/feel
@@ -180,10 +180,27 @@ and then type the following docker command
 
 [source,shell]
 ----
-$ docker run -it -v $HOME/feel:/feel feelpp/apps:latest
+$ docker run -it -v $HOME/feel:/feel feelpp/feelpp-libs
 ----
 
 The previous command will execute the latest `feelpp/apps` docker image in interactive mode in a terminal (`-ti`) and mount `$HOME/feel` in the directory `/feel` of the docker image.
+
+Running the command `df` inside the Docker container launched by the previous command
+[source,sh]
+----
+feelpp@4e7b485faf8e:~$ df
+----
+will get you this kind of output
+[source,sh]
+----
+Filesystem     1K-blocks      Used Available Use% Mounted on
+none           982046716 505681144 426457452  55% /
+tmpfs          132020292         0 132020292   0% /dev
+tmpfs          132020292         0 132020292   0% /sys/fs/cgroup
+/dev/sda2      982046716 505681144 426457452  55% /feel
+shm                65536         0     65536   0% /dev/shm
+----
+You see on the last but one line the directory `$HOME/feel` mounted on `/feel` in the Docker image.
 
 IMPORTANT: Note that mouting a host sub-directory on `/feel` is mandatory. If you don't, the Feel++ applications will exit due to lack of permissions.
 
