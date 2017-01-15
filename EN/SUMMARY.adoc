@@ -19,7 +19,6 @@
 .. link:02-docker/what-is-docker-.adoc[Introduction]
 .. link:02-docker/installing-docker.adoc[Installation]
 .. link:02-docker/feelpp-docker.adoc[Feel++ Containers]
-.. link:02-docker/cmakefeel.adoc[Configuring your own project with CMake]
 
 == Solving PDEs
 . link:03-modeling/README.adoc[Modeling with Feel++]
