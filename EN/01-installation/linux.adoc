@@ -28,6 +28,6 @@ Here is the suggested installation of the Feel++ dependencies on Ubuntu LTS 16.0
 $ sudo apt-get install autoconf automake bash-completion bison clang++-3 8 clang-3 8 cmake emacs24 flex g++-6 gcc-6 git gmsh ipython libann-dev libbz2-dev libcgal-dev libcln-dev libcppunit-dev libeigen3-dev libglpk-dev libgmsh-dev libhdf5-openmpi-dev libhwloc-dev liblapack-dev libmpfr-dev libopenblas-dev libopenmpi-dev libopenturns-dev libpcre3-dev libpetsc3 6 2-dev libproj-dev libslepc3 6 1-dev libtool libvtk6-dev openmpi-bin paraview pkg-config python-dev python-h5py python-numpy python-ply python-six python-urllib3 python-vtk6 screen sudo tmux wget xauth xterm
 ----
 
-IMPORTANT: We are unfortunately stung by the ABI change in GCC 6 when using clang. You need to recompile the Boost C++ libraries to be able to use clang. 
+IMPORTANT: We are unfortunately stung by the ABI change in GCC 6 when using clang. You need to recompile the Boost C++ libraries to be able to use clang, see link:../09-annexes/compiling-boost.adoc[].
 
 == Debian
