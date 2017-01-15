@@ -36,9 +36,9 @@ Compile the Feel++ library
 $ make feelpp
 ----
 
-> **Tip:** you can speed up the make process by passing the option `-j<N>` where `N` is the number of concurrent `make` sub-processes. It compiles `N` files at a time and respect dependencies. For example `-j4` compiles 4 C++ files at a time. 
+TIP: you can speed up the make process by passing the option `-j<N>` where `N` is the number of concurrent `make` sub-processes. It compiles `N` files at a time and respect dependencies. For example `-j4` compiles 4 C++ files at a time. 
 
-> **Warning:** Be aware that Feel{plus}{plus} consumes memory. The Feel{plus}{plus} library compile with 2Go of RAM. But to be more comfortable, 4Go or more would be best. The more, the better.
+WARNING: Be aware that Feel{plus}{plus} consumes memory. The Feel{plus}{plus} library compile with 2Go of RAM. But to be more comfortable, 4Go or more would be best. The more, the better.
 
 Compile your first Feel++ applications
 [source,bash]
@@ -124,7 +124,7 @@ $ tree -L 1 -d | column
 For now on, we assume that `clang++` has been installed in `/usr/bin`. Yor mileage 
 may vary depending on your installation of course.
 
-> **Warning** It is not allowed to build the library in the top source directory.
+WARNING: It is not allowed to build the library in the top source directory.
 
 [TIP]
 =====
@@ -183,15 +183,25 @@ Options:
 ----
 
 We display below a set of possible configurations:
+
+Compile using Release build type, default c++ compiler and libstdc++
 [source,sh]
-.Feel++ configure options
+.Listing compiling using default compilers
 ----
-cd feelpp.opt/
-# compile using Release build type, default c++ compiler and libstdc++
-../feelpp/configure -r
-# compile using Release build type, clang++ compiler and libstdc++
-CXX=clang++ ../feelpp/configure -r
-# compile using Debug build type, clang++ compiler and libc++ 
+$ ../feelpp/configure -r
+----
+
+Compile using Release build type, clang++ compiler and libstdc++
+[source,sh]
+.Listing compiling using clang++
+----
+$ CXX=clang++ ../feelpp/configure -r
+----
+
+Compile using Debug build type, clang++ compiler and libc++ 
+[source,sh]
+.Listing compiling using clang++/libc++ in Debug mode
+----
 CXX=clang++ ../feelpp/configure -d -stdlib=c++
 ----
 
