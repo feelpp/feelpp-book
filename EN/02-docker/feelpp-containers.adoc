@@ -4,9 +4,11 @@ Feel++ Containers
 :toc-placement: macro
 :toclevels: 2
 
+Feel++ leverages the power of Docker and provides a stack of container images. 
+
 toc::[]
 
-Feel++ leverages the power of Docker and provides a stack of container images. 
+
 
 == First steps
 
@@ -30,7 +32,7 @@ Status: Downloaded newer image for feelpp/feelpp-env:latest
 Hello World! 
 ----
 
-We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which is a Feel++ Ubuntu 16.10 container with the required programming and execution environment for Feel++.
+We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which is a Feel{plus}{plus} Ubuntu 16.10 container with the required programming and execution environment for Feel{plus}{plus}.
 The first line tells us that there is no local copy of this Feel++ image. Docker checks automatically online on the link:http:://hub.docker.com[Docker Hub] if an image is available.
 
 > **Note:** `feelpp/` in `feelpp/feelpp-env` provides the organization name(or namespace) of the image and `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization.
