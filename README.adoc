@@ -7,7 +7,7 @@ toc::[]
 
 
 1.link:#feel-book[ Finite Element Embedded Library in C++ ]
-----------------------------------------------------------
+-----------------------------------------------------------
 
 Feel\++ is a unified C++ implementation of Galerkin methods (finite and spectral element methods) in 1D, 2D and 3D to solve partial differential equations.
 
@@ -31,7 +31,7 @@ Feel++ is
 
 
 2.link:#feel-book[ Help and Support ]
---------------------------------------
+-------------------------------------
 
 We're always happy to help out with Feel\++ or any other questions you might
 have. You can ask a question or signal an issue at the Gitter Feel++ salon.
@@ -41,7 +41,7 @@ image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.i
 
 
 3.link:#feel-book[ Contribute to this documentation ]
--------------------------------------------------------
+-----------------------------------------------------
 
 You can contribute to improve this documentation on
 https://github.com/feelpp/feelpp-book[GitHub] and follow the
@@ -49,7 +49,7 @@ https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
 
 4.link:#feel-book[ How to view the book ]
-------------------------------------------
+-----------------------------------------
 
 The book can be read online at https://book.feelpp.org/content
 
@@ -101,8 +101,9 @@ git checkout -b branchname
 6. Create one branch per big change. Once the pull-request is accepted, you can
 delete your fork.
 
+
 6.link:#feel-book[ How to write the book (convention) ]
---------------------------------------------------------
+-------------------------------------------------------
 
 All this book is written in asciidoc. Avoid using other format.
 The book is divided in `Part`, `Chapters`, `Sections`.
