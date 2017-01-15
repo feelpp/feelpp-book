@@ -154,8 +154,6 @@ $ docker run feelpp/feelpp-libs
  . `feelpp_qs_laplacian_*`: 2D and 3D laplacian problem
  . `feelpp_qs_stokes_*`: 2D and 3D stokes problem
 
-Explanations are available 
-
 [source,sh]
 ----
 $ docker run feelpp/feelpp-base 
