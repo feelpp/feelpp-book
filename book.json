@@ -29,6 +29,11 @@
             "check": "false",
             "edit": "false",
             "theme": "coffee"
+        },
+        "ace": {
+            "check":"false",
+            "edit":"false",
+            "theme":"coffee"
         }
     },
     "links": {
