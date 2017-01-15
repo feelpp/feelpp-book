@@ -86,5 +86,6 @@
 .. link:08-faq/FAQExecution.adoc[Runtime]
 . link:09-annexes/README.adoc[Annexes]
 .. link:09-annexes/calculus.adoc[Calculus]
+.. link:09-annexes/compiling-boost.adoc[Calculus]
 . link:GLOSSARY.adoc[Glossary]
 
