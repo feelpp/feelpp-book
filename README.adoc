@@ -88,7 +88,7 @@ git fetch upstream
 git checkout upstream/master -B master
 git checkout -b branchname
 ```
-
-5. Commit you change in your own branch, the pull-request this branch to master.
-6. Create one branch per big change. Once the pull-request is accepted, you can
-delete your fork.
+5. Commit you change in your own branch, then create a pull-request targetting
+the `prepub` branch.
+6. Once the pull-request is accepted, you can delete your fork.
+7. Once the `prepub` branch is reviewed, the new version is published to master.
