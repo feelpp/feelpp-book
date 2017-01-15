@@ -7,4 +7,4 @@ This chapter  explains  step by step how to get the _Feel++ Container System_(FC
 
 . link:what-is-docker-.adoc[Introduction]
 . link:installing-docker.adoc[Installation]
-. link:feelpp-docker.adoc[Feel++ and Docker]
+. link:feelpp-containers.adoc[Feel++ Containers]
