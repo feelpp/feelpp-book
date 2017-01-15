@@ -288,9 +288,97 @@ $$
 
 ==== Dirichlet on pressure
 ==== Neumann
+[cols="1,1", options="header"]
+.Neumann options
+|===
+| Name  | Expression
+| Neumann_scalar | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+| Neumann_vectorial | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  =   \boldsymbol{g} $$
+| Neumann_tensor2 | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+|===
+
+
+
+
+
+
+
+
 ==== Slip
+$$
+\boldsymbol{u}_f \cdot \boldsymbol{n} = 0
+$$
+
 ==== Inlet flow
+The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh.
+$$
+\boldsymbol{u}_f = - g \ \boldsymbol{n} \quad \text{ on } \Gamma
+$$
+The function $$g$$ is computed from flow velocity profiles :
+
+- Constant profile
+$$
+\text{Find } g \in C^0(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+g &=& \beta \quad &\text{ in } \Gamma \setminus \partial\Gamma
+\\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+- Parabolic profile
+$$
+\text{Find } g \in H^2(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+\Delta g &=& \beta \quad &\text{ in } \Gamma \\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+
+where $$\beta$$ is a constant determinated by adding a constraint on the inflow :
+
+- velocity_max : $$\max( g ) = \alpha $$
+- flow_rate : $$\int_\Gamma ( g \ \boldsymbol{n} ) \cdot \boldsymbol{n} = \alpha$$
+
+
+[cols="1,1,1,1", options="header"]
+.Inlet flow options
+|===
+| Option | Value | Default value |Description
+| shape | constant,parabolic |  | select an shape profile for inflow
+|constraint | velocity_max,flow_rate | | give a constraint wich controle velocity
+| expr | string | | symbolic expression of constraint value
+|===
+
+
 ==== Outlet flow
+[cols="1,1,1,1", options="header"]
+.Outlet flow options
+|===
+| Option | Value | Default value |Description
+| model | free,windkessel | free | select an outlet modeling
+|===
+
+
+
+
+
+
+
+===== Free outflow
+$$
+\boldsymbol{\sigma}_{f} \boldsymbol{n} = \boldsymbol{0}
+$$
+
+===== Windkessel model
+[cols="1,1,1", options="header"]
+.Windkessel options
+|===
+| Option | Value | Description
+| windkessel_coupling | explicit, implicit |  coupling type with the Navier-Stokes equation
+| windkessel_Rd | real | distal resistance
+| windkessel_Rp | real | proximal resistance
+| windkessel_Cd | real | capacitance
+|===
 
 
 
@@ -299,8 +387,7 @@ $$
 
 
 
-
-==== Option summary
+==== Options summary
 
 
 [cols="1,1,1,1", options="header"]
