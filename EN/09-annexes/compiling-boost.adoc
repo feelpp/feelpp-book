@@ -1,5 +1,8 @@
-Compiling the Boost C{plus}{plus} Libraries
-===========================================
+Compiling External Libraries and Tools
+======================================
+
+[[compiling-boost]]
+== Compiling Boost
 
 To compile the Boost C++ libraries for Feel++, we recommend the following steps
 
