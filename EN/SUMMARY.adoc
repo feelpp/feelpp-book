@@ -16,7 +16,7 @@
 .. link:01-installation/mac.adoc[Mac OS X]
 .. link:01-installation/building.adoc[Build from sources]
 . link:02-docker/README.adoc[Docker]
-.. link:02-docker/what-is-docker-.adoc[Introduction]
+.. link:02-docker/what-is-docker.adoc[Introduction]
 .. link:02-docker/installing-docker.adoc[Installation]
 .. link:02-docker/feelpp-docker.adoc[Feel++ Containers]
 
