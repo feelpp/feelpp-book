@@ -1,4 +1,5 @@
-= Calculus
+Calculus
+========
 :toc:
 :toc-placement: macro
 :toclevels: 2
@@ -45,7 +46,7 @@ $$
 $$
 
 
-> **Note** in the finite element method we have often to compute integrals using change of variables of the type
+NOTE: In the finite element method we have often to compute integrals using change of variables of the type
 $$\int_K Hu(x)\; dx$$, where $$H$$ is an operator (gradient, laplacian, ...). You then have to use to be careful when applying the change of variables.
 
 $$
