@@ -6,7 +6,7 @@ FEEL++ BOOK
 toc::[]
 
 
-I .link:#feel-book[Finite Element Embedded Library in C++]
+I.link:#feel-book[ Finite Element Embedded Library in C++ ]
 ----------------------------------------------------------
 
 Feel\++ is a unified C++ implementation of Galerkin methods (finite and spectral element methods) in 1D, 2D and 3D to solve partial differential equations.
@@ -29,8 +29,9 @@ Feel++ is
  . a library entirely in `C++` allowing to create `C++` complex
    and typically non-linear multi-physics applications currently in industry, physics and health-care.
 
-Help and Support
-----------------
+
+II.link:#feel-book[ Help and Support ]
+--------------------------------------
 
 We're always happy to help out with Feel\++ or any other questions you might
 have. You can ask a question or signal an issue at the Gitter Feel++ salon.
@@ -38,15 +39,17 @@ have. You can ask a question or signal an issue at the Gitter Feel++ salon.
 https://gitter.im/feelpp/feelpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge[
 image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.im/feelpp/feelpp]]
 
-Contribute to this documentation
---------------------------------
+
+III.link:#feel-book[ Contribute to this documentation ]
+-------------------------------------------------------
 
 You can contribute to improve this documentation on
 https://github.com/feelpp/feelpp-book[GitHub] and follow the
 https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
-How to view the book
---------------------
+
+IV.link:#feel-book[ How to view the book ]
+------------------------------------------
 
 The book can be read online at https://book.feelpp.org/content
 
@@ -75,8 +78,8 @@ For more output format option, type
 gitbook help
 ```
 
-How to edit the book
---------------------
+V.link:#feel-book[ How to edit the book ]
+-----------------------------------------
 
 Feel++ developers can edit the book online via https://www.gitbook.com.
 
@@ -98,8 +101,8 @@ git checkout -b branchname
 6. Create one branch per big change. Once the pull-request is accepted, you can
 delete your fork.
 
-How to write the book (convention)
-----------------------------------
+VI.link:#feel-book[ How to write the book (convention) ]
+--------------------------------------------------------
 
 All this book is written in asciidoc. Avoid using other format.
 The book is divided in `Part`, `Chapters`, `Sections`.
