@@ -240,7 +240,6 @@ The following command will compile 10 tests at a time
 $ make -j10
 ----
 
-
 .Listing: Running the Feel++ testsuite
 [source,bash]
 ----
