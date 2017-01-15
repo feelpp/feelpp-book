@@ -119,53 +119,44 @@ $ tree -L 1 -d | column
 
 == Compiling Feel++ 
 
-=== Detailed build instructions
+=== Configuration
 
-Feel{plus}{plus} uses http://www.cmake.org[`CMake`] as its build system. Check that CMake is using `clang-3.5` (or a higher version) (or `g++`, but it has a huge memory footprint) as C{plus}{plus} compiler. You can set the compiler with following option :
-```
--DCMAKE_CXX_COMPILER=<path>/clang++-3.5
-``` 
-where the `path` depends on your OS. By default, it should be `/usr/bin` or `/opt/local/bin`, but you can also change it with the command `ccmake` and press `t` for advanced options). +
-
-
-
-In order to compile and install Feel{plus}{plus} on Linux systems (other than Mac OS X, if you have Mac OS X, please go to link:mac.adoc[Mac]), you have to install several dependencies before. Those libraries and programs are necessary for the compilation and installation of the Feel++ libraries.
-
-
-=== Configuration step 
+For now on, we assume that `clang++` has been installed in `/usr/bin`. Yor mileage 
+may vary depending on your installation of course.
 
 > **Warning** It is not allowed to build the library in the top source directory.
 
+[TIP]
+=====
 It is recommended  to have a directory (e.g. `FEEL`) in which you have
-both the sources and build directories.
-
+both the sources and build directories, as follows
 [source,sh]
 ----
-ls FEEL
+$ ls FEEL
 feelpp/ # Sources
 feel.opt/ # Build directory
 ----
-
 `feelpp` is the top directory where the source have been downloaded, using git or tarballs.
+=====
 
 [[cmake]]
-==== Using cmake directly
+==== Using cmake 
 
-`CMake` is used as it:
+The configuration step with `cmake` is as follows
 
 [source,sh]
 ----
-cd FEEL/feel.opt
-cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+$ cd FEEL/feel.opt
+$ cmake ../feelpp -DCMAKE_CXX_COMPILER=/usr/bin/clang++-3.6 -DCMAKE_C_COMPILER=/usr/bin/clang-3.6 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ----
 
 > **Info**: CMake supports different build type that you can set with `-DCMAKE_BUILD_TYPE` (case insensitive) :
 > 
  * None
  * Debug : typically `-g`
- * Release : typically `-O3`
+ * Release : typically `-O3 -DNDEBUG`
  * MinSizeRel : typically `-Os`
- * RelWithDebInfo :  typically `-g -O2`
+ * RelWithDebInfo :  typically `-g -O2 -DNDEBUG`
 
 ==== Using the configure script
 
