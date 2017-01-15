@@ -11,49 +11,53 @@ In this section, we will explain how to download and build Feel++ from source.
 
 == Five minutes configuration
 
-* First retrieve the source
+First retrieve the source
 [source,bash]
 ----
-git clone https://github.com/feelpp/feelpp.git
+$ git clone https://github.com/feelpp/feelpp.git
 ----
 
-* Create a build directory
+Create a build directory
 [source,bash]
 ----
-mkdir build
-cd build
+$ mkdir build
+$ cd build
 ----
 
-* Configure Feel++
+Configure Feel++
 [source,bash]
 ----
-CXX=clang++ ../feelpp/configure -r
+$ CXX=clang++ ../feelpp/configure -r
 ----
 
-* Compile the Feel++ library
+Compile the Feel++ library 
 [source,bash]
 ----
-# use 4 parallel jobs
-make -j4 feelpp
+$ make feelpp
 ----
 
-* Compile your first Feel++ application
+> **Tip:** you can speed up the make process by passing the option `-j<N>` where `N` is the number of concurrent `make` sub-processes. It compiles `N` files at a time and respect dependencies. For example `-j4` compiles 4 C++ files at a time. 
+
+> **Warning:** Be aware that Feel{plus}{plus} consumes memory. The Feel{plus}{plus} library compile with 2Go of RAM. But to be more comfortable, 4Go or more would be best. The more, the better.
+
+Compile your first Feel++ applications
 [source,bash]
 ----
-# a 2D laplacian
-make feelpp_qs_laplacian_2d
-# or a 3D laplacian
-make feelpp_qs_laplacian_3d
+$ make quickstart
 ----
 
-* Execute your first Feel++ application
+Execute your first Feel++ application in sequential
 [source,sh]
 ----
-cd quickstart/laplacian
-# in 2D
-mpirun -np 4 feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
-# or in 3D
-mpirun -np 4 feelpp_qs_laplacian_3d --config-file qs_laplacian_3d.cfg
+$ cd quickstart
+$ ./feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
+----
+
+
+Execute your first Feel++ application using 4 mpi processes
+[source,sh]
+----
+$ mpirun -np 4 feelpp_qs_laplacian_2d --config-file qs_laplacian_2d.cfg
 ----
 
 
