@@ -1,6 +1,7 @@
 FEEL++ BOOK
 ===========
 :toc:
+:toclevels: 3
 :toc-placement: macro
 
 toc::[]
@@ -29,7 +30,7 @@ Feel++ is
    and typically non-linear multi-physics applications currently in industry, physics and health-care.
 
 
-== 2. feel-book[ Help and Support
+== 2. Help and Support
 
 We're always happy to help out with Feel\++ or any other questions you might
 have. You can ask a question or signal an issue at the Gitter Feel++ salon.
@@ -102,7 +103,7 @@ the `prepub` branch.
 All this book is written in asciidoc. Avoid using other format.
 The book is divided in `Part`, `Chapters`, `Sections`.
 
-=== Chapters, sections
+=== 6.1 Chapters, sections
 
 Each chapter is a directory named `<number>-<shortname>` where `<number>` respect the chapter
 numbering. Each chapter contains a `README.adoc` files which contains the 
@@ -126,7 +127,7 @@ If the section contains many big subsection, proceed the same way.
 
 See existing files in the book to well understand the book structure before editing any files.
 
-=== Codes
+=== 6.2 Codes
 
 To keep the book look coherent, we use two plugins for source codes:
 - .link:https://github.com/azu/gitbook-plugin-include-codeblock[gitbook-plugin-include-codeblock]
@@ -134,7 +135,7 @@ To keep the book look coherent, we use two plugins for source codes:
 Note that `include-codeblock` use `ace`, see their documentation for more details.
 The styling option are set globally, please do not change them with local commands.
 
-==== Include codes (recommended)
+==== 6.2.1 Include codes (recommended)
 
 In most case, we recommend keeping code aside from the book, and include it using snippet
 features of `include-codeblock`. Do include a code, just use
@@ -151,7 +152,7 @@ If the code contains doxygen snippet tag, you can call inner code using this way
 Note that if you do not pass the `lang` key, it will determine the syntax from
 file extension, so in this case C++.
 
-==== Inner codes
+==== 6.2.2 Inner codes
 
 If the code is really short, you can write it directly in the asciidoc file.
 We ask you to avoid this practice if it can be avoided.
