@@ -6,8 +6,7 @@ FEEL++ BOOK
 toc::[]
 
 
-1. Finite Element Embedded Library in C++ 
------------------------------------------
+== 1. Finite Element Embedded Library in C++ 
 
 Feel\++ is a unified C++ implementation of Galerkin methods (finite and spectral element methods) in 1D, 2D and 3D to solve partial differential equations.
 
@@ -30,8 +29,7 @@ Feel++ is
    and typically non-linear multi-physics applications currently in industry, physics and health-care.
 
 
-2. feel-book[ Help and Support
-------------------------------
+== 2. feel-book[ Help and Support
 
 We're always happy to help out with Feel\++ or any other questions you might
 have. You can ask a question or signal an issue at the Gitter Feel++ salon.
@@ -40,16 +38,14 @@ https://gitter.im/feelpp/feelpp?utm_source=badge&utm_medium=badge&utm_campaign=p
 image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.im/feelpp/feelpp]]
 
 
-3. Contribute to this documentation
------------------------------------
+== 3. Contribute to this documentation
 
 You can contribute to improve this documentation on
 https://github.com/feelpp/feelpp-book[GitHub] and follow the
 https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
 
-4. How to view the book
------------------------
+== 4. How to view the book
 
 The book can be read online at https://book.feelpp.org/content
 
@@ -78,8 +74,7 @@ For more output format option, type
 gitbook help
 ```
 
-5. How to edit the book
------------------------
+== 5. How to edit the book
 
 Feel++ developers can edit the book online via https://www.gitbook.com.
 
@@ -102,8 +97,7 @@ the `prepub` branch.
 7. Once the `prepub` branch is reviewed, the new version is published to master.
 
 
-6. How to write the book (convention)
--------------------------------------
+== 6. How to write the book (convention)
 
 All this book is written in asciidoc. Avoid using other format.
 The book is divided in `Part`, `Chapters`, `Sections`.
