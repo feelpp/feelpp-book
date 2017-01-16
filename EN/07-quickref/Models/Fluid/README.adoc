@@ -370,6 +370,32 @@ $$
 $$
 
 ===== Windkessel model
+We use a 3-element Windkessel model for modeling an outflow boundary condition. We define $$P_l$$ a pressure and $$Q_l$$ the flow rate. The outflow model is discribed by the following system of differential equations :
+
+
+$$
+\begin{equation}
+\left\{
+\begin{aligned}
+  C_{d,l} \frac{\partial \pi_l}{\partial t} + \frac{\pi_l}{R_{d,l}} = Q_l \\
+  P_l = R_{p,l} Q_l + \pi_l
+\end{aligned}
+\right.
+\end{equation}
+$$
+
+Coefficients $$R_{p,l}$$ and $$R_{d,l}$$ représentent respectively the proximal and distale resistance. The constant $$C_{d,l}$$ is the capacitance of blood vessel. The unknowns $$P_l$$ and $$\pi_l$$ are called proximal pressure and distal pressure.
+Then we define the coupling between this outflow model and the fluid model by this two relationships :
+
+$$
+\begin{align}
+  Q_l &= \int_{\Gamma_l} \boldsymbol{u}_f \cdot \boldsymbol{n}_f  \\
+  \boldsymbol{\sigma}_f \boldsymbol{n}_f &= -P_l \boldsymbol{n}_f 
+\end{align}
+$$
+
+
+
 [cols="1,1,1", options="header"]
 .Windkessel options
 |===
