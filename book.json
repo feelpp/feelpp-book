@@ -3,9 +3,10 @@
     "plugins": [
         "anchors",
         "include-codeblock",
+        "ace",
+        "ace-mode-feelpp",
         "ga",
         "richquotes",
-        "toc",
         "expandable-chapters",
         "-search",
         "mathjax",
@@ -21,6 +22,18 @@
         "richquotes": {
             "todos": true,
             "fixme": true
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": "true",
+            "check": "false",
+            "edit": "false",
+            "theme": "coffee"
+        },
+        "ace": {
+            "check":"false",
+            "edit":"false",
+            "theme":"coffee"
         }
     },
     "links": {

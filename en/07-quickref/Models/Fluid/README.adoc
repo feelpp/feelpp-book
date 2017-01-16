@@ -96,7 +96,7 @@ We first describe the correspondance between the mathematical names and the json
 Next we define a `Materials` section which contains a section named after the mesh physical marker used to mark the fluid domain. We suppose now that this marker is `water` and use it to name the section that describe the fluid physical parameters. The code below describes the section.
 
 [source,json]
-.Materials section
+.Listing : Materials section
 ----
 "Materials":
 {
@@ -108,6 +108,138 @@ Next we define a `Materials` section which contains a section named after the me
     }
 }
 ----
+==== Generalised Newtonian fluid
+A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
+
+$$
+\dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
+$$
+
+and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$. 
+The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model wich
+takes the useful form :
+
+$$
+  \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right) 
+$$
+
+The simpler exemple of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
+
+$$
+\mu_f \left(\dot{\gamma} \right) = k \dot{\gamma}^{n-1}
+$$
+
+where $$k$$ and $$n < 1$$ are two parameters related to fluid properties.
+In the context of blood flow modeling, an extension of power model was proposed by Walburn and Schneck. Parameters $$k$$ and $$n$$ are related to the haematocric $$Ht$$ and Total Proteins Minus Albumin (TPMA) :
+
+$$
+k = C_1 e^{C_2 Ht} e^{C_4 \text{TPMA} / Ht }, \quad\quad    n = 1- C_3 H t
+$$
+and $$C_i, i=1,..,4$$ are parameters to fit with experimental data.
+
+
+Anothers family of generalised Newtonian model can be defined from a function $$\Phi$$ express by :
+
+$$
+  \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) 
+  = \frac{\mu\left(\dot{\gamma}\right) - \mu_{\infty}}{\mu_{0}-\mu_{\infty}}  
+$$
+
+where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and infinite shear rate.
+
+
+[cols="1,1", options="header"]
+|===
+| Viscosity law | $$\Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) $$ 
+| Carreau | $$\left(1+\left(\lambda\dot{\gamma}\right)^{2}\right)^{(n-1)/2}$$ 
+| Carreau-Yasuda | $$\left(1+\left(\lambda\dot{\gamma}\right)^{a}\right)^{(n-1)/a}$$ 
+|===
+
+
+The non newtonian properties are defined in cfg file in fluid section. The viscosity law is activated by :
+[cols="1,1", options="header"]
+|===
+| option | values
+| viscosity.law | newtonian, power_law, walburn-schneck_law, carreau_law, carreau-yasuda_law
+|===
+
+Then, each model are configured with the options reported in next table :  
+
+[cols="1,1,1", options="header"]
+|===
+| Viscosity law | options | unit
+| power_law |
+power_law.k
+
+power_law.n
+| dimensionless
+
+dimensionless
+
+| walburn-schneck_law |
+hematocrit
+
+TPMA
+
+walburn-schneck_law.C1
+
+walburn-schneck_law.C2
+
+walburn-schneck_law.C3
+
+walburn-schneck_law.C4
+
+| Percentage
+
+g/l
+
+dimensionless
+
+dimensionless
+
+dimensionless
+
+l/g
+| carreau_law |
+viscosity.zero_shear
+
+viscosity.infinite_shear
+
+carreau_law.lambda
+
+carreau_law.n
+| 
+$$kg/(m \times s)$$
+
+$$kg/(m \times s)$$
+
+dimensionless
+
+dimensionless
+| carreau-yasuda_law |
+viscosity.zero_shear
+
+viscosity.infinite_shear
+
+carreau-yasuda_law.lambda
+
+carreau-yasuda_law.n
+
+carreau-yasuda_law.a
+| 
+$$kg/(m \times s)$$
+
+$$kg/(m \times s)$$
+
+dimensionless
+
+dimensionless
+
+dimensionless
+
+|===
+
+
 
 
 

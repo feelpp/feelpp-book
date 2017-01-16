@@ -1,8 +1,13 @@
 FEEL++ BOOK
 ===========
+:toc:
+:toclevels: 3
+:toc-placement: macro
 
-Finite Element Embedded Library in C++
---------------------------------------
+toc::[]
+
+
+== 1. Finite Element Embedded Library in C++ 
 
 Feel\++ is a unified C++ implementation of Galerkin methods (finite and spectral element methods) in 1D, 2D and 3D to solve partial differential equations.
 
@@ -24,8 +29,8 @@ Feel++ is
  . a library entirely in `C++` allowing to create `C++` complex
    and typically non-linear multi-physics applications currently in industry, physics and health-care.
 
-Help and Support
-----------------
+
+== 2. Help and Support
 
 We're always happy to help out with Feel\++ or any other questions you might
 have. You can ask a question or signal an issue at the Gitter Feel++ salon.
@@ -33,15 +38,15 @@ have. You can ask a question or signal an issue at the Gitter Feel++ salon.
 https://gitter.im/feelpp/feelpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge[
 image:https://badges.gitter.im/Join%20Chat.svg[Join the chat at https://gitter.im/feelpp/feelpp]]
 
-Contribute to this documentation
---------------------------------
+
+== 3. Contribute to this documentation
 
 You can contribute to improve this documentation on
 https://github.com/feelpp/feelpp-book[GitHub] and follow the
 https://gitter.im/feelpp/feelpp-book[Gitter Feel++ Book] forum.
 
-How to view the book
---------------------
+
+== 4. How to view the book
 
 The book can be read online at https://book.feelpp.org/content
 
@@ -70,8 +75,7 @@ For more output format option, type
 gitbook help
 ```
 
-How to edit the book
-~~~~~~~~~~~~~~~~~~~~
+== 5. How to edit the book
 
 Feel++ developers can edit the book online via https://www.gitbook.com.
 
@@ -88,7 +92,76 @@ git fetch upstream
 git checkout upstream/master -B master
 git checkout -b branchname
 ```
+5. Commit you change in your own branch, then create a pull-request targetting
+the `prepub` branch.
+6. Once the pull-request is accepted, you can delete your fork.
+7. Once the `prepub` branch is reviewed, the new version is published to master.
 
-5. Commit you change in your own branch, the pull-request this branch to master.
-6. Create one branch per big change. Once the pull-request is accepted, you can
-delete your fork.
+
+== 6. How to write the book (convention)
+
+All this book is written in asciidoc. Avoid using other format.
+The book is divided in `Part`, `Chapters`, `Sections`.
+
+=== 6.1 Chapters, sections
+
+Each chapter is a directory named `<number>-<shortname>` where `<number>` respect the chapter
+numbering. Each chapter contains a `README.adoc` files which contains the 
+table of content for the whole chapter similar to the file `SUMMARY.adoc`.
+
+.Example of chapter
+```sh
+03-mychapter/README.adoc    # chapter toc
+03-mychapter/01-myfirstsection.adoc
+03-mychapter/02-mysecondsection.adoc
+```
+If the section contains many big subsection, proceed the same way.
+
+.Example of big section
+
+```sh
+03-mychapter/README.adoc                 # chapter toc
+03-mychapter/01-mysection/README.adoc    # section toc
+03-mychapter/01-mysection/01-subsection.adoc
+```
+
+See existing files in the book to well understand the book structure before editing any files.
+
+=== 6.2 Codes
+
+To keep the book look coherent, we use two plugins for source codes:
+- .link:https://github.com/azu/gitbook-plugin-include-codeblock[gitbook-plugin-include-codeblock]
+- .link:https://github.com/ymcatar/gitbook-plugin-ace[gitbook-plugin-ace]
+Note that `include-codeblock` use `ace`, see their documentation for more details.
+The styling option are set globally, please do not change them with local commands.
+
+==== 6.2.1 Include codes (recommended)
+
+In most case, we recommend keeping code aside from the book, and include it using snippet
+features of `include-codeblock`. Do include a code, just use
+
+```sh
+[include,lang:"feelpp"](path/to/file.cpp)
+```
+
+If the code contains doxygen snippet tag, you can call inner code using this way
+
+```sh
+[include:"tag",lang:"feelpp"](path/to/file.cpp)
+```
+Note that if you do not pass the `lang` key, it will determine the syntax from
+file extension, so in this case C++.
+
+==== 6.2.2 Inner codes
+
+If the code is really short, you can write it directly in the asciidoc file.
+We ask you to avoid this practice if it can be avoided.
+```sh
+{%ace lang:"feelpp"}
+    // your code
+{%endace}
+```
+It detect automatically the C++ syntax + feelpp syntax
+(.link:https://github.com/gdolle/gitbook-plugin-ace-mode-feelpp[ace-mode-feelpp]
+plugin)
+

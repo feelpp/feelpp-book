@@ -1,4 +1,4 @@
 = Languages
 
-. link:EN/[English]
-//. link:FR/[French]
+. link:en/[English]
+//. link:fr/[French]
