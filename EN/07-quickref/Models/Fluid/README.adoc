@@ -264,29 +264,34 @@ Boundary conditions and volumic forces are set in the json files
 }
 ----
 where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
-The condition types are explain in the two following tables.
-
-[cols="1,2,1", options="header"]
-.Boundary conditions
-|===
-| Name | Options | Type 
-
-| Dirichlet 
-| faces, edges and component-wise
-| `Dirichlet`
-| Neumann 
-| scalar, vectorial
-| `Neumann_scalar` or `Neumann_vectorial`
-|===
 
 
 ==== Dirichlet on velocity
+A Dirichlet condition on velocity field correspond to impose : 
+$$
+\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma 
+$$
+or only a component of vector $$\boldsymbol{u}_f =(u_f^1,u_f^2 ,u_f^3 )$$
 
 $$
-\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma
+u_f^i = g \quad \text{ on } \Gamma 
 $$
+
+Several methods are available to ensure to boundary condition :
+
+- elimination
+- weak
+- Lagrange multiplier
 
 ==== Dirichlet on pressure
+
+$$
+\begin{eqnarray}
+p &=& g \\
+\boldsymbol{u}_f \times \boldsymbol{n} &=& 0
+\end{eqnarray}
+$$
+
 ==== Neumann
 [cols="1,1", options="header"]
 .Neumann options
@@ -344,7 +349,7 @@ where $$\beta$$ is a constant determinated by adding a constraint on the inflow 
 .Inlet flow options
 |===
 | Option | Value | Default value |Description
-| shape | constant,parabolic |  | select an shape profile for inflow
+| shape | constant,parabolic |  | select a shape profile for inflow
 |constraint | velocity_max,flow_rate | | give a constraint wich controle velocity
 | expr | string | | symbolic expression of constraint value
 |===
