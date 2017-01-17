@@ -103,11 +103,14 @@ int main(int argc, char**argv )
 
     //# marker4 #
     tic();
+    //# export #
     auto e = exporter( _mesh=mesh );
     e->addRegions();
     e->add( "u", u );
     e->add( "g", v );
     e->save();
+    //# export #
+
     toc("Exporter");
     return 0;
     //# endmarker4 #
