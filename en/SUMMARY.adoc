@@ -7,6 +7,8 @@
 .. link:00-preface/consortium.adoc[Consortium]
 .. link:00-preface/sponsors.adoc[Sponsors]
 .. link:00-preface/conventions.adoc[Conventions]
+.. link:00-preface/notations.adoc[Notations]
+
 
 == Preparing FEEL++
 . link:01-installation/README.adoc[Installation]
@@ -35,6 +37,8 @@
 .. link:04-programming/11-SolveAnEquation.adoc[Solve a partial differential equation]
 .. link:04-programming/09-UsingBackend.adoc[Using linear algebra backends]
 . link:05-learning/README.adoc[Learning By Example]
+.. link:05-learning/Generic/README.adoc[Generic PDEs]
+... link:05-learning/Generic/laplacian.adoc[Laplacian]
 .. link:05-learning/CFD/README.adoc[CFD]
 ... link:05-learning/CFD/Turek-Hron/README.adoc[Turek-Hron]
 .. link:05-learning/Optimization/README.adoc[Optimization]
