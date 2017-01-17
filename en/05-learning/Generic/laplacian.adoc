@@ -42,7 +42,7 @@ The weak formulation reads:
 Look for $$u_\delta \in V_\delta  $$ such that                                                                                                                                    
 
 $$                                                                                                                                                           
-\displaystyle\int_{\Omega_\delta} \nabla u_{\delta} \cdot \nabla v_\delta +\int_{{\Gamma_R}_\delta} u_\delta\ v_\delta = \displaystyle \int_{\Omega_\delta} f\ v_\delta+ \int_{{\Gamma_N}_\delta} g\ v_\delta + \int_{{\Gamma_R}_\delta} l\ v_\delta,\quad \forall v_\delta \in V_{0,\delta}                                                      
+\displaystyle\int_{\Omega_\delta} \nabla u_{\delta} \cdot \nabla v_\delta +\int_{\Gamma_{R,\delta}} u_\delta\ v_\delta = \displaystyle \int_{\Omega_\delta} f\ v_\delta+ \int_{\Gamma_{N,\delta}} g\ v_\delta + \int_{\Gamma_{R,\delta}} l\ v_\delta,\quad \forall v_\delta \in V_{0,\delta}                                                      
 $$ 
 
 NOTE: from now on, we omit $$\delta$$ to lighten the notations. Be careful that it appears both the geometrical and approximation level.
