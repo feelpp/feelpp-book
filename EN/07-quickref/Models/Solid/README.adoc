@@ -24,6 +24,14 @@ $$
 \end{align}
 $$
 
+|===
+| Notation | Quantity | Unit 
+|$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
+|$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
+|===
+
+
+
 
 == Models
 $$
@@ -33,27 +41,41 @@ $$
 $$
 
 === Linear elasticity
+$$
+\begin{align}
+\boldsymbol{F}_s &= \text{Identity} \\
+\boldsymbol{\Sigma}_s &=\lambda_s tr( \boldsymbol{\epsilon}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{\epsilon}_s
+\end{align}
+$$
 
 === Hyper-elasticity
 
-==== Compressible Saint-Venant-Kirchhoff model
+==== Compressible Saint-Venant-Kirchhoff
 $$
 \boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{E}_s
 $$
 
-==== Neo-hookean
+==== Compressible Neo-Hookean
 
+$$
+\boldsymbol{\Sigma}_s= \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1})
+$$
 
+===== Volumic
 
-
-
-=== Variables, symbols and units
+[cols="1,1", options="header"]
+.Volumic law
 |===
-| Notation | Quantity | Unit 
-|$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
-|$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
-|$$\boldsymbol{E}_s$$|Green Lagrangian tensor|
+| Name | Expression 
+| classic |
+| simo1985 |
 |===
+
+
+
+
+
+
 
 
 == Json file
@@ -117,26 +139,13 @@ where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( d
 
 === Boundary Conditions
 
-Boundary conditions and volumic forces are set in the json files
-[source,json]
-.Example for boundary conditions
-----
-"BoundaryConditions":
-{
-    "field":
-    {
-        "<condition type>":
-        {
-            "marker":
-            {
-                "expr": "value"
-            }
-        }
-    }
-}
-----
-where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
-The condition types are explain in the two following tables.
+==== Dirichlet
+
+==== Neumann
+
+==== Robin
+
+
 
 .Boundary conditions
 |===
