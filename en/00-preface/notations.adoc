@@ -1,10 +1,10 @@
-Mathematical Notations
+Mathematical Notation
 ======================
 
 == Geometry and Meshes
 
 * $$d=1,2,3$$ geometrical dimension
-* $$\Omega \subset \mathbb{R}^d$$ 
+* $$\Omega \subset \mathbb{R}^d$$
 * $$K$$ a cell or element of a mesh
 * $$h$$ characteristic mesh size
 * $$k_{\mathrm{geo}}$$ polynomial order of the geometrical transformation
@@ -14,3 +14,5 @@ Mathematical Notations
 * $$\Omega_h \equiv \cup_K {K}$$
 
 == Spaces
+
+ * $$P^k_{c,h} = \{ v_h \in C^0(\bar{\Omega}); \forall K \in \mathcal{T}_h,\ v_h \circ T_K \in \mathbb{P}^k\}$$ Space of continuous piecewise polynomial of total degree  $$\leq k$$.
