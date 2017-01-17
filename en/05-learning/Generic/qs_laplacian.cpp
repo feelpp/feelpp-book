@@ -21,7 +21,6 @@
    License along with this library; if not, write to the Free Software
    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
-//! [global]
 #include <feel/feel.hpp>
 
 int main(int argc, char**argv )
@@ -42,7 +41,7 @@ int main(int argc, char**argv )
                                 _email="feelpp-devel@feelpp.org"));
     //# endmarker1 #
 
-    //# marker2 #
+    
     
     tic();
     //! [mesh]
@@ -63,9 +62,9 @@ int main(int argc, char**argv )
     auto v = Vh->element( g, "g" );
     //! [discr]
     toc("Vh");
-    //# endmarker2 #
+    
 
-    //# marker3 #
+    
     tic();
     //! [vf]
     auto l = form1( _test=Vh );
@@ -98,10 +97,10 @@ int main(int argc, char**argv )
     //! [solve]
     toc("a.solve");
 
-    //# endmarker3 #
+    
     cout << "||u-u_h||_L2=" << normL2(_range=elements(mesh), _expr=idv(u)-g) << std::endl;
 
-    //# marker4 #
+    
     tic();
     //! [export]
     auto e = exporter( _mesh=mesh );
@@ -113,6 +112,6 @@ int main(int argc, char**argv )
 
     toc("Exporter");
     return 0;
-    //# endmarker4 #
+    
 }
-//! [global]
+

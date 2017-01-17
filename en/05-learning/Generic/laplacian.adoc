@@ -22,6 +22,10 @@ $$
  \end{split}\right.
 $$ 
 
+CAUTION: $$\partial \Omega_D$$, $$\partial \Omega_N$$ and $$\partial \Omega_R$$ can be empty sets. In the case $$\partial \Omega_D =\partial \Omega_R = \emptyset$$, then the solution is known up to a constant.
+
+
+
 == Variational formulation
 
 We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
