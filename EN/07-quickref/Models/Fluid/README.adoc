@@ -244,26 +244,8 @@ dimensionless
 
 
 === Boundary Conditions
+We start by a listing of boundary conditions supported in fluid mechanics model.
 
-Boundary conditions and volumic forces are set in the json files
-[source,json]
-.Example for boundary conditions
-----
-"BoundaryConditions":
-{
-    "field":
-    {
-        "<condition type>":
-        {
-            "marker":
-            {
-                "expr": "value"
-            }
-        }
-    }
-}
-----
-where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
 
 
 ==== Dirichlet on velocity
@@ -412,6 +394,30 @@ $$
 |===
 
 
+===== Implement boundary conditions in json file
+
+Boundary conditions are set in the json files in the category `BoundaryConditions`. Then `<field>` and `<bc_type>` are chosen from type of boundary condition. The parameter `<marker>` corresponds to mesh marker where the boundary condition is applied.
+And finally, we define inside some specific options.
+[source,json]
+.Listing : boundary conditions in json
+----
+"BoundaryConditions":
+{
+    "<field>":
+    {
+        "<bc_type>":
+        {
+            "<marker>":
+            {
+                "<option1>":"<value1>",
+                "<option2>":"<value2>",
+                ...
+            }
+        }
+    }
+}
+----
+
 
 
 
@@ -534,6 +540,7 @@ alemesh_bc
 
 |===
 
+=== Volumic forces
 
 === Post Process
 
