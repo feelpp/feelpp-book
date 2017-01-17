@@ -55,12 +55,6 @@ $$P^k_{c,\delta}$$.
 NOTE: The Dirichlet boundary conditions can be treated using different techniques and we use from now on the elimination technique.
 
 We start with the mesh
-                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                                                                                                                                                                 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
-                                    
-                                                                                                                                  
+NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
 
-                       
