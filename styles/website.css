@@ -1,1 +1,11 @@
 /* CSS for website */
+div.sidebarblock div.title h2 {
+    font-size: 180%;
+    font-weight: Bold;
+}
+div.sidebarblock div.paragraph  {
+    font-weight: Italic;
+}
+div.sidebarblock  {
+    background-color: #444444
+}
