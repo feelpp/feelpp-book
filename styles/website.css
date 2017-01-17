@@ -1,4 +1,7 @@
 /* CSS for website */
+.code {
+    background-color: white;
+}
 div.sidebarblock div.content div.title {
     font-size: 110%;
     font-style: italic;
