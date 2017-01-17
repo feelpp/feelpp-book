@@ -9,7 +9,6 @@
 .. link:00-preface/conventions.adoc[Conventions]
 .. link:00-preface/notations.adoc[Notations]
 
-
 == Preparing FEEL++
 . link:01-installation/README.adoc[Installation]
 .. link:01-installation/prerequisites.adoc[Prerequisites]
