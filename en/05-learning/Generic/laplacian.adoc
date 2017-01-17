@@ -1,0 +1,64 @@
+The Laplacian
+=============
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
+
+== Problem statement
+
+We are interested in this section in the _conforming finite element approximation_ of the following problem:
+
+
+Look for $$u$$ such that                              
+
+$$     
+\left\{\begin{split}                                                                                                                                                                                                                                                                           
+     -\Delta u &= f \text{ in } \Omega\\                                                                                                                                       
+      u &= g \text{ on } \partial \Omega_D\\
+\frac{\partial u}{\partial n} &=h \text{ on } \partial \Omega_N\\
+\frac{\partial u}{\partial n} + u &=l \text{ on } \partial \Omega_R
+ \end{split}\right.
+$$ 
+
+== Variational formulation
+
+We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
+                                                                                                                                                                
+Look for $$u \in H^1_{g,\Gamma_D}(\Omega)$$ such that                                                                                                                                    
+
+$$                                                                                                                                                           
+\displaystyle\int_\Omega \nabla u \cdot \nabla v +\int_{\Gamma_R} u v = \displaystyle \int_\Omega f\ v+ \int_{\Gamma_N} g\ v + \int_{\Gamma_R} l\ v,\quad \forall v \in H^1_{0,\Gamma_D}(\Omega)                                                                              
+$$ 
+
+== Conforming Approximation
+                                                                                                                                                            
+We now turn to the finite element approximation using Lagrange finite element.                                                                                                       
+respectivement et un maillage $\calTh = \{K_e\}_{e=1...\Ne}$ de $\Omega$. On considère un élément                                                                                 
+fini de référence $(\hat{K},\hat{P},\hat{\Sigma})$ tel que $\Pk \subset \hat{P}$                                                                                                  
+et $k+1 > \frac{d}{2}$, voir le théorème~\ref{thr:16}. On note                                                                                                                    
+\begin{equation}                                                                                                                                                                  
+  \label{eq:70}                                                                                                                                                                   
+  L^k_{c,h} = \{ v_h \in C^0(\bar{\Omega}); \forall K \in \mathcal{T}_h,\ v_h                                                                                                     
+  \circ T_K \in \hat{P}\}                                                                                                                                                         
+\end{equation}                                                                                                                                                                    
+où $T_K$ est la tranformation géométrique de $\hat{K}$ dans $K$.                                                                                                                  
+\begin{itemize}                                                                                                                                                                   
+\item Si on utilise $\hat{P}=\Pk$ on a $L^k_{c,h} = P^k_{c,h}$.                                                                                                                   
+\item Si on utilise $\hat{P}=\Qk$ on a $L^k_{c,h} = Q^k_{c,h}$.                                                                                                                   
+\end{itemize}                                                                                                                                                                     
+Afin de construire un espace d'approximation conforme \ie $V_h \subset V                                                                                                          
+=H^1_0(\Omega)$ on prend                                                                                                                                                          
+\begin{equation}                                                                                                                                                                  
+  \label{eq:71}                                                                                                                                                                   
+  V_h = L^k_{c,h} \cap H^1_0(\Omega)                                                                                                                                              
+\end{equation}                                                                                                                                                                    
+c'est à dire que les fonctions de $V_h$ satisfont les conditions aux limites                                                                                                      
+outre le fait d'être dans $L^k_{c,h}$. Le problème discret s'écrit alors                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+                                    
+                                                                                                                                  
+
+                       
