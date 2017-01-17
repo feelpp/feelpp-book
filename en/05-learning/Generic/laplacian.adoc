@@ -46,7 +46,8 @@ $$
 
 We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
 
-.Laplacian problem variational formulation                                                                                                                                                                                                                                                         ****
+.Laplacian problem variational formulation
+****
 Look for $$u \in H^1_{g,\Gamma_D}(\Omega)$$ such that                                                                                                                                    
 
 $$                                                                                                                                                           
@@ -71,6 +72,8 @@ $$
 ****
 
 NOTE: from now on, we omit $$\delta$$ to lighten the notations. Be careful that it appears both the geometrical and approximation level.
+
+
 
 [[implementation]]
 == Feel++ Implementation   
