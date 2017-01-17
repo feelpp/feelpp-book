@@ -34,28 +34,30 @@ $$
 
 == Conforming Approximation
                                                                                                                                                             
-We now turn to the finite element approximation using Lagrange finite element. We assume $$\Omega$$ to be a segment in 1D, a polygon in 2D or a polyhedron in 3D.  On considère un élément                                                                                 
-fini de référence $(\hat{K},\hat{P},\hat{\Sigma})$ tel que $\Pk \subset \hat{P}$                                                                                                  
-et $k+1 > \frac{d}{2}$, voir le théorème~\ref{thr:16}. 
+We now turn to the finite element approximation using Lagrange finite element. We assume $$\Omega$$ to be a segment in 1D, a polygon in 2D or a polyhedron in 3D.   
+We denote $$V_\delta  \subset H^1(\Omega)$$ an approximation space such that $$V_{g,\delta} \equiv P^k_{c,\delta}\cap H^1_{g,\Gamma_D}(\Omega) $$.
 
-We denote 
-\begin{equation}                                                                                                                                                                  
-  \label{eq:70}                                                                                                                                                                   
-                                                                                                                                                         
-\end{equation}                                                                                                                                                                    
-où $T_K$ est la tranformation géométrique de $\hat{K}$ dans $K$.                                                                                                                  
-\begin{itemize}                                                                                                                                                                   
-\item Si on utilise $\hat{P}=\Pk$ on a $L^k_{c,h} = P^k_{c,h}$.                                                                                                                   
-\item Si on utilise $\hat{P}=\Qk$ on a $L^k_{c,h} = Q^k_{c,h}$.                                                                                                                   
-\end{itemize}                                                                                                                                                                     
-Afin de construire un espace d'approximation conforme \ie $V_h \subset V                                                                                                          
-=H^1_0(\Omega)$ on prend                                                                                                                                                          
-\begin{equation}                                                                                                                                                                  
-  \label{eq:71}                                                                                                                                                                   
-  V_h = L^k_{c,h} \cap H^1_0(\Omega)                                                                                                                                              
-\end{equation}                                                                                                                                                                    
-c'est à dire que les fonctions de $V_h$ satisfont les conditions aux limites                                                                                                      
-outre le fait d'être dans $L^k_{c,h}$. Le problème discret s'écrit alors                                                                                                                                                                   
+The weak formulation reads: 
+
+Look for $$u_\delta \in V_\delta  $$ such that                                                                                                                                    
+
+$$                                                                                                                                                           
+\displaystyle\int_{\Omega_\delta} \nabla u_{\delta} \cdot \nabla v_\delta +\int_{{\Gamma_R}_\delta} u_\delta\ v_\delta = \displaystyle \int_{\Omega_\delta} f\ v_\delta+ \int_{{\Gamma_N}_\delta} g\ v_\delta + \int_{{\Gamma_R}_\delta} l\ v_\delta,\quad \forall v_\delta \in V_{0,\delta}                                                      
+$$ 
+
+NOTE: from now on, we omit $$\delta$$ to lighten the notations. Be careful that it appears both the geometrical and approximation level.
+
+== Feel++ Implementation   
+
+In Feel{plus}{plus},  $$V_{g,\delta}$$ is not built but rather                                                                                                                 
+$$P^k_{c,\delta}$$. 
+
+NOTE: The Dirichlet boundary conditions can be treated using different techniques and we use from now on the elimination technique.
+
+We start with the mesh
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
                                     
