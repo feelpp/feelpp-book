@@ -48,9 +48,10 @@ Here is a list of libraries that we recommend to use jointly with Feel++.
 |===
 | Library | Minimum Version | Maximum Version  | Notes
 
+| HDF5  | --  | --  | Be careful on Debian/sid a new version of HDF5 breaks MED support
 | PETSc | 3.2 | 3.7 | Last is best; a requirement for parallel and high performance computing
 | SLEPc | 3.2 | 3.7 | last is best; a requirement for eigenvalue problem; depends on PETSc
-| Gmsh  | 2.8.7 | 2.12 | last is best; a requirement if you want to be able to read many file formats
+| Gmsh  | 2.8.7 | 2.16 | last is best; a requirement if you want to be able to read many file formats; HDF5 version in Debian/sid currently breaks MED format support.
 | Superlu  ||| superlu and superlu_dist
 | Suitesparse ||| umfpack (colamd,amd)
 | OpenTURNS | 2.0 || Uncertainty quantification
@@ -61,7 +62,7 @@ Here is a list of libraries that we recommend to use jointly with Feel++.
 Here is a list of tools that we recommend to use jointly with Feel++.
 
 
-.Table Optional tools
+.Table of recommended tools
 |===
 | Tool | License | Notes
 
@@ -87,13 +88,14 @@ Note that all these packages are available under Debian GNU/Linux and Ubuntu. On
 
 Here is a list of tools that we suggest to use jointly with Feel++.
 
-.Table Optional tools
+.Table of suggested tools
 |===
 | Tool | License | Notes
 
 3+>| *Computer Aided Design (CAD)*
 | Freecad | Open Source |
-| Salome | Open Source  |
+| Salome | Open Source  | HDF5 version in Debian/sid currently breaks MED format support.
+
 
 3+>| *Modeling, Compilation and Simulation Environment*
 | Open Modelica | Open Source  |
