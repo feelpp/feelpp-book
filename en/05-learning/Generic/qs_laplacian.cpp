@@ -45,13 +45,13 @@ int main(int argc, char**argv )
     //# marker2 #
     
     tic();
-    //# mesh #
+    //! [mesh]
     auto mesh = loadMesh(_mesh=new Mesh<Simplex<FEELPP_DIM,1>>);
-    //# endmesh #
+    //! [mesh]
     toc("loadMesh");
 
     tic();
-    //# discr #
+    //! [discr]
     auto Vh = Pch<2>( mesh );
     auto u = Vh->element("u");
     auto mu = doption(_name="mu");
@@ -61,23 +61,23 @@ int main(int argc, char**argv )
     auto n = expr( soption(_name="functions.c"), "c" ); // Neumann expression
     auto g = expr( soption(_name="functions.g"), "g" );
     auto v = Vh->element( g, "g" );
-    //# enddiscr #
+    //! [discr]
     toc("Vh");
     //# endmarker2 #
 
     //# marker3 #
     tic();
-    //# vf #
+    //! [vf]
     auto l = form1( _test=Vh );
     l = integrate(_range=elements(mesh),
                   _expr=f*id(v));
     l+=integrate(_range=markedfaces(mesh,"Robin"), _expr=r_2*id(v));
     l+=integrate(_range=markedfaces(mesh,"Neumann"), _expr=n*id(v));
-    //# endvf #
+    //! [vf]
     toc("l");
 
     tic();
-    //# vf #
+    //! [vf]
     auto a = form2( _trial=Vh, _test=Vh);
     a = integrate(_range=elements(mesh),
                   _expr=mu*gradt(u)*trans(grad(v)) );
@@ -87,15 +87,15 @@ int main(int argc, char**argv )
     //! impose Dirichlet boundary conditions over the entire boundary
     if ( !mesh->hasAnyMarker({"Robin", "Neumann","Dirichlet"}) )
         a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u, _expr=g );
-    //# endvf #
+    //! [vf]
     toc("a");
 
     tic();
-    //# solve #
+    //! [solve]
     //! solve the linear system, find u s.t. a(u,v)=l(v) for all v
     if ( !boption( "no-solve" ) )
         a.solve(_rhs=l,_solution=u);
-    //# endsolve #
+    //! [solve]
     toc("a.solve");
 
     //# endmarker3 #
@@ -103,13 +103,13 @@ int main(int argc, char**argv )
 
     //# marker4 #
     tic();
-    //# export #
+    //! [export]
     auto e = exporter( _mesh=mesh );
     e->addRegions();
     e->add( "u", u );
     e->add( "g", v );
     e->save();
-    //# endexport #
+    //! [export]
 
     toc("Exporter");
     return 0;
