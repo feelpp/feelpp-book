@@ -10,7 +10,9 @@ toc::[]
 
 We are interested in this section in the _conforming finite element approximation_ of the following problem:
 
-
+[[laplacian]]
+.Laplacian problem
+****
 Look for $$u$$ such that                              
 
 $$     
@@ -21,6 +23,7 @@ $$
 \frac{\partial u}{\partial n} + u &=l \text{ on } \partial \Omega_R
  \end{split}\right.
 $$ 
+****
 
 CAUTION: $$\partial \Omega_D$$, $$\partial \Omega_N$$ and $$\partial \Omega_R$$ can be empty sets. In the case $$\partial \Omega_D =\partial \Omega_R = \emptyset$$, then the solution is known up to a constant.
 
