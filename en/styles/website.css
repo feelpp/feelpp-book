@@ -4,7 +4,7 @@ div.sidebarblock div.title h2 {
     font-weight: Bold;
 }
 div.sidebarblock div.paragraph  {
-    font-weight: Italic;
+    font-style: italic;
 }
 div.sidebarblock  {
     background-color: #444444
