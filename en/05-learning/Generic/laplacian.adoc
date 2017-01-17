@@ -118,7 +118,13 @@ next we solve the algebraic problem
 .Listing: solve algebraic system
 [include:"solve"](qs_laplacian.cpp)
 
-and finally we export the results
+next we compute the $$L^2$$ norm of $$u_\delta-g$$, it could serve 
+as an $$L^2$$ error if $$g$$ was manufactured to be the exact solution of the <<laplacian>>.
+
+[include:"ug"](qs_laplacian.cpp)
+
+
+and finally we export the results, by default it is in the ensight  gold format and the files can be read with Paraview and Ensight. We save both $$u$$ and $$g$$.
 
 .Listing: export Laplacian results
 [include:"export"](qs_laplacian.cpp)
