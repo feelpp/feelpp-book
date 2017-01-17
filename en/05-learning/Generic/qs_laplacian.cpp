@@ -47,7 +47,7 @@ int main(int argc, char**argv )
     tic();
     //# mesh #
     auto mesh = loadMesh(_mesh=new Mesh<Simplex<FEELPP_DIM,1>>);
-    //# mesh #
+    //# endmesh #
     toc("loadMesh");
 
     tic();
@@ -61,7 +61,7 @@ int main(int argc, char**argv )
     auto n = expr( soption(_name="functions.c"), "c" ); // Neumann expression
     auto g = expr( soption(_name="functions.g"), "g" );
     auto v = Vh->element( g, "g" );
-    //# discr #
+    //# enddiscr #
     toc("Vh");
     //# endmarker2 #
 
@@ -73,7 +73,7 @@ int main(int argc, char**argv )
                   _expr=f*id(v));
     l+=integrate(_range=markedfaces(mesh,"Robin"), _expr=r_2*id(v));
     l+=integrate(_range=markedfaces(mesh,"Neumann"), _expr=n*id(v));
-    //# vf #
+    //# endvf #
     toc("l");
 
     tic();
@@ -87,7 +87,7 @@ int main(int argc, char**argv )
     //! impose Dirichlet boundary conditions over the entire boundary
     if ( !mesh->hasAnyMarker({"Robin", "Neumann","Dirichlet"}) )
         a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u, _expr=g );
-    //# vf #
+    //# endvf #
     toc("a");
 
     tic();
@@ -109,7 +109,7 @@ int main(int argc, char**argv )
     e->add( "u", u );
     e->add( "g", v );
     e->save();
-    //# export #
+    //# endexport #
 
     toc("Exporter");
     return 0;
