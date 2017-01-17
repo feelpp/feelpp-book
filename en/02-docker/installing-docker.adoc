@@ -65,7 +65,7 @@ Adding a user to the  `docker` group has security implications, on a shared mach
 
 == Checking Docker
 
-We now check your installation by running ``
+We now check your installation by running `docker version`
 To make sure everything is installed correctly and working, try running the docker version command. You should see something like the following on Linux or Mac.
 
 .Listing : Output of `docker version` on Linux
