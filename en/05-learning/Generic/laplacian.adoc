@@ -10,7 +10,9 @@ toc::[]
 
 We are interested in this section in the _conforming finite element approximation_ of the following problem:
 
-
+[[laplacian]]
+.Laplacian problem
+****
 Look for $$u$$ such that                              
 
 $$     
@@ -21,6 +23,7 @@ $$
 \frac{\partial u}{\partial n} + u &=l \text{ on } \partial \Omega_R
  \end{split}\right.
 $$ 
+****
 
 CAUTION: $$\partial \Omega_D$$, $$\partial \Omega_N$$ and $$\partial \Omega_R$$ can be empty sets. In the case $$\partial \Omega_D =\partial \Omega_R = \emptyset$$, then the solution is known up to a constant.
 
@@ -70,25 +73,30 @@ $$P^k_{c,\delta}$$.
 NOTE: The Dirichlet boundary conditions can be treated using different techniques and we use from now on the elimination technique.
 
 We start with the mesh
-[include:"mesh",lang="feelpp"](qs_laplacian.cpp)
+
+[include:"mesh"](qs_laplacian.cpp)
+
 
 NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
 
-[import:lang="feelpp"](qs_laplacian.cpp)
-
-
 
 Next the discretization setting
-[include:"discr",lang="feelpp"](qs_laplacian.cpp)
+
+[include:"discr"](qs_laplacian.cpp)
 
 the variational formulation
-[include:"vf",lang="feelpp"](qs_laplacian.cpp)
+
+[include:"vf"](qs_laplacian.cpp)
 
 next we solve
-[include:"solve",lang="feelpp"](qs_laplacian.cpp)
+
+.Listing: solve algebraic system
+[include:"solve"](qs_laplacian.cpp)
 
 and finally we export the results
-[include:"export",lang="feelpp"](qs_laplacian.cpp)
+
+.Listing: export Laplacian results
+[include:"export"](qs_laplacian.cpp)
 
 == Testcases
 
