@@ -1,6 +1,7 @@
 /* CSS for website */
-.code {
+code {
     background-color: white;
+    font-size: 100%;
 }
 div.sidebarblock div.content div.title {
     font-size: 110%;
