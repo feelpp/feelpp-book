@@ -111,8 +111,8 @@ We have the following correspondance:
 
 |===
 
-
 ======
+
 next we solve the algebraic problem
 
 .Listing: solve algebraic system

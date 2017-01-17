@@ -99,9 +99,9 @@ int main(int argc, char**argv )
     //! [solve]
     toc("a.solve");
 
-    
-    cout << "||u-u_h||_L2=" << normL2(_range=elements(mesh), _expr=idv(u)-g) << std::endl;
-
+    //! [ug]
+    cout << "||u_h-g||_L2=" << normL2(_range=elements(mesh), _expr=idv(u)-g) << std::endl;
+    //! [ug]
     
     tic();
     //! [export]
