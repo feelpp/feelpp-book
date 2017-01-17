@@ -33,10 +33,9 @@ Look for $$u$$ such that
 $$                                                                                                                                                                                                                                                                            
 -\Delta u = f\ \text{ in } \Omega,\quad u = g \text{ on } \partial \Omega
 $$ 
-
-
-
 ======
+
+
 == Variational formulation
 
 We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
@@ -62,6 +61,7 @@ $$
 
 NOTE: from now on, we omit $$\delta$$ to lighten the notations. Be careful that it appears both the geometrical and approximation level.
 
+[[implementation]]
 == Feel++ Implementation   
 
 In Feel{plus}{plus},  $$V_{g,\delta}$$ is not built but rather                                                                                                                 
@@ -89,6 +89,12 @@ next we solve
 
 and finally we export the results
 [include:"export",lang="feelpp"](qs_laplacian.cpp)
+
+== Testcases
+
+The <<implementation>> comes with testcases in 2D and 3D.
+
+=== Feel{plus}{plus}
 
 
 
