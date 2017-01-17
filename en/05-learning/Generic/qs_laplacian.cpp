@@ -59,7 +59,9 @@ int main(int argc, char**argv )
     auto r_2 = expr( soption(_name="functions.b"), "b" ); // Robin right hand side expression
     auto n = expr( soption(_name="functions.c"), "c" ); // Neumann expression
     auto g = expr( soption(_name="functions.g"), "g" );
+    //! [v]
     auto v = Vh->element( g, "g" );
+    //! [v]
     //! [discr]
     toc("Vh");
     

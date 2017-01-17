@@ -80,15 +80,40 @@ We start with the mesh
 NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
 
 
-Next the discretization setting
+Next the discretization setting by first defining `Vh=Pch<k>(mesh)` $$\equiv P^k_{c,h}$$, then elements of `Vh` and expressions `f`, `n` and `g` given by command line options or configuration file.
 
 [include:"discr"](qs_laplacian.cpp)
 
-the variational formulation
+[NOTE]
+======
+at the following line
+[include:"v"](qs_laplacian.cpp)
+`v` is set to the expression `g`, which means more precisely that `v` is the interpolant of `g` in `Vh`. 
+======
+
+the variational formulation is implemented below, we define the bilinear form `a` and linear form `l` and we set _strongly_ the Dirichlet boundary conditions with the keyword `on` using elimination. If we don't find  `Dirichlet`, `Neumann` or `Robin` in the list of physical markers in the mesh data structure then we impose Dirichlet boundary conditions all over the boundary.
 
 [include:"vf"](qs_laplacian.cpp)
 
-next we solve
+[NOTE]
+======
+We have the following correspondance:
+
+|===
+| Element sets  | Domain
+
+| `elements(mesh)` | $$\Omega$$ 
+| `boundaryfaces(mesh)` | $$\partial \Omega$$ 
+
+| `markfaces(mesh,"Dirichlet")`  |  $$\Gamma_D$$
+| `markfaces(mesh,"Neumann")`  |  $$\Gamma_R$$
+| `markfaces(mesh,"Robin")`  |  $$\Gamma_R$$
+
+|===
+
+
+======
+next we solve the algebraic problem
 
 .Listing: solve algebraic system
 [include:"solve"](qs_laplacian.cpp)
