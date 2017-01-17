@@ -55,7 +55,7 @@ From `doc/manual/laplacian/laplacian.cpp`
 
 From `doc/manual/stokes/stokes.cpp`
 
-//[import](../../codes/mystokes.cpp)
+[import](../../../codes/mystokes.cpp)
 
 ==  $$H^1$$ norm
 
