@@ -50,25 +50,41 @@ $$
 
 === Hyper-elasticity
 
-==== Compressible Saint-Venant-Kirchhoff
+
+==== Saint-Venant-Kirchhoff
 $$
 \boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{E}_s
 $$
 
-==== Compressible Neo-Hookean
+==== Neo-Hookean
 
 $$
 \boldsymbol{\Sigma}_s= \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1})
 $$
 
-===== Volumic
 
-[cols="1,1", options="header"]
-.Volumic law
+$$
+\boldsymbol{\Sigma}_s^ = \boldsymbol{\Sigma}_s^\text{iso} + \boldsymbol{\Sigma}_s^\text{vol}
+$$
+
+
+===== Isochoric part : $$\boldsymbol{\Sigma}_s^\text{iso}$$
+
+[cols="1,1,1", options="header"]
+.Isochoric law
 |===
-| Name | Expression 
-| classic |
-| simo1985 |
+| Name | $$\mathcal{W}_S(J_s)$$ | $$\boldsymbol{\Sigma}_s^{\text{iso}}$$
+| Neo-Hookean | $$ $$ | $$ \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1}) $$
+|===
+
+===== Volumetric part : $$\boldsymbol{\Sigma}_s^\text{vol}$$
+
+[cols="1,1,1", options="header"]
+.Volumetric law
+|===
+| Name | $$\mathcal{W}_S(J_s)$$ | $$\boldsymbol{\Sigma}_s^\text{vol}$$
+| classic | $$\frac{\kappa}{2} \left( J_s - 1 \right)^2$$ |
+| simo1985 | $$\frac{\kappa}{2} \left( ln(J_s) \right)$$ |
 |===
 
 
