@@ -1,6 +1,8 @@
 Mathematical Notations
 ======================
 
+== Geometry and Meshes
+
 * $$d=1,2,3$$ geometrical dimension
 * $$\Omega \subset \mathbb{R}^d$$ 
 * $$K$$ a cell or element of a mesh
@@ -10,3 +12,5 @@ Mathematical Notations
 * $$\varphi^K_\delta: \hat{K} \rightarrow K$$, geometrical transformation
 * $$\mathcal{T}_{\delta}$$ a triangulation, $$\mathcal{T}_\delta = \{ K\; |  \; K=\varphi^K_\delta (\hat{K}) \} $$
 * $$\Omega_h \equiv \cup_K {K}$$
+
+== Spaces
