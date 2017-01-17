@@ -50,7 +50,7 @@ Here is a list of libraries that we recommend to use jointly with Feel++.
 |===
 | Library | Minimum Version | Maximum Version  | Notes
 
-| HDF5  | --  | --  | Be careful on Debian/sid a new version of HDF5 breaks MED support
+| HDF5  | 1.8.6  | 1.8.16  | Enables high performance I/O; Enables MED Support; Be careful on Debian/sid a new version of HDF5 breaks MED support
 | PETSc | 3.2 | 3.7 | Last is best; a requirement for parallel and high performance computing
 | SLEPc | 3.2 | 3.7 | last is best; a requirement for eigenvalue problem; depends on PETSc
 | Gmsh  | 2.8.7 | 2.16 | last is best; a requirement if you want to be able to read many file formats; HDF5 version in Debian/sid currently breaks MED format support.
