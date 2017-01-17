@@ -73,21 +73,29 @@ $$P^k_{c,\delta}$$.
 NOTE: The Dirichlet boundary conditions can be treated using different techniques and we use from now on the elimination technique.
 
 We start with the mesh
+
 [include:"mesh"](qs_laplacian.cpp)
+
 
 NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
 
 
 Next the discretization setting
+
 [include:"discr"](qs_laplacian.cpp)
 
 the variational formulation
+
 [include:"vf"](qs_laplacian.cpp)
 
 next we solve
+
+.Listing: solve algebraic system
 [include:"solve"](qs_laplacian.cpp)
 
 and finally we export the results
+
+.Listing: export Laplacian results
 [include:"export"](qs_laplacian.cpp)
 
 == Testcases
