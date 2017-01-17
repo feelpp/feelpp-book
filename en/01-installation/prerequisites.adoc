@@ -25,6 +25,8 @@ Feel{plus}{plus} uses C{plus}{plus}14 compilers such as GCC6 and Clang. Currentl
 
 |===
 
+CAUTION: GCC 6.2.1 seems to be problematic on debian/testing -- the tests in the testsuite fail. -- GCC 6.3.1 or GCC 6.2.0 don't have any problems.
+
 == Required tools and libraries
 
 Other than C{plus}{plus}14 compilers, Feel{plus}{plus} requires only a few tools and libraries, namely CMake, Boost C++ libraries and an MPI implementation such as open-mpi or mpich. The table below provides information regarding the minimum and maximum version supported. A -- means it has not necessarily been tested with the latest version but we do not expect any issues. Note that for MPI, an implementation with MPI-IO support would be best.
