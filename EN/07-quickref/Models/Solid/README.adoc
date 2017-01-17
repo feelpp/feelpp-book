@@ -5,15 +5,46 @@
 
 toc::[]
 
-== Models 
+== Notations 
 
-== Compressible Saint-Venant-Kirchhoff model
+- strain tensor
+$$
+  \boldsymbol{F}_s = \boldsymbol{I} + \nabla \boldsymbol{\eta}_s
+$$
+ - Cauchy-Green tensor
+$$
+  \boldsymbol{C}_s = \boldsymbol{F}_s^{T} \boldsymbol{F}_s
+$$
+- Green-Lagrange tensor
+$$
+\begin{align}
+  \boldsymbol{E}_s &= \frac{1}{2} \left( \boldsymbol{C}_s - \boldsymbol{I} \right)  \\
+   &= \underbrace{\frac{1}{2} \left( \nabla \boldsymbol{\eta}_s + \left(\nabla \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s} 
+  + \underbrace{\frac{1}{2} \left(\left(\nabla \boldsymbol{\eta}_s\right)^{T} \nabla \boldsymbol{\eta}_s \right)}_{\boldsymbol{\gamma}_s}
+\end{align}
+$$
 
-Saint-Venant-Kirchhoff model can be used to modelize hyperelastic struture, by 
 
+== Models
+$$
+  \rho^*_{s} \frac{\partial^2 \boldsymbol{\eta}_s}{\partial t^2}
+  - \nabla \cdot \left(\boldsymbol{F}_s \boldsymbol{\Sigma}_s\right)
+  =    \boldsymbol{f}^t_s
+$$
+
+=== Linear elasticity
+
+=== Hyper-elasticity
+
+==== Compressible Saint-Venant-Kirchhoff model
 $$
 \boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{E}_s
 $$
+
+==== Neo-hookean
+
+
+
 
 
 === Variables, symbols and units
