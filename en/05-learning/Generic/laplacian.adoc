@@ -74,6 +74,10 @@ We start with the mesh
 
 NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
 
+[import:lang="feelpp"](qs_laplacian.cpp)
+
+
+
 Next the discretization setting
 [include:"discr",lang="feelpp"](qs_laplacian.cpp)
 
