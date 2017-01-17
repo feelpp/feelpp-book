@@ -24,8 +24,19 @@ $$
 
 CAUTION: $$\partial \Omega_D$$, $$\partial \Omega_N$$ and $$\partial \Omega_R$$ can be empty sets. In the case $$\partial \Omega_D =\partial \Omega_R = \emptyset$$, then the solution is known up to a constant.
 
+[NOTE]
+======
+In the implementation presented later, $$\partial \Omega_D =\partial \Omega_N = \partial \Omega_R = \emptyset$$, then we set Dirichlet boundary conditions all over the boundary. The problem then reads like a standard laplacian with inhomogeneous Dirichlet boundary conditions:
+
+Look for $$u$$ such that                              
+
+$$                                                                                                                                                                                                                                                                            
+-\Delta u = f\ \text{ in } \Omega,\quad u = g \text{ on } \partial \Omega
+$$ 
 
 
+
+======
 == Variational formulation
 
 We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
