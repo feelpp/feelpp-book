@@ -80,7 +80,7 @@ Feel++ images(components) are defined as layers in the FCS in the table below
 | `feelpp-env` | Execution and Programming environment | <OS> 
 | `feelpp-libs`  | Feel++ libraries and tools | `feelpp-env`
 | `feelpp-base` | Feel++ base applications | `feelpp-libs` 
-| `feelpp-apps` | Feel++ toolbox applications  | `feelpp-base`
+| `feelpp-toolboxes` | Feel++ toolboxes   | `feelpp-toolboxes`
 
 |===
 
@@ -159,13 +159,13 @@ $ docker run feelpp/feelpp-libs
 $ docker run feelpp/feelpp-base 
 ----
 
-==== feelpp-apps
+==== feelpp-toolboxes
 
-`feelpp-apps` builds from `feelpp-base` and provides
+`feelpp-toolboxes` builds from `feelpp-base` and provides
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-apps 
+$ docker run feelpp/feelpp-toolboxes 
 ----
 
 
