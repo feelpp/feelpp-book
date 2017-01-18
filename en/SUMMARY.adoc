@@ -38,8 +38,22 @@
 . link:05-learning/README.adoc[Learning By Example]
 .. link:05-learning/Generic/README.adoc[Generic PDEs]
 ... link:05-learning/Generic/laplacian.adoc[Laplacian]
+
 .. link:05-learning/CFD/README.adoc[CFD]
 ... link:05-learning/CFD/Turek-Hron/README.adoc[Turek-Hron]
+
+.. link:05-learning/CSM/readme.adoc[CSM]
+... link:05-learning/CSM/Turek-Hron/readme.adoc[Turek Hron CSM]
+... link:05-learning/CSM/Solenoid/README.adoc[Solenoid]
+... link:05-learning/CSM/NAFEMS-LE1/README.adoc[NAFEMS-LE1]
+... link:05-learning/CSM/NAFEMS-LE10/README.adoc[NAFEMS-LE10]
+
+.. link:05-learning/FSI/readme.adoc[FSI]
+... link:05-learning/FSI/2DElasticTube/readme.adoc[2D FSI elastic tube]
+... link:05-learning/FSI/3DElasticTube/readme.adoc[3D FSI elastic tube]
+... link:05-learning/FSI/Turek-Hron/readme.adoc[Turek Hron FSI]
+... link:05-learning/FSI/Lid-DrivenCavity/readme.adoc[Lid-driven Cavity Flow]
+
 .. link:05-learning/Optimization/README.adoc[Optimization]
 ... link:05-learning/Optimization/laplacian_nlopt.adoc[laplacian_nlopt]
 . link:06-applications/readme.adoc[Feel++ Applications]
