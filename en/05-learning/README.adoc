@@ -1,6 +1,13 @@
 Learning by Example
 ===================
 
+== Direct Problems
 
-- link:CFD/README.adoc[CFD]
+- link:Generic/README.adoc[Generic Partial Differential Equations]
+- link:CFD/README.adoc[Computational Fluid Dynamic]
+- link:CSM/README.adoc[Computational Solid Mechanic]
+- link:FSI/README.adoc[Fluid-Structure Interaction]
+
+== Inverse Problems
+
 - link:Optimization/README.adoc[Optimization]
