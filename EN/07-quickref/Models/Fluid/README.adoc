@@ -76,8 +76,7 @@ In next table, we find the correspondance between the mathematical names and the
 
 |===
 
-A `Materials` section is introduced
-Next we define a `Materials` section which contains a section named after the mesh physical marker used to mark the fluid domain. We suppose now that this marker is `water` and use it to name the section that describe the fluid physical parameters. The code below describes the section.
+A `Materials` section is introduced in json file in order to configure the fluid properties. For each mesh marker, we can defined the material properties associated.
 
 [source,json]
 .Listing : Materials section
