@@ -5,9 +5,23 @@
 
 toc::[]
 
-== Models 
+== Notations
 
-== Incompressible Navier-Stokes model
+|===
+| Notation | Quantity | Unit 
+|$$\rho_f$$|fluid density|$$kg/m^3$$
+|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
+|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
+|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
+|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
+|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
+|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
+|$$\nu$$|kinematic viscosity|$$m^2/s$$
+|$$L$$| characteristic length|$$m$$
+|===
+
+
+== Models 
 
 Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
 
@@ -37,51 +51,20 @@ $$
 D(\boldsymbol{u}_{f}) = \frac{1}{2} (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
 $$
 
-|===
-| Notation | Quantity | Unit 
-|$$\rho_f$$|fluid density|$$kg/m^3$$
-|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
-|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
-|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
-|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
-|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
-|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
-|$$\nu$$|kinematic viscosity|$$m^2/s$$
-|$$L$$| characteristic length|$$m$$
-|===
+An alternative model is the Stokes model. It is valid in the case of small Reynolds number. It correspond to same formulation that Navier-Equation but without the convective term $$\left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}$$ .
 
-== JSON file
-
-The JSON file contains the description of the fluid model. The next sub-sections describe the different entries in the file.
-
-We start by given a name to our model
-
+The fluid mechanics model (`Navier-Stokes` or `Stokes`) can be selected in json file :
 [source,json]
-.Naming the model
+.Listing : select fluid model
 -----
-"Name":"Fluid flow around a cylinder",
-"ShortName":"flowcyl"
+"Model":"Navier-Stokes"
 -----
 
-=== Supported Fluid Model
-
-We start with the fluid model  by setting the fluid model with the `model`  option. Two are supported at the moment. 
-
-[cols="1,1", options="header"]
-.Table of Models for `model` option
-|===
-| Model | Name 
-| Navier-Stokes|`Navier-Stokes`
-| Stokes|`Stokes`
-|===
+== Materials
 
 
-=== Materials
-
-
-The next step is to define the fluid material by setting its properties namely the density and viscosity.
-
-We first describe the correspondance between the mathematical names and the json names.
+The next step is to define the fluid material by setting its properties namely the density $$\rho_f$$ and viscosity $$\mu_f$$.
+In next table, we find the correspondance between the mathematical names and the json names.
 
 [cols="1,1", options="header"]
 .Correspondance between fluid parameters and symbols in JSon files
@@ -93,6 +76,7 @@ We first describe the correspondance between the mathematical names and the json
 
 |===
 
+A `Materials` section is introduced
 Next we define a `Materials` section which contains a section named after the mesh physical marker used to mark the fluid domain. We suppose now that this marker is `water` and use it to name the section that describe the fluid physical parameters. The code below describes the section.
 
 [source,json]
@@ -100,7 +84,7 @@ Next we define a `Materials` section which contains a section named after the me
 ----
 "Materials":
 {
-    "water":
+    "<marker>"
     {
         "name":"water",
         "rho":"1.0e3",
@@ -108,7 +92,7 @@ Next we define a `Materials` section which contains a section named after the me
     }
 }
 ----
-==== Generalised Newtonian fluid
+=== Generalised Newtonian fluid
 A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
 
 $$
@@ -243,12 +227,12 @@ dimensionless
 
 
 
-=== Boundary Conditions
+== Boundary Conditions
 We start by a listing of boundary conditions supported in fluid mechanics model.
 
 
 
-==== Dirichlet on velocity
+=== Dirichlet on velocity
 A Dirichlet condition on velocity field correspond to impose : 
 $$
 \boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma 
@@ -262,7 +246,7 @@ $$
 Several methods are available to ensure to boundary condition :
 
 - elimination
-- weak
+- nitsche
 - Lagrange multiplier
 
 ==== Dirichlet on pressure
@@ -274,7 +258,7 @@ p &=& g \\
 \end{eqnarray}
 $$
 
-==== Neumann
+=== Neumann
 [cols="1,1", options="header"]
 .Neumann options
 |===
@@ -291,12 +275,12 @@ $$
 
 
 
-==== Slip
+=== Slip
 $$
 \boldsymbol{u}_f \cdot \boldsymbol{n} = 0
 $$
 
-==== Inlet flow
+=== Inlet flow
 The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh.
 $$
 \boldsymbol{u}_f = - g \ \boldsymbol{n} \quad \text{ on } \Gamma
@@ -337,7 +321,7 @@ where $$\beta$$ is a constant determinated by adding a constraint on the inflow 
 |===
 
 
-==== Outlet flow
+=== Outlet flow
 [cols="1,1,1,1", options="header"]
 .Outlet flow options
 |===
@@ -351,12 +335,12 @@ where $$\beta$$ is a constant determinated by adding a constraint on the inflow 
 
 
 
-===== Free outflow
+==== Free outflow
 $$
 \boldsymbol{\sigma}_{f} \boldsymbol{n} = \boldsymbol{0}
 $$
 
-===== Windkessel model
+==== Windkessel model
 We use a 3-element Windkessel model for modeling an outflow boundary condition. We define $$P_l$$ a pressure and $$Q_l$$ the flow rate. The outflow model is discribed by the following system of differential equations :
 
 
@@ -394,7 +378,7 @@ $$
 |===
 
 
-===== Implement boundary conditions in json file
+==== Implement boundary conditions in json file
 
 Boundary conditions are set in the json files in the category `BoundaryConditions`. Then `<field>` and `<bc_type>` are chosen from type of boundary condition. The parameter `<marker>` corresponds to mesh marker where the boundary condition is applied.
 And finally, we define inside some specific options.
@@ -424,7 +408,7 @@ And finally, we define inside some specific options.
 
 
 
-==== Options summary
+=== Options summary
 
 
 [cols="1,1,1,1", options="header"]
@@ -540,9 +524,9 @@ alemesh_bc
 
 |===
 
-=== Volumic forces
+== Volumic forces
 
-=== Post Process
+== Post Process
 
 [source,json]
 ----
