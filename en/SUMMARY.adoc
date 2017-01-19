@@ -27,8 +27,8 @@
 . link:05-learning/README.adoc[Learning By Example]
 .. link:05-learning/Generic/README.adoc[Generic PDEs]
 ... link:05-learning/Generic/laplacian.adoc[Laplacian]
-... link:05-learning/GenericLevelSet/readme.adoc[LevelSet]
-.... link:05-learning/GenericLevelSet/SlottedDisk/readme.adoc[SlottedDisk]
+... link:05-learning/Generic/LevelSet/readme.adoc[LevelSet]
+.... link:05-learning/Generic/LevelSet/SlottedDisk/readme.adoc[SlottedDisk]
 
 
 .. link:05-learning/CFD/README.adoc[CFD]
