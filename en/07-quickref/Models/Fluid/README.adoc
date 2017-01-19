@@ -578,6 +578,20 @@ The fields on which one can do measures:
 - Pressure
 - VelocityDivergence
 
+[source,json]
+----
+"Functions":
+{
+    "toto":{ "expr":"x*y:x:y"},
+    "toto2":{ "expr":"0.5*ubar*x*y:x:y:ubar"},        
+    "totoV":{ "expr":"{2*x,y}:x:y"}
+},
+"PostProcess":
+{
+   "Fields":["velocity","pressure","pid","totoV","toto","toto2"],
+}  
+----
+
 == Action
 
 Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
