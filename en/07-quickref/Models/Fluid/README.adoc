@@ -5,9 +5,23 @@
 
 toc::[]
 
-== Models 
+== Notations
 
-== Incompressible Navier-Stokes model
+|===
+| Notation | Quantity | Unit 
+|$$\rho_f$$|fluid density|$$kg/m^3$$
+|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
+|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
+|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
+|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
+|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
+|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
+|$$\nu$$|kinematic viscosity|$$m^2/s$$
+|$$L$$| characteristic length|$$m$$
+|===
+
+
+== Models 
 
 Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
 
@@ -37,51 +51,20 @@ $$
 D(\boldsymbol{u}_{f}) = \frac{1}{2} (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
 $$
 
-|===
-| Notation | Quantity | Unit 
-|$$\rho_f$$|fluid density|$$kg/m^3$$
-|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
-|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
-|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
-|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
-|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
-|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
-|$$\nu$$|kinematic viscosity|$$m^2/s$$
-|$$L$$| characteristic length|$$m$$
-|===
+An alternative model is the Stokes model. It is valid in the case of small Reynolds number. It correspond to same formulation that Navier-Equation but without the convective term $$\left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}$$ .
 
-== JSON file
-
-The JSON file contains the description of the fluid model. The next sub-sections describe the different entries in the file.
-
-We start by given a name to our model
-
+The fluid mechanics model (`Navier-Stokes` or `Stokes`) can be selected in json file :
 [source,json]
-.Naming the model
+.Listing : select fluid model
 -----
-"Name":"Fluid flow around a cylinder",
-"ShortName":"flowcyl"
+"Model":"Navier-Stokes"
 -----
 
-=== Supported Fluid Model
-
-We start with the fluid model  by setting the fluid model with the `model`  option. Two are supported at the moment. 
-
-[cols="1,1", options="header"]
-.Table of Models for `model` option
-|===
-| Model | Name 
-| Navier-Stokes|`Navier-Stokes`
-| Stokes|`Stokes`
-|===
+== Materials
 
 
-=== Materials
-
-
-The next step is to define the fluid material by setting its properties namely the density and viscosity.
-
-We first describe the correspondance between the mathematical names and the json names.
+The next step is to define the fluid material by setting its properties namely the density $$\rho_f$$ and viscosity $$\mu_f$$.
+In next table, we find the correspondance between the mathematical names and the json names.
 
 [cols="1,1", options="header"]
 .Correspondance between fluid parameters and symbols in JSon files
@@ -93,14 +76,14 @@ We first describe the correspondance between the mathematical names and the json
 
 |===
 
-Next we define a `Materials` section which contains a section named after the mesh physical marker used to mark the fluid domain. We suppose now that this marker is `water` and use it to name the section that describe the fluid physical parameters. The code below describes the section.
+A `Materials` section is introduced in json file in order to configure the fluid properties. For each mesh marker, we can defined the material properties associated.
 
 [source,json]
 .Listing : Materials section
 ----
 "Materials":
 {
-    "water":
+    "<marker>"
     {
         "name":"water",
         "rho":"1.0e3",
@@ -108,7 +91,7 @@ Next we define a `Materials` section which contains a section named after the me
     }
 }
 ----
-==== Generalised Newtonian fluid
+=== Generalised Newtonian fluid
 A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
 
 $$
@@ -243,44 +226,306 @@ dimensionless
 
 
 
-=== Boundary Conditions
+== Boundary Conditions
+We start by a listing of boundary conditions supported in fluid mechanics model.
 
-Boundary conditions and volumic forces are set in the json files
+
+
+=== Dirichlet on velocity
+A Dirichlet condition on velocity field correspond to impose : 
+$$
+\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma 
+$$
+or only a component of vector $$\boldsymbol{u}_f =(u_f^1,u_f^2 ,u_f^3 )$$
+
+$$
+u_f^i = g \quad \text{ on } \Gamma 
+$$
+
+Several methods are available to ensure to boundary condition :
+
+- elimination
+- nitsche
+- Lagrange multiplier
+
+==== Dirichlet on pressure
+
+$$
+\begin{eqnarray}
+p &=& g \\
+\boldsymbol{u}_f \times \boldsymbol{n} &=& 0
+\end{eqnarray}
+$$
+
+=== Neumann
+[cols="1,1", options="header"]
+.Neumann options
+|===
+| Name  | Expression
+| Neumann_scalar | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+| Neumann_vectorial | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  =   \boldsymbol{g} $$
+| Neumann_tensor2 | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+|===
+
+
+
+
+
+
+
+
+=== Slip
+$$
+\boldsymbol{u}_f \cdot \boldsymbol{n} = 0
+$$
+
+=== Inlet flow
+The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh.
+$$
+\boldsymbol{u}_f = - g \ \boldsymbol{n} \quad \text{ on } \Gamma
+$$
+The function $$g$$ is computed from flow velocity profiles :
+
+- Constant profile
+$$
+\text{Find } g \in C^0(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+g &=& \beta \quad &\text{ in } \Gamma \setminus \partial\Gamma
+\\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+- Parabolic profile
+$$
+\text{Find } g \in H^2(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+\Delta g &=& \beta \quad &\text{ in } \Gamma \\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+
+where $$\beta$$ is a constant determinated by adding a constraint on the inflow :
+
+- velocity_max : $$\max( g ) = \alpha $$
+- flow_rate : $$\int_\Gamma ( g \ \boldsymbol{n} ) \cdot \boldsymbol{n} = \alpha$$
+
+
+[cols="1,1,1,1", options="header"]
+.Inlet flow options
+|===
+| Option | Value | Default value |Description
+| shape | constant,parabolic |  | select a shape profile for inflow
+|constraint | velocity_max,flow_rate | | give a constraint wich controle velocity
+| expr | string | | symbolic expression of constraint value
+|===
+
+
+=== Outlet flow
+[cols="1,1,1,1", options="header"]
+.Outlet flow options
+|===
+| Option | Value | Default value |Description
+| model | free,windkessel | free | select an outlet modeling
+|===
+
+
+
+
+
+
+
+==== Free outflow
+$$
+\boldsymbol{\sigma}_{f} \boldsymbol{n} = \boldsymbol{0}
+$$
+
+==== Windkessel model
+We use a 3-element Windkessel model for modeling an outflow boundary condition. We define $$P_l$$ a pressure and $$Q_l$$ the flow rate. The outflow model is discribed by the following system of differential equations :
+
+
+$$
+\begin{equation}
+\left\{
+\begin{aligned}
+  C_{d,l} \frac{\partial \pi_l}{\partial t} + \frac{\pi_l}{R_{d,l}} = Q_l \\
+  P_l = R_{p,l} Q_l + \pi_l
+\end{aligned}
+\right.
+\end{equation}
+$$
+
+Coefficients $$R_{p,l}$$ and $$R_{d,l}$$ représentent respectively the proximal and distale resistance. The constant $$C_{d,l}$$ is the capacitance of blood vessel. The unknowns $$P_l$$ and $$\pi_l$$ are called proximal pressure and distal pressure.
+Then we define the coupling between this outflow model and the fluid model by this two relationships :
+
+$$
+\begin{align}
+  Q_l &= \int_{\Gamma_l} \boldsymbol{u}_f \cdot \boldsymbol{n}_f  \\
+  \boldsymbol{\sigma}_f \boldsymbol{n}_f &= -P_l \boldsymbol{n}_f 
+\end{align}
+$$
+
+
+
+[cols="1,1,1", options="header"]
+.Windkessel options
+|===
+| Option | Value | Description
+| windkessel_coupling | explicit, implicit |  coupling type with the Navier-Stokes equation
+| windkessel_Rd | real | distal resistance
+| windkessel_Rp | real | proximal resistance
+| windkessel_Cd | real | capacitance
+|===
+
+
+==== Implement boundary conditions in json file
+
+Boundary conditions are set in the json files in the category `BoundaryConditions`. Then `<field>` and `<bc_type>` are chosen from type of boundary condition. The parameter `<marker>` corresponds to mesh marker where the boundary condition is applied.
+And finally, we define inside some specific options.
 [source,json]
-.Example for boundary conditions
+.Listing : boundary conditions in json
 ----
 "BoundaryConditions":
 {
-    "field":
+    "<field>":
     {
-        "<condition type>":
+        "<bc_type>":
         {
-            "marker":
+            "<marker>":
             {
-                "expr": "value"
+                "<option1>":"<value1>",
+                "<option2>":"<value2>",
+                ...
             }
         }
     }
 }
 ----
-where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
-The condition types are explain in the two following tables.
 
-[cols="1,2,1", options="header"]
+
+
+
+
+
+
+=== Options summary
+
+
+[cols="1,1,1,1", options="header"]
 .Boundary conditions
 |===
-| Name | Options | Type 
+| Field | Name | Option | Entity
 
-| Dirichlet 
-| faces, edges and component-wise
-| `Dirichlet`
-| Neumann 
-| scalar, vectorial
-| `Neumann_scalar` or `Neumann_vectorial`
+| velocity
+| Dirichlet
+| expr
+
+ type
+
+ number
+ 
+ alemesh_bc
+  
+| faces, edges, points
+| velocity_x
+
+velocity_y
+
+velocity_z
+
+
+| Dirichlet
+| expr
+
+ type
+
+  number
+  
+  alemesh_bc
+  
+ | faces, edges, points
+
+| velocity
+
+| Neumann_scalar
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_vectorial
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_tensor2
+| expr
+
+number
+
+alemesh_bc
+| faces
+
+| velocity
+| slip
+| alemesh_bc
+| faces
+
+| pressure
+| Dirichlet
+| expr
+
+number
+
+alemesh_bc
+
+|faces
+
+| fluid
+| outlet
+| number
+
+alemesh_bc
+
+model
+
+windkessel_coupling
+
+windkessel_Rd
+
+windkessel_Rp
+
+windkessel_Cd
+
+| faces
+
+| fluid
+
+| inlet
+
+| expr
+
+shape
+
+constraint
+
+number
+
+alemesh_bc
+
+| faces
+
 |===
 
+== Volumic forces
 
-=== Post Process
+== Post Process
 
 [source,json]
 ----
@@ -303,18 +548,16 @@ The condition types are explain in the two following tables.
 
 The fields allowed to be exported in the `Fields` section are:
 
-- displacement
 - velocity
-- acceleration
-- stress or normal-stress
 - pressure
-- material-properties
+- displacement
+- vorticity
+- stress or normal-stress
+- wall-shear-stress
+- density
+- viscosity
 - pid
-- fsi
-- Von-Mises
-- Tresca
-- principal-stresses
-- all
+- alemesh
 
 .Measure type and range type associated
 |===
@@ -330,15 +573,10 @@ The fields allowed to be exported in the `Fields` section are:
 
 The fields on which one can do measures:
 
-- volume_variation
-- displacement
-- velocity
-- acceleration
-- pressure
-- principal-stress-0
-- principal-stress-1
-- principal-stress-2
-- sigma_xx, sigma_xy, ...
+- Force
+- FlowRate
+- Pressure
+- VelocityDivergence
 
 == Action
 

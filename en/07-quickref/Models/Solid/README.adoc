@@ -5,41 +5,105 @@
 
 toc::[]
 
-== Models 
+== Notations 
 
-== Compressible Saint-Venant-Kirchhoff model
+- strain tensor
+$$
+  \boldsymbol{F}_s = \boldsymbol{I} + \nabla \boldsymbol{\eta}_s
+$$
+ - Cauchy-Green tensor
+$$
+  \boldsymbol{C}_s = \boldsymbol{F}_s^{T} \boldsymbol{F}_s
+$$
+- Green-Lagrange tensor
+$$
+\begin{align}
+  \boldsymbol{E}_s &= \frac{1}{2} \left( \boldsymbol{C}_s - \boldsymbol{I} \right)  \\
+   &= \underbrace{\frac{1}{2} \left( \nabla \boldsymbol{\eta}_s + \left(\nabla \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s} 
+  + \underbrace{\frac{1}{2} \left(\left(\nabla \boldsymbol{\eta}_s\right)^{T} \nabla \boldsymbol{\eta}_s \right)}_{\boldsymbol{\gamma}_s}
+\end{align}
+$$
 
-Saint-Venant-Kirchhoff model can be used to modelize hyperelastic struture, by 
+|===
+| Notation | Quantity | Unit 
+|$$\rho_s$$|density|$$kg/m^3$$
+|$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
+|$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
+|$$E_s$$|Young modulus|$$kg/(m\cdot s^2)$$
+|$$\nu_s$$|Poisson's ratio|dimensionless
 
+
+|===
+
+
+
+
+== Models
+$$
+  \rho^*_{s} \frac{\partial^2 \boldsymbol{\eta}_s}{\partial t^2}
+  - \nabla \cdot \left(\boldsymbol{F}_s \boldsymbol{\Sigma}_s\right)
+  =    \boldsymbol{f}^t_s
+$$
+
+=== Linear elasticity
+$$
+\begin{align}
+\boldsymbol{F}_s &= \text{Identity} \\
+\boldsymbol{\Sigma}_s &=\lambda_s tr( \boldsymbol{\epsilon}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{\epsilon}_s
+\end{align}
+$$
+
+=== Hyper-elasticity
+
+
+==== Saint-Venant-Kirchhoff
 $$
 \boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{E}_s
 $$
 
+==== Neo-Hookean
 
-=== Variables, symbols and units
+$$
+\boldsymbol{\Sigma}_s= \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1})
+$$
+
+
+$$
+\boldsymbol{\Sigma}_s^ = \boldsymbol{\Sigma}_s^\text{iso} + \boldsymbol{\Sigma}_s^\text{vol}
+$$
+
+
+===== Isochoric part : $$\boldsymbol{\Sigma}_s^\text{iso}$$
+
+[cols="1,1,1", options="header"]
+.Isochoric law
 |===
-| Notation | Quantity | Unit 
-|$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
-|$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
-|$$\boldsymbol{E}_s$$|Green Lagrangian tensor|
+| Name | $$\mathcal{W}_S(J_s)$$ | $$\boldsymbol{\Sigma}_s^{\text{iso}}$$
+| Neo-Hookean | $$ $$ | $$ \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1}) $$
+|===
+
+===== Volumetric part : $$\boldsymbol{\Sigma}_s^\text{vol}$$
+
+[cols="1,1,1", options="header"]
+.Volumetric law
+|===
+| Name | $$\mathcal{W}_S(J_s)$$ | $$\boldsymbol{\Sigma}_s^\text{vol}$$
+| classic | $$\frac{\kappa}{2} \left( J_s - 1 \right)^2$$ |
+| simo1985 | $$\frac{\kappa}{2} \left( ln(J_s) \right)$$ |
 |===
 
 
-== Json file
 
-Let's describe how the json file is build.
 
-=== Properties
-
-* Linear 
-* Saint-Venant-Kirchhoff
-* NeoHookean
-
-When materials are closed to incompressibility formulation in displacement/pressure are available.
-
+The solid mechanics model can be selected in json file :
+[source,json]
+.Listing : select solid model
+-----
+"Model":"Hyper-Elasticity"
+-----
 .Table of Models for `model` option
 |===
-| Model | Name 
+| Model | Name in json 
 
 | Linear Elasticity 
 | `Elasticity`
@@ -49,7 +113,12 @@ When materials are closed to incompressibility formulation in displacement/press
 
 |===
 
-.Table of Models for `material_law` in hyper elasticity
+
+
+When materials are closed to incompressibility formulation in displacement/pressure are available.
+
+
+.Table of Models for `material_law` with hyper elasticity model
 |===
 | Model | Name   | Volumic law
 
@@ -72,7 +141,7 @@ option: `mechanicalproperties.compressible.volumic_law`
 ----
 "Materials":
 {
-    "marker":
+    "<marker>":
     {
         "name":"solid",
         "E":"1.4e6",
@@ -84,28 +153,15 @@ option: `mechanicalproperties.compressible.volumic_law`
 
 where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
 
-=== Boundary Conditions
+== Boundary Conditions
 
-Boundary conditions and volumic forces are set in the json files
-[source,json]
-.Example for boundary conditions
-----
-"BoundaryConditions":
-{
-    "field":
-    {
-        "<condition type>":
-        {
-            "marker":
-            {
-                "expr": "value"
-            }
-        }
-    }
-}
-----
-where all component of vectorial field can be access with `<field>_x` for the $$x$$ component where `<field>` is the name of the vectorial field. +
-The condition types are explain in the two following tables.
+=== Dirichlet
+
+=== Neumann
+
+=== Robin
+
+
 
 .Boundary conditions
 |===
@@ -139,7 +195,7 @@ The condition types are explain in the two following tables.
 
 |===
 
-=== Post Process
+== Post Process
 
 [source,json]
 ----
