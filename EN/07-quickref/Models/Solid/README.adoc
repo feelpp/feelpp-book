@@ -90,25 +90,15 @@ $$
 
 
 
-
-
-
-
-== Json file
-
-Let's describe how the json file is build.
-
-=== Properties
-
-* Linear 
-* Saint-Venant-Kirchhoff
-* NeoHookean
-
-When materials are closed to incompressibility formulation in displacement/pressure are available.
-
+The solid mechanics model can be selected in json file :
+[source,json]
+.Listing : select solid model
+-----
+"Model":"Hyper-Elasticity"
+-----
 .Table of Models for `model` option
 |===
-| Model | Name 
+| Model | Name in json 
 
 | Linear Elasticity 
 | `Elasticity`
@@ -118,7 +108,12 @@ When materials are closed to incompressibility formulation in displacement/press
 
 |===
 
-.Table of Models for `material_law` in hyper elasticity
+
+
+When materials are closed to incompressibility formulation in displacement/pressure are available.
+
+
+.Table of Models for `material_law` with hyper elasticity model
 |===
 | Model | Name   | Volumic law
 
@@ -153,13 +148,13 @@ option: `mechanicalproperties.compressible.volumic_law`
 
 where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
 
-=== Boundary Conditions
+== Boundary Conditions
 
-==== Dirichlet
+=== Dirichlet
 
-==== Neumann
+=== Neumann
 
-==== Robin
+=== Robin
 
 
 
@@ -195,7 +190,7 @@ where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( d
 
 |===
 
-=== Post Process
+== Post Process
 
 [source,json]
 ----
