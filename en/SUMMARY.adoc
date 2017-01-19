@@ -23,6 +23,7 @@
 
 == Solving PDEs using Feel++ Toolboxes
 . link:03-modeling/README.adoc[Modeling with Feel++]
+.. link:07-quickref/Models/Fluid/README.adoc[Computation Fluid Mechanics]
 . link:05-learning/README.adoc[Learning By Example]
 .. link:05-learning/Generic/README.adoc[Generic PDEs]
 ... link:05-learning/Generic/laplacian.adoc[Laplacian]
@@ -94,7 +95,6 @@
 ... link:07-quickref/Keywords/keywords-operators.adoc[Operations and Operators]
 .. link:07-quickref/fileformats.adoc[File Formats]
 .. link:07-quickref/Models/README.adoc[Models]
-... link:07-quickref/Models/Fluid/README.adoc[Computation Fluid Mechanics]
 ... link:07-quickref/Models/Solid/README.adoc[Computation Solid Mechanics]
 ... link:07-quickref/Models/FluidStructure/README.adoc[Fluid Structure Interaction]
 ... link:07-quickref/Models/Advection/README.adoc[Advection Model]
