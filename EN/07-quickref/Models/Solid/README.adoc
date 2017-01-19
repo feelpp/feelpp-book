@@ -26,8 +26,13 @@ $$
 
 |===
 | Notation | Quantity | Unit 
+|$$\rho_s$$|density|$$kg/m^3$$
 |$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
 |$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
+|$$E_s$$|Young modulus|$$kg/(m\cdot s^2)$$
+|$$\nu_s$$|Poisson's ratio|dimensionless
+
+
 |===
 
 
@@ -136,7 +141,7 @@ option: `mechanicalproperties.compressible.volumic_law`
 ----
 "Materials":
 {
-    "marker":
+    "<marker>":
     {
         "name":"solid",
         "E":"1.4e6",
