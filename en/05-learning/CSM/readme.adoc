@@ -29,7 +29,7 @@ $$|$$\boldsymbol{F}_s$$|deformation gradient|
 
 
 
-{% include "git+https://github.com/LANTZT/feelpp-book.git/QuickReference/Models/Solid/SaintVenantKirchhoff.adoc" %}
+{% include "git+https://github.com/feelpp/feelpp-book.git/EN/07-quickref/Models/Solid/SaintVenantKirchhoff.adoc" %}
 
 == Lamé coefficients 
 
