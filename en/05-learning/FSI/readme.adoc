@@ -16,7 +16,7 @@ image::FSIModel.png[caption="Figure 1 : ", title="FSI case example", alt="FSI", 
 
 The solution of this model are $$(\mathcal{A}^t, \boldsymbol{u}_f, p_f, \boldsymbol{\eta}_s)$$.
 
-{% include "git+https://github.com/LANTZT/feelpp-book.git/QuickReference/Models/FluidStructure/FSIModel.adoc" %}
+{% include "git+https://github.com/feelpp/feelpp-book.git/EN/07-quickref/Models/FluidStructure/FSIModel.adoc" %}
 
 
 == ALE
