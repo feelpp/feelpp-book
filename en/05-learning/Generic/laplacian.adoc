@@ -158,6 +158,7 @@ mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file circle.cfg
 
 This give us some data such as solution of our problem or the mesh used in the application.
 
+[cols="^,^"]
 |========
 |image:../../../figures/pngs/Laplacian/TestCases/Circle/ucircle.png[]|image:../../../figures/pngs/Laplacian/TestCases/Circle/meshCircle.png[]
 |Solution $$u_\delta$$| Built-up mesh
@@ -180,6 +181,7 @@ mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file feelpp2d.cfg
 
 we obtain the result $$u_\delta$$ and also the mesh 
 
+[cols="^,^"]
 |======
 |image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/ufeelpp2d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/meshfeelpp2d.png[]
 |Solution $$u_\delta$$| Built-up mesh
@@ -197,6 +199,7 @@ mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_3d --config-file feelpp3d.cfg
 
 When it's finish, we can extract some informations 
 
+[cols="^,^"]
 |======
 |image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/ufeelpp3d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/meshfeelpp3d.png[]
 |Solution $$u_\delta$$| Built-up mesh
