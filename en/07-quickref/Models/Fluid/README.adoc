@@ -546,6 +546,7 @@ alemesh_bc
 }
 ----
 
+=== Exports for visualisation
 The fields allowed to be exported in the `Fields` section are:
 
 - velocity
@@ -558,6 +559,42 @@ The fields allowed to be exported in the `Fields` section are:
 - viscosity
 - pid
 - alemesh
+
+=== Measures
+
+- Points
+- Force
+- FlowRate
+- Pressure
+- VelocityDivergence
+
+
+==== Points
+Compute field at point
+
+[source,json]
+----
+"Points":
+{
+  "pointA":
+  {
+    "coord":"{0.6,0.2,0}",
+    "fields":"pressure"
+  },
+ "pointB":
+  {
+    "coord":"{0.15,0.2,0}",
+    "fields":"pressure"
+  }
+}
+----
+
+
+==== Flow rate
+
+==== Force
+compute lift and drag
+
 
 .Measure type and range type associated
 |===
