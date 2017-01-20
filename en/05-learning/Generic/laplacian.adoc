@@ -161,7 +161,7 @@ This give us some data such as solution of our problem or the mesh used in the a
 [cols="^,^"]
 |========
 |image:../../../figures/pngs/Laplacian/TestCases/Circle/ucircle.png[]|image:../../../figures/pngs/Laplacian/TestCases/Circle/meshCircle.png[]
-|Solution $$u_\delta$$| Built-up mesh
+|Solution $$u_\delta$$| Used mesh
 |========
 
 
@@ -184,7 +184,7 @@ we obtain the result $$u_\delta$$ and also the mesh
 [cols="^,^"]
 |======
 |image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/ufeelpp2d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/meshfeelpp2d.png[]
-|Solution $$u_\delta$$| Built-up mesh
+|Solution $$u_\delta$$| Used mesh
 |======
 
 ==== feelpp3d
@@ -202,6 +202,6 @@ When it's finish, we can extract some informations
 [cols="^,^"]
 |======
 |image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/ufeelpp3d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/meshfeelpp3d.png[]
-|Solution $$u_\delta$$| Built-up mesh
+|Solution $$u_\delta$$| Used mesh
 |======
 
