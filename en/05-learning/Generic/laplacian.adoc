@@ -148,10 +148,57 @@ The <<implementation>> comes with testcases in 2D and 3D.
 
 `circle` is a 2D testcase where $$\Omega$$ is a disk whose boundary has been split such that $$\partial \Omega=\partial \Omega_D \cup \partial \Omega_N \cup \partial \Omega_R$$.
 
+Here are some results we can observe after use the following command
+
+[source,bash]
+----
+cd Testcases/quickstart/circle
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file circle.cfg
+----
+
+This give us some data such as solution of our problem or the mesh used in the application.
+
+|========
+|image:figures/pngs/Laplacian/TestCases/Circle/ucircle.png[]|image:figures/pngs/Laplacian/TestCases/Circle/meshcircle.png[]
+|Solution $$u_\delta$$| Built-up mesh
+|========
+
 
 === feelpp2d and feelpp3d
 
 This testcase solves the <<laplacian>> in $$\Omega$$ an quadrangle or hexadra containing the letters of Feel{plus}{plus}
 
+==== feelpp2d
 
+After running the following command
+
+[source,bash]
+----
+cd Testcases/quickstart/feelpp2d
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file feelpp2d.cfg
+----
+
+we obtain the result $$u_\delta$$ and also the mesh 
+
+|======
+|image:figures/pngs/Laplacian/TestCases/Feelpp2d/ufeelpp2d.png[]|image:figures/pngs/Laplacian/TestCases/Feelpp2d/meshfeelpp2d.png[]
+|Solution $$u_\delta$$| Built-up mesh
+|=====
+
+==== feelpp3d
+
+We can launch this application with the current line
+
+[source,bash]
+----
+cd Testcases/quickstart/feelpp3d
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_3d --config-file feelpp3d.cfg
+----
+
+When it's finish, we can extract some informations 
+
+|======
+|image:figures/pngs/Laplacian/TestCases/Feelpp3d/ufeelpp3d.png[]|image:figures/pngs/Laplacian/TestCases/Feelpp3d/meshfeelpp3d.png[]
+|Solution $$u_\delta$$| Built-up mesh
+|=====
 
