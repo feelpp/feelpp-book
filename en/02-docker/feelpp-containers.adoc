@@ -15,7 +15,7 @@ toc::[]
 To test Docker is installed properly, try
 [source,bash]
 ----
-$ docker run feelpp/feelpp-env  echo "Hello World!"
+$ docker run feelpp/feelpp-env  echo 'Hello World!'
 ----
 
 This may take a while depending on your internet connection but eventually you should see something like
@@ -37,10 +37,10 @@ The first line tells us that there is no local copy of this Feel++ image. Docker
 
 [NOTE]
 ======
-`feelpp/` in `feelpp/feelpp-env` provides the organization name(or namespace) of the image and `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization. See <<FCS>> for more details.
+`feelpp/` in `feelpp/feelpp-env` provides the organization name (or namespace) of the image and `feelpp-env` is the image name. Note also that Docker specifies a more complete name `feelpp/feelpp-env:latest` including the tag name `:latest`. We will see later how we defined the `latest` tag at the Feel++ organization. See <<FCS>> for more details.
 ======
 
-Once the image is downloaded, Docker launches the container and executes the command we provided `echo "Hello World!"` from inside the container. The result of the command is showed on the last line of the output log above.
+Once the image is downloaded, Docker launches the container and executes the command we provided `echo 'Hello World!'` from inside the container. The result of the command is showed on the last line of the output log above.
 
 If you run the command again, you won't see the download part and the command will be executed very fast.
 
@@ -54,7 +54,7 @@ It provides a shell prompt from inside the container which is very similar to wh
 [[FCS]]
 == Feel++ Container System
 
-The _Feel++ Container System_ (FCS) is organized in layers and provide a set of images.
+The _Feel++ Container System_ (FCS) is organized in layers and provides a set of images.
 
 === Naming
 
@@ -71,7 +71,7 @@ where
  * `feelpp-<component>` the image name and Feel++ component
  * `[:tag]` an optional tag for the image, by default set to `:latest`
 
-Feel++ images(components) are defined as layers in the FCS in the table below
+Feel++ images(components) are defined as layers in the FCS in the table below.
 
 .Table of the current components of the FCS
 |===
@@ -99,17 +99,17 @@ The following table displays how the different images depend from one another.
 |===
 | Image |  Built from
 
-| `feelpp-env:latest` | built from Ubuntu 16.10
-| `feelpp-libs:latest` | built from `feelpp-env:latest`
-| `feelpp-base:latest` | built from `feelpp-libs:latest`
-| `feelpp-toolboxes:latest` | built from `feelpp-base:latest`
+| `feelpp-env:latest` | Ubuntu 16.10
+| `feelpp-libs:latest` | `feelpp-env:latest`
+| `feelpp-base:latest` | `feelpp-libs:latest`
+| `feelpp-toolboxes:latest` | `feelpp-base:latest`
 
 |===
 
 === Host OS
 
 As we said before the default Host OS is Ubuntu 16.10.
-However Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various context. The FCS takes advantage of Docker to build  `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
+However Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various contexts. The FCS takes advantage of Docker to build  `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
 
 .Table providing the list of supported Host OS
 |===
