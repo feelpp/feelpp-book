@@ -107,7 +107,7 @@ $$
   \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)
 $$
 
-The simpler exemple of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
+The simplest example of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
 
 $$
 \mu_f \left(\dot{\gamma} \right) = k \dot{\gamma}^{n-1}
