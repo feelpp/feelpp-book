@@ -19,8 +19,10 @@ $$
 $$
 \begin{align}
   \boldsymbol{E}_s &= \frac{1}{2} \left( \boldsymbol{C}_s - \boldsymbol{I} \right)  \\
-   &= \underbrace{\frac{1}{2} \left( \nabla \boldsymbol{\eta}_s + \left(\nabla \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s} 
-  + \underbrace{\frac{1}{2} \left(\left(\nabla \boldsymbol{\eta}_s\right)^{T} \nabla \boldsymbol{\eta}_s \right)}_{\boldsymbol{\gamma}_s}
+   &= \underbrace{\frac{1}{2} \left( \nabla \boldsymbol{\eta}_s + \left(\nabla
+   \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s} 
+  + \underbrace{\frac{1}{2} \left(\left(\nabla \boldsymbol{\eta}_s\right)^{T}
+  \nabla \boldsymbol{\eta}_s \right)}_{\boldsymbol{\gamma}_s}
 \end{align}
 $$
 
@@ -49,7 +51,8 @@ $$
 $$
 \begin{align}
 \boldsymbol{F}_s &= \text{Identity} \\
-\boldsymbol{\Sigma}_s &=\lambda_s tr( \boldsymbol{\epsilon}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{\epsilon}_s
+\boldsymbol{\Sigma}_s &=\lambda_s tr( \boldsymbol{\epsilon}_s)\boldsymbol{I} +
+2\mu_s\boldsymbol{\epsilon}_s
 \end{align}
 $$
 
@@ -58,18 +61,21 @@ $$
 
 ==== Saint-Venant-Kirchhoff
 $$
-\boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} + 2\mu_s\boldsymbol{E}_s
+\boldsymbol{\Sigma}_s=\lambda_s tr( \boldsymbol{E}_s)\boldsymbol{I} +
+2\mu_s\boldsymbol{E}_s
 $$
 
 ==== Neo-Hookean
 
 $$
-\boldsymbol{\Sigma}_s= \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1})
+\boldsymbol{\Sigma}_s= \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3}
+\text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1})
 $$
 
 
 $$
-\boldsymbol{\Sigma}_s^ = \boldsymbol{\Sigma}_s^\text{iso} + \boldsymbol{\Sigma}_s^\text{vol}
+\boldsymbol{\Sigma}_s^ = \boldsymbol{\Sigma}_s^\text{iso} +
+\boldsymbol{\Sigma}_s^\text{vol}
 $$
 
 
@@ -79,7 +85,7 @@ $$
 .Isochoric law
 |===
 | Name | $$\mathcal{W}_S(J_s)$$ | $$\boldsymbol{\Sigma}_s^{\text{iso}}$$
-| Neo-Hookean | $$ $$ | $$ \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1}) $$
+| Neo-Hookean | | $$ \mu_s J^{-2/3}(\mathbb{I} - \frac{1}{3} \text{tr}(\boldsymbol{C}) \ \boldsymbol{C}^{-1}) $$
 |===
 
 ===== Volumetric part : $$\boldsymbol{\Sigma}_s^\text{vol}$$
@@ -115,7 +121,8 @@ The solid mechanics model can be selected in json file :
 
 
 
-When materials are closed to incompressibility formulation in displacement/pressure are available.
+When materials are closed to incompressibility formulation in
+displacement/pressure are available.
 
 
 .Table of Models for `material_law` with hyper elasticity model
@@ -151,7 +158,8 @@ option: `mechanicalproperties.compressible.volumic_law`
 }
 ----
 
-where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio ( dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
+where `E` stands for the Young's modulus in $$Pa$$, `nu` the Poisson's ratio (
+dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
 
 == Boundary Conditions
 
@@ -268,7 +276,8 @@ typedef FeelModels::SolidMechanics< Simplex<FEELPP_DIM,1>,
                                     Lagrange<OrderDisp, Vectorial,Continuous,PointSetFekete> > model_type;
 ----
 
-We choose here $$\mathbb{P}_1$$ space for displacement order. This definition allows us to create our fluid model object SM like this
+We choose here $$\mathbb{P}_1$$ space for displacement order. This definition
+allows us to create our fluid model object SM like this
  
 ----
 auto SM = model_type::New("solid");
@@ -396,7 +405,10 @@ Then we define parameters we will need to solve our problem. Here we define a gr
     },
 ----
 
-After that, we define the link:#Material[material properties]. In our case, we define the solid we will study, named beam here, by $$E$$, $$\nu$$ and $$\rho$$, respectively its Young's modulus ( $$kg/ms^2$$ ), its Poisson's ratio ( dimensionless ) and its density (in $$kg/m^3$$)
+After that, we define the link:#Material[material properties]. In our case, we
+define the solid we will study, named beam here, by $$E$$, $$\nu$$ and
+$$\rho$$, respectively its Young's modulus ( $$kg/ms^2$$ ), its Poisson's ratio
+( dimensionless ) and its density (in $$kg/m^3$$)
 
 [source,json]
 ----
@@ -448,7 +460,9 @@ BoundaryConditions":
     },
 ----
 
-The link:#Post_Process[post process] aspect is the last one to define. We want to export displacement values as well as measure displacement and velocity on point $$A$$ along with the maximum of this values on all the free wall.
+The link:#Post_Process[post process] aspect is the last one to define. We want
+to export displacement values as well as measure displacement and velocity on
+point $$A$$ along with the maximum of this values on all the free wall.
 
 [source,json]
 ----
