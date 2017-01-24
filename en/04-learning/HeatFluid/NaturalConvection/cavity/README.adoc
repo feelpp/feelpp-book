@@ -60,7 +60,7 @@ $$
   \theta &= 0\ \text{sur}\ \Gamma_1\\
   \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
   \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
-end{split}
+\end{split}
 $$
 where $$\mathrm{Pr}$$ is the Prandtl number.
 
