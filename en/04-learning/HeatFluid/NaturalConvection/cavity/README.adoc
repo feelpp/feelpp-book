@@ -1,0 +1,9 @@
+Natural Convection in a Cavity
+==============================
+
+This is a standard benchmark with many data available. 
+
+[source,sh]
+----
+$ mpirun -np 4 /usr/local/bin/feelpp_toolbox_fluid_2d --config-file cfd2d.cfg
+----
