@@ -55,7 +55,7 @@ temperature $$T_0$$ on boundary $$\Gamma_1$$.
 The heat equation reads:
 $$
 \begin{split}
-  \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\ensuremath{\mathrm{Gr}\xspace}}}{\ensuremath{\mathrm{Pr}\xspace}}} \Delta \theta &= 0\\
+  \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\mathrm{Gr}}}{\mathrm{Pr}}} \Delta \theta &= 0\\
   \theta &= 0\ \text{sur}\ \Gamma_1\\
   \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
   \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
