@@ -525,6 +525,21 @@ alemesh_bc
 
 == Volumic forces
 
+Body forces are also defined in `BoundaryConditions` category in json file.
+[source,json]
+----
+
+"VolumicForces":
+{
+    "<marker>":
+    {
+        "expr":"{0,0,-gravityCst*7850}:gravityCst"
+    }
+}
+----
+The marker correspond a to mesh elements marked with this tag. The marker can be also an empty string and it corresponds to all elements of the mesh.
+
+
 == Post Process
 
 [source,json]
