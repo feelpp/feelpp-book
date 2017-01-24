@@ -15,7 +15,7 @@ Docker offers two channels: the stable and beta channels.
 
 The _stable channel_ is fully baked and tested software providing a reliable platform to work with. Releases are not frequent.
 
-The _beta channel_ offer cutting edge features and experimental versions of the Docker Engine. This is a continuation of the initial Beta program of Docker to experiment with the latest features in development. It incurs far more instabilities than the stable channel but releases are done frequently -- possibly several releases per month.
+The _beta channel_ offers cutting edge features and experimental versions of the Docker Engine. This is a continuation of the initial Beta program of Docker to experiment with the latest features in development. It incurs far more instabilities than the stable channel but releases are done frequently -- possibly several releases per month.
 
 In the latter we shall consider only installing and using the _stable channel_.
 
@@ -60,7 +60,7 @@ NOTE: From now on, we omit the `sudo` command when using `Docker` for the sake o
 
 [CAUTION]
 =========
-Adding a user to the  `docker` group has security implications, on a shared machine you should consider reading the link:https://docs.docker.com/engine/security/security/[Docker security page].
+Adding a user to the  `docker` group has security implications. On a shared machine, you should consider reading the link:https://docs.docker.com/engine/security/security/[Docker security page].
 =========
 
 == Checking Docker
@@ -84,4 +84,4 @@ If so, you are ready for the next step. If instead you get something like
 [include](docker-version-mac-bad.txt)
 
 then it means that the Docker daemon is not running or that the client cannot access it. 
-To investigate the problem you can try running the daemon manually  -- e.g. `sudo docker daemon`. -- This should give you some informations of what might have gone wrong with your installation.
+To investigate the problem you can try running the daemon manually  -- e.g. `sudo docker daemon`. This should give you some informations of what might have gone wrong with your installation.
