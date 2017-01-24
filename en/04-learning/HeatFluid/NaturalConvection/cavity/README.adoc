@@ -26,10 +26,10 @@ image::cavity.png[caption="Figure 1 : ", title="Geometry of natural convection b
 
 
 To study the convection, we use a model problem: it consists in a
-rectangular tank of height latexmath:[$1$] and width latexmath:[$W$], in
+rectangular tank of height latexmath:[$1$$ and width latexmath:[$W$$, in
 which the fluid is enclosed, see figure [fig:heatns:1]. We wish to know
-the fluid velocity latexmath:[$\mathbf{u}$], the fluid pressure
-latexmath:[$p$] and fluid temperature latexmath:[$\theta$].
+the fluid velocity latexmath:[$\mathbf{u}$$, the fluid pressure
+latexmath:[$p$$ and fluid temperature latexmath:[$\theta$$.
 
 We introduce the adimensionalized Navier-Stokes and heat equations
 parametrized by the Grashof and Prandtl numbers. These parameters allow
@@ -38,27 +38,27 @@ the tank when varying them.
 
 The adimensionalized steady incompressible Navier-Stokes equations
 reads: 
-$$
+\[
   \begin{split}
     \mathbf{u}\cdot\nabla \mathbf{u} +\nabla p -\frac{1}{\sqrt{{\mathrm{Gr}}}} \Delta \mathbf{u} &= \theta \mathbf{e}_2\\
     \nabla \cdot \mathbf{u} & = 0\ \text{sur}\ \Omega\\
     \mathbf{u} & = \mathbf{0}\ \text{sur}\ \partial \Omega
   \end{split}
-$$
+\]
  where $${\mathrm{Gr}}$$
 is the Grashof number, $$\mathbf{u}$$ the adimensionalized
 velocity and $$p$$ adimensionalized pressure and
-latexmath:[$\theta$] the adimensionalized temperature. The temperature
+$$\theta$$ the adimensionalized temperature. The temperature
 is in fact the difference between the temperature in the tank and the
-temperature latexmath:[$T_0$] on boundary latexmath:[$\Gamma_1$].
+temperature $$T_0$$ on boundary $$\Gamma_1$$.
 
-The heat equation reads: latexmath:[\[\label{eq:37}
+The heat equation reads: \[\label{eq:37}
   \begin{split}
     \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\ensuremath{\mathrm{Gr}\xspace}}}{\ensuremath{\mathrm{Pr}\xspace}}} \Delta \theta &= 0\\
     \theta &= 0\ \text{sur}\ \Gamma_1\\
     \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
     \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
-  \end{split}\]] where latexmath:[${\ensuremath{\mathrm{Pr}\xspace}}$]
+  \end{split}\] where $${\ensuremath{\mathrm{Pr}\xspace}}$$
 is the Prandtl number.
 
 [[sec:infl-des-param]]
@@ -66,7 +66,7 @@ is the Prandtl number.
 
 what are the effects of the Grashof and Prandtl numbers ? We remark that
 both terms with these parameters appear in front of the
-latexmath:[$\Delta$] parameter, they thus act on the diffusive terms. If
+$$\Delta$$ parameter, they thus act on the diffusive terms. If
 we increase the Grashof number or the Prandtl number the coefficients
 multiplying the diffusive terms decrease, and this the convection, that
 is to say the transport of the heat via the fluid, becomes dominant.
@@ -74,7 +74,7 @@ This leads also to a more difficult and complex flows to simulate, see
 figure [fig:heatns:2]. The influence of the Grashof and Prandtl numbers
 are different but they generate similar difficulties and flow
 configurations. Thus we look only here at the influence of the Grashof
-number which shall vary in latexmath:[$[1, 1e7]$].
+number which shall vary in $$[1, 1e7]$$.
 
 image::flow_grashof.png[Velocity norm with respect to Grashof]
 
@@ -91,12 +91,16 @@ transfer.
 
 
 We consider first the mean temperature on boundary
-latexmath:[$\Gamma_3$] latexmath:[\[\label{eq:16}
-  T_3 = \int_{\Gamma_3} \theta\]]
+$$\Gamma_3$$
+
+\[
+\label{eq:16}
+  T_3 = \int_{\Gamma_3} \theta
+\]
 
 This quantity should decrease with increasing Grashof because the fluid
 flows faster and will transport more heat which will cool down the
-heated boundary latexmath:[$\Gamma_3$]. We observe this behavior on the
+heated boundary $$\Gamma_3$$. We observe this behavior on the
 figure <<fig:heatns:3>>.
 
 [[fig:heatns:3]]
@@ -107,17 +111,22 @@ image::temp_grashof.png[Mean temperature with respect to the Grashof number]
 
 
 Another quantity of interest is the flow rate through the middle of the
-tank. We define a segment latexmath:[$\Gamma_f$] as being the vertical
-top semi-segment located at latexmath:[$W/2$] with height
-latexmath:[$1/2$], see figure [fig:heatns:1]. The flow rate, denoted
-latexmath:[$\mathrm{D}_f$], reads latexmath:[\[\label{eq:17}
-  \mathrm{D}_f =  \int_{\Gamma_f} \mathbf{u} \cdot \mathbf{e}_1\]] where
-latexmath:[$\mathbf{e}_1=(1,0)$]. Note that the flow rate can be
+tank. We define a segment $$\Gamma_f$$ as being the vertical
+top semi-segment located at $$W/2$$ with height
+$$1/2$$, see figure [fig:heatns:1]. The flow rate, denoted
+$$\mathrm{D}_f$$, reads
+$$
+\label{eq:17}
+  \mathrm{D}_f =  \int_{\Gamma_f} \mathbf{u} \cdot \mathbf{e}_1
+$$
+
+where
+$$\mathbf{e}_1=(1,0)$$. Note that the flow rate can be
 negative or positive depending on the direction in which the fluid
 flows.
 
 As a function of the Grashof, we shall see a increase in the flow rate.
-This is true for small Grashof, but starting at latexmath:[$1e3$] the
+This is true for small Grashof, but starting at $$1e3$$ the
 flow rate decreases. The fluid is contained in a boundary layer which is
 becoming smaller as the Grashof increases.
 
