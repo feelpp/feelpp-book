@@ -52,7 +52,7 @@ $$
 D(\boldsymbol{u}_{f}) = \frac{1}{2} (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
 $$
 
-An alternative model is the Stokes model. It is valid in the case of small Reynolds number. It correspond to same formulation that Navier-Equation but without the convective term $$\left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}$$ .
+An alternative model is the Stokes model. It is valid in the case of small Reynolds number. It corresponds to same formulation that Navier-Equation but without the convective term $$\left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}$$ .
 
 The fluid mechanics model (`Navier-Stokes` or `Stokes`) can be selected in json file :
 [source,json]
