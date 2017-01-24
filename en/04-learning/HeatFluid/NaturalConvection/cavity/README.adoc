@@ -26,10 +26,10 @@ image::cavity.png[caption="Figure 1 : ", title="Geometry of natural convection b
 
 
 To study the convection, we use a model problem: it consists in a
-rectangular tank of height \(1\) and width \(W\), in
+rectangular tank of height $$1$$ and width $$W$$, in
 which the fluid is enclosed, see figure <<fig:heatns:1>>. We wish to know
-the fluid velocity \\(\mathbf{u}\\), the fluid pressure
-\\(p\\) and fluid temperature \\(\theta\\).
+the fluid velocity $$\mathbf{u}$$, the fluid pressure
+$$p$$ and fluid temperature $$\theta$$.
 
 We introduce the adimensionalized Navier-Stokes and heat equations
 parametrized by the Grashof and Prandtl numbers. These parameters allow
@@ -38,13 +38,13 @@ the tank when varying them.
 
 The adimensionalized steady incompressible Navier-Stokes equations
 reads: 
-\[
+$$
   \begin{split}
     \mathbf{u}\cdot\nabla \mathbf{u} +\nabla p -\frac{1}{\sqrt{{\mathrm{Gr}}}} \Delta \mathbf{u} &= \theta \mathbf{e}_2\\
     \nabla \cdot \mathbf{u} & = 0\ \text{sur}\ \Omega\\
     \mathbf{u} & = \mathbf{0}\ \text{sur}\ \partial \Omega
   \end{split}
-\]
+$$
  where $${\mathrm{Gr}}$$
 is the Grashof number, $$\mathbf{u}$$ the adimensionalized
 velocity and $$p$$ adimensionalized pressure and
@@ -52,14 +52,17 @@ $$\theta$$ the adimensionalized temperature. The temperature
 is in fact the difference between the temperature in the tank and the
 temperature $$T_0$$ on boundary $$\Gamma_1$$.
 
-The heat equation reads: \[\label{eq:37}
+The heat equation reads:
+$$
+\label{eq:37}
   \begin{split}
     \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\ensuremath{\mathrm{Gr}\xspace}}}{\ensuremath{\mathrm{Pr}\xspace}}} \Delta \theta &= 0\\
     \theta &= 0\ \text{sur}\ \Gamma_1\\
     \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
     \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
-  \end{split}\] where $${\ensuremath{\mathrm{Pr}\xspace}}$$
-is the Prandtl number.
+  \end{split}
+$$
+where $$\mathrm{Pr}$$ is the Prandtl number.
 
 [[sec:infl-des-param]]
 == Influence of parameters
@@ -76,7 +79,7 @@ are different but they generate similar difficulties and flow
 configurations. Thus we look only here at the influence of the Grashof
 number which shall vary in $$[1, 1e7]$$.
 
-image::flow_grashof.png[Velocity norm with respect to Grashof]
+image::flow_grashof.png[caption="Figure 2", title="Velocity norm with respect to Grashof",width="500", align="center"]
 
 [[sec:quant-du-benchm]]
 == Quantities of interest
@@ -93,10 +96,10 @@ transfer.
 We consider first the mean temperature on boundary
 $$\Gamma_3$$
 
-\[
+$$
 \label{eq:16}
   T_3 = \int_{\Gamma_3} \theta
-\]
+$$
 
 This quantity should decrease with increasing Grashof because the fluid
 flows faster and will transport more heat which will cool down the
