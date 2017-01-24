@@ -94,7 +94,7 @@ A `Materials` section is introduced in json file in order to configure the fluid
 }
 ----
 === Generalised Newtonian fluid
-A non newtonian fluid is characterized by a non constant viscosity, which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introducing a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
+A non newtonian fluid is characterized by a non constant viscosity, which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introducing a metric of the rate of deformation, denoted by $$\dot{\gamma}$$:
 
 $$
 \dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
@@ -107,14 +107,15 @@ $$
   \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)
 $$
 
-The simplest example of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
+The simplest example of a generalised Newtonian model is the power-law fluid, which has a viscosity given by:
 
 $$
 \mu_f \left(\dot{\gamma} \right) = k \dot{\gamma}^{n-1}
 $$
 
 where $$k$$ and $$n < 1$$ are two parameters related to fluid properties.
-In the context of blood flow modeling, an extension of power model was proposed by Walburn and Schneck. Parameters $$k$$ and $$n$$ are related to the haematocric $$Ht$$ and Total Proteins Minus Albumin (TPMA) :
+In the context of blood flow modeling, an extension of the power model was proposed by Walburn and Schneck.
+Parameters $$k$$ and $$n$$ are related to the hematocrit $$Ht$$ and Total Proteins Minus Albumin (TPMA):
 
 $$
 k = C_1 e^{C_2 Ht} e^{C_4 \text{TPMA} / Ht }, \quad\quad    n = 1- C_3 H t
@@ -122,7 +123,7 @@ $$
 and $$C_i, i=1,..,4$$ are parameters to fit with experimental data.
 
 
-Anothers family of generalised Newtonian model can be defined from a function $$\Phi$$ express by :
+Another family of generalised Newtonian model can be defined from a function $$\Phi$$ express by:
 
 $$
   \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right)
@@ -140,14 +141,14 @@ where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and 
 |===
 
 
-The non newtonian properties are defined in cfg file in fluid section. The viscosity law is activated by :
+The non Newtonian properties are defined in cfg file in fluid section. The viscosity law is activated by:
 [cols="1,1", options="header"]
 |===
 | option | values
 | viscosity.law | newtonian, power_law, walburn-schneck_law, carreau_law, carreau-yasuda_law
 |===
 
-Then, each model are configured with the options reported in next table :
+Then, each model are configured with the options reported in the following table:
 
 [cols="1,1,1", options="header"]
 |===
@@ -193,9 +194,9 @@ carreau_law.lambda
 
 carreau_law.n
 |
-$$kg/(m \times s)$$
+$$kg.m^{-1}.s^{-1}$$
 
-$$kg/(m \times s)$$
+$$kg.m^{-1}.s^{-1}$$
 
 dimensionless
 
@@ -233,7 +234,7 @@ We start by a listing of boundary conditions supported in fluid mechanics model.
 
 
 === Dirichlet on velocity
-A Dirichlet condition on velocity field correspond to impose :
+A Dirichlet condition on velocity field reads:
 $$
 \boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma
 $$
@@ -243,7 +244,7 @@ $$
 u_f^i = g \quad \text{ on } \Gamma
 $$
 
-Several methods are available to ensure to boundary condition :
+Several methods are available to enforce the boundary condition:
 
 - elimination
 - nitsche
@@ -281,15 +282,15 @@ $$
 $$
 
 === Inlet flow
-The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh.
+The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh:
 $$
 \boldsymbol{u}_f = - g \ \boldsymbol{n} \quad \text{ on } \Gamma
 $$
-The function $$g$$ is computed from flow velocity profiles :
+The function $$g$$ is computed from flow velocity profiles:
 
 - Constant profile
 $$
-\text{Find } g \in C^0(\Gamma) \text{ such that : } \\
+\text{Find } g \in C^0(\Gamma) \text{ such that } \\
 \begin{eqnarray}
 g &=& \beta \quad &\text{ in } \Gamma \setminus \partial\Gamma
 \\
@@ -305,10 +306,10 @@ g&=&0 \quad &\text{ on } \partial\Gamma
 \end{eqnarray}
 $$
 
-where $$\beta$$ is a constant determinated by adding a constraint on the inflow :
+where $$\beta$$ is a constant determined by adding a constraint to the inflow:
 
-- velocity_max : $$\max( g ) = \alpha $$
-- flow_rate : $$\int_\Gamma ( g \ \boldsymbol{n} ) \cdot \boldsymbol{n} = \alpha$$
+- velocity_max: $$\max( g ) = \alpha $$
+- flow_rate: $$\int_\Gamma ( g \ \boldsymbol{n} ) \cdot \boldsymbol{n} = \alpha$$
 
 
 [cols="1,1,1,1", options="header"]
@@ -341,7 +342,9 @@ $$
 $$
 
 ==== Windkessel model
-We use a 3-element Windkessel model for modeling an outflow boundary condition. We define $$P_l$$ a pressure and $$Q_l$$ the flow rate. The outflow model is discribed by the following system of differential equations :
+We use a 3-element Windkessel model for modeling an outflow boundary condition.
+We define $$P_l$$ a pressure and $$Q_l$$ the flow rate.
+The outflow model is discribed by the following system of differential equations:
 
 
 $$
@@ -355,8 +358,10 @@ $$
 \end{equation}
 $$
 
-Coefficients $$R_{p,l}$$ and $$R_{d,l}$$ représentent respectively the proximal and distale resistance. The constant $$C_{d,l}$$ is the capacitance of blood vessel. The unknowns $$P_l$$ and $$\pi_l$$ are called proximal pressure and distal pressure.
-Then we define the coupling between this outflow model and the fluid model by this two relationships :
+Coefficients $$R_{p,l}$$ and $$R_{d,l}$$ represent respectively the proximal and distal resistance.
+The constant $$C_{d,l}$$ is the capacitance of blood vessel.
+The unknowns $$P_l$$ and $$\pi_l$$ are called proximal pressure and distal pressure.
+Then we define the coupling between this outflow model and the fluid model by these two relationships:
 
 $$
 \begin{align}
@@ -381,7 +386,7 @@ $$
 ==== Implement boundary conditions in json file
 
 Boundary conditions are set in the json files in the category `BoundaryConditions`. Then `<field>` and `<bc_type>` are chosen from type of boundary condition. The parameter `<marker>` corresponds to mesh marker where the boundary condition is applied.
-And finally, we define inside some specific options.
+Finally, we define some specific options inside a marker.
 [source,json]
 .Listing : boundary conditions in json
 ----
@@ -538,10 +543,11 @@ Body forces are also defined in `BoundaryConditions` category in json file.
     }
 }
 ----
-The marker correspond a to mesh elements marked with this tag. The marker can be also an empty string and it corresponds to all elements of the mesh.
+The marker corresponds to mesh elements marked with this tag.
+If the marker is an empty string, it corresponds to all elements of the mesh.
 
 
-== Post Process
+== Post Processing
 
 [source,json]
 ----
@@ -562,7 +568,7 @@ The marker correspond a to mesh elements marked with this tag. The marker can be
 }
 ----
 
-=== Exports for visualisation
+=== Exports for vizualisation
 The fields allowed to be exported in the `Fields` section are:
 
 - velocity
@@ -586,7 +592,11 @@ The fields allowed to be exported in the `Fields` section are:
 
 
 ==== Points
-In order to evaluate velocity or pressure at specific points and save the results in .csv file, user must define (i) "<tag>" representing this data in the .csv file, (ii) the coordinate of point and (iii) the fields evaluated ("pressure" or "velocity").
+In order to evaluate velocity or pressure at specific points and save the results in .csv file, the user must define:
+
+- "<tag>" representing this data in the .csv file
+- the coordinate of point
+- the fields evaluated ("pressure" or "velocity")
 
 [source,json]
 ----
@@ -607,7 +617,12 @@ In order to evaluate velocity or pressure at specific points and save the result
 
 
 ==== Flow rate
-The flow rate can be evaluated and save on .csv file. User need to  define (i) "<tag>" representing this data in the .csv file, (ii) "<face_marker>" representing the name of face marked and (iii) the fluid direction ("interior_normal" or "exterior_normal") of the flow rate.
+The flow rate can be evaluated and save on .csv file.
+The user must define:
+
+- "<tag>" representing this data in the .csv file
+- "<face_marker>" representing the name of marked face
+- the fluid direction ("interior_normal" or "exterior_normal") of the flow rate.
 
 [source,json]
 ----
@@ -657,7 +672,8 @@ This function can be exported.
 
 == Action
 
-Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
+Let's finish with a simple example in order to show how this works.
+We will interest us to a fluid flow into a cavity in 3D.
 
 === Feel++ code
 Here is the code
@@ -670,13 +686,14 @@ typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
                                     Lagrange<OrderPressure,Scalar,Continuous,PointSetFekete> > model_type;
 ----
 
-We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure order. This definition allows us to create our fluid model object FM like this
+We choose here a $$\mathbb{P}_2$$ space for the velocity order and a $$\mathbb{P}_1$$ space for the pressure order.
+This definition allows us to create our fluid model object FM like this
 
 ----
 auto FM = model_type::New("fluid");
 ----
 
-The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
+The method `New` retrieves all data from the configuration and json files and build a mesh if needed.
 
 With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by
 
