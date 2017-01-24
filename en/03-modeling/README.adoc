@@ -6,4 +6,8 @@
 
 toc::[]
 
-. link:01-modeling.adoc[Creating a model]
+. link:01-modeling.adoc[Computation Fluid Mechanics]
+. link:01-modeling.adoc[Computation Solid Mechanics]
+. link:01-modeling.adoc[Fluid Structure Interaction]
+. link:01-modeling.adoc[Advection Model]
+. link:01-modeling.adoc[ThermoElectric]
