@@ -11,7 +11,7 @@ We consider now the following example
 
 [source,cpp]
 ----
-{% include "../../Tutorial/code/mylaplacian.cpp" %}
+{% include "../../codes/mylaplacian.cpp" %}
 ----
 
 To execute this example
