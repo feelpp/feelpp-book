@@ -53,6 +53,7 @@ is in fact the difference between the temperature in the tank and the
 temperature $$T_0$$ on boundary $$\Gamma_1$$.
 
 The heat equation reads:
+
 $$
 \begin{split}
   \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\mathrm{Gr}}}{\mathrm{Pr}}} \Delta \theta &= 0\\
