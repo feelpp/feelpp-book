@@ -54,7 +54,6 @@
 .. link:05-applications/Mesh/README.adoc[Mesh]
 ... link:05-applications/Mesh/Partitioning/README.adoc[feelpp_mesh_partitioner]
 ... link:05-applications/Mesh/Reading/README.adoc[Reading]
-.. link:05-applications/Models/README.adoc[Models]
 
 == Programming
 . link:06-programming/README.adoc[Programming with Feel++]
