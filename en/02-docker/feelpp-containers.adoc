@@ -140,7 +140,7 @@ $ docker run feelpp/feelpp-env
 `feelpp-libs` builds from `feelpp-env` and provides:
 
   . the Feel{plus}{plus} libraries
-  . the link:../06-applications/Mesh/Partitioning/readme.adoc[Feel++ mesh partitioner]
+  . the link:../05-applications/Mesh/Partitioning/readme.adoc[Feel++ mesh partitioner]
 
 [source,sh]
 ----
