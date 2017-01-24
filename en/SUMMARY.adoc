@@ -23,8 +23,8 @@
 
 == Solving PDEs using Feel++ Toolboxes
 . link:03-modeling/README.adoc[Modeling with Feel++]
-.. link:03-modeling/Fluid/README.adoc[Computation Fluid Mechanics]
-.. link:03-modeling/Solid/README.adoc[Computation Solid Mechanics]
+.. link:03-modeling/Fluid/README.adoc[Computational Fluid Mechanics]
+.. link:03-modeling/Solid/README.adoc[Computational Solid Mechanics]
 .. link:03-modeling/FluidStructure/README.adoc[Fluid Structure Interaction]
 .. link:03-modeling/Advection/README.adoc[Advection Model]
 .. link:03-modeling/ThermoElectric/README.adoc[ThermoElectric]
@@ -110,4 +110,3 @@
 
 == Glossary
 . link:GLOSSARY.adoc[Glossary]
-
