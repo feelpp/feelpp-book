@@ -585,7 +585,7 @@ The fields allowed to be exported in the `Fields` section are:
 
 
 ==== Points
-In order to evaluate some fields at specif point and save the results in .csv file, user must define (i) "<tag>" representing this data in the .csv file, (ii) the coordinate of point and (iii) the fields evaluated.
+In order to evaluate velocity or pressure at specific points and save the results in .csv file, user must define (i) "<tag>" representing this data in the .csv file, (ii) the coordinate of point and (iii) the fields evaluated ("pressure" or "velocity").
 
 [source,json]
 ----
@@ -599,7 +599,7 @@ In order to evaluate some fields at specif point and save the results in .csv fi
  "<tag>":
   {
     "coord":"{0.15,0.2,0}",
-    "fields":"pressure"
+    "fields":"velocity"
   }
 }
 ----
@@ -636,25 +636,9 @@ compute lift and drag
 
 
 
-
-.Measure type and range type associated
-|===
-|Measure type | Range type | example
-
-|Points | coords | "{0,0,0}"
-|Maximum | markers | "marker1"
-|Minimum | markers | "marker1"
-|volume_variation* | - | "volume_variation":""
-|===
-
-*volume_variation does not take a set of point or of range, it is a volumic measure.
-
-The fields on which one can do measures:
-
-- Force
-- FlowRate
-- Pressure
-- VelocityDivergence
+=== Export user functions
+A function defined by a symbolic expression can be represented as a finite element field thanks to nodal projection.
+This function can be exported.
 
 [source,json]
 ----
