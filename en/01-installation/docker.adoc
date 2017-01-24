@@ -1,51 +1,9 @@
-Using Feel++ with docker
-========================
-:toc:
-:toc-placement: macro
-:toclevels: 3
+Feel++ and Docker
+=================
 
-toc::[]
+Using Feel{plus}{plus} inside link:../02-docker/what-is-docker.adoc[Docker] is the recommended and fastest way to use Feel{plus}{plus}. The link:../02-docker/README.adoc[second chapter] is dedicated to Docker and using Feel{plus}{plus} in Docker. 
 
-== Introduction
-Docker is a platform that allows to package applications and their dependencies with controlled versions, so that they work in any environment. This allows to have applications with consistent behaviours independently on the base operating system you are using, be it any Linux flavour, Windows or Mac OS X. For more information, please refer to the [main site](https://www.docker.com) or to [what is docker ?](https://www.docker.com/what-docker).
+We strongly encourage you to follow these steps if you begin with Feel{plus}{plus} in particular as an end-user. 
 
-To install docker, please refer to docker [documentation](https://docs.docker.com).
-
-== Building Feel++ inside a container
-
-To use Feel++ with docker, you can rely on pre-built images or generate them yourself by writing a file name Dockerfile and that acts like a Makefile for docker.
-
-== Prebuilt images on Docker Hub {#dockerhub}
-
-Prebuilt images are available on the [Feel++ repository on Dockerhub](https://hub.docker.com/u/feelpp/).
-
-Several images are available:
-   
-* `feelpp/dev-env` provides a working software environment for the latest version of Feel++ based on Ubuntu (currently Ubuntu 16.10),   
-* `feelpp/develop` provides the working software environment, plus the feelpp library installed in the system. 
-* +feelpp/apps+ provides the Feel++ applications
-
-To get one of these images, you can use the `docker pull` command.   
-Refer to the `Using the container` section of this page for the usage.
-
-=== Runing Feel++ Applications
-
-To run link:/Applications/readme.adoc[Feel++ main applications], you need first to create a directory where you will store the Feel++ simulation files. For example, type
-[source,shell]
-----
-mkdir $HOME/feel
-----
-and then type the following docker command
-
-[source,shell]
-----
-docker run -it -v $HOME/feel:/feel feelpp/apps:latest
-----
-
-The previous command will execute the latest `feelpp/apps` docker image in interactive mode in a terminal (`-ti`) and mount `$HOME/feel` in the directory `/feel` of the docker image.
-
-> **Note** Note that mouting a host sub-directory on `/feel` is mandatory. If you don't, the Feel++ applications will exit due to lack of permissions.
-
-
-
+People who would like to develop with and in Feel{plus}{plus} should read through the remaining sections of this chapter.
 

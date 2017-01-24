@@ -1,1 +1,18 @@
 /* CSS for website */
+code {
+    background-color: white;
+    font-size: 100%;
+}
+div.sidebarblock div.content div.title {
+    font-size: 110%;
+    font-style: italic;
+    font-weight: Bold;
+    
+}
+div.sidebarblock div.content div.paragraph  {
+    font-style: italic;
+}
+div.sidebarblock  {
+    background-color: #eeeeee;
+    border: 2pt solid #444444;
+}

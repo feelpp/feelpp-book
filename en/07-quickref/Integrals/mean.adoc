@@ -36,5 +36,5 @@ Optional parameters:
 
 From `doc/manual/stokes/stokes.cpp`
 
-[import](../../codes/mystokes.cpp)
+[include:"main"](../../../codes/mystokes.cpp)
 

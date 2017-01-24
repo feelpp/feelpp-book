@@ -1,0 +1,843 @@
+= Fluid Mechanics Models
+:toc:
+:toc-placement: macro
+:toclevels: 2
+
+toc::[]
+
+== Notations
+
+|===
+| Notation | Quantity | Unit 
+|$$\rho_f$$|fluid density|$$kg/m^3$$
+|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
+|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
+|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
+|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
+|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
+|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
+|$$\nu$$|kinematic viscosity|$$m^2/s$$
+|$$L$$| characteristic length|$$m$$
+|===
+
+
+== Models 
+
+Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
+
+* momentum conservation equation 
+
+$$
+\rho_{f} \left. \frac{\partial\mathbf{u}_f}{\partial t} \right|_\mathrm{x}
++ \rho_{f} \left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}
+- \nabla_{\mathrm{x}} \cdot \boldsymbol{\sigma}_{f} = \boldsymbol{f}^t_f , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right]
+$$
+
+* mass conservation equation
+
+$$
+\nabla_{\mathrm{x}} \cdot \boldsymbol{u}_{f} = 0                     , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right] 
+$$
+
+We add to them the material constitutive equation :
+
+$$
+\boldsymbol{\sigma}_{f} = -p_f \boldsymbol{I} + 2\mu_f D(\boldsymbol{u}_{f})
+$$
+
+with strain tensor $$D(\boldsymbol{u}_{f})$$ defined by :
+
+$$
+D(\boldsymbol{u}_{f}) = \frac{1}{2} (\nabla_\mathrm{x} \boldsymbol{u}_f + (\nabla_\mathrm{x} \boldsymbol{u}_f)^T)
+$$
+
+An alternative model is the Stokes model. It is valid in the case of small Reynolds number. It correspond to same formulation that Navier-Equation but without the convective term $$\left( \boldsymbol{u}_{f} \cdot \nabla_{\mathrm{x}} \right) \boldsymbol{u}_{f}$$ .
+
+The fluid mechanics model (`Navier-Stokes` or `Stokes`) can be selected in json file :
+[source,json]
+.Listing : select fluid model
+-----
+"Model":"Navier-Stokes"
+-----
+
+== Materials
+
+
+The next step is to define the fluid material by setting its properties namely the density $$\rho_f$$ and viscosity $$\mu_f$$.
+In next table, we find the correspondance between the mathematical names and the json names.
+
+[cols="1,1", options="header"]
+.Correspondance between fluid parameters and symbols in JSon files
+|===
+| Parameter | Symbol 
+
+| $$\mu_f$$ | `mu`
+| $$\rho_f$$  | `rho`
+
+|===
+
+A `Materials` section is introduced in json file in order to configure the fluid properties. For each mesh marker, we can defined the material properties associated.
+
+[source,json]
+.Listing : Materials section
+----
+"Materials":
+{
+    "<marker>"
+    {
+        "name":"water",
+        "rho":"1.0e3",
+        "mu":"1.0"
+    }
+}
+----
+=== Generalised Newtonian fluid
+A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
+
+$$
+\dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
+$$
+
+and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$. 
+The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model wich
+takes the useful form :
+
+$$
+  \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right) 
+$$
+
+The simpler exemple of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
+
+$$
+\mu_f \left(\dot{\gamma} \right) = k \dot{\gamma}^{n-1}
+$$
+
+where $$k$$ and $$n < 1$$ are two parameters related to fluid properties.
+In the context of blood flow modeling, an extension of power model was proposed by Walburn and Schneck. Parameters $$k$$ and $$n$$ are related to the haematocric $$Ht$$ and Total Proteins Minus Albumin (TPMA) :
+
+$$
+k = C_1 e^{C_2 Ht} e^{C_4 \text{TPMA} / Ht }, \quad\quad    n = 1- C_3 H t
+$$
+and $$C_i, i=1,..,4$$ are parameters to fit with experimental data.
+
+
+Anothers family of generalised Newtonian model can be defined from a function $$\Phi$$ express by :
+
+$$
+  \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) 
+  = \frac{\mu\left(\dot{\gamma}\right) - \mu_{\infty}}{\mu_{0}-\mu_{\infty}}  
+$$
+
+where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and infinite shear rate.
+
+
+[cols="1,1", options="header"]
+|===
+| Viscosity law | $$\Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) $$ 
+| Carreau | $$\left(1+\left(\lambda\dot{\gamma}\right)^{2}\right)^{(n-1)/2}$$ 
+| Carreau-Yasuda | $$\left(1+\left(\lambda\dot{\gamma}\right)^{a}\right)^{(n-1)/a}$$ 
+|===
+
+
+The non newtonian properties are defined in cfg file in fluid section. The viscosity law is activated by :
+[cols="1,1", options="header"]
+|===
+| option | values
+| viscosity.law | newtonian, power_law, walburn-schneck_law, carreau_law, carreau-yasuda_law
+|===
+
+Then, each model are configured with the options reported in next table :  
+
+[cols="1,1,1", options="header"]
+|===
+| Viscosity law | options | unit
+| power_law |
+power_law.k
+
+power_law.n
+| dimensionless
+
+dimensionless
+
+| walburn-schneck_law |
+hematocrit
+
+TPMA
+
+walburn-schneck_law.C1
+
+walburn-schneck_law.C2
+
+walburn-schneck_law.C3
+
+walburn-schneck_law.C4
+
+| Percentage
+
+g/l
+
+dimensionless
+
+dimensionless
+
+dimensionless
+
+l/g
+| carreau_law |
+viscosity.zero_shear
+
+viscosity.infinite_shear
+
+carreau_law.lambda
+
+carreau_law.n
+| 
+$$kg/(m \times s)$$
+
+$$kg/(m \times s)$$
+
+dimensionless
+
+dimensionless
+| carreau-yasuda_law |
+viscosity.zero_shear
+
+viscosity.infinite_shear
+
+carreau-yasuda_law.lambda
+
+carreau-yasuda_law.n
+
+carreau-yasuda_law.a
+| 
+$$kg/(m \times s)$$
+
+$$kg/(m \times s)$$
+
+dimensionless
+
+dimensionless
+
+dimensionless
+
+|===
+
+
+
+
+
+== Boundary Conditions
+We start by a listing of boundary conditions supported in fluid mechanics model.
+
+
+
+=== Dirichlet on velocity
+A Dirichlet condition on velocity field correspond to impose : 
+$$
+\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma 
+$$
+or only a component of vector $$\boldsymbol{u}_f =(u_f^1,u_f^2 ,u_f^3 )$$
+
+$$
+u_f^i = g \quad \text{ on } \Gamma 
+$$
+
+Several methods are available to ensure to boundary condition :
+
+- elimination
+- nitsche
+- Lagrange multiplier
+
+==== Dirichlet on pressure
+
+$$
+\begin{eqnarray}
+p &=& g \\
+\boldsymbol{u}_f \times \boldsymbol{n} &=& 0
+\end{eqnarray}
+$$
+
+=== Neumann
+[cols="1,1", options="header"]
+.Neumann options
+|===
+| Name  | Expression
+| Neumann_scalar | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+| Neumann_vectorial | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  =   \boldsymbol{g} $$
+| Neumann_tensor2 | $$ \boldsymbol{\sigma}_{f} \boldsymbol{n}  = g \ \boldsymbol{n} $$
+|===
+
+
+
+
+
+
+
+
+=== Slip
+$$
+\boldsymbol{u}_f \cdot \boldsymbol{n} = 0
+$$
+
+=== Inlet flow
+The boundary condition of inlet flow allows to define a velocity profile on set of marked faces $$\Gamma$$ in fluid mesh.
+$$
+\boldsymbol{u}_f = - g \ \boldsymbol{n} \quad \text{ on } \Gamma
+$$
+The function $$g$$ is computed from flow velocity profiles :
+
+- Constant profile
+$$
+\text{Find } g \in C^0(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+g &=& \beta \quad &\text{ in } \Gamma \setminus \partial\Gamma
+\\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+- Parabolic profile
+$$
+\text{Find } g \in H^2(\Gamma) \text{ such that : } \\
+\begin{eqnarray}
+\Delta g &=& \beta \quad &\text{ in } \Gamma \\
+g&=&0 \quad &\text{ on } \partial\Gamma
+\end{eqnarray}
+$$
+
+where $$\beta$$ is a constant determinated by adding a constraint on the inflow :
+
+- velocity_max : $$\max( g ) = \alpha $$
+- flow_rate : $$\int_\Gamma ( g \ \boldsymbol{n} ) \cdot \boldsymbol{n} = \alpha$$
+
+
+[cols="1,1,1,1", options="header"]
+.Inlet flow options
+|===
+| Option | Value | Default value |Description
+| shape | constant,parabolic |  | select a shape profile for inflow
+|constraint | velocity_max,flow_rate | | give a constraint wich controle velocity
+| expr | string | | symbolic expression of constraint value
+|===
+
+
+=== Outlet flow
+[cols="1,1,1,1", options="header"]
+.Outlet flow options
+|===
+| Option | Value | Default value |Description
+| model | free,windkessel | free | select an outlet modeling
+|===
+
+
+
+
+
+
+
+==== Free outflow
+$$
+\boldsymbol{\sigma}_{f} \boldsymbol{n} = \boldsymbol{0}
+$$
+
+==== Windkessel model
+We use a 3-element Windkessel model for modeling an outflow boundary condition. We define $$P_l$$ a pressure and $$Q_l$$ the flow rate. The outflow model is discribed by the following system of differential equations :
+
+
+$$
+\begin{equation}
+\left\{
+\begin{aligned}
+  C_{d,l} \frac{\partial \pi_l}{\partial t} + \frac{\pi_l}{R_{d,l}} = Q_l \\
+  P_l = R_{p,l} Q_l + \pi_l
+\end{aligned}
+\right.
+\end{equation}
+$$
+
+Coefficients $$R_{p,l}$$ and $$R_{d,l}$$ représentent respectively the proximal and distale resistance. The constant $$C_{d,l}$$ is the capacitance of blood vessel. The unknowns $$P_l$$ and $$\pi_l$$ are called proximal pressure and distal pressure.
+Then we define the coupling between this outflow model and the fluid model by this two relationships :
+
+$$
+\begin{align}
+  Q_l &= \int_{\Gamma_l} \boldsymbol{u}_f \cdot \boldsymbol{n}_f  \\
+  \boldsymbol{\sigma}_f \boldsymbol{n}_f &= -P_l \boldsymbol{n}_f 
+\end{align}
+$$
+
+
+
+[cols="1,1,1", options="header"]
+.Windkessel options
+|===
+| Option | Value | Description
+| windkessel_coupling | explicit, implicit |  coupling type with the Navier-Stokes equation
+| windkessel_Rd | real | distal resistance
+| windkessel_Rp | real | proximal resistance
+| windkessel_Cd | real | capacitance
+|===
+
+
+==== Implement boundary conditions in json file
+
+Boundary conditions are set in the json files in the category `BoundaryConditions`. Then `<field>` and `<bc_type>` are chosen from type of boundary condition. The parameter `<marker>` corresponds to mesh marker where the boundary condition is applied.
+And finally, we define inside some specific options.
+[source,json]
+.Listing : boundary conditions in json
+----
+"BoundaryConditions":
+{
+    "<field>":
+    {
+        "<bc_type>":
+        {
+            "<marker>":
+            {
+                "<option1>":"<value1>",
+                "<option2>":"<value2>",
+                ...
+            }
+        }
+    }
+}
+----
+
+
+
+
+
+
+
+=== Options summary
+
+
+[cols="1,1,1,1", options="header"]
+.Boundary conditions
+|===
+| Field | Name | Option | Entity
+
+| velocity
+| Dirichlet
+| expr
+
+ type
+
+ number
+ 
+ alemesh_bc
+  
+| faces, edges, points
+| velocity_x
+
+velocity_y
+
+velocity_z
+
+
+| Dirichlet
+| expr
+
+ type
+
+  number
+  
+  alemesh_bc
+  
+ | faces, edges, points
+
+| velocity
+
+| Neumann_scalar
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_vectorial
+| expr
+
+number
+
+alemesh_bc
+| faces
+| velocity
+
+| Neumann_tensor2
+| expr
+
+number
+
+alemesh_bc
+| faces
+
+| velocity
+| slip
+| alemesh_bc
+| faces
+
+| pressure
+| Dirichlet
+| expr
+
+number
+
+alemesh_bc
+
+|faces
+
+| fluid
+| outlet
+| number
+
+alemesh_bc
+
+model
+
+windkessel_coupling
+
+windkessel_Rd
+
+windkessel_Rp
+
+windkessel_Cd
+
+| faces
+
+| fluid
+
+| inlet
+
+| expr
+
+shape
+
+constraint
+
+number
+
+alemesh_bc
+
+| faces
+
+|===
+
+== Volumic forces
+
+== Post Process
+
+[source,json]
+----
+"PostProcess":
+{
+    "Fields":["field1","field2",...],
+    "Measures":
+    {
+        "<measure type>":
+        {
+            "label":
+            {
+                "<range type>":"value",
+                "fields":["field1","field3"]
+            }
+        }
+    }
+}
+----
+
+=== Exports for visualisation
+The fields allowed to be exported in the `Fields` section are:
+
+- velocity
+- pressure
+- displacement
+- vorticity
+- stress or normal-stress
+- wall-shear-stress
+- density
+- viscosity
+- pid
+- alemesh
+
+=== Measures
+
+- Points
+- Force
+- FlowRate
+- Pressure
+- VelocityDivergence
+
+
+==== Points
+Compute field at point
+
+[source,json]
+----
+"Points":
+{
+  "pointA":
+  {
+    "coord":"{0.6,0.2,0}",
+    "fields":"pressure"
+  },
+ "pointB":
+  {
+    "coord":"{0.15,0.2,0}",
+    "fields":"pressure"
+  }
+}
+----
+
+
+==== Flow rate
+
+==== Force
+compute lift and drag
+
+
+.Measure type and range type associated
+|===
+|Measure type | Range type | example
+
+|Points | coords | "{0,0,0}"
+|Maximum | markers | "marker1"
+|Minimum | markers | "marker1"
+|volume_variation* | - | "volume_variation":""
+|===
+
+*volume_variation does not take a set of point or of range, it is a volumic measure.
+
+The fields on which one can do measures:
+
+- Force
+- FlowRate
+- Pressure
+- VelocityDivergence
+
+[source,json]
+----
+"Functions":
+{
+    "toto":{ "expr":"x*y:x:y"},
+    "toto2":{ "expr":"0.5*ubar*x*y:x:y:ubar"},        
+    "totoV":{ "expr":"{2*x,y}:x:y"}
+},
+"PostProcess":
+{
+   "Fields":["velocity","pressure","pid","totoV","toto","toto2"],
+}  
+----
+
+== Action
+
+Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
+
+=== Feel++ code
+Here is the code 
+
+First at all, we define our model type with 
+
+----
+typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
+                                    Lagrange<OrderVelocity,Vectorial,Continuous,PointSetFekete>,
+                                    Lagrange<OrderPressure,Scalar,Continuous,PointSetFekete> > model_type;
+----
+
+We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure order. This definition allows us to create our fluid model object FM like this
+ 
+----
+auto FM = model_type::New("fluid");
+----
+
+The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
+
+With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by 
+
+----
+FM->init();
+FM->printAndSaveInfo();
+----
+
+Now that our model is completed, we can solve the associated problem. To begin the resolution
+
+----
+FM->isStationary()
+----
+
+determine if our model is stationary or not.
+
+If it is, then we need to solve our system only one time and export the obtained results.
+
+----
+FM->solve();
+FM->exportResults();
+----
+
+If it's not, our model is time reliant, and a loop on time is necessary. Our model is then solve and the results are export at each time step.
+
+----
+ for ( ; !FM->timeStepBase()->isFinished(); FM->updateTimeStep() )
+        {
+            FM->solve();
+            FM->exportResults();
+        }
+----
+
+==== Code
+
+[source,cpp]
+----
+{% include "../Examples/fluid_model.cpp" %}
+----
+
+
+=== Configuration file
+
+The config file is used to define options,  linked to our case, we would have the possibility to change at will. It can be, for example, files paths as follows
+
+----
+[fluid]
+geofile=$cfgdir/cavity3d.geo
+filename=$cfgdir/cavity3d.json
+
+[exporter]
+directory=applications/models/fluid/cavity3d/$fluid_tag
+----
+
+It can also be resolution dependent parameters such as mesh elements size, methods used  to define our problem and solvers.
+
+----
+[fluid]
+solver=Oseen #Picard,Newton
+
+linearsystem-cst-update=false
+jacobian-linear-update=false
+
+snes-monitor=true
+snes-maxit=100
+snes-maxit-reuse=100
+snes-ksp-maxit=1000
+snes-ksp-maxit-reuse=100
+
+pc-type=lu #gasm,lu,fieldsplit,ilu
+----
+In this case, we use Oseen to define our problem, we set the update of linear system constant and jacobian linear as "no update", we discretize values associated to SNES ( Scalable Nonlinear Equations Solvers ), and finally we choose LU as the preconditioner method.
+
+==== Code
+
+[source,cfg]
+----
+{% include "../Examples/cavity3d.cfg" %}
+----
+
+=== Json file
+
+First at all, we define some general information like the name ( and short name ) and the model we would like to use
+
+[source,json]
+----
+"Name": "Fluid Mechanics",
+"ShortName":"Fluid",
+"Model":"Navier-Stokes",
+----
+
+Then we define the link:#Material[material properties]. In our case, the fluid, define  by rho` its density in $$kg\cdot m^{-3}$$ and `mu` its dynamic viscosity in $$kg\cdot (m \cdot s)^{-1}$$, is the only material we have to define.
+
+[source,json]
+----
+"Materials":
+    {
+        "Fluid":{
+            "name":"myFluidMat",
+            "rho":"1.0",
+            "mu":"0.01"
+        }
+    },
+----
+
+The link:#Boundary_Conditions[boundary conditions] are the next aspect we define. Here, we impose on the velocity $$u_f$$ Dirichlet conditions at two specific places : `lid` and `wall`.
+
+[source,json]
+----
+"BoundaryConditions":
+    {
+        "velocity":
+        {
+            "Dirichlet":
+            {
+                "lid":
+                {
+                    "expr":"{ 1,0,0}:x:y:z"
+                },
+                "wall":
+                {
+                    "expr":"{0,0,0}"
+                }
+            }
+        }
+    }
+----
+
+The link:#Post_Process[post process] aspect is the last one to define. We choose the fields we want to export ( velocity, pressure and pid ). Furthermore, we want to measure forces on `wall` and the pressure at point $$A$$.
+
+[source,json]
+----
+"PostProcess":
+    {
+        "Fields":["velocity","pressure","pid"],
+        "Measures":
+        {
+            "Forces":"wall",
+            "Points":
+            {
+                "pointA":
+                {
+                    "coord":"{0.5,0.5,0.5}",
+                    "fields":"pressure"
+                }
+            }
+        }
+    }
+}
+----
+
+==== Code
+
+[source,json]
+----
+{% include "../Examples/cavity3d.json" %}
+----
+
+=== Compilation/Execution
+
+Once you've a build dir, you just have to realise the command `make` at 
+
+--------------------
+{buildir}/applications/models/fluid
+--------------------
+
+This will generate executables named `feelpp_application_fluid_*`. To execute it, you need to give the path of the cfg file associated to your case, with `--config-file`.
+
+For example
+
+----
+./feelpp_application_fluid_3d --config-file={sourcedir}/applications/models/fluid/cavity/cavity3d.cfg
+----
+
+is how to execute the case ahead.
+
+The result files are then stored by default in 
+
+----
+ feel/applications/models/fluid/{case_name}/
+   {velocity_space}{pression_space}{Geometric_order}/{processor_used}
+----
+
+If we return once again at our example, the result files are in 
+
+----
+ feel/applications/models/fluid/cavity3d/P2P1G1/np_1
+----
+
+

@@ -2,37 +2,28 @@ Feel++ on Mac OS X
 ==================
 :toc:
 :toc-placement: macro
-:toclevels: 2
+:toclevels: 3
 
-Feel++ is also supported on Mac operating systems, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra. 
+Feel++ is  supported on Mac OSX, starting from OS X 10.9 Mavericks to OS X 10.12 Sierra using <<Homebrew>> or <<MacPorts>>.
 
 toc::[]
 
-== Compilers
+== First step
 
-To make Feel\++ and `cmake` work properly, you first have to install Xcode for Gcc/clang.
-The easiest way to do so is to go through the App Store application and to search for Xcode. Xcode will provide your computer all the basic tools to compile, such as gcc and clang. It is the first step, you'll see later how to easily install the necessary tools to build Feel++.
+Xcode is required on Mac OSX to install Feel{plus}{plus}.
 
-=== Package management systems
+The easiest way to do so is to go through the Apple Store application and to search for Xcode. Xcode will provide the programming environment, _e.g_ clang, for the next steps.
 
-Currently, building Feel\++ is only available through http://brew.sh[Homebrew]. + 
-http://www.macports.org/install.php[MacPorts] versions are
-also present in the source tree of Feel++. +
-You can find a version using gcc in: +
-```
-<path to top feel directory>/ports/macosx/macports
-```
-and an experimental version using `clang/libc++` in: +
-```
-<path to top feel directory>/ports/macosx/macports-xc5
-```
+[[Homebrew]]
+== Homebrew
 
-=== Homebrew
+=== Introduction to HomeBrew
+Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the link:https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their link:http://brew.sh[website].
 
-Homebrew is a free/open source software introduced to simplify the installation of other free/open source software on MacOS X. Homebrew is distributed under the https://github.com/mxcl/homebrew/blob/master/Library/Homebrew/LICENSE[BSD] 2 Clause (NetBSD) license. For more information, visit their http://brew.sh[website].
+==== Installation
 
-> **Note**: To install the latest version of Homebrew, simply
-visit their http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
+To install the latest version of Homebrew, simply
+visit their link:http://brew.sh[website] and follow the instructions. Each new package Homebrew installs is built into an intermediate place called the Cellar (usually /usr/local/Cellar) and
 then the packages are symlinked into /usr/local (default).
 
 ==== Key commands 
@@ -47,112 +38,151 @@ Homebrew base command is `brew`. Here is a list of base available commands:
 
 * `brew uninstall mypackage`: This command allows to uninstall the package mypackage.
 
-==== Formula 
+==== Formulas 
 
-A Formula is a https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: https://github.com/feelpp/homebrew-science[feelpp/homebrew-science].
+A Formula is a link:https://www.ruby-lang.org[Ruby] script format specific to Homebrew. It allows to describe the installation process of a package. Feel\++ uses specific Formulae that you can get in the Feel++ github repository: link:https://github.com/feelpp/homebrew-feelpp[feelpp/homebrew-feelpp].
 
-====  First time installation: Homebrew and Feel++
+===  Installation
 
-This section is aimed at users that do not have Homebrew already installed. + 
+This section is aimed at users that do not have Homebrew already installed. +
 In order to build Feel++ from Homebrew, you have to do the following steps:
+
+First install Homebrew
+[source,sh]
+----
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+----
+
+then check your Homebrew installation and fix warnings/errors if necessary
 
 [source,sh]
 ----
-# Install Homebrew:
-ruby -e "$ (curl -fsSL https://raw.github.com/feelpp/homebrew/go/install)"
+$ brew doctor
+----
 
-# Check that everything is ok or fix warnings/errors if necessary:
-brew doctor
+Install Homebrew-science tap to get the link:prerequisites.adoc[scientific software] recommended or suggested for Feel{plus}{plus}.
+----
+$ brew tap homebrew/homebrew-science 
+----
+you should see something like
+[source,sh]
+----
+==> Tapping homebrew/science
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-science'...
+remote: Counting objects: 661, done.
+remote: Compressing objects: 100% (656/656), done.
+remote: Total 661 (delta 0), reused 65 (delta 0), pack-reused 0
+Receiving objects: 100% (661/661), 591.93 KiB | 0 bytes/s, done.
+Tapped 644 formulae (680 files, 1.9M)
+----
 
-# Get the specific Feel++ Formulae on the Github repository of feelpp:
-brew tap feelpp/science
+Next you install Feel{plus}{plus} tap with
+[source,sh]
+----
+brew tap feelpp/homebrew-feelpp
+----
+you should read something like
+[source,sh]
+----
+==> Tapping feelpp/feelpp
+Cloning into '/usr/local/Homebrew/Library/Taps/feelpp/homebrew-feelpp'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+Tapped 1 formula (30 files, 60.7K)
+----
 
-# Finally either:
-# - Install Feel++ and all its dependencies:
-brew install feelpp
-# - Or install only the dependencies:
-# (Useful if you plan to build Feel++ from sources)
-brew install --only-dependencies feelpp
+The final step is to either install Feel{plus}{plus} 
+[source,sh]
+----
+$ brew install feelpp
+----
+
+or just Feel{plus}{plus} dependencies if you plan to build Feel++ from sources yourself
+[source,sh]
+----
+$ brew install --only-dependencies feelpp
 ----
 
 > **Note** If you encounter problems, you can fix them using `brew doctor`. A frequent issue is to force `open-mpi` with `brew link --overwrite open-mpi`
 
-////
-or in a more detailed way:
-
-----
-# Install Homebrew:
-ruby -e "$ (curl -fsSL https://raw.github.com/feelpp/homebrew/go)"
-# Check that everything is ok or fix warnings/errors if necessary:
-brew doctor
-# Get the Formulae specific to Feel++ on the github of feelpp:
-brew tap feelpp/science
-# Install openmpi with c++11 support:
-brew install open-mpi --c++11
-# Install boost:
-brew install boost --without-python --without-single --without-static --with-mpi --c++11
-# Install Ann, Petsc, Gmsh and HDF5:
-brew install ann && brew install petsc && brew install gmsh && brew install hdf5
-# Install Feel++:
-brew install feelpp
-----
-////
-
-And you should be set to use Feel++ on MacOS X.
-
-====  Advanced usage: Homebrew and Feel++ dependencies
+===  Advanced usage
 
 If Homebrew is already installed on your system, you might want to customize your installation for the correct dependencies to be met for Feel++.
 
+==== Feel++ Dependencies
 You can browse Feel++ dependencies using the following command:
 
 [source,sh]
 ----
-brew deps feelpp
+$ brew deps feelpp | column
 ----
 
+you get the list of formulas Feel{plus}{plus} depends on for its installation
+[source,txt]
+----
+ann		fftw		libtool		slepc
+arpack		gcc		metis		suite-sparse
+autoconf	glpk		mumps		sundials
+automake	gmp		netcdf		superlu
+boost		gmsh		open-mpi	superlu_dist
+cln		hdf5		parmetis	szip
+cmake		hwloc		petsc		tbb
+eigen		hypre		scalapack	veclibfort
+----
+
+==== Customizing builds
 If you want to customize the compilation process for a dependency (Set debug mode, Remove checking steps, Remove the link with certain libraries, etc.), you can access to the building options with the `info` flag. For exemple, with open-mpi:
 
 [source,sh]
 ----
-user@server: brew info open-mpi
-
-open-mpi: stable 1.7.5
-http://www.open-mpi.org/
-Conflicts with: lcdf-typetools, mpich2
-/usr/local/Cellar/open-mpi/1.7.5 (761 files, 23M) *
-  Built from source
-From: https://github.com/Homebrew/homebrew/commits/master/Library/Formula/open-mpi.rb
-==> Dependencies
-Required: libevent
-==> Options
---c++11
-    Build using C++11 mode
---disable-fortran
-    Do not build the Fortran bindings
---enable-mpi-thread-multiple
-    Enable MPI_THREAD_MULTIPLE
+$ brew info open-mpi
 ----
 
-Then, you then just have to pass the needed flags, when installing the dependency. When you install feelpp with `brew install feelpp`, the default flags for each dependency will be used. If you require specific flags, first install the dependency with the correct flags before installing Feel++.
+You get various information about the `open-mpi` formula
+[source,sh]
+----
+open-mpi: stable 2.0.1 (bottled), HEAD
+High performance message passing library
+https://www.open-mpi.org/
+Conflicts with: lcdf-typetools, mpich
+/usr/local/Cellar/open-mpi/2.0.1 (688 files, 8.6M) *
+  Built from source on 2016-09-26 at 10:36:46 with: --c++11 --with-mpi-thread-multiple
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/open-mpi.rb
+==> Dependencies
+Required: libevent ✔
+==> Requirements
+Recommended: fortran ✔
+Optional: java ✔
+==> Options
+--c++11
+	Build using C++11 mode
+--with-cxx-bindings
+	Enable C++ MPI bindings (deprecated as of MPI-3.0)
+--with-java
+	Build with java support
+--with-mpi-thread-multiple
+	Enable MPI_THREAD_MULTIPLE
+--without-fortran
+	Build without fortran support
+--HEAD
+	Install HEAD version
+----
 
-**Important:** Needed dependencies for Feel++:
+Then, you then just have to pass the needed flags, when installing the dependency. 
 
-- `boost` needs to be installed with the following flags: `--without-python --without-single --without-static --with-mpi --c++11`.
-- `mumps` needs to be installed with the following flag: `--with-scotch5`
-
-**Tips:** Reducing the compilation time:
-
-- `scalapack` can be installed with the following flag: `--without-check`
+> **Important:**  `boost` has to be installed with mpi and c++11 support and `mumps` needs to be installed with the following scotch5 support.
 
 
-=== MacPorts
+[[MacPorts]]
+== MacPorts
 
-==== Introduction
+=== Introduction
 
-MacPorts is an open-source community projet which aims to design an easy-to-use system for compiling, installing and upgrading open-source software on Mac OS X operating system. It is distributed under http://opensource.org/licenses/bsd-license.php[BSD License] and facilitate the access to thousands of ports (software) without installing or compiling open-source software. MacPorts provides a single software tree which includes the latest stable releases of approximately 17700 ports targeting the current Mac OS X release (10.9). If you want more information, please visit their http://www.macports.org/[website].
+MacPorts is an open-source community projet which aims to design an easy-to-use system for compiling, installing and upgrading open-source software on Mac OS X operating system. It is distributed under link:http://opensource.org/licenses/bsd-license.php[BSD License] and facilitate the access to thousands of ports (software) without installing or compiling open-source software. MacPorts provides a single software tree which includes the latest stable releases of approximately 17700 ports targeting the current Mac OS X release (10.9). If you want more information, please visit their link:http://www.macports.org/[website].
 
-==== Installation
+==== MacPorts Installation
 
 To install the latest version of MacPorts, please go
 to http://www.macports.org/install.php[Installing
@@ -190,7 +220,7 @@ corresponding Portfile but it's only a part of a port description.
 Feel\++ provides some mandatory Portfiles for its compilation which are either not available in MacPorts or are buggy but Feel++ also provides some Portfiles which are already available in MacPorts such as gmsh or petsc. They usually provide either some fixes to ensure Feel++ works properly or new version not yet available in MacPorts. These Portfiles are installed in `ports/macosx/macports`.
 
 
-==== MacPorts and Feel++
+=== Installation
 
 To be able to install Feel++, add the following line in
 `/opt/local/etc/macports/source.conf` at the top of the file
@@ -205,8 +235,8 @@ Once it's done, type in a command-line:
 
 [source,sh]
 ----
-  cd <your path to feel top directory>/ports/macosx/macports
-  sudo portindex -f
+ $ cd <your path to feel top directory>/ports/macosx/macports
+ $ sudo portindex -f
 ----
 
 You should have an output like this:
@@ -228,7 +258,7 @@ Your are now able to type
 
 [source,bash]
 ----
-  sudo port install feel++
+$ sudo port install feel++
 ----
 
 It might take some time (possibly an entire day) to compile all the requirements for Feel++ to compile properly. If you have several cores on your MacBook Pro, iMac or MacBook, we suggest that you configure macports to use all or some of them.
@@ -245,20 +275,5 @@ At the end of the `sudo port install feel++`, you have all
 dependencies installed. To build all the Makefile, `\cmake` is
 automatically launched but can have some libraries may not be found but they are not mandatory for build Feel{plus}+, only the features related to the missing libraries will be missing.
 
-==== Missing ports
+> **Note** on missing ports: `cmake` can build Makefiles even if some packages are missing (latex2html, VTK ...). It's not necessary to install them but you can complete the installation with MacPorts, `cmake` will find them by itself once they have been installed.
 
-`cmake` can build Makefiles even if some packages are missing
-(latex2html, VTK ...). It's not necessary to install them but you can complete the installation with MacPorts, `cmake` will find them by itself once they have been installed.
-
-==== MacPorts and XCode 5
-
-There is an experimental version of ports for Feel\++ in `<path to top feel directory>/ports/macosx/macports-xc5`. Using these ports will set up the compilation using clang and libc+\+. The process is similar to the one previously described for MacPorts, except for one point: Before starting to install packages, you must switch to the llvm c++ standard library by adding the following line to your macports.conf
-
-file:
-
-[source,bash]
-----
-cxx_stdlib  libc++
-----
-
-This requires MacPorts to be at least on version 2.2.1 for the flag to be recognized and will normally cause all the packages you will install to be recompiled using libc\++ instead of libstdc++.

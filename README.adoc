@@ -165,3 +165,19 @@ It detect automatically the C++ syntax + feelpp syntax
 (.link:https://github.com/gdolle/gitbook-plugin-ace-mode-feelpp[ace-mode-feelpp]
 plugin)
 
+=== 6.3 Math
+
+There're many ways to write math formula. We ask you to use this latex delimiters
+`\( \)` and `\[ \]` for keeping latex and asciidoctor compatibility.
+
+**You might have to escape these delimiters with `\` and write `\\( \\)` or
+`\\[ \\]` instead! See other source codes**
+
+Example of usage:
+```
+This is an inline formula \( \lambda \) math
+This is an block formula
+\[
+    \lambda
+\]
+```
