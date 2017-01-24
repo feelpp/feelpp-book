@@ -1,0 +1,16 @@
+Conventions used in this book
+=============================
+
+The following typographical conventions are used in the book
+
+_Italic_ indicates new terms
+
+`typewriter` is used on program listings as well as when referring to programming elements, _e.g._ functions, variables, statements, data types, environment variables or keywords.
+
+`$ typewriter` or `> typewriter` displays commands that the user types literally without the `$` or `>`.
+
+> **Tip:** this is a tip or a suggestion.
+
+> **Note:** this is a general note.
+
+> **Warning:** this is a general warning.

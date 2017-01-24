@@ -1,6 +1,0 @@
-Learning by Example
-===================
-
-
-- link:CFD/README.adoc[CFD]
-- link:Optimization/README.adoc[Optimization]

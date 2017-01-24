@@ -1,0 +1,14 @@
+Getting Started
+===============
+
+This section describes the available ways to to download, compile and install Feel++.
+
+. link:prerequisites.adoc[Prerequisites]
+. link:docker.adoc[Docker  (recommended)]
+. link:linux.adoc[Linux]
+. link:mac.adoc[MacOS X]
+. link:building.adoc[Build from sources]
+
+
+
+ 

@@ -1,0 +1,207 @@
+The Laplacian
+=============
+:toc:
+:toc-placement: macro
+:toclevels: 3
+
+toc::[]
+
+== Problem statement
+
+We are interested in this section in the _conforming finite element approximation_ of the following problem:
+
+[[laplacian]]
+.Laplacian problem
+****
+Look for $$u$$ such that                              
+
+$$     
+\left\{\begin{split}                                                                                                                                                                                                                                                                           
+     -\Delta u &= f \text{ in } \Omega\\                                                                                                                                       
+      u &= g \text{ on } \partial \Omega_D\\
+\frac{\partial u}{\partial n} &=h \text{ on } \partial \Omega_N\\
+\frac{\partial u}{\partial n} + u &=l \text{ on } \partial \Omega_R
+ \end{split}\right.
+$$ 
+****
+
+CAUTION: $$\partial \Omega_D$$, $$\partial \Omega_N$$ and $$\partial \Omega_R$$ can be empty sets. In the case $$\partial \Omega_D =\partial \Omega_R = \emptyset$$, then the solution is known up to a constant.
+
+[NOTE]
+======
+In the implementation presented later, $$\partial \Omega_D =\partial \Omega_N = \partial \Omega_R = \emptyset$$, then we set Dirichlet boundary conditions all over the boundary. The problem then reads like a standard laplacian with inhomogeneous Dirichlet boundary conditions:
+
+.Laplacian Problem with homogeneous Dirichlet conditions
+****
+Look for $$u$$ such that                              
+
+$$                                                                                                                                                                                                                                                                            
+-\Delta u = f\ \text{ in } \Omega,\quad u = g \text{ on } \partial \Omega
+$$ 
+****
+======
+
+
+== Variational formulation
+
+We assume that $$f, h, l \in L^2(\Omega)$$. The weak formulation of the problem then reads:                                                                                                                                            
+
+.Laplacian problem variational formulation
+****
+Look for $$u \in H^1_{g,\Gamma_D}(\Omega)$$ such that                                                                                                                                    
+
+$$                                                                                                                                                           
+\displaystyle\int_\Omega \nabla u \cdot \nabla v +\int_{\Gamma_R} u v = \displaystyle \int_\Omega f\ v+ \int_{\Gamma_N} g\ v + \int_{\Gamma_R} l\ v,\quad \forall v \in H^1_{0,\Gamma_D}(\Omega)                                                                              
+$$ 
+****
+
+== Conforming Approximation
+                                                                                                                                                            
+We now turn to the finite element approximation using Lagrange finite element. We assume $$\Omega$$ to be a segment in 1D, a polygon in 2D or a polyhedron in 3D.   
+We denote $$V_\delta  \subset H^1(\Omega)$$ an approximation space such that $$V_{g,\delta} \equiv P^k_{c,\delta}\cap H^1_{g,\Gamma_D}(\Omega) $$.
+
+The weak formulation reads: 
+
+.Laplacian problem weak formulation
+****
+Look for $$u_\delta \in V_\delta  $$ such that                                                                                                                                    
+
+$$                                                                                                                                                           
+\displaystyle\int_{\Omega_\delta} \nabla u_{\delta} \cdot \nabla v_\delta +\int_{\Gamma_{R,\delta}} u_\delta\ v_\delta = \displaystyle \int_{\Omega_\delta} f\ v_\delta+ \int_{\Gamma_{N,\delta}} g\ v_\delta + \int_{\Gamma_{R,\delta}} l\ v_\delta,\quad \forall v_\delta \in V_{0,\delta}                                                      
+$$ 
+****
+
+NOTE: from now on, we omit $$\delta$$ to lighten the notations. Be careful that it appears both the geometrical and approximation level.
+
+
+
+[[implementation]]
+== Feel++ Implementation   
+
+In Feel{plus}{plus},  $$V_{g,\delta}$$ is not built but rather                                                                                                                 
+$$P^k_{c,\delta}$$. 
+
+NOTE: The Dirichlet boundary conditions can be treated using different techniques and we use from now on the elimination technique.
+
+We start with the mesh
+
+[include:"mesh"](qs_laplacian.cpp)
+
+
+NOTE: the keyword `auto` enables type inference, for more details see link:https://en.wikipedia.org/wiki/C%2B%2B11#Type_inference[Wikipedia C{plus}{plus}11 page]. 
+
+
+Next the discretization setting by first defining `Vh=Pch<k>(mesh)` $$\equiv P^k_{c,h}$$, then elements of `Vh` and expressions `f`, `n` and `g` given by command line options or configuration file.
+
+[include:"discr"](qs_laplacian.cpp)
+
+[NOTE]
+======
+at the following line
+[include:"v"](qs_laplacian.cpp)
+`v` is set to the expression `g`, which means more precisely that `v` is the interpolant of `g` in `Vh`. 
+======
+
+the variational formulation is implemented below, we define the bilinear form `a` and linear form `l` and we set _strongly_ the Dirichlet boundary conditions with the keyword `on` using elimination. If we don't find  `Dirichlet`, `Neumann` or `Robin` in the list of physical markers in the mesh data structure then we impose Dirichlet boundary conditions all over the boundary.
+
+[include:"vf"](qs_laplacian.cpp)
+
+[NOTE]
+======
+We have the following correspondance:
+
+|===
+| Element sets  | Domain
+
+| `elements(mesh)` | $$\Omega$$ 
+| `boundaryfaces(mesh)` | $$\partial \Omega$$ 
+
+| `markfaces(mesh,"Dirichlet")`  |  $$\Gamma_D$$
+| `markfaces(mesh,"Neumann")`  |  $$\Gamma_R$$
+| `markfaces(mesh,"Robin")`  |  $$\Gamma_R$$
+
+|===
+
+======
+
+next we solve the algebraic problem
+
+.Listing: solve algebraic system
+[include:"solve"](qs_laplacian.cpp)
+
+next we compute the $$L^2$$ norm of $$u_\delta-g$$, it could serve 
+as an $$L^2$$ error if $$g$$ was manufactured to be the exact solution of the <<laplacian>>.
+
+[include:"ug"](qs_laplacian.cpp)
+
+
+and finally we export the results, by default it is in the ensight  gold format and the files can be read with Paraview and Ensight. We save both $$u$$ and $$g$$.
+
+.Listing: export Laplacian results
+[include:"export"](qs_laplacian.cpp)
+
+== Testcases
+
+The <<implementation>> comes with testcases in 2D and 3D.
+
+=== circle
+
+`circle` is a 2D testcase where $$\Omega$$ is a disk whose boundary has been split such that $$\partial \Omega=\partial \Omega_D \cup \partial \Omega_N \cup \partial \Omega_R$$.
+
+Here are some results we can observe after use the following command
+
+[source,bash]
+----
+cd Testcases/quickstart/circle
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file circle.cfg
+----
+
+This give us some data such as solution of our problem or the mesh used in the application.
+
+[cols="^,^"]
+|========
+|image:../../../figures/pngs/Laplacian/TestCases/Circle/ucircle.png[]|image:../../../figures/pngs/Laplacian/TestCases/Circle/meshCircle.png[]
+|Solution $$u_\delta$$| Used mesh
+|========
+
+
+=== feelpp2d and feelpp3d
+
+This testcase solves the <<laplacian>> in $$\Omega$$ an quadrangle or hexadra containing the letters of Feel{plus}{plus}
+
+==== feelpp2d
+
+After running the following command
+
+[source,bash]
+----
+cd Testcases/quickstart/feelpp2d
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_2d --config-file feelpp2d.cfg
+----
+
+we obtain the result $$u_\delta$$ and also the mesh 
+
+[cols="^,^"]
+|======
+|image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/ufeelpp2d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp2d/meshfeelpp2d.png[]
+|Solution $$u_\delta$$| Used mesh
+|======
+
+==== feelpp3d
+
+We can launch this application with the current line
+
+[source,bash]
+----
+cd Testcases/quickstart/feelpp3d
+mpirun -np 4 /usr/local/bin/feelpp_qs_laplacian_3d --config-file feelpp3d.cfg
+----
+
+When it's finish, we can extract some informations 
+
+[cols="^,^"]
+|======
+|image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/ufeelpp3d.png[]|image:../../../figures/pngs/Laplacian/TestCases/Feelpp3d/meshfeelpp3d.png[]
+|Solution $$u_\delta$$| Used mesh
+|======
+

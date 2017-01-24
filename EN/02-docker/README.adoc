@@ -1,8 +1,0 @@
-Docker
-======
-
-Docker is the recommend way if you are beginning learning the Feel++ language.
-This section will explain you step by step how to get a Feel++ docker image,
-how to execute a precompiled application, how to parameter and run models.
-
-Before going further, you should have read the [[02-installation/docker.html]]
