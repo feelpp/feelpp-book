@@ -46,11 +46,11 @@ $$
     \mathbf{u} & = \mathbf{0}\ \text{sur}\ \partial \Omega
 \end{split}
 $$
-where $${\mathrm{Gr}}$$
-is the Grashof number, $$\mathbf{u}$$ the adimensionalized
-velocity and $$p$$ adimensionalized pressure and
-$$\theta$$ the adimensionalized temperature. The temperature
-is in fact the difference between the temperature in the tank and the
+
+where $$\mathrm{Gr}$$ is the Grashof number, $$\mathbf{u}$$ the
+adimensionalized velocity and $$p$$ adimensionalized pressure and
+$$\theta$$ the adimensionalized temperature. The temperature is in
+fact the difference between the temperature in the tank and the
 temperature $$T_0$$ on boundary $$\Gamma_1$$.
 
 The heat equation reads:
@@ -63,6 +63,7 @@ $$
   \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
 \end{split}
 $$
+
 where $$\mathrm{Pr}$$ is the Prandtl number.
 
 [[sec:infl-des-param]]
