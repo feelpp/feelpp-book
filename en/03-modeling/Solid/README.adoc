@@ -169,61 +169,13 @@ dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
 
 === Robin
 
+== Volumic forces
+see FluidMechanics models
 
-
-.Boundary conditions
-|===
-| Name | Options | Type 
-
-| Dirichlet 
-| faces, edges and component-wise
-| "Dirichlet"
-
-| Neumann 
-| scalar, vectorial
-| "Neumann_scalar" or "Neumann_vectorial"
-
-| Pressure follower ,
-| Nonlinear boundary condition set in deformed domain
-| TODO
-
-| Robin 
-| TODO
-| TODO
-
-|===
-
-.Volumic forces
-|===
-| Name | Options | Type
-
-| Expression
-| Vectorial
-| "VolumicForces"
-
-|===
 
 == Post Process
 
-[source,json]
-----
-"PostProcess":
-{
-    "Fields":["field1","field2",...],
-    "Measures":
-    {
-        "<measure type>":
-        {
-            "label":
-            {
-                "<range type>":"value",
-                "fields":["field1","field3"]
-            }
-        }
-    }
-}
-----
-
+=== Exports for visualisation
 The fields allowed to be exported in the `Fields` section are:
 
 - displacement
@@ -238,6 +190,46 @@ The fields allowed to be exported in the `Fields` section are:
 - Tresca
 - principal-stresses
 - all
+
+=== Measures
+
+ - Points
+ - Maximum
+ - Minimum
+ - VolumeVariation
+
+==== Points
+Same syntax as FluidMechanics with available Fields :
+- displacement
+- velocity
+- acceleration
+- pressure
+- principal-stress-0
+- principal-stress-1
+- principal-stress-2
+- sigma_xx, sigma_xy, ...
+
+==== Maximum/Minimum
+The Maximum and minimum can be evaluated and save on .csv file. User need to define (i) <Type> ("Maximum" or "Minimum"), 
+(ii) "<tag>" representing this data in the .csv file, (iii) "<marker>" representing the name of marked entities and (iv) the field where extremum is computed.
+
+[source,json]
+----
+"<Type>":
+{
+    "<tag>":
+    {
+        "markers":"marker>",
+        "fields":["displacement","velocity"]
+    }
+}
+
+==== VolumeVariation
+
+"Measures":
+{
+    "VolumeVariation":""
+}
 
 .Measure type and range type associated
 |===
