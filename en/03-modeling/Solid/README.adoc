@@ -200,6 +200,7 @@ The fields allowed to be exported in the `Fields` section are:
 
 ==== Points
 Same syntax as FluidMechanics with available Fields :
+
 - displacement
 - velocity
 - acceleration
@@ -226,35 +227,10 @@ The Maximum and minimum can be evaluated and save on .csv file. User need to def
 ----
 
 ==== VolumeVariation
-
-"Measures":
-{
-    "VolumeVariation":""
-}
-
-.Measure type and range type associated
-|===
-|Measure type | Range type | example
-
-|Points | coords | "{0,0,0}"
-|Maximum | markers | "marker1"
-|Minimum | markers | "marker1"
-|volume_variation* | - | "volume_variation":""
-|===
-
-*volume_variation does not take a set of point or of range, it is a volumic measure.
-
-The fields on which one can do measures:
-
-- volume_variation
-- displacement
-- velocity
-- acceleration
-- pressure
-- principal-stress-0
-- principal-stress-1
-- principal-stress-2
-- sigma_xx, sigma_xy, ...
+[source,json]
+----
+"VolumeVariation":<marker>
+----
 
 == Action
 
