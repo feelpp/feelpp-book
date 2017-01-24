@@ -186,7 +186,7 @@ For example, for CFD2 case executed on $$12$$ processors, with a $$P_2$$ velocit
 
 [source,sh]
 ----
-feel/applications/models/fluid/TurekHron/cfd2/P2P1G1/np_12
+feel/toolboxes/fluid/TurekHron/cfd2/P2P1G1/np_12
 ----
 
 
@@ -210,7 +210,7 @@ Here are results from the different cases studied in this benchmark.
 |3|59650|1228831 ($$P_4/P_3$$)|14.280|1.119
 |===
 
-All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/applications/models/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd1.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd1.json[json file]]
+All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/toolboxes/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd1.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd1.json[json file]]
 
 === CFD2
 .Results for CFD2
@@ -226,7 +226,7 @@ All the files used  for this case can be found in this https://github.com/feelpp
 |3|59650|1228831 ($$P_4/P_3$$)|136.66|10.533
 |===
 
-All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/applications/models/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd2.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd2.json[json file]]
+All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/toolboxes/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd2.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd2.json[json file]]
 
 === CFD3
 
@@ -286,7 +286,7 @@ $$
 |3|2334|49266$$(P_4/P_3)$$|3|440.06 ± 5.7773[4.3945]|-14.092 ± 440.07[4.3945]
 |===
 
-All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/applications/models/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd3.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/applications/models/fluid/TurekHron/cfd3.json[json file]].
+All the files used  for this case can be found in this https://github.com/feelpp/feelpp/tree/develop/toolboxes/solid/TurekHron[rep] [https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd.geo[geo file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd3.cfg[config file], https://github.com/feelpp/feelpp/tree/develop/toolboxes/fluid/TurekHron/cfd3.json[json file]].
 
 image::fullview.png[]
 $$
