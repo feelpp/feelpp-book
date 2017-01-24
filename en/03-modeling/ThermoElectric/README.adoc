@@ -6,7 +6,7 @@
 
 toc::[]
 
-Let $$\Omega \subset \mathbb{R}^d, d=2,3$$ with $$\partial\Omega=\Gamma=\Gamma_{C}\cup\Gamma_{T}=\Gamma_E\cup\Gamma_{in}\cup\Gamma_{out}$$. 
+Let $$\Omega \subset \mathbb{R}^d, d=2,3$$ with $$\partial\Omega=\Gamma=\Gamma_{C}\cup\Gamma_{T}=\Gamma_E\cup\Gamma_{in}\cup\Gamma_{out}$$.
 We are interested in defining and solving an thermo-electric model involving the coupling of electrostatic and heat transfer models.
 
 == Electrostatic problem
@@ -40,7 +40,8 @@ The thermal exchanges with air are not considered, leading to a Neumann conditio
 
 == Thermo-Electric problem
 
-In the thermo-electric model, we have 4 parameters $$\sigma, k, T_c, h$$ which can be scalars or fields.
+In the thermo-electric model, we have 4 parameters
+$$\sigma, k, T_c, h$$ which can be scalars or fields.
 
 We gather in the following table parameter ranges, nominal values as well as units for $$\sigma, k, T_c, h$$.
 
@@ -57,17 +58,19 @@ In the linear case, we first solve for $$V$$ and then  for $$T$$ using $$V$$ to 
 
 == Running the Thermo-electric application
 
-Using link:../../GettingStarted/docker.adoc[Feel++ for Docker] , you can run Feel++ model application and in particular the thermo-electric model using the following command
+Using link:../../02-docker/feelpp-containers.adoc[] , you can run Feel++ model application and in particular the thermo-electric model using the following command
 
+.Docker command
 [source,shell]
 ----
-docker run -it -v $HOME/feel:/feel feelpp/apps:latest
+$ docker run -it -v $HOME/feel:/feel feelpp/feelpp-toolboxes:latest
 ----
 
 Then type the following command in docker environment to run the model
+
+.Running Thermo-Electric model
 [source,shell]
 ----
-cd Testcases/models/thermoelectric/test
-mpirun -np 4 /usr/local/bin/feelpp_application_thermoelectric_3d --config-file model.cfg
+$ cd Testcases/models/thermoelectric/test
+$ mpirun -np 4 /usr/local/bin/feelpp_toolbox_thermoelectric_3d --config-file model.cfg
 ----
-
