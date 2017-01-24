@@ -54,13 +54,12 @@ temperature $$T_0$$ on boundary $$\Gamma_1$$.
 
 The heat equation reads:
 $$
-\label{eq:37}
-  \begin{split}
-    \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\ensuremath{\mathrm{Gr}\xspace}}}{\ensuremath{\mathrm{Pr}\xspace}}} \Delta \theta &= 0\\
-    \theta &= 0\ \text{sur}\ \Gamma_1\\
-    \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
-    \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
-  \end{split}
+\begin{split}
+  \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\ensuremath{\mathrm{Gr}\xspace}}}{\ensuremath{\mathrm{Pr}\xspace}}} \Delta \theta &= 0\\
+  \theta &= 0\ \text{sur}\ \Gamma_1\\
+  \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
+  \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
+end{split}
 $$
 where $$\mathrm{Pr}$$ is the Prandtl number.
 
@@ -118,7 +117,6 @@ top semi-segment located at $$W/2$$ with height
 $$1/2$$, see figure [fig:heatns:1]. The flow rate, denoted
 $$\mathrm{D}_f$$, reads
 $$
-\label{eq:17}
   \mathrm{D}_f =  \int_{\Gamma_f} \mathbf{u} \cdot \mathbf{e}_1
 $$
 
