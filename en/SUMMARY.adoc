@@ -23,11 +23,11 @@
 
 == Solving PDEs using Feel++ Toolboxes
 . link:03-modeling/README.adoc[Modeling with Feel++]
-.. link:03-modeling/Models/Fluid/README.adoc[Computation Fluid Mechanics]
-.. link:03-modeling/Models/Solid/README.adoc[Computation Solid Mechanics]
-.. link:03-modeling/Models/FluidStructure/README.adoc[Fluid Structure Interaction]
-.. link:03-modeling/Models/Advection/README.adoc[Advection Model]
-.. link:03-modeling/Models/thrmoelectric.adoc[ThermoElectric]
+.. link:03-modeling/Fluid/README.adoc[Computation Fluid Mechanics]
+.. link:03-modeling/Solid/README.adoc[Computation Solid Mechanics]
+.. link:03-modeling/FluidStructure/README.adoc[Fluid Structure Interaction]
+.. link:03-modeling/Advection/README.adoc[Advection Model]
+.. link:03-modeling/ThermoElectric/README.adoc[ThermoElectric]
 . link:05-learning/README.adoc[Learning By Example]
 .. link:05-learning/Generic/README.adoc[Generic PDEs]
 ... link:05-learning/Generic/laplacian.adoc[Laplacian]
