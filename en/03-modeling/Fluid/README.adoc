@@ -78,7 +78,7 @@ In next table, we find the correspondance between the mathematical names and the
 
 |===
 
-A `Materials` section is introduced in json file in order to configure the fluid properties. For each mesh marker, we can defined the material properties associated.
+A `Materials` section is introduced in json file in order to configure the fluid properties. For each mesh marker, we can define the material properties associated.
 
 [source,json]
 .Listing : Materials section
@@ -94,15 +94,14 @@ A `Materials` section is introduced in json file in order to configure the fluid
 }
 ----
 === Generalised Newtonian fluid
-A non newtonian fluid is characterized by a non constant viscosity which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introduce the a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
+A non newtonian fluid is characterized by a non constant viscosity, which is a function of strain rate $$\boldsymbol{D}\left(\boldsymbol{u}_{f}\right)$$. We start by introducing a metric of the rate of deformation, denoted by $$\dot{\gamma}$$ :
 
 $$
 \dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
 $$
 
-and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$.
-The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model wich
-takes the useful form :
+In this way, we represent the viscosity $$\mu_f$$ as a function of $$\dot{\gamma}$$.
+The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model, which takes the useful form:
 
 $$
   \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)
