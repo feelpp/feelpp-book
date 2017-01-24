@@ -38,14 +38,15 @@ the tank when varying them.
 
 The adimensionalized steady incompressible Navier-Stokes equations
 reads: 
+
 $$
-  \begin{split}
+\begin{split}
     \mathbf{u}\cdot\nabla \mathbf{u} +\nabla p -\frac{1}{\sqrt{{\mathrm{Gr}}}} \Delta \mathbf{u} &= \theta \mathbf{e}_2\\
     \nabla \cdot \mathbf{u} & = 0\ \text{sur}\ \Omega\\
     \mathbf{u} & = \mathbf{0}\ \text{sur}\ \partial \Omega
-  \end{split}
+\end{split}
 $$
- where $${\mathrm{Gr}}$$
+where $${\mathrm{Gr}}$$
 is the Grashof number, $$\mathbf{u}$$ the adimensionalized
 velocity and $$p$$ adimensionalized pressure and
 $$\theta$$ the adimensionalized temperature. The temperature
