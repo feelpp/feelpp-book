@@ -97,8 +97,7 @@ We consider first the mean temperature on boundary
 $$\Gamma_3$$
 
 $$
-\label{eq:16}
-  T_3 = \int_{\Gamma_3} \theta
+T_3 = \int_{\Gamma_3} \theta
 $$
 
 This quantity should decrease with increasing Grashof because the fluid
