@@ -23,7 +23,8 @@ toc::[]
 
 == Models
 
-Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
+Navier-Stokes model is used to model incompressible Newtonian fluid.
+It can be described by these conservative laws :
 
 * momentum conservation equation
 
