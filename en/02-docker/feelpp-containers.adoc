@@ -4,7 +4,7 @@ Feel++ Containers
 :toc-placement: macro
 :toclevels: 2
 
-Feel++ leverages the power of Docker and provides a stack of container images. 
+Feel++ leverages the power of Docker and provides a stack of container images.
 
 toc::[]
 
@@ -24,12 +24,12 @@ This may take a while depending on your internet connection but eventually you s
 ----
 Unable to find image 'feelpp/feelpp-env:latest' locally
 latest: Pulling from feelpp/feelpp-env
-8e21f82d32cf: Pull complete 
+8e21f82d32cf: Pull complete
 [...]
-0a8dee947f9b: Pull complete 
+0a8dee947f9b: Pull complete
 Digest: sha256:457539dbd781594eccd4ddf26a7aefdf08a2fff9dbeb1f601a22d9e7e3761fbc
 Status: Downloaded newer image for feelpp/feelpp-env:latest
-Hello World! 
+Hello World!
 ----
 
 We have called the `docker run` command which takes care of executing containers. We passed the argument `feelpp/feelpp-env` which is a Feel{plus}{plus} Ubuntu 16.10 container with the required programming and execution environment for Feel{plus}{plus}.
@@ -65,36 +65,36 @@ The naming convention of the FCS allows the user to know where they come from an
 feelpp/feelp-<component>[:tag]
 ----
 
-where 
+where
 
- * `feelpp/` is the namespace of the image and organization name 
+ * `feelpp/` is the namespace of the image and organization name
  * `feelpp-<component>` the image name and Feel++ component
  * `[:tag]` an optional tag for the image, by default set to `:latest`
- 
+
 Feel++ images(components) are defined as layers in the FCS in the table below
 
 .Table of the current components of the FCS
 |===
 | Component | Description | Built From
 
-| `feelpp-env` | Execution and Programming environment | <OS> 
+| `feelpp-env` | Execution and Programming environment | <OS>
 | `feelpp-libs`  | Feel++ libraries and tools | `feelpp-env`
-| `feelpp-base` | Feel++ base applications | `feelpp-libs` 
+| `feelpp-base` | Feel++ base applications | `feelpp-libs`
 | `feelpp-toolboxes` | Feel++ toolboxes   | `feelpp-toolboxes`
 
 |===
 
-| **Note:** `feelpp-env` depends on an operating system image `<OS>`, the recommended and default `<OS>` is Ubuntu 16.10. In the future, we will build upon the next Ubuntu LTS or Debian Stable releases. 
+| **Note:** `feelpp-env` depends on an operating system image `<OS>`, the recommended and default `<OS>` is Ubuntu 16.10. In the future, we will build upon the next Ubuntu LTS or Debian Stable releases.
 
 === Tags
 
 By default, the `:latest` tag is assumed in the name of the images, for example when running
 [source,bash]
 ----
-$ docker run -it feelpp/feelpp-apps
+$ docker run -it feelpp/feelpp-base
 ----
-it is in fact `feelpp/feelpp-apps:latest` which is being launched.
-The following table displays the 
+it is in fact `feelpp/feelpp-base:latest` which is being launched.
+The following table displays how the different images depend from one another.
 
 |===
 | Image |  Built from
@@ -102,13 +102,13 @@ The following table displays the
 | `feelpp-env:latest` | built from Ubuntu 16.10
 | `feelpp-libs:latest` | built from `feelpp-env:latest`
 | `feelpp-base:latest` | built from `feelpp-libs:latest`
-| `feelpp-apps:latest` | built from `feelpp-base:latest`
+| `feelpp-toolboxes:latest` | built from `feelpp-base:latest`
 
 |===
 
 === Host OS
 
-As we said before the default Host OS is Ubuntu 16.10. 
+As we said before the default Host OS is Ubuntu 16.10.
 However Docker shines in continuous integration. It provides a large set of operating system to build upon and allows to check the software in various context. The FCS takes advantage of Docker to build  `feelpp-libs` for several operating systems provided by `feelpp-env` and with different compilers any time a commit in the Feel++ repository is done.
 
 .Table providing the list of supported Host OS
@@ -132,7 +132,7 @@ If you are interested in testing Feel++ in these systems, you can run these flav
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-env 
+$ docker run feelpp/feelpp-env
 ----
 
 ==== feelpp-libs
@@ -144,7 +144,7 @@ $ docker run feelpp/feelpp-env
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-libs 
+$ docker run feelpp/feelpp-libs
 ----
 
 ==== feelpp-base
@@ -156,7 +156,7 @@ $ docker run feelpp/feelpp-libs
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-base 
+$ docker run feelpp/feelpp-base
 ----
 
 ==== feelpp-toolboxes
@@ -165,7 +165,7 @@ $ docker run feelpp/feelpp-base
 
 [source,sh]
 ----
-$ docker run feelpp/feelpp-toolboxes 
+$ docker run feelpp/feelpp-toolboxes
 ----
 
 
@@ -203,7 +203,3 @@ shm                65536         0     65536   0% /dev/shm
 You see on the last but one line the directory `$HOME/feel` mounted on `/feel` in the Docker image.
 
 IMPORTANT: Note that mouting a host sub-directory on `/feel` is mandatory. If you don't, the Feel++ applications will exit due to lack of permissions.
-
-
-
-
