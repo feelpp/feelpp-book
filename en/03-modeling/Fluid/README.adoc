@@ -839,5 +839,3 @@ If we return once again at our example, the result files are in
 ----
  feel/applications/models/fluid/cavity3d/P2P1G1/np_1
 ----
-
-
