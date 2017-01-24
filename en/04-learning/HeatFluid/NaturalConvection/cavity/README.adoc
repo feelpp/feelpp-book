@@ -20,16 +20,16 @@ the simulations with different parameter values.
 
 == Geometry
 
-[[img-geom1]]
+[[fig:heatns:1]]
 image::cavity.png[caption="Figure 1 : ", title="Geometry of natural convection benchmark.", alt="Natural Convection Cavity", width="500", align="center"]
 
 
 
 To study the convection, we use a model problem: it consists in a
-rectangular tank of height latexmath:[$1$$ and width latexmath:[$W$$, in
-which the fluid is enclosed, see figure [fig:heatns:1]. We wish to know
-the fluid velocity latexmath:[$\mathbf{u}$$, the fluid pressure
-latexmath:[$p$$ and fluid temperature latexmath:[$\theta$$.
+rectangular tank of height \(1\) and width \(W\), in
+which the fluid is enclosed, see figure <<fig:heatns:1>>. We wish to know
+the fluid velocity \\(\mathbf{u}\\), the fluid pressure
+\\(p\\) and fluid temperature \\(\theta\\).
 
 We introduce the adimensionalized Navier-Stokes and heat equations
 parametrized by the Grashof and Prandtl numbers. These parameters allow
