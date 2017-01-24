@@ -8,24 +8,24 @@ toc::[]
 == Notations
 
 |===
-| Notation | Quantity | Unit 
-|$$\rho_f$$|fluid density|$$kg/m^3$$
-|$$\boldsymbol{u}_f$$|fluid velocity|$$m/s$$
-|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N/m^2$$
-|$$\boldsymbol{f}^t_f$$| source term | $$kg/(m ^3 \times s)$$
-|$$p_f$$|pressure fields|$$kg/(m \times s^2)$$
-|$$\mu_f$$| dynamic viscosity|$$kg/(m \times s)$$
-|$$\bar{U}$$|characteristic inflow velocity|$$m/s$$
-|$$\nu$$|kinematic viscosity|$$m^2/s$$
+| Notation | Quantity | Unit
+|$$\rho_f$$|fluid density|$$kg.m^{-3}$$
+|$$\boldsymbol{u}_f$$|fluid velocity|$$m.s^{-1}$$
+|$$\boldsymbol{\sigma}_f$$|fluid stress tensor|$$N.m^{-2}$$
+|$$\boldsymbol{f}^t_f$$| source term | $$kg.m^{-3}.s^{-1}$$
+|$$p_f$$|pressure fields|$$kg.m^{-1}.s^{-2}$$
+|$$\mu_f$$| dynamic viscosity|$$kg.m^{-1}.s^{-1}$$
+|$$\bar{U}$$|characteristic inflow velocity|$$m.s^{-1}$$
+|$$\nu$$|kinematic viscosity|$$m^2.s^{-1}$$
 |$$L$$| characteristic length|$$m$$
 |===
 
 
-== Models 
+== Models
 
 Navier-Stokes model is used to modelise incompressible Newtonian fluid. It can be describe by these conservative laws :
 
-* momentum conservation equation 
+* momentum conservation equation
 
 $$
 \rho_{f} \left. \frac{\partial\mathbf{u}_f}{\partial t} \right|_\mathrm{x}
@@ -36,7 +36,7 @@ $$
 * mass conservation equation
 
 $$
-\nabla_{\mathrm{x}} \cdot \boldsymbol{u}_{f} = 0                     , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right] 
+\nabla_{\mathrm{x}} \cdot \boldsymbol{u}_{f} = 0                     , \quad \text{ in } \Omega^t_f \times \left[t_i,t_f \right]
 $$
 
 We add to them the material constitutive equation :
@@ -69,7 +69,7 @@ In next table, we find the correspondance between the mathematical names and the
 [cols="1,1", options="header"]
 .Correspondance between fluid parameters and symbols in JSon files
 |===
-| Parameter | Symbol 
+| Parameter | Symbol
 
 | $$\mu_f$$ | `mu`
 | $$\rho_f$$  | `rho`
@@ -98,12 +98,12 @@ $$
 \dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
 $$
 
-and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$. 
+and in this way, we represent the viscosity $$\mu_f$$ as a function dependent on $$\dot{\gamma}$$.
 The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model wich
 takes the useful form :
 
 $$
-  \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right) 
+  \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)
 $$
 
 The simpler exemple of a generalised Newtonian model is the power-law fluid, which has a viscosity given by :
@@ -124,8 +124,8 @@ and $$C_i, i=1,..,4$$ are parameters to fit with experimental data.
 Anothers family of generalised Newtonian model can be defined from a function $$\Phi$$ express by :
 
 $$
-  \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) 
-  = \frac{\mu\left(\dot{\gamma}\right) - \mu_{\infty}}{\mu_{0}-\mu_{\infty}}  
+  \Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right)
+  = \frac{\mu\left(\dot{\gamma}\right) - \mu_{\infty}}{\mu_{0}-\mu_{\infty}}
 $$
 
 where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and infinite shear rate.
@@ -133,9 +133,9 @@ where $$\mu_0$$ and $$\mu_{\infty}$$ are the asymptotic viscosities at zero and 
 
 [cols="1,1", options="header"]
 |===
-| Viscosity law | $$\Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) $$ 
-| Carreau | $$\left(1+\left(\lambda\dot{\gamma}\right)^{2}\right)^{(n-1)/2}$$ 
-| Carreau-Yasuda | $$\left(1+\left(\lambda\dot{\gamma}\right)^{a}\right)^{(n-1)/a}$$ 
+| Viscosity law | $$\Phi\left( \dot{\gamma}, \mu_{\infty},\mu_{0} \right) $$
+| Carreau | $$\left(1+\left(\lambda\dot{\gamma}\right)^{2}\right)^{(n-1)/2}$$
+| Carreau-Yasuda | $$\left(1+\left(\lambda\dot{\gamma}\right)^{a}\right)^{(n-1)/a}$$
 |===
 
 
@@ -146,7 +146,7 @@ The non newtonian properties are defined in cfg file in fluid section. The visco
 | viscosity.law | newtonian, power_law, walburn-schneck_law, carreau_law, carreau-yasuda_law
 |===
 
-Then, each model are configured with the options reported in next table :  
+Then, each model are configured with the options reported in next table :
 
 [cols="1,1,1", options="header"]
 |===
@@ -191,7 +191,7 @@ viscosity.infinite_shear
 carreau_law.lambda
 
 carreau_law.n
-| 
+|
 $$kg/(m \times s)$$
 
 $$kg/(m \times s)$$
@@ -209,7 +209,7 @@ carreau-yasuda_law.lambda
 carreau-yasuda_law.n
 
 carreau-yasuda_law.a
-| 
+|
 $$kg/(m \times s)$$
 
 $$kg/(m \times s)$$
@@ -232,14 +232,14 @@ We start by a listing of boundary conditions supported in fluid mechanics model.
 
 
 === Dirichlet on velocity
-A Dirichlet condition on velocity field correspond to impose : 
+A Dirichlet condition on velocity field correspond to impose :
 $$
-\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma 
+\boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma
 $$
 or only a component of vector $$\boldsymbol{u}_f =(u_f^1,u_f^2 ,u_f^3 )$$
 
 $$
-u_f^i = g \quad \text{ on } \Gamma 
+u_f^i = g \quad \text{ on } \Gamma
 $$
 
 Several methods are available to ensure to boundary condition :
@@ -360,7 +360,7 @@ Then we define the coupling between this outflow model and the fluid model by th
 $$
 \begin{align}
   Q_l &= \int_{\Gamma_l} \boldsymbol{u}_f \cdot \boldsymbol{n}_f  \\
-  \boldsymbol{\sigma}_f \boldsymbol{n}_f &= -P_l \boldsymbol{n}_f 
+  \boldsymbol{\sigma}_f \boldsymbol{n}_f &= -P_l \boldsymbol{n}_f
 \end{align}
 $$
 
@@ -422,9 +422,9 @@ And finally, we define inside some specific options.
  type
 
  number
- 
+
  alemesh_bc
-  
+
 | faces, edges, points
 | velocity_x
 
@@ -439,9 +439,9 @@ velocity_z
  type
 
   number
-  
+
   alemesh_bc
-  
+
  | faces, edges, points
 
 | velocity
@@ -607,7 +607,7 @@ In order to evaluate velocity or pressure at specific points and save the result
 
 ==== Flow rate
 The flow rate can be evaluated and save on .csv file. User need to  define (i) "<tag>" representing this data in the .csv file, (ii) "<face_marker>" representing the name of face marked and (iii) the fluid direction ("interior_normal" or "exterior_normal") of the flow rate.
- 
+
 [source,json]
 ----
 "FlowRate":
@@ -645,13 +645,13 @@ This function can be exported.
 "Functions":
 {
     "toto":{ "expr":"x*y:x:y"},
-    "toto2":{ "expr":"0.5*ubar*x*y:x:y:ubar"},        
+    "toto2":{ "expr":"0.5*ubar*x*y:x:y:ubar"},
     "totoV":{ "expr":"{2*x,y}:x:y"}
 },
 "PostProcess":
 {
    "Fields":["velocity","pressure","pid","totoV","toto","toto2"],
-}  
+}
 ----
 
 == Action
@@ -659,9 +659,9 @@ This function can be exported.
 Let's finish with a simple example in order to show how this works and how to use them. We will interest us to a fluid flow into a cavity in 3D.
 
 === Feel++ code
-Here is the code 
+Here is the code
 
-First at all, we define our model type with 
+First at all, we define our model type with
 
 ----
 typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
@@ -670,14 +670,14 @@ typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
 ----
 
 We choose here a $$\mathbb{P}_2$$ space for the velocity order and $$\mathbb{P}_1$$ space for the pressure order. This definition allows us to create our fluid model object FM like this
- 
+
 ----
 auto FM = model_type::New("fluid");
 ----
 
 The method `New` retrieve all data from the configuration and json files, as well build a mesh if need.
 
-With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by 
+With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by
 
 ----
 FM->init();
@@ -836,7 +836,7 @@ The link:#Post_Process[post process] aspect is the last one to define. We choose
 
 === Compilation/Execution
 
-Once you've a build dir, you just have to realise the command `make` at 
+Once you've a build dir, you just have to realise the command `make` at
 
 --------------------
 {buildir}/applications/models/fluid
@@ -852,14 +852,14 @@ For example
 
 is how to execute the case ahead.
 
-The result files are then stored by default in 
+The result files are then stored by default in
 
 ----
  feel/applications/models/fluid/{case_name}/
    {velocity_space}{pression_space}{Geometric_order}/{processor_used}
 ----
 
-If we return once again at our example, the result files are in 
+If we return once again at our example, the result files are in
 
 ----
  feel/applications/models/fluid/cavity3d/P2P1G1/np_1
