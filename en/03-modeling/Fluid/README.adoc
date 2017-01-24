@@ -585,18 +585,18 @@ The fields allowed to be exported in the `Fields` section are:
 
 
 ==== Points
-Compute field at point
+In order to evaluate some fields at specif point and save the results in .csv file, user must define (i) "<tag>" representing this data in the .csv file, (ii) the coordinate of point and (iii) the fields evaluated.
 
 [source,json]
 ----
 "Points":
 {
-  "pointA":
+  "<tag>":
   {
     "coord":"{0.6,0.2,0}",
     "fields":"pressure"
   },
- "pointB":
+ "<tag>":
   {
     "coord":"{0.15,0.2,0}",
     "fields":"pressure"
@@ -606,9 +606,35 @@ Compute field at point
 
 
 ==== Flow rate
+The flow rate can be evaluated and save on .csv file. User need to  define (i) "<tag>" representing this data in the .csv file, (ii) "<face_marker>" representing the name of face marked and (iii) the fluid direction ("interior_normal" or "exterior_normal") of the flow rate.
+ 
+[source,json]
+----
+"FlowRate":
+{
+    "<tag>":
+    {
+        "markers":"<face_marker>",
+        "direction":"interior_normal"
+    },
+    "<tag>":
+    {
+        "markers":"<face_marker>",
+        "direction":"exterior_normal"
+    }
+}
+----
 
-==== Force
+
+==== Forces
 compute lift and drag
+
+[source,json]
+----
+"Forces":["fsi-wall","fluid-cylinder"]
+----
+
+
 
 
 .Measure type and range type associated
