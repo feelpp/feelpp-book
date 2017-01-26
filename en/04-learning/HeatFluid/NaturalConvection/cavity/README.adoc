@@ -41,9 +41,11 @@ reads:
 
 $$
 \begin{split}
-    \mathbf{u}\cdot\nabla \mathbf{u} +\nabla p -\frac{1}{\sqrt{{\mathrm{Gr}}}} \Delta \mathbf{u} &= \theta \mathbf{e}_2\\
-    \nabla \cdot \mathbf{u} & = 0\ \text{sur}\ \Omega\\
-    \mathbf{u} & = \mathbf{0}\ \text{sur}\ \partial \Omega
+    \mathbf{u}\cdot\nabla \mathbf{u} + \nabla p -
+    \frac{1}{\sqrt{\text{Gr}}} \Delta \mathbf{u} 
+    &= \theta \mathbf{e}_2 \\
+    \nabla \cdot \mathbf{u} &= 0\ \text{sur}\ \Omega\\
+    \mathbf{u} &= \mathbf{0}\ \text{sur}\ \partial \Omega
 \end{split}
 $$
 
@@ -57,7 +59,7 @@ The heat equation reads:
 
 $$
 \begin{split}
-  \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{{\mathrm{Gr}}}{\mathrm{Pr}}} \Delta \theta &= 0\\
+  \mathbf{u} \cdot \nabla \theta -\frac{1}{\sqrt{\text{Gr}}{\mathrm{Pr}}} \Delta \theta &= 0\\
   \theta &= 0\ \text{sur}\ \Gamma_1\\
   \frac{\partial \theta}{\partial n} &= 0\ \text{sur}\ \Gamma_{2,4}\\
   \frac{\partial \theta}{\partial n} &= 1\ \text{sur}\ \Gamma_3
@@ -133,7 +135,9 @@ This is true for small Grashof, but starting at $$1e3$$ the
 flow rate decreases. The fluid is contained in a boundary layer which is
 becoming smaller as the Grashof increases.
 
-image::debit_grashof.png[Behavior of the flow rate with respect to the Grashof number; $$h = 0.02$$, $$\mathbb{P}_3$$ for the velocity, $$\mathbb{P}_2$$ for the pressure and $$\mathbb{P}_1$$ for the temperature.]
+image::debit_grashof.png[Behavior of the flow rate with respect to the Grashof
+number; $$h = 0.02$$, $$\mathbb{P}_3$$ for the velocity, $$\mathbb{P}_2$$ for
+the pressure and $$\mathbb{P}_1$$ for the temperature.]
 
 == Running the model
 
