@@ -8,6 +8,8 @@ Learning by Example
 . link:CFD/MultiFluid/README.adoc[Multi-Fluid flows]
 . link:CSM/README.adoc[Computational Solid Mechanic]
 . link:FSI/README.adoc[Fluid-Structure Interaction]
+. link:HeatTransfer/README.adoc[Heat Transfer]
+. link:HeatFluid/README.adoc[Heat and Fluid]
 
 == Inverse Problems
 

@@ -23,8 +23,8 @@
 
 == Solving PDEs using Feel++ Toolboxes
 . link:03-modeling/README.adoc[Modeling with Feel++]
-.. link:03-modeling/Fluid/README.adoc[Computation Fluid Mechanics]
-.. link:03-modeling/Solid/README.adoc[Computation Solid Mechanics]
+.. link:03-modeling/Fluid/README.adoc[Computational Fluid Mechanics]
+.. link:03-modeling/Solid/README.adoc[Computational Solid Mechanics]
 .. link:03-modeling/FluidStructure/README.adoc[Fluid Structure Interaction]
 .. link:03-modeling/Advection/README.adoc[Advection Model]
 .. link:03-modeling/ThermoElectric/README.adoc[ThermoElectric]
@@ -43,6 +43,12 @@
 ... link:04-learning/CSM/Solenoid/README.adoc[Solenoid]
 ... link:04-learning/CSM/NAFEMS-LE1/README.adoc[NAFEMS-LE1]
 ... link:04-learning/CSM/NAFEMS-LE10/README.adoc[NAFEMS-LE10]
+.. link:04-learning/HeatTransfer/README.adoc[HeatTransfer]
+... link:04-learning/HeatTransfer/Building/README.adoc[Thermal Building Environment]
+.... link:04-learning/HeatTransfer/Building/Thermal-Bridge-EN-ISO-10211/README.adoc[ISO 10211:2007 Thermal bridges in building construction]
+.. link:04-learning/HeatFluid/README.adoc[Heat and Fluid]
+... link:04-learning/HeatFluid/NaturalConvection/README.adoc[Natural Convection]
+.... link:04-learning/HeatFluid/NaturalConvection/cavity/README.adoc[Natural Convection in a Cavity]
 .. link:04-learning/FSI/README.adoc[FSI]
 ... link:04-learning/FSI/2DElasticTube/README.adoc[2D FSI elastic tube]
 ... link:04-learning/FSI/3DElasticTube/README.adoc[3D FSI elastic tube]
@@ -110,4 +116,3 @@
 
 == Glossary
 . link:GLOSSARY.adoc[Glossary]
-

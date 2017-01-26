@@ -169,7 +169,7 @@ $ docker run feelpp/feelpp-toolboxes
 ----
 
 
-== Runing Feel++ Applications
+== Running Feel++ Applications
 
 To run link:/Applications/readme.adoc[Feel{plus}{plus} main applications], you need first to create a directory where you will store the Feel{plus}{plus} simulation files. For example, type
 [source,shell]

@@ -1,4 +1,5 @@
-= Fluid Mechanics Models
+Computational Fluid Mechanics Toolbox
+=====================================
 :toc:
 :toc-placement: macro
 :toclevels: 2
@@ -100,8 +101,9 @@ $$
 \dot{\gamma} \equiv \sqrt{2 \ tr \left( \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)^{2} \right)  }
 $$
 
-In this way, we represent the viscosity $$\mu_f$$ as a function of $$\dot{\gamma}$$.
-The deviatoric stress tensor $$\boldsymbol{\tau}$$ is obtained thanks to generalised Newtonian model, which takes the useful form:
+In this way, we represent the viscosity $$\mu_f$$ as a function of
+$$\dot{\gamma}$$.  The deviatoric stress tensor $$\boldsymbol{\tau}$$ is
+obtained thanks to generalised Newtonian model, which takes the useful form:
 
 $$
   \boldsymbol{\tau} = 2 \mu_f \left(\dot{\gamma} \right) \boldsymbol{D}\left(\boldsymbol{u}_{f}\right)
@@ -194,7 +196,6 @@ carreau_law.lambda
 
 carreau_law.n
 |
-$$kg.m^{-1}.s^{-1}$$
 
 $$kg.m^{-1}.s^{-1}$$
 
@@ -234,6 +235,7 @@ We start by a listing of boundary conditions supported in fluid mechanics model.
 
 
 === Dirichlet on velocity
+
 A Dirichlet condition on velocity field reads:
 $$
 \boldsymbol{u}_f = \boldsymbol{g} \quad \text{ on } \Gamma
@@ -686,8 +688,9 @@ typedef FeelModels::FluidMechanics< Simplex<FEELPP_DIM,1>,
                                     Lagrange<OrderPressure,Scalar,Continuous,PointSetFekete> > model_type;
 ----
 
-We choose here a $$\mathbb{P}_2$$ space for the velocity order and a $$\mathbb{P}_1$$ space for the pressure order.
-This definition allows us to create our fluid model object FM like this
+We choose here a $$\mathbb{P}_2$$ space for the velocity order and
+$$\mathbb{P}_1$$ space for the pressure order. This definition allows us to
+create our fluid model object FM like this
 
 ----
 auto FM = model_type::New("fluid");
@@ -695,7 +698,9 @@ auto FM = model_type::New("fluid");
 
 The method `New` retrieves all data from the configuration and json files and build a mesh if needed.
 
-With this object, we can initialize our model parameters, such as velocity or boundaries conditions. Data on our model and on the numeric solver are then save and print on the terminal. This is made by
+With this object, we can initialize our model parameters, such as velocity or
+boundaries conditions. Data on our model and on the numeric solver are then
+save and print on the terminal. This is made by
 
 ----
 FM->init();

@@ -1,11 +1,12 @@
-= Solid Mechanics Models
+Computational Solid Mechanics Toolbox
+=====================================
 :toc:
 :toc-placement: macro
 :toclevels: 2
 
 toc::[]
 
-== Notations 
+== Notations
 
 - strain tensor
 $$
@@ -20,14 +21,14 @@ $$
 \begin{align}
   \boldsymbol{E}_s &= \frac{1}{2} \left( \boldsymbol{C}_s - \boldsymbol{I} \right)  \\
    &= \underbrace{\frac{1}{2} \left( \nabla \boldsymbol{\eta}_s + \left(\nabla
-   \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s} 
+   \boldsymbol{\eta}_s\right)^{T} \right)}_{\boldsymbol{\epsilon}_s}
   + \underbrace{\frac{1}{2} \left(\left(\nabla \boldsymbol{\eta}_s\right)^{T}
   \nabla \boldsymbol{\eta}_s \right)}_{\boldsymbol{\gamma}_s}
 \end{align}
 $$
 
 |===
-| Notation | Quantity | Unit 
+| Notation | Quantity | Unit
 |$$\rho_s$$|density|$$kg/m^3$$
 |$$\lambda_s$$|first Lamé coefficients|$$N/m^2$$
 |$$\mu_s$$|second Lamé coefficients|$$N/m^2$$
@@ -109,12 +110,12 @@ The solid mechanics model can be selected in json file :
 -----
 .Table of Models for `model` option
 |===
-| Model | Name in json 
+| Model | Name in json
 
-| Linear Elasticity 
+| Linear Elasticity
 | `Elasticity`
 
-| Hyper Elasticity 
+| Hyper Elasticity
 | `Hyper-Elasticity`
 
 |===
@@ -163,15 +164,39 @@ dimensionless ) and `rho` the density in $$kg\cdot m^{-3}$$.
 
 == Boundary Conditions
 
-=== Dirichlet
+.Boundary conditions
+|===
+| Name | Options | Type
 
-=== Neumann
+| Dirichlet
+| faces, edges and component-wise
+| "Dirichlet"
 
-=== Robin
+| Neumann
+| scalar, vectorial
+| "Neumann_scalar" or "Neumann_vectorial"
+
+| Pressure follower ,
+| Nonlinear boundary condition set in deformed domain
+| TODO
+
+| Robin
+| TODO
+| TODO
+
+|===
 
 == Volumic forces
-see FluidMechanics models
 
+.Volumic forces
+|===
+| Name | Options | Type
+
+| Expression
+| Vectorial
+| "VolumicForces"
+
+|===
 
 == Post Process
 
@@ -238,7 +263,7 @@ Let's finish with a simple example in order to show how this works and how to us
 
 === Feel++ code
 
-First at all, we define our model type with 
+First at all, we define our model type with
 
 ----
 typedef FeelModels::SolidMechanics< Simplex<FEELPP_DIM,1>,
@@ -247,7 +272,7 @@ typedef FeelModels::SolidMechanics< Simplex<FEELPP_DIM,1>,
 
 We choose here $$\mathbb{P}_1$$ space for displacement order. This definition
 allows us to create our fluid model object SM like this
- 
+
 ----
 auto SM = model_type::New("solid");
 ----
@@ -294,14 +319,14 @@ if ( !algoQuasiStatic )
 ----
 
 ==== Code
-Here is the code 
+Here is the code
 
 [source,cpp]
 ----
 {% include "../Examples/solid_model.cpp" %}
 ----
 
-=== Configuration file 
+=== Configuration file
 
 The config file is used to define options  linked to our case we would have the possibility to change at will. It can be, for example, files paths as follows
 
@@ -470,7 +495,7 @@ PostProcess":
 
 === Compilation/Execution
 
-Once you've a build dir, you just have to realise the command `make` at 
+Once you've a build dir, you just have to realise the command `make` at
 
 --------------------
 {buildir}/applications/models/solid
@@ -486,16 +511,14 @@ mpirun -np 4 feelpp_application_fluid_2d --config-file={sourcedir}/applications/
 
 is how to execute the case ahead on 4 processors.
 
-The result files are then stored by default in  
+The result files are then stored by default in
 
 ----
 feel/applications/models/solid/{case_name}/{OrderDis}{Geometric_order}/{processor_used}
 ----
 
-If we return once again at the example, they are in 
+If we return once again at the example, they are in
 
 ----
 feel/applications/models/solid/TurekHron/csm3/P1G1/np_8
 ----
-
-
