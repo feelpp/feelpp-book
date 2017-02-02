@@ -116,9 +116,9 @@ We have the following correspondance:
 | `elements(mesh)` | $$\Omega$$ 
 | `boundaryfaces(mesh)` | $$\partial \Omega$$ 
 
-| `markfaces(mesh,"Dirichlet")`  |  $$\Gamma_D$$
-| `markfaces(mesh,"Neumann")`  |  $$\Gamma_R$$
-| `markfaces(mesh,"Robin")`  |  $$\Gamma_R$$
+| `markedfaces(mesh,"Dirichlet")`  |  $$\Gamma_D$$
+| `markedfaces(mesh,"Neumann")`  |  $$\Gamma_R$$
+| `markedfaces(mesh,"Robin")`  |  $$\Gamma_R$$
 
 |===
 
